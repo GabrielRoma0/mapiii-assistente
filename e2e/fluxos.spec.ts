@@ -206,3 +206,13 @@ test('sugestões enquanto digita: aparecem a partir de 3 letras e enviam a pergu
   await grupo.getByRole('button', { name: 'Como peço o passe de exemplo?' }).click();
   await expect(page.getByRole('region', { name: 'Conversa' }).getByText('Direito de exemplo A').first()).toBeVisible();
 });
+
+test('boas-vindas: aparecem na primeira visita e somem para sempre com "Entendi"', async ({ page }) => {
+  await page.goto('/#/');
+  await expect(page.getByRole('heading', { name: 'Primeira vez aqui? É assim que funciona' })).toBeVisible();
+  await page.getByRole('button', { name: 'Entendi' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' })).toBeFocused();
+  await page.reload();
+  await expect(page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Primeira vez aqui? É assim que funciona' })).toHaveCount(0);
+});

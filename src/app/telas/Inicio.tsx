@@ -10,6 +10,7 @@ import { href } from '../rotas';
 import { useTema } from '../tema';
 import { AvisoRespostasGuardadas } from '../LembrarRespostas';
 import { TamanhoTexto } from '../TamanhoTexto';
+import { BoasVindas } from '../BoasVindas';
 import css from '../app.module.css';
 
 const ENTRADAS: ItemEntrada[] = [
@@ -46,6 +47,7 @@ export function Inicio() {
       <Titulo grande>Seu mapa de direitos</Titulo>
       <TamanhoTexto />
       <AvisoRespostasGuardadas />
+      <BoasVindas />
       <Entradas itens={ENTRADAS} rotulo="O que você quer fazer" />
       <OpcoesEmCartao<Modo>
         pergunta="Quem está usando?"
