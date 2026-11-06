@@ -134,12 +134,12 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 ### 2.3 Técnicas (qualidade e confiança)
 
 #### T1 · Testes de tela de ponta a ponta · M
-- [ ] **O quê:** um robô que abre o app e faz os fluxos principais a cada envio ao GitHub.
+- [x] (06/11, `4493c12`) **O quê:** um robô que abre o app e faz os fluxos principais a cada envio ao GitHub.
 - **Como:** `@playwright/test` como dependência de desenvolvimento (precisa de OK). Pasta `e2e/` com 6 roteiros: triagem completa até a rota; pergunta com resposta e com "Não encontrei"; Me negaram com modelo; Embarque exemplo por ponto; lembrar e apagar com confirmação; foco no título ao trocar de tela. Roda contra `npm run dev` com a base de exemplo. Novo comando `npm run e2e` e job no CI.
 - **Conferir:** `npm run e2e` passa localmente e no GitHub.
 
 #### T2 · Auditoria de acessibilidade e desempenho · P ⭐6
-- [ ] **O quê:** axe em cada tela nos testes de T1 e Lighthouse no CI, com o relatório guardado.
+- [x] (06/11, `33a986f`; resultado: Lighthouse 100/100/100/100 no `index.html`, axe sem problemas graves em 17 telas nos dois temas) **O quê:** axe em cada tela nos testes de T1 e Lighthouse no CI, com o relatório guardado.
 - **Como:** `@axe-core/playwright` nos roteiros de T1 (falha com qualquer violação "serious" ou "critical"); `@lhci/cli` no CI contra o build (meta: acessibilidade 100, PWA ok, desempenho ≥ 90). Dependências de desenvolvimento (precisa de OK).
 - **Conferir:** relatório no GitHub; números anotados no registro.
 
@@ -154,7 +154,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** build, mudar algo, novo build e ver a faixa no `npm run preview`.
 
 #### T5 · Tela amigável quando algo der erro · P
-- [ ] **O quê:** se uma tela quebrar, o Mapi diz "Algo deu errado nesta tela" com "Voltar ao início", em vez de tela branca. O aviso de protótipo continua.
+- [x] (06/11, `39a656b`) **O quê:** se uma tela quebrar, o Mapi diz "Algo deu errado nesta tela" com "Voltar ao início", em vez de tela branca. O aviso de protótipo continua.
 - **Como:** componente `LimiteDeErro` (Error Boundary do React) em `src/app/LimiteDeErro.tsx`, envolvendo `<Tela>` em `App.tsx`; reinicia ao trocar de rota.
 - **Conferir:** teste forçando um erro numa tela de desenvolvimento.
 

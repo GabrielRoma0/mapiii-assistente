@@ -80,6 +80,17 @@ Diário do que foi feito no Mapiii, em ordem: o que foi pedido, o que foi decidi
 
 - Criados este registro e o [plano de melhorias](plano-de-melhorias.md), separado por tipo, com ordem, como cada uma vai ser feita e os destaques para o vídeo. Nenhuma melhoria começada antes do plano.
 
+### 9. Fase A do plano de melhorias (rede de segurança)
+
+Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão para o app): `@playwright/test` 1.64.1, `@axe-core/playwright` 4.14.0, `@lhci/cli` 0.15.1.
+
+- **T1 · testes de tela** (`4493c12`): 9 roteiros no Playwright (triagem, pergunta, emergência 192, Me negaram, Embarque por ponto, lembrar e apagar, foco ao trocar de tela, aviso de protótipo, tela de erro), no celular e no computador. `npm run e2e`; job no CI. Decisão: `VITE_BASE_EXEMPLO=true` força a base fictícia no dev, para os testes não dependerem das fichas reais.
+- **T5 · tela de erro** (`39a656b`): se uma tela quebrar, aparece "Algo deu errado nesta tela" com "Voltar ao início". Teste escrito antes e visto falhando.
+- **T2 · auditoria** (`33a986f`): axe em 17 telas, temas claro e escuro, **sem nenhum problema grave**; conferido que o teste pega um erro injetado de propósito. Lighthouse no build: **desempenho 100, acessibilidade 100, boas práticas 100, SEO 100** no app. `npm run lighthouse`; job no CI, relatório só em arquivo.
+- Correção: duas versões do `playwright-core` quebravam a checagem de tipos; fixada uma só (`overrides` no `package.json`).
+- Decisão de ordem: T1 antes de T5, porque a tela de erro só dá para testar num navegador de verdade.
+- Totais: 278 testes de lógica e 86 execuções de testes de tela, todos passando.
+
 ### Fora do repositório (só neste computador)
 
 - `.env.local`: liga o Embarque com o simulador. **Antes do build de produção, precisa apontar para o Supabase da dupla.**
