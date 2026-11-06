@@ -7,6 +7,7 @@ import { Titulo, Voltar } from '../comum';
 import { DOMINIOS, KB } from '../dados';
 import { href } from '../rotas';
 import { LembrarRespostas } from '../LembrarRespostas';
+import { TamanhoTexto } from '../TamanhoTexto';
 import css from '../app.module.css';
 
 const TIPOS: Record<TipoEntrada, string> = { direito: 'Direito', servico: 'Serviço', norma: 'Norma' };
@@ -134,6 +135,7 @@ export function Sobre() {
       </section>
 
       <section className={css.secao}>
+        <TamanhoTexto />
         <OpcoesEmCartao<EscolhaTema>
           pergunta="Aparência"
           opcoes={[

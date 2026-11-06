@@ -170,3 +170,20 @@ test('Embarque sem internet: a última previsão continua na tela, com aviso', a
   await expect(resultado.getByText(/Próximo acessível: 8000-10/)).toBeVisible();
   await context.setOffline(false);
 });
+
+test('tamanho do texto: A++ aumenta o app, fica guardado e não cria rolagem lateral em 320 px', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto('/#/');
+  const titulo = page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' });
+  const antes = (await titulo.boundingBox())!.height;
+  await page.getByRole('button', { name: 'Texto maior' }).click();
+  await expect(page.getByRole('button', { name: 'Texto maior' })).toHaveAttribute('aria-pressed', 'true');
+  expect((await titulo.boundingBox())!.height).toBeGreaterThan(antes * 1.2);
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Texto maior' })).toHaveAttribute('aria-pressed', 'true');
+  for (const tela of ['/#/', '/#/perguntar', '/#/embarque', '/#/direito/exemplo-transporte', '/#/sobre']) {
+    await page.goto(tela);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await expect(page.getByRole('navigation', { name: 'Navegação principal' })).toBeInViewport();
+  }
+});

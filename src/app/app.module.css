@@ -842,6 +842,8 @@
 .rolagem {
   flex: 1;
   min-height: 0;
+  /* Tamanho do texto (A, A+, A++): só o conteúdo aumenta; a barra inferior fica no tamanho normal. */
+  zoom: var(--escala, 1);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -855,4 +857,30 @@
   .barraInferior {
     display: none;
   }
+}
+
+/* Tamanho do texto (A, A+, A++). */
+.tamanhoTexto {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-weight: var(--weight-bold);
+  color: var(--text-muted);
+  font-size: 16px;
+}
+.botaoTamanho {
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--border-input);
+  background: var(--surface-card);
+  color: var(--text-body);
+  font: var(--weight-extrabold) 18px var(--font-sans);
+  cursor: pointer;
+}
+.botaoTamanho[aria-pressed='true'] {
+  background: var(--action-primary-bg);
+  color: var(--action-primary-fg);
+  border-color: var(--action-primary-bg);
 }

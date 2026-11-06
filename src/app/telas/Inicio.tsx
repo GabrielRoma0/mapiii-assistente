@@ -9,6 +9,7 @@ import { useEstado } from '../estado';
 import { href } from '../rotas';
 import { useTema } from '../tema';
 import { AvisoRespostasGuardadas } from '../LembrarRespostas';
+import { TamanhoTexto } from '../TamanhoTexto';
 import css from '../app.module.css';
 
 const ENTRADAS: ItemEntrada[] = [
@@ -43,6 +44,7 @@ export function Inicio() {
         Olá. Eu ajudo você a entender direitos e serviços públicos em São Paulo.
       </FalaMapi>
       <Titulo grande>Seu mapa de direitos</Titulo>
+      <TamanhoTexto />
       <AvisoRespostasGuardadas />
       <Entradas itens={ENTRADAS} rotulo="O que você quer fazer" />
       <OpcoesEmCartao<Modo>

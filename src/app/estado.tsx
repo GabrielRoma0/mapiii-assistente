@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState, type R
 import type { Modo, Respostas } from '../core/perguntas.ts';
 import { apagarRespostasGuardadas, apagarUltimosPontos, guardarRespostas, lerRespostasGuardadas } from '../core/lembrar.ts';
 import { armazenamentoDoNavegador } from '../core/registro.ts';
+import { ESCALAS, guardarTamanho, lerTamanho, type Tamanho } from '../core/tamanho.ts';
 
 interface EstadoApp {
   respostas: Respostas;
@@ -22,6 +23,9 @@ interface EstadoApp {
   alternarLembrar: (ligar: boolean) => boolean;
   /** O navegador deixa guardar (não está em modo privado nem bloqueado). */
   podeLembrar: boolean;
+  /** Tamanho do texto (A, A+, A++), guardado no aparelho como o tema. */
+  tamanho: Tamanho;
+  escolherTamanho: (t: Tamanho) => void;
 }
 
 const Contexto = createContext<EstadoApp | null>(null);
@@ -34,6 +38,10 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
   const [marcados, setMarcados] = useState<Record<string, string[]>>({});
   const [modo, setModo] = useState<Modo | null>(guardado?.modo ?? null);
   const [lembrar, setLembrar] = useState(Boolean(guardado));
+  const [tamanho, setTamanho] = useState<Tamanho>(() => lerTamanho(armazenamento));
+  useEffect(() => {
+    document.documentElement.style.setProperty('--escala', String(ESCALAS[tamanho]));
+  }, [tamanho]);
 
   // Com "Lembrar" ligado, cada mudança é gravada; desligado, nada é escrito.
   useEffect(() => {
@@ -61,6 +69,11 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
       modo,
       escolherModo: setModo,
       lembrar,
+      tamanho,
+      escolherTamanho: (t) => {
+        setTamanho(t);
+        guardarTamanho(armazenamento, t);
+      },
       podeLembrar: armazenamento !== null,
       alternarLembrar: (ligar) => {
         if (!ligar) {
@@ -74,7 +87,7 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
         return ok;
       }
     }),
-    [respostas, marcados, modo, lembrar, armazenamento]
+    [respostas, marcados, modo, lembrar, tamanho, armazenamento]
   );
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>;
 }
