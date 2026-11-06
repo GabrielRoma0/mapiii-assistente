@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+html, body { margin: 0; background: #F2E9E4; color: #22223B; font-family: Nunito, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; } a:hover { color: #22223B; }
+button { font-family: inherit; color: inherit; }
+:focus-visible { outline: none; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #22223B; }
+</style>
+</helmet>
+
+<sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="01 Rota de A a B" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#E7DDD6;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif">
+  <svg viewBox="0 0 370 824" width="370" height="824" style="position:absolute;left:0;top:0;display:block">
+    <rect x="80" y="326" width="100" height="116" rx="22" fill="#DCE3D4"></rect>
+    <rect x="232" y="338" width="78" height="100" rx="20" fill="#DCE3D4"></rect>
+    <rect x="-20" y="152" width="410" height="18" fill="#FFFFFF"></rect>
+    <rect x="-20" y="289" width="410" height="22" fill="#FFFFFF"></rect>
+    <rect x="-20" y="457" width="410" height="26" fill="#FFFFFF"></rect>
+    <rect x="-20" y="640" width="410" height="22" fill="#FFFFFF"></rect>
+    <rect x="39" y="-20" width="22" height="870" fill="#FFFFFF"></rect>
+    <rect x="189" y="-20" width="22" height="870" fill="#FFFFFF"></rect>
+    <rect x="320" y="-20" width="20" height="870" fill="#FFFFFF"></rect>
+    <path d="M50 470V300" fill="none" stroke="#FFFFFF" style="stroke-width:16;stroke-linecap:round;stroke-dasharray:0.1 18"></path>
+    <path d="M50 470V300" fill="none" stroke="#A0402F" style="stroke-width:11;stroke-linecap:round;stroke-dasharray:0.1 18"></path>
+    <path d="M200 470V300" fill="none" stroke="#FFFFFF" style="stroke-width:8;stroke-linecap:round"></path>
+    <path d="M200 470V300" fill="none" stroke="#6E6A7E" style="stroke-width:3;stroke-linecap:round"></path>
+    <path d="M50 545V470M200 300H330" fill="none" stroke="#FFFFFF" style="stroke-width:13;stroke-linecap:round"></path>
+    <path d="M50 545V470M200 300H330" fill="none" stroke="#36704A" style="stroke-width:8;stroke-linecap:round"></path>
+    <path d="M50 470H200" fill="none" stroke="#FFFFFF" style="stroke-width:13;stroke-linecap:round"></path>
+    <path d="M54 470H196" fill="none" stroke="#7A5410" style="stroke-width:8;stroke-dasharray:14 8"></path>
+  </svg>
+  <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800;z-index:3">9:41</div>
+  <div style="position:absolute;top:50px;left:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap;box-shadow:0 6px 20px rgba(34,34,59,.12)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+  <div style="position:absolute;top:104px;left:16px;right:16px;z-index:2;background:#FFFFFF;border-radius:24px;padding:8px 16px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(34,34,59,.12)">
+    <div style="display:flex;align-items:center;gap:12px;min-height:48px"><span style="width:30px;height:30px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif;flex:none">A</span><span style="font-size:17px;font-weight:800">Sua localização</span></div>
+    <div style="height:2px;background:#E8DDD7;margin-left:42px"></div>
+    <div style="display:flex;align-items:center;gap:12px;min-height:48px"><span style="width:30px;height:30px;border-radius:50%;background:#FFFFFF;border:3px solid #22223B;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif;flex:none">B</span><span style="font-size:17px;font-weight:800">Biblioteca Mário de Andrade</span></div>
+  </div>
+  <span style="position:absolute;left:64px;top:490px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bom</span>
+  <span style="position:absolute;left:64px;top:416px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#F7EAD2;color:#634410;border:2px solid #7A5410"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3.5L21.5 20H2.5Z"></path><path d="M12 10v4.5"></path><path d="M12 17.5v.1"></path></svg>Atenção</span>
+  <span style="position:absolute;left:64px;top:350px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#F6E2DD;color:#8E3527;border:2px solid #A0402F"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Evite</span>
+  <span style="position:absolute;left:214px;top:368px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#E8DDD7;color:#22223B;border:2px solid #6E6A7E"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18"></path><path d="M9.5 9.3a2.6 2.6 0 1 1 3.7 2.4c-.7.4-1.2.9-1.2 1.7"></path><path d="M12 16.8v.1"></path></svg>Sem dados</span>
+  <span style="position:absolute;left:222px;top:314px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bom</span>
+  <span style="position:absolute;left:34px;top:529px;z-index:2;width:32px;height:32px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif">A</span>
+  <span style="position:absolute;left:312px;top:282px;z-index:2;width:36px;height:36px;border-radius:50%;background:#FFFFFF;border:4px solid #22223B;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif">B</span>
+  <div style="position:absolute;left:0;right:0;bottom:0;z-index:3;background:#FFFFFF;border-radius:32px 32px 0 0;box-shadow:0 -6px 24px rgba(34,34,59,.10);padding:10px 20px 24px;display:flex;flex-direction:column;gap:12px">
+    <div style="width:44px;height:5px;border-radius:3px;background:#DCCFC8;margin:0 auto 4px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <span style="font-size:16px;font-weight:700;color:#4A4E69;white-space:nowrap">Nota do trajeto</span>
+        <span style="display:flex;align-items:baseline;gap:6px"><span style="font-size:44px;line-height:48px;font-weight:900;letter-spacing:-0.02em">7,8</span><span style="font-size:18px;font-weight:700;color:#4A4E69">de 10</span></span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span style="font-size:16px;font-weight:700;color:#4A4E69;white-space:nowrap">1,2 km · 18 min</span><span style="display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;background:#E6DCE0;font-size:15px;font-weight:800;white-space:nowrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 4a4 4 0 1 0 0 8a4 4 0 1 0 0-8"></path><path d="M4.5 20c1.4-3.4 4.3-5 7.5-5s6.1 1.6 7.5 5"></path></svg>Cadeira de rodas</span></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px"><p style="margin:0;flex:1;font-size:18px;line-height:28px;text-wrap:pretty">A comunidade avaliou este trajeto há 2 horas. Confira no local.</p><dc-import name="MapiPersonagem" estado="bom" size="64" hint-size="64px,78px"></dc-import></div>
+    <button type="button" style="height:56px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 21s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12z"></path><path d="M12 6.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5"></path></svg>Começar trajeto</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="02 Detalhe do trecho" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column"><div style="position:absolute;top:34px;right:22px;z-index:2"><dc-import name="MapiPersonagem" estado="atencao" size="56" hint-size="56px,68px"></dc-import></div>
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:6px 20px 22px">
+    <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+      <div style="display:flex;flex-direction:column;min-width:0">
+        <span style="font-size:16px;font-weight:700;color:#4A4E69">Trecho 2 de 4</span>
+        <span style="font-size:22px;line-height:28px;font-weight:900;letter-spacing:-0.01em;white-space:nowrap">Rua Augusta, 900 a 1.040</span>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border-radius:28px;padding:16px 20px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:16px;font-weight:700;color:#4A4E69">Nota do trecho</span>
+          <span style="display:inline-flex;align-self:flex-start;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#F7EAD2;color:#634410;border:2px solid #7A5410"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3.5L21.5 20H2.5Z"></path><path d="M12 10v4.5"></path><path d="M12 17.5v.1"></path></svg>Atenção</span>
+        </div>
+        <span style="display:flex;align-items:baseline;gap:6px"><span style="font-size:44px;line-height:48px;font-weight:900;letter-spacing:-0.02em">6,4</span><span style="font-size:18px;font-weight:700;color:#4A4E69">de 10</span></span>
+      </div>
+      <div style="height:2px;background:#E8DDD7"></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:16px;font-weight:700;color:#4A4E69">Quanto confiar nesta nota</span>
+        <div role="img" aria-label="Confiança alta, 3 de 3 níveis" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+          <span style="height:14px;border-radius:7px;background:#22223B"></span>
+          <span style="height:14px;border-radius:7px;background:#22223B"></span>
+          <span style="height:14px;border-radius:7px;background:#22223B"></span>
+        </div>
+        <span style="font-size:17px;line-height:24px;font-weight:800;text-wrap:pretty">Confiança alta · confirmado há 2 horas por 3 pessoas</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:17px;font-weight:800">Problemas na calçada</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 14px 0 8px;border-radius:999px;background:#F4E0E5;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 40 40" width="26" height="26" style="display:block;flex:none;overflow:visible"><path d="M20 2.5L37.5 20L20 37.5L2.5 20Z" fill="#22223B" stroke="#22223B" style="stroke-width:6;stroke-linejoin:round"></path><path d="M20 2.5L37.5 20L20 37.5L2.5 20Z" fill="#CF7A93" stroke="#CF7A93" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3 7h18v10H3z"></path><path d="M11 7l2.5 3.5-3 2.5 2 4"></path></svg></svg>Calçada quebrada</span>
+        <span style="display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 14px 0 8px;border-radius:999px;background:#DDEDEA;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 40 40" width="26" height="26" style="display:block;flex:none;overflow:visible"><path d="M20 3.5L34.5 11.75V28.25L20 36.5L5.5 28.25V11.75Z" fill="#22223B" stroke="#22223B" style="stroke-width:6;stroke-linejoin:round"></path><path d="M20 3.5L34.5 11.75V28.25L20 36.5L5.5 28.25V11.75Z" fill="#5FA8A0" stroke="#5FA8A0" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M4 4v16"></path><path d="M20 4v16"></path><path d="M8 10l2 2-2 2"></path><path d="M16 10l-2 2 2 2"></path></svg></svg>Calçada estreita</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:17px;font-weight:800">Avisos temporários</span>
+      <span style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;height:48px;padding:0 18px 0 10px;border-radius:999px;background:#F7EAD2;border:2px solid #7A5410;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 40 40" width="26" height="26" style="display:block;flex:none;overflow:visible"><path d="M20 3L37 15.5L30.5 36H9.5L3 15.5Z" fill="#22223B" stroke="#22223B" style="stroke-width:6;stroke-linejoin:round"></path><path d="M20 3L37 15.5L30.5 36H9.5L3 15.5Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="12" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M4 7h16"></path><path d="M9.5 7V4.5h5V7"></path><path d="M6 7l1.2 13h9.6L18 7"></path><path d="M10 11v5"></path><path d="M14 11v5"></path></svg></svg>Lixo na calçada<span style="font-weight:600;color:#634410">· até 18h</span></span>
+    </div>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px">
+      <button type="button" style="height:64px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Ainda está assim</button>
+      <button type="button" style="height:64px;border-radius:22px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 20px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14"></path><path d="M20 20l-4-4"></path><path d="M9.2 9.3a1.9 1.9 0 1 1 2.7 1.7c-.6.3-.9.7-.9 1.3"></path><path d="M11 14.6v.1"></path></svg>Isso mudou</button>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s3 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="03 Alerta de chuva" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#E7DDD6;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif">
+  <svg viewBox="0 0 370 824" width="370" height="824" style="position:absolute;left:0;top:0;display:block">
+    <rect x="80" y="326" width="100" height="116" rx="22" fill="#DCE3D4"></rect>
+    <rect x="232" y="338" width="78" height="100" rx="20" fill="#DCE3D4"></rect>
+    <rect x="-20" y="152" width="410" height="18" fill="#FFFFFF"></rect>
+    <rect x="-20" y="289" width="410" height="22" fill="#FFFFFF"></rect>
+    <rect x="-20" y="457" width="410" height="26" fill="#FFFFFF"></rect>
+    <rect x="-20" y="640" width="410" height="22" fill="#FFFFFF"></rect>
+    <rect x="39" y="-20" width="22" height="870" fill="#FFFFFF"></rect>
+    <rect x="189" y="-20" width="22" height="870" fill="#FFFFFF"></rect>
+    <rect x="320" y="-20" width="20" height="870" fill="#FFFFFF"></rect>
+    <path d="M50 470H200M200 300H330" fill="none" stroke="#D9A441" style="stroke-width:28;stroke-linecap:round"></path>
+    <path d="M50 545V470M200 470V300" fill="none" stroke="#FFFFFF" style="stroke-width:13;stroke-linecap:round"></path>
+    <path d="M50 545V470M200 470V300" fill="none" stroke="#36704A" style="stroke-width:8;stroke-linecap:round"></path>
+    <path d="M50 470H200M200 300H330" fill="none" stroke="#FFFFFF" style="stroke-width:13;stroke-linecap:round"></path>
+    <path d="M54 470H196M204 300H326" fill="none" stroke="#7A5410" style="stroke-width:8;stroke-dasharray:14 8"></path>
+  </svg>
+  <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800;z-index:3">9:41</div>
+  <div style="position:absolute;top:50px;left:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap;box-shadow:0 6px 20px rgba(34,34,59,.12)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+  <div role="alert" style="position:absolute;top:104px;left:16px;right:16px;z-index:3;background:#F7EAD2;border:2px solid #7A5410;border-radius:24px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 8px 24px rgba(34,34,59,.18);color:#22223B">
+    <span style="width:44px;height:44px;border-radius:14px;background:#FFFFFF;border:2px solid #7A5410;display:grid;place-items:center;flex:none;color:#634410"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M7 14.5h10a3.5 3.5 0 0 0 .3-7A5.5 5.5 0 0 0 6.6 8.7 2.9 2.9 0 0 0 7 14.5z"></path><path d="M8 17.5l-1 2.5"></path><path d="M12.5 17.5l-1 2.5"></path><path d="M17 17.5l-1 2.5"></path></svg></span>
+    <p style="margin:0;font-size:18px;line-height:26px;text-wrap:pretty"><strong style="font-weight:900">Chuva forte prevista às 16h.</strong> 2 trechos do seu trajeto podem alagar.</p>
+  </div>
+  <span style="position:absolute;left:64px;top:490px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bom</span>
+  <span style="position:absolute;left:214px;top:368px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bom</span>
+  <span style="position:absolute;left:28px;top:410px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 6px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#F7EAD2;color:#634410;border:2px solid #7A5410;box-shadow:0 2px 8px rgba(34,34,59,.14)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3.5L21.5 20H2.5Z"></path><path d="M12 10v4.5"></path><path d="M12 17.5v.1"></path></svg>Atenção<svg viewBox="0 0 40 40" width="26" height="26" style="display:block;flex:none;overflow:visible;margin-left:4px"><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"><path d="M3 9c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path><path d="M3 15c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path></svg></svg></span>
+  <span style="position:absolute;left:198px;top:240px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 6px 0 8px;border-radius:999px;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;background:#F7EAD2;color:#634410;border:2px solid #7A5410;box-shadow:0 2px 8px rgba(34,34,59,.14)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3.5L21.5 20H2.5Z"></path><path d="M12 10v4.5"></path><path d="M12 17.5v.1"></path></svg>Atenção<svg viewBox="0 0 40 40" width="26" height="26" style="display:block;flex:none;overflow:visible;margin-left:4px"><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"><path d="M3 9c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path><path d="M3 15c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path></svg></svg></span>
+  <span style="position:absolute;left:34px;top:529px;z-index:2;width:32px;height:32px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif">A</span>
+  <span style="position:absolute;left:312px;top:282px;z-index:2;width:36px;height:36px;border-radius:50%;background:#FFFFFF;border:4px solid #22223B;display:grid;place-items:center;font:900 15px Nunito, system-ui, sans-serif">B</span>
+  <div style="position:absolute;left:0;right:0;bottom:0;z-index:3;background:#FFFFFF;border-radius:32px 32px 0 0;box-shadow:0 -6px 24px rgba(34,34,59,.10);padding:10px 20px 24px;display:flex;flex-direction:column;gap:12px">
+    <div style="width:44px;height:5px;border-radius:3px;background:#DCCFC8;margin:0 auto 4px"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span style="font-size:22px;line-height:28px;font-weight:900;letter-spacing:-0.01em">2 trechos podem alagar</span><dc-import name="MapiPersonagem" estado="chuva" size="64" hint-size="64px,78px"></dc-import></div>
+    <p style="margin:0;font-size:17px;line-height:26px;text-wrap:pretty">A partir das 16h, a Rua Augusta e a Rua Caio Prado ficam em Atenção.</p>
+    <button type="button" style="height:56px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M9 4.5L3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path><path d="M9 4.5v13"></path><path d="M15 6.5v13"></path></svg>Ver rota alternativa</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s4 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="04 Aviso rápido" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding:6px 20px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+      <div style="display:flex;align-items:center;gap:10px"><dc-import name="MapiPersonagem" estado="agradecendo" size="48" hint-size="48px,58px"></dc-import><button type="button" aria-label="Fechar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="font-size:28px;line-height:36px;font-weight:900;letter-spacing:-0.01em">O que tem no caminho?</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:700;color:#4A4E69"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 21s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12z"></path><path d="M12 6.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5"></path></svg>Rua Augusta, 900 · onde você está</span>
+    </div>
+    <div role="radiogroup" aria-label="Tipo de obstáculo" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <button type="button" role="radio" aria-checked="false" style="min-height:112px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:14px 16px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;cursor:pointer;text-align:left;font:800 18px/22px Nunito, system-ui, sans-serif">
+        <svg viewBox="0 0 40 40" width="44" height="44" style="display:block;flex:none;overflow:visible"><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M20 3C27 12 34 18 34 25.5a14 14 0 0 1-28 0C6 18 13 12 20 3Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3 9c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path><path d="M3 15c2 0 2.5-2 4.5-2s2.5 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2"></path></svg></svg>Alagamento</button>
+      <button type="button" role="radio" aria-checked="true" style="position:relative;min-height:112px;border-radius:24px;border:3px solid #22223B;background:#E6DCE0;padding:13px 15px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;cursor:pointer;text-align:left;font:800 18px/22px Nunito, system-ui, sans-serif">
+        <span style="position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" style="display:block;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+        <svg viewBox="0 0 40 40" width="44" height="44" style="display:block;flex:none;overflow:visible"><path d="M20 3L37 15.5L30.5 36H9.5L3 15.5Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M20 3L37 15.5L30.5 36H9.5L3 15.5Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="12" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M4 7h16"></path><path d="M9.5 7V4.5h5V7"></path><path d="M6 7l1.2 13h9.6L18 7"></path><path d="M10 11v5"></path><path d="M14 11v5"></path></svg></svg>Lixo na calçada</button>
+      <button type="button" role="radio" aria-checked="false" style="min-height:112px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:14px 16px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;cursor:pointer;text-align:left;font:800 18px/22px Nunito, system-ui, sans-serif">
+        <svg viewBox="0 0 40 40" width="44" height="44" style="display:block;flex:none;overflow:visible"><path d="M13 3H27L37 13V27L27 37H13L3 27V13Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M13 3H27L37 13V27L27 37H13L3 27V13Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3 18.5L21 7"></path><path d="M11 13.5L9 8"></path><path d="M15.5 10.6l3.5 3"></path><path d="M7 16l-1.5 3.5"></path></svg></svg>Galho caído</button>
+      <button type="button" role="radio" aria-checked="false" style="min-height:112px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:14px 16px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;cursor:pointer;text-align:left;font:800 18px/22px Nunito, system-ui, sans-serif">
+        <svg viewBox="0 0 40 40" width="44" height="44" style="display:block;flex:none;overflow:visible"><path d="M12 4H28L37 36H3Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M12 4H28L37 36H3Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="13" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M10 4h4l5.5 15h-15z"></path><path d="M8 10h8"></path><path d="M6.3 14.6h11.4"></path><path d="M3 19.5h18"></path></svg></svg>Obra</button>
+      <button type="button" role="radio" aria-checked="false" style="grid-column:1 / -1;min-height:80px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:left;font:800 18px/22px Nunito, system-ui, sans-serif">
+        <svg viewBox="0 0 40 40" width="44" height="44" style="display:block;flex:none;overflow:visible"><path d="M11 8H29A12 12 0 0 1 29 32H11A12 12 0 0 1 11 8Z" fill="#22223B" stroke="#22223B" style="stroke-width:5;stroke-linejoin:round"></path><path d="M11 8H29A12 12 0 0 1 29 32H11A12 12 0 0 1 11 8Z" fill="#D9A441" stroke="#D9A441" style="stroke-width:2;stroke-linejoin:round"></path><svg x="10" y="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22223B" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3.5 16.5V12l2.2-5h12.6l2.2 5v4.5z"></path><path d="M3.5 12h17"></path><path d="M7 16.5V19"></path><path d="M17 16.5V19"></path></svg></svg>Carro bloqueando</button>
+    </div>
+    <div style="background:#FFFFFF;border-radius:20px;padding:12px 16px;display:flex;align-items:center;gap:12px">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A4E69" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18"></path><path d="M12 7.5V12l3 2"></path></svg>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:18px;line-height:24px;font-weight:800">Este aviso vale por 6 horas</span>
+        <span style="font-size:16px;line-height:22px;color:#4A4E69">Depois sai do mapa, se ninguém confirmar.</span>
+      </div>
+    </div>
+    <button type="button" style="margin-top:auto;height:64px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 15V4.5"></path><path d="M7.5 9L12 4.5 16.5 9"></path><path d="M5 19.5h14"></path></svg>Avisar</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s5 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="05 Pós-trajeto" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding:6px 20px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div><dc-import name="MapiPersonagem" estado="comemorando" size="64" hint-size="64px,78px"></dc-import></div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="font-size:30px;line-height:38px;font-weight:900;letter-spacing:-0.01em">Você chegou. Deu certo?</span>
+      <span style="font-size:16px;font-weight:700;color:#4A4E69">Biblioteca Mário de Andrade · 18 min</span>
+    </div>
+    <div role="radiogroup" aria-label="Como foi o trajeto" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+      <button type="button" role="radio" aria-checked="false" style="min-height:104px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px 6px;cursor:pointer;font:800 17px/20px Nunito, system-ui, sans-serif;text-align:center"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18"></path><path d="M8 12.5l2.7 2.7L16.2 9.6"></path></svg>Sim</button>
+      <button type="button" role="radio" aria-checked="false" style="min-height:104px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px 6px;cursor:pointer;font:800 17px/20px Nunito, system-ui, sans-serif;text-align:center"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18"></path><path d="M8 12h8"></path></svg>Mais ou menos</button>
+      <button type="button" role="radio" aria-checked="true" style="min-height:104px;border-radius:20px;border:3px solid #22223B;background:#22223B;color:#F2E9E4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px 6px;cursor:pointer;font:900 17px/20px Nunito, system-ui, sans-serif;text-align:center"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" style="display:block;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18"></path><path d="M9 9l6 6"></path><path d="M15 9l-6 6"></path></svg>Não</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px;margin-top:6px">
+      <span style="font-size:24px;line-height:32px;font-weight:900">Onde foi o problema?</span>
+      <span style="font-size:16px;color:#4A4E69">Toque no número do trecho.</span>
+    </div>
+    <div style="position:relative;height:270px;border-radius:28px;overflow:hidden;background:#E7DDD6;flex:none">
+      <svg viewBox="0 0 330 270" width="330" height="270" style="position:absolute;left:0;top:0;display:block">
+        <rect x="58" y="80" width="74" height="62" rx="16" fill="#DCE3D4"></rect>
+        <rect x="-10" y="52" width="350" height="16" fill="#FFFFFF"></rect>
+        <rect x="-10" y="151" width="350" height="18" fill="#FFFFFF"></rect>
+        <rect x="22" y="-10" width="16" height="290" fill="#FFFFFF"></rect>
+        <rect x="142" y="-10" width="16" height="290" fill="#FFFFFF"></rect>
+        <rect x="282" y="-10" width="16" height="290" fill="#FFFFFF"></rect>
+        <path d="M30 240V160H150M150 60H290" fill="none" stroke="#4A4E69" style="stroke-width:6;stroke-linecap:round;stroke-linejoin:round"></path>
+        <path d="M150 160V60" fill="none" stroke="#C9ADA7" style="stroke-width:22;stroke-linecap:round"></path>
+        <path d="M150 160V60" fill="none" stroke="#22223B" style="stroke-width:9;stroke-linecap:round"></path>
+      </svg>
+      <span style="position:absolute;left:16px;top:226px;width:28px;height:28px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font:900 14px Nunito, system-ui, sans-serif">A</span>
+      <span style="position:absolute;left:274px;top:44px;width:32px;height:32px;border-radius:50%;background:#FFFFFF;border:4px solid #22223B;display:grid;place-items:center;font:900 14px Nunito, system-ui, sans-serif">B</span>
+      <button type="button" aria-label="Trecho 1" style="position:absolute;left:6px;top:172px;width:48px;height:48px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer">1</button>
+      <button type="button" aria-label="Trecho 2" style="position:absolute;left:66px;top:136px;width:48px;height:48px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer">2</button>
+      <button type="button" aria-label="Trecho 3, selecionado" aria-pressed="true" style="position:absolute;left:123px;top:83px;width:54px;height:54px;border-radius:50%;border:3px solid #FFFFFF;background:#22223B;color:#F2E9E4;display:grid;place-items:center;font:900 20px Nunito, system-ui, sans-serif;cursor:pointer;box-shadow:0 0 0 3px #22223B">3</button>
+      <button type="button" aria-label="Trecho 4" style="position:absolute;left:196px;top:36px;width:48px;height:48px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer">4</button>
+      <span style="position:absolute;left:186px;top:112px;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px 0 10px;border-radius:999px;background:#FFFFFF;border:2px solid #22223B;font:800 16px Nunito, system-ui, sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(34,34,59,.12)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Trecho 3</span>
+    </div>
+    <button type="button" style="margin-top:auto;height:56px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer">Continuar</button>
+  </div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;tela&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;default&quot;:&quot;1&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const t = String(this.props.tela ?? '1');
+    return { s1: t === '1', s2: t === '2', s3: t === '3', s4: t === '4', s5: t === '5' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+node_modules
+dist
+dev-dist
+*.local
+
+# Material de referência de terceiros que veio no zip do design (não é usado pelo app e não pode ir para um repositório público).
+# O zip original fica fora porque contém essas mesmas imagens; tudo o que o app usa já está em design-system/.
+design/
+design-system/uploads/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap">
+<style>
+html, body { margin: 0; background: #EDE3DD; color: #22223B; font-family: Nunito, system-ui, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; text-decoration-thickness: 2px; text-underline-offset: 3px; } a:hover { color: #22223B; }
+</style>
+</helmet>
+<section style="padding:56px 64px 72px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:6px;max-width:900px">
+    <span style="font-size:44px;line-height:52px;font-weight:900;letter-spacing:-0.02em">Mapiii · Visão de futuro</span>
+    <span style="font-size:18px;line-height:28px;color:#4A4E69">Planejador de trajeto com nota por trecho, confiança e avisos temporários. Telas mobile de 390 px. Versão 16:9 para vídeo: <a href="Mapiii Visao de Futuro 16x9.dc.html">Mapiii Visao de Futuro 16x9</a>.</span>
+  </div>
+  <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">1 · Rota de A a B</span><dc-import name="VisaoTela" tela="1" hint-size="390px,844px"></dc-import></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">2 · Detalhe do trecho</span><dc-import name="VisaoTela" tela="2" hint-size="390px,844px"></dc-import></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">3 · Alerta de chuva</span><dc-import name="VisaoTela" tela="3" hint-size="390px,844px"></dc-import></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">4 · Aviso rápido</span><dc-import name="VisaoTela" tela="4" hint-size="390px,844px"></dc-import></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">5 · Pós-trajeto</span><dc-import name="VisaoTela" tela="5" hint-size="390px,844px"></dc-import></div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:28px;padding:28px 32px;max-width:1100px;display:flex;flex-direction:column;gap:20px">
+    <span style="font-size:24px;line-height:32px;font-weight:900">Mapi, o personagem</span>
+    <div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-end">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="bom" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Bom</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="atencao" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Atenção</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="evite" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Evite</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="chuva" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Chuva</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="comemorando" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Comemorando</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><dc-import name="MapiPersonagem" estado="agradecendo" size="120" hint-size="120px,146px"></dc-import><span style="font-size:18px;font-weight:800">Agradecendo</span></div>
+    </div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:28px;padding:28px 32px;max-width:1100px;display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:24px;line-height:32px;font-weight:900">Componentes novos</span>
+    <ul style="margin:0;padding-left:22px;font-size:17px;line-height:28px;display:flex;flex-direction:column;gap:4px">
+      <li><strong>Selo Visão de futuro</strong>: variação do Badge, fundo Almond Silk, borda de 2 px e texto em Space Indigo, ícone olho.</li>
+      <li><strong>Rótulo de trecho</strong>: Bom, Atenção, Evite e Sem dados, com cor semântica, borda e ícone.</li>
+      <li><strong>Linha de trecho</strong>: cheia (Bom), tracejada (Atenção), pontilhada grossa (Evite), fina cinza (Sem dados), sempre com contorno branco.</li>
+      <li><strong>Medidor de confiança</strong>: 3 barras com texto de nível, data e número de pessoas.</li>
+      <li><strong>Marcador e tag de aviso temporário</strong>: âmbar com contorno indigo; gota (alagamento), pentágono (lixo), octógono (galho), trapézio (obra), pílula (carro).</li>
+      <li><strong>Banner de alerta</strong>, <strong>cartão de tipo de obstáculo</strong>, <strong>botão de resposta</strong> (Sim, Mais ou menos, Não), <strong>seletor de trecho no mapa</strong> (números de 48 px) e <strong>cartão de rota A–B</strong>.</li>
+      <li><strong>Ícones novos</strong> no padrão do conjunto (24 px, traço 2 px): olho, alerta, dúvida, chuva, alagamento, lixo, galho, obra, carro, relógio, neutro, não.</li>
+    </ul>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

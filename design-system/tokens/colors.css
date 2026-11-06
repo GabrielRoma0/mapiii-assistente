@@ -1,0 +1,88 @@
+:root {
+  /* Paleta da marca */
+  --mapi-indigo-900: #22223B;   /* Space Indigo — texto, ação principal, foco */
+  --mapi-grape-700: #4A4E69;    /* Dusty Grape — símbolo, texto secundário, links */
+  --mapi-lilac-500: #9A8C98;    /* Lilac Ash — só decorativo / ícone sobre branco */
+  --mapi-almond-300: #C9ADA7;   /* Almond Silk — destaques, sempre com texto indigo */
+  --mapi-seashell-50: #F2E9E4;  /* Seashell — fundo do app */
+  --mapi-lilac-100: #E6DCE0;    /* seleção, fundos de destaque */
+  --mapi-white: #FFFFFF;
+
+  /* Neutros derivados */
+  --mapi-border-200: #DCCFC8;
+  --mapi-border-100: #E8DDD7;
+  --mapi-stripe-200: #E3D6CF;
+  --mapi-input-600: #6E6A7E;
+  --mapi-map-ground: #E7DDD6;
+  --mapi-map-park: #DCE3D4;
+
+  /* Semânticas: 500 = preenchimento, 700/800 = texto, 50 = fundo */
+  --mapi-coral-50: #F6E2DD;  --mapi-coral-500: #D9705F;  --mapi-coral-700: #A0402F;  --mapi-coral-800: #8E3527;
+  --mapi-amber-50: #F7EAD2;  --mapi-amber-500: #D9A441;  --mapi-amber-800: #7A5410;  --mapi-amber-900: #634410;
+  --mapi-green-50: #DDEBE0;  --mapi-green-500: #6AAE7E;  --mapi-green-700: #36704A;  --mapi-green-800: #2F5A3C;
+
+  /* Categorias: 500 preenchimento do marcador · 700 texto · 100 fundo de tag */
+  --mapi-cat-rampa-100: #E9E3F2;     --mapi-cat-rampa-500: #8E7CC3;     --mapi-cat-rampa-700: #5B4A8F;
+  --mapi-cat-obstaculo-100: #F6E4D6; --mapi-cat-obstaculo-500: #D9874E; --mapi-cat-obstaculo-700: #94511F;
+  --mapi-cat-quebrada-100: #F4E0E5;  --mapi-cat-quebrada-500: #CF7A93;  --mapi-cat-quebrada-700: #94435C;
+  --mapi-cat-estreita-100: #DDEDEA;  --mapi-cat-estreita-500: #5FA8A0;  --mapi-cat-estreita-700: #2F6B65;
+  --mapi-cat-ok-100: #E3E8F2;        --mapi-cat-ok-500: #7A93C8;        --mapi-cat-ok-700: #44598C;
+
+  /* Aliases semânticos — tema claro */
+  --bg-app: var(--mapi-seashell-50);
+  --surface-card: var(--mapi-white);
+  --surface-sunken: var(--mapi-seashell-50);
+  --surface-selected: var(--mapi-lilac-100);
+  --surface-inverse: var(--mapi-indigo-900);
+  --text-body: var(--mapi-indigo-900);
+  --text-muted: var(--mapi-grape-700);
+  --text-inverse: var(--mapi-seashell-50);
+  --text-link: var(--mapi-grape-700);
+  --border-default: var(--mapi-border-200);
+  --border-subtle: var(--mapi-border-100);
+  --border-input: var(--mapi-input-600);
+  --border-strong: var(--mapi-indigo-900);
+  --action-primary-bg: var(--mapi-indigo-900);
+  --action-primary-bg-hover: #3A3A5C;
+  --action-primary-fg: var(--mapi-seashell-50);
+  --action-secondary-bg: var(--mapi-white);
+  --action-secondary-fg: var(--mapi-indigo-900);
+  --action-danger-bg: var(--mapi-coral-700);
+  --action-danger-fg: var(--mapi-white);
+  --action-disabled-bg: var(--mapi-border-100);
+  --action-disabled-fg: #5E5A6E;
+  --focus-ring-color: var(--mapi-indigo-900);
+  --focus-ring-gap: var(--mapi-white);
+  --status-review-bg: var(--mapi-amber-50);  --status-review-fg: var(--mapi-amber-900);  --status-review-border: var(--mapi-amber-800);
+  --status-success-bg: var(--mapi-green-50); --status-success-fg: var(--mapi-green-800);
+  --status-error-bg: var(--mapi-coral-50);   --status-error-fg: var(--mapi-coral-800);
+  --marker-ink: var(--mapi-indigo-900);
+}
+
+[data-theme="dark"] {
+  --bg-app: #22223B;
+  --surface-card: #2E2E4C;
+  --surface-sunken: #22223B;
+  --surface-selected: #3B3456;
+  --surface-inverse: #F2E9E4;
+  --text-body: #F2E9E4;
+  --text-muted: #C9BFC5;
+  --text-inverse: #22223B;
+  --text-link: #C9ADA7;
+  --border-default: #46465F;
+  --border-subtle: #34344F;
+  --border-input: #9A8C98;
+  --border-strong: #F2E9E4;
+  --action-primary-bg: #C9ADA7;
+  --action-primary-bg-hover: #D6BEB8;
+  --action-primary-fg: #22223B;
+  --action-secondary-bg: transparent;
+  --action-secondary-fg: #F2E9E4;
+  --action-disabled-bg: #34344F;
+  --action-disabled-fg: #C9BFC5;
+  --focus-ring-color: #FFC966;
+  --focus-ring-gap: #22223B;
+  --status-review-bg: #3A2A08; --status-review-fg: #FFD88A; --status-review-border: #FFC966;
+  --status-success-bg: #1F3A2A; --status-success-fg: #B9E0C3;
+  --status-error-bg: #3D2220; --status-error-fg: #F3B9AE;
+}

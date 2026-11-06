@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 40 40" width="{{ size }}" height="{{ size }}" style="display:block;flex:none;overflow:visible"><path d="{{ shape }}" fill="{{ ink }}" stroke="{{ ink }}" style="stroke-width:6;stroke-linejoin:round"></path><path d="{{ shape }}" fill="{{ fill }}" stroke="{{ fill }}" style="stroke-width:2;stroke-linejoin:round"></path><svg x="{{ ix }}" y="{{ iy }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ ink }}" style="stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="{{ p1 }}"></path><path d="{{ p2 }}"></path><path d="{{ p3 }}"></path><path d="{{ p4 }}"></path></svg></svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:64,&quot;height&quot;:64},&quot;cat&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;sem_rampa_ou_degrau&quot;,&quot;obstaculo_no_caminho&quot;,&quot;calcada_quebrada&quot;,&quot;calcada_estreita&quot;,&quot;sem_problema&quot;],&quot;default&quot;:&quot;calcada_quebrada&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:40,&quot;tsType&quot;:&quot;number&quot;},&quot;pal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;v1&quot;,&quot;v2&quot;],&quot;default&quot;:&quot;v1&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const CATS = {
+  sem_rampa_ou_degrau: { fill: '#9370F0', v2: '#8E7CC3', shape: 'M7 7H33V33H7Z', icon: ['M3 19h6v-5h6V9h6', 'M3 19h18'], ix: 10, iy: 10 },
+  obstaculo_no_caminho: { fill: '#F58A3A', v2: '#D9874E', shape: 'M20 5L36 33H4Z', icon: ['M9 20V8a3 3 0 0 1 6 0v12', 'M6 20h12', 'M9 12.5h6'], ix: 10, iy: 13.5 },
+  calcada_quebrada: { fill: '#EC6A9C', v2: '#CF7A93', shape: 'M20 2.5L37.5 20L20 37.5L2.5 20Z', icon: ['M3 7h18v10H3z', 'M11 7l2.5 3.5-3 2.5 2 4'], ix: 10, iy: 10 },
+  calcada_estreita: { fill: '#22AFC4', v2: '#5FA8A0', shape: 'M20 3.5L34.5 11.75V28.25L20 36.5L5.5 28.25V11.75Z', icon: ['M4 4v16', 'M20 4v16', 'M8 10l2 2-2 2', 'M16 10l-2 2 2 2'], ix: 10, iy: 10 },
+  sem_problema: { fill: '#6C97FB', v2: '#7A93C8', shape: 'M20 4a16 16 0 1 0 0 32a16 16 0 1 0 0-32Z', icon: ['M5 12.5l4.5 4.5L19 7.5'], ix: 10, iy: 10 }
+};
+class Component extends DCLogic {
+  renderVals() {
+    const c = CATS[this.props.cat] || CATS.sem_problema;
+    const v2 = this.props.pal === 'v2';
+    return { size: this.props.size ?? 40, shape: c.shape, fill: v2 ? c.v2 : c.fill, ink: v2 ? '#22223B' : '#14213D', ix: c.ix, iy: c.iy,
+      p1: c.icon[0] || '', p2: c.icon[1] || '', p3: c.icon[2] || '', p4: c.icon[3] || '' };
+  }
+}
+</script>
+</body>
+</html>

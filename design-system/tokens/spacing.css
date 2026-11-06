@@ -1,0 +1,20 @@
+:root {
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
+  --space-6: 24px; --space-7: 32px; --space-8: 40px; --space-9: 48px; --space-10: 64px; --space-11: 96px;
+
+  --radius-xs: 8px; --radius-sm: 12px; --radius-md: 16px; --radius-lg: 20px;
+  --radius-xl: 28px; --radius-2xl: 36px; --radius-device: 52px; --radius-pill: 999px;
+
+  --touch-min: 48px;      /* alvo mínimo de toque */
+  --touch-primary: 56px;  /* ações principais */
+  --touch-hero: 64px;     /* botão de enviar / registrar */
+  --border-width: 2px; --border-width-selected: 3px;
+
+  --shadow-float: 0 8px 24px rgba(34, 34, 59, 0.18);
+  --shadow-sheet: 0 -6px 24px rgba(34, 34, 59, 0.10);
+  --shadow-search: 0 6px 20px rgba(34, 34, 59, 0.12);
+  --shadow-page: 0 10px 40px rgba(34, 34, 59, 0.12);
+  --focus-ring: 0 0 0 3px var(--focus-ring-gap), 0 0 0 6px var(--focus-ring-color);
+
+  --duration-fast: 120ms; --duration-base: 200ms; --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}

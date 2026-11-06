@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 24 24" width="{{ size }}" height="{{ size }}" fill="none" stroke="{{ color }}" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="{{ p1 }}" opacity="{{ o1 }}"></path><path d="{{ p2 }}" opacity="{{ o2 }}"></path><path d="{{ p3 }}" opacity="{{ o3 }}"></path><path d="{{ p4 }}" opacity="{{ o4 }}"></path></svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:48,&quot;height&quot;:48},&quot;nameOf&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;degrau&quot;,&quot;obstaculo&quot;,&quot;quebrada&quot;,&quot;estreita&quot;,&quot;ok&quot;,&quot;camera&quot;,&quot;local&quot;,&quot;filtro&quot;,&quot;g0&quot;,&quot;g1&quot;,&quot;g2&quot;,&quot;g3&quot;,&quot;enviar&quot;,&quot;revisar&quot;,&quot;mapa&quot;,&quot;download&quot;,&quot;voltar&quot;,&quot;fechar&quot;,&quot;mais&quot;,&quot;check&quot;,&quot;usuario&quot;,&quot;lista&quot;,&quot;ia&quot;,&quot;busca&quot;,&quot;grafico&quot;,&quot;galeria&quot;,&quot;documento&quot;,&quot;onde_ir&quot;,&quot;prazo&quot;,&quot;escudo_check&quot;,&quot;golpe&quot;,&quot;link&quot;,&quot;passos&quot;,&quot;conversa&quot;,&quot;calendario&quot;,&quot;alerta&quot;,&quot;duvida&quot;],&quot;default&quot;:&quot;camera&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:24,&quot;tsType&quot;:&quot;number&quot;},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#14213D&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const ICONS = {
+  degrau: ['M3 19h6v-5h6V9h6', 'M3 19h18'],
+  obstaculo: ['M9 20V8a3 3 0 0 1 6 0v12', 'M6 20h12', 'M9 12.5h6'],
+  quebrada: ['M3 7h18v10H3z', 'M11 7l2.5 3.5-3 2.5 2 4'],
+  estreita: ['M4 4v16', 'M20 4v16', 'M8 10l2 2-2 2', 'M16 10l-2 2 2 2'],
+  ok: ['M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18', 'M8 12.5l2.7 2.7L16.2 9.6'],
+  camera: ['M3.5 8.5h3.5l2-3h6l2 3h3.5v10.5h-17z', 'M12 10.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7'],
+  local: ['M12 21s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12z', 'M12 6.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5'],
+  filtro: ['M4 6h16', 'M7 12h10', 'M10 18h4'],
+  g0: ['M6 19v-3', 'M12 19v-7', 'M18 19V8', 'M4 21h16'],
+  g1: ['M6 19v-3', 'M12 19v-7', 'M18 19V8', 'M4 21h16'],
+  g2: ['M6 19v-3', 'M12 19v-7', 'M18 19V8', 'M4 21h16'],
+  g3: ['M6 19v-3', 'M12 19v-7', 'M18 19V8', 'M4 21h16'],
+  enviar: ['M12 15V4.5', 'M7.5 9L12 4.5 16.5 9', 'M5 19.5h14'],
+  revisar: ['M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14', 'M20 20l-4-4', 'M9.2 9.3a1.9 1.9 0 1 1 2.7 1.7c-.6.3-.9.7-.9 1.3', 'M11 14.6v.1'],
+  mapa: ['M9 4.5L3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z', 'M9 4.5v13', 'M15 6.5v13'],
+  download: ['M12 4.5V15', 'M7.5 10.5L12 15l4.5-4.5', 'M5 19.5h14'],
+  voltar: ['M15 5l-7 7 7 7'],
+  fechar: ['M6 6l12 12', 'M18 6L6 18'],
+  mais: ['M12 5v14', 'M5 12h14'],
+  check: ['M5 12.5l4.5 4.5L19 7.5'],
+  usuario: ['M12 4a4 4 0 1 0 0 8a4 4 0 1 0 0-8', 'M4.5 20c1.4-3.4 4.3-5 7.5-5s6.1 1.6 7.5 5'],
+  lista: ['M9 6h11', 'M9 12h11', 'M9 18h11', 'M4.5 6h.1', 'M4.5 12h.1', 'M4.5 18h.1'],
+  ia: ['M12 3.5l1.9 5 5 1.9-5 1.9-1.9 5-1.9-5-5-1.9 5-1.9z', 'M18.5 16.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'],
+  busca: ['M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14', 'M20 20l-4-4'],
+  grafico: ['M4 20h16', 'M7 16v-4', 'M12 16V7', 'M17 16v-6'],
+  galeria: ['M4 5h16v14H4z', 'M4 15l4.5-4.5 4 4 2.5-2.5 5 5', 'M15.5 8.5h.1'],
+  documento: ['M6 3h8l4 4v14H6z', 'M14 3v4h4', 'M9 12h6', 'M9 16h6'],
+  onde_ir: ['M12 3v18', 'M12 5h6l2.5 2.5L18 10h-6', 'M12 12H6l-2.5 2.5L6 17h6', 'M8.5 21h7'],
+  prazo: ['M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18', 'M12 7.5V12l3 2'],
+  escudo_check: ['M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z', 'M8.5 12l2.5 2.5 4.5-4.5'],
+  golpe: ['M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z', 'M12 8v4.5', 'M12 16v.1'],
+  link: ['M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1', 'M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1'],
+  passos: ['M4 6l1.5 1.5L8 5M4 12l1.5 1.5L8 11', 'M4.5 18h3', 'M11 6h9M11 12h9M11 18h9'],
+  conversa: ['M4 5h16v11H10l-4 3.5V16H4z', 'M8 9.5h8', 'M8 12.5h5'],
+  calendario: ['M4 6h16v14H4z', 'M4 10h16', 'M8 3.5v4M16 3.5v4', 'M8 14h.1M12 14h.1M16 14h.1M8 17h.1M12 17h.1'],
+  alerta: ['M12 3.5L21.5 20H2.5Z', 'M12 10v4.5', 'M12 17.5v.1'],
+  duvida: ['M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18', 'M9.5 9.3a2.6 2.6 0 1 1 3.7 2.4c-.7.4-1.2.9-1.2 1.7', 'M12 16.8v.1']
+};
+const G = { g0: [.28, .28, .28, 1], g1: [1, .28, .28, 1], g2: [1, 1, .28, 1], g3: [1, 1, 1, 1] };
+class Component extends DCLogic {
+  renderVals() {
+    const n = this.props.nameOf || this.props.icon || 'ok';
+    const p = ICONS[n] || ICONS.ok;
+    const o = G[n] || [1, 1, 1, 1];
+    return { size: this.props.size ?? 24, color: this.props.color ?? '#14213D',
+      p1: p[0] || '', p2: p[1] || '', p3: p[2] || '', p4: p[3] || '', o1: o[0], o2: o[1], o3: o[2], o4: o[3] };
+  }
+}
+</script>
+</body>
+</html>

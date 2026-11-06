@@ -1,0 +1,59 @@
+.pagina {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-5) var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.titulo {
+  margin: 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.02em;
+}
+.nota {
+  margin: 0;
+  color: var(--text-muted);
+}
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.secaoTitulo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: var(--weight-black);
+}
+.linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.gradeMapi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: var(--space-3);
+}
+.mapiItem {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2);
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+  text-align: center;
+}

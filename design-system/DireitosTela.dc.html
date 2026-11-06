@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+html, body { margin: 0; background: #F2E9E4; color: #22223B; font-family: Nunito, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; text-decoration-thickness: 2px; text-underline-offset: 3px; } a:hover { color: #22223B; }
+button, input, textarea { font-family: inherit; color: inherit; }
+::placeholder { color: #6E6A7E; opacity: 1; }
+:focus-visible { outline: none; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #22223B; }
+</style>
+</helmet>
+
+<sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="01 Início" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:20px;padding:8px 20px 20px">
+    <div style="display:flex;align-items:center;justify-content:space-between;min-height:48px"><dc-import name="MapiLogo" simbolo="ambos" size="{{ 30 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="110px,40px"></dc-import><a href="#sobre" style="min-height:48px;display:inline-flex;align-items:center;font-size:16px;font-weight:800">Sobre e fontes</a></div>
+    <div style="display:flex;align-items:flex-start;gap:12px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="bom" size="64" hint-size="64px,78px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-top:6px">
+        <span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Olá</span>
+        <div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">Olá. Eu ajudo você a entender direitos e serviços públicos em São Paulo.</div>
+      </div>
+    </div>
+    <h1 style="margin:0;font-size:36px;line-height:42px;font-weight:900;letter-spacing:-0.02em">Seu mapa de direitos</h1>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <button type="button" style="min-height:96px;width:100%;border:none;border-radius:28px;background:#22223B;color:#F2E9E4;padding:18px 20px;display:flex;align-items:center;gap:16px;text-align:left;cursor:pointer">
+        <span style="width:52px;height:52px;border-radius:18px;background:#F2E9E4;color:#22223B;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="passos" size="28" color="currentColor" hint-size="28px,28px"></dc-import></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:20px;line-height:26px;font-weight:900">Escolher minha situação</span><span style="font-size:16px;line-height:22px;font-weight:600">Responda 3 perguntas e veja o que pode se aplicar.</span></span>
+      </button>
+      <button type="button" style="min-height:96px;width:100%;border:2px solid #DCCFC8;border-radius:28px;background:#FFFFFF;color:#22223B;padding:18px 20px;display:flex;align-items:center;gap:16px;text-align:left;cursor:pointer">
+        <span style="width:52px;height:52px;border-radius:18px;background:#E6DCE0;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="conversa" size="28" color="#22223B" hint-size="28px,28px"></dc-import></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:20px;line-height:26px;font-weight:900">Fazer uma pergunta</span><span style="font-size:16px;line-height:22px;color:#4A4E69;font-weight:600">Escreva com suas palavras.</span></span>
+      </button>
+      <button type="button" style="min-height:96px;width:100%;border:2px solid #DCCFC8;border-radius:28px;background:#FFFFFF;color:#22223B;padding:18px 20px;display:flex;align-items:center;gap:16px;text-align:left;cursor:pointer">
+        <span style="width:52px;height:52px;border-radius:18px;background:#E6DCE0;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="escudo_check" size="28" color="#22223B" hint-size="28px,28px"></dc-import></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:20px;line-height:26px;font-weight:900">Conferir se é oficial</span><span style="font-size:16px;line-height:22px;color:#4A4E69;font-weight:600">Cole um link ou um valor cobrado.</span></span>
+      </button>
+    </div>
+  </div>
+  <div role="note" style="flex:none;margin:0 16px 20px;background:#E6DCE0;border-radius:20px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:23px;font-weight:700"><span style="flex:none;padding-top:1px"><dc-import name="MapiIcon" name-of="alerta" size="22" color="#22223B" hint-size="22px,22px"></dc-import></span>Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="02 Escolher minha situação" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:8px 20px 20px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Escolher minha situação</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:16px;font-weight:800;color:#4A4E69">Passo {{ wn }} de 3</span>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+        <sc-for list="{{ bars }}" as="b" hint-placeholder-count="3"><sc-if value="{{ b.on }}"><span style="height:8px;border-radius:4px;background:#22223B"></span></sc-if><sc-if value="{{ b.off }}"><span style="height:8px;border-radius:4px;background:#DCCFC8"></span></sc-if></sc-for>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="ouvindo" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+        <span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Ouvindo</span>
+        <div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">{{ wmapi }}</div>
+      </div>
+    </div>
+    <fieldset style="margin:0;padding:0;border:none;display:flex;flex-direction:column;gap:10px">
+      <legend style="padding:0;margin-bottom:12px;font-size:26px;line-height:32px;font-weight:900;letter-spacing:-0.01em">{{ wq }}</legend>
+      <sc-for list="{{ wopts }}" as="o" hint-placeholder-count="4">
+        <sc-if value="{{ o.sel }}"><button type="button" role="radio" aria-checked="true" style="min-height:72px;width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;background:#E6DCE0;border:3px solid #22223B;text-align:left;cursor:pointer;font:800 18px/24px Nunito, system-ui, sans-serif;color:#22223B"><span style="width:28px;height:28px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="check" size="18" color="currentColor" hint-size="18px,18px"></dc-import></span>{{ o.t }}</button></sc-if>
+        <sc-if value="{{ o.nsel }}"><button type="button" role="radio" aria-checked="false" style="min-height:72px;width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;background:#FFFFFF;border:2px solid #DCCFC8;text-align:left;cursor:pointer;font:800 18px/24px Nunito, system-ui, sans-serif;color:#22223B"><span style="width:28px;height:28px;border-radius:50%;border:2px solid #6E6A7E;background:#FFFFFF;flex:none"></span>{{ o.t }}</button></sc-if>
+      </sc-for>
+    </fieldset>
+    <p style="margin:0;display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:24px;font-weight:700"><span style="flex:none"><dc-import name="MapiIcon" name-of="escudo_check" size="22" color="#22223B" hint-size="22px,22px"></dc-import></span>Não pedimos nome, diagnóstico nem renda exata.</p>
+  </div>
+  <div style="flex:none;padding:12px 20px 24px;background:#F2E9E4;border-top:2px solid #E8DDD7"><button type="button" style="height:56px;width:100%;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer">{{ wcta }}</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s3 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="03 Rota dos Direitos" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:8px 20px 24px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Resultado</span></div>
+    <h1 style="margin:0;font-size:30px;line-height:36px;font-weight:900;letter-spacing:-0.02em">Sua rota dos direitos</h1>
+    <p style="margin:0;font-size:16px;line-height:24px;color:#4A4E69;font-weight:700">Para filho ou filha · Cadeira de rodas · Transporte e benefícios</p>
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="verificado" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+        <span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Verificado</span>
+        <div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">Conferi as fontes destes resultados em 28/10/2026. Quem decide é sempre o órgão responsável.</div>
+      </div>
+    </div>
+
+    <article style="background:#FFFFFF;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:4px"><h2 style="margin:0;font-size:21px;line-height:28px;font-weight:900;letter-spacing:-0.01em">Bilhete Único Especial</h2><p style="margin:0;font-size:17px;line-height:25px;color:#4A4E69">Passe livre nos ônibus municipais de São Paulo.</p></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="ok" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode ter direito</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="escudo_check" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte oficial</span>
+      </div>
+      <dl style="margin:0;display:flex;flex-direction:column;gap:10px;padding:14px 0 0;border-top:2px solid #E8DDD7">
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="documento" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">O que levar</dt><dd style="margin:0;font-size:16px;line-height:24px">Documento com foto, CPF e relatório médico.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="onde_ir" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Onde ir</dt><dd style="margin:0;font-size:16px;line-height:24px">Site da SPTrans ou posto de atendimento.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="prazo" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Quanto tempo costuma levar</dt><dd style="margin:0;font-size:16px;line-height:24px">Algumas semanas.</dd></div></div>
+      </dl>
+      <button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Ver detalhes</button>
+    </article>
+
+    <article style="background:#FFFFFF;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:4px"><h2 style="margin:0;font-size:21px;line-height:28px;font-weight:900;letter-spacing:-0.01em">BPC</h2><p style="margin:0;font-size:17px;line-height:25px;color:#4A4E69">Um salário mínimo por mês para pessoa com deficiência de família com renda baixa.</p></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="duvida" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Talvez</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="escudo_check" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte oficial</span>
+      </div>
+      <dl style="margin:0;display:flex;flex-direction:column;gap:10px;padding:14px 0 0;border-top:2px solid #E8DDD7">
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="documento" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">O que levar</dt><dd style="margin:0;font-size:16px;line-height:24px">CPF de todos da casa e Cadastro Único atualizado.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="onde_ir" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Onde ir</dt><dd style="margin:0;font-size:16px;line-height:24px">Aplicativo Meu INSS ou telefone 135.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="prazo" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Quanto tempo costuma levar</dt><dd style="margin:0;font-size:16px;line-height:24px">Alguns meses, com perícia e avaliação social.</dd></div></div>
+      </dl>
+      <button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Ver detalhes</button>
+    </article>
+
+    <article style="background:#FFFFFF;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:4px"><h2 style="margin:0;font-size:21px;line-height:28px;font-weight:900;letter-spacing:-0.01em">Atende+</h2><p style="margin:0;font-size:17px;line-height:25px;color:#4A4E69">Transporte porta a porta para quem não consegue usar o ônibus comum.</p></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="duvida" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Talvez</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#22223B;border:2px solid #6E6A7E;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="link" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte secundária</span>
+      </div>
+      <dl style="margin:0;display:flex;flex-direction:column;gap:10px;padding:14px 0 0;border-top:2px solid #E8DDD7">
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="documento" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">O que levar</dt><dd style="margin:0;font-size:16px;line-height:24px">Relatório médico e comprovante de endereço.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="onde_ir" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Onde ir</dt><dd style="margin:0;font-size:16px;line-height:24px">Central 156 da Prefeitura.</dd></div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><dc-import name="MapiIcon" name-of="prazo" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><div><dt style="font-size:16px;font-weight:800">Quanto tempo costuma levar</dt><dd style="margin:0;font-size:16px;line-height:24px">Depende da fila de vagas na sua região.</dd></div></div>
+      </dl>
+      <button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Ver detalhes</button>
+    </article>
+
+    <article style="background:#FFFFFF;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:4px"><h2 style="margin:0;font-size:21px;line-height:28px;font-weight:900;letter-spacing:-0.01em">Isenção de IPVA</h2><p style="margin:0;font-size:17px;line-height:25px;color:#4A4E69">Vale para carro em nome da pessoa com deficiência ou de quem a representa.</p></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#E6DCE0;color:#22223B;border:2px solid #6E6A7E;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Provavelmente não se aplica</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="prazo" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode estar desatualizada</span>
+      </div>
+      <p style="margin:0;font-size:16px;line-height:24px">Você não indicou carro na família. Fonte conferida pela última vez em 12/03/2025.</p>
+      <button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Ver detalhes</button>
+    </article>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s4 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="04 Detalhe de um direito" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:18px;padding:8px 20px 24px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Sua rota dos direitos</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h1 style="margin:0;font-size:30px;line-height:36px;font-weight:900;letter-spacing:-0.02em">Bilhete Único Especial</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="ok" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode ter direito</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="escudo_check" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte oficial</span>
+      </div>
+    </div>
+    <section style="display:flex;flex-direction:column;gap:6px"><h2 style="margin:0;font-size:20px;font-weight:900">Quem pode</h2><p style="margin:0;font-size:17px;line-height:26px;text-wrap:pretty">Pessoas com deficiência que moram em São Paulo, conforme as regras da SPTrans. Em alguns casos, um acompanhante também.</p></section>
+    <section style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 style="margin:0;font-size:20px;font-weight:900">Documentos</h2><span style="font-size:16px;font-weight:800;color:#4A4E69">{{ doneCount }} de 4 prontos</span></div>
+      <sc-for list="{{ docs }}" as="d" hint-placeholder-count="4">
+        <button type="button" role="checkbox" aria-checked="{{ d.aria }}" onClick="{{ d.toggle }}" style="min-height:56px;width:100%;display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;text-align:left;cursor:pointer;font:700 17px/24px Nunito, system-ui, sans-serif;color:#22223B">
+          <sc-if value="{{ d.done }}"><span style="width:28px;height:28px;border-radius:8px;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="check" size="20" color="currentColor" hint-size="20px,20px"></dc-import></span></sc-if>
+          <sc-if value="{{ d.notDone }}"><span style="width:28px;height:28px;border-radius:8px;border:2px solid #6E6A7E;background:#FFFFFF;flex:none"></span></sc-if>
+          <span>{{ d.t }}</span>
+        </button>
+      </sc-for>
+      <sc-if value="{{ allDone }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="background:#C9ADA7;border-radius:28px;padding:16px 18px;display:flex;align-items:center;gap:14px">
+          <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="comemorando" size="64" hint-size="64px,78px"></dc-import></span>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:800">Mapi · Comemorando</span><span style="font-size:19px;line-height:25px;font-weight:900">Você juntou todos os documentos.</span><span style="font-size:16px;line-height:23px;font-weight:600">Agora faça o pedido no site da SPTrans.</span></div>
+        </div>
+      </sc-if>
+    </section>
+    <section style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border-radius:28px;padding:18px 20px">
+      <div style="display:flex;gap:12px;align-items:flex-start"><dc-import name="MapiIcon" name-of="onde_ir" size="24" color="#4A4E69" hint-size="24px,24px"></dc-import><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:17px;font-weight:900">Onde ir</span><span style="font-size:16px;line-height:24px">Pedido pelo site da SPTrans ou em um posto de atendimento.</span></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><dc-import name="MapiIcon" name-of="prazo" size="24" color="#4A4E69" hint-size="24px,24px"></dc-import><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:17px;font-weight:900">Prazo típico</span><span style="font-size:16px;line-height:24px">Algumas semanas. Confira o prazo atual no site.</span></div></div>
+    </section>
+    <section style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="margin:0;font-size:20px;font-weight:900">Se negarem</h2>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column">
+        <li style="display:grid;grid-template-columns:32px 1fr;gap:12px"><span style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font-size:16px;font-weight:900;flex:none">1</span><span style="width:2px;flex:1;background:#DCCFC8;min-height:12px"></span></span><span style="font-size:17px;line-height:24px;padding:4px 0 14px">Peça o motivo por escrito.</span></li>
+        <li style="display:grid;grid-template-columns:32px 1fr;gap:12px"><span style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font-size:16px;font-weight:900;flex:none">2</span><span style="width:2px;flex:1;background:#DCCFC8;min-height:12px"></span></span><span style="font-size:17px;line-height:24px;padding:4px 0 14px">Junte o que faltou e faça um novo pedido.</span></li>
+        <li style="display:grid;grid-template-columns:32px 1fr;gap:12px"><span style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center;font-size:16px;font-weight:900;flex:none">3</span></span><span style="font-size:17px;line-height:24px;padding:4px 0 0">Procure a Defensoria Pública se precisar de ajuda.</span></li>
+      </ol>
+    </section>
+    <a href="#fonte" style="min-height:56px;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;text-decoration:none;color:#22223B"><dc-import name="MapiIcon" name-of="link" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px">SPTrans · sptrans.com.br</span><span style="font-size:16px;color:#4A4E69">verificado em 28/10/2026</span></span></a>
+    <p style="margin:0;font-size:16px;line-height:24px;color:#4A4E69"><b style="color:#22223B">Limitação:</b> não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans.</p>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s5 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="{{ s5label }}" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:8px 20px 20px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Fazer uma pergunta</span></div>
+
+    <sc-if value="{{ personMsg }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Você</span><div style="max-width:86%;background:#22223B;color:#F2E9E4;border-radius:22px 6px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">{{ personMsg }}</div></div>
+    </sc-if>
+
+    <sc-if value="{{ s5a }}" hint-placeholder-val="{{ false }}">
+    <div role="status" style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="procurando" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Procurando</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;display:flex;gap:10px;align-items:center"><dc-import name="MapiIcon" name-of="busca" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import>Procurando na minha base de fontes.</div></div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ s5b }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="achei" size="44" hint-size="44px,53px"></dc-import></span><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Achei</span></div>
+    <article style="background:#FFFFFF;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <section style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-size:16px;font-weight:800;color:#4A4E69">Resumo</h2><p style="margin:0;font-size:17px;line-height:26px;text-wrap:pretty">Pessoas com deficiência podem pedir o Bilhete Único Especial, que dá passe livre nos ônibus municipais.</p><span style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="ok" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode ter direito</span></section>
+      <section style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-size:16px;font-weight:800;color:#4A4E69">Passos</h2>
+        <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:17px;line-height:24px">
+          <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">1</b>Peça o relatório médico no modelo da SPTrans.</li>
+          <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">2</b>Faça o cadastro no site da SPTrans.</li>
+          <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">3</b>Acompanhe o pedido pelo mesmo site.</li>
+        </ol>
+      </section>
+      <section style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-size:16px;font-weight:800;color:#4A4E69">Fonte</h2>
+        <a href="#fonte" style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;text-decoration:none;color:#22223B"><dc-import name="MapiIcon" name-of="link" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px">SPTrans · sptrans.com.br</span><span style="font-size:16px;color:#4A4E69">verificado em 28/10/2026</span></span></a>
+      </section>
+      <p style="margin:0;font-size:16px;line-height:24px;color:#4A4E69"><b style="color:#22223B">Limitação:</b> não analiso o caso do seu filho. Quem decide é a SPTrans.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:2px solid #E8DDD7"><span style="font-size:17px;font-weight:800">Esta resposta ajudou?</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Sim</button><button type="button" style="height:48px;border-radius:16px;border:2px solid #22223B;background:#FFFFFF;font:800 17px Nunito, system-ui, sans-serif;cursor:pointer">Não</button></div></div>
+    </article>
+    </sc-if>
+
+    <sc-if value="{{ s5c }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="duvida" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Dúvida honesta</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty"><b>Não encontrei isso na minha base.</b> Para não arriscar uma resposta errada, procure o canal oficial.</div></div>
+    </div>
+    <div style="background:#FFFFFF;border-radius:28px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+      <span style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="escudo_check" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte oficial</span>
+      <span style="font-size:20px;font-weight:900">Central 156 da Prefeitura</span>
+      <span style="font-size:16px;line-height:24px">Ligue 156 ou abra o atendimento pelo site.</span>
+      <a href="#fonte" style="min-height:48px;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="link" size="20" color="#4A4E69" hint-size="20px,20px"></dc-import>sp156.prefeitura.sp.gov.br</a>
+    </div>
+    </sc-if>
+  </div>
+  <div style="flex:none;background:#FFFFFF;border-top:2px solid #E8DDD7;padding:12px 16px 22px">
+    <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:800">Sua pergunta</span>
+      <span style="display:flex;gap:10px;align-items:flex-end"><textarea rows="2" placeholder="Escreva com suas palavras" style="flex:1;min-width:0;min-height:56px;border-radius:16px;border:2px solid #6E6A7E;padding:14px 16px;font:400 17px/24px Nunito, system-ui, sans-serif;resize:none;color:#22223B;background:#FFFFFF"></textarea><button type="button" aria-label="Enviar pergunta" style="width:56px;height:56px;border-radius:20px;background:#22223B;border:none;color:#F2E9E4;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="enviar" size="24" color="currentColor" hint-size="24px,24px"></dc-import></button></span>
+    </label>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s6 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="{{ s6label }}" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:8px 20px 24px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Início</span></div>
+    <h1 style="margin:0;font-size:30px;line-height:36px;font-weight:900;letter-spacing:-0.02em">Conferir se é oficial</h1>
+    <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:17px;font-weight:800">Link ou valor cobrado</span><input type="text" value="{{ scamValue }}" readOnly="{{ true }}" style="height:56px;border-radius:16px;border:2px solid #6E6A7E;padding:0 16px;font:400 17px Nunito, system-ui, sans-serif;color:#22223B;background:#FFFFFF;min-width:0"><span style="font-size:16px;line-height:23px;color:#4A4E69">Não cole senha, CPF nem número de cartão.</span></label>
+    <button type="button" style="height:56px;width:100%;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito, system-ui, sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px"><dc-import name="MapiIcon" name-of="escudo_check" size="22" color="currentColor" hint-size="22px,22px"></dc-import>Conferir</button>
+
+    <sc-if value="{{ s6a }}" hint-placeholder-val="{{ false }}">
+    <section aria-live="polite" style="border-radius:28px;border:3px solid #36704A;background:#DDEBE0;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="verificado" size="52" hint-size="52px,63px"></dc-import></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:800;color:#2F5A3C">Mapi · Verificado</span><span style="display:flex;align-items:center;gap:8px;font-size:24px;font-weight:900;color:#2F5A3C"><dc-import name="MapiIcon" name-of="escudo_check" size="28" color="currentColor" hint-size="28px,28px"></dc-import>Oficial</span></div></div>
+      <p style="margin:0;font-size:17px;line-height:26px">Este endereço é do site da SPTrans.</p>
+      <p style="margin:0;font-size:16px;line-height:24px;display:flex;gap:8px;align-items:center"><dc-import name="MapiIcon" name-of="calendario" size="20" color="#22223B" hint-size="20px,20px"></dc-import>Lista de sites oficiais conferida em 28/10/2026.</p>
+    </section>
+    </sc-if>
+    <sc-if value="{{ s6b }}" hint-placeholder-val="{{ false }}">
+    <section aria-live="polite" style="border-radius:28px;border:3px solid #A0402F;background:#F6E2DD;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="atencao" size="52" hint-size="52px,63px"></dc-import></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:800;color:#8E3527">Mapi · Atenção</span><span style="display:flex;align-items:center;gap:8px;font-size:24px;font-weight:900;color:#8E3527"><dc-import name="MapiIcon" name-of="golpe" size="28" color="currentColor" hint-size="28px,28px"></dc-import>Suspeito</span></div></div>
+      <p style="margin:0;font-size:17px;line-height:26px">O pedido do Bilhete Único Especial é gratuito. Cobrança para liberar é sinal comum de golpe.</p>
+      <ul style="margin:0;padding:0 0 0 20px;font-size:16px;line-height:25px;font-weight:700"><li>Não pague.</li><li>Não envie documentos.</li><li>Confirme no site da SPTrans.</li></ul>
+    </section>
+    </sc-if>
+    <sc-if value="{{ s6c }}" hint-placeholder-val="{{ false }}">
+    <section aria-live="polite" style="border-radius:28px;border:3px solid #6E6A7E;background:#E6DCE0;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="duvida" size="52" hint-size="52px,63px"></dc-import></span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:800">Mapi · Dúvida honesta</span><span style="display:flex;align-items:center;gap:8px;font-size:24px;font-weight:900"><dc-import name="MapiIcon" name-of="duvida" size="28" color="currentColor" hint-size="28px,28px"></dc-import>Não sei</span></div></div>
+      <p style="margin:0;font-size:17px;line-height:26px">Não encontrei este endereço na lista de sites oficiais nem na de golpes conhecidos.</p>
+      <p style="margin:0;font-size:16px;line-height:24px;font-weight:700">Digite você mesmo o endereço oficial, sem usar o link recebido.</p>
+    </section>
+    </sc-if>
+    <div role="note" style="background:#FFFFFF;border-radius:20px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:23px;font-weight:700"><span style="flex:none;padding-top:1px"><dc-import name="MapiIcon" name-of="alerta" size="22" color="#22223B" hint-size="22px,22px"></dc-import></span>Esta checagem não garante nada. Confirme no site oficial.</div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s7 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="{{ s7label }}" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:8px 20px 20px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Fazer uma pergunta</span></div>
+
+    <sc-if value="{{ s7a }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="esperando" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Esperando</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">Escreva sua dúvida do seu jeito. Pode ser curta.</div></div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ s7b }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Você</span><div style="max-width:86%;background:#22223B;color:#F2E9E4;border-radius:22px 6px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">Qual vai ser o resultado do jogo de domingo?</div></div>
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="recusa" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Recusa gentil</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">Esse assunto fica fora do que eu sei. Eu ajudo com direitos e serviços públicos em São Paulo.</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Você pode perguntar, por exemplo:</span>
+      <button type="button" style="min-height:48px;border-radius:999px;border:2px solid #DCCFC8;background:#FFFFFF;padding:8px 18px;font:700 16px Nunito, system-ui, sans-serif;text-align:left;cursor:pointer">Como pedir o passe livre no ônibus?</button>
+      <button type="button" style="min-height:48px;border-radius:999px;border:2px solid #DCCFC8;background:#FFFFFF;padding:8px 18px;font:700 16px Nunito, system-ui, sans-serif;text-align:left;cursor:pointer">Quem pode receber o BPC?</button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ s7c }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="recusa" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Recusa gentil</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">Para proteger você, não envio mensagens com CPF, RG, cartão ou senha.</div></div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ s7d }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Você</span><div style="max-width:86%;background:#22223B;color:#F2E9E4;border-radius:22px 6px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">Negaram o BPC da minha mãe. Não sei mais o que fazer.</div></div>
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="agradecendo" size="44" hint-size="44px,53px"></dc-import></span>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Acolhimento</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px;text-wrap:pretty">Sinto muito. Receber um não é difícil. Você não precisa resolver tudo hoje.</div></div>
+    </div>
+    <div style="background:#FFFFFF;border-radius:28px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:18px;font-weight:900">Quando quiser, estes são os próximos passos</span>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:24px">
+        <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">1</b>Leia o motivo da negativa no Meu INSS.</li>
+        <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">2</b>Peça recurso no próprio Meu INSS. Confira lá o prazo.</li>
+        <li style="display:flex;gap:10px"><b style="width:26px;height:26px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">3</b>Procure a Defensoria Pública da União. O atendimento é gratuito.</li>
+      </ol>
+      <a href="#fonte" style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;text-decoration:none;color:#22223B"><dc-import name="MapiIcon" name-of="link" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px">INSS · gov.br/inss</span><span style="font-size:16px;color:#4A4E69">verificado em 28/10/2026</span></span></a>
+    </div>
+    </sc-if>
+  </div>
+  <div style="flex:none;background:#FFFFFF;border-top:2px solid #E8DDD7;padding:12px 16px 22px;display:flex;flex-direction:column;gap:10px">
+    <sc-if value="{{ s7c }}" hint-placeholder-val="{{ false }}"><div role="alert" style="background:#F7EAD2;border:2px solid #7A5410;color:#634410;border-radius:16px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:23px;font-weight:700"><span style="flex:none;padding-top:1px"><dc-import name="MapiIcon" name-of="alerta" size="22" color="currentColor" hint-size="22px,22px"></dc-import></span>Parece que você digitou um dado pessoal. Não precisamos dele. Apague e tente de novo.</div></sc-if>
+    <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:800">Sua pergunta</span>
+      <sc-if value="{{ s7a }}" hint-placeholder-val="{{ false }}"><span style="display:flex;gap:6px;align-items:center;font-size:16px;font-weight:700;color:#8E3527"><dc-import name="MapiIcon" name-of="alerta" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Escreva sua pergunta antes de enviar.</span></sc-if>
+      <span style="display:flex;gap:10px;align-items:flex-end"><textarea rows="2" placeholder="Escreva com suas palavras" defaultValue="{{ s7input }}" aria-invalid="{{ s7invalid }}" style="flex:1;min-width:0;min-height:56px;border-radius:16px;border:{{ s7border }};padding:14px 16px;font:400 17px/24px Nunito, system-ui, sans-serif;resize:none;color:#22223B;background:#FFFFFF"></textarea><sc-if value="{{ s7c }}" hint-placeholder-val="{{ false }}"><button type="button" disabled="{{ true }}" aria-label="Enviar pergunta (bloqueado)" style="width:56px;height:56px;border-radius:20px;background:#E8DDD7;border:2px dashed #6E6A7E;color:#5E5A6E;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="enviar" size="24" color="currentColor" hint-size="24px,24px"></dc-import></button></sc-if><sc-if value="{{ s7send }}" hint-placeholder-val="{{ true }}"><button type="button" aria-label="Enviar pergunta" style="width:56px;height:56px;border-radius:20px;background:#22223B;border:none;color:#F2E9E4;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="enviar" size="24" color="currentColor" hint-size="24px,24px"></dc-import></button></sc-if></span>
+    </label>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s8 }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="08 Sobre e fontes" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;color:#22223B;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column">
+  <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:20px;padding:8px 20px 28px">
+    <div style="display:flex;align-items:center;gap:12px"><button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:2px solid #DCCFC8;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><dc-import name="MapiIcon" name-of="voltar" size="24" color="#22223B" hint-size="24px,24px"></dc-import></button><span style="font-size:18px;font-weight:800">Início</span></div>
+    <h1 style="margin:0;font-size:30px;line-height:36px;font-weight:900;letter-spacing:-0.02em">Sobre e fontes</h1>
+    <section style="display:flex;flex-direction:column;gap:10px"><h2 style="margin:0;font-size:20px;font-weight:900">Como funciona</h2>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:25px">
+        <li style="display:flex;gap:10px"><b style="width:28px;height:28px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">1</b>Você conta a situação ou faz uma pergunta.</li>
+        <li style="display:flex;gap:10px"><b style="width:28px;height:28px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">2</b>O assistente procura só numa base de fontes conferidas.</li>
+        <li style="display:flex;gap:10px"><b style="width:28px;height:28px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:15px;flex:none">3</b>Cada resposta mostra a fonte e a data da conferência.</li>
+      </ol>
+    </section>
+    <section style="display:flex;flex-direction:column;gap:10px"><h2 style="margin:0;font-size:20px;font-weight:900">De onde vêm as informações</h2>
+      <div style="background:#FFFFFF;border-radius:28px;padding:8px 18px;display:flex;flex-direction:column">
+        <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:2px solid #E8DDD7;padding:8px 0;font-size:16px;font-weight:800">Prefeitura de São Paulo<dc-import name="MapiIcon" name-of="escudo_check" size="22" color="#36704A" hint-size="22px,22px"></dc-import></div>
+        <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:2px solid #E8DDD7;padding:8px 0;font-size:16px;font-weight:800">SPTrans<dc-import name="MapiIcon" name-of="escudo_check" size="22" color="#36704A" hint-size="22px,22px"></dc-import></div>
+        <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:2px solid #E8DDD7;padding:8px 0;font-size:16px;font-weight:800">Governo federal e INSS<dc-import name="MapiIcon" name-of="escudo_check" size="22" color="#36704A" hint-size="22px,22px"></dc-import></div>
+        <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0;font-size:16px;font-weight:800">Defensorias Públicas<dc-import name="MapiIcon" name-of="escudo_check" size="22" color="#36704A" hint-size="22px,22px"></dc-import></div>
+      </div>
+      <p style="margin:0;font-size:16px;line-height:24px;color:#4A4E69">Fontes oficiais têm o selo de escudo. Guias de associações aparecem como fonte secundária.</p>
+    </section>
+    <section style="display:flex;flex-direction:column;gap:10px"><h2 style="margin:0;font-size:20px;font-weight:900">Como medimos acerto</h2>
+      <ul style="margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:25px">
+        <li>Respostas com fonte oficial citada.</li>
+        <li>Respostas conferidas por especialistas numa amostra.</li>
+        <li>Perguntas sem resposta na base que receberam um "não encontrei" em vez de um palpite.</li>
+      </ul>
+    </section>
+    <section style="display:flex;flex-direction:column;gap:10px"><h2 style="margin:0;font-size:20px;font-weight:900">O que o assistente não faz</h2>
+      <ul style="margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:25px">
+        <li>Não é canal oficial nem faz pedidos por você.</li>
+        <li>Não diz que você tem direito. Só o órgão responsável decide.</li>
+        <li>Não dá diagnóstico nem parecer jurídico.</li>
+        <li>Não guarda nome, documentos nem dados de saúde.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;tela&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;1&quot;,&quot;2a&quot;,&quot;2b&quot;,&quot;2c&quot;,&quot;3&quot;,&quot;4&quot;,&quot;4b&quot;,&quot;5a&quot;,&quot;5b&quot;,&quot;5c&quot;,&quot;6a&quot;,&quot;6b&quot;,&quot;6c&quot;,&quot;7a&quot;,&quot;7b&quot;,&quot;7c&quot;,&quot;7d&quot;,&quot;8&quot;],&quot;default&quot;:&quot;1&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const WIZ = {
+  '2a': { n: 1, q: 'Para quem é a orientação?', mapi: 'Estou ouvindo. Escolha a opção mais próxima.', cta: 'Continuar', sel: 1,
+    opts: ['Para mim', 'Para meu filho ou filha', 'Para outra pessoa da família', 'Para alguém que eu acompanho'] },
+  '2b': { n: 2, q: 'O que a pessoa usa ou precisa?', mapi: 'Pode marcar o que mais se parece com o dia a dia.', cta: 'Continuar', sel: 0,
+    opts: ['Cadeira de rodas', 'Outro apoio para andar', 'Apoio para enxergar ou ouvir', 'Ainda não sei'] },
+  '2c': { n: 3, q: 'O que você quer resolver?', mapi: 'Última pergunta. Depois mostro o que pode se aplicar.', cta: 'Ver minha rota', sel: 0,
+    opts: ['Transporte e passe livre', 'Benefício em dinheiro', 'Escola e apoio na sala de aula', 'Saúde, terapias e equipamentos'] }
+};
+const DOCS = ['Documento com foto', 'CPF', 'Comprovante de endereço', 'Relatório médico no modelo da SPTrans'];
+const LABELS = { '5a': '05a Conversa · Procurando', '5b': '05b Conversa · Achei', '5c': '05c Conversa · Não encontrei',
+  '6a': '06a Conferir · Oficial', '6b': '06b Conferir · Suspeito', '6c': '06c Conferir · Não sei',
+  '7a': '07a Limites · Campo vazio', '7b': '07b Limites · Fora do tema', '7c': '07c Limites · Dado pessoal', '7d': '07d Limites · Assunto difícil' };
+const SCAM = { '6a': 'https://www.sptrans.com.br/bilhete-unico', '6b': 'R$ 89,90 para liberar o Bilhete Único Especial', '6c': 'bilhete-especial-sp.com/cadastro' };
+class Component extends DCLogic {
+  state = { checks: null };
+  renderVals() {
+    const t = String(this.props.tela ?? '1');
+    const w = WIZ[t] || WIZ['2b'];
+    const checks = this.state.checks || (t === '4b' ? [true, true, true, true] : [true, true, false, false]);
+    const toggle = i => () => this.setState({ checks: checks.map((c, j) => j === i ? !c : c) });
+    const doneCount = checks.filter(Boolean).length;
+    return {
+      s1: t === '1', s2: t.startsWith('2'), s3: t === '3', s4: t.startsWith('4'), s5: t.startsWith('5'), s6: t.startsWith('6'), s7: t.startsWith('7'), s8: t === '8',
+      wn: w.n, wq: w.q, wmapi: w.mapi, wcta: w.cta,
+      bars: [0, 1, 2].map(i => ({ on: i < w.n, off: i >= w.n })),
+      wopts: w.opts.map((o, i) => ({ t: o, sel: i === w.sel, nsel: i !== w.sel })),
+      docs: DOCS.map((d, i) => ({ t: d, done: checks[i], notDone: !checks[i], aria: checks[i] ? 'true' : 'false', toggle: toggle(i) })),
+      doneCount, allDone: doneCount === 4,
+      s5a: t === '5a' || t === '5', s5b: t === '5b', s5c: t === '5c', s5label: LABELS[t] || '05 Conversa',
+      personMsg: t === '5c' ? 'Quanto tempo demora para trocar a cadeira de rodas pelo SUS?' : 'Meu filho usa cadeira de rodas. Ele pode ter passe livre no ônibus?',
+      s6a: t === '6a', s6b: t === '6b' || t === '6', s6c: t === '6c', s6label: LABELS[t] || '06 Conferir se é oficial', scamValue: SCAM[t] || SCAM['6b'],
+      s7a: t === '7a' || t === '7', s7b: t === '7b', s7c: t === '7c', s7d: t === '7d', s7send: t !== '7c', s7label: LABELS[t] || '07 Limites',
+      s7input: t === '7c' ? 'Meu CPF é 123.456.789-00. Posso pedir o BPC?' : '',
+      s7invalid: t === '7a' || t === '7c' ? 'true' : 'false',
+      s7border: t === '7a' ? '3px solid #A0402F' : t === '7c' ? '3px solid #7A5410' : '2px solid #6E6A7E'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

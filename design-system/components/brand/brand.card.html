@@ -1,0 +1,17 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Marca" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script></head><body style="margin:0;padding:24px;background:var(--bg-app)"><div id="root"></div>
+<script type="text/babel">
+const NS = Object.values(window).find(o => o && typeof o === 'object' && o.Logo && o.Button) || {};
+const { Logo, Mark } = NS;
+function Demo() {  return (<div style={{display:'grid',gridTemplateColumns:'1.4fr 1fr 1fr',gap:12}}>
+  <div style={{height:120,borderRadius:20,background:'var(--mapi-seashell-50)',display:'grid',placeItems:'center',gridColumn:'1 / 4'}}><Logo size={64} /></div>
+  <div style={{height:110,borderRadius:20,background:'#fff',border:'2px solid var(--border-default)',display:'grid',placeItems:'center'}}><Logo size={32} tone="mono" /></div>
+  <div style={{height:110,borderRadius:20,background:'var(--mapi-indigo-900)',display:'grid',placeItems:'center'}}><Logo size={32} tone="inverse" /></div>
+  <div style={{height:110,borderRadius:20,background:'#fff',display:'flex',alignItems:'center',justifyContent:'center',gap:16}}><Mark size={56} /><div style={{width:48,height:48,borderRadius:14,background:'var(--mapi-indigo-900)',display:'grid',placeItems:'center'}}><Mark size={34} color="var(--mapi-seashell-50)" cut="var(--mapi-indigo-900)" /></div></div>
+</div>); }
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

@@ -1,0 +1,12 @@
+<!-- @dsCard group="Components" viewport="700x150" name="Selos de status" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script></head><body style="margin:0;padding:24px;background:var(--bg-app)"><div id="root"></div>
+<script type="text/babel">
+const NS = Object.values(window).find(o => o && typeof o === 'object' && o.Logo && o.Button) || {};
+const { Badge } = NS;
+function Demo() {  return (<div style={{display:'flex',gap:12,flexWrap:'wrap'}}><Badge tone="review" /><Badge tone="success">Confirmada por 4 pessoas</Badge><Badge tone="error">Foto sem calçada visível</Badge><Badge tone="neutral" size="sm">Sugestão da IA</Badge></div>); }
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

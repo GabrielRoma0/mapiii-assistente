@@ -1,0 +1,496 @@
+/* Componentes do assistente (design-system v2.0, "Mapiii Mapa dos Direitos.dc.html", seção 05).
+   Só usa tokens do design system. Onde o design não define o modo escuro, reaproveita os aliases
+   semânticos que já existem para o escuro (status-*, surface-*, border-*). */
+
+:root {
+  --mapi-ok-border: var(--mapi-green-700);
+  --mapi-erro-border: var(--mapi-coral-700);
+}
+:root[data-theme='dark'] {
+  --mapi-ok-border: var(--status-success-fg);
+  --mapi-erro-border: var(--status-error-fg);
+}
+
+/* ---------- DisclaimerBanner ---------- */
+.aviso {
+  background: var(--surface-selected);
+  color: var(--text-body);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: var(--weight-bold);
+}
+.avisoIcone {
+  flex: none;
+  padding-top: 1px;
+}
+
+/* ---------- Pílulas e chips ---------- */
+.pilula {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 4px 12px 4px 8px;
+  border: var(--border-width) solid;
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+  line-height: 1.3;
+}
+/* SourceTypeBadge: pílula */
+.fonte {
+  border-radius: var(--radius-pill);
+}
+/* EligibilityChip: canto de 12 px, para não confundir com o tipo de fonte */
+.elegibilidade {
+  border-radius: var(--radius-sm);
+}
+.tomOficial {
+  background: var(--surface-card);
+  color: var(--status-success-fg);
+  border-color: var(--mapi-ok-border);
+}
+.tomSecundaria {
+  background: var(--surface-card);
+  color: var(--text-body);
+  border-color: var(--border-input);
+}
+.tomAlerta {
+  background: var(--status-review-bg);
+  color: var(--status-review-fg);
+  border-color: var(--status-review-border);
+}
+.tomPode {
+  background: var(--status-success-bg);
+  color: var(--status-success-fg);
+  border-color: var(--mapi-ok-border);
+}
+.tomNao {
+  background: var(--surface-selected);
+  color: var(--text-body);
+  border-color: var(--border-input);
+}
+
+/* ---------- SourceChip ---------- */
+.fonteLink {
+  min-height: var(--touch-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+  border: var(--border-width) solid var(--border-default);
+  text-decoration: none;
+  color: var(--text-body);
+  align-self: flex-start;
+  max-width: 100%;
+}
+.fonteLink:hover {
+  background: var(--surface-selected);
+  color: var(--text-body);
+}
+.fonteLinkTextos {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.fonteNome {
+  font-weight: var(--weight-extrabold);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.fonteData {
+  color: var(--text-muted);
+}
+.iconeMuted {
+  color: var(--text-muted);
+  flex: none;
+}
+
+/* ---------- Falas (ChatBubble) ---------- */
+.falaMapi {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.falaCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.rotulo {
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+  color: var(--text-muted);
+}
+.baloaoMapi {
+  background: var(--surface-card);
+  color: var(--text-body);
+  border-radius: 6px 22px 22px 22px;
+  padding: var(--space-3) var(--space-4);
+  font-size: 17px;
+  line-height: 26px;
+  text-wrap: pretty;
+}
+.falaVoce {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+.baloaoVoce {
+  max-width: 86%;
+  background: var(--surface-inverse);
+  color: var(--text-inverse);
+  border-radius: 22px 6px 22px 22px;
+  padding: var(--space-3) var(--space-4);
+  font-size: 17px;
+  line-height: 26px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- WizardStep (opção em cartão) ---------- */
+.opcoes {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.opcoesLegenda {
+  padding: 0;
+  margin-bottom: var(--space-3);
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.01em;
+}
+.opcao {
+  min-height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  border: var(--border-width) solid var(--border-default);
+  text-align: left;
+  cursor: pointer;
+  font: var(--weight-extrabold) 18px/24px var(--font-sans);
+  color: var(--text-body);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+.opcao:hover {
+  background: var(--surface-selected);
+}
+.opcao[aria-checked='true'] {
+  background: var(--surface-selected);
+  border: var(--border-width-selected) solid var(--border-strong);
+  padding: 13px 17px; /* compensa a borda de 3 px */
+}
+.marcaRadio {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--border-input);
+  background: var(--surface-card);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.opcao[aria-checked='true'] .marcaRadio {
+  background: var(--action-primary-bg);
+  border-color: var(--action-primary-bg);
+  color: var(--action-primary-fg);
+}
+
+/* ---------- Checklist ---------- */
+.itemChecklist {
+  min-height: var(--touch-primary);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+  border: var(--border-width) solid var(--border-default);
+  text-align: left;
+  cursor: pointer;
+  font: var(--weight-bold) 17px/24px var(--font-sans);
+  color: var(--text-body);
+}
+.itemChecklist:hover {
+  background: var(--surface-selected);
+}
+.marcaCheck {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  border: var(--border-width) solid var(--border-input);
+  background: var(--surface-card);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.itemChecklist[aria-checked='true'] .marcaCheck,
+.opcao[aria-checked='true'] .marcaCheck {
+  background: var(--action-primary-bg);
+  border-color: var(--action-primary-bg);
+  color: var(--action-primary-fg);
+}
+.comemoracao {
+  background: var(--mapi-almond-300);
+  color: var(--mapi-indigo-900); /* Almond Silk sempre com texto indigo */
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.comemoracao .rotulo {
+  color: var(--mapi-indigo-900);
+}
+
+/* ---------- Timeline ---------- */
+.linhaTempo {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.linhaTempo li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--space-3);
+}
+.linhaTempoMarca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numero {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--border-strong);
+  background: var(--surface-card);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: var(--weight-black);
+  flex: none;
+}
+.trilho {
+  width: 2px;
+  flex: 1;
+  background: var(--border-default);
+  min-height: 12px;
+}
+.linhaTempoTexto {
+  font-size: 17px;
+  line-height: 24px;
+  padding: 4px 0 14px;
+}
+.linhaTempo li:last-child .linhaTempoTexto {
+  padding-bottom: 0;
+}
+
+/* ---------- ScamCheckResult ---------- */
+.checagem {
+  border-radius: var(--radius-lg);
+  border: var(--border-width-selected) solid;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: var(--weight-black);
+}
+.checagemRotulo {
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+}
+.checagemOficial {
+  background: var(--status-success-bg);
+  color: var(--status-success-fg);
+  border-color: var(--mapi-ok-border);
+}
+.checagemSuspeito {
+  background: var(--status-error-bg);
+  color: var(--status-error-fg);
+  border-color: var(--mapi-erro-border);
+}
+.checagemNaoSei {
+  background: var(--surface-selected);
+  color: var(--text-body);
+  border-color: var(--border-input);
+}
+
+/* ---------- Cartões (RightCard e AnswerCard) ---------- */
+.cartao {
+  background: var(--surface-card);
+  color: var(--text-body);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cartaoTitulo {
+  margin: 0;
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.01em;
+}
+.cartaoResumo {
+  margin: 0;
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--text-muted);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.linhas {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: var(--border-width) solid var(--border-subtle);
+}
+.linha {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.linha dt {
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+}
+.linha dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.porque {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.botaoContorno {
+  min-height: var(--touch-min);
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--border-strong);
+  background: var(--surface-card);
+  color: var(--text-body);
+  font: var(--weight-extrabold) 17px var(--font-sans);
+  cursor: pointer;
+  padding: 0 var(--space-4);
+}
+.botaoContorno:hover {
+  background: var(--surface-selected);
+}
+.botaoContorno[aria-pressed='true'] {
+  background: var(--action-primary-bg);
+  color: var(--action-primary-fg);
+}
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.secaoTitulo {
+  margin: 0;
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+  color: var(--text-muted);
+}
+.texto {
+  margin: 0;
+  font-size: 17px;
+  line-height: 26px;
+  text-wrap: pretty;
+}
+.passos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 17px;
+  line-height: 24px;
+}
+.passos li {
+  display: flex;
+  gap: 10px;
+}
+.passoNumero {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--border-strong);
+  display: grid;
+  place-items: center;
+  font-size: 16px; /* o design usa 15 px; 16 px respeita o corpo mínimo do app */
+  font-weight: var(--weight-black);
+  flex: none;
+}
+.limitacao {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-muted);
+}
+.limitacao b {
+  color: var(--text-body);
+}
+/* Aviso destacado para fonte secundária ou desatualizada: ícone, texto e borda, nunca só cor. */
+.avisoFonte {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--status-review-bg);
+  color: var(--status-review-fg);
+  border: var(--border-width) solid var(--status-review-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: var(--weight-bold);
+}
+.ajudou {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: 14px;
+  border-top: var(--border-width) solid var(--border-subtle);
+}
+.ajudouPergunta {
+  font-size: 17px;
+  font-weight: var(--weight-extrabold);
+}
+.ajudouBotoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

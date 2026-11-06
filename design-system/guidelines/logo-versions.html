@@ -1,0 +1,14 @@
+<!-- @dsCard group="Brand" viewport="700x240" subtitle="Cor, monocromática e invertida" name="Versões do logo" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../_ds_bundle.js"></script></head><body style="margin:0;padding:24px;background:var(--bg-app);font-family:var(--font-sans);color:var(--text-body)"><div id="root"></div>
+<script type="text/babel">
+const NS = Object.values(window).find(o => o && typeof o === 'object' && o.Logo && o.Button) || {};
+const { Logo } = NS;
+ReactDOM.createRoot(document.getElementById('root')).render(<div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12}}>
+<div style={{height:180,borderRadius:24,background:'var(--mapi-seashell-50)',border:'2px solid var(--border-default)',display:'grid',placeItems:'center'}}><Logo size={48} /></div>
+<div style={{height:180,borderRadius:24,background:'#fff',border:'2px solid var(--border-default)',display:'grid',placeItems:'center'}}><Logo size={48} tone="mono" /></div>
+<div style={{height:180,borderRadius:24,background:'var(--mapi-indigo-900)',display:'grid',placeItems:'center'}}><Logo size={48} tone="inverse" /></div></div>);
+</script></body></html>

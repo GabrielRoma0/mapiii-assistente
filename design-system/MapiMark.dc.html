@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 48 48" width="{{ size }}" height="{{ size }}" style="display:block;overflow:visible;flex:none">
+<defs><clipPath id="mapi-pinha-clip"><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z"></path></clipPath></defs>
+<g display="{{ dPin }}"><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z" fill="{{ pin }}"></path></g>
+<g display="{{ dA }}"><path d="M15.5 26H32.5V13.5Z" fill="{{ cut }}" stroke="{{ cut }}" style="stroke-width:3;stroke-linejoin:round"></path></g>
+<g display="{{ dB }}"><path d="M15 27H33V12.5H24V19.5H15Z" fill="{{ cut }}" stroke="{{ cut }}" style="stroke-width:3;stroke-linejoin:round"></path></g>
+<g display="{{ dC }}"><path d="M12.5 17H19.5L28.5 25H35.5" fill="none" stroke="{{ cut }}" style="stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round"></path></g>
+<g display="{{ dP }}"><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="{{ pin }}" stroke="{{ pin }}" style="stroke-width:1.5;stroke-linejoin:round"></path><path d="{{ latt }}" fill="none" stroke="{{ cut }}" style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pinha-clip)"></path></g>
+<g display="{{ dQ }}"><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="{{ cut }}"></path><path d="{{ latt }}" fill="none" stroke="{{ pin }}" style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pinha-clip)"></path><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="none" stroke="{{ pin }}" style="stroke-width:3;stroke-linejoin:round"></path></g>
+<g display="{{ dR }}"><ellipse cx="24" cy="44.6" rx="6.5" ry="2" fill="none" stroke="{{ pin }}" style="stroke-width:2.6"></ellipse><g transform="translate(24 40.5) scale(0.88 -0.88) translate(-24 -3)"><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="{{ cut }}"></path><path d="{{ latt }}" fill="none" stroke="{{ pin }}" style="stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pinha-clip)"></path><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="none" stroke="{{ pin }}" style="stroke-width:3.4;stroke-linejoin:round"></path></g></g>
+<g display="{{ dS }}"><ellipse cx="24" cy="44.6" rx="6.5" ry="2" fill="{{ pin }}"></ellipse><g transform="translate(24 40.5) scale(0.88 -0.88) translate(-24 -3)"><path d="M24 3C31 8 39.5 14 40.5 25C41.5 36 33.5 45 24 45C14.5 45 6.5 36 7.5 25C8.5 14 17 8 24 3Z" fill="{{ pin }}" stroke="{{ pin }}" style="stroke-width:1.5;stroke-linejoin:round"></path><path d="{{ latt }}" fill="none" stroke="{{ cut }}" style="stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pinha-clip)"></path></g></g>
+<defs><clipPath id="mapi-pin-clip"><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z"></path></clipPath></defs>
+<g display="{{ dT }}"><path d="M24 4.5V2.5" fill="none" stroke="{{ leaf }}" style="stroke-width:2.6;stroke-linecap:round"></path><path d="M24 2.8C25.5 -0.6 29.5 -1.6 32 0C30.4 3 27 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 2.8C22.5 -0.6 18.5 -1.6 16 0C17.6 3 21 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z" fill="{{ cut }}"></path><path d="{{ scales }}" fill="none" stroke="{{ pin }}" style="stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pin-clip)"></path><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z" fill="none" stroke="{{ pin }}" style="stroke-width:3.2;stroke-linejoin:round"></path></g>
+<g display="{{ dU }}"><path d="M24 4.5V2.5" fill="none" stroke="{{ leaf }}" style="stroke-width:2.6;stroke-linecap:round"></path><path d="M24 2.8C25.5 -0.6 29.5 -1.6 32 0C30.4 3 27 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 2.8C22.5 -0.6 18.5 -1.6 16 0C17.6 3 21 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z" fill="{{ pin }}"></path><path d="{{ scales }}" fill="none" stroke="{{ cut }}" style="stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;clip-path:url(#mapi-pin-clip)"></path></g>
+<g display="{{ dV }}"><path d="M24 4.5V2.5" fill="none" stroke="{{ leaf }}" style="stroke-width:2.6;stroke-linecap:round"></path><path d="M24 2.8C25.5 -0.6 29.5 -1.6 32 0C30.4 3 27 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 2.8C22.5 -0.6 18.5 -1.6 16 0C17.6 3 21 4 24 2.8Z" fill="{{ leaf }}" stroke="{{ leaf }}" style="stroke-width:1.6;stroke-linejoin:round"></path><path d="M24 45C24 45 9 31 9 19.5A15 15 0 0 1 39 19.5C39 31 24 45 24 45Z" fill="{{ pin }}"></path><circle cx="15" cy="16.5" r="{{ dotR }}" fill="{{ cut }}"></circle><circle cx="24" cy="16.5" r="{{ dotR }}" fill="{{ cut }}"></circle><circle cx="33" cy="16.5" r="{{ dotR }}" fill="{{ cut }}"></circle><circle cx="19.5" cy="25.5" r="{{ dotR }}" fill="{{ cut }}"></circle><circle cx="28.5" cy="25.5" r="{{ dotR }}" fill="{{ cut }}"></circle><circle cx="24" cy="34" r="{{ dotR }}" fill="{{ cut }}"></circle></g>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:120,&quot;height&quot;:120},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;],&quot;default&quot;:&quot;u&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:96,&quot;tsType&quot;:&quot;number&quot;},&quot;pin&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4A4E69&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cut&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FFFFFF&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const row = (y, x0, n, r) => { let d = 'M' + x0 + ' ' + y; for (let i = 0; i < n; i++) d += 'a' + r + ' ' + r + ' 0 0 0 ' + (2 * r) + ' 0'; return d; };
+const SCALES = row(15.5, 12, 3, 4) + row(24, 16, 2, 4) + row(32.5, 20, 1, 4);
+const SCALES_S = row(17.5, 14, 2, 5) + row(28.5, 19, 1, 5);
+const T = 'M6 20.5C13 19.5 20.5 16.5 24 11C27.5 16.5 35 19.5 42 20.5M5 30.5C13 29.5 20.5 26.5 24 20.5C27.5 26.5 35 29.5 43 30.5';
+const LATT = T + 'M17 17.6C16 22 15 26 14.5 29.4M31 17.6C32 22 33 26 33.5 29.4M14.5 46C19 37 28 32.5 43 31.5M33.5 46C29 37 20 32.5 5 31.5';
+const LATT_S = T;
+class Component extends DCLogic {
+  renderVals() {
+    const v = this.props.variant || 'a';
+    const d = k => v === k ? 'inline' : 'none';
+    const pinha = ['p', 'q', 'r', 's', 't', 'u', 'v'].includes(v);
+    return {
+      size: this.props.size ?? 48, pin: this.props.pin ?? '#6C97FB', cut: this.props.cut ?? '#FFFFFF', latt: (this.props.size ?? 48) <= 34 ? LATT_S : LATT,
+      dPin: pinha ? 'none' : 'inline', dA: d('a'), dB: d('b'), dC: d('c'), dP: d('p'), dQ: d('q'), dR: d('r'), dS: d('s'), dT: d('t'), dU: d('u'), dV: d('v'), dotR: (this.props.size ?? 48) <= 34 ? 3.4 : 2.9, scales: (this.props.size ?? 48) <= 34 ? SCALES_S : SCALES, leaf: this.props.leaf ?? this.props.pin ?? '#4A4E69'
+    };
+  }
+}
+</script>
+</body>
+</html>

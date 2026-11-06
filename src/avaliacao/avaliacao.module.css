@@ -1,0 +1,91 @@
+.numeros {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-3);
+}
+.numero {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.numeroRotulo {
+  font-size: 16px;
+  font-weight: var(--weight-extrabold);
+  color: var(--text-muted);
+}
+.numeroValor {
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.numeroDetalhe {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-muted);
+}
+
+.rolagem {
+  overflow-x: auto;
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+}
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.tabela th,
+.tabela td {
+  padding: var(--space-3);
+  text-align: right;
+  border-bottom: var(--border-width) solid var(--border-subtle);
+  white-space: nowrap;
+}
+.tabela th[scope='row'],
+.tabela thead th:first-child {
+  text-align: left;
+  white-space: normal;
+  min-width: 140px;
+}
+.tabela thead th {
+  color: var(--text-muted);
+  font-weight: var(--weight-extrabold);
+}
+.tabela tbody tr:last-child th,
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.acoes button:disabled {
+  background: var(--action-disabled-bg);
+  color: var(--action-disabled-fg);
+  border: var(--border-width) dashed var(--border-input);
+  cursor: not-allowed;
+}
+.confirmar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+.acoesLinha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

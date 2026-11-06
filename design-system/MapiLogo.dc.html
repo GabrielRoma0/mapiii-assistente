@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="display:inline-block;white-space:nowrap;font-family:Nunito,system-ui,sans-serif;font-weight:900;letter-spacing:-0.035em;line-height:1;font-size:{{ fsPx }};color:{{ text }};padding-bottom:0.3em"><svg viewBox="0 0 682 705" style="display:inline-block;vertical-align:baseline;width:0.682em;height:0.705em;margin-right:0.045em;overflow:visible"><path d="M82 623V82L338 436L600 303V623" fill="none" stroke="{{ text }}" style="stroke-width:165;stroke-linecap:round;stroke-linejoin:round"></path></svg>a<sc-if value="{{ roda }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 550 700" style="display:inline-block;vertical-align:-0.216em;width:0.55em;height:0.7em;margin-left:0.01em;overflow:visible"><path d="M78 78V622" fill="none" stroke="{{ text }}" style="stroke-width:150;stroke-linecap:round"></path><circle cx="306" cy="242" r="184" fill="none" stroke="{{ text }}" style="stroke-width:116"></circle><path d="M428.0 242.0L184.0 242.0M367.0 347.7L245.0 136.3M245.0 347.7L367.0 136.3" fill="none" stroke="{{ text }}" opacity="0.4" style="stroke-width:30;stroke-linecap:round"></path><circle cx="306" cy="242" r="40" fill="{{ text }}"></circle></svg></sc-if><sc-if value="{{ semRoda }}" hint-placeholder-val="{{ true }}">p</sc-if><span style="display:inline-block;vertical-align:baseline;width:0.2em;margin-left:0.035em"><span style="display:block;width:0.19em;height:0.19em;border-radius:50%;margin:0 auto 0.177em;background:{{ text }}"></span><span style="display:block;width:0.165em;height:0.5em;border-radius:0.085em;margin:0 auto;background:{{ text }}"></span></span><span style="display:inline-block;vertical-align:baseline;width:0.2em;margin-left:0.03em;position:relative;top:0.14em"><span style="display:block;width:0.19em;height:0.19em;border-radius:50%;margin:0 auto 0.177em;background:{{ text }}"></span><span style="display:block;width:0.165em;height:0.5em;border-radius:0.085em;margin:0 auto;background:{{ text }}"></span></span><span style="display:inline-block;vertical-align:baseline;width:0.2em;margin-left:0.05em;position:relative;top:0.28em"><span style="display:block;width:0.4em;height:0.4em;margin-left:-0.1em"><dc-import name="MapiMark" variant="{{ variant }}" size="{{ markPx }}" pin="{{ pin }}" cut="{{ cut }}" hint-size="24px,24px"></dc-import></span><span style="display:block;width:0.165em;height:0.5em;border-radius:0.085em;margin:0.035em auto 0;background:{{ text }}"></span></span></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:380,&quot;height&quot;:180},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;u&quot;,&quot;t&quot;],&quot;default&quot;:&quot;u&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:64,&quot;tsType&quot;:&quot;number&quot;},&quot;pin&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4A4E69&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cut&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FFFFFF&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;simbolo&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;nenhum&quot;,&quot;tatil&quot;,&quot;roda&quot;,&quot;ambos&quot;],&quot;default&quot;:&quot;ambos&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;text&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#22223B&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const fs = this.props.size ?? 64;
+    return { fsPx: fs + 'px', markPx: Math.round(fs * 0.4), variant: ['tatil', 'ambos'].includes(this.props.simbolo ?? 'ambos') ? 'v' : (this.props.variant || 'u'), roda: ['roda', 'ambos'].includes(this.props.simbolo ?? 'ambos'), semRoda: !['roda', 'ambos'].includes(this.props.simbolo ?? 'ambos'),
+      pin: this.props.pin ?? '#4A4E69', cut: this.props.cut ?? '#FFFFFF', text: this.props.text ?? '#22223B' };
+  }
+}
+</script>
+</body>
+</html>

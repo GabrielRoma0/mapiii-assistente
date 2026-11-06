@@ -1,0 +1,17 @@
+{
+  "sufixos": [
+    { "sufixo": "gov.br", "descricao": "Instituições do governo", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "mil.br", "descricao": "Forças Armadas", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "def.br", "descricao": "Defensorias Públicas", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "jus.br", "descricao": "Poder Judiciário", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "leg.br", "descricao": "Poder Legislativo", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "mp.br", "descricao": "Ministério Público", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" },
+    { "sufixo": "tc.br", "descricao": "Tribunais de Contas", "fonte_nome": "Registro.br · Categorias .br (Poder público)", "fonte_url": "https://registro.br/dominio/categorias/", "verificado_em": "2026-11-04" }
+  ],
+  "dominios": [
+    { "dominio": "sptrans.com.br", "nome": "SPTrans", "fonte_nome": "Site da SPTrans", "fonte_url": "https://www.sptrans.com.br/", "verificado_em": "2026-11-04" }
+  ],
+  "marcas": ["gov", "govbr", "inss", "meuinss", "prefeitura", "sptrans", "bilheteunico", "cadunico", "receita", "detran", "sus"],
+  "golpes_conhecidos": [],
+  "encurtadores": ["bit.ly", "tinyurl.com", "cutt.ly", "is.gd", "t.co", "rb.gy", "shorturl.at", "encurtador.com.br", "abre.ai", "l1nk.dev"]
+}

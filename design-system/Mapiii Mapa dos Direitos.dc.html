@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+html, body { margin: 0; background: #F2E9E4; color: #22223B; font-family: Nunito, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; text-decoration-thickness: 2px; text-underline-offset: 3px; } a:hover { color: #22223B; }
+button { font-family: inherit; color: inherit; }
+:focus-visible { outline: none; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #22223B; }
+</style>
+</helmet>
+<div style="width:1440px;padding:96px;display:flex;flex-direction:column;gap:140px;font-family:Nunito, system-ui, sans-serif;color:#22223B;background:#F2E9E4">
+
+<header data-screen-label="00 Capa" style="display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:end;padding-bottom:64px;border-bottom:2px solid #DCCFC8">
+  <div style="display:flex;flex-direction:column;gap:36px">
+    <dc-import name="MapiLogo" simbolo="ambos" size="{{ 130 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="460px,130px"></dc-import>
+    <h1 style="margin:0;font-size:64px;line-height:1.1;font-weight:900;letter-spacing:-0.03em">O mapa dos seus direitos</h1>
+    <p style="margin:0;font-size:22px;line-height:1.6;color:#4A4E69;max-width:780px;text-wrap:pretty">Assistente digital que orienta famílias de pessoas com deficiência, começando por quem usa cadeira de rodas, e cidadãos em geral sobre direitos e serviços públicos em São Paulo. Toda resposta mostra a fonte e a data da conferência.</p>
+  </div>
+  <nav style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;font-size:20px;font-weight:700">
+    <a href="#produto" style="padding:12px 0;color:#22223B;text-decoration:none">01 Produto e etapas</a>
+    <a href="#voz" style="padding:12px 0;color:#22223B;text-decoration:none">02 Voz e texto</a>
+    <a href="#personagem" style="padding:12px 0;color:#22223B;text-decoration:none">03 Personagem</a>
+    <a href="#icones" style="padding:12px 0;color:#22223B;text-decoration:none">04 Ícones novos</a>
+    <a href="#componentes" style="padding:12px 0;color:#22223B;text-decoration:none">05 Componentes</a>
+    <a href="#telas" style="padding:12px 0;color:#22223B;text-decoration:none">06 Telas mobile</a>
+    <a href="#faltam" style="padding:12px 0;color:#22223B;text-decoration:none">07 O que falta</a>
+    <span style="padding:12px 0;color:#4A4E69;font-family:'IBM Plex Mono',monospace;font-size:16px">v2.0 · nov 2026</span>
+  </nav>
+</header>
+
+<section id="produto" data-screen-label="01 Produto" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">01</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Produto e etapas</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+    <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:16px">
+      <span style="align-self:flex-start;padding:8px 16px;border-radius:999px;background:#22223B;color:#F2E9E4;font-size:18px;font-weight:800">Etapa 1 · agora</span>
+      <h3 style="margin:0;font-size:34px;font-weight:900;letter-spacing:-0.01em">Assistente de direitos</h3>
+      <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;text-wrap:pretty">Escolher a situação, fazer uma pergunta e conferir se um link ou cobrança é oficial. Base fechada de fontes conferidas, com data.</p>
+    </div>
+    <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:16px">
+      <span style="align-self:flex-start;padding:8px 16px;border-radius:999px;background:#C9ADA7;color:#22223B;font-size:18px;font-weight:800;border:2px solid #22223B">Etapa 2 · Visão de futuro</span>
+      <h3 style="margin:0;font-size:34px;font-weight:900;letter-spacing:-0.01em">Mapa de calçadas</h3>
+      <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;text-wrap:pretty">O mapa colaborativo continua documentado em <a href="Mapiii Visao de Futuro.dc.html">Visão de futuro</a>. As cores e formas das categorias de calçada saem da interface principal e ficam só nos tokens.</p>
+    </div>
+  </div>
+  <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;max-width:960px">Mantidos sem mudança: logo, paleta, Nunito, cantos, bordas de 2 px, anel de foco, modo escuro (tokens em <code style="font-family:'IBM Plex Mono',monospace">tokens/colors.css</code>) e todos os componentes existentes.</p>
+</section>
+
+<section id="voz" data-screen-label="02 Voz" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">02</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Voz e texto</h2></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+    <div style="background:#FFFFFF;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:900">Acolhedor e calmo</span><span style="font-size:18px;line-height:1.6;color:#4A4E69">O público é adulto e muitas vezes está num momento delicado. Nada de exclamação, diminutivo ou piada.</span></div>
+    <div style="background:#FFFFFF;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:900">Honesto</span><span style="font-size:18px;line-height:1.6;color:#4A4E69">Nunca "você tem direito". Use "Pode ter direito", "Talvez" ou "Provavelmente não se aplica", sempre com fonte e data.</span></div>
+    <div style="background:#FFFFFF;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:900">Direto</span><span style="font-size:18px;line-height:1.6;color:#4A4E69">Frases curtas, "você", verbo no começo, português do Brasil, sem emoji.</span></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div style="background:#DDEBE0;border:2px solid #36704A;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:12px"><span style="display:flex;gap:8px;align-items:center;font-size:20px;font-weight:900;color:#2F5A3C"><dc-import name="MapiIcon" name-of="check" size="24" color="currentColor" hint-size="24px,24px"></dc-import>Use</span><span style="font-size:20px;line-height:1.5">"Não encontrei isso na minha base. Procure o canal oficial."</span><span style="font-size:20px;line-height:1.5">"Junte o que faltou e faça um novo pedido."</span></div>
+    <div style="background:#F6E2DD;border:2px solid #A0402F;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:12px"><span style="display:flex;gap:8px;align-items:center;font-size:20px;font-weight:900;color:#8E3527"><dc-import name="MapiIcon" name-of="fechar" size="24" color="currentColor" hint-size="24px,24px"></dc-import>Evite</span><span style="font-size:20px;line-height:1.5">"Ops! Não sei responder essa."</span><span style="font-size:20px;line-height:1.5">"Você tem direito ao benefício."</span></div>
+  </div>
+</section>
+
+<section id="personagem" data-screen-label="03 Personagem" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">03</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Mapi, guia e assistente</h2></div>
+  <ul style="margin:0;padding:0 0 0 24px;font-size:20px;line-height:1.7;max-width:1000px">
+    <li>Aparece pequeno (44 a 64 px) ao lado das mensagens e nunca cobre conteúdo.</li>
+    <li>Sempre vem com texto: o rótulo "Mapi · Estado" e a mensagem. A emoção nunca é a única forma de informar; o desenho é decorativo para leitores de tela.</li>
+    <li>Pose estática. O projeto não tem animações do personagem, então o comportamento com prefers-reduced-motion já é o padrão.</li>
+    <li>Comemorando só ao concluir um checklist; nunca junto de notícia ruim.</li>
+  </ul>
+  <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;max-width:1000px">Sete poses novas (ouvindo, procurando, achei, verificado, duvida, recusa, esperando) seguem o mesmo corpo, traço, proporção e paleta das seis originais. Só mudam olhos, sobrancelhas, boca, braços e um objeto de apoio.</p>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+    <sc-for list="{{ estados }}" as="e" hint-placeholder-count="11">
+      <div style="background:#FFFFFF;border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="height:150px;border-radius:20px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiPersonagem" estado="{{ e.pose }}" size="100" hint-size="100px,121px"></dc-import></div>
+        <span style="font-size:22px;font-weight:900">{{ e.nome }}</span>
+        <span style="font-size:16px;line-height:1.5;color:#4A4E69">{{ e.uso }}</span>
+        <sc-if value="{{ e.ok }}"><span style="align-self:flex-start;display:inline-flex;gap:6px;align-items:center;min-height:32px;padding:2px 12px 2px 8px;border-radius:12px;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="check" size="18" color="currentColor" hint-size="18px,18px"></dc-import>Pose: {{ e.pose }}</span></sc-if>
+        <sc-if value="{{ e.falta }}"><span style="align-self:flex-start;display:inline-flex;gap:6px;align-items:center;min-height:32px;padding:2px 12px 2px 8px;border-radius:12px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="alerta" size="18" color="currentColor" hint-size="18px,18px"></dc-import>Falta · provisória: {{ e.pose }}</span></sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="icones" data-screen-label="04 Ícones" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">04</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Ícones novos</h2></div>
+  <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;max-width:960px">Grade de 24 px, traço de 2 px, pontas e cantos arredondados, currentColor. Alerta e dúvida já existiam nas telas de Visão de futuro e entraram no conjunto.</p>
+  <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px">
+    <sc-for list="{{ icones }}" as="i" hint-placeholder-count="11">
+      <div style="background:#FFFFFF;border-radius:24px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:14px">
+        <dc-import name="MapiIcon" name-of="{{ i.id }}" size="40" color="#22223B" hint-size="40px,40px"></dc-import>
+        <span style="font-size:18px;font-weight:800;text-align:center">{{ i.nome }}</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">{{ i.id }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="componentes" data-screen-label="05 Componentes" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">05</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Componentes novos</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start">
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">DisclaimerBanner</span>
+      <div role="note" style="background:#E6DCE0;border-radius:20px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:23px;font-weight:700;max-width:360px"><span style="flex:none;padding-top:1px"><dc-import name="MapiIcon" name-of="alerta" size="22" color="#22223B" hint-size="22px,22px"></dc-import></span>Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas.</div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Fixo no rodapé do Início. Fundo lilás 100, texto indigo (10,6:1).</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">SourceChip</span>
+      <a href="#fonte" style="align-self:flex-start;min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 16px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;text-decoration:none;color:#22223B"><dc-import name="MapiIcon" name-of="link" size="22" color="#4A4E69" hint-size="22px,22px"></dc-import><span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px">SPTrans · sptrans.com.br</span><span style="font-size:16px;color:#4A4E69">verificado em 28/10/2026</span></span></a>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Nome da fonte, link sublinhado e data de verificação. Alvo mínimo de 56 px.</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">SourceTypeBadge</span>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="escudo_check" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte oficial</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#FFFFFF;color:#22223B;border:2px solid #6E6A7E;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="link" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Fonte secundária</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:999px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="prazo" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode estar desatualizada</span>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Pílula. Ícone e texto sempre juntos. "Desatualizada" quando a conferência tem mais de 6 meses.</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">EligibilityChip</span>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#DDEBE0;color:#2F5A3C;border:2px solid #36704A;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="ok" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Pode ter direito</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#F7EAD2;color:#634410;border:2px solid #7A5410;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="duvida" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Talvez</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 8px;border-radius:12px;background:#E6DCE0;color:#22223B;border:2px solid #6E6A7E;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="20" color="currentColor" hint-size="20px,20px"></dc-import>Provavelmente não se aplica</span>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Canto de 12 px, para não confundir com o tipo de fonte. Nunca escreva "você tem direito".</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">ChatBubble</span>
+      <div style="background:#F2E9E4;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px;max-width:390px">
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Você</span><div style="max-width:86%;background:#22223B;color:#F2E9E4;border-radius:22px 6px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">Quem pode pedir o BPC?</div></div>
+        <div style="display:flex;align-items:flex-start;gap:10px"><span aria-hidden="true" style="flex:none;display:block"><dc-import name="MapiPersonagem" estado="procurando" size="44" hint-size="44px,53px"></dc-import></span><div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:16px;font-weight:800;color:#4A4E69">Mapi · Procurando</span><div style="background:#FFFFFF;border-radius:6px 22px 22px 22px;padding:12px 16px;font-size:17px;line-height:26px">Procurando na minha base de fontes.</div></div></div>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Pessoa à direita em indigo. Assistente à esquerda em branco, com o Mapi de 44 px e o rótulo do estado.</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">WizardStep</span>
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:360px">
+        <button type="button" role="radio" aria-checked="true" style="min-height:72px;width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;background:#E6DCE0;border:3px solid #22223B;text-align:left;cursor:pointer;font:800 18px/24px Nunito, system-ui, sans-serif;color:#22223B"><span style="width:28px;height:28px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="check" size="18" color="currentColor" hint-size="18px,18px"></dc-import></span>Cadeira de rodas</button>
+        <button type="button" role="radio" aria-checked="false" style="min-height:72px;width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;background:#FFFFFF;border:2px solid #DCCFC8;text-align:left;cursor:pointer;font:800 18px/24px Nunito, system-ui, sans-serif;color:#22223B"><span style="width:28px;height:28px;border-radius:50%;border:2px solid #6E6A7E;background:#FFFFFF;flex:none"></span>Ainda não sei</button>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Cartão de 72 px. Selecionado: borda de 3 px, fundo lilás e marca de check.</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">Checklist de passos</span>
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:360px">
+        <div style="min-height:56px;display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;font-size:17px;font-weight:700"><span style="width:28px;height:28px;border-radius:8px;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="check" size="20" color="currentColor" hint-size="20px,20px"></dc-import></span>CPF</div>
+        <div style="min-height:56px;display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:16px;background:#FFFFFF;border:2px solid #DCCFC8;font-size:17px;font-weight:700"><span style="width:28px;height:28px;border-radius:8px;border:2px solid #6E6A7E;flex:none"></span>Comprovante de endereço</div>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Contador "2 de 4 prontos". Ao marcar tudo, o Mapi aparece em Comemorando.</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">Timeline</span>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;max-width:360px">
+        <li style="display:grid;grid-template-columns:32px 1fr;gap:12px"><span style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:16px;font-weight:900">1</span><span style="width:2px;flex:1;background:#DCCFC8;min-height:12px"></span></span><span style="font-size:17px;line-height:24px;padding:4px 0 14px">Peça o motivo por escrito.</span></li>
+        <li style="display:grid;grid-template-columns:32px 1fr;gap:12px"><span style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #22223B;display:grid;place-items:center;font-size:16px;font-weight:900">2</span></span><span style="font-size:17px;line-height:24px;padding:4px 0 0">Faça um novo pedido.</span></li>
+      </ol>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Números em círculo e linha de 2 px. Usada em "Se negarem" e "Como funciona".</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">ScamCheckResult</span>
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:380px">
+        <div style="border-radius:20px;border:3px solid #36704A;background:#DDEBE0;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;color:#2F5A3C"><dc-import name="MapiIcon" name-of="escudo_check" size="26" color="currentColor" hint-size="26px,26px"></dc-import>Oficial<span style="margin-left:auto;font-size:16px;font-weight:800">Mapi · Verificado</span></div>
+        <div style="border-radius:20px;border:3px solid #A0402F;background:#F6E2DD;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;color:#8E3527"><dc-import name="MapiIcon" name-of="golpe" size="26" color="currentColor" hint-size="26px,26px"></dc-import>Suspeito<span style="margin-left:auto;font-size:16px;font-weight:800">Mapi · Atenção</span></div>
+        <div style="border-radius:20px;border:3px solid #6E6A7E;background:#E6DCE0;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900"><dc-import name="MapiIcon" name-of="duvida" size="26" color="currentColor" hint-size="26px,26px"></dc-import>Não sei<span style="margin-left:auto;font-size:16px;font-weight:800">Mapi · Dúvida honesta</span></div>
+      </div>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Cor, ícone, palavra e borda de 3 px. Sempre seguido de "Esta checagem não garante nada."</span>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:26px;font-weight:900">RightCard e AnswerCard</span>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">RightCard: título, resumo de uma linha, EligibilityChip, SourceTypeBadge e três linhas fixas (o que levar, onde ir, quanto tempo costuma levar). AnswerCard: Resumo, Passos, Fonte, Limitação e "Esta resposta ajudou?" com Sim e Não de 48 px. Veja nas telas <a href="#t3">03</a> e <a href="#t5">05b</a>.</span>
+    </div>
+  </div>
+</section>
+
+<section id="telas" data-screen-label="06 Telas" style="display:flex;flex-direction:column;gap:56px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">06</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">Telas mobile</h2></div>
+  <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;max-width:960px">390 px. As telas rolam por dentro. Na tela 04, marque os documentos: ao completar, o Mapi aparece em Comemorando.</p>
+  <sc-for list="{{ grupos }}" as="g" hint-placeholder-count="8">
+    <div id="{{ g.id }}" style="display:flex;flex-direction:column;gap:24px">
+      <h3 style="margin:0;font-size:32px;font-weight:900;letter-spacing:-0.01em">{{ g.titulo }}</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <sc-for list="{{ g.telas }}" as="t" hint-placeholder-count="1">
+          <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800;color:#4A4E69">{{ t.rotulo }}</span><dc-import name="DireitosTela" tela="{{ t.id }}" hint-size="390px,844px"></dc-import></div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+</section>
+
+<section id="faltam" data-screen-label="07 O que falta" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">07</span><h2 style="margin:0;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em">O que falta</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:26px;font-weight:900">Estados do personagem</span>
+      <ul style="margin:0;padding:0 0 0 22px;font-size:18px;line-height:1.7">
+        <li>Animações de cada estado e da troca entre eles</li>
+      </ul>
+      <span style="font-size:17px;line-height:1.6;color:#4A4E69">Os 11 estados têm pose. Não há animações do personagem no projeto; com prefers-reduced-motion, a pose estática continua sendo a regra.</span>
+    </div>
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:26px;font-weight:900">Componentes</span>
+      <ul style="margin:0;padding:0 0 0 22px;font-size:18px;line-height:1.7">
+        <li>Versões em código (.jsx, .d.ts) dos 12 componentes novos em <code style="font-family:'IBM Plex Mono',monospace;font-size:16px">components/</code></li>
+        <li>Versões no modo escuro dos componentes novos</li>
+        <li>Campo de texto longo (Textarea) no conjunto core</li>
+        <li>Barra de progresso de passos do WizardStep</li>
+        <li>Estado de erro de rede e "sem conexão"</li>
+      </ul>
+    </div>
+    <div style="background:#FFFFFF;border-radius:36px;padding:36px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:26px;font-weight:900">Ícones</span>
+      <ul style="margin:0;padding:0 0 0 22px;font-size:18px;line-height:1.7">
+        <li>"Não se aplica" próprio (hoje usa fechar)</li>
+        <li>Telefone, para canais como 156 e 135</li>
+        <li>Link externo (sair do app)</li>
+        <li>Seguir / avançar nos cartões do Início</li>
+        <li>Copiar, para colar link na checagem</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const E = [
+      ['Olá', 'bom', true, 'Início, primeira mensagem.'],
+      ['Ouvindo', 'ouvindo', true, 'Enquanto a pessoa digita ou responde o passo a passo.'],
+      ['Procurando', 'procurando', true, 'Enquanto busca na base de fontes.'],
+      ['Achei', 'achei', true, 'Junto de uma resposta.'],
+      ['Verificado', 'verificado', true, 'Fonte oficial com data de conferência.'],
+      ['Dúvida honesta', 'duvida', true, '"Não encontrei isso na minha base."'],
+      ['Atenção', 'atencao', true, 'Golpe suspeito ou fonte antiga.'],
+      ['Recusa gentil', 'recusa', true, 'Fora do tema ou dado pessoal.'],
+      ['Acolhimento', 'agradecendo', true, 'Assuntos difíceis, como benefício negado.'],
+      ['Comemorando', 'comemorando', true, 'Só ao concluir um checklist.'],
+      ['Esperando', 'esperando', true, 'Parado, com campo vazio.']
+    ];
+    const I = [['documento', 'Documento'], ['onde_ir', 'Onde ir'], ['prazo', 'Prazo'], ['escudo_check', 'Escudo com check'], ['golpe', 'Alerta de golpe'], ['link', 'Link'], ['passos', 'Lista de passos'], ['conversa', 'Balão de conversa'], ['calendario', 'Calendário'], ['alerta', 'Alerta'], ['duvida', 'Dúvida']];
+    const G = [
+      ['t1', '01 Início', [['1', 'Olá']]],
+      ['t2', '02 Escolher minha situação', [['2a', 'Passo 1'], ['2b', 'Passo 2'], ['2c', 'Passo 3']]],
+      ['t3', '03 Rota dos Direitos', [['3', 'Verificado']]],
+      ['t4', '04 Detalhe de um direito', [['4', 'Checklist em andamento'], ['4b', 'Checklist concluído · Comemorando']]],
+      ['t5', '05 Conversa', [['5a', 'Procurando'], ['5b', 'Achei'], ['5c', 'Dúvida honesta']]],
+      ['t6', '06 Conferir se é oficial', [['6a', 'Oficial · Verificado'], ['6b', 'Suspeito · Atenção'], ['6c', 'Não sei · Dúvida honesta']]],
+      ['t7', '07 Limites do assistente', [['7a', 'Campo vazio · Esperando'], ['7b', 'Fora do tema · Recusa gentil'], ['7c', 'Dado pessoal · Recusa gentil'], ['7d', 'Assunto difícil · Acolhimento']]],
+      ['t8', '08 Sobre e fontes', [['8', 'Sem personagem']]]
+    ];
+    return {
+      estados: E.map(([nome, pose, ok, uso]) => ({ nome, pose, ok, falta: !ok, uso })),
+      icones: I.map(([id, nome]) => ({ id, nome })),
+      grupos: G.map(([id, titulo, telas]) => ({ id, titulo, telas: telas.map(([i, r]) => ({ id: i, rotulo: r })) }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+html, body { margin: 0; background: #F2E9E4; color: #22223B; font-family: Nunito, system-ui, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; } a:hover { color: #22223B; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+  <section data-label="Capa" data-screen-label="01 Capa" style="background:#22223B;color:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:grid;grid-template-columns:1fr auto;align-items:center;gap:80px;padding:120px 140px">
+    <div style="display:flex;flex-direction:column;gap:48px">
+      <dc-import name="MapiLogo" simbolo="ambos" size="{{ 110 }}" pin="#C9ADA7" cut="#22223B" text="#F2E9E4" hint-size="400px,110px"></dc-import>
+      <h1 style="margin:0;font-size:112px;line-height:1.02;font-weight:900;letter-spacing:-0.03em">O mapa dos seus direitos</h1>
+      <p style="margin:0;font-size:36px;line-height:1.45;font-weight:600;max-width:1100px">Orientação sobre direitos e serviços públicos em São Paulo, com fontes verificáveis.</p>
+    </div>
+    <span aria-hidden="true" style="display:block"><dc-import name="MapiPersonagem" estado="bom" size="300" hint-size="300px,364px"></dc-import></span>
+  </section>
+
+  <section data-label="Problema" data-screen-label="02 Problema" style="background:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column;justify-content:center;gap:64px;padding:120px 140px">
+    <span style="font-size:32px;font-weight:800;color:#4A4E69">Problema</span>
+    <h2 style="margin:0;font-size:84px;line-height:1.08;font-weight:900;letter-spacing:-0.03em;max-width:1500px;text-wrap:pretty">Informação sobre direitos está espalhada, difícil de ler e cercada de golpes.</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+      <div style="background:#FFFFFF;border-radius:36px;padding:44px;display:flex;flex-direction:column;gap:16px"><span style="font-size:64px;font-weight:900;letter-spacing:-0.02em">[dado]</span><span style="font-size:28px;line-height:1.4">Descreva o dado e cite a fonte.</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:44px;display:flex;flex-direction:column;gap:16px"><span style="font-size:64px;font-weight:900;letter-spacing:-0.02em">[dado]</span><span style="font-size:28px;line-height:1.4">Descreva o dado e cite a fonte.</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:44px;display:flex;flex-direction:column;gap:16px"><span style="font-size:64px;font-weight:900;letter-spacing:-0.02em">[dado]</span><span style="font-size:28px;line-height:1.4">Descreva o dado e cite a fonte.</span></div>
+    </div>
+  </section>
+
+  <section data-label="Solução" data-screen-label="03 Solução" style="background:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:grid;grid-template-columns:1fr auto;align-items:center;gap:120px;padding:80px 160px 80px 140px">
+    <div style="display:flex;flex-direction:column;gap:48px">
+      <span style="font-size:32px;font-weight:800;color:#4A4E69">Solução</span>
+      <h2 style="margin:0;font-size:80px;line-height:1.08;font-weight:900;letter-spacing:-0.03em;text-wrap:pretty">Um assistente que mostra de onde vem cada resposta.</h2>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;align-items:center;gap:24px;font-size:36px;font-weight:800"><span style="width:80px;height:80px;border-radius:24px;background:#FFFFFF;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="passos" size="44" color="#22223B" hint-size="44px,44px"></dc-import></span>Escolher minha situação</div>
+        <div style="display:flex;align-items:center;gap:24px;font-size:36px;font-weight:800"><span style="width:80px;height:80px;border-radius:24px;background:#FFFFFF;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="conversa" size="44" color="#22223B" hint-size="44px,44px"></dc-import></span>Fazer uma pergunta</div>
+        <div style="display:flex;align-items:center;gap:24px;font-size:36px;font-weight:800"><span style="width:80px;height:80px;border-radius:24px;background:#FFFFFF;display:grid;place-items:center;flex:none"><dc-import name="MapiIcon" name-of="escudo_check" size="44" color="#22223B" hint-size="44px,44px"></dc-import></span>Conferir se é oficial</div>
+      </div>
+    </div>
+    <div style="width:420px;height:910px;display:grid;place-items:center"><div style="transform:scale(1.07)"><dc-import name="DireitosTela" tela="1" hint-size="390px,844px"></dc-import></div></div>
+  </section>
+
+  <section data-label="Como funciona" data-screen-label="04 Como funciona" style="background:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column;justify-content:center;gap:72px;padding:120px 140px">
+    <span style="font-size:32px;font-weight:800;color:#4A4E69">Como funciona</span>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:24px"><span style="width:72px;height:72px;border-radius:50%;border:3px solid #22223B;display:grid;place-items:center;font-size:36px;font-weight:900">1</span><span style="font-size:44px;line-height:1.15;font-weight:900;letter-spacing:-0.02em">Você conta a situação</span><span style="font-size:28px;line-height:1.45;color:#4A4E69">Sem nome, diagnóstico nem renda exata.</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:24px"><span style="width:72px;height:72px;border-radius:50%;border:3px solid #22223B;display:grid;place-items:center;font-size:36px;font-weight:900">2</span><span style="font-size:44px;line-height:1.15;font-weight:900;letter-spacing:-0.02em">Busca só em fontes conferidas</span><span style="font-size:28px;line-height:1.45;color:#4A4E69">Prefeitura, SPTrans, INSS e Defensorias.</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:24px"><span style="width:72px;height:72px;border-radius:50%;border:3px solid #22223B;display:grid;place-items:center;font-size:36px;font-weight:900">3</span><span style="font-size:44px;line-height:1.15;font-weight:900;letter-spacing:-0.02em">Resposta com fonte e limite</span><span style="font-size:28px;line-height:1.45;color:#4A4E69">Data da conferência e o que o assistente não sabe.</span></div>
+    </div>
+  </section>
+
+  <section data-label="Resultados" data-screen-label="05 Resultados" style="background:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column;justify-content:center;gap:72px;padding:120px 140px">
+    <div style="display:flex;flex-direction:column;gap:24px"><span style="font-size:32px;font-weight:800;color:#4A4E69">Resultados</span><h2 style="margin:0;font-size:80px;line-height:1.08;font-weight:900;letter-spacing:-0.03em">Três indicadores de acerto</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:20px"><dc-import name="MapiIcon" name-of="escudo_check" size="52" color="#22223B" hint-size="52px,52px"></dc-import><span style="font-size:120px;line-height:1;font-weight:900;letter-spacing:-0.03em">00%</span><span style="font-size:32px;line-height:1.35;font-weight:800">das respostas citam fonte oficial</span><span style="font-size:26px;color:#4A4E69">Amostra: [n] perguntas</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:20px"><dc-import name="MapiIcon" name-of="check" size="52" color="#22223B" hint-size="52px,52px"></dc-import><span style="font-size:120px;line-height:1;font-weight:900;letter-spacing:-0.03em">00%</span><span style="font-size:32px;line-height:1.35;font-weight:800">corretas na revisão de especialistas</span><span style="font-size:26px;color:#4A4E69">Amostra: [n] respostas</span></div>
+      <div style="background:#FFFFFF;border-radius:36px;padding:48px;display:flex;flex-direction:column;gap:20px"><dc-import name="MapiIcon" name-of="duvida" size="52" color="#22223B" hint-size="52px,52px"></dc-import><span style="font-size:120px;line-height:1;font-weight:900;letter-spacing:-0.03em">00%</span><span style="font-size:32px;line-height:1.35;font-weight:800">de "não encontrei" quando a base não tinha a resposta</span><span style="font-size:26px;color:#4A4E69">Amostra: [n] perguntas</span></div>
+    </div>
+  </section>
+
+  <section data-label="Visão de futuro" data-screen-label="06 Visão de futuro" style="background:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:grid;grid-template-columns:1fr auto;align-items:center;gap:120px;padding:80px 160px 80px 140px">
+    <div style="display:flex;flex-direction:column;gap:44px">
+      <span style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;padding:14px 28px 14px 22px;border-radius:20px;background:#C9ADA7;border:3px solid #22223B;font-size:32px;font-weight:800"><dc-import name="MapiIcon" name-of="mapa" size="36" color="#22223B" hint-size="36px,36px"></dc-import>Visão de futuro</span>
+      <h2 style="margin:0;font-size:80px;line-height:1.08;font-weight:900;letter-spacing:-0.03em;text-wrap:pretty">Etapa 2: o mapa de calçadas</h2>
+      <p style="margin:0;font-size:34px;line-height:1.5;color:#4A4E69;max-width:900px;text-wrap:pretty">Depois dos direitos, o caminho até o serviço. A comunidade avalia trechos e o app mostra rotas mais seguras para quem usa cadeira de rodas.</p>
+    </div>
+    <div style="width:420px;height:910px;display:grid;place-items:center"><div style="transform:scale(1.07)"><dc-import name="VisaoTela" tela="1" hint-size="390px,844px"></dc-import></div></div>
+  </section>
+
+  <section data-label="Encerramento" data-screen-label="07 Encerramento" style="background:#22223B;color:#F2E9E4;font-family:Nunito, system-ui, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:56px;padding:120px 140px;text-align:center">
+    <span aria-hidden="true" style="display:block"><dc-import name="MapiPersonagem" estado="bom" size="220" hint-size="220px,267px"></dc-import></span>
+    <h2 style="margin:0;font-size:104px;line-height:1.05;font-weight:900;letter-spacing:-0.03em">Obrigado</h2>
+    <p style="margin:0;font-size:36px;line-height:1.45;font-weight:600">[Nome da equipe] · [contato]</p>
+    <dc-import name="MapiLogo" simbolo="ambos" size="{{ 64 }}" pin="#C9ADA7" cut="#22223B" text="#F2E9E4" hint-size="240px,64px"></dc-import>
+  </section>
+</x-import>
+
+</x-dc>
+</body>
+</html>

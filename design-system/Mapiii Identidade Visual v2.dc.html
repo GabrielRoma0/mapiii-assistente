@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F2E9E4;color:#22223B;font-family:Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4A4E69;text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:#22223B}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="width:1440px;padding:96px;display:flex;flex-direction:column;gap:160px;font-family:Nunito,system-ui,sans-serif;color:#22223B;background:#F2E9E4">
+
+<header data-screen-label="00 Capa" style="display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:end;padding-bottom:72px;border-bottom:2px solid #DCCFC8">
+  <div style="display:flex;flex-direction:column;gap:40px">
+    <dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 150 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="520px,150px"></dc-import>
+    <h1 style="margin:0;font-size:56px;line-height:1.15;font-weight:800;letter-spacing:-0.02em;max-width:800px;text-wrap:pretty">Identidade visual</h1>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <span style="padding:10px 18px;border-radius:999px;background:#E6DCE0;font-size:18px;font-weight:700"><b style="font-weight:900">i</b> de informação</span>
+      <span style="padding:10px 18px;border-radius:999px;background:#E6DCE0;font-size:18px;font-weight:700"><b style="font-weight:900">i</b> de independência</span>
+      <span style="padding:10px 18px;border-radius:999px;background:#E6DCE0;font-size:18px;font-weight:700"><b style="font-weight:900">i</b> de inclusão</span>
+    </div>
+    <p style="margin:0;font-size:22px;line-height:1.6;color:#4A4E69;max-width:760px;text-wrap:pretty">Aplicativo web (PWA) em que cidadãos fotografam problemas de acessibilidade em calçadas. Uma IA classifica as fotos, elas viram um mapa colaborativo e um painel mostra à prefeitura onde agir primeiro. Alinhado à ODS 11.</p>
+  </div>
+  <nav style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;font-size:20px;font-weight:700">
+    <a href="#logo" style="padding:12px 0;color:#22223B;text-decoration:none">01 Logo</a>
+    <a href="#cores" style="padding:12px 0;color:#22223B;text-decoration:none">02 Cores e contraste</a>
+    <a href="#tipo" style="padding:12px 0;color:#22223B;text-decoration:none">03 Tipografia</a>
+    <a href="#icones" style="padding:12px 0;color:#22223B;text-decoration:none">04 Ícones</a>
+    <a href="#componentes" style="padding:12px 0;color:#22223B;text-decoration:none">05 Componentes</a>
+    <a href="#telas" style="padding:12px 0;color:#22223B;text-decoration:none">06 Telas mobile</a>
+    <a href="#painel" style="padding:12px 0;color:#22223B;text-decoration:none">07 Painel da prefeitura</a>
+        <a href="#guia" style="padding:12px 0;color:#22223B;text-decoration:none">08 Guia de marca</a>
+    <span style="padding:12px 0;color:#4A4E69;font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:16px">v1.0 · out 2026</span>
+  </nav>
+</header>
+
+<section id="logo" data-screen-label="01 Logo" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">01</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Logo</h2></div>
+  <p style="margin:0;font-size:22px;line-height:1.6;color:#4A4E69;max-width:900px;text-wrap:pretty">Três i: informação, independência e inclusão. Os dois primeiros têm pingo redondo; o pingo do último é uma pinha (a piada do “ma-pinha”) com o próprio formato de pino de mapa: arredondada, com escamas suaves e folhinhas no topo. Duas versões; o restante do documento usa a versão ativa em Tweaks.</p>
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <h3 style="margin:0;font-size:32px;font-weight:900;letter-spacing:-0.01em">Símbolos de acessibilidade no logo</h3>
+    <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;max-width:900px;text-wrap:pretty">Três propostas que trocam detalhes já existentes por sinais reconhecíveis, sem acrescentar elementos. A versão aplicada no documento é a <a href="#6c">6c</a>, com os dois sinais.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+      <article id="6a" style="background:#FFFFFF;border-radius:36px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;gap:14px;align-items:center"><span style="font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:500;background:#22223B;color:#FFFFFF;padding:6px 12px;border-radius:10px">6a</span><span style="font-size:24px;font-weight:800">Piso tátil</span></div>
+        <div style="height:200px;border-radius:28px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="tatil" size="{{ 84 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="300px,110px"></dc-import></div>
+        <div style="display:flex;gap:16px;align-items:center;justify-content:center;padding:4px 0"><div style="height:64px;padding:0 18px;border-radius:18px;background:#22223B;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="tatil" size="{{ 30 }}" pin="#F2E9E4" cut="#22223B" text="#F2E9E4" hint-size="110px,40px"></dc-import></div><div style="height:64px;padding:0 18px;border-radius:18px;border:2px solid #DCCFC8;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="tatil" size="{{ 20 }}" pin="#22223B" cut="#FFFFFF" text="#22223B" hint-size="74px,28px"></dc-import></div></div>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;text-wrap:pretty">As escamas da pinha viram os relevos redondos do piso tátil de alerta, que pessoas cegas sentem com a bengala e os pés.</p>
+      </article>
+      <article id="6b" style="background:#FFFFFF;border-radius:36px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;gap:14px;align-items:center"><span style="font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:500;background:#22223B;color:#FFFFFF;padding:6px 12px;border-radius:10px">6b</span><span style="font-size:24px;font-weight:800">Roda no p</span></div>
+        <div style="height:200px;border-radius:28px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="roda" size="{{ 84 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="300px,110px"></dc-import></div>
+        <div style="display:flex;gap:16px;align-items:center;justify-content:center;padding:4px 0"><div style="height:64px;padding:0 18px;border-radius:18px;background:#22223B;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="roda" size="{{ 30 }}" pin="#F2E9E4" cut="#22223B" text="#F2E9E4" hint-size="110px,40px"></dc-import></div><div style="height:64px;padding:0 18px;border-radius:18px;border:2px solid #DCCFC8;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="roda" size="{{ 20 }}" pin="#22223B" cut="#FFFFFF" text="#22223B" hint-size="74px,28px"></dc-import></div></div>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;text-wrap:pretty">A barriga do p ganha um eixo e vira roda de cadeira de rodas. Mesma silhueta da letra; o símbolo aparece só para quem repara.</p>
+      </article>
+      <article id="6c" style="background:#FFFFFF;border-radius:36px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;gap:14px;align-items:center"><span style="font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:500;background:#22223B;color:#FFFFFF;padding:6px 12px;border-radius:10px">6c</span><span style="font-size:24px;font-weight:800">Os dois juntos</span></div>
+        <div style="height:200px;border-radius:28px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="ambos" size="{{ 84 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="300px,110px"></dc-import></div>
+        <div style="display:flex;gap:16px;align-items:center;justify-content:center;padding:4px 0"><div style="height:64px;padding:0 18px;border-radius:18px;background:#22223B;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="ambos" size="{{ 30 }}" pin="#F2E9E4" cut="#22223B" text="#F2E9E4" hint-size="110px,40px"></dc-import></div><div style="height:64px;padding:0 18px;border-radius:18px;border:2px solid #DCCFC8;display:grid;place-items:center"><dc-import name="MapiLogo" simbolo="ambos" size="{{ 20 }}" pin="#22223B" cut="#FFFFFF" text="#22223B" hint-size="74px,28px"></dc-import></div></div>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;text-wrap:pretty">Piso tátil na pinha e roda no p: deficiência visual e física no mesmo nome, ainda com só três elementos de destaque (M, p e pinha).</p>
+      </article>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center;background:#FFFFFF;border-radius:36px;padding:48px">
+    <div style="display:flex;align-items:flex-start;justify-content:center;gap:28px;height:300px;padding-top:12px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><span style="font-size:18px;font-weight:800;color:#4A4E69">1</span><span style="width:40px;height:150px;border-radius:14px;background:#22223B"></span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:42px"><span style="font-size:18px;font-weight:800;color:#4A4E69">2</span><span style="width:40px;height:150px;border-radius:14px;background:#22223B"></span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:60px"><dc-import name="MapiMark" variant="{{ logoVariant }}" size="{{ 64 }}" pin="#4A4E69" cut="#FFFFFF" hint-size="64px,64px"></dc-import><span style="width:40px;height:150px;border-radius:14px;background:#22223B"></span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h3 style="margin:0;font-size:32px;font-weight:900;letter-spacing:-0.01em">Os três i descem como uma escadinha</h3>
+      <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;text-wrap:pretty">Os três i têm o mesmo tamanho, e cada um desce um degrau em relação ao anterior. A leitura acompanha o caminho do app, do registro até o chão da cidade:</p>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:19px;line-height:1.5">
+        <span><b style="font-weight:900">1 · Informação.</b> A foto registra o problema.</span>
+        <span><b style="font-weight:900">2 · Independência.</b> Com o mapa, cada pessoa planeja o próprio caminho.</span>
+        <span><b style="font-weight:900">3 · Inclusão.</b> No último degrau, a pinha aponta para o ponto exato onde a cidade precisa agir.</span>
+      </div>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#4A4E69;text-wrap:pretty">O M é desenhado sob medida, com o mesmo peso e as mesmas pontas arredondadas da Nunito Black. A perna esquerda tem a altura de uma maiúscula e a direita, a altura do “a”: o topo da letra desce como uma rampa, sem cortes, apoiado na linha de base. O nome começa descendo a rampa e segue descendo os degraus. Os degraus são baixos e iguais, como uma descida suave. A pinha é o “ma-pinha” do nome, desenhada com o formato de um pino de mapa que toca o chão.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center;background:#FFFFFF;border-radius:36px;padding:48px">
+    <div style="display:flex;align-items:flex-end;justify-content:center;gap:40px;height:300px;padding-bottom:40px;position:relative">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+        <svg viewBox="0 0 682 705" width="170" height="176" style="overflow:visible"><path d="M0 0L682 280" fill="none" stroke="#C9ADA7" style="stroke-width:14;stroke-linecap:round;stroke-dasharray:2 34"></path><path d="M82 623V82L338 436L600 303V623" fill="none" stroke="#22223B" style="stroke-width:165;stroke-linecap:round;stroke-linejoin:round"></path></svg>
+        <span style="font-size:18px;font-weight:800;color:#4A4E69">M · rampa</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+        <svg viewBox="0 0 550 700" width="137" height="174" style="overflow:visible"><path d="M78 78V622" fill="none" stroke="#22223B" style="stroke-width:150;stroke-linecap:round"></path><circle cx="306" cy="242" r="184" fill="none" stroke="#22223B" style="stroke-width:116"></circle><path d="M428.0 242.0L184.0 242.0M367.0 347.7L245.0 136.3M245.0 347.7L367.0 136.3" fill="none" stroke="#22223B" opacity="0.4" style="stroke-width:30;stroke-linecap:round"></path><circle cx="306" cy="242" r="40" fill="#22223B"></circle></svg>
+        <span style="font-size:18px;font-weight:800;color:#4A4E69">p · roda</span>
+      </div>
+      <span style="position:absolute;left:24px;right:24px;bottom:96px;height:3px;border-radius:2px;background:#DCCFC8"></span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h3 style="margin:0;font-size:32px;font-weight:900;letter-spacing:-0.01em">O M é uma rampa, o p é uma roda</h3>
+      <p style="margin:0;font-size:20px;line-height:1.6;color:#4A4E69;text-wrap:pretty">As duas letras carregam o problema e a resposta que o app existe para mostrar:</p>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:19px;line-height:1.5">
+        <span><b style="font-weight:900">M · Rampa.</b> A perna esquerda tem a altura de uma maiúscula e a direita, a altura do “a”. O topo desce em linha reta como uma rampa de calçada: a passagem que falta na maioria das esquinas.</span>
+        <span><b style="font-weight:900">p · Roda.</b> A barriga do p é o aro, com eixo e raios em tom mais claro. A haste segue para baixo como o apoio da cadeira. Quem usa cadeira de rodas é quem mais sente cada degrau sem rampa.</span>
+      </div>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#4A4E69;text-wrap:pretty">Lido inteiro, o nome faz o percurso: desce a rampa do M, passa pela roda do p e segue pelos degraus dos três i até a pinha, que marca no mapa onde a cidade precisa agir. As duas letras são desenhadas sob medida com o peso e as pontas arredondadas da Nunito Black, para não destoar do resto.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px">
+    <sc-for list="{{ logoDirs }}" as="d" hint-placeholder-count="3">
+      <article id="{{ d.id }}" style="background:#FFFFFF;border-radius:36px;padding:32px;display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="display:flex;gap:14px;align-items:center"><span style="font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:500;background:#22223B;color:#FFFFFF;padding:6px 12px;border-radius:10px">{{ d.id }}</span><span style="font-size:24px;font-weight:800">{{ d.name }}</span></div>
+          <sc-if value="{{ d.active }}" hint-placeholder-val="{{ false }}"><span style="display:flex;gap:6px;align-items:center;font-size:16px;font-weight:700;color:#36704A"><dc-import name="MapiIcon" name-of="check" size="{{ 20 }}" color="#36704A" hint-size="20px,20px"></dc-import>Em uso</span></sc-if>
+        </div>
+        <div style="height:240px;border-radius:28px;background:#E6DCE0;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 168 }}" pin="#4A4E69" cut="#FFFFFF" hint-size="168px,168px"></dc-import></div>
+        <div style="padding:12px 0;display:flex;justify-content:center"><dc-import name="MapiLogo" variant="{{ d.v }}" size="{{ 76 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="260px,76px"></dc-import></div>
+        <div style="display:flex;gap:20px;align-items:flex-end;padding-top:20px;border-top:2px solid #E8DDD7">
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:96px;height:96px;border-radius:26px;background:#C9ADA7;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 72 }}" pin="#22223B" cut="#C9ADA7" hint-size="72px,72px"></dc-import></div><span style="font-size:14px;color:#4A4E69;font-weight:600">app 96</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:48px;height:48px;border-radius:14px;background:#C9ADA7;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 38 }}" pin="#22223B" cut="#C9ADA7" hint-size="38px,38px"></dc-import></div><span style="font-size:14px;color:#4A4E69;font-weight:600">48</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:32px;height:32px;border-radius:9px;background:#C9ADA7;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 26 }}" pin="#22223B" cut="#C9ADA7" hint-size="26px,26px"></dc-import></div><span style="font-size:14px;color:#4A4E69;font-weight:600">32</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 32 }}" pin="#22223B" cut="#FFFFFF" hint-size="32px,32px"></dc-import><span style="font-size:14px;color:#4A4E69;font-weight:600">32 mono</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:16px;height:16px;border-radius:4px;background:#C9ADA7;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ d.v }}" size="{{ 14 }}" pin="#22223B" cut="#C9ADA7" hint-size="14px,14px"></dc-import></div><span style="font-size:14px;color:#4A4E69;font-weight:600">16</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+          <div style="height:88px;border-radius:20px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ d.v }}" size="{{ 34 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="110px,34px"></dc-import></div>
+          <div style="height:88px;border-radius:20px;background:#FFFFFF;border:2px solid #DCCFC8;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ d.v }}" size="{{ 34 }}" pin="#22223B" cut="#F2E9E4" text="#22223B" hint-size="110px,34px"></dc-import></div>
+          <div style="height:88px;border-radius:20px;background:#22223B;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ d.v }}" size="{{ 34 }}" pin="#FFFFFF" cut="#22223B" text="#FFFFFF" hint-size="110px,34px"></dc-import></div>
+          <span style="font-size:14px;color:#4A4E69;font-weight:600;text-align:center">Cor</span><span style="font-size:14px;color:#4A4E69;font-weight:600;text-align:center">Monocromática</span><span style="font-size:14px;color:#4A4E69;font-weight:600;text-align:center">Invertida</span>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;text-wrap:pretty">{{ d.desc }}</p>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section id="cores" data-screen-label="02 Cores" style="display:flex;flex-direction:column;gap:56px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">02</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Cores</h2></div>
+  <sc-for list="{{ paletteGroups }}" as="g" hint-placeholder-count="2">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h3 style="margin:0;font-size:28px;font-weight:800">{{ g.title }}</h3>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px">
+        <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="6">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="height:128px;border-radius:24px;border:2px solid #DCCFC8;background:{{ c.hex }}"></div>
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;font-weight:800">{{ c.name }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:15px">{{ c.hex }}</span><span style="font-size:15px;color:#4A4E69;line-height:1.45">{{ c.use }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <h3 style="margin:0;font-size:28px;font-weight:800">Categorias: cor + forma + ícone</h3>
+    <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;max-width:860px">Cada categoria tem forma própria. Marcadores sempre levam contorno e ícone em Space Indigo, então continuam legíveis em escala de cinza e para pessoas com daltonismo. O tom 500 é preenchimento; o tom 700 é o único que pode virar texto.</p>
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <div style="background:#FFFFFF;border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:18px">
+          <div style="height:112px;border-radius:20px;display:grid;place-items:center;background:{{ c.c100 }}"><dc-import name="CategoryMarker" pal="v2" cat="{{ c.key }}" size="{{ 72 }}" hint-size="72px,72px"></dc-import></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:800;line-height:1.3">{{ c.label }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">{{ c.key }}</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+            <div style="display:flex;gap:10px;align-items:center"><span style="width:28px;height:28px;border-radius:8px;flex:none;background:{{ c.c500 }}"></span><span style="font-family:'IBM Plex Mono',monospace">500 {{ c.c500 }}</span></div>
+            <div style="display:flex;gap:10px;align-items:center"><span style="width:28px;height:28px;border-radius:8px;flex:none;background:{{ c.c700 }}"></span><span style="font-family:'IBM Plex Mono',monospace">700 {{ c.c700 }}</span></div>
+            <div style="display:flex;gap:10px;align-items:center"><span style="width:28px;height:28px;border-radius:8px;flex:none;border:2px solid #DCCFC8;background:{{ c.c100 }}"></span><span style="font-family:'IBM Plex Mono',monospace">100 {{ c.c100 }}</span></div>
+          </div>
+          <span style="font-size:15px;font-weight:700;color:#4A4E69">Forma: {{ c.shape }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <h3 style="margin:0;font-size:28px;font-weight:800">Contraste WCAG 2.2</h3>
+    <p style="margin:0;font-size:18px;line-height:1.6;color:#4A4E69;max-width:900px">Razões calculadas a partir dos valores hex. Texto pequeno precisa de 4,5:1. Texto grande (24 px, ou 19 px em negrito) e ícones precisam de 3:1. Abaixo de 3:1 a cor só pode ser preenchimento, sempre acompanhada de contorno ou ícone Space Indigo.</p>
+    <div style="background:#FFFFFF;border-radius:28px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:240px 1.1fr 1.1fr 110px 150px 150px 1.6fr;gap:16px;padding:18px 28px;background:#22223B;color:#FFFFFF;font-size:16px;font-weight:800">
+        <span>Amostra</span><span>Texto / ícone</span><span>Fundo</span><span>Razão</span><span>Texto ≥ 4,5</span><span>Grande ≥ 3</span><span>Uso permitido</span>
+      </div>
+      <sc-for list="{{ contrastRows }}" as="r" hint-placeholder-count="12">
+        <div style="display:grid;grid-template-columns:240px 1.1fr 1.1fr 110px 150px 150px 1.6fr;gap:16px;padding:12px 28px;align-items:center;font-size:16px;border-top:1px solid #E8DDD7">
+          <div style="height:48px;border-radius:14px;display:flex;align-items:center;padding:0 16px;gap:10px;font-weight:800;font-size:18px;border:1px solid #DCCFC8;background:{{ r.bg }};color:{{ r.fg }}"><span>Aa Calçada</span></div>
+          <span><b style="font-weight:800">{{ r.fgName }}</b> <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">{{ r.fg }}</span></span>
+          <span><b style="font-weight:800">{{ r.bgName }}</b> <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">{{ r.bg }}</span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:17px">{{ r.ratio }}</span>
+          <span style="font-weight:800">{{ r.small }}</span>
+          <span style="font-weight:800">{{ r.large }}</span>
+          <span style="color:#4A4E69">{{ r.use }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="tipo" data-screen-label="03 Tipografia" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">03</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Tipografia</h2></div>
+  <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:48px">
+    <div style="background:#C9ADA7;border-radius:36px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:520px">
+      <span style="font-size:220px;line-height:0.9;font-weight:900;letter-spacing:-0.04em">Aa</span>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:44px;font-weight:900;letter-spacing:-0.02em">Nunito</span>
+        <span style="font-size:20px;line-height:1.55;font-weight:600">Geométrica de terminais arredondados, gratuita (Google Fonts, SIL OFL). Uma família para títulos e corpo. Pesos 400, 700, 800 e 900. Acentos completos do português.</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:16px">ÁÂÃÀÇÉÊÍÓÔÕÚ áâãàçéêíóôõú 0123456789</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:36px;padding:16px 40px">
+      <sc-for list="{{ typeScale }}" as="t" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid #E8DDD7">
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:800">{{ t.name }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">{{ t.spec }}</span></div>
+          <span style="text-wrap:pretty;font-size:{{ t.size }};line-height:{{ t.lh }};font-weight:{{ t.w }};letter-spacing:{{ t.ls }}">{{ t.sample }}</span>
+        </div>
+      </sc-for>
+      <p style="margin:0;padding:20px 0 12px;font-size:16px;line-height:1.6;color:#4A4E69">Corpo mínimo no app: 16 px. Entrelinha de 1,5 a 1,65 no corpo. Linhas de até 70 caracteres. Nunca usar texto todo em maiúsculas em frases.</p>
+    </div>
+  </div>
+</section>
+
+<section id="icones" data-screen-label="04 Ícones" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">04</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Ícones</h2></div>
+  <p style="margin:0;font-size:22px;line-height:1.6;color:#4A4E69;max-width:900px;text-wrap:pretty">Grade de 24 px, traço de 2 px, pontas e cantos arredondados. Ícone sempre acompanhado de rótulo em texto; sozinho, só com nome acessível (aria-label).</p>
+  <div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:16px">
+    <sc-for list="{{ iconList }}" as="i" hint-placeholder-count="16">
+      <div style="background:#FFFFFF;border-radius:24px;padding:24px 12px 18px;display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="width:72px;height:72px;border-radius:20px;background:#E6DCE0;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="{{ i.n }}" size="{{ 32 }}" color="#22223B" hint-size="32px,32px"></dc-import></div>
+        <div style="display:flex;gap:14px;align-items:center"><dc-import name="MapiIcon" name-of="{{ i.n }}" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import><dc-import name="MapiIcon" name-of="{{ i.n }}" size="{{ 16 }}" color="#22223B" hint-size="16px,16px"></dc-import></div>
+        <span style="font-size:15px;font-weight:700;text-align:center;line-height:1.35">{{ i.l }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="componentes" data-screen-label="05 Componentes" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">05</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Componentes</h2></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+    <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:28px">
+      <h3 style="margin:0;font-size:28px;font-weight:800">Botões</h3>
+      <div style="display:grid;grid-template-columns:120px repeat(3,1fr);gap:16px 16px;align-items:center;font-size:15px;font-weight:700;color:#4A4E69">
+        <span></span><span>Padrão</span><span>Foco (teclado)</span><span>Desabilitado</span>
+        <span>Primário</span>
+        <button style="height:56px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:800 18px Nunito;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer" style-hover="background:#3A3A5C"><dc-import name="MapiIcon" name-of="enviar" size="{{ 22 }}" color="#F2E9E4" hint-size="22px,22px"></dc-import>Enviar</button>
+        <button style="height:56px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:800 18px Nunito;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #22223B"><dc-import name="MapiIcon" name-of="enviar" size="{{ 22 }}" color="#F2E9E4" hint-size="22px,22px"></dc-import>Enviar</button>
+        <button style="height:56px;border-radius:20px;border:2px dashed #A99C98;background:#E8DDD7;color:#4A4E69;font:800 18px Nunito;display:flex;align-items:center;justify-content:center;gap:10px">Enviar</button>
+        <span>Secundário</span>
+        <button style="height:56px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 18px Nunito;cursor:pointer" style-hover="background:#E6DCE0">Corrigir</button>
+        <button style="height:56px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 18px Nunito;box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #22223B">Corrigir</button>
+        <button style="height:56px;border-radius:20px;border:2px dashed #A99C98;background:#FFFFFF;color:#4A4E69;font:800 18px Nunito">Corrigir</button>
+        <span>Texto</span>
+        <button style="height:48px;border-radius:16px;border:none;background:transparent;color:#4A4E69;font:800 18px Nunito;text-decoration:underline;text-underline-offset:4px;cursor:pointer">Alterar local</button>
+        <button style="height:48px;border-radius:16px;border:none;background:transparent;color:#4A4E69;font:800 18px Nunito;text-decoration:underline;text-underline-offset:4px;box-shadow:0 0 0 3px #22223B">Alterar local</button>
+        <button style="height:48px;border-radius:16px;border:none;background:transparent;color:#5E5A6E;font:800 18px Nunito">Alterar local</button>
+        <span>Perigo</span>
+        <button style="height:56px;border-radius:20px;border:none;background:#A0402F;color:#FFFFFF;font:800 18px Nunito;cursor:pointer">Excluir foto</button>
+        <button style="height:56px;border-radius:20px;border:none;background:#A0402F;color:#FFFFFF;font:800 18px Nunito;box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #22223B">Excluir foto</button>
+        <button style="height:56px;border-radius:20px;border:2px dashed #A99C98;background:#E8DDD7;color:#4A4E69;font:800 18px Nunito">Excluir foto</button>
+      </div>
+      <div style="display:flex;gap:24px;align-items:center;padding-top:8px;border-top:2px solid #E8DDD7">
+        <button aria-label="Voltar" style="width:56px;height:56px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="voltar" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import></button>
+        <button style="height:72px;padding:0 32px 0 24px;border-radius:36px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito;display:flex;align-items:center;gap:12px;box-shadow:0 8px 24px rgba(20,33,61,.18)"><dc-import name="MapiIcon" name-of="camera" size="{{ 28 }}" color="#F2E9E4" hint-size="28px,28px"></dc-import>Registrar</button>
+        <span style="font-size:16px;line-height:1.5;color:#4A4E69">Alvo mínimo 48 × 48 px. Ações principais com 56 px ou mais. Foco: anel duplo branco + Space Indigo de 3 px.</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:24px">
+        <h3 style="margin:0;font-size:28px;font-weight:800">Tags de categoria e selo da IA</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+            <span style="height:48px;padding:0 18px 0 10px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:800;color:#22223B;background:{{ c.c100 }}"><dc-import name="CategoryMarker" pal="v2" cat="{{ c.key }}" size="{{ 26 }}" hint-size="26px,26px"></dc-import>{{ c.label }}</span>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <span style="height:44px;padding:0 16px 0 12px;border-radius:14px;background:#F7EAD2;border:2px solid #7A5410;color:#634410;display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:800"><dc-import name="MapiIcon" name-of="revisar" size="{{ 22 }}" color="#634410" hint-size="22px,22px"></dc-import>IA tem dúvida – revisar</span>
+          <span style="height:44px;padding:0 16px 0 12px;border-radius:14px;background:#DDEBE0;color:#2F5A3C;display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:800"><dc-import name="MapiIcon" name-of="check" size="{{ 22 }}" color="#2F5A3C" hint-size="22px,22px"></dc-import>Confirmada por 4 pessoas</span>
+          <span style="height:44px;padding:0 16px 0 12px;border-radius:14px;background:#F6E2DD;color:#8E3527;display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="{{ 22 }}" color="#8E3527" hint-size="22px,22px"></dc-import>Foto sem calçada visível</span>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:20px">
+        <h3 style="margin:0;font-size:28px;font-weight:800">Seletor de gravidade</h3>
+        <div role="radiogroup" aria-label="Gravidade" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+          <sc-for list="{{ severity }}" as="s" hint-placeholder-count="4">
+            <button role="radio" aria-checked="{{ s.sel }}" style="min-height:104px;border-radius:20px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-family:Nunito;color:#22223B;cursor:pointer;border:{{ s.border }};background:{{ s.bg }}"><dc-import name="MapiIcon" name-of="{{ s.icon }}" size="{{ 28 }}" color="#22223B" hint-size="28px,28px"></dc-import><span style="font-size:22px;font-weight:900;line-height:1">{{ s.n }}</span><span style="font-size:15px;font-weight:700;line-height:1.2;text-align:center">{{ s.label }}</span></button>
+          </sc-for>
+        </div>
+        <span style="font-size:16px;color:#4A4E69;line-height:1.5">Número, barras e rótulo informam o nível juntos; o selecionado ganha borda de 3 px.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+    <div style="background:#FFFFFF;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:24px">
+      <h3 style="margin:0;font-size:28px;font-weight:800">Cartão de ocorrência</h3>
+      <article style="display:flex;gap:18px;padding:16px;border-radius:28px;background:#F2E9E4;border:2px solid #DCCFC8">
+        <div style="width:128px;height:128px;flex:none;border-radius:20px;background:repeating-linear-gradient(135deg,#E3D6CF 0 10px,#E8DDD7 10px 20px);display:flex;align-items:flex-end;padding:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4E69">foto</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+          <span style="height:36px;align-self:flex-start;padding:0 14px 0 6px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:800;background:#F4E0E5"><dc-import name="CategoryMarker" pal="v2" cat="calcada_quebrada" size="{{ 22 }}" hint-size="22px,22px"></dc-import>Calçada quebrada</span>
+          <span style="font-size:21px;font-weight:800;line-height:1.3">Rua da Consolação, 312</span>
+          <span style="font-size:16px;color:#4A4E69">Consolação · há 2 dias · 120 m</span>
+          <div style="display:flex;gap:8px;align-items:center;font-size:16px;font-weight:700"><dc-import name="MapiIcon" name-of="g2" size="{{ 22 }}" color="#22223B" hint-size="22px,22px"></dc-import>Gravidade 2 · Dificulta</div>
+        </div>
+      </article>
+      <article style="display:flex;gap:18px;padding:16px;border-radius:28px;background:#F2E9E4;border:2px solid #DCCFC8">
+        <div style="width:128px;height:128px;flex:none;border-radius:20px;background:repeating-linear-gradient(135deg,#E3D6CF 0 10px,#E8DDD7 10px 20px);display:flex;align-items:flex-end;padding:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4E69">foto</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+          <span style="height:36px;align-self:flex-start;padding:0 14px 0 6px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:800;background:#F6E4D6"><dc-import name="CategoryMarker" pal="v2" cat="obstaculo_no_caminho" size="{{ 22 }}" hint-size="22px,22px"></dc-import>Obstáculo no caminho</span>
+          <span style="font-size:21px;font-weight:800;line-height:1.3">Rua Augusta, 1.200</span>
+          <span style="height:36px;align-self:flex-start;padding:0 12px 0 8px;border-radius:12px;background:#F7EAD2;border:2px solid #7A5410;color:#634410;display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:800"><dc-import name="MapiIcon" name-of="revisar" size="{{ 18 }}" color="#634410" hint-size="18px,18px"></dc-import>IA tem dúvida – revisar</span>
+          <div style="display:flex;gap:8px;align-items:center;font-size:16px;font-weight:700"><dc-import name="MapiIcon" name-of="g3" size="{{ 22 }}" color="#22223B" hint-size="22px,22px"></dc-import>Gravidade 3 · Impede</div>
+        </div>
+      </article>
+    </div>
+
+    <div style="background:#22223B;border-radius:36px;padding:40px;display:flex;flex-direction:column;gap:24px;color:#F2E9E4">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0;font-size:28px;font-weight:800">Modo escuro</h3><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 34 }}" pin="#C9ADA7" cut="#22223B" text="#F2E9E4" hint-size="110px,34px"></dc-import></div>
+      <article style="display:flex;gap:18px;padding:16px;border-radius:28px;background:#2E2E4C;border:2px solid #46465F">
+        <div style="width:112px;height:112px;flex:none;border-radius:20px;background:repeating-linear-gradient(135deg,#34344F 0 10px,#46465F 10px 20px);display:flex;align-items:flex-end;padding:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9BFC5">foto</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="height:36px;align-self:flex-start;padding:0 14px 0 6px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:800;background:#3B3456;color:#F2E9E4"><dc-import name="CategoryMarker" pal="v2" cat="sem_rampa_ou_degrau" size="{{ 22 }}" hint-size="22px,22px"></dc-import>Sem rampa ou degrau</span>
+          <span style="font-size:21px;font-weight:800">Av. São João, 455</span>
+          <span style="height:36px;align-self:flex-start;padding:0 12px 0 8px;border-radius:12px;background:#3A2A08;border:2px solid #FFC966;color:#FFD88A;display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:800"><dc-import name="MapiIcon" name-of="revisar" size="{{ 18 }}" color="#FFD88A" hint-size="18px,18px"></dc-import>IA tem dúvida – revisar</span>
+        </div>
+      </article>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <button style="height:56px;border-radius:20px;border:none;background:#C9ADA7;color:#22223B;font:800 18px Nunito">Confirmar</button>
+        <button style="height:56px;border-radius:20px;border:2px solid #F2E9E4;background:transparent;color:#F2E9E4;font:800 18px Nunito;box-shadow:0 0 0 3px #22223B,0 0 0 6px #FFC966">Corrigir (foco)</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;font-size:14px;font-family:'IBM Plex Mono',monospace;color:#C9BFC5">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="height:40px;border-radius:12px;background:#22223B;border:2px solid #46465F"></span>Fundo #22223B</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="height:40px;border-radius:12px;background:#2E2E4C"></span>Superfície #2E2E4C</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="height:40px;border-radius:12px;background:#C9ADA7"></span>Primária #C9ADA7</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="height:40px;border-radius:12px;background:#FFC966"></span>Foco #FFC966</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="telas" data-screen-label="06 Telas mobile" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">06</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Telas mobile</h2></div>
+  <div style="display:flex;flex-wrap:wrap;gap:56px 39px"><div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:22px;font-weight:800">0 · Entrar e criar perfil</span>
+      <div data-screen-label="Tela login" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;display:flex;flex-direction:column">
+        <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+        <div style="padding:4px 24px 8px;display:flex;flex-direction:column;gap:14px;flex:1;min-height:0;overflow:auto">
+          <dc-import name="MapiLogo" size="{{ 30 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="120px,44px"></dc-import>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:28px;line-height:1.2;font-weight:900;letter-spacing:-0.01em">Boas-vindas!</span><span style="font-size:16px;line-height:1.5;color:#4A4E69">Conte um pouco sobre você.</span></div>
+          <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;font-weight:800">Como podemos te chamar?</span>
+            <input type="text" placeholder="Seu nome" aria-label="Seu nome" style="height:56px;border-radius:18px;border:2px solid #6E6A7E;background:#FFFFFF;padding:0 16px;font:600 17px Nunito;color:#22223B;outline:none" style-focus="border-color:#22223B;box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #22223B"></input>
+          </label>
+          <fieldset style="border:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px">
+            <legend style="padding:0 0 8px;font-size:16px;font-weight:800">Você se identifica com algum destes? <span style="font-weight:600;color:#4A4E69">Marque quantos quiser</span></legend>
+            <sc-for list="{{ perfis }}" as="p" hint-placeholder-count="7">
+              <button role="checkbox" aria-checked="{{ p.sel }}" onClick="{{ p.toggle }}" style="min-height:48px;border-radius:16px;padding:8px 14px 8px 10px;display:flex;align-items:center;gap:12px;text-align:left;font:700 16px Nunito;line-height:1.3;color:#22223B;cursor:pointer;border:{{ p.border }};background:{{ p.bg }}" style-focus="outline:none;box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #22223B"><span style="width:26px;height:26px;flex:none;border-radius:8px;display:grid;place-items:center;border:2px solid #22223B;background:{{ p.box }}"><sc-if value="{{ p.sel }}" hint-placeholder-val="{{ false }}"><dc-import name="MapiIcon" name-of="check" size="{{ 18 }}" color="#F2E9E4" hint-size="18px,18px"></dc-import></sc-if></span>{{ p.label }}</button>
+            </sc-for>
+          </fieldset>
+        </div>
+        <div style="flex:none;padding:10px 24px 18px;display:flex;flex-direction:column;gap:2px;border-top:1px solid #DCCFC8">
+          <button style="width:100%;height:60px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 19px Nunito;cursor:pointer">Começar</button>
+          <button style="height:48px;border:none;background:transparent;color:#4A4E69;font:800 16px Nunito;text-decoration:underline;text-underline-offset:3px">Já tenho conta</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:22px;font-weight:800">a · Tirar foto e enviar</span>
+      <div data-screen-label="Tela a" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;display:flex;flex-direction:column">
+        <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+        <div style="display:flex;align-items:center;gap:12px;padding:4px 20px 12px">
+          <button aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="voltar" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import></button>
+          <div style="display:flex;flex-direction:column"><span style="font-size:22px;font-weight:900">Nova ocorrência</span><span style="font-size:16px;color:#4A4E69">Passo 1 de 2</span></div>
+        </div>
+        <div style="padding:0 20px;display:flex;flex-direction:column;gap:14px">
+          <div style="height:250px;border-radius:28px;background:repeating-linear-gradient(135deg,#E3D6CF 0 12px,#E8DDD7 12px 24px);position:relative;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">foto recém-tirada da calçada</span>
+            <button style="position:absolute;left:12px;bottom:12px;height:48px;padding:0 16px;border-radius:16px;border:none;background:#FFFFFF;color:#22223B;font:800 16px Nunito;display:flex;align-items:center;gap:8px"><dc-import name="MapiIcon" name-of="camera" size="{{ 20 }}" color="#22223B" hint-size="20px,20px"></dc-import>Refazer</button>
+            <button style="position:absolute;right:12px;bottom:12px;height:48px;padding:0 16px;border-radius:16px;border:none;background:#FFFFFF;color:#22223B;font:800 16px Nunito;display:flex;align-items:center;gap:8px"><dc-import name="MapiIcon" name-of="mais" size="{{ 20 }}" color="#22223B" hint-size="20px,20px"></dc-import>Outra foto</button>
+          </div>
+          <div style="background:#FFFFFF;border-radius:20px;padding:14px 12px 14px 14px;display:flex;align-items:center;gap:12px">
+            <span style="width:44px;height:44px;flex:none;border-radius:14px;background:#E6DCE0;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="local" size="{{ 24 }}" color="#4A4E69" hint-size="24px,24px"></dc-import></span>
+            <div style="display:flex;flex-direction:column;flex:1;min-width:0"><span style="font-size:18px;font-weight:800">Rua Augusta, 1.200</span><span style="font-size:16px;color:#4A4E69">Consolação · precisão 8 m</span></div>
+            <button style="height:48px;padding:0 8px;border:none;background:transparent;color:#4A4E69;font:800 16px Nunito;text-decoration:underline;text-underline-offset:3px">Alterar</button>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;font-weight:800">O que acontece aqui? <span style="font-weight:600;color:#4A4E69">(opcional)</span></span>
+            <div style="height:88px;border-radius:18px;border:2px solid #6E6A7E;background:#FFFFFF;padding:12px 14px;font-size:16px;line-height:1.5;color:#4A4E69">Ex.: degrau alto na esquina, sem rampa</div>
+          </label>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.5"><dc-import name="MapiIcon" name-of="ia" size="{{ 24 }}" color="#4A4E69" hint-size="24px,24px"></dc-import><span>A IA sugere a categoria em segundos. Você confirma antes de publicar.</span></div>
+        </div>
+        <div style="margin-top:auto;padding:16px 20px 28px">
+          <button style="width:100%;height:64px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito;display:flex;align-items:center;justify-content:center;gap:12px"><dc-import name="MapiIcon" name-of="enviar" size="{{ 26 }}" color="#F2E9E4" hint-size="26px,26px"></dc-import>Enviar foto</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:22px;font-weight:800">b · Mapa colaborativo</span>
+      <div data-screen-label="Tela b" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#E7DDD6;overflow:hidden;position:relative">
+        <div style="position:absolute;inset:0">
+          <div style="position:absolute;left:-40px;top:300px;width:520px;height:22px;background:#FFFFFF;transform:rotate(-14deg)"></div>
+          <div style="position:absolute;left:-40px;top:520px;width:520px;height:30px;background:#FFFFFF;transform:rotate(8deg)"></div>
+          <div style="position:absolute;left:120px;top:-20px;width:22px;height:900px;background:#FFFFFF;transform:rotate(12deg)"></div>
+          <div style="position:absolute;left:280px;top:-20px;width:18px;height:900px;background:#FFFFFF;transform:rotate(-6deg)"></div>
+          <div style="position:absolute;left:-40px;top:200px;width:520px;height:14px;background:#FFFFFF;transform:rotate(4deg)"></div>
+          <div style="position:absolute;left:170px;top:360px;width:96px;height:110px;border-radius:24px;background:#DCE3D4"></div>
+          <span style="position:absolute;left:20px;top:330px;font-size:14px;font-weight:700;color:#4A4E69;transform:rotate(-14deg)">Rua da Consolação</span>
+          <span style="position:absolute;left:176px;top:410px;font-size:14px;font-weight:700;color:#3C5A40">Praça Roosevelt</span>
+          <span style="position:absolute;left:24px;top:468px;font-size:14px;font-weight:700;color:#4A4E69;transform:rotate(8deg)">Rua Augusta</span>
+          <sc-for list="{{ mapMarkers }}" as="m" hint-placeholder-count="9">
+            <div style="position:absolute;transform:translate(-50%,-50%);left:{{ m.x }};top:{{ m.y }}"><dc-import name="CategoryMarker" pal="v2" cat="{{ m.cat }}" size="{{ 40 }}" hint-size="40px,40px"></dc-import></div>
+          </sc-for>
+          <div style="position:absolute;left:228px;top:300px;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.85);border:3px solid #22223B;display:grid;place-items:center"><dc-import name="CategoryMarker" pal="v2" cat="calcada_quebrada" size="{{ 48 }}" hint-size="48px,48px"></dc-import></div>
+        </div>
+        <div style="position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:10px;padding:0 16px">
+          <div style="height:44px;display:flex;align-items:center;padding:0 12px;font-size:16px;font-weight:800">9:41</div>
+          <div style="height:56px;border-radius:28px;background:#FFFFFF;display:flex;align-items:center;gap:12px;padding:0 4px 0 18px;box-shadow:0 6px 20px rgba(20,33,61,.12)"><dc-import name="MapiIcon" name-of="busca" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import><span style="flex:1;font-size:17px;color:#4A4E69">Buscar rua ou bairro</span><button aria-label="Filtros" style="width:48px;height:48px;border-radius:24px;border:none;background:#E6DCE0;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="filtro" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import></button></div>
+          <div style="display:flex;gap:8px;overflow:hidden;margin-right:-16px">
+            <span style="height:48px;flex:none;padding:0 18px;border-radius:999px;background:#22223B;color:#FFFFFF;display:inline-flex;align-items:center;font-size:16px;font-weight:800">Todas</span>
+            <sc-for list="{{ catsShort }}" as="c" hint-placeholder-count="4">
+              <span style="height:48px;flex:none;padding:0 16px 0 8px;border-radius:999px;background:#FFFFFF;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:800"><dc-import name="CategoryMarker" pal="v2" cat="{{ c.key }}" size="{{ 24 }}" hint-size="24px,24px"></dc-import>{{ c.short }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <button style="position:absolute;right:16px;bottom:316px;height:64px;padding:0 24px 0 18px;border-radius:32px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(20,33,61,.2)"><dc-import name="MapiIcon" name-of="camera" size="{{ 26 }}" color="#F2E9E4" hint-size="26px,26px"></dc-import>Registrar</button>
+        <div style="position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-radius:32px 32px 0 0;box-shadow:0 -6px 24px rgba(20,33,61,.1);display:flex;flex-direction:column">
+          <span style="width:44px;height:5px;border-radius:3px;background:#B9ABA4;align-self:center;margin:10px 0 6px"></span>
+          <div style="padding:6px 20px 14px;display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:16px;font-weight:700;color:#4A4E69">23 ocorrências nesta área</span>
+            <div style="display:flex;gap:14px;align-items:center">
+              <dc-import name="CategoryMarker" pal="v2" cat="calcada_quebrada" size="{{ 40 }}" hint-size="40px,40px"></dc-import>
+              <div style="display:flex;flex-direction:column;flex:1"><span style="font-size:19px;font-weight:800">Calçada quebrada</span><span style="font-size:16px;color:#4A4E69">Rua da Consolação, 312 · 120 m</span></div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:800"><dc-import name="MapiIcon" name-of="g2" size="{{ 22 }}" color="#22223B" hint-size="22px,22px"></dc-import>2</div>
+            </div>
+            <button style="height:52px;border-radius:18px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 17px Nunito">Ver detalhes</button>
+          </div>
+          <div style="height:80px;border-top:1px solid #E8DDD7;display:grid;grid-template-columns:repeat(3,1fr);padding:6px 12px 14px">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:15px;font-weight:800"><span style="width:60px;height:32px;border-radius:16px;background:#E6DCE0;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="mapa" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import></span>Mapa</div>
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:15px;font-weight:700;color:#4A4E69"><span style="height:32px;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="lista" size="{{ 24 }}" color="#4A4E69" hint-size="24px,24px"></dc-import></span>Minhas fotos</div>
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:15px;font-weight:700;color:#4A4E69"><span style="height:32px;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="usuario" size="{{ 24 }}" color="#4A4E69" hint-size="24px,24px"></dc-import></span>Perfil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:22px;font-weight:800">c · Detalhe com classificação da IA</span>
+      <div data-screen-label="Tela c" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;display:flex;flex-direction:column">
+        <div style="height:250px;flex:none;position:relative;background:repeating-linear-gradient(135deg,#E3D6CF 0 12px,#E8DDD7 12px 24px);display:flex;align-items:center;justify-content:center">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#4A4E69">foto enviada da ocorrência</span>
+          <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+          <button aria-label="Voltar" style="position:absolute;left:16px;top:52px;width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center"><dc-import name="MapiIcon" name-of="voltar" size="{{ 24 }}" color="#22223B" hint-size="24px,24px"></dc-import></button>
+          <span style="position:absolute;right:16px;bottom:14px;padding:6px 12px;border-radius:12px;background:#22223B;color:#FFFFFF;font-size:15px;font-weight:800">1 de 2</span>
+        </div>
+        <div style="padding:18px 20px 0;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-size:26px;font-weight:900;line-height:1.2">Rua da Consolação, 312</span>
+            <span style="font-size:16px;color:#4A4E69">Consolação · enviada há 2 dias por Marta R.</span>
+          </div>
+          <div style="background:#FFFFFF;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+              <span style="display:flex;gap:8px;align-items:center;font-size:17px;font-weight:800"><dc-import name="MapiIcon" name-of="ia" size="{{ 22 }}" color="#4A4E69" hint-size="22px,22px"></dc-import>Classificação da IA</span>
+              <span style="height:36px;padding:0 10px 0 8px;border-radius:12px;background:#F7EAD2;border:2px solid #7A5410;color:#634410;display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:800"><dc-import name="MapiIcon" name-of="revisar" size="{{ 18 }}" color="#634410" hint-size="18px,18px"></dc-import>IA tem dúvida – revisar</span>
+            </div>
+            <sc-for list="{{ aiScores }}" as="a" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:800"><span style="display:flex;gap:8px;align-items:center"><dc-import name="CategoryMarker" pal="v2" cat="{{ a.key }}" size="{{ 22 }}" hint-size="22px,22px"></dc-import>{{ a.label }}</span><span style="font-family:'IBM Plex Mono',monospace">{{ a.pct }}</span></div>
+                <div style="height:10px;border-radius:5px;background:#E8DDD7;overflow:hidden"><div style="height:100%;border-radius:5px;background:#22223B;width:{{ a.pct }}"></div></div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:16px;font-weight:800">Gravidade sugerida</span>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+              <sc-for list="{{ severity }}" as="s" hint-placeholder-count="4">
+                <button style="height:64px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-family:Nunito;color:#22223B;border:{{ s.border }};background:{{ s.bg }}"><span style="font-size:20px;font-weight:900;line-height:1">{{ s.n }}</span><span style="font-size:14px;font-weight:700">{{ s.label }}</span></button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding:14px 20px 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button style="height:60px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 18px Nunito">Corrigir</button>
+          <button style="height:60px;border-radius:20px;border:none;background:#22223B;color:#F2E9E4;font:900 18px Nunito;display:flex;align-items:center;justify-content:center;gap:8px"><dc-import name="MapiIcon" name-of="check" size="{{ 22 }}" color="#F2E9E4" hint-size="22px,22px"></dc-import>Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="painel" data-screen-label="07 Painel" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">07</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Painel da prefeitura</h2></div>
+  <div data-screen-label="Painel desktop" style="width:1248px;height:820px;border-radius:28px;overflow:hidden;background:#F2E9E4;border:2px solid #DCCFC8;display:grid;grid-template-columns:232px 1fr;grid-template-rows:minmax(0,1fr)">
+    <aside style="background:#FFFFFF;border-right:2px solid #E8DDD7;padding:24px 16px;display:flex;flex-direction:column;gap:24px;min-height:0">
+      <div style="padding:0 12px"><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 40 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="130px,40px"></dc-import></div>
+      <nav style="display:flex;flex-direction:column;gap:4px;font-size:17px;font-weight:700">
+        <span style="height:52px;border-radius:16px;background:#E6DCE0;display:flex;align-items:center;gap:12px;padding:0 14px;font-weight:800"><dc-import name="MapiIcon" name-of="grafico" size="{{ 22 }}" color="#22223B" hint-size="22px,22px"></dc-import>Prioridades</span>
+        <span style="height:52px;border-radius:16px;display:flex;align-items:center;gap:12px;padding:0 14px;color:#4A4E69"><dc-import name="MapiIcon" name-of="mapa" size="{{ 22 }}" color="#4A4E69" hint-size="22px,22px"></dc-import>Mapa</span>
+        <span style="height:52px;border-radius:16px;display:flex;align-items:center;gap:12px;padding:0 14px;color:#4A4E69"><dc-import name="MapiIcon" name-of="lista" size="{{ 22 }}" color="#4A4E69" hint-size="22px,22px"></dc-import>Ocorrências</span>
+        <span style="height:52px;border-radius:16px;display:flex;align-items:center;gap:12px;padding:0 14px;color:#4A4E69"><dc-import name="MapiIcon" name-of="revisar" size="{{ 22 }}" color="#4A4E69" hint-size="22px,22px"></dc-import>Revisão da IA <span style="margin-left:auto;padding:2px 8px;border-radius:8px;background:#F7EAD2;color:#634410;font-size:14px;font-weight:800">47</span></span>
+      </nav>
+      <div style="margin-top:auto;padding:14px;border-radius:16px;background:#F2E9E4;font-size:15px;line-height:1.45"><b style="font-weight:800">Subprefeitura Sé</b><br><span style="color:#4A4E69">São Paulo · SP</span></div>
+    </aside>
+    <main style="padding:24px 32px;display:flex;flex-direction:column;gap:18px;min-width:0;min-height:0;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="display:flex;flex-direction:column;flex:1"><span style="font-size:30px;font-weight:900;letter-spacing:-0.01em">Onde agir primeiro</span><span style="font-size:16px;color:#4A4E69">Prioridade = gravidade × fluxo de pedestres × proximidade de saúde e escolas</span></div>
+        <span style="height:52px;padding:0 16px;border-radius:16px;border:2px solid #6E6A7E;background:#FFFFFF;display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700">Últimos 90 dias <span style="transform:rotate(-90deg);display:flex"><dc-import name="MapiIcon" name-of="voltar" size="{{ 18 }}" color="#22223B" hint-size="18px,18px"></dc-import></span></span>
+        <button style="height:52px;padding:0 20px;border-radius:16px;border:none;background:#22223B;color:#F2E9E4;font:800 17px Nunito;display:flex;align-items:center;gap:10px;cursor:pointer" style-hover="background:#3A3A5C"><dc-import name="MapiIcon" name-of="download" size="{{ 22 }}" color="#F2E9E4" hint-size="22px,22px"></dc-import>Exportar CSV</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+        <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+          <div style="background:#FFFFFF;border-radius:20px;padding:16px 18px;display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:700;color:#4A4E69">{{ k.label }}</span><span style="font-size:32px;font-weight:900;letter-spacing:-0.01em">{{ k.value }}</span><span style="font-size:14px;color:#4A4E69">{{ k.note }}</span></div>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:16px;flex:1;min-height:0">
+        <div style="background:#FFFFFF;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:18px;font-weight:800">Mapa de calor</span><span style="font-size:14px;color:#4A4E69">números = posição no ranking</span></div>
+          <div style="flex:1;border-radius:18px;background:#E7DDD6;position:relative;overflow:hidden">
+            <div style="position:absolute;left:-20px;top:120px;width:560px;height:16px;background:#FFFFFF;transform:rotate(-10deg)"></div>
+            <div style="position:absolute;left:-20px;top:300px;width:560px;height:20px;background:#FFFFFF;transform:rotate(6deg)"></div>
+            <div style="position:absolute;left:150px;top:-20px;width:16px;height:520px;background:#FFFFFF;transform:rotate(10deg)"></div>
+            <div style="position:absolute;left:330px;top:-20px;width:14px;height:520px;background:#FFFFFF;transform:rotate(-8deg)"></div>
+            <div style="position:absolute;left:230px;top:180px;width:80px;height:70px;border-radius:18px;background:#DCE3D4"></div>
+            <sc-for list="{{ heat }}" as="h" hint-placeholder-count="6">
+              <div style="position:absolute;transform:translate(-50%,-50%);border-radius:50%;left:{{ h.x }};top:{{ h.y }};width:{{ h.s }};height:{{ h.s }};background:{{ h.g }}"></div>
+            </sc-for>
+            <sc-for list="{{ ranking }}" as="r" hint-placeholder-count="6">
+              <span style="position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#22223B;color:#FFFFFF;border:2px solid #FFFFFF;display:grid;place-items:center;font-size:15px;font-weight:900;left:{{ r.x }};top:{{ r.y }}">{{ r.rank }}</span>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:#4A4E69"><span>Menos</span><span style="flex:1;height:12px;border-radius:6px;background:linear-gradient(90deg,#E6DCE0,#C9ADA7,#8E7CC3,#94435C)"></span><span>Mais ocorrências graves</span></div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:24px;padding:16px 4px 8px;display:flex;flex-direction:column;min-width:0">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0 14px 10px"><span style="font-size:18px;font-weight:800">Trechos por prioridade</span><span style="font-size:14px;color:#4A4E69">8 de 64</span></div>
+          <div style="display:grid;grid-template-columns:36px 1fr 54px 64px 110px;gap:10px;padding:8px 14px;font-size:13px;font-weight:800;color:#4A4E69;border-bottom:2px solid #E8DDD7"><span>#</span><span>Trecho</span><span>Ocorr.</span><span>Grav.</span><span>Prioridade</span></div>
+          <sc-for list="{{ ranking }}" as="r" hint-placeholder-count="8">
+            <div style="display:grid;grid-template-columns:36px 1fr 54px 64px 110px;gap:10px;padding:6px 14px;align-items:center;font-size:15px;border-bottom:1px solid #EDE3DD">
+              <span style="width:28px;height:28px;border-radius:50%;background:#22223B;color:#FFFFFF;display:grid;place-items:center;font-size:14px;font-weight:900">{{ r.rank }}</span>
+              <div style="display:flex;gap:8px;align-items:center;min-width:0"><dc-import name="CategoryMarker" pal="v2" cat="{{ r.cat }}" size="{{ 22 }}" hint-size="22px,22px"></dc-import><div style="display:flex;flex-direction:column;min-width:0"><span style="font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.street }}</span><span style="font-size:13px;color:#4A4E69">{{ r.bairro }}</span></div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:14px">{{ r.n }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:14px">{{ r.g }}</span>
+              <div style="display:flex;align-items:center;gap:6px"><div style="flex:1;height:8px;border-radius:4px;background:#E8DDD7;overflow:hidden"><div style="height:100%;background:#4A4E69;border-radius:4px;width:{{ r.pw }}"></div></div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500">{{ r.score }}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section id="guia" data-screen-label="08 Guia de marca" style="display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;gap:28px;align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#4A4E69">08</span><h2 style="margin:0;font-size:72px;line-height:1;font-weight:900;letter-spacing:-0.03em">Mini guia de marca</h2></div>
+  <div data-screen-label="Guia 1 página" style="width:794px;height:1123px;background:#FFFFFF;border-radius:8px;box-shadow:0 10px 40px rgba(20,33,61,.12);padding:48px;display:flex;flex-direction:column;gap:22px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:20px;border-bottom:2px solid #22223B">
+      <dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 60 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="200px,60px"></dc-import>
+      <span style="font-size:16px;font-weight:800">Guia de marca · 1 página · v1.0</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:20px;font-weight:900">1. Uso do logo</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+          <div style="height:72px;border-radius:14px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 26 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="86px,26px"></dc-import></div>
+          <div style="height:72px;border-radius:14px;border:1px solid #DCCFC8;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 26 }}" pin="#22223B" cut="#F2E9E4" text="#22223B" hint-size="86px,26px"></dc-import></div>
+          <div style="height:72px;border-radius:14px;background:#22223B;display:grid;place-items:center"><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 26 }}" pin="#FFFFFF" cut="#22223B" text="#FFFFFF" hint-size="86px,26px"></dc-import></div>
+        </div>
+        <span style="font-size:14px;line-height:1.5;color:#4A4E69">Cor sobre Seashell ou branco. Monocromática para impressão em uma cor. Invertida sobre Space Indigo. Escrita no texto corrido: Mapiii.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:20px;font-weight:900">2. Área de proteção</span>
+        <div style="height:104px;border-radius:14px;background:#F2E9E4;display:grid;place-items:center">
+          <div style="padding:14px;border:2px dashed #4A4E69;position:relative"><dc-import name="MapiLogo" variant="{{ logoVariant }}" size="{{ 44 }}" pin="#4A4E69" cut="#F2E9E4" text="#22223B" hint-size="146px,44px"></dc-import><span style="position:absolute;left:3px;top:0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4E69">x</span><span style="position:absolute;right:4px;bottom:0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4E69">x</span></div>
+        </div>
+        <span style="font-size:14px;line-height:1.5;color:#4A4E69">x = altura do pino. Nada entra nessa margem. Mínimo: símbolo com 24 px (tela) ou 8 mm (impresso); logo horizontal com 80 px de largura.</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:20px;font-weight:900">3. O que não fazer</span>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:80px;border-radius:14px;background:#F2E9E4;display:grid;place-items:center;overflow:hidden"><div style="transform:scaleX(1.5)"><dc-import name="MapiMark" variant="{{ logoVariant }}" size="{{ 52 }}" pin="#4A4E69" cut="#FFFFFF" hint-size="52px,52px"></dc-import></div></div><span style="display:flex;gap:6px;align-items:center;font-size:14px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="{{ 16 }}" color="#A0402F" hint-size="16px,16px"></dc-import>Não distorça</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:80px;border-radius:14px;background:#F2E9E4;display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ logoVariant }}" size="{{ 52 }}" pin="#D9874E" cut="#FFFFFF" hint-size="52px,52px"></dc-import></div><span style="display:flex;gap:6px;align-items:center;font-size:14px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="{{ 16 }}" color="#A0402F" hint-size="16px,16px"></dc-import>Não troque a cor</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:80px;border-radius:14px;background:#F2E9E4;display:grid;place-items:center"><div style="transform:rotate(-25deg)"><dc-import name="MapiMark" variant="{{ logoVariant }}" size="{{ 52 }}" pin="#4A4E69" cut="#FFFFFF" hint-size="52px,52px"></dc-import></div></div><span style="display:flex;gap:6px;align-items:center;font-size:14px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="{{ 16 }}" color="#A0402F" hint-size="16px,16px"></dc-import>Não gire</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:80px;border-radius:14px;background:repeating-linear-gradient(135deg,#C9ADA7 0 8px,#D9874E 8px 16px);display:grid;place-items:center"><dc-import name="MapiMark" variant="{{ logoVariant }}" size="{{ 52 }}" pin="#4A4E69" cut="#FFFFFF" hint-size="52px,52px"></dc-import></div><span style="display:flex;gap:6px;align-items:center;font-size:14px;font-weight:800"><dc-import name="MapiIcon" name-of="fechar" size="{{ 16 }}" color="#A0402F" hint-size="16px,16px"></dc-import>Não use em fundo poluído</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:20px;font-weight:900">4. Cores e fonte</span>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
+          <span style="height:48px;border-radius:10px;background:#C9ADA7"></span><span style="height:48px;border-radius:10px;background:#22223B"></span><span style="height:48px;border-radius:10px;background:#E6DCE0"></span><span style="height:48px;border-radius:10px;background:#F2E9E4;border:1px solid #DCCFC8"></span><span style="height:48px;border-radius:10px;background:#4A4E69"></span>
+        </div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4E69">#C9ADA7 · #22223B · #E6DCE0 · #F2E9E4 · #4A4E69</span>
+        <span style="font-size:14px;line-height:1.5;color:#4A4E69">Nunito em todos os textos. No máximo uma cor de destaque por tela, além das cores de categoria no mapa.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:20px;font-weight:900">5. Tom de voz</span>
+        <span style="font-size:14px;line-height:1.55">Acolhedor, confiável, cívico e simples. Frases curtas, verbos diretos, sem jargão técnico nem diminutivos.</span>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:14px"><span><b style="font-weight:800">Sim:</b> “Obrigado. Sua foto já está no mapa.”</span><span><b style="font-weight:800">Não:</b> “Solicitação protocolada com sucesso.”</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;padding:18px 20px;border-radius:18px;background:#E6DCE0">
+      <span style="font-size:20px;font-weight:900">6. Regras de acessibilidade</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:14px;line-height:1.45">
+        <span>• Texto com contraste mínimo de 4,5:1; texto grande e ícones, 3:1.</span>
+        <span>• Alvos de toque com pelo menos 48 × 48 px e 8 px entre eles.</span>
+        <span>• Nunca informar só com cor: sempre forma, ícone ou texto junto.</span>
+        <span>• Foco visível em todo elemento interativo (anel de 3 px).</span>
+        <span>• Corpo mínimo de 16 px; respeitar o zoom do sistema até 200%.</span>
+        <span>• Toda foto e ícone sem rótulo precisa de texto alternativo.</span>
+        <span>• Animações curtas e desligáveis (prefers-reduced-motion).</span>
+        <span>• Linguagem simples; evitar siglas sem explicação.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;logoVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;u&quot;,&quot;t&quot;],&quot;default&quot;:&quot;u&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+const L = h => { const c = [1, 3, 5].map(i => parseInt(h.substr(i, 2), 16) / 255).map(v => v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4)); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
+const CR = (a, b) => { const x = L(a), y = L(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+const CATS = [
+  { key: 'sem_rampa_ou_degrau', label: 'Sem rampa ou degrau', short: 'Sem rampa', c500: '#8E7CC3', c700: '#5B4A8F', c100: '#E9E3F2', shape: 'quadrado' },
+  { key: 'obstaculo_no_caminho', label: 'Obstáculo no caminho', short: 'Obstáculo', c500: '#D9874E', c700: '#94511F', c100: '#F6E4D6', shape: 'triângulo' },
+  { key: 'calcada_quebrada', label: 'Calçada quebrada', short: 'Quebrada', c500: '#CF7A93', c700: '#94435C', c100: '#F4E0E5', shape: 'losango' },
+  { key: 'calcada_estreita', label: 'Calçada estreita', short: 'Estreita', c500: '#5FA8A0', c700: '#2F6B65', c100: '#DDEDEA', shape: 'hexágono' },
+  { key: 'sem_problema', label: 'Sem problema', short: 'Sem problema', c500: '#7A93C8', c700: '#44598C', c100: '#E3E8F2', shape: 'círculo' }
+];
+const N = { '#22223B': 'Space Indigo', '#F2E9E4': 'Seashell', '#FFFFFF': 'Branco', '#E6DCE0': 'Lilás claro', '#C9ADA7': 'Almond Silk', '#4A4E69': 'Dusty Grape', '#4A4E69': 'Dusty Grape', '#A0402F': 'Coral 700', '#D9705F': 'Coral 500', '#7A5410': 'Âmbar 800', '#634410': 'Âmbar 900', '#F7EAD2': 'Âmbar 50', '#D9A441': 'Âmbar 500', '#36704A': 'Verde-água 700', '#6AAE7E': 'Verde-água 500', '#22223B': 'Space Indigo', '#F2E9E4': 'Texto claro', '#C9ADA7': 'Almond Silk', '#C9BFC5': 'Texto claro 2', '#2E2E4C': 'Superfície escura', '#FFD88A': 'Âmbar claro', '#3A2A08': 'Âmbar escuro' };
+const PAIRS = [
+  ['#22223B', '#F2E9E4'], ['#22223B', '#FFFFFF'], ['#22223B', '#E6DCE0'], ['#22223B', '#C9ADA7'], ['#4A4E69', '#F2E9E4'], ['#4A4E69', '#F2E9E4'], ['#FFFFFF', '#4A4E69'], ['#C9ADA7', '#F2E9E4'],
+  ['#A0402F', '#F2E9E4'], ['#FFFFFF', '#A0402F'], ['#D9705F', '#F2E9E4'], ['#634410', '#F7EAD2'], ['#7A5410', '#F2E9E4'], ['#D9A441', '#F2E9E4'], ['#22223B', '#D9A441'], ['#36704A', '#F2E9E4'], ['#6AAE7E', '#F2E9E4']
+];
+CATS.forEach(c => { N[c.c500] = N[c.c500] || c.label + ' 500'; N[c.c700] = c.label + ' 700'; N[c.c100] = c.label + ' 100'; });
+CATS.forEach(c => { if (c.key !== 'sem_problema') PAIRS.push([c.c700, '#F2E9E4'], [c.c500, '#F2E9E4'], ['#22223B', c.c500], ['#22223B', c.c100]); });
+PAIRS.push(['#F2E9E4', '#22223B'], ['#C9BFC5', '#2E2E4C'], ['#C9ADA7', '#22223B'], ['#22223B', '#C9ADA7'], ['#FFD88A', '#3A2A08']);
+PAIRS.splice(1, 0, ['#F2E9E4', '#22223B'], ['#9A8C98', '#F2E9E4'], ['#9A8C98', '#FFFFFF'], ['#22223B', '#9A8C98'], ['#22223B', '#C9ADA7'], ['#4A4E69', '#FFFFFF']);
+N['#9A8C98'] = 'Lilac Ash'; N['#C9ADA7'] = 'Almond Silk'; N['#22223B'] = 'Space Indigo'; N['#4A4E69'] = 'Dusty Grape';
+const SEEN = new Set(); const UP = PAIRS.filter(p => { const k = p.join(); if (SEEN.has(k)) return false; SEEN.add(k); return true; });
+const ROWS = UP.map(([fg, bg]) => {
+  const r = CR(fg, bg);
+  return { fg, bg, fgName: N[fg] || fg, bgName: N[bg] || bg, ratio: r.toFixed(2).replace('.', ',') + ':1',
+    small: r >= 4.5 ? '✓ Passa' : '✕ Falha', large: r >= 3 ? '✓ Passa' : '✕ Falha',
+    use: r >= 4.5 ? 'Texto em qualquer tamanho' : r >= 3 ? 'Só texto grande (24 px / 19 px negrito) e ícones' : 'Só preenchimento, com contorno ou ícone Space Indigo' };
+});
+const SEV = [['0', 'Sem risco', 'g0'], ['1', 'Atrapalha', 'g1'], ['2', 'Dificulta', 'g2'], ['3', 'Impede', 'g3']];
+const RANK = [
+  ['Rua 25 de Março', 'Sé', 41, '2,8', 96, 'obstaculo_no_caminho', '62%', '30%'],
+  ['Av. Brig. Luís Antônio', 'Bela Vista', 37, '2,6', 91, 'sem_rampa_ou_degrau', '30%', '62%'],
+  ['Rua da Consolação', 'Consolação', 33, '2,5', 87, 'calcada_quebrada', '22%', '34%'],
+  ['Av. São João', 'República', 29, '2,4', 82, 'sem_rampa_ou_degrau', '44%', '20%'],
+  ['Rua Treze de Maio', 'Bela Vista', 26, '2,3', 76, 'calcada_estreita', '40%', '74%'],
+  ['Rua Augusta', 'Consolação', 24, '2,1', 71, 'obstaculo_no_caminho', '16%', '58%'],
+  ['Rua Vergueiro', 'Liberdade', 21, '2,0', 64, 'calcada_quebrada', '78%', '84%'],
+  ['R. Barão de Itapetininga', 'República', 18, '1,9', 58, 'calcada_estreita', '56%', '48%']
+];
+const blob = (c, a) => `radial-gradient(circle, ${c} 0%, ${a} 40%, rgba(255,255,255,0) 70%)`;
+const PERFIS = ['Uso cadeira de rodas', 'Cuido de cadeirante', 'Tenho deficiência visual', 'Tenho mobilidade reduzida', 'Sou idoso(a)', 'Ando com carrinho de bebê', 'Só quero ajudar'];
+class Component extends DCLogic {
+  state = { perfis: [1, 5] };
+  togglePerfil(i) { this.setState(s => ({ perfis: s.perfis.includes(i) ? s.perfis.filter(x => x !== i) : [...s.perfis, i] })); }
+  renderVals() {
+    const v = this.props.logoVariant || 'u';
+    return {
+      logoVariant: v,
+      perfis: PERFIS.map((label, i) => { const sel = this.state.perfis.includes(i); return { label, sel, toggle: () => this.togglePerfil(i), border: sel ? '3px solid #22223B' : '2px solid #DCCFC8', bg: sel ? '#E6DCE0' : '#FFFFFF', box: sel ? '#22223B' : '#FFFFFF' }; }),
+      logoDirs: [
+        { id: '5a', v: 'u', name: 'Pinha amiga cheia', active: v === 'u', desc: 'Corpo preenchido no formato do pino de mapa, folhinhas no topo e escamas vazadas em fileiras simétricas de 3, 2 e 1, que afinam junto com a ponta. Até 32 px entra uma versão com 2 e 1. Versão principal.' },
+        { id: '5b', v: 't', name: 'Pinha amiga em traço', active: v === 't', desc: 'Mesma forma e mesmas escamas em linha. Alternativa leve para fundos de foto ou usos decorativos.' }
+      ],
+      paletteGroups: [
+        { title: 'Paleta da marca', items: [
+          { name: 'Space Indigo', hex: '#22223B', use: 'Texto, botão principal, contornos e foco. 12,9:1 no Seashell.' },
+          { name: 'Dusty Grape', hex: '#4A4E69', use: 'Símbolo, texto secundário e links. 6,8:1 no Seashell.' },
+          { name: 'Lilac Ash', hex: '#9A8C98', use: 'Só decorativo ou ícone sobre branco (3,2:1). Nunca texto.' },
+          { name: 'Almond Silk', hex: '#C9ADA7', use: 'Destaques e superfícies, sempre com texto Space Indigo (7,4:1).' },
+          { name: 'Seashell', hex: '#F2E9E4', use: 'Fundo do app. Texto em Space Indigo ou Dusty Grape.' },
+          { name: 'Lilás claro', hex: '#E6DCE0', use: 'Derivado: seleção e fundos de destaque.' }
+        ] },
+        { title: 'Semânticas', items: [
+          { name: 'Coral 500', hex: '#D9705F', use: 'Erro: só preenchimento.' },
+          { name: 'Coral 700', hex: '#A0402F', use: 'Texto e botão de erro.' },
+          { name: 'Âmbar 500', hex: '#D9A441', use: 'Alerta: só preenchimento.' },
+          { name: 'Âmbar 800', hex: '#7A5410', use: 'Texto e borda de alerta.' },
+          { name: 'Verde-água 500', hex: '#6AAE7E', use: 'Sucesso: só preenchimento.' },
+          { name: 'Verde-água 700', hex: '#36704A', use: 'Texto de sucesso.' }
+        ] }
+      ],
+      cats: CATS,
+      catsShort: CATS.slice(0, 4),
+      contrastRows: ROWS,
+      typeScale: [
+        { name: 'Display', spec: '64/72 · 900', size: '64px', lh: '72px', w: 900, ls: '-0.03em', sample: 'Calçada para todos' },
+        { name: 'Título 1', spec: '44/52 · 900', size: '44px', lh: '52px', w: 900, ls: '-0.02em', sample: 'Onde agir primeiro' },
+        { name: 'Título 2', spec: '32/40 · 800', size: '32px', lh: '40px', w: 800, ls: '-0.01em', sample: 'Rua da Consolação, 312' },
+        { name: 'Título 3', spec: '24/32 · 800', size: '24px', lh: '32px', w: 800, ls: '0', sample: 'Classificação da IA' },
+        { name: 'Corpo grande', spec: '20/32 · 400', size: '20px', lh: '32px', w: 400, ls: '0', sample: 'Sua foto ajuda a prefeitura a decidir onde consertar primeiro.' },
+        { name: 'Corpo', spec: '18/28 · 400', size: '18px', lh: '28px', w: 400, ls: '0', sample: 'A IA sugere a categoria em segundos. Você confirma antes de publicar.' },
+        { name: 'Corpo mínimo', spec: '16/26 · 400', size: '16px', lh: '26px', w: 400, ls: '0', sample: 'Consolação · enviada há 2 dias por Marta R.' },
+        { name: 'Rótulo', spec: '16/24 · 800', size: '16px', lh: '24px', w: 800, ls: '0', sample: 'Gravidade sugerida' }
+      ],
+      iconList: [
+        { n: 'degrau', l: 'Sem rampa ou degrau' }, { n: 'obstaculo', l: 'Obstáculo no caminho' }, { n: 'quebrada', l: 'Calçada quebrada' }, { n: 'estreita', l: 'Calçada estreita' },
+        { n: 'ok', l: 'Sem problema' }, { n: 'camera', l: 'Câmera' }, { n: 'local', l: 'Localização' }, { n: 'filtro', l: 'Filtro' },
+        { n: 'g0', l: 'Gravidade 0' }, { n: 'g1', l: 'Gravidade 1' }, { n: 'g2', l: 'Gravidade 2' }, { n: 'g3', l: 'Gravidade 3' },
+        { n: 'enviar', l: 'Enviar foto' }, { n: 'revisar', l: 'Revisar' }, { n: 'ia', l: 'IA' }, { n: 'mapa', l: 'Mapa' }
+      ],
+      severity: SEV.map(([n, label, icon]) => ({ n, label, icon, sel: n === '2', border: n === '2' ? '3px solid #22223B' : '2px solid #B9ABA4', bg: n === '2' ? '#E6DCE0' : '#FFFFFF' })),
+      mapMarkers: [
+        { x: '70px', y: '250px', cat: 'sem_rampa_ou_degrau' }, { x: '150px', y: '290px', cat: 'obstaculo_no_caminho' }, { x: '320px', y: '240px', cat: 'sem_problema' },
+        { x: '96px', y: '410px', cat: 'calcada_estreita' }, { x: '300px', y: '380px', cat: 'calcada_quebrada' }, { x: '140px', y: '480px', cat: 'sem_rampa_ou_degrau' },
+        { x: '250px', y: '520px', cat: 'obstaculo_no_caminho' }, { x: '340px', y: '470px', cat: 'calcada_estreita' }, { x: '60px', y: '540px', cat: 'sem_problema' }
+      ],
+      aiScores: [
+        { key: 'calcada_quebrada', label: 'Calçada quebrada', pct: '62%' },
+        { key: 'obstaculo_no_caminho', label: 'Obstáculo no caminho', pct: '31%' },
+        { key: 'calcada_estreita', label: 'Calçada estreita', pct: '7%' }
+      ],
+      kpis: [
+        { label: 'Ocorrências abertas', value: '1.284', note: '+86 nesta semana' },
+        { label: 'Gravidade 3 (impede)', value: '212', note: '16,5% do total' },
+        { label: 'Aguardando revisão', value: '47', note: 'IA com confiança < 70%' },
+        { label: 'Resolvidas no período', value: '318', note: 'tempo médio: 41 dias' }
+      ],
+      heat: [
+        { x: '62%', y: '30%', s: '220px', g: blob('rgba(148,67,92,.75)', 'rgba(142,124,195,.4)') },
+        { x: '30%', y: '62%', s: '200px', g: blob('rgba(148,67,92,.6)', 'rgba(142,124,195,.35)') },
+        { x: '22%', y: '34%', s: '170px', g: blob('rgba(142,124,195,.6)', 'rgba(154,140,152,.35)') },
+        { x: '44%', y: '20%', s: '150px', g: blob('rgba(142,124,195,.55)', 'rgba(154,140,152,.3)') },
+        { x: '40%', y: '74%', s: '150px', g: blob('rgba(142,124,195,.45)', 'rgba(154,140,152,.3)') },
+        { x: '78%', y: '84%', s: '140px', g: blob('rgba(154,140,152,.7)', 'rgba(154,140,152,.25)') },
+        { x: '56%', y: '48%', s: '130px', g: blob('rgba(154,140,152,.7)', 'rgba(154,140,152,.25)') }
+      ],
+      ranking: RANK.map((r, i) => ({ rank: i + 1, street: r[0], bairro: r[1], n: r[2], g: r[3], score: r[4], pw: r[4] + '%', cat: r[5], x: r[6], y: r[7] }))
+    };
+  }
+}
+</script>
+</body>
+</html>

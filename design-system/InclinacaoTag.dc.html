@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<sc-if value="{{ isPlano }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 8px;border-radius:999px;background:#DDEBE0;border:2px solid #36704A;color:#2F5A3C;font:800 15px Nunito, system-ui, sans-serif;white-space:nowrap"><sc-if value="{{ isSubida }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg></sc-if><sc-if value="{{ isDescida }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 4l11 11"></path><path d="M16 9v6h-6"></path></svg></sc-if><sc-if value="{{ isReto }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M3 12h15"></path><path d="M14 8l4 4-4 4"></path></svg></sc-if>{{ label }}</span></sc-if><sc-if value="{{ isModerado }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 8px;border-radius:999px;background:#F7EAD2;border:2px solid #7A5410;color:#634410;font:800 15px Nunito, system-ui, sans-serif;white-space:nowrap"><sc-if value="{{ isSubida }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg></sc-if><sc-if value="{{ isDescida }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 4l11 11"></path><path d="M16 9v6h-6"></path></svg></sc-if><sc-if value="{{ isReto }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M3 12h15"></path><path d="M14 8l4 4-4 4"></path></svg></sc-if>{{ label }}</span></sc-if><sc-if value="{{ isIngreme }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 8px;border-radius:999px;background:#F6E2DD;border:2px solid #A0402F;color:#8E3527;font:800 15px Nunito, system-ui, sans-serif;white-space:nowrap"><sc-if value="{{ isSubida }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg></sc-if><sc-if value="{{ isDescida }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 4l11 11"></path><path d="M16 9v6h-6"></path></svg></sc-if><sc-if value="{{ isReto }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M3 12h15"></path><path d="M14 8l4 4-4 4"></path></svg></sc-if>{{ label }}</span></sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:200,&quot;height&quot;:48},&quot;nivel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;plano&quot;,&quot;moderado&quot;,&quot;ingreme&quot;],&quot;default&quot;:&quot;moderado&quot;,&quot;tsType&quot;:&quot;'plano'|'moderado'|'ingreme'&quot;},&quot;sentido&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;subida&quot;,&quot;descida&quot;,&quot;reto&quot;],&quot;default&quot;:&quot;subida&quot;,&quot;tsType&quot;:&quot;'subida'|'descida'|'reto'&quot;},&quot;texto&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;6%&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const nivel = this.props.nivel ?? 'moderado';
+    const sentido = this.props.sentido ?? 'subida';
+    const nomes = { plano: 'Plano', moderado: 'Moderado', ingreme: 'Íngreme' };
+    const t = this.props.texto;
+    return {
+      isPlano: nivel === 'plano', isModerado: nivel === 'moderado', isIngreme: nivel === 'ingreme',
+      isSubida: sentido === 'subida', isDescida: sentido === 'descida', isReto: sentido === 'reto',
+      label: t ? `${nomes[nivel]} · ${t}` : nomes[nivel]
+    };
+  }
+}
+</script>
+</body>
+</html>

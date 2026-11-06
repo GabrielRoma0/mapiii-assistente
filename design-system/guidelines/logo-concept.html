@@ -1,0 +1,17 @@
+<!-- @dsCard group="Brand" viewport="700x260" subtitle="M-rampa, p-roda, três i em escadinha, pinha com piso tátil" name="Conceito do logo" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../_ds_bundle.js"></script></head><body style="margin:0;padding:24px;background:var(--bg-app);font-family:var(--font-sans);color:var(--text-body)"><div id="root"></div>
+<script type="text/babel">
+const NS = Object.values(window).find(o => o && typeof o === 'object' && o.Logo && o.Button) || {};
+const { Logo } = NS;
+ReactDOM.createRoot(document.getElementById('root')).render(<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,alignItems:'center'}}>
+<div style={{display:'grid',placeItems:'center',height:200,borderRadius:24,background:'#fff'}}><Logo size={72} /></div>
+<ul style={{margin:0,paddingLeft:18,fontSize:15,lineHeight:1.5,display:'flex',flexDirection:'column',gap:6}}>
+<li><b>M · rampa:</b> o topo desce da altura de maiúscula até a do “a”.</li>
+<li><b>p · roda:</b> aro, eixo e raios suaves de cadeira de rodas.</li>
+<li><b>iii:</b> informação, independência, inclusão — descem em escadinha.</li>
+<li><b>Pinha:</b> o “ma-pinha”, com forma de pino de mapa e relevos do piso tátil de alerta.</li></ul></div>);
+</script></body></html>

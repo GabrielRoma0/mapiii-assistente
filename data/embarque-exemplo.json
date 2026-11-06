@@ -1,0 +1,46 @@
+{
+  "aviso": "Dados fictícios para demonstração. Não são dados da SPTrans.",
+  "linhas": [
+    {
+      "codigo": 900001,
+      "letreiro": "EX01-10",
+      "sentido": 1,
+      "descricao": "TERMINAL EXEMPLO NORTE → TERMINAL EXEMPLO SUL",
+      "circular": false,
+      "veiculos": [
+        { "prefixo": "90101", "acessivel": true, "segundos_atras": 20 },
+        { "prefixo": "90102", "acessivel": false, "segundos_atras": 35 },
+        { "prefixo": "90103", "acessivel": true, "segundos_atras": 50 },
+        { "prefixo": "90104", "acessivel": true, "segundos_atras": 15 },
+        { "prefixo": "90105", "acessivel": false, "segundos_atras": 260 }
+      ]
+    },
+    {
+      "codigo": 900002,
+      "letreiro": "EX01-10",
+      "sentido": 2,
+      "descricao": "TERMINAL EXEMPLO SUL → TERMINAL EXEMPLO NORTE",
+      "circular": false,
+      "veiculos": [
+        { "prefixo": "90201", "acessivel": false, "segundos_atras": 30 },
+        { "prefixo": "90202", "acessivel": false, "segundos_atras": 45 }
+      ]
+    },
+    {
+      "codigo": 900003,
+      "letreiro": "EX02-10",
+      "sentido": 1,
+      "descricao": "BAIRRO EXEMPLO (CIRCULAR)",
+      "circular": true,
+      "veiculos": [{ "prefixo": "90301", "acessivel": true, "segundos_atras": 330 }]
+    },
+    {
+      "codigo": 900004,
+      "letreiro": "EX03-10",
+      "sentido": 1,
+      "descricao": "ESTAÇÃO EXEMPLO → PRAÇA EXEMPLO",
+      "circular": false,
+      "veiculos": []
+    }
+  ]
+}

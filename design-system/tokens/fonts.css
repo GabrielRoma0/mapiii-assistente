@@ -1,0 +1,17 @@
+/* Nunito (títulos e corpo) — SIL OFL, licença em ../fonts/OFL-Nunito.txt.
+ *
+ * ALTERADO em relação ao design system original: o @import do Google Fonts foi
+ * trocado por arquivo local, porque o @import envia o IP da pessoa ao Google e
+ * não funciona offline. Fonte: @fontsource-variable/nunito 5.1.1 (subconjunto latin,
+ * cobre o português), peso variável de 200 a 1000.
+ *
+ * Original:
+ * @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap");
+ */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 1000;
+  src: url("../fonts/nunito-latin-wght-normal.woff2") format("woff2-variations");
+}

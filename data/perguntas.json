@@ -1,0 +1,187 @@
+[
+  {
+    "id": "p_quem",
+    "texto": "Para quem é a orientação?",
+    "por_que_perguntamos": "Alguns pedidos são feitos pela própria pessoa e outros por quem é responsável por ela. Assim mostramos quem costuma fazer o pedido.",
+    "fala": "Estou ouvindo. Escolha a opção mais próxima.",
+    "tipo": "unica",
+    "opcoes": [
+      { "valor": "eu", "texto": "Para mim" },
+      { "valor": "filho_filha", "texto": "Para meu filho ou filha" },
+      { "valor": "outro_familiar", "texto": "Para outra pessoa da família" },
+      { "valor": "pessoa_acompanhada", "texto": "Para alguém que eu acompanho" },
+      { "valor": "so_pesquisando", "texto": "Só estou pesquisando" }
+    ]
+  },
+  {
+    "id": "p_necessidade",
+    "texto": "Que tipo de apoio a pessoa precisa no dia a dia?",
+    "por_que_perguntamos": "Cada direito vale para alguns tipos de deficiência. Perguntamos só a categoria geral, nunca o diagnóstico.",
+    "fala": "Pode marcar mais de uma opção.",
+    "tipo": "multipla",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "mobilidade", "texto": "Mobilidade ou cadeira de rodas" },
+      { "valor": "visual", "texto": "Visual" },
+      { "valor": "auditiva", "texto": "Auditiva" },
+      { "valor": "intelectual_neurodesenvolvimento", "texto": "Intelectual ou do neurodesenvolvimento" },
+      { "valor": "outra", "texto": "Outra" }
+    ]
+  },
+  {
+    "id": "p_objetivo",
+    "texto": "O que você quer resolver?",
+    "por_que_perguntamos": "Assim mostramos primeiro o que tem a ver com o que você precisa agora.",
+    "fala": "Depois mostro o que pode se aplicar.",
+    "tipo": "unica",
+    "opcoes": [
+      { "valor": "transporte", "texto": "Transporte e passe livre" },
+      { "valor": "beneficio_financeiro", "texto": "Benefício em dinheiro" },
+      { "valor": "saude_equipamentos", "texto": "Saúde, terapias e equipamentos" },
+      { "valor": "escola", "texto": "Escola e apoio na sala de aula" },
+      { "valor": "documentos", "texto": "Documentos" },
+      { "valor": "calcada_acessibilidade", "texto": "Calçada e acessibilidade da rua" },
+      { "valor": "conferir_golpe", "texto": "Conferir se é golpe" }
+    ]
+  },
+  {
+    "id": "p_faixa",
+    "texto": "Em qual faixa de idade a pessoa está?",
+    "por_que_perguntamos": "Alguns direitos mudam com a idade, como os de crianças, adolescentes e pessoas idosas. Nunca perguntamos a idade exata.",
+    "tipo": "unica",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "ate_11", "texto": "Até 11 anos" },
+      { "valor": "12_a_17", "texto": "De 12 a 17 anos" },
+      { "valor": "18_a_59", "texto": "De 18 a 59 anos" },
+      { "valor": "60_ou_mais", "texto": "60 anos ou mais" }
+    ]
+  },
+  {
+    "id": "p_equipamento",
+    "texto": "A pessoa usa cadeira de rodas, andador, muleta ou outro apoio para andar?",
+    "por_que_perguntamos": "Alguns serviços de transporte e de equipamentos dependem disso.",
+    "tipo": "unica",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "sim", "texto": "Sim" },
+      { "valor": "nao", "texto": "Não" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_laudo",
+    "texto": "Existe um laudo ou relatório médico sobre a deficiência?",
+    "por_que_perguntamos": "Muitos pedidos exigem um laudo. Só queremos saber se ele existe: nunca envie o laudo aqui.",
+    "tipo": "unica",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "sim", "texto": "Sim" },
+      { "valor": "nao", "texto": "Não" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_cidade",
+    "texto": "A pessoa mora na cidade de São Paulo?",
+    "por_que_perguntamos": "Os serviços da Prefeitura valem para quem mora na cidade. Nunca perguntamos o endereço.",
+    "tipo": "unica",
+    "opcoes": [
+      { "valor": "sim", "texto": "Sim" },
+      { "valor": "nao", "texto": "Não" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_subprefeitura",
+    "texto": "Em qual subprefeitura? (opcional)",
+    "por_que_perguntamos": "Alguns atendimentos são feitos na subprefeitura da região. Só a região, nunca o endereço.",
+    "tipo": "lista",
+    "mostrar_se": { "campo": "p_cidade", "em": ["sim"] },
+    "opcoes": [
+      { "valor": "aricanduva_formosa_carrao", "texto": "Aricanduva/Formosa/Carrão" },
+      { "valor": "butanta", "texto": "Butantã" },
+      { "valor": "campo_limpo", "texto": "Campo Limpo" },
+      { "valor": "capela_do_socorro", "texto": "Capela do Socorro" },
+      { "valor": "casa_verde_cachoeirinha", "texto": "Casa Verde/Cachoeirinha" },
+      { "valor": "cidade_ademar", "texto": "Cidade Ademar" },
+      { "valor": "cidade_tiradentes", "texto": "Cidade Tiradentes" },
+      { "valor": "ermelino_matarazzo", "texto": "Ermelino Matarazzo" },
+      { "valor": "freguesia_brasilandia", "texto": "Freguesia/Brasilândia" },
+      { "valor": "guaianases", "texto": "Guaianases" },
+      { "valor": "ipiranga", "texto": "Ipiranga" },
+      { "valor": "itaim_paulista", "texto": "Itaim Paulista" },
+      { "valor": "itaquera", "texto": "Itaquera" },
+      { "valor": "jabaquara", "texto": "Jabaquara" },
+      { "valor": "jacana_tremembe", "texto": "Jaçanã/Tremembé" },
+      { "valor": "lapa", "texto": "Lapa" },
+      { "valor": "m_boi_mirim", "texto": "M'Boi Mirim" },
+      { "valor": "mooca", "texto": "Mooca" },
+      { "valor": "parelheiros", "texto": "Parelheiros" },
+      { "valor": "penha", "texto": "Penha" },
+      { "valor": "perus_anhanguera", "texto": "Perus/Anhanguera" },
+      { "valor": "pinheiros", "texto": "Pinheiros" },
+      { "valor": "pirituba_jaragua", "texto": "Pirituba/Jaraguá" },
+      { "valor": "santana_tucuruvi", "texto": "Santana/Tucuruvi" },
+      { "valor": "santo_amaro", "texto": "Santo Amaro" },
+      { "valor": "sao_mateus", "texto": "São Mateus" },
+      { "valor": "sao_miguel_paulista", "texto": "São Miguel Paulista" },
+      { "valor": "sapopemba", "texto": "Sapopemba" },
+      { "valor": "se", "texto": "Sé" },
+      { "valor": "vila_maria_vila_guilherme", "texto": "Vila Maria/Vila Guilherme" },
+      { "valor": "vila_mariana", "texto": "Vila Mariana" },
+      { "valor": "vila_prudente", "texto": "Vila Prudente" }
+    ]
+  },
+  {
+    "id": "p_renda",
+    "texto": "A renda da casa, dividida por pessoa, é de até meio salário mínimo?",
+    "por_que_perguntamos": "Alguns benefícios são só para famílias com renda baixa. Nunca perguntamos o valor da renda.",
+    "tipo": "unica",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "sim", "texto": "Sim" },
+      { "valor": "nao", "texto": "Não" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_cadunico",
+    "texto": "A família tem Cadastro Único?",
+    "por_que_perguntamos": "Muitos benefícios pedem o Cadastro Único atualizado.",
+    "tipo": "unica",
+    "sensivel": true,
+    "opcoes": [
+      { "valor": "sim", "texto": "Sim" },
+      { "valor": "nao", "texto": "Não" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_beneficios",
+    "texto": "A pessoa já recebe algum destes?",
+    "por_que_perguntamos": "Assim não mostramos como novidade o que a pessoa já tem.",
+    "tipo": "multipla",
+    "sensivel": true,
+    "exclusivas": ["nenhum", "nao_sei"],
+    "opcoes": [
+      { "valor": "bpc", "texto": "BPC" },
+      { "valor": "passe_livre", "texto": "Passe livre" },
+      { "valor": "nenhum", "texto": "Nenhum" },
+      { "valor": "nao_sei", "texto": "Não sei" }
+    ]
+  },
+  {
+    "id": "p_transporte",
+    "texto": "Como a pessoa costuma se deslocar?",
+    "por_que_perguntamos": "Os direitos de transporte mudam conforme o meio usado.",
+    "tipo": "multipla",
+    "opcoes": [
+      { "valor": "onibus", "texto": "Ônibus" },
+      { "valor": "metro_trem", "texto": "Metrô e trem" },
+      { "valor": "carro", "texto": "Carro" },
+      { "valor": "a_pe_ou_cadeira", "texto": "A pé ou de cadeira de rodas" },
+      { "valor": "aplicativo", "texto": "Carro de aplicativo" }
+    ]
+  }
+]

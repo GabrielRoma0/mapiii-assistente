@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+html, body { margin: 0; background: #EDE3DD; color: #22223B; font-family: Nunito, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #4A4E69; text-decoration-thickness: 2px; text-underline-offset: 3px; } a:hover { color: #22223B; }
+button { font-family: inherit; color: inherit; }
+:focus-visible { outline: none; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #22223B; }
+</style>
+</helmet>
+<section style="padding:56px 64px 72px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:6px;max-width:960px">
+    <span style="font-size:44px;line-height:52px;font-weight:900;letter-spacing:-0.02em">Inclinação do trajeto</span>
+    <span style="font-size:18px;line-height:28px;color:#4A4E69;text-wrap:pretty">Calculada a partir da altitude e sempre no sentido do trajeto. Plano até 5%, Moderado de 5% a 8,33%, Íngreme acima de 8,33%. Cada nível tem padrão de linha, rótulo e ícone próprios.</span>
+  </div>
+
+  <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start">
+
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">1 · Rota com inclinação</span>
+    <div data-screen-label="01 Rota com inclinação" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;display:flex;flex-direction:column;color:#22223B">
+      <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:6px 20px 20px;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span style="font-size:24px;line-height:30px;font-weight:900;letter-spacing:-0.01em">Rota com inclinação</span>
+          <span style="font-size:16px;line-height:22px;font-weight:700;color:#4A4E69">Até a Praça Dom Orione · 650 m · 11 min</span>
+        </div>
+        <div style="position:relative;height:240px;flex:none;border-radius:24px;overflow:hidden;background:#E7DDD6">
+          <svg viewBox="0 0 330 240" width="330" height="240" aria-hidden="true" style="position:absolute;left:0;top:0;display:block">
+            <rect x="40" y="46" width="94" height="62" rx="10" fill="#DCE3D4"></rect>
+            <g stroke="#FFFFFF" stroke-width="16" fill="none"><path d="M0 192H330"></path><path d="M150 0V240"></path><path d="M0 124H330"></path><path d="M306 0V240"></path><path d="M0 30H330"></path><path d="M230 124V240"></path><path d="M24 0V240"></path></g>
+            <path d="M24 192H150" stroke="#36704A" stroke-width="8" stroke-linecap="round" fill="none"></path>
+            <path d="M150 192V124" stroke="#7A5410" stroke-width="8" stroke-dasharray="12 7" fill="none"></path>
+            <path d="M150 124H230" stroke="#A0402F" stroke-width="9" stroke-dasharray="0.1 12" stroke-linecap="round" fill="none"></path>
+            <path d="M230 124H306V30" stroke="#36704A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+          </svg>
+          <span style="position:absolute;left:6px;top:174px;width:36px;height:36px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font-size:16px;font-weight:900">A</span>
+          <span style="position:absolute;left:288px;top:12px;width:36px;height:36px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font-size:16px;font-weight:900">B</span>
+          <div style="position:absolute;left:50px;top:202px"><dc-import name="InclinacaoTag" nivel="plano" sentido="descida" texto="2%" hint-size="110px,32px"></dc-import></div>
+          <div style="position:absolute;left:160px;top:142px"><dc-import name="InclinacaoTag" nivel="moderado" sentido="subida" texto="6%" hint-size="140px,32px"></dc-import></div>
+          <div style="position:absolute;left:140px;top:84px"><dc-import name="InclinacaoTag" nivel="ingreme" sentido="subida" texto="9%" hint-size="136px,32px"></dc-import></div>
+          <div style="position:absolute;left:170px;top:40px"><dc-import name="InclinacaoTag" nivel="plano" sentido="subida" texto="1%" hint-size="110px,32px"></dc-import></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+          <div style="display:flex;flex-direction:column;gap:2px"><svg width="28" height="10" viewBox="0 0 28 10" aria-hidden="true" style="display:block"><path d="M3 5H25" stroke="#36704A" stroke-width="6" stroke-linecap="round"></path></svg><span style="font-size:15px;font-weight:900">Plano</span><span style="font-size:14px;font-weight:700;color:#4A4E69">até 5%</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><svg width="28" height="10" viewBox="0 0 28 10" aria-hidden="true" style="display:block"><path d="M2 5H27" stroke="#7A5410" stroke-width="6" stroke-dasharray="7 4"></path></svg><span style="font-size:15px;font-weight:900">Moderado</span><span style="font-size:14px;font-weight:700;color:#4A4E69">5% a 8,33%</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><svg width="28" height="10" viewBox="0 0 28 10" aria-hidden="true" style="display:block"><path d="M4 5H26" stroke="#A0402F" stroke-width="6" stroke-dasharray="0.1 7" stroke-linecap="round"></path></svg><span style="font-size:15px;font-weight:900">Íngreme</span><span style="font-size:14px;font-weight:700;color:#4A4E69">acima de 8,33%</span></div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:22px;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font-size:17px;font-weight:900">Perfil de elevação</span><span style="font-size:14px;font-weight:700;color:#4A4E69">inclinação estimada</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <svg viewBox="0 0 302 90" width="302" height="90" role="img" aria-label="Altitude ao longo do trajeto, de A até B. Trechos de subida moderada e íngreme destacados." style="display:block">
+              <defs>
+                <pattern id="p1m" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#F7EAD2"></rect><path d="M0 0V8" stroke="#D9A441" stroke-width="2"></path></pattern>
+                <pattern id="p1i" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#F6E2DD"></rect><path d="M0 0V8" stroke="#D9705F" stroke-width="2"></path></pattern>
+              </defs>
+              <path d="M0 54L93 71L130 50L149 35L302 20V89H0Z" fill="#F2E9E4"></path>
+              <rect x="93" y="0" width="37" height="89" fill="url(#p1m)"></rect>
+              <rect x="130" y="0" width="19" height="89" fill="url(#p1i)"></rect>
+              <path d="M0 89H302" stroke="#DCCFC8" stroke-width="2"></path>
+              <path d="M0 54L93 71L130 50L149 35L302 20" stroke="#22223B" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"></path>
+              <path d="M93 71L130 50" stroke="#7A5410" stroke-width="6" stroke-dasharray="7 4" fill="none"></path>
+              <path d="M130 50L149 35" stroke="#A0402F" stroke-width="7" stroke-dasharray="0.1 7" stroke-linecap="round" fill="none"></path>
+            </svg>
+            <div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:#4A4E69"><span>A · 0 m</span><span>B · 650 m</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px"><svg width="28" height="10" viewBox="0 0 28 10" aria-hidden="true" style="display:block;flex:none"><path d="M2 5H27" stroke="#7A5410" stroke-width="6" stroke-dasharray="7 4"></path></svg><span style="font-size:16px;font-weight:900;flex:1">Subida de 6% por 80 m</span><span style="font-size:14px;font-weight:800;color:#634410">Moderado</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><svg width="28" height="10" viewBox="0 0 28 10" aria-hidden="true" style="display:block;flex:none"><path d="M4 5H26" stroke="#A0402F" stroke-width="6" stroke-dasharray="0.1 7" stroke-linecap="round"></path></svg><span style="font-size:16px;font-weight:900;flex:1">Subida de 9% por 40 m</span><span style="font-size:14px;font-weight:800;color:#8E3527">Íngreme</span></div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:16px;padding:10px 14px;font-size:15px;line-height:20px;font-weight:700;color:#4A4E69">Estimativa a partir de dados de altitude. Confira no local.</div>
+      </div>
+    </div></div>
+
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">2 · Detalhe do trecho</span>
+    <div data-screen-label="02 Detalhe do trecho" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;display:flex;flex-direction:column;color:#22223B">
+      <div style="position:relative;height:220px;flex:none;background:#E7DDD6;overflow:hidden">
+        <svg viewBox="-20 0 370 220" width="370" height="220" aria-hidden="true" style="position:absolute;left:0;top:0;display:block">
+          <g stroke="#FFFFFF" stroke-width="16" fill="none"><path d="M-20 192H350"></path><path d="M150 0V240"></path><path d="M-20 124H350"></path><path d="M306 0V240"></path><path d="M230 124V240"></path><path d="M24 0V240"></path></g>
+          <g stroke="#9A8C98" stroke-width="6" stroke-linecap="round" fill="none"><path d="M24 192H150"></path><path d="M150 124H230"></path><path d="M230 124H306V30"></path></g>
+          <path d="M150 192V124" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" fill="none"></path>
+          <path d="M150 192V124" stroke="#7A5410" stroke-width="10" stroke-dasharray="12 7" fill="none"></path>
+        </svg>
+        <span style="position:absolute;left:26px;top:174px;width:36px;height:36px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font-size:16px;font-weight:900">A</span>
+        <div style="position:absolute;left:182px;top:142px"><dc-import name="InclinacaoTag" nivel="moderado" sentido="subida" texto="6%" hint-size="140px,32px"></dc-import></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+        <div style="position:absolute;top:50px;left:16px;right:16px;display:flex;align-items:center;gap:10px">
+          <button type="button" aria-label="Voltar para a rota" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:16px 20px 20px;min-height:0">
+        <span style="font-size:15px;font-weight:800;color:#4A4E69">Trecho 2 de 4 · inclinação estimada</span>
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="width:72px;height:72px;border-radius:22px;background:#F7EAD2;border:2px solid #7A5410;color:#634410;display:grid;place-items:center;flex:none"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg></span>
+          <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+            <span style="font-size:44px;line-height:46px;font-weight:900;letter-spacing:-0.02em">6%</span>
+            <dc-import name="InclinacaoTag" nivel="moderado" sentido="subida" texto="Subida" hint-size="150px,32px"></dc-import>
+          </div>
+        </div>
+        <span style="font-size:20px;line-height:26px;font-weight:900;text-wrap:pretty">Subida moderada. Pode cansar em cadeira manual.</span>
+        <div style="background:#FFFFFF;border-radius:22px;padding:0 16px;display:flex;flex-direction:column">
+          <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:2px solid #E8DDD7"><span style="font-size:16px;font-weight:700;color:#4A4E69">Sentido</span><span style="display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:900">De A para B<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg></span></div>
+          <div style="min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px"><span style="font-size:16px;font-weight:700;color:#4A4E69">Comprimento</span><span style="font-size:17px;font-weight:900">80 m</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="position:relative;height:30px">
+            <div style="position:absolute;left:0;right:0;top:14px;height:12px;display:flex;gap:3px">
+              <span style="flex:30;border-radius:6px 0 0 6px;background:#6AAE7E"></span><span style="flex:33.3;background:#D9A441"></span><span style="flex:36.7;border-radius:0 6px 6px 0;background:#D9705F"></span>
+            </div>
+            <span style="position:absolute;left:40%;top:4px;width:6px;height:30px;margin-left:-3px;border-radius:3px;background:#22223B;border:1px solid #FFFFFF"></span>
+          </div>
+          <div style="display:grid;grid-template-columns:30fr 33.3fr 36.7fr;gap:3px;font-size:14px;line-height:18px">
+            <span style="display:flex;flex-direction:column"><b style="font-weight:900">Plano</b><span style="font-weight:700;color:#4A4E69">até 5%</span></span>
+            <span style="display:flex;flex-direction:column"><b style="font-weight:900">Moderado</b><span style="font-weight:700;color:#4A4E69">5% a 8,33%</span></span>
+            <span style="display:flex;flex-direction:column"><b style="font-weight:900">Íngreme</b><span style="font-weight:700;color:#4A4E69">acima de 8,33%</span></span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#E6DCE0;border-radius:18px;padding:10px 14px">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 4l11 11"></path><path d="M16 9v6h-6"></path></svg>
+          <span style="font-size:16px;line-height:21px;font-weight:800">No sentido de B para A, este trecho é uma descida de 6%.</span>
+        </div>
+        <div style="background:#FFFFFF;border-radius:16px;padding:10px 14px;font-size:15px;line-height:20px;font-weight:700;color:#4A4E69">Estimativa a partir de dados de altitude. Confira no local.</div>
+      </div>
+    </div></div>
+
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">3 · Preferências de inclinação</span>
+    <div data-screen-label="03 Preferências de inclinação" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;display:flex;flex-direction:column;color:#22223B">
+      <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:6px 20px 22px;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:28px;line-height:34px;font-weight:900;letter-spacing:-0.01em">Limite de inclinação</span>
+          <span style="font-size:17px;line-height:24px;color:#4A4E69;font-weight:700;text-wrap:pretty">Vamos evitar trechos mais íngremes que o seu limite.</span>
+        </div>
+        <div role="radiogroup" aria-label="Tipo de cadeira" style="display:flex;flex-direction:column;gap:10px">
+          <sc-if value="{{ selManual }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="true" onClick="{{ pickManual }}" style="min-height:76px;border-radius:24px;border:3px solid #22223B;background:#E6DCE0;padding:9px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:900">Cadeira manual (até 5%)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Evita trechos moderados e íngremes</span></span><span style="width:32px;height:32px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" style="display:block;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></button></sc-if>
+          <sc-if value="{{ notManual }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="false" onClick="{{ pickManual }}" style="min-height:76px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:10px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:800">Cadeira manual (até 5%)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Evita trechos moderados e íngremes</span></span></button></sc-if>
+          <sc-if value="{{ selMotor }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="true" onClick="{{ pickMotor }}" style="min-height:76px;border-radius:24px;border:3px solid #22223B;background:#E6DCE0;padding:9px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:900">Cadeira motorizada (até 8,33%)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Evita só trechos íngremes</span></span><span style="width:32px;height:32px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" style="display:block;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></button></sc-if>
+          <sc-if value="{{ notMotor }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="false" onClick="{{ pickMotor }}" style="min-height:76px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:10px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:800">Cadeira motorizada (até 8,33%)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Evita só trechos íngremes</span></span></button></sc-if>
+          <sc-if value="{{ selOutro }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="true" onClick="{{ pickOutro }}" style="min-height:76px;border-radius:24px;border:3px solid #22223B;background:#E6DCE0;padding:9px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:900">Outro (escolher)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Você escolhe o limite abaixo</span></span><span style="width:32px;height:32px;border-radius:50%;background:#22223B;color:#F2E9E4;display:grid;place-items:center;flex:none"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" style="display:block;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></button></sc-if>
+          <sc-if value="{{ notOutro }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="false" onClick="{{ pickOutro }}" style="min-height:76px;border-radius:24px;border:2px solid #DCCFC8;background:#FFFFFF;padding:10px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left"><span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:18px;line-height:23px;font-weight:800">Outro (escolher)</span><span style="font-size:15px;font-weight:700;color:#4A4E69">Você escolhe o limite abaixo</span></span></button></sc-if>
+        </div>
+        <div style="background:#FFFFFF;border-radius:22px;padding:14px 16px 12px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <div style="display:flex;flex-direction:column"><span id="lbl-limite" style="font-size:16px;font-weight:800;color:#4A4E69">Seu limite</span><span style="font-size:32px;line-height:38px;font-weight:900">{{ limiteTxt }}%</span></div>
+            <dc-import name="InclinacaoTag" nivel="{{ limiteNivel }}" sentido="subida" hint-size="120px,32px"></dc-import>
+          </div>
+          <div ref="{{ trackRef }}" onPointerDown="{{ onDown }}" onPointerMove="{{ onMove }}" onPointerUp="{{ onUp }}" style="position:relative;height:48px;touch-action:none;cursor:pointer;margin:0 8px">
+            <div style="position:absolute;left:0;right:0;top:20px;height:8px;display:flex;gap:2px">
+              <span style="flex:30;border-radius:4px 0 0 4px;background:#6AAE7E"></span><span style="flex:33.3;background:#D9A441"></span><span style="flex:36.7;border-radius:0 4px 4px 0;background:#D9705F"></span>
+            </div>
+            <div role="slider" tabindex="0" aria-labelledby="lbl-limite" aria-valuemin="2" aria-valuemax="12" aria-valuenow="{{ limite }}" aria-valuetext="{{ ariaText }}" onKeyDown="{{ onKey }}" style="position:absolute;top:0;left:{{ thumbLeft }};width:48px;height:48px;margin-left:-24px;border-radius:50%;display:grid;place-items:center">
+              <span style="width:32px;height:32px;border-radius:50%;background:#FFFFFF;border:4px solid #22223B"></span>
+            </div>
+          </div>
+          <div style="position:relative;height:20px;margin:0 8px;font-size:14px;font-weight:800;color:#4A4E69">
+            <span style="position:absolute;left:0">2%</span>
+            <span style="position:absolute;left:30%;transform:translateX(-50%)">5%</span>
+            <span style="position:absolute;left:63.3%;transform:translateX(-50%)">8,33%</span>
+            <span style="position:absolute;right:0">12%</span>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
+          <div style="background:#FFFFFF;border-radius:16px;padding:10px 14px;font-size:15px;line-height:20px;font-weight:700;color:#4A4E69">Estimativa a partir de dados de altitude. Confira no local.</div>
+          <button type="button" style="height:64px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito, system-ui, sans-serif;cursor:pointer">Salvar limite</button>
+        </div>
+      </div>
+    </div></div>
+
+    <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:800">4 · Rota alternativa</span>
+    <div data-screen-label="04 Rota alternativa" style="width:390px;height:844px;border-radius:52px;border:10px solid #22223B;background:#F2E9E4;overflow:hidden;position:relative;flex:none;display:flex;flex-direction:column;color:#22223B">
+      <div style="height:44px;flex:none;display:flex;align-items:center;padding:0 28px;font-size:16px;font-weight:800">9:41</div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:6px 20px 20px;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <button type="button" aria-label="Voltar" style="width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <div style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:14px;background:#C9ADA7;border:2px solid #22223B;color:#22223B;font:800 17px Nunito, system-ui, sans-serif;white-space:nowrap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path></svg>Visão de futuro</div>
+        </div>
+        <div style="position:relative;height:170px;flex:none;border-radius:24px;overflow:hidden;background:#E7DDD6">
+          <svg viewBox="0 0 330 170" width="330" height="170" aria-hidden="true" style="position:absolute;left:0;top:0;display:block">
+            <g stroke="#FFFFFF" stroke-width="16" fill="none"><path d="M0 146H330"></path><path d="M150 0V170"></path><path d="M0 96H330"></path><path d="M306 0V170"></path><path d="M0 24H330"></path><path d="M24 0V170"></path><path d="M230 96V170"></path></g>
+            <path d="M24 146V24H306" stroke="#22223B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            <path d="M24 146H150V96H306V24" stroke="#4A4E69" stroke-width="6" stroke-dasharray="10 7" fill="none"></path>
+            <path d="M150 96H230" stroke="#A0402F" stroke-width="9" stroke-dasharray="0.1 12" stroke-linecap="round" fill="none"></path>
+          </svg>
+          <span style="position:absolute;left:6px;top:128px;width:36px;height:36px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font-size:16px;font-weight:900">A</span>
+          <span style="position:absolute;left:288px;top:6px;width:36px;height:36px;border-radius:50%;background:#22223B;border:3px solid #FFFFFF;color:#F2E9E4;display:grid;place-items:center;font-size:16px;font-weight:900">B</span>
+          <div style="position:absolute;left:150px;top:54px"><dc-import name="InclinacaoTag" nivel="ingreme" sentido="subida" texto="9%" hint-size="136px,32px"></dc-import></div>
+          <span style="position:absolute;left:40px;top:40px;display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:10px;background:#FFFFFF;border:2px solid #22223B;font-size:14px;font-weight:900;white-space:nowrap"><svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true" style="display:block"><path d="M3 5H19" stroke="#22223B" stroke-width="6" stroke-linecap="round"></path></svg>Mais plana</span>
+          <span style="position:absolute;left:160px;top:110px;display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:10px;background:#FFFFFF;border:2px solid #4A4E69;font-size:14px;font-weight:900;white-space:nowrap"><svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true" style="display:block"><path d="M1 5H21" stroke="#4A4E69" stroke-width="5" stroke-dasharray="6 4"></path></svg>Rota atual</span>
+        </div>
+        <div role="alert" style="display:flex;align-items:flex-start;gap:12px;background:#F7EAD2;border:2px solid #7A5410;border-radius:20px;padding:12px 14px;color:#634410">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg>
+          <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:17px;line-height:22px;font-weight:900;text-wrap:pretty">Este trajeto tem uma subida de 9%, acima do seu limite</span><span style="font-size:15px;font-weight:700">Seu limite: 7% · inclinação estimada</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <div style="background:#FFFFFF;border:2px solid #DCCFC8;border-radius:22px;padding:12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+            <span style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:900"><svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true" style="display:block"><path d="M1 5H21" stroke="#4A4E69" stroke-width="5" stroke-dasharray="6 4"></path></svg>Rota atual</span>
+            <span style="font-size:28px;line-height:32px;font-weight:900">11 min</span>
+            <span style="font-size:16px;font-weight:800">Máx. 9%</span>
+            <dc-import name="InclinacaoTag" nivel="ingreme" sentido="subida" hint-size="110px,32px"></dc-import>
+            <span style="display:flex;align-items:center;gap:4px;font-size:14px;font-weight:800;color:#8E3527"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>Acima do seu limite</span>
+          </div>
+          <div style="background:#FFFFFF;border:3px solid #22223B;border-radius:22px;padding:11px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+            <span style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:900"><svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true" style="display:block"><path d="M3 5H19" stroke="#22223B" stroke-width="6" stroke-linecap="round"></path></svg>Mais plana</span>
+            <span style="font-size:28px;line-height:32px;font-weight:900">15 min</span>
+            <span style="font-size:16px;font-weight:800">Máx. 4%</span>
+            <dc-import name="InclinacaoTag" nivel="plano" sentido="subida" hint-size="90px,32px"></dc-import>
+            <span style="display:flex;align-items:center;gap:4px;font-size:14px;font-weight:800;color:#2F5A3C"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" aria-hidden="true" style="display:block;flex:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Dentro do seu limite</span>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
+          <div style="background:#FFFFFF;border-radius:16px;padding:10px 14px;font-size:15px;line-height:20px;font-weight:700;color:#4A4E69">Estimativa a partir de dados de altitude. Confira no local.</div>
+          <button type="button" style="height:64px;border-radius:22px;border:none;background:#22223B;color:#F2E9E4;font:900 20px Nunito, system-ui, sans-serif;cursor:pointer">Ver rota mais plana</button>
+          <button type="button" style="height:56px;border-radius:20px;border:2px solid #22223B;background:#FFFFFF;color:#22223B;font:800 18px Nunito, system-ui, sans-serif;cursor:pointer">Seguir na rota atual</button>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:1100px">
+    <span style="font-size:24px;font-weight:900">Novos no sistema</span>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start">
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Ícones · 24 px, traço 2 px</span>
+        <div style="display:flex;gap:20px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:64px;height:64px;border-radius:18px;background:#FFFFFF;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 15L16 4"></path><path d="M10 4h6v6"></path></svg></span><span style="font:500 14px 'IBM Plex Mono', ui-monospace, monospace">subida</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:64px;height:64px;border-radius:18px;background:#FFFFFF;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M5 4l11 11"></path><path d="M16 9v6h-6"></path></svg></span><span style="font:500 14px 'IBM Plex Mono', ui-monospace, monospace">descida</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:64px;height:64px;border-radius:18px;background:#FFFFFF;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" style="display:block;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 20h18"></path><path d="M3 12h15"></path><path d="M14 8l4 4-4 4"></path></svg></span><span style="font:500 14px 'IBM Plex Mono', ui-monospace, monospace">plano</span></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:16px;font-weight:800;color:#4A4E69">InclinacaoTag</span>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <dc-import name="InclinacaoTag" nivel="plano" sentido="reto" texto="até 5%" hint-size="130px,32px"></dc-import>
+          <dc-import name="InclinacaoTag" nivel="moderado" sentido="subida" texto="5% a 8,33%" hint-size="170px,32px"></dc-import>
+          <dc-import name="InclinacaoTag" nivel="ingreme" sentido="descida" texto="acima de 8,33%" hint-size="190px,32px"></dc-import>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:16px;font-weight:800;color:#4A4E69">Padrão de linha no mapa</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="display:flex;align-items:center;gap:10px;font-size:16px;font-weight:800"><svg width="64" height="12" viewBox="0 0 64 12" aria-hidden="true" style="display:block"><path d="M4 6H60" stroke="#36704A" stroke-width="8" stroke-linecap="round"></path></svg>Plano · contínua</span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:16px;font-weight:800"><svg width="64" height="12" viewBox="0 0 64 12" aria-hidden="true" style="display:block"><path d="M2 6H62" stroke="#7A5410" stroke-width="8" stroke-dasharray="12 7"></path></svg>Moderado · tracejada</span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:16px;font-weight:800"><svg width="64" height="12" viewBox="0 0 64 12" aria-hidden="true" style="display:block"><path d="M5 6H60" stroke="#A0402F" stroke-width="9" stroke-dasharray="0.1 12" stroke-linecap="round"></path></svg>Íngreme · pontilhada</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { limite: 7, preset: 'outro' };
+  trackRef = React.createRef();
+  dragging = false;
+  setLimite(v) {
+    v = Math.max(2, Math.min(12, v));
+    if (Math.abs(v - 8.33) < 0.26) v = 8.33; else v = Math.round(v * 2) / 2;
+    this.setState({ limite: v, preset: v === 5 ? 'manual' : v === 8.33 ? 'motor' : 'outro' });
+  }
+  fromX(x) {
+    const r = this.trackRef.current?.getBoundingClientRect();
+    if (!r) return;
+    this.setLimite(2 + ((x - r.left) / r.width) * 10);
+  }
+  renderVals() {
+    const { limite, preset } = this.state;
+    const txt = Number.isInteger(limite) ? String(limite) : String(limite).replace('.', ',');
+    const nivel = limite <= 5 ? 'plano' : limite <= 8.33 ? 'moderado' : 'ingreme';
+    const nome = { plano: 'Plano', moderado: 'Moderado', ingreme: 'Íngreme' }[nivel];
+    return {
+      limite, limiteTxt: txt, limiteNivel: nivel, ariaText: `${txt}%, ${nome}`,
+      thumbLeft: `${((limite - 2) / 10) * 100}%`,
+      selManual: preset === 'manual', notManual: preset !== 'manual',
+      selMotor: preset === 'motor', notMotor: preset !== 'motor',
+      selOutro: preset === 'outro', notOutro: preset !== 'outro',
+      pickManual: () => this.setState({ preset: 'manual', limite: 5 }),
+      pickMotor: () => this.setState({ preset: 'motor', limite: 8.33 }),
+      pickOutro: () => this.setState({ preset: 'outro' }),
+      trackRef: this.trackRef,
+      onDown: (e) => { this.dragging = true; e.currentTarget.setPointerCapture?.(e.pointerId); this.fromX(e.clientX); },
+      onMove: (e) => { if (this.dragging) this.fromX(e.clientX); },
+      onUp: () => { this.dragging = false; },
+      onKey: (e) => {
+        const m = { ArrowRight: 0.5, ArrowUp: 0.5, ArrowLeft: -0.5, ArrowDown: -0.5 };
+        if (m[e.key]) { e.preventDefault(); this.setLimite(limite + m[e.key]); }
+        else if (e.key === 'Home') { e.preventDefault(); this.setLimite(2); }
+        else if (e.key === 'End') { e.preventDefault(); this.setLimite(12); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+:root {
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --weight-regular: 400; --weight-semibold: 600; --weight-bold: 700; --weight-extrabold: 800; --weight-black: 900;
+
+  --text-display-size: 64px; --text-display-line: 72px; --text-display-tracking: -0.03em;
+  --text-h1-size: 44px;      --text-h1-line: 52px;      --text-h1-tracking: -0.02em;
+  --text-h2-size: 32px;      --text-h2-line: 40px;      --text-h2-tracking: -0.01em;
+  --text-h3-size: 24px;      --text-h3-line: 32px;
+  --text-body-lg-size: 20px; --text-body-lg-line: 32px;
+  --text-body-size: 18px;    --text-body-line: 28px;
+  --text-body-sm-size: 16px; --text-body-sm-line: 26px;  /* mínimo no app */
+  --text-label-size: 16px;   --text-label-line: 24px;
+  --text-caption-size: 14px; --text-caption-line: 20px;  /* só legendas de gráfico e metadados no desktop */
+}
