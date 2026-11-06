@@ -20,7 +20,8 @@
     "verificar": "npm run typecheck && npm test && npm run validar-kb",
     "test:banco": "bash scripts/testar-banco.sh",
     "e2e": "playwright test",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "conferir-links": "tsx scripts/conferir-links.ts"
   },
   "dependencies": {
     "react": "18.3.1",

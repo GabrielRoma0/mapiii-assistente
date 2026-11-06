@@ -1,0 +1,17 @@
+# Toda segunda às 9h (horário de Brasília), abre os links das fontes. Se algum quebrar, o job falha e o GitHub avisa.
+name: conferir-links
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run conferir-links
