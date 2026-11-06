@@ -24,6 +24,8 @@
     "tests",
     "scripts",
     "eval",
-    "src/core"
+    "src/core",
+    "e2e",
+    "playwright.config.ts"
   ]
 }

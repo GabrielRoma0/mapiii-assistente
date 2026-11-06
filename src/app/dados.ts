@@ -11,8 +11,11 @@ import { KB_EXEMPLO } from './kb-exemplo.ts';
 
 const kbReal = kbJson as Entrada[];
 
-/** true só em `npm run dev` com a base vazia: as telas usam a base fictícia de exemplo. */
-export const USANDO_EXEMPLO = import.meta.env.DEV && kbReal.length === 0;
+/**
+ * true só em `npm run dev`: com a base vazia, ou com VITE_BASE_EXEMPLO=true (os testes de tela usam a base fictícia
+ * para não depender do conteúdo real). Nunca no build de produção.
+ */
+export const USANDO_EXEMPLO = import.meta.env.DEV && (kbReal.length === 0 || import.meta.env.VITE_BASE_EXEMPLO === 'true');
 
 export const KB: Entrada[] = USANDO_EXEMPLO ? KB_EXEMPLO : kbReal;
 export const INDICE = criarIndice(KB);

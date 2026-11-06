@@ -1,6 +1,9 @@
 node_modules
 dist
 dev-dist
+test-results
+playwright-report
+.lighthouseci
 *.local
 
 # Material de referência de terceiros que veio no zip do design (não é usado pelo app e não pode ir para um repositório público).
