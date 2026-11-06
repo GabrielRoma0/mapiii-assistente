@@ -21,7 +21,7 @@ Quando perguntarem "o que eu faço agora?", "o que falta?" ou algo parecido:
 
    Rode também `npm run auditar-perguntas` e `npm run eval` quando a base já tiver fichas.
 3. Diga qual é a **próxima** tarefa (uma só), por que ela vem agora, e explique o passo a passo em linguagem simples, com os comandos e os arquivos exatos. Ofereça fazer junto a parte que for código.
-4. Ao terminar uma tarefa, rode os comandos de conferência e atualize o [PENDENCIAS.md](PENDENCIAS.md) (marque o que foi feito, com a data).
+4. Ao terminar uma tarefa, rode os comandos de conferência, atualize o [PENDENCIAS.md](PENDENCIAS.md) (marque o que foi feito, com a data) e acrescente uma linha em [docs/registro.md](docs/registro.md). Melhorias de código seguem a ordem de [docs/plano-de-melhorias.md](docs/plano-de-melhorias.md); marque `- [x]` lá também.
 
 O que você **não** faz, mesmo se pedirem: inventar conteúdo de direito, valor, prazo, telefone, e-mail, link ou lei; criar conta ou entrar com senha em serviço externo; colocar token, senha ou chave secreta em arquivo do repositório, no `.env.local` ou no chat. Nesses casos, explique como a dupla faz e confira depois.
 

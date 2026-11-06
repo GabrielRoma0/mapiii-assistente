@@ -8,6 +8,8 @@ O escopo e o cronograma vêm do **guia da dupla, versão 2 (04/11/2026)**. **Ent
 
 Última atualização: 06/11/2026.
 
+> **Outros registros:** o que já foi feito, sessão por sessão, está em [docs/registro.md](docs/registro.md). As melhorias de código (fluidez, visual, técnicas e produto), com ordem, plano e os destaques para o vídeo, estão em [docs/plano-de-melhorias.md](docs/plano-de-melhorias.md).
+
 ---
 
 ## 1. Onde o projeto está
@@ -179,7 +181,7 @@ Feito em 06/11/2026: escopo do guia v2 (campos novos das fichas, Me negaram, Mos
 | C1 | Ajustes depois do primeiro teste real da SPTrans (sessão, horário previsto, sentido) | H8 | Consulta real funciona por ponto e por linha |
 | C2 | Montar as fichas a partir do texto das fontes e configurar os canais (`config.ts`) | H1, H2 | `validar-kb`, `auditar-perguntas` e `eval` passam |
 | C3 | Corrigir o que o teste com pessoas mostrar | H9 | Dupla aprova |
-| C4 | Bônus, só se sobrar tempo: modo varredura | MVP testado | Usável só com um toque ou Tab e Enter |
+| C4 | Melhorias de fluidez, visual, técnicas e produto, na ordem do [plano de melhorias](docs/plano-de-melhorias.md) (fases A a E, código congelado em 14/11) | Decisões da seção 4 do plano | Cada uma marcada no plano e no registro |
 
 ---
 

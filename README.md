@@ -6,7 +6,7 @@ Protótipo de estudo (FIAP, Global Solution CitizenTech, case **Citizen Assist A
 
 O mapa colaborativo de calçadas é só visão de futuro e não está implementado.
 
-> **Pegando o projeto agora?** Leia [PENDENCIAS.md](PENDENCIAS.md): o que está pronto, o que falta, o que é parte humana e em que ordem.
+> **Pegando o projeto agora?** Leia [PENDENCIAS.md](PENDENCIAS.md): o que está pronto, o que falta, o que é parte humana e em que ordem. O histórico de tudo o que foi feito está em [docs/registro.md](docs/registro.md), e as próximas melhorias, com ordem e plano, em [docs/plano-de-melhorias.md](docs/plano-de-melhorias.md).
 
 ## O que o app faz
 
