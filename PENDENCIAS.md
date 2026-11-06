@@ -39,6 +39,7 @@ O escopo e o cronograma vêm do **guia da dupla, versão 2 (04/11/2026)**. **Ent
 | Embarque na entrega | Precisa estar ligado no build (`VITE_EMBARQUE_ATIVO=true`) para aparecer. Com dado real (H8) ou só com o exemplo. Decidir antes de H10. |
 | Conta opcional (antiga "Fase 2": login, perfil salvo, histórico) | **Proposta: cortar**, porque o guia v2 pede "nenhum login". O banco já pronto fica no repositório, sem uso. Falta a dupla confirmar. |
 | IA de reformulação | Desligada (o guia a deixa opcional, atrás de uma chave). Só ligar se sobrar tempo e com pedido explícito. |
+| Lembrar respostas da triagem no aparelho | **Decidido em 06/11: sim**, desmarcado por padrão, com aviso de celular compartilhado; desmarcar apaga. Feito. |
 | Repositório público | Decidido em 05/11/2026. Por isso nenhum segredo pode entrar no git. |
 
 ---
@@ -186,7 +187,7 @@ Feito em 06/11/2026: escopo do guia v2 (campos novos das fichas, Me negaram, Mos
 
 - **Nada fora da base, nenhuma ficha sem fonte.** Não inventar direito, valor, prazo, telefone, e-mail, link ou lei.
 - **Nunca dizer "você tem direito".** Só "Pode ter direito", "Talvez" ou "Provavelmente não se aplica". O validador recusa a frase em qualquer texto da ficha.
-- **Sem dados pessoais:** não pedir nome, CPF, diagnóstico, idade exata ou renda exata. Respostas da triagem só em memória.
+- **Sem dados pessoais:** não pedir nome, CPF, diagnóstico, idade exata ou renda exata. Respostas da triagem só em memória, a não ser que a pessoa marque "Lembrar neste aparelho" (nada sai do aparelho).
 - **Sem login, sem cookies de rastreamento, sem analytics.**
 - **Não se apresentar como canal oficial.** O aviso fixo de protótipo fica em todas as telas.
 - **Emergência de saúde:** só "Em emergência, ligue 192."

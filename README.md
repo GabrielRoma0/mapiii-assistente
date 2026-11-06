@@ -36,7 +36,7 @@ O app funciona sem internet depois da primeira visita e pode ser instalado (PWA)
 ## Privacidade
 
 - Sem login, sem cookies de rastreamento, sem analytics e sem envio de dados para nenhum servidor.
-- As respostas da triagem ficam só na memória da página. Não vão para a URL nem para o armazenamento do navegador.
+- As respostas da triagem ficam só na memória da página. Não vão para a URL. Só ficam no aparelho se a pessoa marcar "Lembrar minhas respostas neste aparelho" (desmarcado por padrão, na Rota dos Direitos e em Sobre); desmarcar apaga. Nada é enviado.
 - Texto com CPF, telefone ou e-mail é recusado sem ser processado nem guardado.
 - O Cartão da cadeira só fica no aparelho se a pessoa marcar "Guardar neste aparelho" (e sai ao desmarcar). Só tem escolhas fixas, sem texto livre.
 - O Embarque busca pelo nome do ponto ou da linha: nunca usa a localização da pessoa.

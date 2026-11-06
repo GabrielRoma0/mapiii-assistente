@@ -55,7 +55,7 @@ Stack: Vite 8, React 18, TypeScript, Vitest 4, vite-plugin-pwa, tsx. Sem outras 
 - **Nada fora da base; nenhuma ficha sem fonte** (`fonte_url` https, `tipo_fonte`, `verificado_em`).
 - **Nunca "você tem direito".** Só "Pode ter direito", "Talvez" ou "Provavelmente não se aplica", com o porquê. O validador da base recusa a frase.
 - **Lei só com fonte:** `frase_motorista` e `modelo_recurso` exigem `base_legal` com link oficial, trazida pela dupla.
-- **Sem dados pessoais.** Não pedir nome, CPF, diagnóstico, idade exata, renda exata ou endereço. Respostas da triagem só em memória. Texto com CPF, telefone ou e-mail é recusado sem ser guardado.
+- **Sem dados pessoais.** Não pedir nome, CPF, diagnóstico, idade exata, renda exata ou endereço. Respostas da triagem só em memória, a não ser que a pessoa marque "Lembrar minhas respostas neste aparelho" (desmarcado por padrão; guarda só ids e valores das perguntas no `localStorage`, sem rede; desmarcar apaga). Decidido pela dupla em 06/11/2026. Texto com CPF, telefone ou e-mail é recusado sem ser guardado.
 - **Emergência de saúde:** só "Em emergência, ligue 192."
 - **Aviso fixo** "Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas." em todas as telas.
 - **Flags desligadas por padrão:** `VITE_EMBARQUE_ATIVO` (a busca de ônibus em tempo real) e a camada de IA (só quando pedido explicitamente). Cartão da cadeira, Mostre ao motorista, Me negaram e Reclamação pronta não dependem da flag.

@@ -7,6 +7,7 @@ import { Titulo, Voltar } from '../comum';
 import { KB } from '../dados';
 import { useEstado } from '../estado';
 import { href, navegar } from '../rotas';
+import { LembrarRespostas } from '../LembrarRespostas';
 import css from '../app.module.css';
 
 // Resumo das respostas que a pessoa deu, sem as sensíveis (saúde, renda, idade, benefícios).
@@ -66,6 +67,7 @@ export function RotaDosDireitos() {
           </li>
         ))}
       </ul>
+      <LembrarRespostas />
       {temLaudo && (
         <a className={css.botaoSecundario} href={href.laudo} style={{ textDecoration: 'none' }}>
           Ver a lista única para o laudo

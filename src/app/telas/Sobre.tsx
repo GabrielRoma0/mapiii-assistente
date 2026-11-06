@@ -6,6 +6,7 @@ import { LinhaDoTempo, OpcoesEmCartao, SourceTypeBadge, dataBR } from '../../ui/
 import { Titulo, Voltar } from '../comum';
 import { DOMINIOS, KB } from '../dados';
 import { href } from '../rotas';
+import { LembrarRespostas } from '../LembrarRespostas';
 import css from '../app.module.css';
 
 const TIPOS: Record<TipoEntrada, string> = { direito: 'Direito', servico: 'Serviço', norma: 'Norma' };
@@ -114,8 +115,10 @@ export function Sobre() {
           <span style={{ flex: 'none' }}>
             <Icon name="escudo_check" size={22} />
           </span>
-          Suas respostas da triagem ficam só na memória desta página e somem ao fechá-la. Não há conta, cookies de rastreamento nem analytics.
+          Suas respostas da triagem ficam só na memória desta página e somem ao fechá-la, a não ser que você marque “Lembrar minhas respostas neste
+          aparelho”. Mesmo assim, nada é enviado. Não há conta, cookies de rastreamento nem analytics.
         </p>
+        <LembrarRespostas />
         <p className={css.texto}>
           Para avaliar o protótipo, cada pergunta livre guarda <b>neste aparelho</b> só o tema, se achou resposta, os segundos até a resposta e o
           voto “Esta resposta ajudou?”. Sem o texto da pergunta e sem identificar você. Nada é enviado.
