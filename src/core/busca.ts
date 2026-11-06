@@ -6,7 +6,7 @@
 //    Palavras que não existem na base entram no denominador: ruído derruba a nota.
 //  - similaridade: maior Jaccard entre a pergunta e cada pergunta_exemplo da entrada.
 import { CONFIG, type ConfigBusca } from './config.ts';
-import { tokenizar } from './normalizar.ts';
+import { normalizar, tokenizar } from './normalizar.ts';
 
 // O mínimo que a busca precisa de uma entrada. O resto dos campos passa direto.
 export interface EntradaBuscavel {
@@ -108,4 +108,35 @@ export function buscar<T>(pergunta: string, indice: Indice<T>, opcoes: Partial<C
     .slice(0, cfg.maxSugestoes);
 
   return { encontrou, melhor, sugestoes, ranking };
+}
+
+/**
+ * Sugestões enquanto a pessoa digita: perguntas de exemplo das fichas que têm as palavras digitadas
+ * (a última pode estar pela metade). A partir de 3 letras; sem repetir; na ordem de quantas palavras batem
+ * e, no empate, na ordem da base. Só sugere: nada é enviado sem a pessoa escolher.
+ */
+export function sugerirPerguntas<T extends EntradaBuscavel>(texto: string, indice: Indice<T>, max = 3): string[] {
+  if (normalizar(texto).replace(/\s/g, '').length < 3) return [];
+  const tokens = tokenizar(texto);
+  if (!tokens.length) return [];
+  const ultima = tokens[tokens.length - 1];
+  const vistos = new Set<string>();
+  const candidatas: { pergunta: string; nota: number; ordem: number }[] = [];
+  let ordem = 0;
+  for (const item of indice.entradas) {
+    (item.entrada.perguntas_exemplo ?? []).forEach((pergunta, i) => {
+      ordem++;
+      const chave = normalizar(pergunta);
+      if (vistos.has(chave) || chave === normalizar(texto)) return;
+      const palavras = item.perguntas[i];
+      const nota = tokens.filter((t) => palavras.includes(t) || (t === ultima && palavras.some((p) => p.startsWith(t)))).length;
+      if (!nota) return;
+      vistos.add(chave);
+      candidatas.push({ pergunta, nota, ordem });
+    });
+  }
+  return candidatas
+    .sort((a, b) => b.nota - a.nota || a.ordem - b.ordem)
+    .slice(0, max)
+    .map((c) => c.pergunta);
 }

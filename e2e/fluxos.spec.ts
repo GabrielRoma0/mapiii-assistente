@@ -195,3 +195,14 @@ test('transição entre telas: existe, e desliga para quem pede menos movimento'
   await page.goto('/#/sobre');
   expect(await page.locator('main').evaluate((m) => getComputedStyle(m).animationName)).toBe('none');
 });
+
+test('sugestões enquanto digita: aparecem a partir de 3 letras e enviam a pergunta escolhida', async ({ page }) => {
+  await page.goto('/#/perguntar');
+  const campo = page.getByLabel('Sua pergunta');
+  await campo.fill('pa');
+  await expect(page.getByRole('group', { name: 'Sugestões de pergunta' })).toHaveCount(0);
+  await campo.fill('passe');
+  const grupo = page.getByRole('group', { name: 'Sugestões de pergunta' });
+  await grupo.getByRole('button', { name: 'Como peço o passe de exemplo?' }).click();
+  await expect(page.getByRole('region', { name: 'Conversa' }).getByText('Direito de exemplo A').first()).toBeVisible();
+});

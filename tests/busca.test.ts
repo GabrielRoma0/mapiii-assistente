@@ -134,3 +134,19 @@ teste('buscar: entrada sem perguntas_exemplo ou palavras_chave não quebra', () 
   const parcial = criarIndice<{ id: string } & EntradaBuscavel>([{ id: 'x' }]);
   assert.equal(buscar('rampa', parcial).encontrou, false);
 });
+
+import { sugerirPerguntas } from '../src/core/busca.ts';
+
+teste('sugerirPerguntas: até 3 perguntas de exemplo parecidas com o que foi digitado, sem repetir', () => {
+  const idx = criarIndice([
+    { perguntas_exemplo: ['Como peço o passe livre?', 'Cadeirante paga ônibus?'], palavras_chave: ['passe livre'] },
+    { perguntas_exemplo: ['Quem pode receber o BPC?', 'Como peço o BPC?'], palavras_chave: ['bpc'] },
+    { perguntas_exemplo: ['Como peço o passe livre?'], palavras_chave: ['x'] }
+  ]);
+  assert.deepEqual(sugerirPerguntas('passe', idx), ['Como peço o passe livre?']);
+  assert.deepEqual(sugerirPerguntas('como peço', idx), ['Como peço o passe livre?', 'Como peço o BPC?']);
+  assert.deepEqual(sugerirPerguntas('ônib', idx), ['Cadeirante paga ônibus?'], 'a última palavra pode estar pela metade');
+  assert.deepEqual(sugerirPerguntas('ab', idx), [], 'menos de 3 letras');
+  assert.deepEqual(sugerirPerguntas('receita de bolo', idx), []);
+  assert.ok(sugerirPerguntas('como', idx, 1).length <= 1);
+});

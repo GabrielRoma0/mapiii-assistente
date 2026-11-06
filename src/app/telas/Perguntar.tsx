@@ -5,6 +5,7 @@ import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Icon } from '../../../design-system/components/icons/Icon';
 import { CartaoResposta, FalaMapi, FalaVoce, SourceChip } from '../../ui/assistente';
 import { BotaoFalar } from '../../ui/acoes';
+import { sugerirPerguntas } from '../../core/busca';
 import { perguntasNoModo } from '../../core/perguntas';
 import { CONFIG } from '../../core/config';
 import { responderPergunta, passosDaEntrada, MENSAGEM_ACOLHIMENTO, type RespostaPergunta } from '../../core/responder';
@@ -73,6 +74,8 @@ export function Perguntar() {
   const proximoId = useRef(1);
   const fimDaConversa = useRef<HTMLDivElement>(null);
   const respondeuTriagem = Object.keys(respostas).length > 0;
+  // Sugestões enquanto digita (a partir de 3 letras), tiradas das perguntas de exemplo das fichas.
+  const sugestoes = erroCampo ? [] : sugerirPerguntas(texto, INDICE);
   const armazenamento = useRef(armazenamentoDoNavegador()).current;
   // "Segundos até a resposta": do primeiro toque ou tecla no campo (ou clique numa sugestão) até a resposta aparecer.
   const inicio = useRef<number | null>(null);
@@ -284,6 +287,16 @@ export function Perguntar() {
             <Icon name="enviar" size={24} />
           </button>
         </div>
+        {sugestoes.length > 0 && (
+          <div className={css.sugestoes} aria-label="Sugestões de pergunta" role="group">
+            <span className={css.contador}>Você quis perguntar:</span>
+            {sugestoes.map((t) => (
+              <button key={t} type="button" className={css.sugestao} onClick={() => enviar(t)}>
+                {t}
+              </button>
+            ))}
+          </div>
+        )}
         <BotaoFalar
           aoOuvir={(t) => {
             marcarInicio();
