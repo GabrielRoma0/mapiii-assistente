@@ -746,3 +746,89 @@
   line-height: 24px;
   font-weight: var(--weight-bold);
 }
+
+/* ---------- guia v2: na rua, motorista, cartão, me negaram ---------- */
+
+/* "Mostre ao motorista": letra grande e contraste máximo, para virar a tela para outra pessoa. */
+.telaMotorista {
+  background: var(--surface-inverse);
+  color: var(--text-inverse);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.fraseMotorista {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: var(--weight-black, 900);
+  letter-spacing: -0.01em;
+}
+.normaMotorista {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: var(--weight-extrabold);
+}
+/* O QR fica sempre escuro sobre branco (mesmo no tema escuro), para a câmera ler. */
+.qr {
+  align-self: center;
+  background: var(--mapi-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  width: min(240px, 70vw);
+}
+.qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.modelo {
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 25px;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.chegadaDestaque {
+  margin: 0;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: var(--weight-black, 900);
+}
+
+.listaSimples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Impressão do checklist e do modelo: só o conteúdo e o aviso de protótipo. */
+@media print {
+  :global(.naoImprimir),
+  .voltar,
+  .pular,
+  .semInternet,
+  .avisoDev {
+    display: none !important;
+  }
+  .casca {
+    max-width: none;
+  }
+}

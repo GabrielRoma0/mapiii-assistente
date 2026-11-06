@@ -15,6 +15,12 @@ import { NaoEncontrada } from './app/telas/NaoEncontrada';
 import { Vitrine } from './vitrine/Vitrine';
 import { Embarque } from './app/telas/Embarque';
 import { Reclamacao } from './app/telas/Reclamacao';
+import { NaRua } from './app/telas/NaRua';
+import { Negaram } from './app/telas/Negaram';
+import { Motorista } from './app/telas/Motorista';
+import { Cartao } from './app/telas/Cartao';
+import { Atalho } from './app/telas/Atalho';
+import { Laudo } from './app/telas/Laudo';
 import { EMBARQUE_ATIVO } from './app/embarque/recurso';
 import css from './app/app.module.css';
 
@@ -38,7 +44,20 @@ function Tela({ rota }: { rota: Rota }) {
       // Diferencial desligado por padrão: sem a flag, o endereço não existe.
       return EMBARQUE_ATIVO ? <Embarque /> : <NaoEncontrada />;
     case 'reclamacao':
-      return EMBARQUE_ATIVO ? <Reclamacao /> : <NaoEncontrada />;
+      // A Reclamação pronta não depende da API: fica sempre disponível.
+      return <Reclamacao />;
+    case 'na_rua':
+      return <NaRua />;
+    case 'negaram':
+      return <Negaram id={rota.id} />;
+    case 'motorista':
+      return <Motorista id={rota.id} />;
+    case 'cartao':
+      return <Cartao />;
+    case 'atalho':
+      return <Atalho id={rota.id} />;
+    case 'laudo':
+      return <Laudo />;
     case 'componentes':
       return import.meta.env.DEV ? <Vitrine /> : <NaoEncontrada />;
     default:
@@ -50,7 +69,7 @@ export function App() {
   const rota = useRota();
   const online = useOnline();
   // A chave força a tela a montar de novo ao trocar de rota (foco no título, rolagem no topo).
-  const chave = rota.tela === 'direito' ? `direito-${rota.id}` : rota.tela;
+  const chave = 'id' in rota && rota.id ? `${rota.tela}-${rota.id}` : rota.tela;
   return (
     <ProvedorEstado>
       <a className={css.pular} href="#conteudo" onClick={(e) => { e.preventDefault(); document.getElementById('conteudo')?.focus(); }}>

@@ -1,5 +1,6 @@
-// Embarque garantido (Fase 3, atrás da flag EMBARQUE_ATIVO): quantos veículos de uma linha estão acessíveis agora.
-// Só pela linha: nunca usa a localização da pessoa. O app fala só com a Edge Function `onibus`.
+// Embarque garantido (atrás da flag EMBARQUE_ATIVO). Dois jeitos, sem nunca usar a localização da pessoa:
+// - por ponto (padrão, guia v2): o próximo ônibus acessível que chega ao ponto, com o tempo de chegada;
+// - por linha: quantos veículos de uma linha estão acessíveis agora. O app fala só com a Edge Function `onibus`.
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Icon } from '../../../design-system/components/icons/Icon';
 import { FalaMapi, SourceChip } from '../../ui/assistente';
@@ -18,6 +19,7 @@ import { consultarExemplo, SELO_EXEMPLO, type DadosExemplo } from '../embarque/e
 import dadosExemplo from '../../../data/embarque-exemplo.json';
 import { SUPABASE_CHAVE, SUPABASE_URL } from '../embarque/recurso';
 import { PainelReclamacao } from '../reclamacao/PainelReclamacao';
+import { BuscaPonto } from '../embarque/BuscaPonto';
 import { armazenamentoDoNavegador, registrarEmbarque } from '../../core/registro';
 import { Titulo, Voltar } from '../comum';
 import { DOMINIOS } from '../dados';
@@ -100,6 +102,7 @@ export function Embarque({ consultar = (p) => consultarOnibus(p, { url: SUPABASE
   const [estado, setEstado] = useState<Estado>({ fase: 'inicio' });
   const [anuncio, setAnuncio] = useState('');
   const [reclamar, setReclamar] = useState(false);
+  const [busca, setBusca] = useState<'ponto' | 'linha'>('ponto');
 
   // Indicador "tempo até achar o ônibus certo" (registro local anônimo: só modo, segundos e achou).
   // Começa ao abrir a tela (ou ao trocar de modo) e para no primeiro resumo de veículos.
@@ -185,12 +188,35 @@ export function Embarque({ consultar = (p) => consultarOnibus(p, { url: SUPABASE
     <>
       <Voltar para={href.inicio} rotulo="Início" />
       <Titulo>Embarque garantido</Titulo>
-      <p className={css.texto}>Veja quantos ônibus de uma linha estão acessíveis agora, segundo a SPTrans, para decidir se vale esperar no ponto.</p>
+      <p className={css.texto}>Veja o próximo ônibus que você consegue usar, segundo a SPTrans: os apps comuns mostram o próximo ônibus; aqui aparece o próximo acessível.</p>
       {exemplo ? <SeloExemplo /> : <SeloTempoReal />}
       <button type="button" className={css.botaoSecundario} style={{ alignSelf: 'flex-start' }} onClick={() => trocarModo(exemplo ? 'real' : 'exemplo')}>
         {exemplo ? 'Voltar ao tempo real' : 'Ver exemplo'}
       </button>
 
+      <div className={css.abas} role="group" aria-label="Como buscar">
+        <button type="button" className={busca === 'ponto' ? css.botaoPrincipal : css.botaoSecundario} aria-pressed={busca === 'ponto'} onClick={() => setBusca('ponto')}>
+          Por ponto
+        </button>
+        <button type="button" className={busca === 'linha' ? css.botaoPrincipal : css.botaoSecundario} aria-pressed={busca === 'linha'} onClick={() => setBusca('linha')}>
+          Por linha
+        </button>
+      </div>
+
+      {busca === 'ponto' ? (
+        <BuscaPonto
+          key={modo}
+          consultar={consultarAgora}
+          exemplo={exemplo}
+          agora={agora}
+          aoInteragir={() => {
+            medicao.current.interagiu = true;
+          }}
+          aoAchar={() => fecharMedicao(true)}
+          anunciar={setAnuncio}
+        />
+      ) : (
+        <>
       <form className={css.pilha} onSubmit={buscarLinhas} noValidate role="search" aria-label="Buscar linha de ônibus">
         <div className={css.campo}>
           <label htmlFor={idCampo} style={{ fontSize: 17, fontWeight: 800 }}>
@@ -333,6 +359,14 @@ export function Embarque({ consultar = (p) => consultarOnibus(p, { url: SUPABASE
           </>
         )}
       </section>
+
+        </>
+      )}
+      {busca === 'ponto' && (
+        <p className="visualmente-oculto" aria-live="polite">
+          {anuncio}
+        </p>
+      )}
 
       <section className={css.secao} aria-labelledby="fonte-embarque">
         <h2 id="fonte-embarque" className={css.subtitulo}>

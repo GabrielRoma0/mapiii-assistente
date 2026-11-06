@@ -1,7 +1,7 @@
 // Estado da sessão: só em memória. Some ao fechar ou recarregar a página.
 // Nada daqui vai para a URL, localStorage, cookies ou rede.
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
-import type { Respostas } from '../core/perguntas.ts';
+import type { Modo, Respostas } from '../core/perguntas.ts';
 
 interface EstadoApp {
   respostas: Respostas;
@@ -10,6 +10,9 @@ interface EstadoApp {
   /** Documentos marcados no checklist de cada entrada. */
   marcados: Record<string, string[]>;
   alternarDocumento: (entradaId: string, documento: string) => void;
+  /** "Sou a pessoa" ou "Cuido de alguém": muda o texto das perguntas. null = não escolheu. */
+  modo: Modo | null;
+  escolherModo: (m: Modo | null) => void;
 }
 
 const Contexto = createContext<EstadoApp | null>(null);
@@ -17,6 +20,7 @@ const Contexto = createContext<EstadoApp | null>(null);
 export function ProvedorEstado({ children }: { children: ReactNode }) {
   const [respostas, setRespostas] = useState<Respostas>({});
   const [marcados, setMarcados] = useState<Record<string, string[]>>({});
+  const [modo, setModo] = useState<Modo | null>(null);
 
   const valor = useMemo<EstadoApp>(
     () => ({
@@ -35,9 +39,11 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
           const atuais = m[entradaId] ?? [];
           const novos = atuais.includes(documento) ? atuais.filter((d) => d !== documento) : [...atuais, documento];
           return { ...m, [entradaId]: novos };
-        })
+        }),
+      modo,
+      escolherModo: setModo
     }),
-    [respostas, marcados]
+    [respostas, marcados, modo]
   );
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>;
 }

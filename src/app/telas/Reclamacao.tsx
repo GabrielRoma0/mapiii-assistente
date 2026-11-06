@@ -6,7 +6,7 @@ import { href } from '../rotas';
 export function Reclamacao() {
   return (
     <>
-      <Voltar para={href.inicio} rotulo="Início" />
+      <Voltar para={href.naRua} rotulo="Garanta na rua" />
       <Titulo>Me negaram o embarque, e agora?</Titulo>
       <PainelReclamacao />
     </>

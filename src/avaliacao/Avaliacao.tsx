@@ -157,7 +157,7 @@ export function Avaliacao() {
           <section aria-labelledby="embarque" className={app.secao}>
             <h2 id="embarque" className={app.subtitulo}>Embarque garantido: tempo até achar o ônibus certo</h2>
             <p className={app.texto}>
-              Do abrir a tela do Embarque até ver o resumo de veículos acessíveis da linha. O tempo considera só quem chegou ao resumo. Cada medição guarda
+              Do abrir a tela do Embarque até ver a previsão do ponto (ou o resumo da linha). O tempo considera só quem chegou ao resultado. Cada medição guarda
               só o modo, os segundos e se achou.
             </p>
             {embarque.length === 0 ? (

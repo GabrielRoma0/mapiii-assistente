@@ -1,9 +1,9 @@
-// Escolher minha situação: triagem em passos. Só aparecem as perguntas que alguma condição da base usa.
+// Descobrir o que posso pedir: triagem em passos. Só aparecem as perguntas que alguma condição da base usa.
 // As respostas ficam só na memória (useEstado): nunca na URL nem em armazenamento.
 import { useId, useState } from 'react';
 import { Icon } from '../../../design-system/components/icons/Icon';
 import { FalaMapi, OpcoesEmCartao, OpcoesMultiplasEmCartao } from '../../ui/assistente';
-import { comoLista, opcoesNaTela, perguntasDaTriagem, type Pergunta } from '../../core/perguntas';
+import { comoLista, opcoesNaTela, perguntasDaTriagem, perguntasNoModo, type Pergunta } from '../../core/perguntas';
 import { Titulo, Voltar } from '../comum';
 import { CAMPOS_USADOS } from '../dados';
 import { useEstado } from '../estado';
@@ -46,16 +46,17 @@ function CampoDaPergunta({ pergunta, valor, aoMudar }: { pergunta: Pergunta; val
 }
 
 export function Triagem() {
-  const { respostas, responder } = useEstado();
+  const { respostas, responder, modo } = useEstado();
   const [passo, setPasso] = useState(0);
   const [faltou, setFaltou] = useState(false);
-  const perguntas = perguntasDaTriagem(CAMPOS_USADOS, respostas);
+  // No modo "Sou a pessoa", a pergunta "Para quem é?" já está respondida (eu) e não aparece.
+  const perguntas = perguntasDaTriagem(CAMPOS_USADOS, respostas, perguntasNoModo(modo)).filter((p) => !(modo === 'pessoa' && p.id === 'p_quem'));
 
   if (!perguntas.length) {
     return (
       <>
         <Voltar para={href.inicio} rotulo="Início" />
-        <Titulo>Escolher minha situação</Titulo>
+        <Titulo>Descobrir o que posso pedir</Titulo>
         <FalaMapi estado="duvida">A base ainda não tem direitos cadastrados, então não tenho perguntas para fazer. Tente “Fazer uma pergunta”.</FalaMapi>
       </>
     );
@@ -80,12 +81,12 @@ export function Triagem() {
   return (
     <>
       <Voltar
-        rotulo="Escolher minha situação"
+        rotulo="Descobrir o que posso pedir"
         aoVoltar={() => (atual === 0 ? navegar(href.inicio) : (setFaltou(false), setPasso(atual - 1)))}
       />
       {/* key: cada passo monta o título de novo e o foco vai para ele, para o leitor de tela anunciar a nova pergunta. */}
       <Titulo key={`titulo-${pergunta.id}`}>
-        <span className="visualmente-oculto">Escolher minha situação: </span>
+        <span className="visualmente-oculto">Descobrir o que posso pedir: </span>
         Passo {atual + 1} de {perguntas.length}
       </Titulo>
       <div className={css.progresso} aria-hidden="true">

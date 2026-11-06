@@ -8,7 +8,11 @@ import { MapiPersonagem, ESTADOS_MAPI, type EstadoMapi } from './MapiPersonagem'
 import type { TipoFonte } from '../core/kb-schema.ts';
 import css from './assistente.module.css';
 
-export const AVISO_PROTOTIPO = 'Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas.';
+import { AVISO_PROTOTIPO_TEXTO } from '../core/avisos.ts';
+import { haQuantosDias } from '../core/garantia.ts';
+import { BotaoOuvir } from './acoes';
+
+export const AVISO_PROTOTIPO = AVISO_PROTOTIPO_TEXTO;
 export { AVISO_CHECAGEM } from '../core/oficial.ts';
 
 export type { TipoFonte };
@@ -83,7 +87,10 @@ export function SourceChip({ nome, url, verificadoEm }: { nome: string; url: str
           {dominio && ` · ${dominio}`}
           <span className="visualmente-oculto"> (abre em nova aba)</span>
         </span>
-        <span className={css.fonteData}>verificado em {dataBR(verificadoEm)}</span>
+        <span className={css.fonteData}>
+          verificado em {dataBR(verificadoEm)}
+          {haQuantosDias(verificadoEm) && ` (${haQuantosDias(verificadoEm)})`}
+        </span>
       </span>
     </a>
   );
@@ -377,6 +384,7 @@ export function CartaoResposta({
       <section className={css.secao}>
         <h2 className={css.secaoTitulo}>Resumo</h2>
         <p className={css.texto}>{resposta.resumo}</p>
+        <BotaoOuvir texto={[resposta.resumo, ...resposta.passos].join(' ')} rotulo="Ouvir a resposta" />
         {resposta.elegibilidade && (
           <span style={{ alignSelf: 'flex-start' }}>
             <EligibilityChip valor={resposta.elegibilidade} />

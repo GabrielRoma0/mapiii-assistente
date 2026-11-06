@@ -4,6 +4,8 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Icon } from '../../../design-system/components/icons/Icon';
 import { CartaoResposta, FalaMapi, FalaVoce, SourceChip } from '../../ui/assistente';
+import { BotaoFalar } from '../../ui/acoes';
+import { perguntasNoModo } from '../../core/perguntas';
 import { CONFIG } from '../../core/config';
 import { responderPergunta, passosDaEntrada, MENSAGEM_ACOLHIMENTO, type RespostaPergunta } from '../../core/responder';
 import { MENSAGEM_EMERGENCIA } from '../../core/validar';
@@ -20,7 +22,6 @@ import {
 import { Titulo, Voltar } from '../comum';
 import { CANAL_OFICIAL_ID, INDICE, KB } from '../dados';
 import { useEstado } from '../estado';
-import { EMBARQUE_ATIVO } from '../embarque/recurso';
 import { href } from '../rotas';
 import css from '../app.module.css';
 
@@ -61,7 +62,7 @@ function Sugestoes({ entradas, titulo, aoAbrir }: { entradas: Entrada[]; titulo:
 }
 
 export function Perguntar() {
-  const { respostas } = useEstado();
+  const { respostas, modo } = useEstado();
   const idCampo = useId();
   const [texto, setTexto] = useState('');
   const [erroCampo, setErroCampo] = useState('');
@@ -140,7 +141,7 @@ export function Perguntar() {
         verificadoEm: entrada.verificado_em,
         tipoFonte: tipoFonteNaTela(entrada),
         limitacao: entrada.limitacao,
-        elegibilidade: respondeuTriagem && entrada.condicoes ? avaliarEntrada(entrada, respostas).classe : undefined
+        elegibilidade: respondeuTriagem && entrada.condicoes ? avaliarEntrada(entrada, respostas, perguntasNoModo(modo)).classe : undefined
       }}
       voto={votos[m.id] ?? null}
       aoVotar={(v) => {
@@ -184,9 +185,9 @@ export function Perguntar() {
         return (
           <div className={css.pilha}>
             {r.acolher && <FalaMapi estado="acolhimento">{MENSAGEM_ACOLHIMENTO}</FalaMapi>}
-            {r.acolher && EMBARQUE_ATIVO && (
-              <a className={css.sugestao} href={href.reclamacao} style={{ textDecoration: 'none' }}>
-                Negaram o embarque no ônibus? Preparar uma reclamação
+            {r.acolher && (
+              <a className={css.sugestao} href={href.negaram()} style={{ textDecoration: 'none' }}>
+                Me negaram, e agora? Ver o caminho de recurso
               </a>
             )}
             <FalaMapi estado="duvida">
@@ -208,9 +209,9 @@ export function Perguntar() {
         return (
           <div className={css.pilha}>
             {r.acolher && <FalaMapi estado="acolhimento">{MENSAGEM_ACOLHIMENTO}</FalaMapi>}
-            {r.acolher && EMBARQUE_ATIVO && (
-              <a className={css.sugestao} href={href.reclamacao} style={{ textDecoration: 'none' }}>
-                Negaram o embarque no ônibus? Preparar uma reclamação
+            {r.acolher && (
+              <a className={css.sugestao} href={href.negaram()} style={{ textDecoration: 'none' }}>
+                Me negaram, e agora? Ver o caminho de recurso
               </a>
             )}
             <FalaMapi estado="achei">{r.entrada.titulo}</FalaMapi>
@@ -283,8 +284,16 @@ export function Perguntar() {
             <Icon name="enviar" size={24} />
           </button>
         </div>
+        <BotaoFalar
+          aoOuvir={(t) => {
+            marcarInicio();
+            setTexto(t.slice(0, CONFIG.entrada.maxCaracteres + 50));
+            document.getElementById(idCampo)?.focus();
+          }}
+          aoAvisar={setAnuncio}
+        />
         <span className={css.dicaCampo} id={`${idCampo}-dica`}>
-          <span>Não escreva CPF, telefone nem e-mail.</span>
+          <span>Não escreva nem fale CPF, telefone ou e-mail.</span>
           <span>
             {texto.trim().length} de {CONFIG.entrada.maxCaracteres}
           </span>

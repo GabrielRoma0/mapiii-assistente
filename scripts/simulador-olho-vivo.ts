@@ -4,10 +4,11 @@
 //   VITE_EMBARQUE_ATIVO=true
 //   VITE_SUPABASE_URL=http://localhost:5173/__simulador
 //   VITE_SUPABASE_PUBLISHABLE_KEY=simulador
+// Pontos: "central" (acessível em 14 min, depois de 2 sem acessibilidade), "sem acessível", "vazio" e "fora".
 // Cenários pelo termo buscado: "8000" (dois sentidos, um com dado velho), "999" (sem veículos), "vazia" (linha inexistente),
 // "fora" (API fora), "limite" (429), "lento" (tempo esgotado).
 import type { Plugin } from 'vite';
-import { criarServico } from '../supabase/functions/_shared/onibus-servidor';
+import { criarServico } from '../supabase/functions/_shared/onibus-servidor.ts';
 
 const json = (d: unknown, status = 200) => new Response(JSON.stringify(d), { status, headers: { 'content-type': 'application/json' } });
 const atras = (s: number) => new Date(Date.now() - s * 1000).toISOString();
@@ -29,6 +30,32 @@ const fetchFicticio = (async (entrada: RequestInfo | URL, init: RequestInit = {}
       ]);
     }
     return json([]);
+  }
+  if (caminho === '/Parada/Buscar') {
+    const termo = (url.searchParams.get('termosBusca') ?? '').toLowerCase();
+    if (termo === 'fora') return new Response('', { status: 500 });
+    if (termo === 'vazio') return json([]);
+    return json([
+      { cp: 101, np: 'PONTO FICTÍCIO CENTRAL', ed: 'AV FICTÍCIA, 1000', py: 0, px: 0 },
+      { cp: 102, np: 'PONTO FICTÍCIO SEM ACESSÍVEL', ed: 'R FICTÍCIA', py: 0, px: 0 },
+      { cp: 103, np: 'PONTO FICTÍCIO VAZIO', ed: 'PRAÇA FICTÍCIA', py: 0, px: 0 }
+    ]);
+  }
+  if (caminho === '/Previsao/Parada') {
+    const cp = url.searchParams.get('codigoParada');
+    const agora = new Date();
+    const hr = new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Sao_Paulo' }).format(agora);
+    const mais = (m: number) =>
+      new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Sao_Paulo' }).format(new Date(agora.getTime() + m * 60000));
+    const v = (p: string, a: boolean, m: number) => ({ p, t: mais(m), a, ta: atras(20), py: 0, px: 0 });
+    if (cp === '101') {
+      return json({ hr, p: { cp: 101, np: 'PONTO FICTÍCIO CENTRAL', py: 0, px: 0, l: [
+        { c: '8000-10', cl: 1, sl: 1, lt0: 'TERMINAL FICTÍCIO B', lt1: 'TERMINAL FICTÍCIO A', qv: 2, vs: [v('11002', false, 4), v('11001', true, 14)] },
+        { c: '9000-10', cl: 4, sl: 1, lt0: 'BAIRRO FICTÍCIO', lt1: 'CENTRO FICTÍCIO', qv: 1, vs: [v('33001', false, 9)] }
+      ] } });
+    }
+    if (cp === '102') return json({ hr, p: { cp: 102, np: 'PONTO FICTÍCIO SEM ACESSÍVEL', py: 0, px: 0, l: [{ c: '8000-10', cl: 2, sl: 2, lt0: 'TERMINAL FICTÍCIO A', lt1: 'TERMINAL FICTÍCIO B', qv: 1, vs: [v('22001', false, 6)] }] } });
+    return json({ hr, p: { cp: Number(cp), np: 'PONTO FICTÍCIO VAZIO', py: 0, px: 0, l: [] } });
   }
   if (caminho === '/Posicao/Linha') {
     const cl = url.searchParams.get('codigoLinha');

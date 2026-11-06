@@ -27,10 +27,15 @@ O esquema está em código em `src/core/kb-schema.ts`. As perguntas da triagem e
 | `tipo_fonte` | texto | sim | `oficial`, `secundaria` ou `desatualizada` (veja abaixo). |
 | `verificado_em` | data `AAAA-MM-DD` | sim | Dia em que alguém abriu o link e conferiu a entrada. Não pode ser futura. |
 | `limitacao` | texto | sim | O que a resposta não cobre (ex.: `Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans.`). |
+| `base_legal` | lista | não | Leis que sustentam a ficha: `[{"norma": "Lei ...", "artigo": "art. ...", "url": "https://..."}]`. `artigo` é opcional; `url` abre o texto oficial (vira o QR do "Mostre ao motorista"). **Obrigatório** quando houver `frase_motorista` ou `modelo_recurso`. |
+| `frase_motorista` | texto | não | Frase curta (até 200 caracteres) da tela "Mostre ao motorista", tirada da base legal. Tom firme e respeitoso, sem acusar. |
+| `modelo_recurso` | objeto | não | Modelo de pedido ou recurso da tela "Me negaram, e agora?": `{"titulo": "...", "para": "a quem entregar", "texto": "..."}`. Os dados da pessoa ficam como `(preencha seu nome)`, `(preencha a data)`: o validador exige ao menos um. |
+| `requisitos_laudo` | lista de textos | não | O que o laudo precisa conter para este pedido. Aparece no detalhe e junta-se no "laudo único" da Rota. |
+| `atalhos` | lista | não | Atalhos da tela inicial onde a ficha aparece: `deslocamento`, `dirigir` e/ou `calcada`. Atalho sem ficha não aparece. |
 
 Em `norma`, os campos marcados "direito e serviço" são opcionais, mas seguem o mesmo formato se vierem. Normas não aparecem na Rota dos Direitos, só na pergunta livre.
 
-Qualquer outro campo é recusado pelo validador, para pegar erro de digitação (`palavra_chave` em vez de `palavras_chave`).
+Qualquer outro campo é recusado pelo validador, para pegar erro de digitação (`palavra_chave` em vez de `palavras_chave`). O validador também recusa "você tem direito" em qualquer texto da ficha.
 
 ## Tipos de fonte
 
@@ -195,7 +200,7 @@ Lista de serviços com o custo oficial. **Está vazia**: cada item precisa de fo
 
 ## API Olho Vivo (SPTrans): o que foi confirmado
 
-Usada só pelo Embarque Garantido (Fase 3, desligado por padrão). Conferido em **05/11/2026** na documentação oficial:
+Usada só pelo Embarque Garantido (desligado por padrão). Linha e posição conferidas em **05/11/2026**; ponto e previsão em **06/11/2026**, na documentação oficial:
 
 - Página da documentação: https://www.sptrans.com.br/desenvolvedores/api-do-olho-vivo-guia-de-referencia/documentacao-api/
 - Guia de uso (cadastro e token): https://www.sptrans.com.br/desenvolvedores/api-do-olho-vivo-guia-de-referencia/
@@ -212,15 +217,19 @@ Usada só pelo Embarque Garantido (Fase 3, desligado por padrão). Conferido em 
 | Campos da posição | `hr` "horário de referência da geração das informações" (formato `HH:MM`); `vs` lista de veículos com `p` prefixo, **`a`**, `ta`, `py` latitude e `px` longitude. |
 | Campo `a` | "Indica se o veículo é (true) ou não (false) acessível para pessoas com deficiência". |
 | Campo `ta` | "Indica o horário universal (UTC) em que a localização foi capturada", no padrão ISO 8601 (ex.: `2017-05-07T22:57:02Z`). |
+| Buscar ponto | `GET /Parada/Buscar?termosBusca={termo}`. "Aceita nome da parada ou endereço de localização (total ou parcial)". Busca fonética no nome e no endereço. |
+| Campos do ponto | `cp` código da parada; `np` nome; `ed` endereço; `py` e `px` latitude e longitude. |
+| Previsão no ponto | `GET /Previsao/Parada?codigoParada={cp}`: "a previsão de chegada dos veículos de cada uma das linhas que atendem ao ponto". |
+| Campos da previsão | `hr` horário de referência; `p` o ponto (`cp`, `np`, `py`, `px`, `l`); em cada linha de `l`: `c` letreiro completo, `cl` código, `sl` sentido, `lt0` letreiro de destino, `lt1` de origem, `qv` quantidade de veículos, `vs` veículos com `p` prefixo, **`t` "Horário previsto para chegada do veículo no ponto de parada"**, **`a`** acessível, `ta`, `py`, `px`. |
 
 ### O que a documentação NÃO diz (não assumir)
 
 - **O que `a` significa na prática.** A página diz só "acessível para pessoas com deficiência". Não fala em rampa nem elevador. A tela usa o texto da SPTrans e não promete rampa ou elevador.
 - **Como a sessão continua depois do login.** A página diz que o login é uma chamada prévia, mas não explica como as chamadas seguintes ficam autenticadas (cookie, cabeçalho...). Confirmar no primeiro teste com o token real antes de programar a reutilização da sessão.
 - **Códigos de erro e limites de uso.** Não há menção a 401, 429, limite de pedidos nem tempo de resposta. O tratamento desses casos no app é defensivo, não baseado em regra documentada.
-- **Fuso do `hr`.** A página não diz o fuso do `hr` (o `ta` é UTC). A regra de "dado desatualizado" (mais de 2 minutos) usa o `ta` de cada veículo.
+- **Fuso do `hr` e do `t`.** A página não diz o fuso (o `ta` é UTC). Os minutos até a chegada são calculados como `t − hr`, no mesmo relógio, sem depender de fuso (passando da meia-noite, soma 24 h). A regra de "dado desatualizado" da busca por linha usa o `ta` de cada veículo.
 - **Tipo do prefixo `p`.** A página diz `[int]`, mas o exemplo de `/Posicao/Linha` mostra texto (`"11433"`). O app trata `p` como texto.
 
 - **Texto do sentido.** O app mostra `tp → ts` no sentido 1 e `ts → tp` no sentido 2. É uma leitura da descrição dos campos (`tp` "no sentido Terminal Principal para Terminal Secundário"), não um exemplo da página: conferir com uma linha real quando houver token.
 
-Latitude e longitude dos veículos (`py`, `px`) não são usadas: a Edge Function descarta esses campos antes de responder ao app.
+Latitude e longitude (`py`, `px`) dos veículos e dos pontos não são usadas: a Edge Function descarta esses campos antes de responder ao app. A busca é sempre pelo texto que a pessoa digita, nunca pela localização dela.

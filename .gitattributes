@@ -1,0 +1,5 @@
+# Fim de linha LF no repositório e na cópia de trabalho (Windows e Linux iguais, sem diff falso).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary

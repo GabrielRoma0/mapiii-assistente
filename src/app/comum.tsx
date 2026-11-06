@@ -1,6 +1,6 @@
 // Peças comuns das telas: cabeçalho com "Voltar", título que recebe o foco ao trocar de tela.
 import { useEffect, useRef, type ReactNode } from 'react';
-import { Icon } from '../../design-system/components/icons/Icon';
+import { Icon, type IconName } from '../../design-system/components/icons/Icon';
 import css from './app.module.css';
 
 let primeiraTela = true;
@@ -41,5 +41,36 @@ export function Voltar({ para, rotulo, aoVoltar }: { para?: string; rotulo: stri
       )}
       <span aria-hidden="true">{rotulo}</span>
     </div>
+  );
+}
+
+export interface ItemEntrada {
+  href: string;
+  icone: IconName;
+  titulo: string;
+  apoio: string;
+  principal?: boolean;
+}
+
+/** Lista de entradas grandes (cartões com ícone, título e apoio), como no Início. */
+export function Entradas({ itens, rotulo }: { itens: ItemEntrada[]; rotulo: string }) {
+  return (
+    <nav aria-label={rotulo}>
+      <ul className={css.entradas} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+        {itens.map((e) => (
+          <li key={e.href}>
+            <a className={e.principal ? css.entradaPrincipal : css.entrada} href={e.href}>
+              <span className={css.entradaIcone}>
+                <Icon name={e.icone} size={28} />
+              </span>
+              <span className={css.entradaTextos}>
+                <span className={css.entradaTitulo}>{e.titulo}</span>
+                <span className={css.entradaApoio}>{e.apoio}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

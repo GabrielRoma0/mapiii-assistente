@@ -12,6 +12,12 @@ export type Rota =
   | { tela: 'sobre' }
   | { tela: 'embarque' }
   | { tela: 'reclamacao' }
+  | { tela: 'na_rua' }
+  | { tela: 'negaram'; id?: string }
+  | { tela: 'motorista'; id?: string }
+  | { tela: 'cartao' }
+  | { tela: 'atalho'; id: string }
+  | { tela: 'laudo' }
   | { tela: 'componentes' }
   | { tela: 'nao_encontrada' };
 
@@ -39,8 +45,18 @@ export function lerRota(hash: string, pathname = '/'): Rota {
     if (primeira === 'embarque') return { tela: 'embarque' };
     if (primeira === 'reclamacao') return { tela: 'reclamacao' };
     if (primeira === 'componentes') return { tela: 'componentes' };
+    if (primeira === 'na-rua') return { tela: 'na_rua' };
+    if (primeira === 'negaram') return { tela: 'negaram' };
+    if (primeira === 'motorista') return { tela: 'motorista' };
+    if (primeira === 'cartao') return { tela: 'cartao' };
+    if (primeira === 'laudo') return { tela: 'laudo' };
   }
-  if (partes.length === 2 && primeira === 'direito' && /^[a-z0-9-]+$/.test(segunda)) return { tela: 'direito', id: segunda };
+  if (partes.length === 2 && /^[a-z0-9-]+$/.test(segunda)) {
+    if (primeira === 'direito') return { tela: 'direito', id: segunda };
+    if (primeira === 'negaram') return { tela: 'negaram', id: segunda };
+    if (primeira === 'motorista') return { tela: 'motorista', id: segunda };
+    if (primeira === 'atalho') return { tela: 'atalho', id: segunda };
+  }
   return { tela: 'nao_encontrada' };
 }
 
@@ -53,7 +69,13 @@ export const href = {
   conferir: '#/conferir',
   sobre: '#/sobre',
   embarque: '#/embarque',
-  reclamacao: '#/reclamacao'
+  reclamacao: '#/reclamacao',
+  naRua: '#/na-rua',
+  negaram: (id?: string) => (id ? `#/negaram/${id}` : '#/negaram'),
+  motorista: (id?: string) => (id ? `#/motorista/${id}` : '#/motorista'),
+  cartao: '#/cartao',
+  atalho: (id: string) => `#/atalho/${id}`,
+  laudo: '#/laudo'
 };
 
 export function navegar(destino: string) {
