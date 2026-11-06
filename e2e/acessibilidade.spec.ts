@@ -28,7 +28,8 @@ for (const tema of ['light', 'dark'] as const) {
     test(`acessibilidade (${tema === 'light' ? 'claro' : 'escuro'}): ${tela}`, async ({ page }) => {
       await page.emulateMedia({ colorScheme: tema });
       await page.goto(tela);
-      await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
+      // No dev, cada tela é compilada na primeira vez que abre (carregamento sob demanda): pode passar de 5 s com testes em paralelo.
+      await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible({ timeout: 20_000 });
       const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
       const graves = r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
       expect(graves.map((v) => `${v.id}: ${v.help} (${v.nodes.map((n) => n.target.join(' ')).slice(0, 3).join(' | ')})`)).toEqual([]);
