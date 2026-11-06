@@ -8,6 +8,19 @@ import css from '../app/app.module.css';
 
 const temSintese = () => typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
 
+/** Fala o texto em voz alta (voz padrão do aparelho, em português). Devolve false se o navegador não tiver voz. */
+export function falar(texto: string): boolean {
+  if (!temSintese()) return false;
+  const s = window.speechSynthesis;
+  s.cancel();
+  const u = new SpeechSynthesisUtterance(texto);
+  u.lang = 'pt-BR';
+  const voz = s.getVoices().find((v) => v.lang.toLowerCase().startsWith('pt-br')) ?? s.getVoices().find((v) => v.lang.toLowerCase().startsWith('pt'));
+  if (voz) u.voice = voz;
+  s.speak(u);
+  return true;
+}
+
 /** Botão "Ouvir": lê o texto em voz alta em português. Some se o navegador não tiver voz. */
 export function BotaoOuvir({ texto, rotulo = 'Ouvir' }: { texto: string; rotulo?: string }) {
   const [falando, setFalando] = useState(false);

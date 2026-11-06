@@ -141,3 +141,32 @@ test('compartilhar a rota: copia só os direitos possíveis, sem as respostas', 
   expect(texto).not.toContain('Direito de exemplo B');
   expect(texto).not.toContain('Combina com o que você respondeu');
 });
+
+test('Embarque ao vivo: a contagem diminui sozinha e o aviso de chegada fala a 2 minutos', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/#/embarque');
+  await page.getByRole('button', { name: 'Ver exemplo' }).click();
+  await page.getByRole('textbox', { name: 'Ponto de ônibus' }).fill('central');
+  await page.getByRole('button', { name: 'Buscar ponto' }).click();
+  await page.getByRole('button', { name: /PONTO EXEMPLO AVENIDA CENTRAL/ }).click();
+  const resultado = page.getByRole('region', { name: 'Resultado' });
+  await expect(resultado.getByText(/Próximo acessível: EX01-10, em 14 min/)).toBeVisible();
+  await page.getByRole('button', { name: 'Me avise quando estiver chegando' }).click();
+  await page.clock.runFor(12 * 60 * 1000);
+  await expect(resultado.getByText(/Próximo acessível: EX01-10, em 2 min/)).toBeVisible();
+  await expect(page.locator('[aria-live=polite]').getByText('O ônibus EX01-10 acessível chega em 2 min.')).toHaveCount(1);
+});
+
+test('Embarque sem internet: a última previsão continua na tela, com aviso', async ({ page, context }) => {
+  await page.goto('/#/embarque');
+  await page.getByRole('textbox', { name: 'Ponto de ônibus' }).fill('Paulista');
+  await page.getByRole('button', { name: 'Buscar ponto' }).click();
+  await page.getByRole('button', { name: /PONTO FICTÍCIO CENTRAL/ }).click();
+  const resultado = page.getByRole('region', { name: 'Resultado' });
+  await expect(resultado.getByText(/Próximo acessível: 8000-10/)).toBeVisible();
+  await context.setOffline(true);
+  await resultado.getByRole('button', { name: 'Atualizar' }).click();
+  await expect(resultado.getByText(/Sem internet agora\./)).toBeVisible();
+  await expect(resultado.getByText(/Próximo acessível: 8000-10/)).toBeVisible();
+  await context.setOffline(false);
+});

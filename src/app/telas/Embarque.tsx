@@ -119,7 +119,14 @@ export function Embarque({ consultar = (p) => consultarOnibus(p, { url: SUPABASE
   // Plano B: "exemplo" usa dados fixos e fictícios (data/embarque-exemplo.json), sem rede.
   const [modo, setModo] = useState<'real' | 'exemplo'>('real');
   const exemplo = modo === 'exemplo';
-  const consultarAgora = exemplo ? async (p: PedidoOnibus) => consultarExemplo(p, EXEMPLO, agora()) : consultar;
+  // No exemplo, os horários ficam presos ao início da consulta de cada ponto: os minutos diminuem a cada atualização.
+  const ancoraExemplo = useRef<{ codigo: number; inicio: Date } | null>(null);
+  const consultarAgora = exemplo
+    ? async (p: PedidoOnibus) => {
+        if (p.acao === 'previsao' && ancoraExemplo.current?.codigo !== p.codigo) ancoraExemplo.current = { codigo: p.codigo, inicio: agora() };
+        return consultarExemplo(p, EXEMPLO, agora(), p.acao === 'previsao' ? ancoraExemplo.current!.inicio : undefined);
+      }
+    : consultar;
   const trocarModo = (novo: 'real' | 'exemplo') => {
     fecharMedicao(false);
     medicao.current = { inicio: performance.now(), interagiu: false, registrado: false, modo: novo };

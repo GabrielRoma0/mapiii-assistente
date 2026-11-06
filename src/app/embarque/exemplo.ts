@@ -84,7 +84,11 @@ function somarMinutos(hhmm: string, minutos: number): string {
   return `${String(Math.floor(total / 60)).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`;
 }
 
-export function consultarExemplo(pedido: PedidoOnibus, dados: DadosExemplo, agora: Date): RespostaServico {
+/**
+ * `ancora`: quando a consulta ao ponto começou. Os horários previstos ficam presos a ela, então os minutos
+ * diminuem a cada atualização (a contagem aparece no exemplo, como no dado real).
+ */
+export function consultarExemplo(pedido: PedidoOnibus, dados: DadosExemplo, agora: Date, ancora: Date = agora): RespostaServico {
   if (pedido.acao === 'paradas') {
     const t = sem(pedido.termo);
     const achadas = dados.paradas.filter((p) => sem(p.nome).includes(t) || sem(p.endereco).includes(t) || t === 'exemplo');
@@ -97,7 +101,7 @@ export function consultarExemplo(pedido: PedidoOnibus, dados: DadosExemplo, agor
     const hr = horaSP(agora);
     const linhas = parada.linhas
       .filter((l) => l.veiculos.length)
-      .map((l) => ({ ...l, veiculos: l.veiculos.map((v) => ({ prefixo: v.prefixo, acessivel: v.acessivel, previsto: somarMinutos(hr, v.minutos) })) }));
+      .map((l) => ({ ...l, veiculos: l.veiculos.map((v) => ({ prefixo: v.prefixo, acessivel: v.acessivel, previsto: somarMinutos(horaSP(ancora), v.minutos) })) }));
     if (!linhas.length) return { ok: false, erro: 'sem_veiculos', mensagem: MENSAGEM_SEM_PREVISAO };
     return { ok: true, acao: 'previsao', parada: { codigo: parada.codigo, nome: parada.nome }, horaReferencia: hr, linhas, consultadoEm: agora.toISOString() };
   }

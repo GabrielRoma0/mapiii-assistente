@@ -3,7 +3,7 @@
 // e o modo ficam no navegador (src/core/lembrar.ts), sem rede e sem conta. Nada vai para a URL, cookies ou rede.
 import { createContext, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { Modo, Respostas } from '../core/perguntas.ts';
-import { apagarRespostasGuardadas, guardarRespostas, lerRespostasGuardadas } from '../core/lembrar.ts';
+import { apagarRespostasGuardadas, apagarUltimosPontos, guardarRespostas, lerRespostasGuardadas } from '../core/lembrar.ts';
 import { armazenamentoDoNavegador } from '../core/registro.ts';
 
 interface EstadoApp {
@@ -65,6 +65,7 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
       alternarLembrar: (ligar) => {
         if (!ligar) {
           apagarRespostasGuardadas(armazenamento);
+          apagarUltimosPontos(armazenamento);
           setLembrar(false);
           return true;
         }

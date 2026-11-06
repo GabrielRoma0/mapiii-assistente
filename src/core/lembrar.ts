@@ -65,3 +65,42 @@ export function apagarRespostasGuardadas(arm: Armazenamento | null): void {
 
 /** Quantas perguntas têm resposta (para a tela dizer o que está guardado). */
 export const quantasRespondidas = (r: Respostas) => Object.values(r).filter((v) => comoLista(v).length > 0).length;
+
+// ---------- Últimos pontos do Embarque (só com "Lembrar" ligado) ----------
+
+export const CHAVE_PONTOS = 'mapiii.pontos.v1';
+export interface PontoRecente {
+  codigo: number;
+  nome: string;
+}
+
+export function lerUltimosPontos(arm: Armazenamento | null): PontoRecente[] {
+  try {
+    const lista = JSON.parse(arm?.getItem(CHAVE_PONTOS) ?? '[]');
+    if (!Array.isArray(lista)) return [];
+    return lista
+      .filter((p): p is PontoRecente => !!p && Number.isInteger(p.codigo) && p.codigo > 0 && typeof p.nome === 'string' && p.nome.length <= 80)
+      .map(({ codigo, nome }) => ({ codigo, nome }))
+      .slice(0, 3);
+  } catch {
+    return [];
+  }
+}
+
+/** Põe o ponto no começo da lista (sem repetir, máximo 3). Só código e nome; nunca localização. */
+export function guardarUltimoPonto(arm: Armazenamento | null, p: PontoRecente): void {
+  try {
+    const lista = [{ codigo: p.codigo, nome: p.nome }, ...lerUltimosPontos(arm).filter((x) => x.codigo !== p.codigo)].slice(0, 3);
+    arm?.setItem(CHAVE_PONTOS, JSON.stringify(lista));
+  } catch {
+    /* bloqueado */
+  }
+}
+
+export function apagarUltimosPontos(arm: Armazenamento | null): void {
+  try {
+    arm?.removeItem(CHAVE_PONTOS);
+  } catch {
+    /* bloqueado */
+  }
+}

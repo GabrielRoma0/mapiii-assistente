@@ -314,3 +314,28 @@ export function frasePonto(r: ResumoPonto): string {
   const complemento = antes === 0 ? '' : antes === 1 ? ' Antes dele passa 1 ônibus sem acessibilidade.' : ` Antes dele passam ${antes} ônibus sem acessibilidade.`;
   return `Próximo acessível: ${p.letreiro}, ${emMinutos(p.minutos)}.${complemento}`;
 }
+
+// ---------- Embarque ao vivo (fase C do plano de melhorias) ----------
+
+const chaveDo = (c: Chegada) => `${c.letreiro}|${c.prefixo}`;
+
+/** O próximo ônibus acessível passou a ser outro (ou apareceu, ou sumiu)? Só aí o leitor de tela é avisado. */
+export function mudouOProximo(antes: ResumoPonto | null, depois: ResumoPonto): boolean {
+  const a = antes?.proximaAcessivel;
+  const d = depois.proximaAcessivel;
+  if (!a || !d) return Boolean(a) !== Boolean(d) || !antes;
+  return chaveDo(a) !== chaveDo(d);
+}
+
+/**
+ * Aviso de chegada (falado e com vibração): quando o próximo acessível está a `limite` minutos ou menos.
+ * Uma vez por ônibus: devolve a chave para a tela lembrar que já avisou.
+ */
+export function deveAvisar(r: ResumoPonto, avisado: string | null, limite = 2): { chave: string; frase: string } | null {
+  const p = r.proximaAcessivel;
+  if (!p || p.minutos > limite) return null;
+  const chave = chaveDo(p);
+  if (chave === avisado) return null;
+  const frase = p.minutos === 0 ? `O ônibus ${p.letreiro} acessível está chegando agora.` : `O ônibus ${p.letreiro} acessível chega ${emMinutos(p.minutos)}.`;
+  return { chave, frase };
+}
