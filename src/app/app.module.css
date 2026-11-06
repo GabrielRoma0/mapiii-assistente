@@ -884,3 +884,21 @@
   color: var(--action-primary-fg);
   border-color: var(--action-primary-bg);
 }
+
+/* Transição suave ao trocar de tela: só opacidade, 160 ms, como o design system permite. Desliga com movimento reduzido. */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.conteudo {
+  animation: aparecer 160ms cubic-bezier(0.2, 0, 0, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .conteudo {
+    animation: none;
+  }
+}

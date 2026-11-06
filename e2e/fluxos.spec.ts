@@ -187,3 +187,11 @@ test('tamanho do texto: A++ aumenta o app, fica guardado e não cria rolagem lat
     await expect(page.getByRole('navigation', { name: 'Navegação principal' })).toBeInViewport();
   }
 });
+
+test('transição entre telas: existe, e desliga para quem pede menos movimento', async ({ page }) => {
+  await page.goto('/#/');
+  expect(await page.locator('main').evaluate((m) => getComputedStyle(m).animationName)).not.toBe('none');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/#/sobre');
+  expect(await page.locator('main').evaluate((m) => getComputedStyle(m).animationName)).toBe('none');
+});

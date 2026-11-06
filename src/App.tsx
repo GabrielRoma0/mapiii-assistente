@@ -6,25 +6,29 @@ import { USANDO_EXEMPLO } from './app/dados';
 import { useOnline } from './app/conexao';
 import { Icon } from '../design-system/components/icons/Icon';
 import { Inicio } from './app/telas/Inicio';
-import { Triagem } from './app/telas/Triagem';
-import { RotaDosDireitos } from './app/telas/RotaDosDireitos';
-import { DetalheDireito } from './app/telas/DetalheDireito';
-import { Perguntar } from './app/telas/Perguntar';
-import { Conferir } from './app/telas/Conferir';
-import { Sobre } from './app/telas/Sobre';
 import { NaoEncontrada } from './app/telas/NaoEncontrada';
-import { Vitrine } from './vitrine/Vitrine';
-import { Embarque } from './app/telas/Embarque';
-import { Reclamacao } from './app/telas/Reclamacao';
-import { NaRua } from './app/telas/NaRua';
-import { Negaram } from './app/telas/Negaram';
-import { Motorista } from './app/telas/Motorista';
-import { Cartao } from './app/telas/Cartao';
-import { Atalho } from './app/telas/Atalho';
-import { Laudo } from './app/telas/Laudo';
 import { EMBARQUE_ATIVO } from './app/embarque/recurso';
 import { LimiteDeErro, TelaQueQuebra } from './app/LimiteDeErro';
 import css from './app/app.module.css';
+import { lazy, Suspense } from 'react';
+
+// Cada tela (menos o Início) carrega só quando é aberta: o app abre mais rápido em internet fraca.
+// O service worker continua guardando todas para uso sem internet.
+const Triagem = lazy(() => import('./app/telas/Triagem').then((m) => ({ default: m.Triagem })));
+const RotaDosDireitos = lazy(() => import('./app/telas/RotaDosDireitos').then((m) => ({ default: m.RotaDosDireitos })));
+const DetalheDireito = lazy(() => import('./app/telas/DetalheDireito').then((m) => ({ default: m.DetalheDireito })));
+const Perguntar = lazy(() => import('./app/telas/Perguntar').then((m) => ({ default: m.Perguntar })));
+const Conferir = lazy(() => import('./app/telas/Conferir').then((m) => ({ default: m.Conferir })));
+const Sobre = lazy(() => import('./app/telas/Sobre').then((m) => ({ default: m.Sobre })));
+const Embarque = lazy(() => import('./app/telas/Embarque').then((m) => ({ default: m.Embarque })));
+const Reclamacao = lazy(() => import('./app/telas/Reclamacao').then((m) => ({ default: m.Reclamacao })));
+const NaRua = lazy(() => import('./app/telas/NaRua').then((m) => ({ default: m.NaRua })));
+const Negaram = lazy(() => import('./app/telas/Negaram').then((m) => ({ default: m.Negaram })));
+const Motorista = lazy(() => import('./app/telas/Motorista').then((m) => ({ default: m.Motorista })));
+const Cartao = lazy(() => import('./app/telas/Cartao').then((m) => ({ default: m.Cartao })));
+const Atalho = lazy(() => import('./app/telas/Atalho').then((m) => ({ default: m.Atalho })));
+const Laudo = lazy(() => import('./app/telas/Laudo').then((m) => ({ default: m.Laudo })));
+const Vitrine = lazy(() => import('./vitrine/Vitrine').then((m) => ({ default: m.Vitrine })));
 
 function Tela({ rota }: { rota: Rota }) {
   switch (rota.tela) {
@@ -98,9 +102,11 @@ export function App() {
             </p>
           )}
         </div>
-        <main id="conteudo" tabIndex={-1} className={css.conteudo}>
+        <main key={chave} id="conteudo" tabIndex={-1} className={css.conteudo}>
           <LimiteDeErro key={chave}>
-            <Tela rota={rota} />
+            <Suspense fallback={<p className={css.apoio} role="status">Carregando…</p>}>
+              <Tela rota={rota} />
+            </Suspense>
           </LimiteDeErro>
         </main>
         <footer className={css.rodape}>
