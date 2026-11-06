@@ -167,3 +167,48 @@ teste('data/kb.json: a base real é válida', () => {
   const kb = JSON.parse(readFileSync(caminho, 'utf8'));
   assert.deepEqual(validarKb(kb), []);
 });
+
+// ---------- campos do guia v2 ----------
+
+const LEI = [{ norma: 'Lei de exemplo 1/2000', artigo: 'art. 1º', url: 'https://exemplo.gov.br/lei' }];
+const MODELO = { titulo: 'Recurso de exemplo', para: 'Órgão de exemplo', texto: 'Eu, (preencha seu nome), peço a revisão.' };
+
+teste('validarKb: campos do guia (base_legal, frase_motorista, modelo_recurso, requisitos_laudo, atalhos) são aceitos', () => {
+  assert.deepEqual(
+    erros(com({ base_legal: LEI, frase_motorista: 'Frase de exemplo.', modelo_recurso: MODELO, requisitos_laudo: ['Item A'], atalhos: ['deslocamento', 'dirigir'] })),
+    []
+  );
+});
+
+teste('validarKb: base_legal exige norma e url https', () => {
+  soErro(com({ base_legal: [] }), 'base_legal');
+  soErro(com({ base_legal: [{ norma: '', url: 'https://a.gov.br' }] }), 'norma');
+  soErro(com({ base_legal: [{ norma: 'Lei', url: 'http://a.gov.br' }] }), 'url');
+  soErro(com({ base_legal: [{ norma: 'Lei', url: 'https://a.gov.br', paragrafo: 'x' }] }), 'paragrafo');
+});
+
+teste('validarKb: frase_motorista e modelo_recurso exigem base_legal', () => {
+  soErro(com({ frase_motorista: 'Frase.' }), 'frase_motorista exige base_legal');
+  soErro(com({ modelo_recurso: MODELO }), 'modelo_recurso exige base_legal');
+  soErro(com({ base_legal: LEI, frase_motorista: 'x'.repeat(201) }), 'frase_motorista');
+});
+
+teste('validarKb: modelo_recurso tem campos "(preencha ...)" em vez de dados pessoais', () => {
+  soErro(com({ base_legal: LEI, modelo_recurso: { ...MODELO, texto: 'Eu, Maria, peço.' } }), 'preencha');
+  soErro(com({ base_legal: LEI, modelo_recurso: { titulo: 'x', texto: '(preencha)' } }), 'modelo_recurso');
+});
+
+teste('validarKb: atalhos só aceita deslocamento, dirigir e calcada', () => {
+  soErro(com({ atalhos: ['viajar'] }), 'atalhos');
+  soErro(com({ atalhos: [] }), 'atalhos');
+});
+
+teste('validarKb: "você tem direito" é recusado em qualquer texto da ficha', () => {
+  soErro(com({ resumo: 'Você tem direito ao passe.' }), 'você tem direito');
+  soErro(com({ base_legal: LEI, modelo_recurso: { ...MODELO, texto: 'Voce tem direito. (preencha seu nome)' } }), 'você tem direito');
+});
+
+teste('kb-exemplo (só dev): a base fictícia segue o esquema, inclusive os campos do guia', async () => {
+  const { KB_EXEMPLO } = await import('../src/app/kb-exemplo.ts');
+  assert.deepEqual(validarKb(KB_EXEMPLO), []);
+});

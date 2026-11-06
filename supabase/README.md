@@ -33,7 +33,7 @@ Ainda não foi aplicado em nenhum projeto. Quando houver projeto:
 2. Aplique a migração (Supabase CLI `supabase db push`, ou cole o arquivo no SQL Editor).
 3. No painel, configure o Auth: URL do site e de redirecionamento, SMTP próprio (o e-mail padrão só entrega para a equipe do projeto) e os modelos de e-mail.
 
-## Edge Function `onibus` (Embarque Garantido, Fase 3)
+## Edge Function `onibus` (Embarque Garantido)
 
 Consulta a API Olho Vivo da SPTrans pelo servidor, para o token nunca ir ao navegador. O que foi confirmado na documentação da API está em [../data/README.md](../data/README.md).
 
@@ -46,13 +46,15 @@ Consulta a API Olho Vivo da SPTrans pelo servidor, para o token nunca ir ao nave
 ```json
 { "acao": "linhas", "termo": "8000" }
 { "acao": "veiculos", "codigo": 1273 }
+{ "acao": "paradas", "termo": "Paulista" }
+{ "acao": "previsao", "codigo": 340015329 }
 ```
 
-Só essas duas ações e essas chaves. Nenhuma URL vem do app. O termo é validado de novo no servidor (letras, números e hífen, de 1 a 10 caracteres).
+Só essas quatro ações e essas chaves. Nenhuma URL vem do app. Os termos são validados de novo no servidor: linha com letras, números e hífen (1 a 10 caracteres); ponto com letras, números, espaço, ponto, barra e hífen (2 a 40 caracteres).
 
-**Resposta:** `{ ok: true, acao: "linhas", linhas }`, `{ ok: true, acao: "veiculos", veiculos, horaReferencia, consultadoEm }` ou `{ ok: false, erro, mensagem }`, com `erro` em `termo_invalido`, `linha_inexistente`, `sem_veiculos`, `limite`, `tempo_esgotado` ou `api_fora`. Latitude e longitude dos veículos são descartadas.
+**Resposta:** `{ ok: true, acao: "linhas", linhas }`, `{ ok: true, acao: "veiculos", veiculos, horaReferencia, consultadoEm }`, `{ ok: true, acao: "paradas", paradas }`, `{ ok: true, acao: "previsao", parada, linhas, horaReferencia, consultadoEm }` ou `{ ok: false, erro, mensagem }`, com `erro` em `termo_invalido`, `linha_inexistente`, `sem_veiculos`, `limite`, `tempo_esgotado` ou `api_fora`. Latitude e longitude dos veículos e dos pontos são descartadas.
 
-**Proteções:** login reaproveitado (refaz uma vez se a API recusar a sessão), cache de 15 s por linha e por busca, limite de pedidos por minuto por IP (o IP vira um hash em memória, com sal aleatório, e não é guardado), tempo limite de 6 s por chamada, logs só com códigos de situação (sem IP, termo nem token). O limite e o cache valem por instância da função: com várias instâncias ao mesmo tempo, o limite real pode ser maior.
+**Proteções:** login reaproveitado (refaz uma vez se a API recusar a sessão), cache de 15 s por linha, ponto e busca, limite de pedidos por minuto por IP (o IP vira um hash em memória, com sal aleatório, e não é guardado), tempo limite de 6 s por chamada, logs só com códigos de situação (sem IP, termo nem token). O limite e o cache valem por instância da função: com várias instâncias ao mesmo tempo, o limite real pode ser maior.
 
 **Publicar** (quando houver projeto Supabase e token da SPTrans):
 

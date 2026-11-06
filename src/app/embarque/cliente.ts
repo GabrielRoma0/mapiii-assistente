@@ -1,8 +1,13 @@
 // Chamada do app à Edge Function `onibus`. O app nunca fala direto com a SPTrans nem conhece o token.
-import { MENSAGENS_FALHA, type RespostaOnibus } from '../../../supabase/functions/_shared/embarque';
+import { MENSAGENS_FALHA } from '../../../supabase/functions/_shared/embarque';
+import type { RespostaServico } from '../../../supabase/functions/_shared/onibus-servidor';
 
-export type PedidoOnibus = { acao: 'linhas'; termo: string } | { acao: 'veiculos'; codigo: number };
-export type RespostaCliente = RespostaOnibus | { ok: false; erro: 'nao_configurado'; mensagem: string };
+export type PedidoOnibus =
+  | { acao: 'linhas'; termo: string }
+  | { acao: 'veiculos'; codigo: number }
+  | { acao: 'paradas'; termo: string }
+  | { acao: 'previsao'; codigo: number };
+export type RespostaCliente = RespostaServico | { ok: false; erro: 'nao_configurado'; mensagem: string };
 
 export const MENSAGEM_NAO_CONFIGURADO =
   'A consulta em tempo real ainda não está configurada neste app. Use o exemplo ou os canais da SPTrans.';
@@ -17,13 +22,15 @@ export interface ConfigCliente {
 const ERROS = new Set(Object.keys(MENSAGENS_FALHA));
 
 /** Confere o formato da resposta: se a função devolver algo estranho, é tratado como "SPTrans fora do ar". */
-function respostaValida(r: unknown): r is RespostaOnibus {
+function respostaValida(r: unknown): r is RespostaServico {
   if (!r || typeof r !== 'object') return false;
   const o = r as Record<string, unknown>;
   if (o.ok === false) return typeof o.erro === 'string' && ERROS.has(o.erro) && typeof o.mensagem === 'string';
   if (o.ok !== true) return false;
   if (o.acao === 'linhas') return Array.isArray(o.linhas);
   if (o.acao === 'veiculos') return Array.isArray(o.veiculos) && typeof o.consultadoEm === 'string';
+  if (o.acao === 'paradas') return Array.isArray(o.paradas);
+  if (o.acao === 'previsao') return Array.isArray(o.linhas) && typeof o.consultadoEm === 'string' && !!o.parada && typeof o.parada === 'object';
   return false;
 }
 

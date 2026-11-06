@@ -35,6 +35,26 @@ export interface Onde {
   link?: string;
 }
 
+/** Lei, decreto ou portaria que sustenta a ficha. `url` abre o texto oficial (vira o QR do "Mostre ao motorista"). */
+export interface BaseLegal {
+  norma: string;
+  artigo?: string;
+  url: string;
+}
+
+/** Modelo de pedido ou recurso para quando negarem. A pessoa completa os próprios dados fora do app. */
+export interface ModeloRecurso {
+  titulo: string;
+  /** A quem entregar (órgão, ouvidoria...). */
+  para: string;
+  /** Texto do modelo. Campos que a pessoa preenche ficam entre parênteses: "(preencha seu nome)". */
+  texto: string;
+}
+
+/** Atalhos da tela inicial que levam direto a fichas prontas. */
+export const ATALHOS = ['deslocamento', 'dirigir', 'calcada'] as const;
+export type Atalho = (typeof ATALHOS)[number];
+
 export interface Entrada {
   id: string;
   tipo: TipoEntrada;
@@ -48,6 +68,14 @@ export interface Entrada {
   prazo_tipico?: string;
   passos?: string[];
   se_negarem?: string[];
+  /** Lei e artigo, cada um com link oficial. Obrigatório quando há frase_motorista ou modelo_recurso. */
+  base_legal?: BaseLegal[];
+  /** Frase curta da tela "Mostre ao motorista", tirada da base legal. */
+  frase_motorista?: string;
+  modelo_recurso?: ModeloRecurso;
+  /** O que o laudo precisa conter para este pedido (alimenta o "laudo único"). */
+  requisitos_laudo?: string[];
+  atalhos?: Atalho[];
   perguntas_exemplo: string[];
   palavras_chave: string[];
   fonte_nome: string;
@@ -63,7 +91,7 @@ const COMUNS = [
 ];
 // Direito e serviço entram na Rota dos Direitos: precisam dizer o que levar, onde ir, prazo e o que fazer se negarem.
 const SO_DIREITO_SERVICO = ['condicoes', 'documentos', 'onde', 'prazo_tipico', 'se_negarem'];
-const OPCIONAIS = ['passos'];
+const OPCIONAIS = ['passos', 'base_legal', 'frase_motorista', 'modelo_recurso', 'requisitos_laudo', 'atalhos'];
 const CONHECIDOS = new Set([...COMUNS, ...SO_DIREITO_SERVICO, ...OPCIONAIS]);
 
 /** Conferência mais velha que isso conta como desatualizada na tela. */
@@ -119,6 +147,42 @@ function validarCondicoes(c: unknown, erro: (m: string) => void, perguntas: Perg
     });
   }
   if (!regras) erro('condicoes precisa ter ao menos 1 regra.');
+}
+
+/** Campos do guia v2: base_legal, frase_motorista, modelo_recurso, requisitos_laudo e atalhos. Todos opcionais. */
+function validarCamposDoGuia(e: Record<string, unknown>, erro: (m: string) => void) {
+  if (e.base_legal !== undefined) {
+    if (!Array.isArray(e.base_legal) || !e.base_legal.length) erro('base_legal, quando existir, precisa ser uma lista com ao menos 1 norma.');
+    else
+      e.base_legal.forEach((b: unknown, i) => {
+        const onde = `base_legal[${i}]`;
+        if (!objeto(b)) return erro(`${onde} precisa ser {"norma": "...", "artigo": "...", "url": "https://..."}.`);
+        if (!texto(b.norma)) erro(`${onde}: norma obrigatória (ex.: "Lei 13.146/2015").`);
+        if (b.artigo !== undefined && !texto(b.artigo)) erro(`${onde}: artigo, quando existir, não pode ser vazio.`);
+        if (!urlHttps(b.url)) erro(`${onde}: url obrigatória e https, apontando para o texto oficial.`);
+        for (const k of Object.keys(b)) if (!['norma', 'artigo', 'url'].includes(k)) erro(`${onde}: chave desconhecida "${k}".`);
+      });
+  }
+  const temBase = Array.isArray(e.base_legal) && e.base_legal.length > 0;
+  if (e.frase_motorista !== undefined) {
+    if (!texto(e.frase_motorista) || e.frase_motorista.length > 200) erro('frase_motorista precisa ser uma frase curta (até 200 caracteres).');
+    if (!temBase) erro('frase_motorista exige base_legal: a tela mostra a lei e o link oficial.');
+  }
+  if (e.modelo_recurso !== undefined) {
+    const m = e.modelo_recurso;
+    if (!objeto(m) || !texto(m.titulo) || !texto(m.para) || !texto(m.texto)) erro('modelo_recurso precisa ser {"titulo": "...", "para": "...", "texto": "..."}.');
+    else {
+      for (const k of Object.keys(m)) if (!['titulo', 'para', 'texto'].includes(k)) erro(`modelo_recurso: chave desconhecida "${k}".`);
+      if (!/\(preencha[^)]*\)/i.test(m.texto)) erro('modelo_recurso.texto precisa ter os campos da pessoa como "(preencha seu nome)": o app não guarda dados pessoais.');
+    }
+    if (!temBase) erro('modelo_recurso exige base_legal: o modelo cita a lei.');
+  }
+  if (e.requisitos_laudo !== undefined && !listaDeTextos(e.requisitos_laudo)) erro('requisitos_laudo, quando existir, precisa ser uma lista de textos.');
+  if (e.atalhos !== undefined) {
+    if (!Array.isArray(e.atalhos) || !e.atalhos.length || !e.atalhos.every((a) => ATALHOS.includes(a as Atalho))) {
+      erro(`atalhos, quando existir, só aceita: ${ATALHOS.join(', ')}.`);
+    }
+  }
 }
 
 /** Lista de erros em português; vazia quando a base é válida. */
@@ -180,6 +244,12 @@ export function validarKb(kb: unknown, hoje: Date = new Date(), perguntas: Pergu
     if (e.passos !== undefined && !listaDeTextos(e.passos)) {
       erro('passos, quando existir, precisa ser uma lista de textos não vazios.');
     }
+
+    validarCamposDoGuia(e, erro);
+
+    // Regra do projeto: o app nunca afirma que a pessoa tem direito.
+    const textos = JSON.stringify([e.titulo, e.resumo, e.passos, e.se_negarem, e.modelo_recurso, e.limitacao, e.prazo_tipico]);
+    if (/voc[eê] tem direito/i.test(textos)) erro('nunca escreva "você tem direito": use "pode ter direito" ou descreva as condições.');
 
     for (const campo of Object.keys(e)) {
       if (!CONHECIDOS.has(campo)) erro(`campo desconhecido: ${campo}.`);

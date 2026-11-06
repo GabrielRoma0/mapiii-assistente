@@ -2,7 +2,7 @@
 import { CartaoDireito, FalaMapi } from '../../ui/assistente';
 import { montarRota } from '../../core/regras';
 import { tipoFonteNaTela } from '../../core/kb-schema';
-import { PERGUNTAS, comoLista, textoDaOpcao } from '../../core/perguntas';
+import { PERGUNTAS, comoLista, perguntasNoModo, textoDaOpcao } from '../../core/perguntas';
 import { Titulo, Voltar } from '../comum';
 import { KB } from '../dados';
 import { useEstado } from '../estado';
@@ -18,9 +18,10 @@ function resumoDasRespostas(respostas: Record<string, string | string[] | undefi
 }
 
 export function RotaDosDireitos() {
-  const { respostas, limparRespostas } = useEstado();
+  const { respostas, limparRespostas, modo } = useEstado();
   const respondeu = Object.keys(respostas).length > 0;
-  const rota = montarRota(KB, respostas);
+  const rota = montarRota(KB, respostas, perguntasNoModo(modo));
+  const temLaudo = rota.some((i) => i.classe !== 'nao' && i.entrada.requisitos_laudo?.length);
   const resumo = resumoDasRespostas(respostas);
 
   if (!respondeu) {
@@ -30,7 +31,7 @@ export function RotaDosDireitos() {
         <Titulo>Sua rota dos direitos</Titulo>
         <FalaMapi estado="esperando">Para montar sua rota, responda primeiro algumas perguntas sobre a situação.</FalaMapi>
         <a className={css.botaoPrincipal} href={href.triagem}>
-          Escolher minha situação
+          Descobrir o que posso pedir
         </a>
       </>
     );
@@ -38,7 +39,7 @@ export function RotaDosDireitos() {
 
   return (
     <>
-      <Voltar para={href.triagem} rotulo="Resultado" />
+      <Voltar para={href.triagem} rotulo="Descobrir o que posso pedir" />
       <Titulo>Sua rota dos direitos</Titulo>
       {resumo && <p className={css.apoio}>{resumo}</p>}
       {rota.length ? (
@@ -65,6 +66,11 @@ export function RotaDosDireitos() {
           </li>
         ))}
       </ul>
+      {temLaudo && (
+        <a className={css.botaoSecundario} href={href.laudo} style={{ textDecoration: 'none' }}>
+          Ver a lista única para o laudo
+        </a>
+      )}
       <button
         type="button"
         className={css.botaoSecundario}

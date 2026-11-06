@@ -276,7 +276,12 @@ export function conferirSeEOficial(entrada: unknown, lista: ListaDominios, servi
 
 const texto = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 const objeto = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v);
-const dataOk = (v: unknown) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) && Date.parse(v) <= Date.now();
+// Data real (2026-02-31 não passa: Date.parse aceitaria e viraria 03/03) e não futura.
+const dataOk = (v: unknown) => {
+  if (typeof v !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+  const d = new Date(`${v}T00:00:00Z`);
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === v && d.getTime() <= Date.now();
+};
 const httpsOk = (v: unknown) => {
   try {
     return texto(v) && new URL(v).protocol === 'https:';

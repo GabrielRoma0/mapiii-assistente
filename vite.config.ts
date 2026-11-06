@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
-import { simuladorOlhoVivo } from './scripts/simulador-olho-vivo';
+import { simuladorOlhoVivo } from './scripts/simulador-olho-vivo.ts';
 
 // base relativa: o build funciona em qualquer hospedagem estática, inclusive numa subpasta.
 export default defineConfig({

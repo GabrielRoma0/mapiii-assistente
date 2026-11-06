@@ -1,0 +1,22 @@
+# Roda a mesma conferência do `npm run verificar`, o build e os testes de banco em cada push e pull request.
+name: verificar
+on:
+  push:
+  pull_request:
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verificar
+      - run: npm run build
+  banco:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/testar-banco.sh

@@ -230,3 +230,10 @@ teste('validarServicosValores: exige fonte, valor numérico e kb_id existente', 
   for (const t of ['valor_oficial', 'fonte_url', 'kb_id']) assert.ok(e.includes(t), t);
   assert.deepEqual(validarServicosValores(SERVICOS), []);
 });
+
+teste('validarDominios e validarServicosValores: data impossível (31/02) é recusada', () => {
+  const dominios = { ...LISTA, sufixos: [{ ...LISTA.sufixos[0], verificado_em: '2026-02-31' }] };
+  assert.ok(validarDominios(dominios).some((e) => e.includes('verificado_em')));
+  const servicos = [{ ...SERVICOS[0], verificado_em: '2026-02-30' }];
+  assert.ok(validarServicosValores(servicos).some((e) => e.includes('verificado_em')));
+});

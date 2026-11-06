@@ -8,11 +8,31 @@
       "descricao": "TERMINAL EXEMPLO NORTE → TERMINAL EXEMPLO SUL",
       "circular": false,
       "veiculos": [
-        { "prefixo": "90101", "acessivel": true, "segundos_atras": 20 },
-        { "prefixo": "90102", "acessivel": false, "segundos_atras": 35 },
-        { "prefixo": "90103", "acessivel": true, "segundos_atras": 50 },
-        { "prefixo": "90104", "acessivel": true, "segundos_atras": 15 },
-        { "prefixo": "90105", "acessivel": false, "segundos_atras": 260 }
+        {
+          "prefixo": "90101",
+          "acessivel": true,
+          "segundos_atras": 20
+        },
+        {
+          "prefixo": "90102",
+          "acessivel": false,
+          "segundos_atras": 35
+        },
+        {
+          "prefixo": "90103",
+          "acessivel": true,
+          "segundos_atras": 50
+        },
+        {
+          "prefixo": "90104",
+          "acessivel": true,
+          "segundos_atras": 15
+        },
+        {
+          "prefixo": "90105",
+          "acessivel": false,
+          "segundos_atras": 260
+        }
       ]
     },
     {
@@ -22,8 +42,16 @@
       "descricao": "TERMINAL EXEMPLO SUL → TERMINAL EXEMPLO NORTE",
       "circular": false,
       "veiculos": [
-        { "prefixo": "90201", "acessivel": false, "segundos_atras": 30 },
-        { "prefixo": "90202", "acessivel": false, "segundos_atras": 45 }
+        {
+          "prefixo": "90201",
+          "acessivel": false,
+          "segundos_atras": 30
+        },
+        {
+          "prefixo": "90202",
+          "acessivel": false,
+          "segundos_atras": 45
+        }
       ]
     },
     {
@@ -32,7 +60,13 @@
       "sentido": 1,
       "descricao": "BAIRRO EXEMPLO (CIRCULAR)",
       "circular": true,
-      "veiculos": [{ "prefixo": "90301", "acessivel": true, "segundos_atras": 330 }]
+      "veiculos": [
+        {
+          "prefixo": "90301",
+          "acessivel": true,
+          "segundos_atras": 330
+        }
+      ]
     },
     {
       "codigo": 900004,
@@ -41,6 +75,82 @@
       "descricao": "ESTAÇÃO EXEMPLO → PRAÇA EXEMPLO",
       "circular": false,
       "veiculos": []
+    }
+  ],
+  "paradas": [
+    {
+      "codigo": 900101,
+      "nome": "PONTO EXEMPLO AVENIDA CENTRAL",
+      "endereco": "AV EXEMPLO CENTRAL, 1000",
+      "linhas": [
+        {
+          "codigo": 900001,
+          "letreiro": "EX01-10",
+          "sentido": 1,
+          "destino": "TERMINAL EXEMPLO SUL",
+          "veiculos": [
+            {
+              "prefixo": "90102",
+              "acessivel": false,
+              "minutos": 4
+            },
+            {
+              "prefixo": "90101",
+              "acessivel": true,
+              "minutos": 14
+            }
+          ]
+        },
+        {
+          "codigo": 900003,
+          "letreiro": "EX02-10",
+          "sentido": 1,
+          "destino": "BAIRRO EXEMPLO",
+          "veiculos": [
+            {
+              "prefixo": "90302",
+              "acessivel": false,
+              "minutos": 9
+            },
+            {
+              "prefixo": "90301",
+              "acessivel": true,
+              "minutos": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": 900102,
+      "nome": "PONTO EXEMPLO RUA DAS FLORES",
+      "endereco": "R EXEMPLO DAS FLORES",
+      "linhas": [
+        {
+          "codigo": 900002,
+          "letreiro": "EX01-10",
+          "sentido": 2,
+          "destino": "TERMINAL EXEMPLO NORTE",
+          "veiculos": [
+            {
+              "prefixo": "90201",
+              "acessivel": false,
+              "minutos": 3
+            },
+            {
+              "prefixo": "90202",
+              "acessivel": false,
+              "minutos": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": 900103,
+      "nome": "PONTO EXEMPLO PRACA",
+      "endereco": "PRACA EXEMPLO",
+      "linhas": []
     }
   ]
 }

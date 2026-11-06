@@ -21,6 +21,8 @@ export interface Opcao {
 export interface Pergunta {
   id: string;
   texto: string;
+  /** Texto no modo "Sou a pessoa" (falando com você). Sem ele, vale `texto`. */
+  texto_eu?: string;
   por_que_perguntamos: string;
   /** Fala do Mapi (estado "Ouvindo") acima da pergunta. */
   fala?: string;
@@ -37,7 +39,7 @@ export interface Pergunta {
 /** Respostas da pessoa. "multipla" guarda uma lista; ausente = não respondeu. */
 export type Respostas = Partial<Record<string, string | string[]>>;
 
-const CHAVES = new Set(['id', 'texto', 'por_que_perguntamos', 'fala', 'tipo', 'opcoes', 'sensivel', 'mostrar_se', 'exclusivas']);
+const CHAVES = new Set(['id', 'texto', 'texto_eu', 'por_que_perguntamos', 'fala', 'tipo', 'opcoes', 'sensivel', 'mostrar_se', 'exclusivas']);
 const texto = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 const objeto = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v);
 
@@ -58,6 +60,7 @@ export function validarPerguntas(dados: unknown): string[] {
     else ids.add(p.id);
 
     if (!texto(p.texto)) erro('texto obrigatório.');
+    if (p.texto_eu !== undefined && !texto(p.texto_eu)) erro('texto_eu, quando existir, não pode ser vazio.');
     if (!texto(p.por_que_perguntamos)) erro('por_que_perguntamos obrigatório: toda pergunta explica por que é feita.');
     if (p.fala !== undefined && !texto(p.fala)) erro('fala, quando existir, não pode ser vazia.');
     if (!TIPOS_PERGUNTA.includes(p.tipo as TipoPergunta)) erro(`tipo precisa ser: ${TIPOS_PERGUNTA.join(', ')}.`);
@@ -146,4 +149,13 @@ export function perguntasDaTriagem(usadas: Set<string>, respostas: Respostas, pe
 export function semSensiveis(respostas: Respostas, perguntas: Pergunta[] = PERGUNTAS): Respostas {
   const sensiveis = new Set(perguntas.filter((p) => p.sensivel).map((p) => p.id));
   return Object.fromEntries(Object.entries(respostas).filter(([id]) => !sensiveis.has(id)));
+}
+
+/** "Sou a pessoa" fala com você; "Cuido de alguém" fala da pessoa. Sem escolha, vale o texto padrão (da pessoa). */
+export type Modo = 'pessoa' | 'cuidador';
+
+/** Perguntas com o texto do modo escolhido. As frases do motor de regras usam o mesmo texto. */
+export function perguntasNoModo(modo: Modo | null, perguntas: Pergunta[] = PERGUNTAS): Pergunta[] {
+  if (modo !== 'pessoa') return perguntas;
+  return perguntas.map((p) => (p.texto_eu ? { ...p, texto: p.texto_eu } : p));
 }

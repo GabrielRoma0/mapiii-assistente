@@ -2,7 +2,8 @@
 // O index.ts só lê o ambiente e chama `criarServico`.
 //
 // Regras:
-// - Só duas ações: "linhas" (buscar linha por termo) e "veiculos" (veículos de uma linha). Nenhuma URL vem do app.
+// - Só quatro ações: "linhas" (buscar linha), "veiculos" (veículos de uma linha), "paradas" (buscar ponto)
+//   e "previsao" (chegadas previstas num ponto). Nenhuma URL vem do app.
 // - O token da SPTrans (SPTRANS_TOKEN) só existe aqui. Nunca vai na resposta nem nos logs.
 // - Login reaproveitado entre pedidos; se a API recusar a sessão (401/403), faz login de novo uma vez.
 // - Cache de 15 s por linha e por busca, limite de pedidos por minuto por IP, tempo limite de 6 s por chamada.
@@ -12,12 +13,19 @@ import {
   falha,
   falhaDoStatus,
   lerBuscaLinhas,
+  lerBuscaParadas,
   lerPosicaoLinha,
+  lerPrevisaoParada,
   validarCodigoLinha,
   validarTermoLinha,
+  validarTermoParada,
   type Falha,
-  type RespostaOnibus
+  type RespostaOnibus,
+  type RespostaPonto
 } from './embarque.ts';
+
+/** O que a função devolve: as respostas por linha e as por ponto. */
+export type RespostaServico = RespostaOnibus | RespostaPonto;
 
 export interface Dependencias {
   fetch: typeof fetch;
@@ -36,10 +44,10 @@ export interface Dependencias {
 
 const MAX_CORPO = 1024;
 
-type Corpo = { acao: 'linhas'; termo: string } | { acao: 'veiculos'; codigo: number };
+type Corpo = { acao: 'linhas'; termo: string } | { acao: 'veiculos'; codigo: number } | { acao: 'paradas'; termo: string } | { acao: 'previsao'; codigo: number };
 
-/** Lê o corpo do pedido aceitando só as duas ações e as chaves esperadas. */
-export function lerPedido(dados: unknown): { ok: true; pedido: Corpo } | { ok: false; resposta: RespostaOnibus } {
+/** Lê o corpo do pedido aceitando só as quatro ações e as chaves esperadas. */
+export function lerPedido(dados: unknown): { ok: true; pedido: Corpo } | { ok: false; resposta: RespostaServico } {
   const invalido = { ok: false as const, resposta: falha('termo_invalido') };
   if (!dados || typeof dados !== 'object' || Array.isArray(dados)) return invalido;
   const o = dados as Record<string, unknown>;
@@ -51,6 +59,14 @@ export function lerPedido(dados: unknown): { ok: true; pedido: Corpo } | { ok: f
   if (o.acao === 'veiculos' && chaves === 'acao,codigo') {
     const codigo = validarCodigoLinha(o.codigo);
     return codigo === null ? invalido : { ok: true, pedido: { acao: 'veiculos', codigo } };
+  }
+  if (o.acao === 'paradas' && chaves === 'acao,termo') {
+    const t = validarTermoParada(o.termo);
+    return t.ok ? { ok: true, pedido: { acao: 'paradas', termo: t.termo } } : { ok: false, resposta: { ok: false, erro: 'termo_invalido', mensagem: t.mensagem } };
+  }
+  if (o.acao === 'previsao' && chaves === 'acao,codigo') {
+    const codigo = validarCodigoLinha(o.codigo);
+    return codigo === null ? invalido : { ok: true, pedido: { acao: 'previsao', codigo } };
   }
   return invalido;
 }
@@ -94,7 +110,7 @@ export function criarServico(dep: Dependencias): (req: Request) => Promise<Respo
   // Sal do hash de IP: novo a cada vez que a função sobe; nunca sai daqui.
   const sal = Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16)).join('');
   const pedidosPorIp = new Map<string, { inicio: number; total: number }>();
-  const cache = new Map<string, { expira: number; resposta: RespostaOnibus }>();
+  const cache = new Map<string, { expira: number; resposta: RespostaServico }>();
   let sessao: string | null | undefined; // undefined = sem login; null = login sem cookie
 
   const cabecalhos = (req: Request): Headers => {
@@ -106,7 +122,7 @@ export function criarServico(dep: Dependencias): (req: Request) => Promise<Respo
     h.set('access-control-allow-headers', 'content-type, authorization, apikey, x-client-info');
     return h;
   };
-  const responder = (req: Request, corpo: RespostaOnibus, status = 200) => new Response(JSON.stringify(corpo), { status, headers: cabecalhos(req) });
+  const responder = (req: Request, corpo: RespostaServico, status = 200) => new Response(JSON.stringify(corpo), { status, headers: cabecalhos(req) });
 
   const passouDoLimite = (req: Request): boolean => {
     const chave = hashComSal(ipDoPedido(req), sal);
@@ -169,16 +185,17 @@ export function criarServico(dep: Dependencias): (req: Request) => Promise<Respo
     throw new FalhaApi('api_fora');
   }
 
-  async function executar(pedido: Corpo): Promise<RespostaOnibus> {
-    const chave = pedido.acao === 'linhas' ? `l:${pedido.termo.toLowerCase()}` : `v:${pedido.codigo}`;
+  async function executar(pedido: Corpo): Promise<RespostaServico> {
+    const chave =
+      pedido.acao === 'linhas' || pedido.acao === 'paradas' ? `${pedido.acao}:${pedido.termo.toLowerCase()}` : `${pedido.acao}:${pedido.codigo}`;
     const guardado = cache.get(chave);
     if (guardado && guardado.expira > agora()) return guardado.resposta;
-    let resposta: RespostaOnibus;
+    let resposta: RespostaServico;
     try {
-      resposta =
-        pedido.acao === 'linhas'
-          ? lerBuscaLinhas(await consultar(`/Linha/Buscar?termosBusca=${encodeURIComponent(pedido.termo)}`))
-          : lerPosicaoLinha(await consultar(`/Posicao/Linha?codigoLinha=${pedido.codigo}`), pedido.codigo, new Date(agora()));
+      if (pedido.acao === 'linhas') resposta = lerBuscaLinhas(await consultar(`/Linha/Buscar?termosBusca=${encodeURIComponent(pedido.termo)}`));
+      else if (pedido.acao === 'veiculos') resposta = lerPosicaoLinha(await consultar(`/Posicao/Linha?codigoLinha=${pedido.codigo}`), pedido.codigo, new Date(agora()));
+      else if (pedido.acao === 'paradas') resposta = lerBuscaParadas(await consultar(`/Parada/Buscar?termosBusca=${encodeURIComponent(pedido.termo)}`));
+      else resposta = lerPrevisaoParada(await consultar(`/Previsao/Parada?codigoParada=${pedido.codigo}`), pedido.codigo, new Date(agora()));
     } catch (e) {
       if (e instanceof FalhaApi) return falha(e.falha);
       log('onibus: erro inesperado');

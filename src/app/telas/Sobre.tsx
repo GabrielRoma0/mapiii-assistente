@@ -79,11 +79,22 @@ export function Sobre() {
       </section>
 
       <section className={css.secao} aria-labelledby="acerto">
-        <h2 id="acerto" className={css.subtitulo}>Como medimos acerto</h2>
+        <h2 id="acerto" className={css.subtitulo}>Como medimos se funciona</h2>
         <ul className={css.listaPontos}>
-          <li>Respostas com fonte oficial citada.</li>
-          <li>Respostas conferidas por especialistas numa amostra.</li>
+          <li>Acerto das orientações: respostas certas e com fonte oficial, conferidas por especialistas numa amostra.</li>
           <li>Perguntas sem resposta na base que receberam um “não encontrei” em vez de um palpite.</li>
+          <li>Tempo para achar a informação, comparado com a busca que a pessoa já faz na internet.</li>
+          <li>Tempo até achar o ônibus certo, comparado com o app de transporte que a pessoa já usa.</li>
+          <li>Facilidade de uso, numa nota dada pelas pessoas que testaram.</li>
+        </ul>
+        <p className={css.apoio}>Mostramos todos os números do teste, inclusive os ruins.</p>
+      </section>
+
+      <section className={css.secao} aria-labelledby="ods">
+        <h2 id="ods" className={css.subtitulo}>Objetivos de Desenvolvimento Sustentável</h2>
+        <ul className={css.listaPontos}>
+          <li>ODS 10, Redução das desigualdades: inclusão de pessoas com deficiência (meta 10.2).</li>
+          <li>ODS 11, Cidades e comunidades sustentáveis: transporte acessível (meta 11.2) e espaços públicos acessíveis (meta 11.7).</li>
         </ul>
       </section>
 
@@ -108,6 +119,11 @@ export function Sobre() {
         <p className={css.texto}>
           Para avaliar o protótipo, cada pergunta livre guarda <b>neste aparelho</b> só o tema, se achou resposta, os segundos até a resposta e o
           voto “Esta resposta ajudou?”. Sem o texto da pergunta e sem identificar você. Nada é enviado.
+        </p>
+        <p className={css.texto}>
+          O Cartão da cadeira só fica guardado neste aparelho se você marcar “Guardar neste aparelho”, e sai quando você desmarca. A busca do ônibus
+          é pelo nome do ponto ou da linha: o app nunca usa a sua localização. O botão de falar usa o reconhecimento de voz do navegador, e alguns
+          navegadores enviam o áudio ao serviço de voz do fabricante; ouvir a resposta roda no próprio aparelho.
         </p>
         <a className={css.linkFonte} href="./avaliacao.html">
           Ver os números, baixar em CSV ou apagar

@@ -10,6 +10,9 @@ import {
   SourceTypeBadge
 } from '../../ui/assistente';
 import { avaliarEntrada } from '../../core/regras';
+import { perguntasNoModo } from '../../core/perguntas';
+import { citarNorma, textoChecklist } from '../../core/garantia';
+import { AcoesDeTexto, BotaoOuvir } from '../../ui/acoes';
 import { tipoFonteNaTela } from '../../core/kb-schema';
 import { Titulo, Voltar } from '../comum';
 import { entradaPorId } from '../dados';
@@ -19,12 +22,12 @@ import { NaoEncontrada } from './NaoEncontrada';
 import css from '../app.module.css';
 
 export function DetalheDireito({ id }: { id: string }) {
-  const { respostas, marcados, alternarDocumento } = useEstado();
+  const { respostas, marcados, alternarDocumento, modo } = useEstado();
   const entrada = entradaPorId(id);
   if (!entrada) return <NaoEncontrada />;
 
   const respondeu = Object.keys(respostas).length > 0;
-  const avaliacao = respondeu && entrada.condicoes ? avaliarEntrada(entrada, respostas) : null;
+  const avaliacao = respondeu && entrada.condicoes ? avaliarEntrada(entrada, respostas, perguntasNoModo(modo)) : null;
   const tipoFonte = tipoFonteNaTela(entrada);
   const documentos = entrada.documentos ?? [];
   const prontos = documentos.filter((d) => marcados[id]?.includes(d));
@@ -46,6 +49,7 @@ export function DetalheDireito({ id }: { id: string }) {
         <p className={css.texto}>{entrada.resumo}</p>
         <p className={css.apoio}>Para: {entrada.publico.join(', ')}.</p>
         {avaliacao && <p className={css.texto}>{avaliacao.porque}</p>}
+        <BotaoOuvir texto={[entrada.titulo, entrada.resumo, avaliacao?.porque ?? ''].join('. ')} />
       </section>
 
       {documentos.length > 0 && (
@@ -61,6 +65,18 @@ export function DetalheDireito({ id }: { id: string }) {
             <ItemChecklist key={d} texto={d} marcado={prontos.includes(d)} aoAlternar={() => alternarDocumento(id, d)} />
           ))}
           {tudoPronto && entrada.onde && <Comemoracao titulo="Você juntou todos os documentos." texto={`Agora faça o pedido: ${entrada.onde.texto}`} />}
+          <AcoesDeTexto titulo={`${entrada.titulo}: o que levar`} texto={textoChecklist(entrada, prontos)} />
+        </section>
+      )}
+
+      {entrada.requisitos_laudo && entrada.requisitos_laudo.length > 0 && (
+        <section className={css.secao} aria-labelledby="laudo">
+          <h2 id="laudo" className={css.subtitulo}>O que o laudo precisa ter</h2>
+          <ul className={css.listaPontos}>
+            {entrada.requisitos_laudo.map((r) => (
+              <li key={r}>{r}</li>
+            ))}
+          </ul>
         </section>
       )}
 
@@ -107,6 +123,30 @@ export function DetalheDireito({ id }: { id: string }) {
         <section className={css.secao} aria-labelledby="se-negarem">
           <h2 id="se-negarem" className={css.subtitulo}>Se negarem</h2>
           <LinhaDoTempo passos={entrada.se_negarem} />
+        </section>
+      )}
+
+      {(entrada.frase_motorista || entrada.modelo_recurso) && (
+        <div className={`${css.acoesLinha} naoImprimir`}>
+          {entrada.frase_motorista && entrada.base_legal && (
+            <a className={css.botaoSecundario} href={href.motorista(entrada.id)} style={{ textDecoration: 'none' }}>
+              Mostre ao motorista
+            </a>
+          )}
+          {entrada.modelo_recurso && (
+            <a className={css.botaoSecundario} href={href.negaram(entrada.id)} style={{ textDecoration: 'none' }}>
+              Modelo de pedido se negarem
+            </a>
+          )}
+        </div>
+      )}
+
+      {entrada.base_legal && (
+        <section className={css.secao} aria-labelledby="base-legal">
+          <h2 id="base-legal" className={css.subtitulo}>Base legal</h2>
+          {entrada.base_legal.map((b) => (
+            <SourceChip key={b.url} nome={citarNorma(b)} url={b.url} verificadoEm={entrada.verificado_em} />
+          ))}
         </section>
       )}
 

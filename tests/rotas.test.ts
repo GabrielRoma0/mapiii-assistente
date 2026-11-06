@@ -28,3 +28,14 @@ teste('lerRota: caminho que não é o do app vai para 404, mesmo servido pelo in
 teste('lerRota: #/embarque existe como rota (a flag decide se a tela abre)', () => {
   assert.deepEqual(lerRota('#/embarque'), { tela: 'embarque' });
 });
+
+teste('lerRota: telas do guia v2 (na rua, me negaram, motorista, cartão, atalho e laudo)', () => {
+  assert.deepEqual(lerRota('#/na-rua'), { tela: 'na_rua' });
+  assert.deepEqual(lerRota('#/negaram'), { tela: 'negaram' });
+  assert.deepEqual(lerRota('#/negaram/bpc-exemplo'), { tela: 'negaram', id: 'bpc-exemplo' });
+  assert.deepEqual(lerRota('#/motorista/passe'), { tela: 'motorista', id: 'passe' });
+  assert.deepEqual(lerRota('#/cartao'), { tela: 'cartao' });
+  assert.deepEqual(lerRota('#/atalho/dirigir'), { tela: 'atalho', id: 'dirigir' });
+  assert.deepEqual(lerRota('#/laudo'), { tela: 'laudo' });
+  assert.deepEqual(lerRota('#/motorista/<x>'), { tela: 'nao_encontrada' });
+});
