@@ -22,6 +22,7 @@ import { Cartao } from './app/telas/Cartao';
 import { Atalho } from './app/telas/Atalho';
 import { Laudo } from './app/telas/Laudo';
 import { EMBARQUE_ATIVO } from './app/embarque/recurso';
+import { LimiteDeErro, TelaQueQuebra } from './app/LimiteDeErro';
 import css from './app/app.module.css';
 
 function Tela({ rota }: { rota: Rota }) {
@@ -60,6 +61,8 @@ function Tela({ rota }: { rota: Rota }) {
       return <Laudo />;
     case 'componentes':
       return import.meta.env.DEV ? <Vitrine /> : <NaoEncontrada />;
+    case 'teste_erro':
+      return import.meta.env.DEV ? <TelaQueQuebra /> : <NaoEncontrada />;
     default:
       return <NaoEncontrada />;
   }
@@ -92,7 +95,9 @@ export function App() {
           )}
         </div>
         <main id="conteudo" tabIndex={-1} className={css.conteudo}>
-          <Tela key={chave} rota={rota} />
+          <LimiteDeErro key={chave}>
+            <Tela rota={rota} />
+          </LimiteDeErro>
         </main>
         <footer className={css.rodape}>
           <DisclaimerBanner />

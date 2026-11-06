@@ -90,3 +90,11 @@ test('o aviso de protótipo aparece em todas as telas principais', async ({ page
     await expect(page.getByText('Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas.').first()).toBeVisible();
   }
 });
+
+test('se uma tela quebrar, aparece uma mensagem amigável e dá para voltar ao início', async ({ page }) => {
+  await page.goto('/#/teste-erro');
+  await expect(page.getByRole('heading', { level: 1, name: 'Algo deu errado nesta tela' })).toBeVisible();
+  await expect(page.getByText('Sou um protótipo de estudo, não um canal oficial. Confirme nas fontes indicadas.').first()).toBeVisible();
+  await page.getByRole('link', { name: 'Voltar ao início' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' })).toBeVisible();
+});

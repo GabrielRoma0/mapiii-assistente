@@ -19,6 +19,7 @@ export type Rota =
   | { tela: 'atalho'; id: string }
   | { tela: 'laudo' }
   | { tela: 'componentes' }
+  | { tela: 'teste_erro' }
   | { tela: 'nao_encontrada' };
 
 /**
@@ -45,6 +46,7 @@ export function lerRota(hash: string, pathname = '/'): Rota {
     if (primeira === 'embarque') return { tela: 'embarque' };
     if (primeira === 'reclamacao') return { tela: 'reclamacao' };
     if (primeira === 'componentes') return { tela: 'componentes' };
+    if (primeira === 'teste-erro') return { tela: 'teste_erro' };
     if (primeira === 'na-rua') return { tela: 'na_rua' };
     if (primeira === 'negaram') return { tela: 'negaram' };
     if (primeira === 'motorista') return { tela: 'motorista' };

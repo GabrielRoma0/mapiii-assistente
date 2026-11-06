@@ -39,3 +39,7 @@ teste('lerRota: telas do guia v2 (na rua, me negaram, motorista, cartão, atalho
   assert.deepEqual(lerRota('#/laudo'), { tela: 'laudo' });
   assert.deepEqual(lerRota('#/motorista/<x>'), { tela: 'nao_encontrada' });
 });
+
+teste('lerRota: #/teste-erro existe como rota (o App só abre a tela que quebra em desenvolvimento)', () => {
+  assert.deepEqual(lerRota('#/teste-erro'), { tela: 'teste_erro' });
+});
