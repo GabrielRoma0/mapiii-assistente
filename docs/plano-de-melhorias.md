@@ -100,12 +100,12 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 ### 2.2 Visual (cara de app profissional)
 
 #### V1 · Atalhos no ícone e capturas no instalador · P ⭐4
-- [ ] **O quê:** no manifesto do PWA, `shortcuts` ("Próximo ônibus acessível" → `#/embarque`, "Me negaram" → `#/negaram`, "Fazer uma pergunta" → `#/perguntar`) e `screenshots` (2 telas de celular).
+- [x] (06/11; o atalho do ônibus só entra se o Embarque estiver ligado no build; falta conferir num Android) **O quê:** no manifesto do PWA, `shortcuts` ("Próximo ônibus acessível" → `#/embarque`, "Me negaram" → `#/negaram`, "Fazer uma pergunta" → `#/perguntar`) e `screenshots` (2 telas de celular).
 - **Como:** em `vite.config.ts`; capturas geradas do app em 1080×1920 em `public/screenshots/` (com o modo exemplo, sem dados reais).
 - **Conferir:** `npm run build` e o manifesto em `dist/`; no Android, segurar o ícone (parte do teste no celular).
 
 #### V2 · Transições suaves · P
-- [ ] **O quê:** troca de tela com esmaecer de 160 ms (só opacidade, como o design system permite).
+- [x] (06/11, `ff9f81b`) **O quê:** troca de tela com esmaecer de 160 ms (só opacidade, como o design system permite).
 - **Como:** classe de entrada no `<main>` em `app.module.css`, com `@media (prefers-reduced-motion: reduce)` desligando.
 - **Conferir:** no navegador com e sem movimento reduzido (emulação).
 
@@ -127,7 +127,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Como:** junto com a publicação (H10 do PENDENCIAS).
 
 #### V7 · Tamanho do texto · P ⭐7
-- [ ] **O quê:** em Sobre e no topo do Início, "Tamanho do texto: A · A+ · A++" (100%, 115%, 130%).
+- [x] (06/11, `28e572a`; feito com CSS zoom só no conteúdo, porque o CSS usa px) **O quê:** em Sobre e no topo do Início, "Tamanho do texto: A · A+ · A++" (100%, 115%, 130%).
 - **Como:** função `aplicarTamanho(t: 'normal' | 'grande' | 'maior')` em `src/tema.ts` que muda `font-size` do `<html>`; guarda a escolha como o tema (só preferência visual, sem dado pessoal).
 - **Conferir:** no navegador, A++ em 320 px sem rolagem lateral em todas as telas.
 
@@ -149,7 +149,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** rodar com uma ficha de exemplo com link quebrado.
 
 #### T4 · Aviso de nova versão · P
-- [ ] **O quê:** no app instalado, faixa "Nova versão disponível · Atualizar" em vez de atualizar em silêncio no meio do uso.
+- [x] (06/11) **O quê:** no app instalado, faixa "Nova versão disponível · Atualizar" em vez de atualizar em silêncio no meio do uso.
 - **Como:** `registerType: 'prompt'` em `vite.config.ts` e `useRegisterSW` de `virtual:pwa-register/react` num componente `AvisoAtualizacao` em `src/App.tsx`.
 - **Conferir:** build, mudar algo, novo build e ver a faixa no `npm run preview`.
 
@@ -159,7 +159,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** teste forçando um erro numa tela de desenvolvimento.
 
 #### T6 · Carregar cada tela só quando precisa · P
-- [ ] **O quê:** o Início abre mais rápido em internet fraca.
+- [x] (06/11, `ff9f81b`; código inicial de 73,3 kB para 22,6 kB) **O quê:** o Início abre mais rápido em internet fraca.
 - **Como:** `React.lazy` + `Suspense` para as telas que não são o Início em `App.tsx`; o service worker continua guardando tudo para uso offline.
 - **Conferir:** tamanho do arquivo inicial no `npm run build` antes e depois (anotar no registro); modo avião depois da primeira visita.
 

@@ -11,3 +11,8 @@ convert -background none -density 384 icone.svg -resize 512x512 -strip -depth 8 
 ```
 
 Para os dois de fundo inteiro, tire o `rx="128"` do `<rect>` antes de converter.
+
+## Capturas da tela de instalação (`public/screenshots/`)
+
+- `inicio.png` e `embarque.png` (1024 × 2216) aparecem como prévias quando o Android oferece instalar o app (`screenshots` no manifesto, em `vite.config.ts`). Ficam fora do cache do aparelho.
+- Foram geradas do modo exemplo com o Playwright (perfil "celular", 390 × 844, sem a faixa de desenvolvimento). Depois que a base tiver fichas reais, vale gerar de novo mostrando um direito de verdade.

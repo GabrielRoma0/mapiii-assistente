@@ -9,6 +9,7 @@ import { Inicio } from './app/telas/Inicio';
 import { NaoEncontrada } from './app/telas/NaoEncontrada';
 import { EMBARQUE_ATIVO } from './app/embarque/recurso';
 import { LimiteDeErro, TelaQueQuebra } from './app/LimiteDeErro';
+import { AvisoAtualizacao } from './app/AvisoAtualizacao';
 import css from './app/app.module.css';
 import { lazy, Suspense } from 'react';
 
@@ -87,6 +88,7 @@ export function App() {
       <div className={css.casca}>
         {/* O conteúdo rola aqui dentro; a barra inferior fica fora, sem cobrir nada. */}
         <div id="rolagem" className={css.rolagem}>
+          <AvisoAtualizacao />
         {USANDO_EXEMPLO && (
           <p className={css.avisoDev} role="note">
             Desenvolvimento: a base está vazia, então estas telas usam entradas de exemplo que não são informação real.

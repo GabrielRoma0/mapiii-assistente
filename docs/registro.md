@@ -106,6 +106,15 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - **V3 · esqueleto**: blocos cinza enquanto o ponto e a previsão carregam. Sem teste próprio (é só visual e escondido do leitor de tela); coberto pelo axe.
 - Testes de lógica escritos antes e vistos falhando; testes de tela com o relógio adiantado 12 minutos e com o navegador sem internet. Totais: 286 testes de lógica e 96 execuções de testes de tela, todos passando.
 
+### 12. Fase D do plano de melhorias (cara de app)
+
+- **V7 · tamanho do texto** ⭐ (`28e572a`): botões A, A+ e A++ no Início e em Sobre (100%, 115%, 130%), guardados no aparelho como o tema. Decisões: feito com CSS `zoom` (todo o CSS usa px, então mudar o tamanho base não funcionaria) e só no conteúdo, porque com A++ a barra inferior não cabia em 320 px. O axe apontou que o nome dos botões precisava conter o texto visível ("A++"), para quem usa controle por voz; corrigido.
+- **V2 · transição suave** (`ff9f81b`): esmaecer de 160 ms ao trocar de tela; desliga para quem pede menos movimento.
+- **T6 · abrir mais rápido** (`ff9f81b`): cada tela carrega só quando é aberta. O código inicial do app caiu de 73,3 kB para 22,6 kB (de 22,3 para 7,8 kB comprimidos). O service worker continua guardando tudo para uso sem internet.
+- **V1 · atalhos e capturas** ⭐: segurar o ícone no Android mostra "Próximo ônibus acessível" (só se o Embarque estiver ligado no build), "Me negaram" e "Fazer uma pergunta"; duas capturas aparecem na tela de instalação (fora do cache do aparelho).
+- **T4 · aviso de nova versão**: o app instalado mostra "Nova versão do Mapiii disponível" com "Atualizar agora" e "Depois".
+- Conferido no build de produção: o service worker ativa e o app recarrega com o navegador sem internet. Totais: 288 testes de lógica e 100 execuções de testes de tela, todos passando. Falta conferir num Android os atalhos e as capturas.
+
 ### Fora do repositório (só neste computador)
 
 - `.env.local`: liga o Embarque com o simulador. **Antes do build de produção, precisa apontar para o Supabase da dupla.**
