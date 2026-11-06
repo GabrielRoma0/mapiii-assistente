@@ -59,13 +59,13 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 ### 2.1 Fluidez (o app parecer fácil)
 
 #### F1 · Barra de navegação inferior · M
-- [ ] **O quê:** barra fixa com Início · Perguntar · Na rua · Sobre, em todas as telas do app.
+- [x] (06/11, `5bfa976`; a barra fica fora da área que rola, porque flutuando ela cobria alvos de toque; escondida na triagem) **O quê:** barra fixa com Início · Perguntar · Na rua · Sobre, em todas as telas do app.
 - **Por quê:** hoje a pessoa depende do "Voltar"; numa barra fixa ela nunca se perde.
 - **Como:** usar o `TabBar` do design system (`items`, `value`, `onChange`) em `src/App.tsx`, abaixo do `<main>` e acima do aviso de protótipo. Nova função `abaDaRota(rota: Rota): 'inicio' | 'perguntar' | 'na_rua' | 'sobre' | null` em `src/app/rotas.ts` decide a aba ativa (triagem, rota e detalhe contam como "inicio"; embarque, cartão, motorista e reclamação como "na_rua"). `onChange` chama `navegar(href...)`. Espaço no fim do conteúdo para a barra não cobrir nada.
 - **Conferir:** teste de `abaDaRota` para todas as rotas; no navegador, Tab chega na barra, a aba ativa tem `aria-current`, e ao trocar o foco vai para o título (já feito pelo `Titulo`).
 
 #### F2 · Rota dos Direitos mais limpa · M
-- [ ] **O quê:** "Provavelmente não se aplica" recolhido por padrão ("Ver 3 que provavelmente não se aplicam"); botão "Mudar uma resposta" que mostra o resumo das respostas, cada uma com "Mudar".
+- [x] (06/11, `e0f7aff`) **O quê:** "Provavelmente não se aplica" recolhido por padrão ("Ver 3 que provavelmente não se aplicam"); botão "Mudar uma resposta" que mostra o resumo das respostas, cada uma com "Mudar".
 - **Por quê:** a pessoa vê primeiro o que pode pedir; corrigir uma resposta não obriga a refazer tudo.
 - **Como:** em `RotaDosDireitos.tsx`, separar `rota` por classe; o grupo "nao" vai num `<details>`. Nova função `resumoEditavel(respostas, perguntas): { id: string; pergunta: string; resposta: string }[]` em `src/core/perguntas.ts`. "Mudar" abre a triagem no passo da pergunta: `href.triagem` passa a aceitar `#/situacao/p_cidade` (rota `{ tela: 'triagem'; pergunta?: string }`), e `Triagem.tsx` começa nesse passo.
 - **Conferir:** testes de `resumoEditavel` e de `lerRota('#/situacao/p_cidade')`; no navegador, mudar uma resposta e voltar com a rota atualizada.
@@ -87,7 +87,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** no navegador: aparece uma vez, "Pular" funciona, modo privado não quebra (mostra e segue).
 
 #### F6 · Compartilhar a Rota inteira · P
-- [ ] **O quê:** botão "Compartilhar minha rota" (WhatsApp, copiar, imprimir) com os direitos "Pode ter direito" e "Talvez", cada um com o que levar e a fonte.
+- [x] (06/11) **O quê:** botão "Compartilhar minha rota" (WhatsApp, copiar, imprimir) com os direitos "Pode ter direito" e "Talvez", cada um com o que levar e a fonte.
 - **Como:** função `textoDaRota(itens: ItemRota[]): string` em `src/core/garantia.ts`, sem as respostas sensíveis; usar `AcoesDeTexto`.
 - **Conferir:** teste de `textoDaRota` (não inclui "Provavelmente não se aplica" nem as respostas da triagem; traz o aviso de protótipo).
 

@@ -129,3 +129,15 @@ test('Rota mais limpa: "não se aplica" recolhido e "Mudar uma resposta" sem ref
   await expect(page).toHaveURL(/#\/rota$/);
   await expect(page.getByText(/Benefício em dinheiro/).first()).toBeVisible();
 });
+
+test('compartilhar a rota: copia só os direitos possíveis, sem as respostas', async ({ page, context, browserName }) => {
+  test.skip(browserName !== 'chromium');
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await responderTriagem(page);
+  await page.getByRole('region', { name: 'Levar esta rota' }).getByRole('button', { name: 'Copiar texto' }).click();
+  const texto = await page.evaluate(() => navigator.clipboard.readText());
+  expect(texto).toContain('Minha rota dos direitos (Mapiii)');
+  expect(texto).toContain('Direito de exemplo A · Pode ter direito');
+  expect(texto).not.toContain('Direito de exemplo B');
+  expect(texto).not.toContain('Combina com o que você respondeu');
+});

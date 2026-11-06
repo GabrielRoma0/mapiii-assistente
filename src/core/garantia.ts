@@ -96,3 +96,25 @@ export function haQuantosDias(verificadoEm: string, hoje: Date = new Date()): st
   if (Number.isNaN(dias)) return '';
   return dias === 0 ? 'hoje' : dias === 1 ? 'há 1 dia' : `há ${dias} dias`;
 }
+
+const NOME_CLASSE = { pode: 'Pode ter direito', talvez: 'Talvez' } as const;
+
+/**
+ * "Compartilhar minha rota": só os direitos que podem se aplicar ("Pode ter direito" e "Talvez"), com o que levar,
+ * onde ir e a fonte. Não inclui o porquê, que repete as respostas da triagem (dados sensíveis). Vazio se não há nada.
+ */
+export function textoDaRota(itens: ItemRota[]): string {
+  const possiveis = itens.filter((i) => i.classe !== 'nao');
+  if (!possiveis.length) return '';
+  const blocos = possiveis.map(({ entrada: e, classe }, n) =>
+    [
+      `${n + 1}. ${e.titulo} · ${NOME_CLASSE[classe as 'pode' | 'talvez']}`,
+      e.documentos?.length ? `   O que levar: ${e.documentos.join(', ')}` : '',
+      e.onde ? `   Onde ir: ${e.onde.texto}${e.onde.link ? ` (${e.onde.link})` : ''}` : '',
+      `   Fonte: ${e.fonte_nome} (${e.fonte_url}), conferida em ${dataBR(e.verificado_em)}.`
+    ]
+      .filter(Boolean)
+      .join('\n')
+  );
+  return ['Minha rota dos direitos (Mapiii)', '', ...blocos.flatMap((b) => [b, '']), 'Quem decide é sempre o órgão responsável.', AVISO_PROTOTIPO_TEXTO].join('\n');
+}

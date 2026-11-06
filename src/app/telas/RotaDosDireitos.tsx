@@ -4,6 +4,8 @@ import { montarRota } from '../../core/regras';
 import { tipoFonteNaTela } from '../../core/kb-schema';
 import { PERGUNTAS, comoLista, perguntasNoModo, resumoEditavel, textoDaOpcao } from '../../core/perguntas';
 import type { ItemRota } from '../../core/regras';
+import { textoDaRota } from '../../core/garantia';
+import { AcoesDeTexto } from '../../ui/acoes';
 import { Titulo, Voltar } from '../comum';
 import { KB } from '../dados';
 import { useEstado } from '../estado';
@@ -49,6 +51,7 @@ export function RotaDosDireitos() {
   const { respostas, limparRespostas, modo } = useEstado();
   const respondeu = Object.keys(respostas).length > 0;
   const rota = montarRota(KB, respostas, perguntasNoModo(modo));
+  const textoRota = textoDaRota(rota);
   const naoAplica = rota.filter((i) => i.classe === 'nao');
   const temLaudo = rota.some((i) => i.classe !== 'nao' && i.entrada.requisitos_laudo?.length);
   const resumo = resumoDasRespostas(respostas);
@@ -99,6 +102,17 @@ export function RotaDosDireitos() {
           ))}
         </ul>
       </details>
+      {textoRota && (
+        <section className={css.secao} aria-labelledby="levar-rota">
+          <h2 id="levar-rota" className={css.subtitulo}>
+            Levar esta rota
+          </h2>
+          <p className={css.apoio} style={{ margin: 0 }}>
+            Mande para alguém da família ou imprima. Vão só os direitos que podem se aplicar, sem as suas respostas.
+          </p>
+          <AcoesDeTexto titulo="Minha rota dos direitos" texto={textoRota} />
+        </section>
+      )}
       <LembrarRespostas />
       {temLaudo && (
         <a className={css.botaoSecundario} href={href.laudo} style={{ textDecoration: 'none' }}>

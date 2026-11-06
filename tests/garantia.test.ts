@@ -153,3 +153,26 @@ teste('perguntasNoModo: "Sou a pessoa" fala com você; os outros modos não muda
   const r = avaliarEntrada({ condicoes: { todas: [{ campo: 'p_cidade', em: ['sim'] }] } }, { p_cidade: 'sim' }, eu);
   assert.equal(r.porque, 'Combina com o que você respondeu: “Sim” para “Você mora na cidade de São Paulo?”.');
 });
+
+import { textoDaRota } from '../src/core/garantia.ts';
+
+teste('textoDaRota: só "Pode ter direito" e "Talvez", com o que levar, onde ir e fonte; sem respostas da triagem', () => {
+  const a = ficha('a');
+  const b = ficha('b', { onde: { texto: 'Posto B.' } });
+  const c = ficha('c');
+  const t = textoDaRota([
+    { entrada: a, classe: 'pode', porque: 'Combina com o que você respondeu: “Sim” para “Renda?”.' },
+    { entrada: b, classe: 'talvez', porque: 'Depende da resposta.' },
+    { entrada: c, classe: 'nao', porque: 'Não.' }
+  ]);
+  assert.ok(t.startsWith('Minha rota dos direitos (Mapiii)'));
+  assert.ok(t.includes('1. Direito a · Pode ter direito'));
+  assert.ok(t.includes('2. Direito b · Talvez'));
+  assert.ok(t.includes('O que levar: Documento A, Documento B'));
+  assert.ok(t.includes('Onde ir: Posto B.'));
+  assert.ok(t.includes('Fonte: Fonte de exemplo (https://exemplo.gov.br), conferida em 28/10/2026.'));
+  assert.ok(!t.includes('Direito c'), 'não inclui "Provavelmente não se aplica"');
+  assert.ok(!t.includes('Renda'), 'não inclui as respostas da triagem (o porquê)');
+  assert.ok(t.includes('não um canal oficial'));
+  assert.equal(textoDaRota([{ entrada: c, classe: 'nao', porque: '' }]), '');
+});

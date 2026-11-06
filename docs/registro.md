@@ -91,6 +91,13 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Decisão de ordem: T1 antes de T5, porque a tela de erro só dá para testar num navegador de verdade.
 - Totais: 278 testes de lógica e 86 execuções de testes de tela, todos passando.
 
+### 10. Fase B do plano de melhorias (fluidez principal)
+
+- **F1 · barra inferior** (`5bfa976`): Início, Perguntar, Na rua e Sobre, com a aba atual marcada para o leitor de tela; escondida na triagem (que já tem o botão fixo "Continuar"). Decisão: o conteúdo passou a rolar num contêiner próprio e a barra fica fora dele, porque o axe mostrou que uma barra flutuante cobria alvos de toque.
+- **F2 · Rota mais limpa** (`e0f7aff`): "Provavelmente não se aplica" recolhido; "Mudar uma resposta" abre a triagem direto na pergunta e volta para a rota.
+- **F6 · compartilhar a Rota**: "Levar esta rota" com compartilhar, copiar e imprimir; vão só os direitos possíveis, sem as respostas da triagem.
+- Testes de lógica escritos antes e vistos falhando; 4 testes de tela novos. Totais: 282 testes de lógica e 92 execuções de testes de tela, todos passando.
+
 ### Fora do repositório (só neste computador)
 
 - `.env.local`: liga o Embarque com o simulador. **Antes do build de produção, precisa apontar para o Supabase da dupla.**
