@@ -85,7 +85,7 @@ export function Avaliacao() {
   const porTema = resumirPorTema(registros);
 
   return (
-    <div className={app.casca}>
+    <div className={app.casca} style={{ height: 'auto', minHeight: '100dvh' }}>
       <main className={app.conteudo}>
         <header className={app.topoInicio}>
           <Logo size={30} tone={tema === 'escuro' ? 'inverse' : 'color'} cut={tema === 'escuro' ? 'var(--bg-app)' : undefined} title="Mapiii" />

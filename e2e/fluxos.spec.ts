@@ -98,3 +98,19 @@ test('se uma tela quebrar, aparece uma mensagem amigável e dá para voltar ao i
   await page.getByRole('link', { name: 'Voltar ao início' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' })).toBeVisible();
 });
+
+test('barra inferior: troca de tela, marca a aba atual e leva o foco ao título', async ({ page }) => {
+  await page.goto('/#/');
+  const barra = page.getByRole('navigation', { name: 'Navegação principal' });
+  await expect(barra.getByRole('button', { name: 'Início' })).toHaveAttribute('aria-current', 'page');
+  await barra.getByRole('button', { name: 'Na rua' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Garanta na rua' })).toBeFocused();
+  await expect(barra.getByRole('button', { name: 'Na rua' })).toHaveAttribute('aria-current', 'page');
+  await barra.getByRole('button', { name: 'Perguntar' }).click();
+  // O campo da pergunta fica acima da barra, sem ser coberto.
+  const campo = await page.getByLabel('Sua pergunta').boundingBox();
+  const caixaBarra = await barra.boundingBox();
+  expect(campo!.y + campo!.height).toBeLessThanOrEqual(caixaBarra!.y + 1);
+  await page.goto('/#/situacao');
+  await expect(barra).toHaveCount(0);
+});

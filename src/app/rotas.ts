@@ -93,3 +93,33 @@ export function useRota(): Rota {
   }, []);
   return rota;
 }
+
+export type Aba = 'inicio' | 'perguntar' | 'na_rua' | 'sobre';
+
+/**
+ * Aba acesa na barra inferior. null = a barra não aparece: na triagem (fluxo passo a passo, com ação fixa
+ * no rodapé), na página não encontrada e nas telas só de desenvolvimento.
+ */
+export function abaDaRota(rota: Rota): Aba | null {
+  switch (rota.tela) {
+    case 'perguntar':
+      return 'perguntar';
+    case 'sobre':
+      return 'sobre';
+    case 'na_rua':
+    case 'embarque':
+    case 'cartao':
+    case 'motorista':
+    case 'reclamacao':
+      return 'na_rua';
+    case 'triagem':
+    case 'nao_encontrada':
+    case 'componentes':
+    case 'teste_erro':
+      return null;
+    default:
+      return 'inicio';
+  }
+}
+
+export const HREF_DA_ABA: Record<Aba, string> = { inicio: href.inicio, perguntar: href.perguntar, na_rua: href.naRua, sobre: href.sobre };

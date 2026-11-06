@@ -18,6 +18,7 @@ export function Titulo({ children, grande }: { children: ReactNode; grande?: boo
     }
     ref.current?.focus();
     window.scrollTo(0, 0);
+    document.getElementById('rolagem')?.scrollTo(0, 0);
   }, []);
   return (
     <h1 ref={ref} tabIndex={-1} className={grande ? css.tituloGrande : css.titulo}>

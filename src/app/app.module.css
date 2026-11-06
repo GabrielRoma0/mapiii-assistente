@@ -17,7 +17,7 @@
 }
 
 .casca {
-  min-height: 100dvh;
+  height: 100dvh;
   max-width: 560px;
   margin: 0 auto;
   display: flex;
@@ -379,6 +379,7 @@
 }
 .campoPergunta {
   position: sticky;
+  /* Fica logo acima da barra inferior, quando ela existe (--altura-barra vem do App). */
   bottom: 0;
   z-index: 2;
   margin: 0 calc(-1 * var(--space-5)) calc(-1 * var(--space-6));
@@ -830,5 +831,28 @@
   }
   .casca {
     max-width: none;
+    height: auto;
+  }
+  .rolagem {
+    overflow: visible;
+  }
+}
+
+/* Área que rola (todo o conteúdo e o aviso de protótipo); a barra inferior fica fora dela. */
+.rolagem {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de navegação inferior (TabBar do design system). */
+.barraInferior {
+  flex: none;
+}
+@media print {
+  .barraInferior {
+    display: none;
   }
 }

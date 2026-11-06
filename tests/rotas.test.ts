@@ -43,3 +43,14 @@ teste('lerRota: telas do guia v2 (na rua, me negaram, motorista, cartão, atalho
 teste('lerRota: #/teste-erro existe como rota (o App só abre a tela que quebra em desenvolvimento)', () => {
   assert.deepEqual(lerRota('#/teste-erro'), { tela: 'teste_erro' });
 });
+
+import { abaDaRota } from '../src/app/rotas.ts';
+
+teste('abaDaRota: cada tela acende a aba certa; triagem, 404 e telas de dev não mostram a barra', () => {
+  const aba = (h: string) => abaDaRota(lerRota(h));
+  for (const h of ['#/', '#/rota', '#/direito/x', '#/laudo', '#/atalho/dirigir', '#/negaram', '#/negaram/x', '#/conferir']) assert.equal(aba(h), 'inicio', h);
+  assert.equal(aba('#/perguntar'), 'perguntar');
+  for (const h of ['#/na-rua', '#/embarque', '#/cartao', '#/motorista', '#/motorista/x', '#/reclamacao']) assert.equal(aba(h), 'na_rua', h);
+  assert.equal(aba('#/sobre'), 'sobre');
+  for (const h of ['#/situacao', '#/qualquer', '#/componentes', '#/teste-erro']) assert.equal(aba(h), null, h);
+});

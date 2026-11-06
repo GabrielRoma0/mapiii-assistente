@@ -1,6 +1,7 @@
 import { DisclaimerBanner } from './ui/assistente';
 import { ProvedorEstado } from './app/estado';
-import { useRota, type Rota } from './app/rotas';
+import { abaDaRota, HREF_DA_ABA, navegar, useRota, type Aba, type Rota } from './app/rotas';
+import { TabBar } from '../design-system/components/navigation/TabBar';
 import { USANDO_EXEMPLO } from './app/dados';
 import { useOnline } from './app/conexao';
 import { Icon } from '../design-system/components/icons/Icon';
@@ -71,6 +72,7 @@ function Tela({ rota }: { rota: Rota }) {
 export function App() {
   const rota = useRota();
   const online = useOnline();
+  const aba = abaDaRota(rota);
   // A chave força a tela a montar de novo ao trocar de rota (foco no título, rolagem no topo).
   const chave = 'id' in rota && rota.id ? `${rota.tela}-${rota.id}` : rota.tela;
   return (
@@ -79,6 +81,8 @@ export function App() {
         Pular para o conteúdo
       </a>
       <div className={css.casca}>
+        {/* O conteúdo rola aqui dentro; a barra inferior fica fora, sem cobrir nada. */}
+        <div id="rolagem" className={css.rolagem}>
         {USANDO_EXEMPLO && (
           <p className={css.avisoDev} role="note">
             Desenvolvimento: a base está vazia, então estas telas usam entradas de exemplo que não são informação real.
@@ -102,6 +106,21 @@ export function App() {
         <footer className={css.rodape}>
           <DisclaimerBanner />
         </footer>
+        </div>
+        {aba && (
+          <div className={css.barraInferior}>
+            <TabBar
+              value={aba}
+              onChange={(id) => navegar(HREF_DA_ABA[id as Aba])}
+              items={[
+                { id: 'inicio', label: 'Início', icon: 'mapa' },
+                { id: 'perguntar', label: 'Perguntar', icon: 'conversa' },
+                { id: 'na_rua', label: 'Na rua', icon: 'onde_ir' },
+                { id: 'sobre', label: 'Sobre', icon: 'lista' }
+              ]}
+            />
+          </div>
+        )}
       </div>
     </ProvedorEstado>
   );
