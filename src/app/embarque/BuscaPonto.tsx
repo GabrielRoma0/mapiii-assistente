@@ -3,7 +3,7 @@
 // Busca só pelo nome digitado: nunca usa a localização da pessoa.
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Icon } from '../../../design-system/components/icons/Icon';
-import { FalaMapi } from '../../ui/assistente';
+import { Esqueleto, FalaMapi } from '../../ui/assistente';
 import { falar } from '../../ui/acoes';
 import { guardarUltimoPonto, lerUltimosPontos } from '../../core/lembrar';
 import { armazenamentoDoNavegador } from '../../core/registro';
@@ -221,7 +221,10 @@ export function BuscaPonto({ consultar, exemplo, agora, aoInteragir, aoAchar, an
           </div>
         )}
         {(estado.fase === 'buscando' || estado.fase === 'carregando') && (
-          <FalaMapi estado="procurando">{estado.fase === 'buscando' ? 'Procurando o ponto.' : `Procurando os ônibus que chegam ao ponto ${estado.parada.nome}.`}</FalaMapi>
+          <>
+            <FalaMapi estado="procurando">{estado.fase === 'buscando' ? 'Procurando o ponto.' : `Procurando os ônibus que chegam ao ponto ${estado.parada.nome}.`}</FalaMapi>
+            <Esqueleto linhas={estado.fase === 'buscando' ? 3 : 4} />
+          </>
         )}
 
         {estado.fase === 'paradas' && (

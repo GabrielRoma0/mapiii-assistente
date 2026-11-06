@@ -422,3 +422,14 @@ export function CartaoResposta({
     </article>
   );
 }
+
+/** Blocos cinza no lugar do conteúdo enquanto carrega. Decorativo: o "procurando" vai em texto no aria-live. */
+export function Esqueleto({ linhas = 3 }: { linhas?: number }) {
+  return (
+    <div className={css.esqueleto} aria-hidden="true" data-esqueleto="">
+      {Array.from({ length: linhas }, (_, i) => (
+        <span key={i} className={css.esqueletoLinha} style={{ width: `${[92, 70, 84, 60][i % 4]}%` }} />
+      ))}
+    </div>
+  );
+}

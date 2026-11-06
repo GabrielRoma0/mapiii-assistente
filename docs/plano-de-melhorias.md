@@ -71,7 +71,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** testes de `resumoEditavel` e de `lerRota('#/situacao/p_cidade')`; no navegador, mudar uma resposta e voltar com a rota atualizada.
 
 #### F3 · Embarque ao vivo · M ⭐2
-- [ ] **O quê:** no resultado do ponto, atualizar sozinho a cada 30 s, com "Atualizado há X s" e a contagem dos minutos; botão "Pausar". Lista "Últimos pontos" (até 3) para buscar de novo com um toque, guardada só se "Lembrar" estiver ligado.
+- [x] (06/11, `d5072fc`; no exemplo os minutos também diminuem, para o vídeo) **O quê:** no resultado do ponto, atualizar sozinho a cada 30 s, com "Atualizado há X s" e a contagem dos minutos; botão "Pausar". Lista "Últimos pontos" (até 3) para buscar de novo com um toque, guardada só se "Lembrar" estiver ligado.
 - **Por quê:** no ponto, a pessoa não quer ficar apertando "Atualizar".
 - **Como:** em `BuscaPonto.tsx`, `setInterval` de 30 s chamando `verPrevisao` só com a aba visível (`document.visibilityState`) e parando ao sair da tela. Nova função `mudouOProximo(antes: ResumoPonto, depois: ResumoPonto): boolean` em `supabase/functions/_shared/embarque.ts`: o `aria-live` só fala quando o próximo acessível muda. Últimos pontos em `src/core/lembrar.ts` (`lerUltimosPontos`, `guardarUltimoPonto`, só `codigo` e `nome`, máximo 3).
 - **Conferir:** testes de `mudouOProximo` (mesmo ônibus 1 min a menos = false; outro ônibus = true) e dos últimos pontos (limite de 3, armazenamento bloqueado); no navegador com o simulador.
@@ -92,7 +92,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** teste de `textoDaRota` (não inclui "Provavelmente não se aplica" nem as respostas da triagem; traz o aviso de protótipo).
 
 #### F7 · Aviso de chegada falado · M ⭐1
-- [ ] **O quê:** no Embarque por ponto, "Me avise quando estiver chegando": com a tela aberta, quando o próximo acessível estiver a 2 minutos ou menos, o app fala "O 8000-10 acessível chega em 2 minutos" e vibra.
+- [x] (06/11, `d5072fc`) **O quê:** no Embarque por ponto, "Me avise quando estiver chegando": com a tela aberta, quando o próximo acessível estiver a 2 minutos ou menos, o app fala "O 8000-10 acessível chega em 2 minutos" e vibra.
 - **Por quê:** a pessoa pode guardar o celular e prestar atenção na rua.
 - **Como:** depende de F3. Função `deveAvisar(resumo: ResumoPonto, avisado: string | null, limite = 2): string | null` em `embarque.ts` (devolve a frase uma vez por veículo). Voz com a mesma `speechSynthesis` do `BotaoOuvir` (extraída para `falar(texto)` em `src/ui/acoes.tsx`) e `navigator.vibrate([200, 100, 200])` quando existir. Aviso claro: "Funciona com esta tela aberta."
 - **Conferir:** testes de `deveAvisar` (avisa uma vez; não avisa acima do limite; outro veículo avisa de novo); no navegador com o modo exemplo.
@@ -110,7 +110,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** no navegador com e sem movimento reduzido (emulação).
 
 #### V3 · Carregamento com esqueleto · P
-- [ ] **O quê:** blocos cinza no lugar dos cartões enquanto o Embarque busca, em vez de só a fala do Mapi.
+- [x] (06/11) **O quê:** blocos cinza no lugar dos cartões enquanto o Embarque busca, em vez de só a fala do Mapi.
 - **Como:** componente `Esqueleto({ linhas })` em `src/ui/assistente.tsx`, `aria-hidden`, com o texto "Procurando..." mantido no `aria-live`.
 - **Conferir:** no navegador com o simulador lento (termo `lento`).
 
@@ -164,7 +164,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** tamanho do arquivo inicial no `npm run build` antes e depois (anotar no registro); modo avião depois da primeira visita.
 
 #### T7 · Embarque sem internet · P ⭐5
-- [ ] **O quê:** sem internet, o Embarque mostra a última consulta com "Consulta das 14:32, sem internet agora" e as fichas de deslocamento.
+- [x] (06/11, `d5072fc`; vale também quando a atualização falha com internet) **O quê:** sem internet, o Embarque mostra a última consulta com "Consulta das 14:32, sem internet agora" e as fichas de deslocamento.
 - **Como:** guardar a última previsão só na memória da página (sem armazenamento); detectar falta de rede com `useOnline` (já existe) e mostrar a última com o selo de horário.
 - **Conferir:** no navegador, consultar, desligar a rede (emulação) e ver a última consulta.
 

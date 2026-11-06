@@ -494,3 +494,22 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+
+/* Esqueleto de carregamento: blocos cinza estáticos (sem animação, nada a desligar com movimento reduzido). */
+.esqueleto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: var(--radius-xl);
+  background: var(--surface-card);
+}
+.esqueletoLinha {
+  display: block;
+  height: 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+}
+.esqueletoLinha:first-child {
+  height: 26px;
+}

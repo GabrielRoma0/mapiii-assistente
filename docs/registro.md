@@ -98,6 +98,14 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - **F6 · compartilhar a Rota**: "Levar esta rota" com compartilhar, copiar e imprimir; vão só os direitos possíveis, sem as respostas da triagem.
 - Testes de lógica escritos antes e vistos falhando; 4 testes de tela novos. Totais: 282 testes de lógica e 92 execuções de testes de tela, todos passando.
 
+### 11. Fase C do plano de melhorias (Embarque ao vivo)
+
+- **F3 · Embarque ao vivo** (`d5072fc`): a previsão do ponto se atualiza sozinha a cada 30 s, mostra "há X s" e tem "Pausar atualização". O leitor de tela só fala quando muda o próximo ônibus acessível, e não a cada 30 s. Os últimos 3 pontos aparecem para buscar de novo, só com "Lembrar" ligado (desligar apaga). Decisão: no modo exemplo, os minutos também diminuem, para a contagem aparecer no vídeo.
+- **F7 · aviso de chegada falado** ⭐ (`d5072fc`): "Me avise quando estiver chegando" fala e vibra quando o próximo acessível está a 2 minutos: "O ônibus EX01-10 acessível chega em 2 min." Uma vez por ônibus, com a tela aberta.
+- **T7 · sem internet** (`d5072fc`): a última previsão continua na tela com a hora e o aviso "Sem internet agora". Decisão: vale também quando a atualização falha com internet.
+- **V3 · esqueleto**: blocos cinza enquanto o ponto e a previsão carregam. Sem teste próprio (é só visual e escondido do leitor de tela); coberto pelo axe.
+- Testes de lógica escritos antes e vistos falhando; testes de tela com o relógio adiantado 12 minutos e com o navegador sem internet. Totais: 286 testes de lógica e 96 execuções de testes de tela, todos passando.
+
 ### Fora do repositório (só neste computador)
 
 - `.env.local`: liga o Embarque com o simulador. **Antes do build de produção, precisa apontar para o Supabase da dupla.**
