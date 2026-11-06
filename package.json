@@ -19,7 +19,8 @@
     "auditar-perguntas": "tsx scripts/auditar-perguntas.ts",
     "verificar": "npm run typecheck && npm test && npm run validar-kb",
     "test:banco": "bash scripts/testar-banco.sh",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "lighthouse": "lhci autorun"
   },
   "dependencies": {
     "react": "18.3.1",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@lhci/cli": "0.15.1",
     "@playwright/test": "1.64.1",
     "@types/node": "20.19.43",
     "@types/react": "18.3.12",
