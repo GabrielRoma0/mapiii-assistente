@@ -6,6 +6,7 @@ import type { Modo, Respostas } from '../core/perguntas.ts';
 import { apagarRespostasGuardadas, apagarUltimosPontos, guardarRespostas, lerRespostasGuardadas } from '../core/lembrar.ts';
 import { armazenamentoDoNavegador } from '../core/registro.ts';
 import { ESCALAS, guardarTamanho, lerTamanho, type Tamanho } from '../core/tamanho.ts';
+import { guardarVelocidade, lerVelocidade, type Velocidade } from '../core/varredura.ts';
 
 interface EstadoApp {
   respostas: Respostas;
@@ -26,6 +27,11 @@ interface EstadoApp {
   /** Tamanho do texto (A, A+, A++), guardado no aparelho como o tema. */
   tamanho: Tamanho;
   escolherTamanho: (t: Tamanho) => void;
+  /** Modo varredura (um toque) ligado nesta visita, e a velocidade guardada no aparelho. */
+  varredura: boolean;
+  ligarVarredura: (ligar: boolean) => void;
+  velocidade: Velocidade;
+  escolherVelocidade: (v: Velocidade) => void;
 }
 
 const Contexto = createContext<EstadoApp | null>(null);
@@ -39,6 +45,8 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
   const [modo, setModo] = useState<Modo | null>(guardado?.modo ?? null);
   const [lembrar, setLembrar] = useState(Boolean(guardado));
   const [tamanho, setTamanho] = useState<Tamanho>(() => lerTamanho(armazenamento));
+  const [varredura, setVarredura] = useState(false);
+  const [velocidade, setVelocidade] = useState<Velocidade>(() => lerVelocidade(armazenamento));
   useEffect(() => {
     document.documentElement.style.setProperty('--escala', String(ESCALAS[tamanho]));
   }, [tamanho]);
@@ -69,6 +77,13 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
       modo,
       escolherModo: setModo,
       lembrar,
+      varredura,
+      ligarVarredura: setVarredura,
+      velocidade,
+      escolherVelocidade: (v) => {
+        setVelocidade(v);
+        guardarVelocidade(armazenamento, v);
+      },
       tamanho,
       escolherTamanho: (t) => {
         setTamanho(t);
@@ -87,7 +102,7 @@ export function ProvedorEstado({ children }: { children: ReactNode }) {
         return ok;
       }
     }),
-    [respostas, marcados, modo, lembrar, tamanho, armazenamento]
+    [respostas, marcados, modo, lembrar, tamanho, varredura, velocidade, armazenamento]
   );
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>;
 }

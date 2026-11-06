@@ -77,12 +77,12 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** testes de `mudouOProximo` (mesmo ônibus 1 min a menos = false; outro ônibus = true) e dos últimos pontos (limite de 3, armazenamento bloqueado); no navegador com o simulador.
 
 #### F4 · Sugestões enquanto digita · P
-- [ ] **O quê:** em "Fazer uma pergunta", até 3 sugestões abaixo do campo, a partir das `perguntas_exemplo` das fichas.
+- [x] (06/11, `27ed102`; botões que enviam a pergunta, em vez de lista com setas) **O quê:** em "Fazer uma pergunta", até 3 sugestões abaixo do campo, a partir das `perguntas_exemplo` das fichas.
 - **Como:** função `sugerirPerguntas(texto: string, indice, max = 3): string[]` em `src/core/busca.ts`, que usa a mesma busca a partir de 3 letras; lista com `role="listbox"` e setas do teclado em `Perguntar.tsx`.
 - **Conferir:** testes de `sugerirPerguntas` (menos de 3 letras = vazio; sem repetidas); no navegador, setas e Enter.
 
 #### F5 · Apresentação na primeira visita · P
-- [ ] **O quê:** três telas curtas na primeira vez (Descubra, Prepare, Garanta na rua), com "Pular" sempre visível.
+- [x] (06/11, `0b041fc`; feito como cartão no Início com "Entendi", sem bloquear o uso) **O quê:** três telas curtas na primeira vez (Descubra, Prepare, Garanta na rua), com "Pular" sempre visível.
 - **Como:** componente `Apresentacao` em `src/app/telas/Apresentacao.tsx`, mostrado pelo `Inicio` se `localStorage['mapiii.apresentacao.v1']` não existir; guarda só "vista". Textos tirados do guia v2 (os três atos).
 - **Conferir:** no navegador: aparece uma vez, "Pular" funciona, modo privado não quebra (mostra e segue).
 
@@ -144,7 +144,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** relatório no GitHub; números anotados no registro.
 
 #### T3 · Conferência automática das fontes · P
-- [ ] **O quê:** robô semanal que abre cada `fonte_url`, `onde.link` e `base_legal.url` e avisa os que não respondem.
+- [x] (06/11, `700667b`; se algum link quebrar, o job falha e o GitHub avisa por e-mail) **O quê:** robô semanal que abre cada `fonte_url`, `onde.link` e `base_legal.url` e avisa os que não respondem.
 - **Como:** `scripts/conferir-links.ts` (só `fetch`, sem biblioteca), comando `npm run conferir-links`, workflow agendado `.github/workflows/conferir-links.yml` (toda segunda). Não falha o CI normal: abre um aviso.
 - **Conferir:** rodar com uma ficha de exemplo com link quebrado.
 
@@ -176,7 +176,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 ### 2.4 Produto (depois do MVP testado)
 
 #### P1 · Modo varredura · G ⭐3
-- [ ] **O quê:** um botão grande "Usar com um toque" liga o modo em que as opções se destacam uma por vez e **qualquer toque na tela** (ou Espaço) escolhe a destacada. Velocidade ajustável (1,5 s, 2,5 s, 4 s).
+- [x] (06/11; vale para o app inteiro, não só triagem e Início; falta testar com quem usa acionador) **O quê:** um botão grande "Usar com um toque" liga o modo em que as opções se destacam uma por vez e **qualquer toque na tela** (ou Espaço) escolhe a destacada. Velocidade ajustável (1,5 s, 2,5 s, 4 s).
 - **Por quê:** para quem tem mobilidade muito reduzida. Está no guia como bônus.
 - **Como:** começa pela triagem e pelo Início (onde as escolhas já são cartões). Hook `useVarredura(itens: HTMLElement[], intervaloMs: number)` em `src/ui/varredura.ts` que move o destaque e escuta um toque global; o destaque usa o anel de foco do design system. Lê o item destacado no `aria-live` só se a pessoa ligar a voz.
 - **Conferir:** teste do hook (avança, volta ao primeiro, para ao sair); teste com uma pessoa que usa acionador, se possível.

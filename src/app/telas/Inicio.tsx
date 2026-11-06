@@ -11,6 +11,7 @@ import { useTema } from '../tema';
 import { AvisoRespostasGuardadas } from '../LembrarRespostas';
 import { TamanhoTexto } from '../TamanhoTexto';
 import { BoasVindas } from '../BoasVindas';
+import { BotaoUmToque } from '../UmToque';
 import css from '../app.module.css';
 
 const ENTRADAS: ItemEntrada[] = [
@@ -46,6 +47,7 @@ export function Inicio() {
       </FalaMapi>
       <Titulo grande>Seu mapa de direitos</Titulo>
       <TamanhoTexto />
+      <BotaoUmToque />
       <AvisoRespostasGuardadas />
       <BoasVindas />
       <Entradas itens={ENTRADAS} rotulo="O que você quer fazer" />

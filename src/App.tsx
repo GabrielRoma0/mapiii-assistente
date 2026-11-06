@@ -10,6 +10,9 @@ import { NaoEncontrada } from './app/telas/NaoEncontrada';
 import { EMBARQUE_ATIVO } from './app/embarque/recurso';
 import { LimiteDeErro, TelaQueQuebra } from './app/LimiteDeErro';
 import { AvisoAtualizacao } from './app/AvisoAtualizacao';
+import { ModoVarredura } from './ui/varredura';
+import { useEstado } from './app/estado';
+import { VELOCIDADES } from './core/varredura';
 import css from './app/app.module.css';
 import { lazy, Suspense } from 'react';
 
@@ -74,6 +77,12 @@ function Tela({ rota }: { rota: Rota }) {
   }
 }
 
+/** Liga o modo um toque quando a pessoa pede (Início ou Sobre). */
+function VarreduraSeLigada() {
+  const { varredura, ligarVarredura, velocidade } = useEstado();
+  return varredura ? <ModoVarredura intervaloMs={VELOCIDADES[velocidade]} aoSair={() => ligarVarredura(false)} /> : null;
+}
+
 export function App() {
   const rota = useRota();
   const online = useOnline();
@@ -82,11 +91,12 @@ export function App() {
   const chave = 'id' in rota && rota.id ? `${rota.tela}-${rota.id}` : rota.tela;
   return (
     <ProvedorEstado>
-      <a className={css.pular} href="#conteudo" onClick={(e) => { e.preventDefault(); document.getElementById('conteudo')?.focus(); }}>
+      <a className={css.pular} data-varredura-ignorar="" href="#conteudo" onClick={(e) => { e.preventDefault(); document.getElementById('conteudo')?.focus(); }}>
         Pular para o conteúdo
       </a>
       <div className={css.casca}>
         {/* O conteúdo rola aqui dentro; a barra inferior fica fora, sem cobrir nada. */}
+        <VarreduraSeLigada />
         <div id="rolagem" className={css.rolagem}>
           <AvisoAtualizacao />
         {USANDO_EXEMPLO && (

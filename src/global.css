@@ -22,3 +22,9 @@ button {
   font-family: inherit;
   color: inherit;
 }
+
+/* Modo varredura: o item destacado ganha um anel grosso, além do foco. */
+[data-varredura-destaque] {
+  outline: 5px solid var(--focus-ring-color) !important;
+  outline-offset: 3px !important;
+}

@@ -8,6 +8,7 @@ import { DOMINIOS, KB } from '../dados';
 import { href } from '../rotas';
 import { LembrarRespostas } from '../LembrarRespostas';
 import { TamanhoTexto } from '../TamanhoTexto';
+import { BotaoUmToque, VelocidadeUmToque } from '../UmToque';
 import css from '../app.module.css';
 
 const TIPOS: Record<TipoEntrada, string> = { direito: 'Direito', servico: 'Serviço', norma: 'Norma' };
@@ -136,6 +137,12 @@ export function Sobre() {
 
       <section className={css.secao}>
         <TamanhoTexto />
+        <p className={css.texto} style={{ margin: 0 }}>
+          <b>Modo um toque:</b> as opções se destacam uma por vez e um toque em qualquer lugar da tela escolhe a destacada. Para quem
+          tem pouco movimento nas mãos ou usa um acionador.
+        </p>
+        <BotaoUmToque />
+        <VelocidadeUmToque />
         <OpcoesEmCartao<EscolhaTema>
           pergunta="Aparência"
           opcoes={[

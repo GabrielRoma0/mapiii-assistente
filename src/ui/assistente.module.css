@@ -513,3 +513,26 @@
 .esqueletoLinha:first-child {
   height: 26px;
 }
+
+/* Modo varredura: faixa no topo com "Sair" (entra na varredura como primeiro item). */
+.barraVarredura {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 16px;
+  background: var(--surface-inverse);
+  color: var(--text-inverse);
+  font-weight: var(--weight-bold);
+  font-size: 16px;
+}
+.botaoSairVarredura {
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--text-inverse);
+  background: transparent;
+  color: var(--text-inverse);
+  font: var(--weight-extrabold) 16px var(--font-sans);
+  cursor: pointer;
+}

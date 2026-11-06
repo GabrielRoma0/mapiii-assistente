@@ -115,6 +115,15 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - **T4 · aviso de nova versão**: o app instalado mostra "Nova versão do Mapiii disponível" com "Atualizar agora" e "Depois".
 - Conferido no build de produção: o service worker ativa e o app recarrega com o navegador sem internet. Totais: 288 testes de lógica e 100 execuções de testes de tela, todos passando. Falta conferir num Android os atalhos e as capturas.
 
+### 13. Fase E do plano de melhorias (bônus)
+
+- **T3 · conferência das fontes** (`700667b`): `npm run conferir-links` abre todos os links oficiais de `data/` e lista os quebrados com a ficha onde aparecem; o GitHub roda toda segunda às 9h e avisa por e-mail se algum falhar. Rodado de verdade: os 2 links atuais respondem.
+- **F4 · sugestões enquanto digita** (`27ed102`): a partir de 3 letras, até 3 perguntas de exemplo das fichas aparecem embaixo do campo; tocar envia. Decisão: botões em vez de lista com setas (mais simples para leitor de tela e toque).
+- **F5 · boas-vindas** (`0b041fc`): cartão no Início com os três atos e "Entendi", que some para sempre no aparelho. Decisão: cartão em vez de 3 telas, para não bloquear o uso.
+- **P1 · modo um toque (varredura)** ⭐: botão "Usar com um toque" no Início e em Sobre. As opções da tela se destacam uma por vez (anel amarelo grosso, e o leitor de tela lê); um toque em qualquer lugar, ou Espaço/Enter (o que um acionador manda), escolhe a destacada, e o toque não aciona o que está debaixo do dedo. Velocidade devagar (4 s), média (2,5 s) ou rápida (1,5 s) em Sobre. "Sair do modo um toque" entra na varredura como primeiro item. Vale para o app inteiro.
+- Testes de lógica escritos antes e vistos falhando; testes de tela para os quatro, incluindo tocar em cima de outro link com o modo um toque ligado. Totais: 294 testes de lógica e 106 execuções de testes de tela, todos passando.
+- Falta: testar o modo um toque com uma pessoa que usa acionador.
+
 ### Fora do repositório (só neste computador)
 
 - `.env.local`: liga o Embarque com o simulador. **Antes do build de produção, precisa apontar para o Supabase da dupla.**

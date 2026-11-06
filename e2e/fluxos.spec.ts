@@ -216,3 +216,26 @@ test('boas-vindas: aparecem na primeira visita e somem para sempre com "Entendi"
   await expect(page.getByRole('heading', { level: 1, name: 'Seu mapa de direitos' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Primeira vez aqui? É assim que funciona' })).toHaveCount(0);
 });
+
+test('modo um toque: o destaque anda sozinho e um toque em qualquer lugar escolhe o destacado', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/#/');
+  await page.getByRole('button', { name: 'Usar com um toque' }).click();
+  await expect(page.getByRole('region', { name: 'Modo um toque' })).toBeVisible();
+  const destacado = page.locator('[data-varredura-destaque]');
+  for (let i = 0; i < 40; i++) {
+    if ((await destacado.textContent())?.includes('Fazer uma pergunta')) break;
+    await page.clock.runFor(2500);
+  }
+  await expect(destacado).toContainText('Fazer uma pergunta');
+  // Toca em cima de OUTRO link: quem vale é o destacado, não o que está debaixo do dedo.
+  await page.getByRole('link', { name: 'Sobre e fontes' }).click();
+  await expect(page).toHaveURL(/#\/perguntar$/);
+  // Espaço (o que um acionador manda) também escolhe; "Sair" desliga o modo.
+  for (let i = 0; i < 10; i++) {
+    if ((await destacado.textContent())?.includes('Sair do modo um toque')) break;
+    await page.clock.runFor(2500);
+  }
+  await page.keyboard.press('Space');
+  await expect(page.getByRole('region', { name: 'Modo um toque' })).toHaveCount(0);
+});
