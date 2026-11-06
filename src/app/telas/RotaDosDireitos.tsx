@@ -2,7 +2,8 @@
 import { CartaoDireito, FalaMapi } from '../../ui/assistente';
 import { montarRota } from '../../core/regras';
 import { tipoFonteNaTela } from '../../core/kb-schema';
-import { PERGUNTAS, comoLista, perguntasNoModo, textoDaOpcao } from '../../core/perguntas';
+import { PERGUNTAS, comoLista, perguntasNoModo, resumoEditavel, textoDaOpcao } from '../../core/perguntas';
+import type { ItemRota } from '../../core/regras';
 import { Titulo, Voltar } from '../comum';
 import { KB } from '../dados';
 import { useEstado } from '../estado';
@@ -18,10 +19,37 @@ function resumoDasRespostas(respostas: Record<string, string | string[] | undefi
     .join(' · ');
 }
 
+/** Lista de cartões de direitos (com o porquê e as três linhas fixas). */
+function ListaDeDireitos({ itens, rotulo }: { itens: ItemRota[]; rotulo: string }) {
+  if (!itens.length) return null;
+  return (
+    <ul className={css.pilha} style={{ listStyle: 'none', margin: 0, padding: 0 }} aria-label={rotulo}>
+      {itens.map(({ entrada, classe, porque }) => (
+        <li key={entrada.id}>
+          <CartaoDireito
+            hrefDetalhes={href.direito(entrada.id)}
+            direito={{
+              titulo: entrada.titulo,
+              resumo: entrada.resumo,
+              elegibilidade: classe,
+              porque,
+              tipoFonte: tipoFonteNaTela(entrada),
+              oQueLevar: entrada.documentos?.join(', ') ?? '',
+              ondeIr: entrada.onde?.texto ?? '',
+              prazoTipico: entrada.prazo_tipico ?? ''
+            }}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function RotaDosDireitos() {
   const { respostas, limparRespostas, modo } = useEstado();
   const respondeu = Object.keys(respostas).length > 0;
   const rota = montarRota(KB, respostas, perguntasNoModo(modo));
+  const naoAplica = rota.filter((i) => i.classe === 'nao');
   const temLaudo = rota.some((i) => i.classe !== 'nao' && i.entrada.requisitos_laudo?.length);
   const resumo = resumoDasRespostas(respostas);
 
@@ -48,25 +76,29 @@ export function RotaDosDireitos() {
       ) : (
         <FalaMapi estado="duvida">Não encontrei nenhum direito na minha base para essas respostas. Procure o órgão responsável.</FalaMapi>
       )}
-      <ul className={css.pilha} style={{ listStyle: 'none', margin: 0, padding: 0 }} aria-label="Direitos e serviços">
-        {rota.map(({ entrada, classe, porque }) => (
-          <li key={entrada.id}>
-            <CartaoDireito
-              hrefDetalhes={href.direito(entrada.id)}
-              direito={{
-                titulo: entrada.titulo,
-                resumo: entrada.resumo,
-                elegibilidade: classe,
-                porque,
-                tipoFonte: tipoFonteNaTela(entrada),
-                oQueLevar: entrada.documentos?.join(', ') ?? '',
-                ondeIr: entrada.onde?.texto ?? '',
-                prazoTipico: entrada.prazo_tipico ?? ''
-              }}
-            />
-          </li>
-        ))}
-      </ul>
+      <ListaDeDireitos itens={rota.filter((i) => i.classe !== 'nao')} rotulo="Direitos e serviços que podem se aplicar" />
+      {naoAplica.length > 0 && (
+        <details className={css.porQue}>
+          <summary>
+            {naoAplica.length === 1 ? 'Ver 1 que provavelmente não se aplica' : `Ver ${naoAplica.length} que provavelmente não se aplicam`}
+          </summary>
+          <ListaDeDireitos itens={naoAplica} rotulo="Direitos e serviços que provavelmente não se aplicam" />
+        </details>
+      )}
+      <details className={css.porQue}>
+        <summary>Mudar uma resposta</summary>
+        <ul className={css.listaSimples} style={{ marginTop: 12 }}>
+          {resumoEditavel(respostas, perguntasNoModo(modo)).map((r) => (
+            <li key={r.id} className={css.linhaIconeTextos}>
+              <span className={css.apoio} style={{ margin: 0 }}>{r.pergunta}</span>
+              <b>{r.resposta}</b>
+              <a className={css.linkFonte} href={href.mudarResposta(r.id)}>
+                Mudar<span className="visualmente-oculto"> a resposta de “{r.pergunta}”</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
       <LembrarRespostas />
       {temLaudo && (
         <a className={css.botaoSecundario} href={href.laudo} style={{ textDecoration: 'none' }}>

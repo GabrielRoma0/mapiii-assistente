@@ -31,7 +31,7 @@ function Tela({ rota }: { rota: Rota }) {
     case 'inicio':
       return <Inicio />;
     case 'triagem':
-      return <Triagem />;
+      return <Triagem pergunta={rota.pergunta} />;
     case 'rota':
       return <RotaDosDireitos />;
     case 'direito':

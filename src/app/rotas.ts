@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export type Rota =
   | { tela: 'inicio' }
-  | { tela: 'triagem' }
+  | { tela: 'triagem'; pergunta?: string }
   | { tela: 'rota' }
   | { tela: 'direito'; id: string }
   | { tela: 'perguntar' }
@@ -53,6 +53,8 @@ export function lerRota(hash: string, pathname = '/'): Rota {
     if (primeira === 'cartao') return { tela: 'cartao' };
     if (primeira === 'laudo') return { tela: 'laudo' };
   }
+  // "Mudar uma resposta": a triagem abre direto na pergunta (#/situacao/p_cidade).
+  if (partes.length === 2 && primeira === 'situacao' && /^p_[a-z0-9_]+$/.test(segunda)) return { tela: 'triagem', pergunta: segunda };
   if (partes.length === 2 && /^[a-z0-9-]+$/.test(segunda)) {
     if (primeira === 'direito') return { tela: 'direito', id: segunda };
     if (primeira === 'negaram') return { tela: 'negaram', id: segunda };
@@ -65,6 +67,7 @@ export function lerRota(hash: string, pathname = '/'): Rota {
 export const href = {
   inicio: '#/',
   triagem: '#/situacao',
+  mudarResposta: (pergunta: string) => `#/situacao/${pergunta}`,
   rota: '#/rota',
   direito: (id: string) => `#/direito/${id}`,
   perguntar: '#/perguntar',

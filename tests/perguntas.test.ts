@@ -143,3 +143,15 @@ teste('auditarPerguntas: pergunta usada só por mostrar_se conta como usada', ()
 teste('auditarPerguntas: base vazia deixa todas as perguntas sem uso', () => {
   assert.deepEqual(auditarPerguntas(LISTA, []).semUso, ['p_a', 'p_b', 'p_c']);
 });
+
+import { resumoEditavel } from '../src/core/perguntas.ts';
+
+teste('resumoEditavel: uma linha por pergunta respondida, na ordem do arquivo, com os textos das opções', () => {
+  const r = resumoEditavel({ p_objetivo: 'transporte', p_necessidade: ['mobilidade', 'visual'], p_cidade: 'sim', p_xyz: 'a' });
+  assert.deepEqual(r, [
+    { id: 'p_necessidade', pergunta: 'Que tipo de apoio a pessoa precisa no dia a dia?', resposta: 'Mobilidade ou cadeira de rodas, Visual' },
+    { id: 'p_objetivo', pergunta: 'O que você quer resolver?', resposta: 'Transporte e passe livre' },
+    { id: 'p_cidade', pergunta: 'A pessoa mora na cidade de São Paulo?', resposta: 'Sim' }
+  ]);
+  assert.deepEqual(resumoEditavel({}), []);
+});

@@ -114,3 +114,18 @@ test('barra inferior: troca de tela, marca a aba atual e leva o foco ao título'
   await page.goto('/#/situacao');
   await expect(barra).toHaveCount(0);
 });
+
+test('Rota mais limpa: "não se aplica" recolhido e "Mudar uma resposta" sem refazer tudo', async ({ page }) => {
+  await responderTriagem(page);
+  await expect(page.getByRole('heading', { name: 'Direito de exemplo B' })).toBeHidden();
+  await page.getByText('Ver 1 que provavelmente não se aplica').click();
+  await expect(page.getByRole('heading', { name: 'Direito de exemplo B' })).toBeVisible();
+
+  await page.getByText('Mudar uma resposta').click();
+  await page.getByRole('link', { name: 'Mudar a resposta de “O que você quer resolver?”' }).click();
+  await expect(page).toHaveURL(/#\/situacao\/p_objetivo$/);
+  await page.getByRole('radio', { name: 'Benefício em dinheiro' }).click();
+  await page.getByRole('button', { name: 'Salvar e voltar para a rota' }).click();
+  await expect(page).toHaveURL(/#\/rota$/);
+  await expect(page.getByText(/Benefício em dinheiro/).first()).toBeVisible();
+});

@@ -159,3 +159,10 @@ export function perguntasNoModo(modo: Modo | null, perguntas: Pergunta[] = PERGU
   if (modo !== 'pessoa') return perguntas;
   return perguntas.map((p) => (p.texto_eu ? { ...p, texto: p.texto_eu } : p));
 }
+
+/** Resumo das respostas para "Mudar uma resposta": uma linha por pergunta respondida, na ordem do arquivo. */
+export function resumoEditavel(respostas: Respostas, perguntas: Pergunta[] = PERGUNTAS): { id: string; pergunta: string; resposta: string }[] {
+  return perguntas
+    .filter((p) => comoLista(respostas[p.id]).length > 0)
+    .map((p) => ({ id: p.id, pergunta: p.texto, resposta: comoLista(respostas[p.id]).map((v) => textoDaOpcao(p, v)).join(', ') }));
+}

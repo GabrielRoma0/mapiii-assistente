@@ -54,3 +54,8 @@ teste('abaDaRota: cada tela acende a aba certa; triagem, 404 e telas de dev não
   assert.equal(aba('#/sobre'), 'sobre');
   for (const h of ['#/situacao', '#/qualquer', '#/componentes', '#/teste-erro']) assert.equal(aba(h), null, h);
 });
+
+teste('lerRota: #/situacao/p_cidade abre a triagem direto numa pergunta', () => {
+  assert.deepEqual(lerRota('#/situacao/p_cidade'), { tela: 'triagem', pergunta: 'p_cidade' });
+  assert.deepEqual(lerRota('#/situacao/P-x'), { tela: 'nao_encontrada' });
+});

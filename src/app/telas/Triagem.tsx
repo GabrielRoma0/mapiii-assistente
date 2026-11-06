@@ -45,9 +45,13 @@ function CampoDaPergunta({ pergunta, valor, aoMudar }: { pergunta: Pergunta; val
   return <OpcoesEmCartao pergunta={pergunta.texto} opcoes={opcoes} valor={typeof valor === 'string' ? valor : null} aoEscolher={aoMudar} />;
 }
 
-export function Triagem() {
+export function Triagem({ pergunta: perguntaInicial }: { pergunta?: string } = {}) {
   const { respostas, responder, modo } = useEstado();
-  const [passo, setPasso] = useState(0);
+  // "Mudar uma resposta": começa na pergunta pedida e oferece voltar direto para a rota.
+  const editando = Boolean(perguntaInicial);
+  const [passo, setPasso] = useState(() =>
+    Math.max(0, perguntasDaTriagem(CAMPOS_USADOS, respostas, perguntasNoModo(modo)).filter((p) => !(modo === 'pessoa' && p.id === 'p_quem')).findIndex((p) => p.id === perguntaInicial))
+  );
   const [faltou, setFaltou] = useState(false);
   // No modo "Sou a pessoa", a pergunta "Para quem é?" já está respondida (eu) e não aparece.
   const perguntas = perguntasDaTriagem(CAMPOS_USADOS, respostas, perguntasNoModo(modo)).filter((p) => !(modo === 'pessoa' && p.id === 'p_quem'));
@@ -133,9 +137,19 @@ export function Triagem() {
       </p>
 
       <div className={css.acaoFixa}>
-        <button type="button" className={css.botaoPrincipal} onClick={avancar}>
-          {ultima ? 'Ver minha rota' : 'Continuar'}
-        </button>
+        {editando ? (
+          <button
+            type="button"
+            className={css.botaoPrincipal}
+            onClick={() => (respondida ? navegar(href.rota) : setFaltou(true))}
+          >
+            Salvar e voltar para a rota
+          </button>
+        ) : (
+          <button type="button" className={css.botaoPrincipal} onClick={avancar}>
+            {ultima ? 'Ver minha rota' : 'Continuar'}
+          </button>
+        )}
       </div>
     </>
   );
