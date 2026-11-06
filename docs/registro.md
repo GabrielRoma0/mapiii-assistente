@@ -136,3 +136,8 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Leitor de tela real (TalkBack ou VoiceOver).
 - API da SPTrans real (falta o token).
 - Tudo que depende das fichas reais (base ainda vazia).
+
+### 14. Planejamento completo
+
+- `PENDENCIAS.md` reescrito como planejamento até a entrega: estado real conferido (0 fichas, gabarito só com recusas, sem token, sem site, sem teste com pessoas), pendências obrigatórias com dono e prazo, cronograma dia a dia de 07 a 19/11, como fazer cada uma, decisões até 10/11, melhorias que faltam (todas dependem da dupla), roteiro do pitch com os destaques, as 8 disciplinas e os riscos.
+- Conferido antes: `main` local igual ao do GitHub; os 4 trabalhos do CI (verificação, testes de tela, Lighthouse e banco) passando nos envios.

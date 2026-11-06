@@ -1,206 +1,238 @@
 # O que falta no Mapiii (e quem faz)
 
-Documento de passagem de bastão da dupla (Thor e Gabriel). Diz o que já está pronto, o que falta, **o que só uma pessoa pode fazer (parte humana)** e o que o Claude Code faz. Cada tarefa tem: por que importa, **quando** fazer, o passo a passo e como conferir.
+Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está pronto, **o que é obrigatório para entregar**, o que é melhoria, quem faz, quando, como fazer e como conferir.
 
-O escopo e o cronograma vêm do **guia da dupla, versão 2 (04/11/2026)**. **Entrega final de tudo: 19/11/2026.** Deixem tudo pronto até **18/11 à noite** (17/11 já é período de substitutivas).
+- **Entrega final de tudo: 19/11/2026.** Deixar pronto até **18/11 à noite** (17/11 já é período de substitutivas).
+- Escopo e cronograma: guia da dupla **versão 2 (04/11/2026)**.
+- Histórico do que já foi feito: [docs/registro.md](docs/registro.md). Melhorias de código: [docs/plano-de-melhorias.md](docs/plano-de-melhorias.md).
 
-> Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [Ordem recomendada](#2-ordem-recomendada) e confira o estado com os comandos de [Como saber onde estamos](#6-como-saber-onde-estamos).
+> Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
 Última atualização: 06/11/2026.
-
-> **Outros registros:** o que já foi feito, sessão por sessão, está em [docs/registro.md](docs/registro.md). As melhorias de código (fluidez, visual, técnicas e produto), com ordem, plano e os destaques para o vídeo, estão em [docs/plano-de-melhorias.md](docs/plano-de-melhorias.md).
 
 ---
 
 ## 1. Onde o projeto está
 
-**Pronto e testado** (271 testes automáticos, mais 36 verificações de banco):
+**Todo o código do escopo do guia v2 e do plano de melhorias está pronto, testado e no `main`.**
 
-| Parte | O que faz | Onde |
-|---|---|---|
-| Rota dos Direitos (MVP) | Busca própria, resposta com fonte, selo de confiança ("conferida há X dias"), "Não encontrei", recusas (emergência 192, dado pessoal, conselho jurídico ou médico) | `src/core/`, `src/app/telas/Perguntar.tsx` |
-| Descubra o que posso pedir | Triagem + motor de regras ("Pode ter direito", "Talvez", "Provavelmente não se aplica") | `Triagem.tsx`, `RotaDosDireitos.tsx` |
-| Prepare | Detalhe com checklist para compartilhar, copiar ou imprimir; o que o laudo precisa ter; lista única para o laudo | `DetalheDireito.tsx`, `Laudo.tsx` |
-| Me negaram, e agora? | Caminho de recurso e modelo de pedido com a lei | `Negaram.tsx` |
-| Garanta na rua | Embarque **por ponto** (próximo ônibus acessível com tempo de chegada) e por linha, Cartão da cadeira, Mostre ao motorista (com QR), Reclamação pronta | `NaRua.tsx`, `Embarque.tsx`, `embarque/`, `Cartao.tsx`, `Motorista.tsx` |
-| Acessibilidade | Falar e ouvir (voz do navegador), modos "Sou a pessoa" e "Cuido de alguém", teclado, leitor de tela, contraste, 320 px | `src/ui/acoes.tsx`, `perguntas.json` (`texto_eu`) |
-| Atalhos do Início | Como eu me desloco?, Quero dirigir, Calçada ruim? (aparecem quando há fichas marcadas) | `Inicio.tsx`, `Atalho.tsx` |
-| Bônus já feito | Verificador de golpes ("Conferir se é oficial") | `Conferir.tsx`, `src/core/oficial.ts` |
-| PWA | Instalável, funciona sem internet depois da 1ª visita | `vite.config.ts`, `public/icons/` |
-| Avaliação | `npm run eval` com gabaritos; `avaliacao.html` com números e CSV; folha de teste com os 4 indicadores (inclui facilidade de uso e SUS) | `eval/`, `src/avaliacao/`, `docs/folha-de-teste.md` |
-| Edge Function `onibus` | Guarda o token da SPTrans; ações `linhas`, `veiculos`, `paradas` e `previsao` | `supabase/functions/` |
-| CI | GitHub Actions roda `verificar`, `build` e os testes de banco em cada push | `.github/workflows/verificar.yml` |
-
-**O que impede a entrega hoje:** a base de conhecimento (`data/kb.json`) está **vazia**. Sem ela, o app publicado não mostra nenhum direito, a triagem não tem perguntas e as telas de motorista, modelo de pedido, laudo e atalhos ficam vazias. Em `npm run dev` aparece uma base fictícia de exemplo só para ver as telas; ela não vai para o build.
-
-### Decisões
-
-| Decisão | Situação |
+| Conferência (06/11) | Resultado |
 |---|---|
-| Embarque por ponto (como no guia) ou por linha | **Decidido em 06/11: por ponto**, com "por linha" como opção. Feito. |
-| Embarque na entrega | Precisa estar ligado no build (`VITE_EMBARQUE_ATIVO=true`) para aparecer. Com dado real (H8) ou só com o exemplo. Decidir antes de H10. |
-| Conta opcional (antiga "Fase 2": login, perfil salvo, histórico) | **Proposta: cortar**, porque o guia v2 pede "nenhum login". O banco já pronto fica no repositório, sem uso. Falta a dupla confirmar. |
-| IA de reformulação | Desligada (o guia a deixa opcional, atrás de uma chave). Só ligar se sobrar tempo e com pedido explícito. |
-| Lembrar respostas da triagem no aparelho | **Decidido em 06/11: sim**, desmarcado por padrão, com aviso de celular compartilhado; desmarcar apaga. Feito. |
-| Repositório público | Decidido em 05/11/2026. Por isso nenhum segredo pode entrar no git. |
+| Testes de lógica (`npm run verificar`) | **294 passando** |
+| Testes de tela (`npm run e2e`, celular e computador) | **106 passando** |
+| Acessibilidade (axe, 17 telas, temas claro e escuro) | **nenhum problema grave** |
+| Lighthouse do app (`npm run lighthouse`) | **100 / 100 / 100 / 100** |
+| Testes de banco (`npm run test:banco`) | 36 passando |
+| CI do GitHub (4 trabalhos) | passando em todos os envios |
+
+**O que impede a entrega:** o conteúdo. Hoje:
+
+| Dado | Situação |
+|---|---|
+| Fichas em `data/kb.json` | **0** (meta do guia: 10 a 13) |
+| Valores em `data/servicos-valores.json` | 0 |
+| Gabarito de perguntas (`eval/`) | só os 12 casos de recusa; **falta o grupo `teste`** |
+| Cenários da Rota (`eval/gabarito_cenarios.json`) | 0 |
+| Token da SPTrans | não criado |
+| Site publicado | não |
+| Teste com pessoas | não feito |
+
+Sem fichas, o site publicado não mostra nenhum direito, a triagem não tem perguntas e as telas de Mostre ao motorista, Me negaram, laudo e atalhos ficam vazias. Em `npm run dev` aparece uma base fictícia só para ver as telas.
 
 ---
 
-## 2. Ordem recomendada
+## 2. Pendências obrigatórias (sem elas não há entrega)
 
-Seguindo o cronograma do guia v2:
+Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código (o Claude Code faz depois da H correspondente).
 
-| Quando | Produto | Quem |
-|---|---|---|
-| até 9/11 | **H1** base com 10 a 13 fichas (começar pelos 3 temas mais fortes), **H2** canais oficiais, **H8** token da SPTrans e teste da API | Thor (fichas), Gabriel (token) |
-| até 9/11 | **H5** perguntas do grupo `teste` do gabarito, **H4** subprefeituras | Gabriel (quem não monta as fichas) |
-| 10 a 12/11 | **H10** publicar o site; **C1** ajustes da SPTrans real | Dupla; Claude Code |
-| 13 a 14/11 | **H6** revisão por especialista; marcar os testes | Dupla |
-| 15 a 16/11 | **H9** teste com 5 a 8 pessoas e coleta dos indicadores | Dupla |
-| 17 a 18/11 | Corrigir o que o teste mostrou; **H11** vídeo pitch e entrega | Dupla + Claude Code |
+| # | Tarefa | Quem | Prazo | Depende de |
+|---|---|---|---|---|
+| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei) | Thor | **9/11** | nada: começar já |
+| **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
+| **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
+| **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
+| **H4** | Conferir as **32 subprefeituras** | Gabriel | 10/11 | nada |
+| **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
+| **H10** | **Publicar o site** (com `https`) | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
+| **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
+| **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
+| **H11** | **Vídeo pitch** e **entregas no Portal do Aluno** | Dupla | **18/11** | H9 |
 
-As 8 entregas das disciplinas (Python, C, Computer Science, IA/RAG, Energia, Modelagem Linear, Computer Organization, Modelagem Matemática) correm em paralelo e reaproveitam o mesmo `data/kb.json`. Ficam fora deste repositório.
+Opcional mas recomendado para o pitch (o Embarque com dado real é o diferencial):
+
+| # | Tarefa | Quem | Prazo | Depende de |
+|---|---|---|---|---|
+| **H7** | Projeto Supabase | Gabriel | 9/11 | nada |
+| **H8** | **Token da SPTrans** e primeiro teste real | Gabriel | 10/11 | H7 |
+| **C3** | Ajustes depois do primeiro teste real (sessão, horário previsto, sentido) | Claude Code | 11/11 | H8 |
+
+Se o token não sair a tempo, o Embarque vai para o vídeo no **modo exemplo** (selo "EXEMPLO, não é dado real" em toda tela). A contagem e o aviso falado funcionam igual.
 
 ---
 
-## 3. Parte humana (Thor e Gabriel)
+## 3. Cronograma dia a dia
 
-Coisas que exigem pesquisa em fonte oficial, conta em serviço externo, decisão ou teste com gente. O Claude Code pode **explicar, preparar e conferir**, mas **não pode** inventar conteúdo, criar conta, entrar com senha nem guardar segredo no repositório.
+| Dia | Thor | Gabriel | Claude Code |
+|---|---|---|---|
+| **sex 07/11** | H1: pesquisar os 3 temas mais fortes (gratuidade no transporte, BPC, transporte adaptado) | H7 e H8: Supabase e token da SPTrans; H4 subprefeituras | C1 com as fichas que chegarem |
+| **sáb 08/11** | H1: mais fichas (táxi acessível, vaga especial, habilitação/carro adaptado, conserto de calçada) | H5: escrever o grupo `teste` **sem olhar as fichas** | C1; C3 se o token chegou |
+| **dom 09/11** | H1 e H2: fechar 10 a 13 fichas e os canais | H5: cenários da Rota; marcar os participantes do teste | C1 completo; `eval` com os números |
+| **seg 10/11** | H12 decisões; ler a folha de teste | H12 decisões; ler os enunciados das disciplinas | Ajustes do `eval` (busca e fichas) |
+| **ter 11/11** | Disciplinas | H10 publicar o site | Capturas do instalador com fichas reais; publicação automática (T8) se decidido |
+| **qua 12/11** | Disciplinas | Disciplinas | — |
+| **qui 13/11** | H6 especialista | Ensaiar o teste no celular (voz, QR, instalar, modo um toque) | Correções do ensaio |
+| **sex 14/11** | **Código congelado** (só correções) | | |
+| **sáb 15/11** | **H9 teste com pessoas** | **H9 teste com pessoas** | — |
+| **dom 16/11** | H9 e números | H9 e números | C2 correções |
+| **seg 17/11** | Gravar o pitch (H11) | Vídeos técnicos das disciplinas | C2; registro final |
+| **ter 18/11** | **Entregar tudo no portal** | **Entregar tudo no portal** | — |
+| **qua 19/11** | Prazo final (reserva) | | |
 
-### H1. Preencher a base de conhecimento (`data/kb.json`): PRIMEIRO
+A divisão é sugestão do guia; troquem quando fizer sentido. Regra para não enroscar: **antes de mexer, `git pull`; depois, commit e envio ao `main` no mesmo dia.**
 
-- **Por que:** o app só responde com o que está na base. É o que mais pesa na nota e o que destrava todas as telas.
-- **Quando:** agora. Meta do guia: 10 a 13 fichas até 9/11.
+---
+
+## 4. Como fazer cada pendência humana
+
+O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, não cria conta, não entra com senha e não guarda segredo no repositório.
+
+### H1. Fichas da base (`data/kb.json`): PRIMEIRO
+- **Por que:** o app só responde com o que está na base; é o que mais pesa na nota.
 - **Passo a passo:**
-  1. Leia [data/README.md](data/README.md): campos, exemplo e como escrever `condicoes`.
-  2. Comece pelos 3 temas mais fortes para cadeirante em SP. Sugestões do guia: gratuidade no transporte, BPC, transporte adaptado porta a porta, táxi acessível, vaga especial, habilitação e compra de carro adaptado, pedido de conserto de calçada (SP156). **Confirme cada um na fonte oficial**; não use a sugestão como fato.
-  3. Para cada ficha: abra a fonte oficial e copie só o que está lá, em linguagem simples. Anote o link (https), o tipo da fonte e a data em que você abriu.
-  4. Traga também, quando a fonte tiver: **a lei e o artigo** (`base_legal`, com o link do texto oficial), a frase curta para mostrar ao motorista (`frase_motorista`), o que o laudo precisa conter (`requisitos_laudo`) e, para as negativas mais comuns, um modelo de pedido (`modelo_recurso`, com os dados da pessoa como "(preencha seu nome)"). Diga também em qual atalho a ficha entra (`deslocamento`, `dirigir`, `calcada`).
-  5. Cole o texto da fonte para o Claude Code: ele monta o JSON e roda os validadores.
-- **Como conferir:**
+  1. Leia [data/README.md](data/README.md) (campos, exemplo, `condicoes`).
+  2. Para cada direito: abra a **fonte oficial**, copie só o que está lá, em linguagem simples. Anote o link (https) e a data em que abriu.
+  3. Traga também, quando a fonte tiver: **a lei e o artigo** com o link do texto oficial (`base_legal`); a frase curta para o motorista (`frase_motorista`); o que o laudo precisa conter (`requisitos_laudo`); para as negativas mais comuns, um modelo de pedido com "(preencha seu nome)" (`modelo_recurso`); e em qual atalho a ficha entra (`deslocamento`, `dirigir`, `calcada`).
+  4. Cole o texto da fonte no chat com o Claude Code; ele monta o JSON (C1).
+- **Sugestões do guia (confirmar cada uma na fonte):** Bilhete Único Especial/gratuidade no transporte, BPC, Atende+ (transporte porta a porta), táxi acessível, vaga especial/cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156.
+- **Conferir:** `npm run validar-kb`, `npm run auditar-perguntas`, `npm test`.
 
-  ```bash
-  npm run validar-kb
-  ```
+### H2. Canais oficiais
+- Fichas `tipo: "servico"` da Central 156 e do canal de reclamação da SPTrans, com `onde.texto`, `onde.link` e fonte oficial. O Claude Code põe os ids em `canalOficialId` e `canaisReclamacaoIds`.
+- **Conferir:** pergunta fora da base mostra o canal; a Reclamação pronta mostra "Onde enviar".
 
-  ```bash
-  npm run auditar-perguntas
-  ```
+### H3. Valores oficiais de serviços (opcional)
+- `data/servicos-valores.json`: só se sobrar tempo. Formato em [data/README.md](data/README.md).
 
-  ```bash
-  npm test
-  ```
+### H4. Subprefeituras
+- Compare `p_subprefeitura` em `data/perguntas.json` com a lista oficial da Prefeitura e diga ao Claude Code o que muda.
 
-  `auditar-perguntas` falha enquanto alguma pergunta da triagem não for usada por nenhuma ficha: ou use a pergunta numa condição, ou peça ao Claude Code para tirá-la de `data/perguntas.json`.
+### H5. Gabaritos
+- **Quem não montou as fichas** (Gabriel) escreve as perguntas do grupo `teste` em `eval/gabarito_perguntas.csv` **antes** de olhar as `perguntas_exemplo`, e os cenários em `eval/gabarito_cenarios.json`. Formatos em [eval/README.md](eval/README.md).
+- **Conferir:** `npm run eval`. Meta do guia: acerto de 85% ou mais e 100% das perguntas fora do escopo recusadas.
 
-### H2. Canais oficiais (fichas de serviço)
+### H6. Especialista
+- Alguém da área (assistente social, Defensoria, associação) lê uma amostra das fichas, dos modelos de pedido e das frases para o motorista. Anotar na [folha de teste](docs/folha-de-teste.md), seção 1.
 
-- **Por que:** "Não encontrei" precisa indicar um canal oficial, e "Onde enviar" da Reclamação pronta só mostra canais que estão na base.
-- **Quando:** junto com as primeiras fichas de H1.
-- **Passo a passo:** crie fichas `tipo: "servico"` para os canais (ex.: Central 156 da Prefeitura, canal de reclamação da SPTrans), com `onde.texto`, `onde.link` e fonte **oficial**. Diga ao Claude Code os ids: ele põe `canalOficialId` e `canaisReclamacaoIds` em `src/core/config.ts`.
-- **Como conferir:** no app, faça uma pergunta fora da base e veja o canal aparecer; abra a Reclamação pronta e veja "Onde enviar".
+### H7 e H8. Supabase e token da SPTrans
+1. Projeto em https://supabase.com. Copie `.env.example` para `.env.local` e preencha `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY`. **A chave secreta nunca vai para o `.env.local` nem para o git.**
+2. Cadastro em https://www.sptrans.com.br/desenvolvedores/ → "Meus Aplicativos" → token.
+3. Guardar **só** como segredo da função: `supabase secrets set SPTRANS_TOKEN=...` e `supabase functions deploy onibus`.
+4. Ligar `VITE_EMBARQUE_ATIVO=true` e testar **um ponto real**.
+5. **Contar ao Claude Code:** a consulta funciona depois do login? o horário previsto bate com o relógio? o campo de acessibilidade vem preenchido? o texto do sentido está certo?
+- **Atenção:** o `.env.local` deste computador aponta para o simulador. Antes do build de produção, ele precisa apontar para o Supabase da dupla (ou o Embarque fica só com o exemplo).
 
-### H3. Valores oficiais de serviços (`data/servicos-valores.json`)
-
-- **Por que:** "Conferir se é oficial" compara o valor cobrado com o oficial. Vazio, toda cobrança dá "Não sei". É bônus: só depois de H1.
-- **Passo a passo:** formato em [data/README.md](data/README.md). Cada item precisa de fonte e data.
-
-### H4. Conferir a lista das 32 subprefeituras
-
-- **Por que:** foi escrita de memória.
-- **Passo a passo:** compare `p_subprefeitura` em `data/perguntas.json` com a lista oficial da Prefeitura de São Paulo e diga ao Claude Code o que muda.
-
-### H5. Gabaritos da avaliação
-
-- **Por que:** o `npm run eval` mede o acerto. O grupo `teste` é o número honesto, então precisa ser escrito **por quem não montou as fichas** (Gabriel), **antes** de olhar as `perguntas_exemplo`.
-- **Passo a passo:** formatos em [eval/README.md](eval/README.md). Em `eval/gabarito_perguntas.csv`, escreva perguntas como uma pessoa faria, com o id esperado (combine os ids com o Thor) e o grupo. Em `eval/gabarito_cenarios.json`, situações com as respostas da triagem e os direitos que deveriam aparecer.
-- **Como conferir:** `npm run eval`.
-
-### H6. Revisão por especialista
-
-- **Por que:** "respostas conferidas por especialistas numa amostra" faz parte do indicador de acerto.
-- **Quando:** depois de H1 e H5.
-- **Passo a passo:** peça a alguém da área (assistente social, Defensoria, associação) para ler uma amostra das fichas, dos modelos de pedido e das frases para o motorista. Anote na [folha de teste](docs/folha-de-teste.md), seção 1.
-
-### H7. Projeto Supabase (só para o Embarque com dado real)
-
-- **Quando:** antes de H8. O resto do app não precisa.
-- **Passo a passo:**
-  1. Crie um projeto em https://supabase.com (a conta gratuita permite 2 projetos ativos).
-  2. Copie `.env.example` para `.env.local` e preencha `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` (Project Settings → API). **A chave secreta nunca vai para o `.env.local` nem para o git.**
-  3. Não precisa aplicar a migração do banco: a conta opcional está fora do escopo.
-
-### H8. Token da SPTrans (Embarque com dado real)
-
-- **Por que:** a API Olho Vivo exige um token. Sem ele, o Embarque funciona só no modo exemplo.
-- **Quando:** o quanto antes (o guia pede para testar a API na primeira semana).
-- **Passo a passo:**
-  1. Cadastre-se em https://www.sptrans.com.br/desenvolvedores/ e confirme o e-mail.
-  2. Em "Meus Aplicativos", crie um aplicativo e copie o token.
-  3. Guarde **só** como segredo da Edge Function (nunca no código, no `.env.local` ou no chat):
-
-     ```bash
-     supabase secrets set SPTRANS_TOKEN=coloque-aqui-o-token
-     ```
-
-     ```bash
-     supabase functions deploy onibus
-     ```
-
-  4. Ligue a flag (`VITE_EMBARQUE_ATIVO=true` no `.env.local`) e teste um ponto real, por exemplo um ponto que vocês usam.
-  5. **Confira e conte ao Claude Code:** (a) se a consulta funciona depois do login; (b) se o horário previsto bate com o relógio; (c) se o campo de acessibilidade vem preenchido; (d) se o texto do sentido da linha está certo.
-
-### H9. Testes com pessoas e testes manuais
-
-- **Quando:** 15 e 16/11, com o site publicado.
-- **Passo a passo:**
-  1. Siga a [folha de teste](docs/folha-de-teste.md): participantes só por código, sem nome; os 4 indicadores e as perguntas abertas.
-  2. Instale o PWA num celular de verdade (Android: menu → "Instalar app"; iPhone: Compartilhar → "Adicionar à Tela de Início") e abra sem internet.
-  3. No celular, teste: falar a pergunta, ouvir a resposta, "Compartilhar" do checklist no WhatsApp e ler o QR do "Mostre ao motorista" com a câmera.
-  4. No fim, baixe os CSVs em `avaliacao.html`.
+### H9. Teste com pessoas
+- Siga a [folha de teste](docs/folha-de-teste.md): 5 a 8 participantes, só por código, os 4 indicadores (acerto, tempo × busca na web, tempo até o ônibus certo, facilidade de uso/SUS) e as perguntas abertas.
+- **No celular de verdade, conferir também:** voz (falar e ouvir), vibração do aviso de chegada, instalar o app, atalhos ao segurar o ícone, ler o QR do "Mostre ao motorista", modo um toque e um leitor de tela (TalkBack ou VoiceOver).
+- No fim, baixar os CSVs em `avaliacao.html`.
 
 ### H10. Publicar o site
+- Decidir a flag do Embarque **antes** do build. `npm run build` e publicar a pasta `dist/` com `https` (GitHub Pages, Netlify, Vercel ou Cloudflare Pages).
+- **Conferir:** abrir no celular, navegar, desligar a internet e recarregar.
 
-- **Quando:** assim que H1 tiver as primeiras fichas (dá para publicar de novo depois).
-- **Passo a passo:** decida a flag do Embarque **antes** do build (ela é lida no build). `npm run build` e publique a pasta `dist/` numa hospedagem estática com `https` (Netlify, Vercel, Cloudflare Pages ou GitHub Pages).
-- **Como conferir:** abra o endereço no celular, navegue, desligue a internet e recarregue.
-
-### H11. Vídeo pitch e entrega
-
-- **Quando:** por último. O pitch tem até 3 min, é opcional e vai na pasta "Entrega do vídeo pitch"; os vídeos técnicos vão na entrega de cada disciplina.
-- **Passo a passo:** siga o roteiro do guia (persona → problema → os três atos ao vivo → números do teste → ODS e visão de futuro). Se a API falhar, use "Ver exemplo" (o selo "EXEMPLO, não é dado real" aparece em toda tela). O mapa de calçadas entra **só** como visão de futuro.
+### H11. Vídeo pitch e entregas
+- Pitch de até 3 min, na pasta "Entrega do vídeo pitch"; os vídeos técnicos vão na entrega de cada disciplina (trocar faz o professor desconsiderar).
+- Roteiro e destaques na [seção 7](#7-vídeo-pitch).
 
 ---
 
-## 4. Parte de código (o Claude Code faz)
+## 5. Decisões que a dupla precisa tomar (até 10/11)
 
-Feito em 06/11/2026: escopo do guia v2 (campos novos das fichas, Me negaram, Mostre ao motorista com QR, Cartão da cadeira, Embarque por ponto, voz, modos pessoa e cuidador, checklist para compartilhar, atalhos, laudo único, selo "há X dias", folha de teste com facilidade de uso, ODS), validação de datas, `.gitattributes`, CI.
+| Decisão | Opções | Recomendação |
+|---|---|---|
+| **Conta opcional (login)** | Cortar ou fazer | **Cortar** (o guia pede "nenhum login"). O banco fica no repositório sem uso. Falta o Gabriel confirmar. |
+| **Embarque no site publicado** | Ligado com dado real, só exemplo, ou desligado | Ligado; com exemplo até o token funcionar |
+| **Onde publicar** | GitHub Pages, Netlify, Vercel | GitHub Pages: já está no GitHub; o Claude Code faz a publicação automática (T8) depois que alguém liga em Settings → Pages |
+| **Endereço do site** | Nome padrão ou domínio próprio | Nome padrão legível (sem custo) |
+| **Pitch segue o case?** | Perguntar ao professor ou Scrum Master | Perguntar; a solução cumpre o case de qualquer forma |
 
-| # | Tarefa | Precisa antes | Pronto quando |
+Já decidido: Embarque por ponto; voz padrão do aparelho; lembrar respostas no aparelho (desmarcado por padrão); confirmação antes de apagar; ferramentas de teste só de desenvolvimento; repositório público.
+
+---
+
+## 6. Pendências de melhorias (não bloqueiam a entrega)
+
+Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as que dependem da dupla:
+
+| # | Melhoria | Quem | Como |
 |---|---|---|---|
-| C1 | Ajustes depois do primeiro teste real da SPTrans (sessão, horário previsto, sentido) | H8 | Consulta real funciona por ponto e por linha |
-| C2 | Montar as fichas a partir do texto das fontes e configurar os canais (`config.ts`) | H1, H2 | `validar-kb`, `auditar-perguntas` e `eval` passam |
-| C3 | Corrigir o que o teste com pessoas mostrar | H9 | Dupla aprova |
-| C4 | Melhorias de fluidez, visual, técnicas e produto, na ordem do [plano de melhorias](docs/plano-de-melhorias.md) (fases A a E, código congelado em 14/11) | Decisões da seção 4 do plano | Cada uma marcada no plano e no registro |
+| V4 | Ícones de microfone e alto-falante | Dupla no **Claude Design** | Pedir dois ícones no padrão da grade (24 px, traço 2 px); o Claude Code troca nos botões de falar e ouvir |
+| V5 | Mapi no tema escuro | Dupla no **Claude Design** | Versão do personagem para fundo escuro (o código não pode redesenhar o Mapi) |
+| V6 | Endereço com nome bonito | Dupla | Junto com H10 |
+| T8 | Publicação automática | Dupla liga o Pages; Claude Code faz o workflow | Cada envio ao `main` atualiza o site |
+| P2 | Página "Sobre o projeto" para a banca | Dupla (conteúdo) + Claude Code (tela) | Problema, persona, como testamos, números do teste (inclusive os ruins), equipe e visão de futuro; depois de 16/11 |
+| — | Capturas do instalador com fichas reais | Claude Code | Gerar de novo depois de H1 (hoje mostram o exemplo) |
+| — | Valores oficiais (H3) | Thor | Só se sobrar tempo |
 
 ---
 
-## 5. Regras que não podem ser quebradas
+## 7. Vídeo pitch
 
-- **Nada fora da base, nenhuma ficha sem fonte.** Não inventar direito, valor, prazo, telefone, e-mail, link ou lei.
-- **Nunca dizer "você tem direito".** Só "Pode ter direito", "Talvez" ou "Provavelmente não se aplica". O validador recusa a frase em qualquer texto da ficha.
-- **Sem dados pessoais:** não pedir nome, CPF, diagnóstico, idade exata ou renda exata. Respostas da triagem só em memória, a não ser que a pessoa marque "Lembrar neste aparelho" (nada sai do aparelho).
-- **Sem login, sem cookies de rastreamento, sem analytics.**
-- **Não se apresentar como canal oficial.** O aviso fixo de protótipo fica em todas as telas.
-- **Emergência de saúde:** só "Em emergência, ligue 192."
-- **Segredos** (`SPTRANS_TOKEN`, service_role, chave da Anthropic) só como segredo de Edge Function. Nunca no git, no `.env.local` ou no navegador.
-- **Embarque:** nunca usar a localização da pessoa; "acessível" é o que a SPTrans informa (não prometer rampa ou elevador).
-- **Mostre ao motorista:** tom firme e respeitoso, sem acusar; a segurança da pessoa vem antes.
-- **Design:** só tokens, ícones e componentes do `design-system/`; o personagem Mapi não é redesenhado.
+Roteiro do guia v2 (até 3 min), com o que mostrar:
+
+| Tempo | Pergunta da banca | O que mostrar |
+|---|---|---|
+| 0:00–0:25 | Quem é a pessoa? | A persona real, com uma frase das entrevistas (folha de teste, seção 5) |
+| 0:25–0:50 | Que problema real? | Informação espalhada e embarque negado; um número com fonte (Censo 2022, conferido no IBGE) |
+| 0:50–2:00 | Como funciona? | Descubra → Prepare → Garanta na rua, ao vivo |
+| 2:00–2:30 | Que evidências? | Números do teste, inclusive os ruins; acessibilidade 100 |
+| 2:30–3:00 | Impacto e ODS | ODS 10 e 11; visão de futuro (mapa de calçadas) |
+
+**Destaques para gravar** (os que mais chamam atenção):
+1. **Aviso de chegada falado:** celular no bolso falando "O ônibus acessível chega em 2 minutos" e vibrando.
+2. **Embarque ao vivo:** a contagem caindo e "passam 2 ônibus sem acessibilidade antes".
+3. **Modo um toque:** usar o app inteiro com um único toque na tela.
+4. **Atalho no ícone:** segurar o ícone e aparecer "Próximo ônibus acessível".
+5. **Modo avião:** continuar usando sem internet.
+6. **Mostre ao motorista:** a câmera lendo o QR da lei.
+7. **A, A+, A++** e **ouvir a resposta**.
+8. **Nota de acessibilidade 100** (print do Lighthouse).
 
 ---
 
-## 6. Como saber onde estamos
+## 8. Disciplinas (8 entregas no Portal do Aluno, até 18/11)
+
+Ficam fora deste repositório. Todas podem reaproveitar o mesmo `data/kb.json` (por isso as fichas vêm primeiro). Confirmar os detalhes no enunciado de cada professor.
+
+| Disciplina | O que pede (resumo do guia) | Como reaproveitar o Mapiii |
+|---|---|---|
+| Pensamento Computacional e Automação com Python | "Cérebro" do assistente em Python, entradas inválidas, indicadores, GitHub e vídeo técnico | Portar a busca e as regras para Python lendo o `kb.json`; os testes com pessoas servem |
+| Data Structures and Algorithms | Sistema em C com menu, structs, listas encadeadas, Big-O | Fichas viram structs numa lista encadeada; busca por título, ordenação por prazo ou tipo |
+| Computer Science | Decisão booleana: tabela-verdade, De Morgan, Karnaugh | As regras da triagem (`condicoes`) |
+| Prompt and Artificial Intelligence | RAG com ChromaDB, LangChain, guardrails, RAGAS, vídeo | Os documentos oficiais das fichas; a "armadilha" de fonte desatualizada já existe |
+| Energias Renováveis | Uso consciente de energia, 2 alternativas, vídeo e GitHub | Custo de carregar cadeira motorizada, tarifa social, solar |
+| Modelagem Linear | Estatística em Python, regressão | Formulário anônimo, resultados do teste, Censo 2022 |
+| Computer Organization and Architecture | Fila virtual para posto de atendimento | Case próprio, ambientado no posto onde a família faz os pedidos |
+| Modelagem Matemática | Distribuição da frota de ônibus por região | Recorte de frota acessível com o campo `a` da Olho Vivo |
+
+---
+
+## 9. Riscos e como reduzir
+
+| Risco | Nível | Como reduzir |
+|---|---|---|
+| Fichas não ficarem prontas até 9/11 | **Alto** | Começar pelos 3 temas mais fortes; o Claude Code monta o JSON na hora |
+| Informação legal errada (inclusive no "Mostre ao motorista") | **Alto** | Só lei e artigo copiados da fonte oficial; especialista revisa (H6); nunca "você tem direito" |
+| Muita entrega para uma dupla (8 disciplinas + pitch) | **Alto** | Uma base só para tudo; código congelado em 14/11 |
+| API da SPTrans não funcionar | Médio | Modo exemplo pronto, com contagem e aviso falado |
+| Pouca gente para o teste | Médio | Marcar já; plano B: familiares, vizinhos, idosos |
+| Diferença entre o computador e o celular (voz, vibração, instalação) | Médio | Ensaio no celular em 13/11 |
+| Enroscar com o trabalho do outro no git | Baixo | `git pull` antes, commit e envio no mesmo dia |
+
+---
+
+## 10. Como saber onde estamos
 
 ```bash
 npm install
@@ -211,6 +243,10 @@ npm run verificar
 ```
 
 ```bash
+npm run e2e
+```
+
+```bash
 npm run auditar-perguntas
 ```
 
@@ -218,13 +254,24 @@ npm run auditar-perguntas
 npm run eval
 ```
 
-- `verificar` = tipos + testes + arquivos de `data/` válidos. Tem que passar sempre.
-- `auditar-perguntas` passa quando a base usa todas as perguntas da triagem (falha com a base vazia).
-- `eval` mostra o acerto atual.
-- `npm run test:banco` (precisa de Docker) testa a migração do banco (sem uso no app).
-
-Quantas fichas a base tem:
-
 ```bash
 node -e "console.log(require('./data/kb.json').length + ' fichas')"
 ```
+
+- `verificar` = tipos + testes de lógica + dados válidos. Tem que passar sempre.
+- `e2e` = testes de tela e acessibilidade num navegador de verdade.
+- `auditar-perguntas` passa quando a base usa todas as perguntas da triagem (falha com a base vazia).
+- `eval` mostra o acerto atual.
+- Outros: `npm run lighthouse` (precisa de `npm run build` antes), `npm run conferir-links`, `npm run test:banco` (Docker).
+
+## 11. Regras que não podem ser quebradas
+
+- Nada fora da base; nenhuma ficha sem fonte; nenhuma lei, valor, prazo, telefone ou link inventado.
+- Nunca "você tem direito".
+- Sem dados pessoais; respostas da triagem só em memória, a não ser que a pessoa marque "Lembrar neste aparelho".
+- Sem login, sem cookies de rastreamento, sem analytics.
+- Aviso fixo de protótipo em todas as telas; não se apresentar como canal oficial.
+- Emergência de saúde: só "Em emergência, ligue 192."
+- Segredos só como segredo de Edge Function; nunca no git, no `.env.local` ou no navegador.
+- Embarque: nunca usar a localização; "acessível" é o que a SPTrans informa.
+- Design: só o `design-system/`; o Mapi não é redesenhado.

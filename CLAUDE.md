@@ -8,7 +8,7 @@ O projeto é da dupla **Thor e Gabriel**, que fazem a parte humana (pesquisar fo
 
 Quando perguntarem "o que eu faço agora?", "o que falta?" ou algo parecido:
 
-1. Leia [PENDENCIAS.md](PENDENCIAS.md). Ali estão as tarefas humanas (H1 a H11), as de código (C1 a C4), as decisões, a ordem e como conferir cada uma.
+1. Leia [PENDENCIAS.md](PENDENCIAS.md). Ali estão as pendências obrigatórias (H1 a H12 e C1 a C3), o cronograma dia a dia, as decisões, as melhorias que faltam e como conferir cada uma.
 2. Confira o estado real antes de responder (não confie só no documento):
 
    ```bash
