@@ -63,7 +63,7 @@ Opcional mas recomendado para o pitch (o Embarque com dado real é o diferencial
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H7** | Projeto Supabase | Gabriel | 9/11 | nada |
+| ~~**H7**~~ | ~~Projeto Supabase~~ **Feito 07/11** | Gabriel | 9/11 | nada |
 | **H8** | **Token da SPTrans** e primeiro teste real | Gabriel | 10/11 | H7 |
 | **C3** | Ajustes depois do primeiro teste real (sessão, horário previsto, sentido) | Claude Code | 11/11 | H8 |
 
@@ -75,7 +75,7 @@ Se o token não sair a tempo, o Embarque vai para o vídeo no **modo exemplo** (
 
 | Dia | Thor | Gabriel | Claude Code |
 |---|---|---|---|
-| **sex 07/11** | H1: pesquisar os 3 temas mais fortes (gratuidade no transporte, BPC, transporte adaptado) | H7 e H8: Supabase e token da SPTrans; ~~H4 subprefeituras~~ (feito) | C1 com as fichas que chegarem |
+| **sex 07/11** | H1: pesquisar os 3 temas mais fortes (gratuidade no transporte, BPC, transporte adaptado) | ~~H7~~ (feito) e H8: Supabase e token da SPTrans; ~~H4 subprefeituras~~ (feito) | C1 com as fichas que chegarem |
 | **sáb 08/11** | H1: mais fichas (táxi acessível, vaga especial, habilitação/carro adaptado, conserto de calçada) | H5: escrever o grupo `teste` **sem olhar as fichas** | C1; C3 se o token chegou |
 | **dom 09/11** | H1 e H2: fechar 10 a 13 fichas e os canais | H5: cenários da Rota; marcar os participantes do teste | C1 completo; `eval` com os números |
 | **seg 10/11** | H12 decisões; ler a folha de teste | H12 decisões; ler os enunciados das disciplinas | Ajustes do `eval` (busca e fichas) |
@@ -131,6 +131,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 3. Guardar **só** como segredo da função: `supabase secrets set SPTRANS_TOKEN=...` e `supabase functions deploy onibus`.
 4. Ligar `VITE_EMBARQUE_ATIVO=true` e testar **um ponto real**.
 5. **Contar ao Claude Code:** a consulta funciona depois do login? o horário previsto bate com o relógio? o campo de acessibilidade vem preenchido? o texto do sentido está certo?
+- **H7 feita em 07/11/2026:** projeto `mapiii` (id `pzronsfttmwiqfpnxpow`, região São Paulo, plano gratuito, "expor tabelas novas automaticamente" desligado), sem migração aplicada (login cortado). URL e chave publicável no `.env.local` do computador do Gabriel; chave conferida (a API respondeu 200). O plano gratuito pausa o projeto depois de 7 dias sem uso: abrir o painel antes de 13/11.
 - **Atenção:** o `.env.local` deste computador aponta para o simulador. Antes do build de produção, ele precisa apontar para o Supabase da dupla (ou o Embarque fica só com o exemplo).
 
 ### H9. Teste com pessoas

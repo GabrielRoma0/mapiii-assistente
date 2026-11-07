@@ -151,3 +151,13 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - `main` local atualizado com os 24 commits do Thor; `npm run verificar` com 294 testes passando; base com 0 fichas.
 - Comparadas as 32 opções de `p_subprefeitura` com a [lista oficial da Prefeitura](http://prefeitura.sp.gov.br/subprefeituras/w/subprefeituras/8978): nenhuma falta, nenhuma sobra.
 - Três aparecem abreviadas no índice oficial: Casa Verde, Mboi Mirim e Perus. **Decisão do Gabriel:** manter os nomes completos do app (Casa Verde/Cachoeirinha, M'Boi Mirim, Perus/Anhanguera). Nenhuma mudança em `data/perguntas.json`.
+
+### H7. Supabase
+
+- Projeto `mapiii` criado pelo Gabriel no painel (o Claude Code preencheu nome e região; a senha do banco ficou com o Gabriel). Região São Paulo, "expor tabelas novas automaticamente" desligado, nenhuma migração aplicada.
+- `.env.local` criado com `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` (ignorado pelo git). Chave conferida: a API do projeto respondeu 200 com ela e 401 com uma chave errada.
+- Falta: H8 (token da SPTrans, segredo da função e deploy da `onibus`).
+
+### Roteiro do vídeo pitch
+
+- Pasta `video/`: roteiro (29 cenas, 435 palavras, cerca de 3:00), gravações G1 a G6, legendas, audiodescrição, notas de edição, checklist até 19/11 e estrutura do vídeo técnico. Números que ainda não existem ficam como [PENDENTE]; nada de IA, e o Embarque só com o selo EXEMPLO.
