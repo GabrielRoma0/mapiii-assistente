@@ -31,6 +31,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **V8 a V10 (Thor)** | Pacote pronto para o Claude Design em [video/claude-design/](video/claude-design/LEIA-ME.md): 3 pedidos para colar, imagens de referência do Mapi plano e o passo a passo. Roteiro v2 ajustado: app como tópicos animados, Embarque como história (sem selo "EXEMPLO"), nova cena 13. V4 e V5 ficam para depois (não aparecem no vídeo). |
 | **V8 feito (Thor, 07/11)** | Mapi 3D pronto: 7 poses PNG transparentes (2000 × 2000) em `video/mapi-3d/`, conferidas com o Mapi plano nos dois fundos. Próximo: pedido 2 (quadros) na mesma conversa do Claude Design. |
 | **V9 feito (Thor, 07/11)** | 13 quadros 16:9 em `video/quadros/` (`01.png` a `13.png`) e o HTML em `design-system/Mapiii Pitch Quadros 16x9.html`. Conferidos: sem lei, valor, prazo, telefone ou link; quadro 5 com a pergunta real da triagem. Na montagem: trocar o mapa-múndi desenhado à mão por um contorno de uso livre e carregar a IBM Plex Mono. Próximo: pedido 3 (capa). |
+| **V10 feito (Thor, 07/11)** | Capa do YouTube em `video/capa.png` (1280 × 720): versão A (ponto de ônibus à noite, porta sem rampa, pessoa em cadeira de rodas e Mapi 3D atencao). Testada reduzida nos temas claro e escuro do YouTube. Os três pedidos do Claude Design para o vídeo estão feitos. |
 
 **H8 · SPTrans: em andamento, precisa ser testada de novo**
 
