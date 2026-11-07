@@ -185,3 +185,8 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 
 - Seção "Atualizações de 07/11 (Gabriel): leia primeiro" no topo do PENDENCIAS, e o CLAUDE.md manda o Claude Code começar por ela.
 - `npm run testar-sptrans` (`scripts/testar-sptrans.ts`): chama a função publicada e diz se a SPTrans já aceita a chave. Em 07/11 ainda respondia `api_fora`.
+
+## 07/11/2026 · Thor com o Claude Code
+
+- **H8 (diagnóstico):** a SPTrans responde `HTTP 200` com `false` a qualquer chave que não reconhece (conferido com uma chave inventada). A função recebe a mesma resposta com a chave do Gabriel. Rede, Supabase e o defeito do 411 estão descartados: falta a SPTrans ativar ou aceitar a chave. Plano do PENDENCIAS mantido (testar de novo; se falhar em 08/11, recriar o aplicativo).
+- **Vídeo:** análise do vídeo campeão da GS 2026.1 em `video/referencia-campeao.md` (quadros e transcrição). Decisões do Thor: 16:9 para o YouTube, narração com a voz da dupla, Mapi com cara de 3D feito no Claude Design a partir do desenho atual (pedido V8 em `docs/pedidos-claude-design.md`), destacar que o Mapiii pode ser replicado em outras cidades e países (SPTrans como exemplo), com o selo VISÃO DE FUTURO.

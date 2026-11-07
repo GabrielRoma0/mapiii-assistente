@@ -26,6 +26,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **P2** | Tela "Sobre o projeto" em `#/projeto`. Conteúdo em `data/projeto.json`; `persona` e `numeros` ficam vazios até o teste com pessoas. |
 | **Vídeo pitch** | **Roteiro completo em [video/](video/)**: [roteiro](video/roteiro.md) (29 cenas, cerca de 3:00), [gravações](video/gravacoes.md) G1 a G6, [legendas](video/legendas.srt), [audiodescrição](video/audiodescricao.md), [edição](video/edicao.md), [checklist até 19/11](video/checklist-final.md) e [estrutura do vídeo técnico](video/roteiro-tecnico.md). Números que ainda não existem estão como [PENDENTE]. |
 | **V4 / V5** | Pedidos prontos para colar no Claude Design: [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
+| **V8 (Thor)** | Pedido do Mapi com cara de 3D, só para o vídeo, em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). Análise do vídeo campeão em [video/referencia-campeao.md](video/referencia-campeao.md). |
 | **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
 
 **H8 · SPTrans: em andamento, precisa ser testada de novo**
