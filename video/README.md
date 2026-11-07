@@ -139,7 +139,7 @@ O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabr
 | Mapi 3D, 7 poses (bom, atencao, procurando, verificado, ouvindo, recusa, comemorando) | `video/mapi-3d/` | **Pronto** | — |
 | Quadros 01 a 13 | `video/quadros/` | **Prontos** (04 e 13 corrigidos em 07/11) | — |
 | Capa do YouTube | `video/capa.png` | **Pronta** | — |
-| Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). Ajuste opcional pedido: rampa mais visível (seção 12) | — |
+| Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). A rampa é fina, mas no vídeo ela aparece descendo, e o movimento chama a atenção: a dupla decidiu manter | — |
 | Objetos 3D da cena 3 (opcional) | `video/objetos-3d/` | Falta: pedido 5 | Dupla no Claude Design |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
@@ -297,11 +297,7 @@ Entregue também, como PNG separados e com fundo transparente, as peças que vã
 
 **Onde salvar:** `video/quadros/14.png` e as peças em `video/quadros/14-pecas/` (`onibus.png`, `rampa.png`, `pessoa.png`).
 
-**Ajuste opcional (a primeira versão, de 07/11, já está salva):** a rampa saiu como uma linha fina, quase invisível, e a roda dianteira do ônibus aparece atrás da cadeira. Se quiserem melhorar, peçam no mesmo chat:
-
-```text
-No quadro 14, a rampa ficou fina demais e quase não aparece, e ela é o ponto principal da cena. Faça a rampa bem visível: uma placa grossa (cerca de 20 px), em Almond Silk #C9ADA7 com contorno Space Indigo #22223B, saindo do piso da porta e descendo em diagonal até a calçada, com uma inclinação que se perceba. Coloque a pessoa em cadeira de rodas em cima da rampa, no meio da subida, de frente para a porta. Afaste a roda dianteira do ônibus para a direita da porta, para ela não aparecer atrás da cadeira. Não mude mais nada: logo, texto, cores, ponto de ônibus e rodapé ficam iguais. Entregue de novo o quadro e as 3 peças separadas (ônibus, rampa, pessoa), com fundo transparente e na mesma escala.
-```
+**Decisão de 07/11 (Thor):** a primeira versão fica. A rampa é fina no quadro parado, mas na animação ela desce em movimento, e é isso que chama a atenção.
 
 ### Pedido 5 · Objetos 3D da cena 3 (opcional)
 
