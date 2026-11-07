@@ -117,6 +117,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 #### V4 · Ícones de microfone e alto-falante · P · Humano
 - [ ] **O quê:** dois ícones novos no design system, no padrão da grade (24 px, traço 2 px).
 - **Como:** a dupla pede no Claude Design (onde o design system foi feito); depois eu troco o ícone "conversa" nos botões de falar e ouvir.
+- **Decisão de 07/11 (Thor):** não será feito agora, talvez nem depois; o vídeo não precisa.
 
 #### V5 · Mapi no tema escuro · Humano
 - [ ] **O quê:** versão do personagem para fundo escuro (hoje é a mesma do claro).

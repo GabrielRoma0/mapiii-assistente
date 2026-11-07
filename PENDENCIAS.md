@@ -24,11 +24,11 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **H7** | Projeto Supabase `mapiii` (id `pzronsfttmwiqfpnxpow`, região São Paulo), na conta do Gabriel. Nenhuma migração aplicada (login cortado). |
 | **T8 / H10** | **Site no ar:** https://gabrielroma0.github.io/mapiii-assistente/ . Cada envio ao `main` publica sozinho (`.github/workflows/publicar.yml`). Ainda sem fichas e com o Embarque desligado. |
 | **P2** | Tela "Sobre o projeto" em `#/projeto`. Conteúdo em `data/projeto.json`; `persona` e `numeros` ficam vazios até o teste com pessoas. |
-| **Vídeo pitch** | **Roteiro completo em [video/](video/)**: [roteiro](video/roteiro.md) (29 cenas, cerca de 3:00), [gravações](video/gravacoes.md) G1 a G6, [legendas](video/legendas.srt), [audiodescrição](video/audiodescricao.md), [edição](video/edicao.md), [checklist até 19/11](video/checklist-final.md) e [estrutura do vídeo técnico](video/roteiro-tecnico.md). Números que ainda não existem estão como [PENDENTE]. |
-| **V4 / V5** | Pedidos prontos para colar no Claude Design: [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
-| **V8 (Thor)** | Pedido do Mapi com cara de 3D, só para o vídeo, em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). Análise do vídeo campeão em [video/referencia-campeao.md](video/referencia-campeao.md). |
+| **Vídeo pitch** | **Documento único em [video/README.md](video/README.md)** (07/11): decisões, regras, estilo, as 18 cenas, locução, o que falta, gravações, som, montagem no Remotion, revisão, audiodescrição, pedidos do Claude Design e cronograma. Toda mudança do vídeo é feita lá. O vídeo técnico das disciplinas fica em [video/roteiro-tecnico.md](video/roteiro-tecnico.md). |
+| **V4 / V5** | V4 não será feito agora (decisão do Thor, 07/11). V5 fica para depois do vídeo. Pedidos em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
+| **V8 (Thor)** | Mapi com cara de 3D, só para o vídeo. Feito: ver [video/README.md](video/README.md). |
 | **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
-| **V8 a V10 (Thor)** | Pacote pronto para o Claude Design em [video/claude-design/](video/claude-design/LEIA-ME.md): 3 pedidos para colar, imagens de referência do Mapi plano e o passo a passo. Roteiro v2 ajustado: app como tópicos animados, Embarque como história (sem selo "EXEMPLO"), nova cena 13. V4 e V5 ficam para depois (não aparecem no vídeo). |
+| **V8 a V10 (Thor)** | Mapi 3D, 13 quadros e capa feitos no Claude Design. Próximos pedidos (quadro 14 do fecho com a rampa descida e, opcional, objetos 3D) na seção 12 de [video/README.md](video/README.md). |
 | **V8 feito (Thor, 07/11)** | Mapi 3D pronto: 7 poses PNG transparentes (2000 × 2000) em `video/mapi-3d/`, conferidas com o Mapi plano nos dois fundos. Próximo: pedido 2 (quadros) na mesma conversa do Claude Design. |
 | **V9 feito (Thor, 07/11)** | 13 quadros 16:9 em `video/quadros/` (`01.png` a `13.png`) e o HTML em `design-system/Mapiii Pitch Quadros 16x9.html`. Conferidos: sem lei, valor, prazo, telefone ou link; quadro 5 com a pergunta real da triagem. Na montagem: trocar o mapa-múndi desenhado à mão por um contorno de uso livre e carregar a IBM Plex Mono. Próximo: pedido 3 (capa). |
 | **V10 feito (Thor, 07/11)** | Capa do YouTube em `video/capa.png` (1280 × 720): versão A (ponto de ônibus à noite, porta sem rampa, pessoa em cadeira de rodas e Mapi 3D atencao). Testada reduzida nos temas claro e escuro do YouTube. Os três pedidos do Claude Design para o vídeo estão feitos. |
@@ -207,7 +207,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 | **Endereço do site** | Nome padrão ou domínio próprio | Nome padrão legível (sem custo) |
 | **Pitch segue o case?** | Perguntar ao professor ou Scrum Master | Perguntar; a solução cumpre o case de qualquer forma |
 | **Teste com pessoas (H9)** | Teste completo com 5 a 8 pessoas ou só demonstrativo | Proposta do Thor (07/11): sem teste com pessoas; o vídeo usa só números já medidos (roteiro v2). Falta o Gabriel concordar. Sem números, a tela "Sobre o projeto" fica sem `numeros` de teste |
-| **Roteiro do pitch** | v1 (Gabriel, 3:00) ou v2 (Thor, 2:10) | Ver [video/roteiro-v2.md](video/roteiro-v2.md), seção "O que muda" |
+| **Roteiro do pitch** | v1 (Gabriel, 3:00) ou v2 (Thor, 2:10) | **Thor escolheu o v2 (07/11)**, agora em [video/README.md](video/README.md). Falta o Gabriel confirmar. O v1 continua no histórico do git |
 
 Já decidido: Embarque por ponto; voz padrão do aparelho; lembrar respostas no aparelho (desmarcado por padrão); confirmação antes de apagar; ferramentas de teste só de desenvolvimento; repositório público.
 
@@ -219,7 +219,7 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 
 | # | Melhoria | Quem | Como |
 |---|---|---|---|
-| V4 | Ícones de microfone e alto-falante (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
+| ~~V4~~ | Ícones de microfone e alto-falante | — | **Não será feito agora** (decisão do Thor, 07/11): o vídeo não precisa |
 | V5 | Mapi no tema escuro (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V6 | Endereço com nome bonito | Dupla | Junto com H10 |
 | ~~T8~~ | Publicação automática **Feito 07/11** | Pages ligado (Source: GitHub Actions); site em https://gabrielroma0.github.io/mapiii-assistente/ . Para o Embarque, criar as variáveis do Actions (ver `publicar.yml`) | Cada envio ao `main` atualiza o site |
@@ -230,6 +230,8 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 ---
 
 ## 7. Vídeo pitch
+
+> **O roteiro final do vídeo está em [video/README.md](video/README.md).** A tabela abaixo é o plano original do guia v2 da dupla, mantido para referência.
 
 Roteiro do guia v2 (até 3 min), com o que mostrar:
 
