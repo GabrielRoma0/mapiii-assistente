@@ -139,7 +139,7 @@ O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabr
 | Mapi 3D, 7 poses (bom, atencao, procurando, verificado, ouvindo, recusa, comemorando) | `video/mapi-3d/` | **Pronto** | — |
 | Quadros 01 a 13 | `video/quadros/` | **Prontos** (04 e 13 corrigidos em 07/11) | — |
 | Capa do YouTube | `video/capa.png` | **Pronta** | — |
-| Quadro 14 (fecho com a rampa descida) | `video/quadros/14.png` | Falta: pedido 4 | Dupla no Claude Design |
+| Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). Ajuste opcional pedido: rampa mais visível (seção 12) | — |
 | Objetos 3D da cena 3 (opcional) | `video/objetos-3d/` | Falta: pedido 5 | Dupla no Claude Design |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
