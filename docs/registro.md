@@ -141,3 +141,13 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 
 - `PENDENCIAS.md` reescrito como planejamento até a entrega: estado real conferido (0 fichas, gabarito só com recusas, sem token, sem site, sem teste com pessoas), pendências obrigatórias com dono e prazo, cronograma dia a dia de 07 a 19/11, como fazer cada uma, decisões até 10/11, melhorias que faltam (todas dependem da dupla), roteiro do pitch com os destaques, as 8 disciplinas e os riscos.
 - Conferido antes: `main` local igual ao do GitHub; os 4 trabalhos do CI (verificação, testes de tela, Lighthouse e banco) passando nos envios.
+
+---
+
+## 07/11/2026 · Gabriel com o Claude Code
+
+### H4. Subprefeituras
+
+- `main` local atualizado com os 24 commits do Thor; `npm run verificar` com 294 testes passando; base com 0 fichas.
+- Comparadas as 32 opções de `p_subprefeitura` com a [lista oficial da Prefeitura](http://prefeitura.sp.gov.br/subprefeituras/w/subprefeituras/8978): nenhuma falta, nenhuma sobra.
+- Três aparecem abreviadas no índice oficial: Casa Verde, Mboi Mirim e Perus. **Decisão do Gabriel:** manter os nomes completos do app (Casa Verde/Cachoeirinha, M'Boi Mirim, Perus/Anhanguera). Nenhuma mudança em `data/perguntas.json`.

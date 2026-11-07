@@ -8,7 +8,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 06/11/2026.
+Última atualização: 07/11/2026.
 
 ---
 
@@ -51,7 +51,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
-| **H4** | Conferir as **32 subprefeituras** | Gabriel | 10/11 | nada |
+| ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
 | **H10** | **Publicar o site** (com `https`) | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
@@ -75,7 +75,7 @@ Se o token não sair a tempo, o Embarque vai para o vídeo no **modo exemplo** (
 
 | Dia | Thor | Gabriel | Claude Code |
 |---|---|---|---|
-| **sex 07/11** | H1: pesquisar os 3 temas mais fortes (gratuidade no transporte, BPC, transporte adaptado) | H7 e H8: Supabase e token da SPTrans; H4 subprefeituras | C1 com as fichas que chegarem |
+| **sex 07/11** | H1: pesquisar os 3 temas mais fortes (gratuidade no transporte, BPC, transporte adaptado) | H7 e H8: Supabase e token da SPTrans; ~~H4 subprefeituras~~ (feito) | C1 com as fichas que chegarem |
 | **sáb 08/11** | H1: mais fichas (táxi acessível, vaga especial, habilitação/carro adaptado, conserto de calçada) | H5: escrever o grupo `teste` **sem olhar as fichas** | C1; C3 se o token chegou |
 | **dom 09/11** | H1 e H2: fechar 10 a 13 fichas e os canais | H5: cenários da Rota; marcar os participantes do teste | C1 completo; `eval` com os números |
 | **seg 10/11** | H12 decisões; ler a folha de teste | H12 decisões; ler os enunciados das disciplinas | Ajustes do `eval` (busca e fichas) |
@@ -116,6 +116,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 
 ### H4. Subprefeituras
 - Compare `p_subprefeitura` em `data/perguntas.json` com a lista oficial da Prefeitura e diga ao Claude Code o que muda.
+- **Feito em 07/11/2026:** as 32 conferem com a [lista oficial](http://prefeitura.sp.gov.br/subprefeituras/w/subprefeituras/8978). Três aparecem abreviadas no índice da Prefeitura (Casa Verde, Mboi Mirim, Perus); o Gabriel decidiu manter os nomes completos do app (Casa Verde/Cachoeirinha, M'Boi Mirim, Perus/Anhanguera). Nada mudou no código.
 
 ### H5. Gabaritos
 - **Quem não montou as fichas** (Gabriel) escreve as perguntas do grupo `teste` em `eval/gabarito_perguntas.csv` **antes** de olhar as `perguntas_exemplo`, e os cenários em `eval/gabarito_cenarios.json`. Formatos em [eval/README.md](eval/README.md).
