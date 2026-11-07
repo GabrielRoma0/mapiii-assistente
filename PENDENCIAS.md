@@ -29,6 +29,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **V8 (Thor)** | Pedido do Mapi com cara de 3D, só para o vídeo, em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). Análise do vídeo campeão em [video/referencia-campeao.md](video/referencia-campeao.md). |
 | **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
 | **V8 a V10 (Thor)** | Pacote pronto para o Claude Design em [video/claude-design/](video/claude-design/LEIA-ME.md): 3 pedidos para colar, imagens de referência do Mapi plano e o passo a passo. Roteiro v2 ajustado: app como tópicos animados, Embarque como história (sem selo "EXEMPLO"), nova cena 13. V4 e V5 ficam para depois (não aparecem no vídeo). |
+| **V8 feito (Thor, 07/11)** | Mapi 3D pronto: 7 poses PNG transparentes (2000 × 2000) em `video/mapi-3d/`, conferidas com o Mapi plano nos dois fundos. Próximo: pedido 2 (quadros) na mesma conversa do Claude Design. |
 
 **H8 · SPTrans: em andamento, precisa ser testada de novo**
 
