@@ -1,0 +1,37 @@
+No design system Mapiii v2.0, crie um arquivo novo "Mapiii Pitch Quadros 16x9", no mesmo formato de "Mapiii Direitos Video 16x9" (uma seção 1920 × 1080 por quadro). São os quadros-chave de um vídeo pitch de 2 minutos com animação profissional (estilo motion graphics de lançamento de produto): cada quadro destaca uma função do app com um título curto, um celular com a tela do app e o Mapi 3D que você acabou de fazer.
+
+Regras para todos os quadros:
+- Só os tokens, as fontes (Nunito; IBM Plex Mono para números pequenos) e os ícones do design system. Fundo Seashell #F2E9E4, texto Space Indigo #22223B, títulos em Nunito 900 com uma palavra em destaque (rosa #CF7A93 ou sublinhado) por quadro.
+- Muito espaço vazio, poucos elementos, tudo grande: o vídeo é visto no celular.
+- Quando houver celular, use uma moldura de celular simples e moderna, levemente inclinada, com uma tela no estilo de DireitosTela.
+- Dentro das telas do app: só títulos curtos, nomes de serviços, ícones, botões e linhas cinza no lugar do texto longo. NUNCA escreva lei, artigo, valor, prazo, telefone, e-mail ou link nas telas: onde houver esse tipo de texto, use linhas cinza de espaço reservado. O conteúdo real entra depois, conferido nas fontes oficiais.
+- O app nunca diz "você tem direito": só "Pode ter direito".
+- Sem foto. Sem texto além do indicado. Contraste de pelo menos 4,5:1 em todo texto.
+
+Quadros:
+
+1. Ponto de ônibus: ilustração plana vista de lado, uma pessoa em cadeira de rodas em silhueta no ponto, ônibus parado com a porta aberta e a rampa recolhida. Texto: "O ônibus chegou. A rampa, não." (destaque em "A rampa, não.")
+
+2. Três cartões: "Espalhada.", "Difícil.", "Com golpe.", o terceiro com o ícone golpe e em destaque.
+
+3. Número grande: um número de exemplo "00.000.000" bem grande (será trocado pelo valor oficial) e embaixo, pequeno, "Fonte: IBGE, Censo 2022".
+
+4. Logo: logo do Mapiii grande, "o mapa dos seus direitos" e o Mapi 3D bom ao lado.
+
+5. Descubra: título "Descubra o que pode pedir". Celular mostrando a triagem (uma pergunta com 3 botões de resposta grandes) e, saindo dele, um cartão "Pode ter direito" com o nome "Bilhete Único Especial" e o ícone check. Mapi 3D procurando ao lado. Selos pequenos: "Sem nome" e "Sem CPF".
+
+6. Com fonte: "você tem direito" riscado, "pode ter direito" embaixo em destaque, o componente SourceChip ampliado ("Fonte oficial · conferida em 00/00/0000") e o Mapi 3D verificado.
+
+7. Mostre ao motorista: título "Vire a tela.". Ilustração de uma mão segurando o celular virado para fora; na tela, o título "Mostre ao motorista" em letra bem grande, linhas cinza no lugar do texto da lei e um QR code grande. Ao fundo, a porta do ônibus em silhueta.
+
+8. Aviso no bolso: título "O ônibus avisa você.". Silhueta de uma pessoa em cadeira de rodas com o celular no bolso da jaqueta, ondas de som saindo do bolso, e um balão de notificação grande: "Ônibus acessível chegando · 2 min". Mapi 3D ouvindo no canto.
+
+9. Sabe dizer não: Mapi 3D recusa e o texto "Sabe dizer não." e, em destaque, "Emergência: 192".
+
+10. Números: "12 de 12 recusas corretas" e "Acessibilidade 100", um em cada metade, números enormes.
+
+11. Tudo num lugar só: título "E ainda:". Grade de 6 tópicos, cada um com um ícone do design system e duas ou três palavras: "Funciona sem internet", "Uso com um toque", "Letra A, A+ e A++", "Ouve a resposta em voz alta", "Confere se o link é oficial", "Não guarda seus dados". Pensado para os tópicos entrarem um de cada vez na animação.
+
+12. Mapa que cresce: contorno simples do mapa-múndi em traço fino, o pino do Mapi aceso em São Paulo e pinos menores acesos em outras cidades do Brasil e de outros países. Selo fixo no canto superior direito: "VISÃO DE FUTURO". Texto: "Troque a base. Outra cidade. Outro estado. Outro país." (destaque em "Outro país.")
+
+13. Fecho: logo, "Você pode ter direito. Agora, você sabe onde ir." (destaque na segunda frase), Mapi 3D comemorando e, pequeno, "Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026".

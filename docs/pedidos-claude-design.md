@@ -4,6 +4,8 @@ O design system Mapiii v2.0 foi feito no Claude Design, e o código **não pode*
 
 Quando o resultado sair, salve os arquivos nos lugares indicados e avise o Claude Code. Ele troca o código e confere contraste, tamanho e testes.
 
+> **Atualização de 07/11 (Thor):** para o vídeo, use o pacote pronto em [video/claude-design/](../video/claude-design/LEIA-ME.md). Ele substitui os textos de V8, V9 e V10 abaixo: o Mapi 3D ganhou a pose `procurando` (7 no total), saiu a menção errada a "relevos do piso tátil" (o desenho não tem) e a luz agora vem do alto à direita, onde já fica o reflexo; os quadros viraram 13, com tópicos animados do app. **V4 e V5 não aparecem no vídeo** (gravado no tema claro, sem esses ícones): ficam para depois, se sobrar tempo.
+
 ---
 
 ## V4 · Ícones de microfone e alto-falante

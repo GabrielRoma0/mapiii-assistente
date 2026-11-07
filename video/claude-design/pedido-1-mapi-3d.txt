@@ -1,0 +1,18 @@
+No design system Mapiii v2.0, crie uma versão "3D" do personagem Mapi só para o vídeo pitch, aplicando volume em cima do desenho atual de MapiPersonagem. As imagens anexadas mostram o desenho atual: use-as como referência exata.
+
+O que NÃO muda: a forma, as proporções, o rosto e as cores. O Mapi continua sendo uma gota em formato de pino de mapa, com um caule e duas folhinhas verdes no topo, um reflexo branco no alto à direita do corpo, bochechas rosadas, braços e pernas finos em Space Indigo, mãos em círculo branco com contorno e pés ovais. A cor do corpo de cada pose é a mesma do desenho atual. Paleta: Space Indigo #22223B, #4A4E69, rosa #CF7A93, verde #36704A, #5FA8A0, dourado #D9A441. Os detalhes de cada pose (ponto de exclamação, ondas de som, lupa, escudo com check, confetes) também ficam.
+
+Estilo: brinquedo de vinil macio e brilhante. Volume com gradientes suaves, um brilho especular discreto no alto à direita (onde já está o reflexo), luz de contorno leve, sombra interna nas dobras. Braços e pernas viram tubos arredondados, as mãos e os pés viram esferas e ovais com volume. Luz sempre vinda do alto à direita, igual em todas as poses. Sem texto, sem fundo e sem sombra no chão (a sombra é feita na animação).
+
+Faça estas 7 poses, a partir das poses que já existem:
+1. bom (apresentação)
+2. atencao (o problema)
+3. procurando (descobrindo o que pedir)
+4. verificado (fonte oficial)
+5. ouvindo (aviso falado do ônibus)
+6. recusa (sabe dizer não)
+7. comemorando (fecho)
+
+Mostre as 7 lado a lado, cada uma ao lado da versão plana atual, para conferir que é o mesmo personagem. Mostre também sobre o fundo Seashell #F2E9E4 e sobre Space Indigo #22223B. No fundo escuro, os braços e as pernas indigo não podem sumir: use uma luz de contorno clara neles, sem trocar a cor.
+
+Entregue cada pose como imagem PNG com fundo transparente, 2048 × 2048 px, com o personagem centralizado e no mesmo enquadramento e tamanho em todas. Se não for possível exportar PNG, entregue cada pose em SVG ou num arquivo HTML separado, com fundo transparente.

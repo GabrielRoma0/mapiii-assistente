@@ -28,6 +28,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **V4 / V5** | Pedidos prontos para colar no Claude Design: [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
 | **V8 (Thor)** | Pedido do Mapi com cara de 3D, só para o vídeo, em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). Análise do vídeo campeão em [video/referencia-campeao.md](video/referencia-campeao.md). |
 | **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
+| **V8 a V10 (Thor)** | Pacote pronto para o Claude Design em [video/claude-design/](video/claude-design/LEIA-ME.md): 3 pedidos para colar, imagens de referência do Mapi plano e o passo a passo. Roteiro v2 ajustado: app como tópicos animados, Embarque como história (sem selo "EXEMPLO"), nova cena 13. V4 e V5 ficam para depois (não aparecem no vídeo). |
 
 **H8 · SPTrans: em andamento, precisa ser testada de novo**
 
@@ -215,8 +216,8 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 
 | # | Melhoria | Quem | Como |
 |---|---|---|---|
-| V4 | Ícones de microfone e alto-falante | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
-| V5 | Mapi no tema escuro | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
+| V4 | Ícones de microfone e alto-falante (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
+| V5 | Mapi no tema escuro (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V6 | Endereço com nome bonito | Dupla | Junto com H10 |
 | ~~T8~~ | Publicação automática **Feito 07/11** | Pages ligado (Source: GitHub Actions); site em https://gabrielroma0.github.io/mapiii-assistente/ . Para o Embarque, criar as variáveis do Actions (ver `publicar.yml`) | Cada envio ao `main` atualiza o site |
 | P2 | Página "Sobre o projeto" para a banca | **Tela pronta (07/11)** em `#/projeto`; falta a dupla preencher `persona` e `numeros` em `data/projeto.json` depois de 16/11 | O validador recusa número sem fonte e dado pessoal |
