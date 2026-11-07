@@ -175,3 +175,8 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - **P2:** tela "Sobre o projeto" (`#/projeto`, link no topo de Sobre, aba Sobre acesa). Conteúdo em `data/projeto.json`, validado em `src/core/projeto.ts` e no `npm run validar-kb`: número sem fonte, dado pessoal e "você tem direito" são recusados. Persona e números ficam vazios até o teste com pessoas. Conferida no navegador: sem rolagem lateral em 320 px, no tema escuro. `/#/projeto` entrou na auditoria de acessibilidade do e2e.
 - **V4 e V5:** pedidos prontos para colar no Claude Design em `docs/pedidos-claude-design.md`.
 - **H3:** passo a passo e lista de serviços a conferir no PENDENCIAS, sem nenhum valor (só a fonte pode dar o valor).
+
+### T8 concluída: site no ar
+
+- Pages ligado pelo painel do GitHub (Source: GitHub Actions), com o Gabriel logado. Workflow `publicar` rodado à mão: build e deploy com sucesso.
+- Site: https://gabrielroma0.github.io/mapiii-assistente/ (respondeu 200; `#/projeto` abriu sem erro no console). Embarque desligado no site até a dupla criar as variáveis do Actions.

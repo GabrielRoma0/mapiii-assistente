@@ -169,7 +169,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** no navegador, consultar, desligar a rede (emulação) e ver a última consulta.
 
 #### T8 · Publicação automática · P · Humano
-- [x] **Workflow feito em 07/11/2026** (`.github/workflows/publicar.yml`). Falta ligar o Pages no repositório.
+- [x] **Feito em 07/11/2026** (`.github/workflows/publicar.yml`, Pages ligado). Site: https://gabrielroma0.github.io/mapiii-assistente/
 - **O quê:** cada envio ao `main` atualiza o site publicado sozinho.
 - **Como:** workflow do GitHub Pages (`.github/workflows/publicar.yml`) com o build. A dupla precisa ligar o Pages em Settings → Pages e decidir a flag do Embarque (ver decisões).
 - **Conferir:** site atualizado depois de um envio.

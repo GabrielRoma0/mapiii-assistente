@@ -34,7 +34,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | Gabarito de perguntas (`eval/`) | só os 12 casos de recusa; **falta o grupo `teste`** |
 | Cenários da Rota (`eval/gabarito_cenarios.json`) | 0 |
 | Token da SPTrans | não criado |
-| Site publicado | não |
+| Site publicado | sim, https://gabrielroma0.github.io/mapiii-assistente/ (sem fichas ainda) |
 | Teste com pessoas | não feito |
 
 Sem fichas, o site publicado não mostra nenhum direito, a triagem não tem perguntas e as telas de Mostre ao motorista, Me negaram, laudo e atalhos ficam vazias. Em `npm run dev` aparece uma base fictícia só para ver as telas.
@@ -53,7 +53,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
-| **H10** | **Publicar o site** (com `https`) | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). Falta: fichas, decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
@@ -181,7 +181,7 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 | V4 | Ícones de microfone e alto-falante | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V5 | Mapi no tema escuro | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V6 | Endereço com nome bonito | Dupla | Junto com H10 |
-| T8 | Publicação automática | **Workflow pronto (07/11)**: falta ligar o Pages (Settings → Pages → Source: GitHub Actions) e, se quiserem o Embarque, criar as variáveis do Actions | Cada envio ao `main` atualiza o site |
+| ~~T8~~ | Publicação automática **Feito 07/11** | Pages ligado (Source: GitHub Actions); site em https://gabrielroma0.github.io/mapiii-assistente/ . Para o Embarque, criar as variáveis do Actions (ver `publicar.yml`) | Cada envio ao `main` atualiza o site |
 | P2 | Página "Sobre o projeto" para a banca | **Tela pronta (07/11)** em `#/projeto`; falta a dupla preencher `persona` e `numeros` em `data/projeto.json` depois de 16/11 | O validador recusa número sem fonte e dado pessoal |
 | — | Capturas do instalador com fichas reais | Claude Code | Gerar de novo depois de H1 (hoje mostram o exemplo) |
 | — | Valores oficiais (H3) | Thor | Só se sobrar tempo |
