@@ -180,3 +180,8 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 
 - Pages ligado pelo painel do GitHub (Source: GitHub Actions), com o Gabriel logado. Workflow `publicar` rodado à mão: build e deploy com sucesso.
 - Site: https://gabrielroma0.github.io/mapiii-assistente/ (respondeu 200; `#/projeto` abriu sem erro no console). Embarque desligado no site até a dupla criar as variáveis do Actions.
+
+### Passagem para o Thor
+
+- Seção "Atualizações de 07/11 (Gabriel): leia primeiro" no topo do PENDENCIAS, e o CLAUDE.md manda o Claude Code começar por ela.
+- `npm run testar-sptrans` (`scripts/testar-sptrans.ts`): chama a função publicada e diz se a SPTrans já aceita a chave. Em 07/11 ainda respondia `api_fora`.

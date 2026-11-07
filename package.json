@@ -21,7 +21,8 @@
     "test:banco": "bash scripts/testar-banco.sh",
     "e2e": "playwright test",
     "lighthouse": "lhci autorun",
-    "conferir-links": "tsx scripts/conferir-links.ts"
+    "conferir-links": "tsx scripts/conferir-links.ts",
+    "testar-sptrans": "tsx scripts/testar-sptrans.ts"
   },
   "dependencies": {
     "react": "18.3.1",

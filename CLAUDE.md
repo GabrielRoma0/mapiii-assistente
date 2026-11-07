@@ -8,7 +8,7 @@ O projeto é da dupla **Thor e Gabriel**, que fazem a parte humana (pesquisar fo
 
 Quando perguntarem "o que eu faço agora?", "o que falta?" ou algo parecido:
 
-1. Leia [PENDENCIAS.md](PENDENCIAS.md). Ali estão as pendências obrigatórias (H1 a H12 e C1 a C3), o cronograma dia a dia, as decisões, as melhorias que faltam e como conferir cada uma.
+1. Leia [PENDENCIAS.md](PENDENCIAS.md), começando pela seção "Atualizações" mais recente (o que o outro da dupla fez e o que ficou para testar). Ali estão as pendências obrigatórias (H1 a H12 e C1 a C3), o cronograma dia a dia, as decisões, as melhorias que faltam e como conferir cada uma.
 2. Confira o estado real antes de responder (não confie só no documento):
 
    ```bash
@@ -36,6 +36,7 @@ O que você **não** faz, mesmo se pedirem: inventar conteúdo de direito, valor
 | `npm run validar-kb` | Confere os JSON de `data/` |
 | `npm run auditar-perguntas` | Confere se toda pergunta da triagem é usada pela base (falha com a base vazia) |
 | `npm run eval` | Mede o acerto com os gabaritos e grava `eval/resultados.csv` |
+| `npm run testar-sptrans` | Testa a função `onibus` publicada contra a SPTrans real (precisa do `.env.local` com a URL e a chave publicável) |
 | `npm run test:banco` | Testa as migrações do Supabase num Postgres descartável (Docker) |
 | `npm run build` | Build estático em `dist/` |
 

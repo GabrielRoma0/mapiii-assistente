@@ -12,6 +12,40 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualizações de 07/11 (Gabriel): leia primeiro
+
+> **Para o Claude Code do Thor:** antes de responder "o que eu faço agora?", conte ao Thor o resumo abaixo e **rode `npm run testar-sptrans`** (item H8). Detalhes de cada item em [docs/registro.md](docs/registro.md), seção "07/11/2026".
+
+**Feito:**
+
+| Item | O que mudou |
+|---|---|
+| **H4** | As 32 subprefeituras conferem com a lista oficial. Mantidos os nomes completos (Casa Verde/Cachoeirinha, M'Boi Mirim, Perus/Anhanguera). |
+| **H7** | Projeto Supabase `mapiii` (id `pzronsfttmwiqfpnxpow`, região São Paulo), na conta do Gabriel. Nenhuma migração aplicada (login cortado). |
+| **T8 / H10** | **Site no ar:** https://gabrielroma0.github.io/mapiii-assistente/ . Cada envio ao `main` publica sozinho (`.github/workflows/publicar.yml`). Ainda sem fichas e com o Embarque desligado. |
+| **P2** | Tela "Sobre o projeto" em `#/projeto`. Conteúdo em `data/projeto.json`; `persona` e `numeros` ficam vazios até o teste com pessoas. |
+| **Vídeo pitch** | **Roteiro completo em [video/](video/)**: [roteiro](video/roteiro.md) (29 cenas, cerca de 3:00), [gravações](video/gravacoes.md) G1 a G6, [legendas](video/legendas.srt), [audiodescrição](video/audiodescricao.md), [edição](video/edicao.md), [checklist até 19/11](video/checklist-final.md) e [estrutura do vídeo técnico](video/roteiro-tecnico.md). Números que ainda não existem estão como [PENDENTE]. |
+| **V4 / V5** | Pedidos prontos para colar no Claude Design: [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
+| **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
+
+**H8 · SPTrans: em andamento, precisa ser testada de novo**
+
+- Já feito: aplicativo "Mapiii" cadastrado na SPTrans (conta do Gabriel), chave guardada como segredo `SPTRANS_TOKEN` no Supabase, função `onibus` publicada. Corrigido um defeito: o login da SPTrans responde 411 se o pedido for sem corpo (`supabase/functions/_shared/onibus-servidor.ts`, com teste).
+- Problema: em 07/11 a SPTrans respondia `false` no login, mesmo com a chave certa (conferido por hash que a chave salva é a da página). O mais provável é que a chave nova ainda não estivesse ativa.
+- **Como testar de novo:**
+
+  ```bash
+  npm run testar-sptrans
+  ```
+
+  O script precisa de `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` no `.env.local`. São públicas: peça os dois valores ao Gabriel, ou copie do painel do Supabase se ele te convidar para a organização. A chave secreta e o token da SPTrans **não** vão para o `.env.local`.
+- **Se der "SPTrans OK":** ligar `VITE_EMBARQUE_ATIVO=true`, testar um ponto real no app e conferir os 4 pontos da H8 (a sessão continua depois do login? o horário previsto bate com o relógio? o campo de acessibilidade vem preenchido? o texto do sentido está certo?). Depois, a C3.
+- **Se continuar "api_fora" em 08/11:** o Gabriel apaga o aplicativo na SPTrans, cria outro e troca o segredo `SPTRANS_TOKEN` no Supabase. Só ele tem acesso às duas contas. Isso também troca a chave que ficou visível num terminal em 07/11.
+
+**Decisões abertas para a dupla (H12, até 10/11):** cortar o login (recomendado); ligar o Embarque no site (criar as variáveis do Actions descritas no `publicar.yml`); manter o recorte em São Paulo como piloto (o Gabriel levantou a dúvida por causa do nome "Global Solution"; recomendação: manter e mostrar no pitch como se replica em outras cidades; confirmar com o professor); as 5 perguntas do Wagner para o pitch (o roteiro usou as 5 da banca do guia v2).
+
+---
+
 ## 1. Onde o projeto está
 
 **Todo o código do escopo do guia v2 e do plano de melhorias está pronto, testado e no `main`.**
