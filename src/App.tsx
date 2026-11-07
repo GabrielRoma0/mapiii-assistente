@@ -24,6 +24,7 @@ const DetalheDireito = lazy(() => import('./app/telas/DetalheDireito').then((m) 
 const Perguntar = lazy(() => import('./app/telas/Perguntar').then((m) => ({ default: m.Perguntar })));
 const Conferir = lazy(() => import('./app/telas/Conferir').then((m) => ({ default: m.Conferir })));
 const Sobre = lazy(() => import('./app/telas/Sobre').then((m) => ({ default: m.Sobre })));
+const Projeto = lazy(() => import('./app/telas/Projeto').then((m) => ({ default: m.Projeto })));
 const Embarque = lazy(() => import('./app/telas/Embarque').then((m) => ({ default: m.Embarque })));
 const Reclamacao = lazy(() => import('./app/telas/Reclamacao').then((m) => ({ default: m.Reclamacao })));
 const NaRua = lazy(() => import('./app/telas/NaRua').then((m) => ({ default: m.NaRua })));
@@ -50,6 +51,8 @@ function Tela({ rota }: { rota: Rota }) {
       return <Conferir />;
     case 'sobre':
       return <Sobre />;
+    case 'projeto':
+      return <Projeto />;
     case 'embarque':
       // Diferencial desligado por padrão: sem a flag, o endereço não existe.
       return EMBARQUE_ATIVO ? <Embarque /> : <NaoEncontrada />;

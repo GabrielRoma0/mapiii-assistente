@@ -10,3 +10,4 @@ playwright-report
 # O zip original fica fora porque contém essas mesmas imagens; tudo o que o app usa já está em design-system/.
 design/
 design-system/uploads/
+supabase/.temp/

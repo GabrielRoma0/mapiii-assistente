@@ -1,0 +1,14 @@
+{
+  "problema": "Famílias de pessoas com deficiência gastam tempo e energia para descobrir o que podem pedir, onde e com quais documentos. A informação existe, mas está espalhada, em linguagem difícil e misturada com golpes. Na rua, o embarque acessível é negado na hora.",
+  "persona": null,
+  "como_testamos": [
+    "Teste com 5 a 8 pessoas, identificadas só por um código.",
+    "Acerto das orientações, conferido com um gabarito escrito sem olhar a base.",
+    "Tempo para achar a informação, comparado com a busca que a pessoa já faz na internet.",
+    "Tempo até achar o ônibus certo, comparado com o app de transporte que a pessoa já usa.",
+    "Facilidade de uso, numa nota dada pelas pessoas que testaram."
+  ],
+  "numeros": [],
+  "equipe": ["Thor", "Gabriel"],
+  "visao_de_futuro": "Um mapa colaborativo de calçadas, feito com fotos de quem passa por elas todos os dias, para mostrar à Prefeitura onde consertar primeiro."
+}

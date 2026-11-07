@@ -21,6 +21,9 @@ export function Sobre() {
     <>
       <Voltar para={href.inicio} rotulo="Início" />
       <Titulo>Sobre e fontes</Titulo>
+      <a className={css.linkFonte} href={href.projeto}>
+        Sobre o projeto: problema, como testamos e equipe
+      </a>
 
       <section className={css.secao} aria-labelledby="como-funciona">
         <h2 id="como-funciona" className={css.subtitulo}>Como funciona</h2>

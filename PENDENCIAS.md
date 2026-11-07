@@ -112,7 +112,15 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 - **Conferir:** pergunta fora da base mostra o canal; a Reclamação pronta mostra "Onde enviar".
 
 ### H3. Valores oficiais de serviços (opcional)
-- `data/servicos-valores.json`: só se sobrar tempo. Formato em [data/README.md](data/README.md).
+- **Para que serve:** quando alguém cola "me cobraram R$ 50 para fazer o cartão", o "Conferir se é oficial" compara com o valor oficial e diz Oficial ou Suspeito. Sem valores, responde "Não sei". É o que faz o verificador de golpes funcionar com cobranças, e não só com links.
+- **Candidatos a conferir** (golpes comuns cobram por algo que é gratuito; **confirme cada um na fonte**, nada aqui é valor):
+  1. Pedido do Bilhete Único Especial (pessoa com deficiência) e a segunda via do cartão: SPTrans.
+  2. Inscrição e atualização no Cadastro Único: Ministério do Desenvolvimento Social ou Prefeitura.
+  3. Pedido do BPC no INSS: gov.br/inss.
+  4. Cartão de estacionamento para vaga especial: Prefeitura (DSV).
+  5. Pedido do Atende+: SPTrans.
+- **Para cada um, traga:** o nome do serviço, o valor em reais (0 = gratuito), o link oficial (https) e a data em que abriu a página. Cole no chat com o Claude Code, que monta o JSON (formato em [data/README.md](data/README.md)) e roda `npm run validar-kb`.
+- **Conferir:** em "Conferir se é oficial", colar "cobraram R$ 30 pela segunda via" deve dar Suspeito, se a fonte disser que é gratuito.
 
 ### H4. Subprefeituras
 - Compare `p_subprefeitura` em `data/perguntas.json` com a lista oficial da Prefeitura e diga ao Claude Code o que muda.
@@ -170,11 +178,11 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 
 | # | Melhoria | Quem | Como |
 |---|---|---|---|
-| V4 | Ícones de microfone e alto-falante | Dupla no **Claude Design** | Pedir dois ícones no padrão da grade (24 px, traço 2 px); o Claude Code troca nos botões de falar e ouvir |
-| V5 | Mapi no tema escuro | Dupla no **Claude Design** | Versão do personagem para fundo escuro (o código não pode redesenhar o Mapi) |
+| V4 | Ícones de microfone e alto-falante | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
+| V5 | Mapi no tema escuro | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V6 | Endereço com nome bonito | Dupla | Junto com H10 |
-| T8 | Publicação automática | Dupla liga o Pages; Claude Code faz o workflow | Cada envio ao `main` atualiza o site |
-| P2 | Página "Sobre o projeto" para a banca | Dupla (conteúdo) + Claude Code (tela) | Problema, persona, como testamos, números do teste (inclusive os ruins), equipe e visão de futuro; depois de 16/11 |
+| T8 | Publicação automática | **Workflow pronto (07/11)**: falta ligar o Pages (Settings → Pages → Source: GitHub Actions) e, se quiserem o Embarque, criar as variáveis do Actions | Cada envio ao `main` atualiza o site |
+| P2 | Página "Sobre o projeto" para a banca | **Tela pronta (07/11)** em `#/projeto`; falta a dupla preencher `persona` e `numeros` em `data/projeto.json` depois de 16/11 | O validador recusa número sem fonte e dado pessoal |
 | — | Capturas do instalador com fichas reais | Claude Code | Gerar de novo depois de H1 (hoje mostram o exemplo) |
 | — | Valores oficiais (H3) | Thor | Só se sobrar tempo |
 

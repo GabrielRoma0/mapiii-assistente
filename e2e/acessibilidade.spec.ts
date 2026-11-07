@@ -9,6 +9,7 @@ const TELAS = [
   '/#/perguntar',
   '/#/conferir',
   '/#/sobre',
+  '/#/projeto',
   '/#/na-rua',
   '/#/negaram',
   '/#/negaram/exemplo-transporte',

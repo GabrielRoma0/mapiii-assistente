@@ -168,3 +168,10 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Função `onibus` publicada no projeto `mapiii` (`supabase functions deploy onibus --use-api`).
 - **Correção:** a SPTrans responde 411 (Length Required) a um POST de login sem corpo. O login agora vai com corpo vazio. Teste novo em `tests/onibus-servidor.test.ts`; `npm run verificar` com 295 testes.
 - Diagnóstico com uma função temporária (já apagada): a SPTrans aceita conexões vindas do Supabase, e a chave salva é a mesma da página (comparação só por hash). Mesmo assim o login responde `false`. Provável que a chave nova ainda não esteja ativa. Falta testar de novo.
+
+### Melhorias V4, V5, T8, P2 e H3
+
+- **T8:** `.github/workflows/publicar.yml` roda `npm run verificar` e o build e publica no GitHub Pages a cada envio ao `main`. Embarque e Supabase vêm de variáveis do Actions (públicas, sem segredo); sem elas o Embarque fica desligado. Ligar o Pages pelo `gh` foi bloqueado nesta sessão: falta o Gabriel ligar em Settings → Pages → Source: GitHub Actions.
+- **P2:** tela "Sobre o projeto" (`#/projeto`, link no topo de Sobre, aba Sobre acesa). Conteúdo em `data/projeto.json`, validado em `src/core/projeto.ts` e no `npm run validar-kb`: número sem fonte, dado pessoal e "você tem direito" são recusados. Persona e números ficam vazios até o teste com pessoas. Conferida no navegador: sem rolagem lateral em 320 px, no tema escuro. `/#/projeto` entrou na auditoria de acessibilidade do e2e.
+- **V4 e V5:** pedidos prontos para colar no Claude Design em `docs/pedidos-claude-design.md`.
+- **H3:** passo a passo e lista de serviços a conferir no PENDENCIAS, sem nenhum valor (só a fonte pode dar o valor).

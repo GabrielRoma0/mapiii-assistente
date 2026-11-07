@@ -1,0 +1,51 @@
+# T8: cada envio ao main publica o site no GitHub Pages, depois de passar pela mesma conferência do `npm run verificar`.
+# Configuração sem segredo nenhum: as três variáveis abaixo são públicas por definição (vão para o navegador)
+# e ficam em Settings → Secrets and variables → Actions → aba "Variables". Sem elas, o Embarque fica desligado.
+#   VITE_EMBARQUE_ATIVO            "true" liga o Embarque (com o modo exemplo sempre disponível)
+#   VITE_SUPABASE_URL              URL do projeto Supabase
+#   VITE_SUPABASE_PUBLISHABLE_KEY  chave publicável (sb_publishable_...). NUNCA a secreta.
+name: publicar
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verificar
+      - run: npm run build
+        env:
+          VITE_EMBARQUE_ATIVO: ${{ vars.VITE_EMBARQUE_ATIVO }}
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    steps:
+      - id: publicacao
+        uses: actions/deploy-pages@v4

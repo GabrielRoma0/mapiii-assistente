@@ -169,7 +169,8 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** no navegador, consultar, desligar a rede (emulação) e ver a última consulta.
 
 #### T8 · Publicação automática · P · Humano
-- [ ] **O quê:** cada envio ao `main` atualiza o site publicado sozinho.
+- [x] **Workflow feito em 07/11/2026** (`.github/workflows/publicar.yml`). Falta ligar o Pages no repositório.
+- **O quê:** cada envio ao `main` atualiza o site publicado sozinho.
 - **Como:** workflow do GitHub Pages (`.github/workflows/publicar.yml`) com o build. A dupla precisa ligar o Pages em Settings → Pages e decidir a flag do Embarque (ver decisões).
 - **Conferir:** site atualizado depois de um envio.
 
@@ -182,7 +183,8 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** teste do hook (avança, volta ao primeiro, para ao sair); teste com uma pessoa que usa acionador, se possível.
 
 #### P2 · Página "Sobre o projeto" para a banca · P · Humano (conteúdo)
-- [ ] **O quê:** tela com o problema, a persona, como testamos, os números do teste (inclusive os ruins), a equipe e a visão de futuro (mapa de calçadas).
+- [x] **Tela feita em 07/11/2026** (`src/app/telas/Projeto.tsx`, `#/projeto`, conteúdo em `data/projeto.json`, validado por `src/core/projeto.ts`). Falta o conteúdo do teste.
+- **O quê:** tela com o problema, a persona, como testamos, os números do teste (inclusive os ruins), a equipe e a visão de futuro (mapa de calçadas).
 - **Como:** `src/app/telas/Projeto.tsx`, rota `#/projeto`, link em Sobre. Os textos e números vêm da dupla depois do teste (16/11); eu monto a tela antes, com os lugares marcados.
 
 ---

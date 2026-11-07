@@ -9,6 +9,7 @@ teste('lerRota: telas conhecidas', () => {
   assert.deepEqual(lerRota('#/rota/'), { tela: 'rota' });
   assert.deepEqual(lerRota('#/direito/bilhete-exemplo'), { tela: 'direito', id: 'bilhete-exemplo' });
   assert.deepEqual(lerRota('#/sobre'), { tela: 'sobre' });
+  assert.deepEqual(lerRota('#/projeto'), { tela: 'projeto' });
 });
 
 teste('lerRota: endereço desconhecido ou id estranho vai para a tela 404', () => {
@@ -52,6 +53,7 @@ teste('abaDaRota: cada tela acende a aba certa; triagem, 404 e telas de dev não
   assert.equal(aba('#/perguntar'), 'perguntar');
   for (const h of ['#/na-rua', '#/embarque', '#/cartao', '#/motorista', '#/motorista/x', '#/reclamacao']) assert.equal(aba(h), 'na_rua', h);
   assert.equal(aba('#/sobre'), 'sobre');
+  assert.equal(aba('#/projeto'), 'sobre');
   for (const h of ['#/situacao', '#/qualquer', '#/componentes', '#/teste-erro']) assert.equal(aba(h), null, h);
 });
 

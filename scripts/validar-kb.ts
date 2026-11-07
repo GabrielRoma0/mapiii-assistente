@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { validarKb } from '../src/core/kb-schema.ts';
 import { validarDominios, validarServicosValores } from '../src/core/oficial.ts';
 import { validarExemplo } from '../src/app/embarque/exemplo.ts';
+import { validarProjeto } from '../src/core/projeto.ts';
 
 function ler(nome: string): unknown {
   try {
@@ -20,7 +21,8 @@ const arquivos: [string, string[], string][] = [
   ['kb.json', validarKb(kb), `${Array.isArray(kb) ? kb.length : 0} entrada(s)`],
   ['dominios-oficiais.json', validarDominios(ler('dominios-oficiais.json')), 'lista de domínios'],
   ['servicos-valores.json', validarServicosValores(ler('servicos-valores.json'), ids), 'valores de serviços'],
-  ['embarque-exemplo.json', validarExemplo(ler('embarque-exemplo.json')), 'exemplo do Embarque (fictício)']
+  ['embarque-exemplo.json', validarExemplo(ler('embarque-exemplo.json')), 'exemplo do Embarque (fictício)'],
+  ['projeto.json', validarProjeto(ler('projeto.json')), 'página Sobre o projeto']
 ];
 
 let falhou = false;

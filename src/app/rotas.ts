@@ -10,6 +10,7 @@ export type Rota =
   | { tela: 'perguntar' }
   | { tela: 'conferir' }
   | { tela: 'sobre' }
+  | { tela: 'projeto' }
   | { tela: 'embarque' }
   | { tela: 'reclamacao' }
   | { tela: 'na_rua' }
@@ -43,6 +44,7 @@ export function lerRota(hash: string, pathname = '/'): Rota {
     if (primeira === 'perguntar') return { tela: 'perguntar' };
     if (primeira === 'conferir') return { tela: 'conferir' };
     if (primeira === 'sobre') return { tela: 'sobre' };
+    if (primeira === 'projeto') return { tela: 'projeto' };
     if (primeira === 'embarque') return { tela: 'embarque' };
     if (primeira === 'reclamacao') return { tela: 'reclamacao' };
     if (primeira === 'componentes') return { tela: 'componentes' };
@@ -73,6 +75,7 @@ export const href = {
   perguntar: '#/perguntar',
   conferir: '#/conferir',
   sobre: '#/sobre',
+  projeto: '#/projeto',
   embarque: '#/embarque',
   reclamacao: '#/reclamacao',
   naRua: '#/na-rua',
@@ -108,6 +111,7 @@ export function abaDaRota(rota: Rota): Aba | null {
     case 'perguntar':
       return 'perguntar';
     case 'sobre':
+    case 'projeto':
       return 'sobre';
     case 'na_rua':
     case 'embarque':
