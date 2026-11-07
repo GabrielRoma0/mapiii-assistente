@@ -297,6 +297,12 @@ Entregue também, como PNG separados e com fundo transparente, as peças que vã
 
 **Onde salvar:** `video/quadros/14.png` e as peças em `video/quadros/14-pecas/` (`onibus.png`, `rampa.png`, `pessoa.png`).
 
+**Ajuste opcional (a primeira versão, de 07/11, já está salva):** a rampa saiu como uma linha fina, quase invisível, e a roda dianteira do ônibus aparece atrás da cadeira. Se quiserem melhorar, peçam no mesmo chat:
+
+```text
+No quadro 14, a rampa ficou fina demais e quase não aparece, e ela é o ponto principal da cena. Faça a rampa bem visível: uma placa grossa (cerca de 20 px), em Almond Silk #C9ADA7 com contorno Space Indigo #22223B, saindo do piso da porta e descendo em diagonal até a calçada, com uma inclinação que se perceba. Coloque a pessoa em cadeira de rodas em cima da rampa, no meio da subida, de frente para a porta. Afaste a roda dianteira do ônibus para a direita da porta, para ela não aparecer atrás da cadeira. Não mude mais nada: logo, texto, cores, ponto de ônibus e rodapé ficam iguais. Entregue de novo o quadro e as 3 peças separadas (ônibus, rampa, pessoa), com fundo transparente e na mesma escala.
+```
+
 ### Pedido 5 · Objetos 3D da cena 3 (opcional)
 
 Só se a dupla quiser deixar a cena 3 mais rica. Os quadros atuais já resolvem a cena. São objetos, **não personagens**: sem rosto, para o Mapi continuar sendo o único personagem.
