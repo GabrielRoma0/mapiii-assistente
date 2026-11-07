@@ -161,3 +161,10 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 ### Roteiro do vídeo pitch
 
 - Pasta `video/`: roteiro (29 cenas, 435 palavras, cerca de 3:00), gravações G1 a G6, legendas, audiodescrição, notas de edição, checklist até 19/11 e estrutura do vídeo técnico. Números que ainda não existem ficam como [PENDENTE]; nada de IA, e o Embarque só com o selo EXEMPLO.
+
+### H8. SPTrans (em andamento)
+
+- Aplicativo "Mapiii" cadastrado na área de desenvolvedor da SPTrans (conta do Gabriel). A chave foi guardada pelo Gabriel como segredo `SPTRANS_TOKEN` no Supabase; o Claude Code preencheu o nome do segredo e nunca leu a chave.
+- Função `onibus` publicada no projeto `mapiii` (`supabase functions deploy onibus --use-api`).
+- **Correção:** a SPTrans responde 411 (Length Required) a um POST de login sem corpo. O login agora vai com corpo vazio. Teste novo em `tests/onibus-servidor.test.ts`; `npm run verificar` com 295 testes.
+- Diagnóstico com uma função temporária (já apagada): a SPTrans aceita conexões vindas do Supabase, e a chave salva é a mesma da página (comparação só por hash). Mesmo assim o login responde `false`. Provável que a chave nova ainda não esteja ativa. Falta testar de novo.

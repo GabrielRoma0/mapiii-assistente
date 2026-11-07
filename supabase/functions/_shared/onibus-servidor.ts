@@ -154,7 +154,8 @@ export function criarServico(dep: Dependencias): (req: Request) => Promise<Respo
       log('onibus: SPTRANS_TOKEN ausente');
       throw new FalhaApi('api_fora');
     }
-    const res = await comTempoLimite(`${base}/Login/Autenticar?token=${encodeURIComponent(dep.token)}`, { method: 'POST' });
+    // Corpo vazio de propósito: sem ele não vai Content-Length e a SPTrans responde 411 (conferido em 07/11/2026).
+    const res = await comTempoLimite(`${base}/Login/Autenticar?token=${encodeURIComponent(dep.token)}`, { method: 'POST', body: '' });
     const texto = res.ok ? (await res.text()).trim() : '';
     if (texto !== 'true') {
       sessao = undefined;

@@ -46,6 +46,19 @@ function servico(rotas: Record<string, Rota>, extra: Partial<Parameters<typeof c
 
 // ---------- sucesso e sessão ----------
 
+teste('onibus: login vai com corpo vazio (a SPTrans recusa POST sem tamanho com erro 411)', async () => {
+  let corpoDoLogin: BodyInit | null | undefined;
+  const s = servico({
+    '/Login/Autenticar': (_url, init) => {
+      corpoDoLogin = init.body;
+      return loginOk(_url, init);
+    },
+    '/Linha/Buscar': () => json(BUSCA)
+  });
+  await s.pedir({ acao: 'linhas', termo: '8000' });
+  assert.equal(corpoDoLogin, '');
+});
+
 teste('onibus: busca linha com login e devolve só o contrato do app', async () => {
   const s = servico({ '/Login/Autenticar': loginOk, '/Linha/Buscar': () => json(BUSCA) });
   const r = await s.pedir({ acao: 'linhas', termo: '8000' });

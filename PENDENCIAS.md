@@ -64,7 +64,7 @@ Opcional mas recomendado para o pitch (o Embarque com dado real é o diferencial
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
 | ~~**H7**~~ | ~~Projeto Supabase~~ **Feito 07/11** | Gabriel | 9/11 | nada |
-| **H8** | **Token da SPTrans** e primeiro teste real | Gabriel | 10/11 | H7 |
+| **H8** | **Token da SPTrans** e primeiro teste real (**em andamento 07/11**: chave criada e guardada, função publicada; a SPTrans ainda recusa a chave nova) | Gabriel | 10/11 | H7 |
 | **C3** | Ajustes depois do primeiro teste real (sessão, horário previsto, sentido) | Claude Code | 11/11 | H8 |
 
 Se o token não sair a tempo, o Embarque vai para o vídeo no **modo exemplo** (selo "EXEMPLO, não é dado real" em toda tela). A contagem e o aviso falado funcionam igual.
@@ -132,6 +132,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 4. Ligar `VITE_EMBARQUE_ATIVO=true` e testar **um ponto real**.
 5. **Contar ao Claude Code:** a consulta funciona depois do login? o horário previsto bate com o relógio? o campo de acessibilidade vem preenchido? o texto do sentido está certo?
 - **H7 feita em 07/11/2026:** projeto `mapiii` (id `pzronsfttmwiqfpnxpow`, região São Paulo, plano gratuito, "expor tabelas novas automaticamente" desligado), sem migração aplicada (login cortado). URL e chave publicável no `.env.local` do computador do Gabriel; chave conferida (a API respondeu 200). O plano gratuito pausa o projeto depois de 7 dias sem uso: abrir o painel antes de 13/11.
+- **H8 em andamento (07/11/2026):** aplicativo "Mapiii" cadastrado na SPTrans (chave "homologada e em uso"), chave guardada como segredo `SPTRANS_TOKEN` no projeto `mapiii` e função `onibus` publicada. O login da SPTrans ainda responde `false` para essa chave (conferido que a chave salva é idêntica à da página, comparando só o hash). Provável: chave nova ainda não ativada. Testar de novo mais tarde com `{"acao":"paradas","termo":"Paulista"}`.
 - **Atenção:** o `.env.local` deste computador aponta para o simulador. Antes do build de produção, ele precisa apontar para o Supabase da dupla (ou o Embarque fica só com o exemplo).
 
 ### H9. Teste com pessoas
