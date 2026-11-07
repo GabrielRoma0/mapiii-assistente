@@ -1,6 +1,6 @@
 # Montagem do vídeo pitch no Remotion
 
-Guia para gerar e editar o vídeo do [roteiro v2](roteiro-v2.md) com o Claude Code e o Remotion. Junta o que o repositório já tem (Mapi 3D, quadros e capa do [Claude Design](claude-design/LEIA-ME.md)) com as dicas do guia "Como eu fiz o vídeo do Dorme" (Marcos Levi, Levi Lab, material gratuito, levilab.site), lido em 07/11/2026 a partir das fotos das páginas enviadas pelo Thor. As dicas abaixo são resumo e adaptação, não cópia do guia.
+Guia para gerar e editar o vídeo do [roteiro v2](roteiro-v2.md) com o Claude Code e o Remotion. Junta o que o repositório já tem (Mapi 3D, quadros e capa do [Claude Design](claude-design/LEIA-ME.md)) com as dicas de dois guias gratuitos de Marcos Levi (Levi Lab, levilab.site): "Como eu fiz o vídeo do Dorme" (lido em 07/11/2026 pelas fotos das páginas) e "Como eu fiz o vídeo do Fatô" (PDF, lido no mesmo dia). Os dois seguem o mesmo método; o do Fatô traz algumas ideias a mais, marcadas com "(Fatô)". As dicas abaixo são resumo e adaptação, não cópia do guia.
 
 ## O método do guia, em uma frase
 
@@ -28,6 +28,17 @@ Grave a narração, transcreva com o tempo de cada palavra e peça ao Claude Cod
 | Clonar a voz no Higgsfield (Seed Audio) | **Não** | Decisão do Thor no roteiro v2: voz da dupla, sem clone. Se mudar, só a própria voz, e o vídeo tem que dizer que é clone |
 | Personagens 3D novos no Higgsfield (GPT Image) | **Não para o Mapi** | O Mapi não pode ser redesenhado (regra do `CLAUDE.md`). Objetos extras, se a dupla quiser, saem do Claude Design no mesmo estilo (ver "Opcional" abaixo) |
 | A virada "o Claude fez cada quadro" com a cena se separando em camadas 3D | **A dupla decide** | Seria honesto (o vídeo é montado pelo Claude Code), mas muda o fecho do roteiro e o tempo. Se entrar, dizer "montado com o Claude", sem sugerir que o app usa IA (a camada de IA está desligada) |
+
+### Ideias a mais do guia do Fatô
+
+| Dica do guia | No Mapiii | Por quê |
+|---|---|---|
+| Notificação no topo da tela, no estilo do celular ("Sua fatura fechou") | **Sim** | Cena 10: o aviso "Ônibus acessível chegando · 2 min" desce do topo como notificação, com o som de notificação |
+| Uma palavra por frase em destaque, como marca-texto | **Sim, com sublinhado** | Os quadros já usam sublinhado Almond Silk na palavra-chave ("rampa", "direito", "tela"). Manter uma palavra por frase |
+| Extrato que desenrola de cima para baixo, linha por linha | **Sim (ideia nova)** | Cena 7: o cartão "Pode ter direito" e a lista de passos da Rota descem linha por linha. As linhas são cinza, sem lei, valor, prazo, telefone ou link |
+| Tesoura cortando as linhas que não prestam | **Sim, adaptado (ideia nova)** | Cena 3: no cartão "Com golpe", um risco passa sobre uma linha cinza de "site falso" e o ícone `golpe` aparece. Sem endereço de site de verdade, nem falso |
+| Barra de progresso ("parcela 7 de 12") | **Só se existir no app** | Pode mostrar o avanço da triagem na cena 7, desde que seja igual à tela real. Se o app não tiver, não entra |
+| A fórmula em 8 frases: número que assusta, a negação de todo mundo, 3 exemplos da dor, quanto custa por ano, a solução, o app resolvendo, 3 palavras + slogan, a virada | **Já coberta pelo roteiro v2, com duas exceções** | Número (7:40 e Censo), 3 exemplos (espalhada, difícil, com golpe), solução (cena 6), app resolvendo (7 a 11), slogan (cena 17). **"Quanto custa por ano" não entra**: não temos número com fonte. **3 palavras antes do slogan**: a dupla pode decidir, por exemplo "Descubra. Mostre. Garanta.", que seguem os atos do roteiro; isso muda a locução e precisa caber no tempo |
 
 ## O que preparar antes de pedir a montagem
 
@@ -66,6 +77,9 @@ VISUAL
 - O Mapi 3D (video/mapi-3d/) entra subindo suave, flutua de leve e tem uma sombra em elipse sólida Almond Silk embaixo. Sem quique.
 - O número grande rola com borrão vertical e para no valor.
 - Um chip de relógio "7:40" entra na cena 1 e fica no canto até a cena 4.
+- Cena 7: o cartão "Pode ter direito" e os passos da Rota descem linha por linha, com linhas cinza no lugar de texto de lei, valor, prazo, telefone ou link.
+- Cena 3: no cartão "Com golpe", um risco corta uma linha cinza de "site falso". Nenhum endereço de site.
+- Cena 10: o aviso "Ônibus acessível chegando · 2 min" desce do topo como notificação do celular.
 - Selo VISÃO DE FUTURO o tempo todo na cena 15. Aviso de protótipo no fecho.
 - Legenda completa queimada no vídeo, gerada da mesma transcrição, e também um .srt.
 
