@@ -2,15 +2,15 @@
 
 > Escrita em 07/11/2026 (Thor com o Claude Code) a partir de [referencia-campeao.md](referencia-campeao.md) e do [roteiro v1](roteiro.md) do Gabriel, que continua no repositório para comparar. **A dupla escolhe qual usar.**
 >
-> Decisões do Thor: YouTube 16:9; narração com a voz da dupla (sem clone); Mapi com cara de 3D feito no Claude Design (pedido V8); destacar que São Paulo e a SPTrans são o primeiro exemplo e que o Mapiii pode ser replicado em outras cidades e países, com o selo **VISÃO DE FUTURO**; teste com pessoas só **demonstrativo** (sem números de teste).
+> Decisões do Thor: YouTube 16:9; narração com a voz da dupla (sem clone); Mapi com cara de 3D feito no Claude Design (pedido V8); destacar que São Paulo e a SPTrans são o primeiro exemplo e que o Mapiii pode ser replicado em outras cidades e países, com o selo **VISÃO DE FUTURO**; sem teste com pessoas no vídeo (o campeão também não mostrou teste); a prova fica com os números já medidos.
 
 ## O que muda em relação ao v1
 
 | v1 (Gabriel) | v2 |
 |---|---|
-| 29 cenas, 3:00, tour pelo app | 18 cenas, cerca de 2:00, uma história e três momentos do app |
+| 29 cenas, 3:00, tour pelo app | 17 cenas, cerca de 2:05, uma história e três momentos do app |
 | Só locução em off | A dupla aparece na câmera no começo, na virada e no fim (como o campeão), e o resto é animação e app |
-| 4 números do teste com pessoas [PENDENTE] | Só números já medidos; o teste demonstrativo entra como imagem, sem estatística |
+| 4 números do teste com pessoas [PENDENTE] | Sem teste com pessoas; só os números já medidos (12 de 12 recusas, acessibilidade 100) |
 | Escala não aparece | "A SPTrans é só o primeiro exemplo": o mapa cresce, com selo VISÃO DE FUTURO |
 | Fora do vídeo: — | Laudo, sem internet, Conferir se é oficial, triagem passo a passo, cartões de título dos atos. **Continuam no app**, só não entram no vídeo |
 
@@ -41,7 +41,6 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 10 | 1:10–1:19 | Garanta | Gravação real do Embarque (contagem caindo) e corte para o Mapi 3D (`ouvindo`) com ondas de som; celular no bolso. | Em teste: com o celular no bolso, ele avisa em voz alta quando o próximo ônibus acessível está chegando. | off | Próximo ônibus acessível<br>Aviso falado | A voz real do app por 2 s | **EXEMPLO, não é dado real** (trocar por "Dados da SPTrans" se a H8 funcionar) |
 | 11 | 1:19–1:28 | Confiança | Mapi 3D (`recusa`, mão aberta), depois a recusa real no app. | Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192. | off | Sabe dizer não.<br>**Emergência: 192** | Pop no Mapi | — |
 | 12 | 1:28–1:37 | Prova | Números um por vez, grandes, Space Indigo sobre Seashell; recorte do relatório do Lighthouse. | E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade. | off | **12 de 12** recusas corretas<br>Acessibilidade **100** | Tique a cada número | — |
-| 13 | 1:37–1:42 | Prova | Teste demonstrativo: uma pessoa usando o app no celular (mãos e tela; rosto só com autorização por escrito). | E colocamos na mão de quem vai usar. | off | Teste demonstrativo | Ambiente baixo | **Teste demonstrativo** (se não for gravado, a cena sai e o vídeo fica 5 s mais curto) |
 | 14 | 1:42–1:47 | Escala | Gabriel na câmera. | Começamos por São Paulo. A SPTrans é só o primeiro exemplo. | G | — | — | — |
 | 15 | 1:47–1:57 | Escala | Mapa: o pino do Mapi em São Paulo, depois pinos acendendo pelo Brasil e pelo mundo. | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo | **VISÃO DE FUTURO** (o tempo todo) |
 | 16 | 1:57–2:01 | Impacto | Ícones dos ODS 10 e 11. | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 [CONFIRMAR na lista oficial da GS] | — | — |
@@ -65,7 +64,6 @@ Uma frase por arquivo, ou 1 segundo de pausa entre as frases. Gravar cada uma du
 [off] Em teste: com o celular no bolso, ele avisa em voz alta quando o próximo ônibus acessível está chegando.
 [off] Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue cento e noventa e dois.
 [off] E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.
-[off] E colocamos na mão de quem vai usar.
 [Gabriel] Começamos por São Paulo. A SPTrans é só o primeiro exemplo.
 [off] O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.
 [off] Menos desigualdade. Cidades que funcionam para todo mundo.
@@ -115,4 +113,3 @@ Gravar no celular de verdade, com tema claro, texto no tamanho padrão e sem not
 | Lighthouse de novo com as fichas | Claude Code | Cena 12 |
 | Confirmar se a GS pede ODS 10 e 11 | Dupla | Cena 16 |
 | Mapi 3D (V8) e quadros de referência (V9) no Claude Design | Dupla | Montagem |
-| Teste demonstrativo e autorização de imagem por escrito | Dupla | Cena 13 |

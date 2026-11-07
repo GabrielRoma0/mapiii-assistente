@@ -202,7 +202,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 | **Onde publicar** | GitHub Pages, Netlify, Vercel | GitHub Pages: já está no GitHub; o Claude Code faz a publicação automática (T8) depois que alguém liga em Settings → Pages |
 | **Endereço do site** | Nome padrão ou domínio próprio | Nome padrão legível (sem custo) |
 | **Pitch segue o case?** | Perguntar ao professor ou Scrum Master | Perguntar; a solução cumpre o case de qualquer forma |
-| **Teste com pessoas (H9)** | Teste completo com 5 a 8 pessoas ou só demonstrativo | Proposta do Thor (07/11): só demonstrativo, sem números de teste no vídeo (roteiro v2, cena 13). Falta o Gabriel concordar. Sem números, a tela "Sobre o projeto" fica sem `numeros` de teste |
+| **Teste com pessoas (H9)** | Teste completo com 5 a 8 pessoas ou só demonstrativo | Proposta do Thor (07/11): sem teste com pessoas; o vídeo usa só números já medidos (roteiro v2). Falta o Gabriel concordar. Sem números, a tela "Sobre o projeto" fica sem `numeros` de teste |
 | **Roteiro do pitch** | v1 (Gabriel, 3:00) ou v2 (Thor, 2:10) | Ver [video/roteiro-v2.md](video/roteiro-v2.md), seção "O que muda" |
 
 Já decidido: Embarque por ponto; voz padrão do aparelho; lembrar respostas no aparelho (desmarcado por padrão); confirmação antes de apagar; ferramentas de teste só de desenvolvimento; repositório público.
