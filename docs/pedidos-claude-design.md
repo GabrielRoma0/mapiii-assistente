@@ -1,4 +1,4 @@
-# Pedidos para o Claude Design (V4, V5 e V8)
+# Pedidos para o Claude Design (V4, V5, V8, V9 e V10)
 
 O design system Mapiii v2.0 foi feito no Claude Design, e o código **não pode** criar ícone novo nem redesenhar o Mapi (regra do `CLAUDE.md`). Por isso os dois pedidos abaixo são feitos lá, pela dupla. Abra o projeto do design system no Claude Design e cole um pedido de cada vez.
 
@@ -57,6 +57,40 @@ Quando o resultado sair, salve os arquivos nos lugares indicados e avise o Claud
 **Onde salvar:** `video/mapi-3d/` com o nome da pose (`bom.png`, `atencao.png`, `verificado.png`, `ouvindo.png`, `recusa.png`, `comemorando.png`). Se vier em SVG ou HTML, salve do mesmo jeito; o Claude Code gera os PNG transparentes a partir deles.
 
 **Como conferir (o Claude Code faz):** as 6 poses ao lado da versão plana, mesmo tamanho e enquadramento, nenhuma cor fora da paleta, contorno legível sobre os dois fundos.
+
+---
+
+## V9 · Quadros de referência do vídeo pitch (16:9)
+
+**Por que:** guiar a animação das cenas do [roteiro v2](../video/roteiro-v2.md). O Claude Code anima no Remotion a partir destes quadros, com os mesmos tokens.
+
+**Cole no Claude Design** (depois do V8):
+
+> No design system Mapiii v2.0, crie um arquivo novo "Mapiii Pitch Quadros 16x9", no mesmo formato de `Mapiii Direitos Video 16x9` (uma seção 1920 × 1080 por quadro), só com os tokens, as fontes (Nunito) e os ícones do design system. Fundo Seashell `#F2E9E4`, texto Space Indigo `#22223B`, títulos em Nunito 900 com uma palavra em destaque por quadro. Use o Mapi com cara de 3D (V8) onde indicado. Sem foto, sem texto além do indicado.
+>
+> 1. **Ponto de ônibus:** ilustração plana vista de lado, uma pessoa em cadeira de rodas em silhueta no ponto, ônibus parado com a porta aberta e a rampa recolhida. Texto: "O ônibus chegou. **A rampa, não.**"
+> 2. **Três cartões:** "Espalhada.", "Difícil.", "**Com golpe.**", o terceiro com o ícone `golpe`.
+> 3. **Número grande:** um número de exemplo "00.000.000" bem grande (será trocado pelo valor oficial) e embaixo "Fonte: IBGE, Censo 2022".
+> 4. **Logo:** logo do Mapiii grande, "o mapa dos seus direitos" e o Mapi 3D `bom` ao lado.
+> 5. **Pode ter direito:** "você tem direito" riscado, "**pode ter direito**" embaixo, o componente SourceChip ampliado e o Mapi 3D `verificado`.
+> 6. **Sabe dizer não:** Mapi 3D `recusa` e o texto "**Emergência: 192**".
+> 7. **Números:** "**12 de 12** recusas corretas" e "Acessibilidade **100**", um em cada metade.
+> 8. **Mapa que cresce:** contorno simples do mapa-múndi em traço fino, o pino do Mapi aceso em São Paulo e pinos menores acesos em outras cidades do Brasil e de outros países. Selo fixo no canto superior direito: "VISÃO DE FUTURO". Texto: "Troque a base. Outra cidade. Outro estado. **Outro país.**"
+> 9. **Fecho:** logo, "Você pode ter direito. **Agora, você sabe onde ir.**", Mapi 3D `comemorando` e, pequeno, "Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026".
+>
+> Confira contraste de 4,5:1 em todo texto.
+
+**Onde salvar:** `design-system/Mapiii Pitch Quadros 16x9.dc.html` (e os arquivos que ele usar).
+
+---
+
+## V10 · Capa do vídeo no YouTube
+
+**Cole no Claude Design** (depois do V9):
+
+> No design system Mapiii v2.0, crie a capa do vídeo pitch para o YouTube, 1280 × 720 px: o Mapi 3D `atencao` grande à direita, à esquerda o título em Nunito 900 "O ônibus chegou. **A rampa, não.**" e, menor, o logo do Mapiii. Fundo Seashell com um toque de rosa `#CF7A93`. Legível em tamanho pequeno (como aparece na lista do YouTube). Entregue em PNG.
+
+**Onde salvar:** `video/capa.png`.
 
 ---
 
