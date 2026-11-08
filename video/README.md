@@ -153,7 +153,7 @@ O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabr
 | Capa do YouTube | `video/capa.png` | **Pronta** | — |
 | Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). A rampa é fina, mas no vídeo ela aparece descendo, e o movimento chama a atenção: a dupla decidiu manter | — |
 | Objetos 3D da cena 3 (espalhada, dificil, golpe) | `video/objetos-3d/` (e `comparacao-com-mapi.png`) | **Prontos** (07/11) | — |
-| Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` | Falta: pedido 6 (recomendado) | Dupla no Claude Design |
+| Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` (e `comparacao-celular.png`) | **Pronto** (08/11). Tela na vista de frente: x 676, y 296, 648 × 1408 px (medido pelo Claude Code; cantos arredondados) | — |
 | Quadro 15, ODS (cena 16) | `video/quadros/15.png` | Falta: pedido 7 | Dupla no Claude Design |
 | Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` e `camera-nomes.png` | Falta: pedido 8 (opcional) | Dupla no Claude Design |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
@@ -352,7 +352,7 @@ Entregue 3 vistas do MESMO celular, de pé, no mesmo tamanho e na mesma posiçã
 Cada vista em PNG com fundo transparente, 2000 × 2000 px, centralizada. Informe também, em pixels, o retângulo exato da tela na vista de frente (x, y, largura, altura).
 ```
 
-**Onde salvar:** `video/objetos-3d/celular-frente.png`, `celular-perfil.png` e `celular-costas.png`, e o retângulo da tela anotado aqui.
+**Onde salvar:** `video/objetos-3d/celular-frente.png`, `celular-perfil.png` e `celular-costas.png`. **Feito em 08/11**; o retângulo da tela está na seção 6.
 
 ### Pedido 7 · Quadro 15, os ODS (cena 16)
 
