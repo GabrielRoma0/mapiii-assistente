@@ -158,7 +158,7 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` (e `comparacao-celular.png`) | **Pronto** (08/11). Tela na vista de frente: x 676, y 296, 648 × 1408 px (medido pelo Claude Code; cantos arredondados) | — |
 | Quadro 15, ODS (cena 16) | `video/quadros/15.png` | **Pronto** (08/11). Lugares dos ícones: ODS 10 em x 400, y 271 e ODS 11 em x 1100, y 271, cada um 420 × 420 px (medido pelo Claude Code). Faltam os ícones oficiais | — |
 | Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` (verde em x 52, y 52, 1816 × 976 px, cantos de cerca de 58 px), `camera-nomes.png` e `camera-nomes/` (`thor.png`, `gabriel.png`) | **Pronto** (08/11) | — |
-| Estilo da legenda e chip do relógio | `video/quadros/legenda.png` e `video/quadros/relogio/` | Falta: pedido 9 (recomendado) | Dupla no Claude Design |
+| Estilo da legenda e chip do relógio | `video/quadros/legenda.png`, `legenda-sobre-quadro-01.png` e `video/quadros/relogio/` (`0740.png` a `0743.png`) | **Prontos** (08/11). Com eles, todos os pedidos do Claude Design estão feitos | — |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
@@ -402,7 +402,7 @@ No arquivo "Mapiii Pitch Quadros 16x9", crie dois elementos de apoio para a mont
 Contraste de pelo menos 4,5:1 em todo texto.
 ```
 
-**Onde salvar:** `video/quadros/legenda.png` (e `legenda-sobre-quadro-01.png`) e `video/quadros/relogio/` (`0740.png` a `0743.png`).
+**Onde salvar:** `video/quadros/legenda.png` (e `legenda-sobre-quadro-01.png`) e `video/quadros/relogio/` (`0740.png` a `0743.png`). **Feito em 08/11.**
 
 ## 13. Cronograma
 
