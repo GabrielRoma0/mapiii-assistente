@@ -146,6 +146,8 @@ O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabr
 
 ## 6. O que já existe e o que falta
 
+Tudo o que vem do Claude Design também fica no artefato do design system: https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs (ver seção 12).
+
 | Item | Arquivo | Situação | Quem |
 |---|---|---|---|
 | Mapi 3D, 7 poses (bom, atencao, procurando, verificado, ouvindo, recusa, comemorando) | `video/mapi-3d/` | **Pronto** | — |
@@ -292,6 +294,8 @@ REGRAS
 ## 12. Claude Design: pedidos
 
 Os pedidos 1 (Mapi 3D), 2 (quadros 01 a 13) e 3 (capa) já foram feitos; os textos usados estão em `video/claude-design/pedido-1`, `-2` e `-3` só como registro. As imagens do Mapi plano usadas de referência estão em `video/claude-design/referencias/`.
+
+**Onde está tudo o que o Claude Design gerou:** no artefato do design system Mapiii, em https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs (os arquivos ficam na aba de arquivos, no fim da página). Ele tem os quadros, o Mapi 3D, os objetos 3D e as peças. Só abre para quem tem acesso ao artefato no claude.ai. O Claude Code baixa os arquivos de lá e salva aqui no repositório.
 
 **Como fazer um pedido:** no claude.ai, abra **Design** e o projeto do design system "Mapiii" (o mesmo onde saiu o Mapi 3D, de preferência **na mesma conversa**, para manter o estilo). Anexe o que o pedido indicar, cole o texto e envie. Peça ajustes no mesmo chat. Exporte em PNG e mande para o Claude Code, que confere antes de salvar.
 
