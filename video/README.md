@@ -156,7 +156,7 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). A rampa é fina, mas no vídeo ela aparece descendo, e o movimento chama a atenção: a dupla decidiu manter | — |
 | Objetos 3D da cena 3 (espalhada, dificil, golpe) | `video/objetos-3d/` (e `comparacao-com-mapi.png`) | **Prontos** (07/11) | — |
 | Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` (e `comparacao-celular.png`) | **Pronto** (08/11). Tela na vista de frente: x 676, y 296, 648 × 1408 px (medido pelo Claude Code; cantos arredondados) | — |
-| Quadro 15, ODS (cena 16) | `video/quadros/15.png` | Falta: pedido 7 | Dupla no Claude Design |
+| Quadro 15, ODS (cena 16) | `video/quadros/15.png` | **Pronto** (08/11). Lugares dos ícones: ODS 10 em x 400, y 271 e ODS 11 em x 1100, y 271, cada um 420 × 420 px (medido pelo Claude Code). Faltam os ícones oficiais | — |
 | Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` e `camera-nomes.png` | Falta: pedido 8 (opcional) | Dupla no Claude Design |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
@@ -370,7 +370,7 @@ Conteúdo: dois quadrados grandes lado a lado, no centro, cada um com cerca de 4
 Informe a posição exata (x, y, largura, altura) de cada quadrado.
 ```
 
-**Onde salvar:** `video/quadros/15.png`, com as posições anotadas aqui.
+**Onde salvar:** `video/quadros/15.png`. **Feito em 08/11**; as posições estão na seção 6.
 
 ### Pedido 8 · Moldura das cenas de câmera (opcional)
 
