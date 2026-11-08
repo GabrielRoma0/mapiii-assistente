@@ -157,7 +157,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Objetos 3D da cena 3 (espalhada, dificil, golpe) | `video/objetos-3d/` (e `comparacao-com-mapi.png`) | **Prontos** (07/11) | — |
 | Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` (e `comparacao-celular.png`) | **Pronto** (08/11). Tela na vista de frente: x 676, y 296, 648 × 1408 px (medido pelo Claude Code; cantos arredondados) | — |
 | Quadro 15, ODS (cena 16) | `video/quadros/15.png` | **Pronto** (08/11). Lugares dos ícones: ODS 10 em x 400, y 271 e ODS 11 em x 1100, y 271, cada um 420 × 420 px (medido pelo Claude Code). Faltam os ícones oficiais | — |
-| Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` e `camera-nomes.png` | Falta: pedido 8 (opcional) | Dupla no Claude Design |
+| Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` (verde em x 52, y 52, 1816 × 976 px, cantos de cerca de 58 px), `camera-nomes.png` e `camera-nomes/` (`thor.png`, `gabriel.png`) | **Pronto** (08/11) | — |
+| Estilo da legenda e chip do relógio | `video/quadros/legenda.png` e `video/quadros/relogio/` | Falta: pedido 9 (recomendado) | Dupla no Claude Design |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
@@ -385,7 +386,23 @@ No arquivo "Mapiii Pitch Quadros 16x9", crie dois quadros de apoio, no mesmo for
 Contraste de pelo menos 4,5:1. Informe o raio dos cantos e a posição do retângulo.
 ```
 
-**Onde salvar:** `video/quadros/camera-moldura.png` e `video/quadros/camera-nomes/` (`thor.png`, `gabriel.png`).
+**Onde salvar:** `video/quadros/camera-moldura.png` e `video/quadros/camera-nomes/` (`thor.png`, `gabriel.png`). **Feito em 08/11**; as medidas estão na seção 6. Os nomes entram na primeira vez que cada um aparece (Thor na cena 2, Gabriel na cena 3), por 2 s.
+
+### Pedido 9 · Legenda e relógio (recomendado, o último)
+
+A legenda fica na tela o vídeo inteiro (é obrigatória, por acessibilidade), então ela precisa ter a cara do Mapiii. O relógio "7:40" das cenas 1 a 4 é o único elemento que ainda não tem desenho.
+
+```text
+No arquivo "Mapiii Pitch Quadros 16x9", crie dois elementos de apoio para a montagem do vídeo, com as mesmas regras dos outros quadros (tokens, Nunito, fundo sólido, sem emoji):
+
+1. "Legenda": um quadro 1920 × 1080 com fundo Seashell #F2E9E4 mostrando como fica a legenda do vídeo, centralizada na parte de baixo (a cerca de 64 px da borda): uma faixa de cantos arredondados em Space Indigo #22223B com texto Seashell #F2E9E4 em Nunito 800, 44 px, no máximo 2 linhas e cerca de 42 caracteres por linha. Exemplo de texto: "Para quem usa cadeira de rodas, essa cena é real." Mostre também, num segundo quadro, a mesma legenda sobre o quadro 1 (ponto de ônibus), para conferir que não cobre nada importante. Informe a altura da faixa, o raio dos cantos e a distância da borda.
+
+2. "Relógio": um chip pequeno no estilo dos chips do design system, em Space Indigo com texto Seashell em Nunito 800, com um ícone de relógio simples (traço de 2 px, no padrão dos ícones do design system) e o horário. Entregue 4 versões em PNG com fundo transparente: "7:40", "7:41", "7:42" e "7:43", todas do mesmo tamanho.
+
+Contraste de pelo menos 4,5:1 em todo texto.
+```
+
+**Onde salvar:** `video/quadros/legenda.png` (e `legenda-sobre-quadro-01.png`) e `video/quadros/relogio/` (`0740.png` a `0743.png`).
 
 ## 13. Cronograma
 
