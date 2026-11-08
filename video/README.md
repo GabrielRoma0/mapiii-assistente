@@ -78,6 +78,18 @@ Motion graphics de lançamento de produto, com a identidade do design system Map
 - Zoom em gravação de tela: suave e lento, no máximo 1,5×.
 - Nada aleatório: a mesma montagem gera sempre o mesmo vídeo.
 
+**Regras de tempo (medidas em animações profissionais; ver seção 14)**
+- **Entrar desacelerando, sair acelerando.** A maior parte do caminho acontece nos primeiros 4 a 8 quadros e o resto é uma chegada longa e suave. Sair é o contrário: começa devagar e some rápido. Movimento típico: **10 quadros (0,33 s)** a 30 qps.
+- **Nada cresce do zero.** O que entra vem de fora do quadro, ou chega um pouco maior e assenta no tamanho certo. Nunca de um ponto minúsculo até o tamanho final.
+- **Entrar se movendo, não por fade.** Fade só para um objeto isolado (por exemplo, o selo de fonte), nunca para trocar de cena.
+- **Cortar com movimento.** O corte acontece no meio de um movimento, e a cena seguinte já começa se mexendo. Nada de cena parada esperando o corte.
+- **Nenhum trecho morto.** Em cena de animação, sempre há algo vivo (o Mapi flutuando, o relógio, uma luz). No máximo 3 quadros seguidos totalmente parados, a não ser numa pausa de propósito antes de algo importante (0,6 a 1,5 s), como antes do número da cena 4.
+- **Um foco por quadro.** Uma coisa principal por vez; o resto menor e mais calmo.
+- **Palavras entram no ritmo da fala**, de 4 a 6 quadros entre uma e outra nos títulos. Letra por letra só dentro da tela do app (campo de texto), nunca nos títulos.
+- **No máximo uma mola visível no vídeo inteiro**, e mesmo assim pequena (passar só um pouco do lugar e voltar).
+- **O final fica parado no máximo 1,4 s** e termina menor e mais calmo do que começou. O 1 s de silêncio da cena 18 cabe nisso.
+- **O que estas regras não mudam:** o aviso de protótipo, o selo VISÃO DE FUTURO, o relógio, os números com fonte e o fundo sólido continuam obrigatórios, mesmo que guias de motion graphics recomendem tirar textos dos cantos ou usar fundos com textura.
+
 ## 4. Roteiro: as 18 cenas
 
 Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor ajusta pelo áudio gravado. **Quem:** T = Thor, G = Gabriel, off = locução sem rosto. **Quadro:** imagem de referência em `video/quadros/`.
@@ -222,6 +234,7 @@ REGRAS
 - Tudo determinístico: nada de Math.random.
 - Arredonde os valores de transform para 2 casas decimais.
 - Antes do render, tire um quadro de cada cena, olhe e corrija o que estiver cortado, sobreposto ou com contraste abaixo de 4,5:1.
+- Siga as "Regras de tempo" da seção 3. Confira com um script: nenhum trecho de animação com mais de 3 quadros seguidos parados (fora as pausas de propósito) e o final parado por no máximo 1,4 s. Diga os números encontrados.
 - Render final em H.264 (CRF 12, 30 fps), áudio AAC 48 kHz, nome mapiii-pitch-gs2026.mp4. Diga onde ficou o arquivo.
 ```
 
@@ -241,6 +254,7 @@ REGRAS
 - [ ] "você tem direito" só aparece riscado (cena 8).
 - [ ] Selo VISÃO DE FUTURO em toda a cena 15. Aviso de protótipo no fecho.
 - [ ] Nenhum dado pessoal, contato ou conversa na tela.
+- [ ] Final parado por no máximo 1,4 s; nenhum trecho de animação parado sem motivo.
 - [ ] Assistido inteiro por quem **não** editou, com som e sem som (só pelas legendas).
 - [ ] Créditos dos sons conferidos em `video/sons/CREDITOS.txt`.
 
@@ -335,3 +349,4 @@ Mostre os 3 lado a lado com o Mapi 3D bom, para conferir que o estilo é o mesmo
 
 - **Vídeo campeão da GS 2026.1** ("Vídeo Pitch ARGUS", analisado em 07/11): abre com uma história humana, mostra uma função de cada vez, pessoas reais na câmera, escala antes do fecho e frase final com o nome. Onde ele falhou e o Mapiii vai além: visual repetitivo e escuro, produto quase invisível, nenhuma evidência, legenda de uma palavra só.
 - **Guias "Como eu fiz o vídeo do Dorme" e "do Fatô"** (Marcos Levi, Levi Lab, material gratuito, levilab.site), lidos em 07/11. Aproveitados: narração com tempo por palavra e animação presa à palavra; uma ideia por cena; revisão no Remotion Studio antes do render; 2 a 4 ajustes; nada aleatório no código; quadro de cada cena conferido antes do render; número rolando com borrão; relógio no canto; lista descendo linha por linha; notificação descendo do topo; círculo cobrindo a tela no logo; números por extenso e sem reticências na locução. Não aproveitados: formato vertical e 60 qps, degradê e vidro (o design system proíbe), clone de voz (decisão da dupla), personagens novos (o Mapi é o único), a "virada" contando que o vídeo foi feito com IA, e "quanto custa por ano" (não temos número com fonte).
+- **Skill "motionmaxxing"** (Tejas Makwana, github.com/Tejashmakwana/motionmaxxing, licença Apache 2.0), lida em 08/11. Aproveitadas as regras de tempo medidas em 53 animações profissionais (seção 3). Não instalada: ela usa outra ferramenta de montagem (HTML no lugar do Remotion), a voz depende de uma chave paga, e a lista "nunca faça" dela proíbe coisas que o nosso vídeo é obrigado a ter (aviso de protótipo, selo, números com fonte) ou já decidiu (fundo sólido, os três cartões, o círculo no logo).
