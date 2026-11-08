@@ -104,14 +104,14 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 6 | 0:36–0:43 | Solução | 04 | Círculo Space Indigo cresce do centro e cobre a tela; abre revelando o logo. O Mapi 3D (`bom`) sobe em "Mapi" e flutua. Depois, quatro chips pequenos entram nos cantos, um por vez, só com frases do app: "Pode ter direito", "Fonte oficial", "Sem CPF", "Emergência: 192" | Esse é o Mapiii. O mapa dos seus direitos. E esse é o Mapi. | off | **Mapiii**<br>o mapa dos seus direitos | Whoosh no círculo; pop no Mapi; a trilha entra baixa |
 | 7 | 0:43–0:51 | Descubra | 05 | Celular entra inclinado com a triagem; um botão é tocado; o cartão "Pode ter direito" sai da tela e os passos da Rota descem linha por linha (linhas cinza). Selos "Sem nome" e "Sem CPF" nas palavras. Mapi 3D `procurando`. No fim, **corte de 2 s da triagem real** | Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê. | off | Sem nome. Sem CPF. | Toques de interface baixos |
 | 8 | 0:51–1:00 | Descubra | 06 | "você tem direito" aparece e é riscado em "Nunca diz"; "pode ter direito" entra com o sublinhado se desenhando; o selo de fonte aumenta com um ding. Mapi 3D `verificado` | Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida. | off | ~~você tem direito~~<br>**pode ter direito**<br>Fonte + data | Risco no "você tem direito"; ding no selo |
-| 9 | 1:00–1:10 | Garanta | 07 | A mão vira o celular para fora em "vira a tela"; aparece "Mostre ao motorista" e o QR se desenha. Depois, **corte de 2 s da mão real** virando o celular com o app | Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial. | off | Vire a tela. | Whoosh curto no giro |
+| 9 | 1:00–1:10 | Garanta | 07 | A mão vira o celular para fora em "vira a tela" (com o celular 3D do pedido 6, o giro é feito trocando costas, perfil e frente); aparece "Mostre ao motorista" e o QR se desenha. Depois, **corte de 2 s da mão real** virando o celular com o app | Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial. | off | Vire a tela. | Whoosh curto no giro |
 | 10 | 1:10–1:19 | Garanta | 08 | Pessoa em cadeira de rodas no ponto, celular no bolso; ondas de som saem do bolso; a notificação "Ônibus acessível chegando · 2 min" **desce do topo** como no celular, em "avisar". Mapi 3D `ouvindo` | E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando. | off | O ônibus avisa você. | Som de notificação; a voz real do app por 2 s |
 | 11 | 1:19–1:28 | Confiança | 09 | Mapi 3D `recusa` sobe e faz um balanço curto em "não". A pílula "Emergência: 192" entra em "192" | Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192. | off | Sabe dizer não.<br>**Emergência: 192** | Pop no Mapi |
 | 12 | 1:28–1:37 | Prova | 10 | "12 de 12" rola e para; depois "100". Recorte do relatório do Lighthouse | E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade. | off | **12 de 12** recusas corretas<br>Acessibilidade **100** | Tique a cada número |
 | 13 | 1:37–1:42 | Prova | 11 | Os 6 tópicos entram um por vez, cada um com o seu ícone | E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta. | off | Sem internet · Um toque · A, A+, A++ · Ouve em voz alta · Confere se é oficial · Sem login, sem cadastro | Tique a cada tópico |
 | 14 | 1:42–1:47 | Escala | — | Gabriel na câmera | Começamos por São Paulo. A SPTrans é só o primeiro exemplo. | G | — | — |
 | 15 | 1:47–1:57 | Escala | 12 | Mapa-múndi de uso livre (no lugar do desenhado à mão do quadro). O pino do Mapi pulsa em São Paulo; pinos acendem em "cidade", "estado" e "país" | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo |
-| 16 | 1:57–2:01 | Impacto | — | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 [CONFIRMAR na lista oficial da GS] | — |
+| 16 | 1:57–2:01 | Impacto | 15 (novo) | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 [CONFIRMAR na lista oficial da GS] | — |
 | 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Mapi 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Somos o Thor (G) e o Gabriel. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Mapi |
 | 18 | 2:08–2:12 | Fecho | 14 (novo) | O mesmo ponto de ônibus da cena 1. O ônibus para, **a rampa desce** e a pessoa em cadeira de rodas embarca. Logo grande, aviso de protótipo, FIAP Global Solution 2026 | Mapiii. O mapa dos seus direitos. | off | Mapiii · o mapa dos seus direitos<br>Protótipo de estudo, não é canal oficial. | Rampa descendo; 1 s de silêncio no fim |
 
@@ -153,6 +153,10 @@ O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabr
 | Capa do YouTube | `video/capa.png` | **Pronta** | — |
 | Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). A rampa é fina, mas no vídeo ela aparece descendo, e o movimento chama a atenção: a dupla decidiu manter | — |
 | Objetos 3D da cena 3 (espalhada, dificil, golpe) | `video/objetos-3d/` (e `comparacao-com-mapi.png`) | **Prontos** (07/11) | — |
+| Celular 3D para a cena 9 (frente, perfil e costas) | `video/objetos-3d/celular-frente.png`, `celular-perfil.png`, `celular-costas.png` | Falta: pedido 6 (recomendado) | Dupla no Claude Design |
+| Quadro 15, ODS (cena 16) | `video/quadros/15.png` | Falta: pedido 7 | Dupla no Claude Design |
+| Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` e `camera-nomes.png` | Falta: pedido 8 (opcional) | Dupla no Claude Design |
+| Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
 | Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/` | Falta | Dupla, ou o Claude Code se o site for liberado |
@@ -330,6 +334,54 @@ Mostre os 3 lado a lado com o Mapi 3D bom, para conferir que o estilo é o mesmo
 ```
 
 **Onde salvar:** `video/objetos-3d/espalhada.png`, `dificil.png` e `golpe.png`.
+
+### Pedido 6 · Celular 3D para o giro da cena 9 (recomendado)
+
+O momento principal do vídeo é "vire a tela". Com o celular em 3D visto de três lados, a montagem faz o giro de verdade (costas, perfil, frente) e coloca a tela do app por cima, em código.
+
+**Anexar:** `video/objetos-3d/golpe.png` (o celular que já existe nesse estilo) e `video/mapi-3d/bom.png`.
+
+```text
+Crie um celular moderno em 3D no mesmo estilo e material dos objetos anexos (o celular do "golpe" e o Mapi 3D): formas arredondadas, acabamento brilhante de brinquedo de vinil, contorno escuro Space Indigo #22223B, luz de estúdio suave vinda do alto à direita, só cores da paleta Mapiii (Space Indigo #22223B, Dusty Grape #4A4E69, Lilac Ash #9A8C98, Almond Silk #C9ADA7, Seashell #F2E9E4, rosa #CF7A93). Sem rosto, sem texto, sem logo de marca real, sem anzol.
+
+Entregue 3 vistas do MESMO celular, de pé, no mesmo tamanho e na mesma posição no quadro, para uma animação de giro:
+1. frente: a tela inteira em Seashell #F2E9E4 lisa, sem nada desenhado nela (o conteúdo é colocado depois);
+2. perfil: o celular visto de lado, bem fino;
+3. costas: a parte de trás, com uma câmera simples.
+
+Cada vista em PNG com fundo transparente, 2000 × 2000 px, centralizada. Informe também, em pixels, o retângulo exato da tela na vista de frente (x, y, largura, altura).
+```
+
+**Onde salvar:** `video/objetos-3d/celular-frente.png`, `celular-perfil.png` e `celular-costas.png`, e o retângulo da tela anotado aqui.
+
+### Pedido 7 · Quadro 15, os ODS (cena 16)
+
+A cena 16 ainda não tem quadro. Os ícones dos ODS são da ONU e **não podem ser redesenhados**: o quadro só reserva o lugar deles, e a montagem coloca os ícones oficiais por cima.
+
+```text
+No arquivo "Mapiii Pitch Quadros 16x9", crie o quadro 15, entre o 12 (mapa) e o 13 (fecho), no mesmo formato (1920 × 1080) e com as mesmas regras dos outros: só tokens, fontes e ícones do design system, fundo Seashell #F2E9E4 sólido, texto Space Indigo #22223B, sem foto e sem emoji.
+
+Conteúdo: dois quadrados grandes lado a lado, no centro, cada um com cerca de 420 × 420 px, vazios, só com uma borda tracejada fina em Lilac Ash #9A8C98 (são os lugares onde entram depois os ícones oficiais dos ODS 10 e 11; NÃO desenhe nenhum ícone de ODS). Embaixo de cada quadrado, em Nunito 800: "Menos desigualdade" e "Cidades para todo mundo", com "desigualdade" e "todo mundo" sublinhados em rosa. Mais nada no quadro. Contraste de pelo menos 4,5:1 em todo texto.
+
+Informe a posição exata (x, y, largura, altura) de cada quadrado.
+```
+
+**Onde salvar:** `video/quadros/15.png`, com as posições anotadas aqui.
+
+### Pedido 8 · Moldura das cenas de câmera (opcional)
+
+Para as gravações de Thor e Gabriel (cenas 2, 3, 5, 14 e 17) parecerem parte do mesmo vídeo, e não um corte para outro mundo.
+
+```text
+No arquivo "Mapiii Pitch Quadros 16x9", crie dois quadros de apoio, no mesmo formato (1920 × 1080) e com as mesmas regras dos outros:
+
+1. "Moldura de câmera": fundo Seashell #F2E9E4 sólido com um retângulo de cantos bem arredondados ocupando quase toda a tela (margem de cerca de 48 px), preenchido de verde puro #00FF00 (é onde o vídeo da câmera entra depois). Uma borda fina Space Indigo #22223B no retângulo. Nada mais.
+2. "Nomes": duas etiquetas pequenas no estilo dos chips do design system, em Space Indigo com texto Seashell, Nunito 800, só com os nomes "Thor" e "Gabriel" (sem sobrenome, sem cargo, sem texto em caixa alta espaçada). Cada uma em PNG separado com fundo transparente.
+
+Contraste de pelo menos 4,5:1. Informe o raio dos cantos e a posição do retângulo.
+```
+
+**Onde salvar:** `video/quadros/camera-moldura.png` e `video/quadros/camera-nomes/` (`thor.png`, `gabriel.png`).
 
 ## 13. Cronograma
 
