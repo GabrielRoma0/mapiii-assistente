@@ -6,4 +6,6 @@ A ficha usa: gratuidade interestadual para pessoa com deficiência comprovadamen
 
 **Prints do Thor (09/11):** `2026-11-09-govbr-passe-livre-1-topo.webp` a `-5-etapas-5-e-6.webp` (o que é, quem pode, etapas 1 a 6), conferidos com o texto baixado.
 
-**Falta:** os prints do fim da página (atesto do médico e "Outras informações": prazo, 166, Correios) e, se quiserem `base_legal`, o print da Lei 8.899/1994 no Planalto.
+Prints 6 a 8 (atesto do médico, "Outras informações", legislação e ouvidoria) também conferidos. **A página inteira foi conferida por print.**
+
+**Falta (opcional):** o print da Lei 8.899/1994 no Planalto, para `base_legal`.
