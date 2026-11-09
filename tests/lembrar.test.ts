@@ -76,3 +76,8 @@ teste('lembrar: dado corrompido ou armazenamento bloqueado não quebra; apagar l
 teste('quantasRespondidas: conta perguntas com resposta', () => {
   assert.equal(quantasRespondidas({ p_cidade: 'sim', p_necessidade: [], p_objetivo: 'escola' }), 2);
 });
+
+teste('lembrar: resposta guardada com a opção antiga da renda ("sim") é descartada, e a faixa nova fica', () => {
+  assert.deepEqual(limparRespostasGuardadas({ p_renda: 'sim', p_objetivo: 'beneficio_financeiro' }), { p_objetivo: 'beneficio_financeiro' });
+  assert.deepEqual(limparRespostasGuardadas({ p_renda: 'ate_um_quarto' }), { p_renda: 'ate_um_quarto' });
+});

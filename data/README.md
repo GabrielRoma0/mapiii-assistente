@@ -59,7 +59,7 @@ As condições usam os ids e valores de `data/perguntas.json`. Use exatamente o 
 | `p_laudo` | Existe laudo ou relatório médico? | única | `sim`, `nao`, `nao_sei` |
 | `p_cidade` | Mora na cidade de São Paulo? | única | `sim`, `nao`, `nao_sei` |
 | `p_subprefeitura` | Em qual subprefeitura? (só aparece se `p_cidade` = `sim`) | lista | as 32 subprefeituras (veja o arquivo) |
-| `p_renda` | Renda por pessoa de até meio salário mínimo? | única | `sim`, `nao`, `nao_sei` |
+| `p_renda` | Em qual faixa fica a renda por pessoa? | única | `ate_um_quarto`, `ate_meio`, `mais_de_meio`, `nao_sei`. Para um limite de meio salário mínimo, use `em: ["ate_um_quarto", "ate_meio"]` |
 | `p_cadunico` | Tem Cadastro Único? | única | `sim`, `nao`, `nao_sei` |
 | `p_beneficios` | Já recebe algum destes? | múltipla | `bpc`, `passe_livre`, `nenhum`, `nao_sei` |
 | `p_transporte` | Como costuma se deslocar? | múltipla | `onibus`, `metro_trem`, `carro`, `a_pe_ou_cadeira`, `aplicativo` |

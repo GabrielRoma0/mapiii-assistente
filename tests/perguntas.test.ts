@@ -110,7 +110,7 @@ teste('perguntasDaTriagem: pergunta com mostrar_se puxa a pergunta de que depend
 });
 
 teste('semSensiveis: tira saúde e renda do que pode ir para a conta sem "Salvar meu perfil"', () => {
-  const r = semSensiveis({ p_quem: 'eu', p_renda: 'sim', p_necessidade: ['mobilidade'], p_objetivo: 'transporte' });
+  const r = semSensiveis({ p_quem: 'eu', p_renda: 'ate_um_quarto', p_necessidade: ['mobilidade'], p_objetivo: 'transporte' });
   assert.deepEqual(r, { p_quem: 'eu', p_objetivo: 'transporte' });
 });
 

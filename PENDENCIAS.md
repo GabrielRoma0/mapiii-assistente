@@ -31,7 +31,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 3. ~~Link oficial da lei ou das portarias~~ **Feito 09/11:** `base_legal` com a Lei Municipal 11.250/1992 e a Portaria SMT.GAB 50/2019 (catálogo de legislação da Prefeitura, prints em `docs/fontes/`) e `frase_motorista`. A ficha já aparece em "Mostre ao motorista".
 4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão). O `modelo_recurso` ("Me negaram") espera a **H2**: precisa do canal oficial de reclamação da SPTrans para o campo "para".
 
-**BPC (`bpc-pcd`): rascunho no `main` em 09/11**, montado pelo Claude Code com o texto do gov.br e do INSS (em `docs/fontes/bpc-pcd/`). Falta o Thor: abrir as 3 páginas e tirar prints; print do art. 20 da Lei 8.742/1993 no Planalto (para `base_legal` e o modelo de recurso); decidir a pergunta `p_renda` (a triagem fala em meio salário mínimo, o BPC exige até 1/4).
+**BPC (`bpc-pcd`): rascunho no `main` em 09/11**, montado pelo Claude Code com o texto do gov.br e do INSS (em `docs/fontes/bpc-pcd/`). Página do INSS conferida por print (09/11). Falta o Thor: prints da página de serviço do gov.br e da página de recurso; print do art. 20 da Lei 8.742/1993 no Planalto (para `base_legal` e o modelo de recurso). ~~Pergunta `p_renda`~~ **Feito 09/11:** agora em faixas (até 1/4, até 1/2, mais de 1/2, não sei); o BPC usa "até 1/4".
 
 **Próximas fichas da H1, nesta ordem:** Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 

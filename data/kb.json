@@ -133,7 +133,7 @@
         {
           "campo": "p_renda",
           "em": [
-            "sim"
+            "ate_um_quarto"
           ]
         }
       ],
@@ -194,6 +194,6 @@
     "fonte_url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-com-deficiencia-bpc-loas",
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
-    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda conta toda a família que mora na casa e precisa ser de até 1/4 do salário mínimo por pessoa; a pergunta da triagem fala em meio salário mínimo, então confira a conta com o Cadastro Único. A deficiência precisa durar ao menos 2 anos."
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda conta toda a família que mora na casa e precisa ser de até 1/4 do salário mínimo por pessoa, calculada com o Cadastro Único. A deficiência precisa durar ao menos 2 anos."
   }
 ]

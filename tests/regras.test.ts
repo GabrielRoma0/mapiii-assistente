@@ -171,3 +171,13 @@ teste('avaliarEntrada: resposta "Sim" vem acompanhada da pergunta na frase', () 
   const r = avaliar({ todas: [{ campo: 'p_cidade', em: ['sim'] }] }, { p_cidade: 'sim' });
   assert.equal(r.porque, 'Combina com o que você respondeu: “Sim” para “A pessoa mora na cidade de São Paulo?”.');
 });
+
+teste('regras: faixas de renda separam o limite de um quarto do limite de meio salário mínimo', () => {
+  const umQuarto = entrada('limite-um-quarto', { todas: [{ campo: 'p_renda', em: ['ate_um_quarto'] }] });
+  const meio = entrada('limite-meio', { todas: [{ campo: 'p_renda', em: ['ate_um_quarto', 'ate_meio'] }] });
+  assert.equal(avaliarEntrada(umQuarto, { p_renda: 'ate_um_quarto' }).classe, 'pode');
+  assert.equal(avaliarEntrada(umQuarto, { p_renda: 'ate_meio' }).classe, 'nao');
+  assert.equal(avaliarEntrada(umQuarto, { p_renda: 'nao_sei' }).classe, 'talvez');
+  assert.equal(avaliarEntrada(meio, { p_renda: 'ate_meio' }).classe, 'pode');
+  assert.equal(avaliarEntrada(meio, { p_renda: 'mais_de_meio' }).classe, 'nao');
+});

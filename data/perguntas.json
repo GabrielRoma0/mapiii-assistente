@@ -331,18 +331,22 @@
   },
   {
     "id": "p_renda",
-    "texto": "A renda da casa, dividida por pessoa, é de até meio salário mínimo?",
-    "por_que_perguntamos": "Alguns benefícios são só para famílias com renda baixa. Nunca perguntamos o valor da renda.",
+    "texto": "A renda da casa, dividida por pessoa, fica em qual faixa?",
+    "por_que_perguntamos": "Alguns benefícios são só para famílias com renda baixa, e cada um tem um limite. Perguntamos só a faixa, nunca o valor.",
     "tipo": "unica",
     "sensivel": true,
     "opcoes": [
       {
-        "valor": "sim",
-        "texto": "Sim"
+        "valor": "ate_um_quarto",
+        "texto": "Até um quarto do salário mínimo"
       },
       {
-        "valor": "nao",
-        "texto": "Não"
+        "valor": "ate_meio",
+        "texto": "Mais de um quarto, até meio salário mínimo"
+      },
+      {
+        "valor": "mais_de_meio",
+        "texto": "Mais de meio salário mínimo"
       },
       {
         "valor": "nao_sei",

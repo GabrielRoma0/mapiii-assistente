@@ -38,7 +38,7 @@ const entrada = (id: string, perguntas: string[], chaves: string[], objetivo: st
 const KB = [
   entrada('passe', ['Como peço o passe livre no ônibus?'], ['passe livre', 'ônibus'], 'transporte'),
   entrada('beneficio', ['Quem pode receber o benefício mensal?'], ['benefício mensal', 'renda'], 'beneficio_financeiro', {
-    condicoes: { todas: [{ campo: 'p_objetivo', em: ['beneficio_financeiro'] }, { campo: 'p_renda', em: ['sim'] }] }
+    condicoes: { todas: [{ campo: 'p_objetivo', em: ['beneficio_financeiro'] }, { campo: 'p_renda', em: ['ate_um_quarto', 'ate_meio'] }] }
   })
 ];
 const IDS = new Set(KB.map((e) => e.id));
@@ -144,7 +144,7 @@ teste('validarCenarios: pergunta, valor e id esperado precisam existir', () => {
 teste('avaliarCenarios: precisão e cobertura por cenário e no total (micro)', () => {
   const cs = [
     cenario('so-transporte', { p_objetivo: 'transporte' }, ['passe']),
-    cenario('beneficio-renda', { p_objetivo: 'beneficio_financeiro', p_renda: 'sim' }, ['beneficio', 'passe']),
+    cenario('beneficio-renda', { p_objetivo: 'beneficio_financeiro', p_renda: 'ate_meio' }, ['beneficio', 'passe']),
     cenario('nada', { p_objetivo: 'escola' }, [])
   ];
   const rs = avaliarCenarios(cs, KB);

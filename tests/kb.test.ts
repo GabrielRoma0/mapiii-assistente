@@ -132,7 +132,7 @@ teste('validarKb: cada regra usa o id de uma pergunta e valores que existem nela
   soErro(com({ condicoes: { todas: [{ campo: 'p_necessidade', em: ['cadeirante'] }] } }), 'cadeirante');
   soErro(com({ condicoes: { todas: [{ campo: 'p_laudo', em: [] }] } }), '"em"');
   soErro(com({ condicoes: { todas: [{ campo: 'p_laudo', em: ['sim'], peso: 2 }] } }), 'peso');
-  assert.deepEqual(erros(com({ condicoes: { nenhuma: [{ campo: 'p_renda', em: ['nao'] }] } })), []);
+  assert.deepEqual(erros(com({ condicoes: { nenhuma: [{ campo: 'p_renda', em: ['mais_de_meio'] }] } })), []);
 });
 
 teste('validarKb: "prefiro não responder" pode ser usado numa regra', () => {
