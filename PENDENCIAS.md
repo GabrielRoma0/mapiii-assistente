@@ -28,8 +28,8 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 **Falta na ficha do Bilhete Único Especial (perguntas das Perguntas e Respostas da SPTrans, por print):**
 1. "Qual o procedimento para renovar o Bilhete Único Especial da Pessoa com Deficiência?"
 2. "O Bilhete Único Especial Pessoa com Deficiência tem algum custo de entrega?" (serve também para `data/servicos-valores.json`)
-3. Link oficial da **Lei Municipal 11.250/1992** ou das **Portarias SMT 50/2019, SMT/SMS 7/2020 e SMS 22/2024**, para `base_legal` e o QR do "Mostre ao motorista". A página de perguntas não tem esse link: procurar no catálogo de legislação da Prefeitura.
-4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão).
+3. ~~Link oficial da lei ou das portarias~~ **Feito 09/11:** `base_legal` com a Lei Municipal 11.250/1992 e a Portaria SMT.GAB 50/2019 (catálogo de legislação da Prefeitura, prints em `docs/fontes/`) e `frase_motorista`. A ficha já aparece em "Mostre ao motorista".
+4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão). O `modelo_recurso` ("Me negaram") espera a **H2**: precisa do canal oficial de reclamação da SPTrans para o campo "para".
 
 **Próximas fichas da H1, nesta ordem:** BPC (gov.br/INSS), Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
