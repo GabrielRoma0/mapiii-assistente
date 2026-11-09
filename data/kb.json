@@ -315,5 +315,192 @@
     "atalhos": [
       "deslocamento"
     ]
+  },
+  {
+    "id": "passe-livre-interestadual",
+    "tipo": "direito",
+    "titulo": "Passe Livre Interestadual: viagem gratuita entre estados",
+    "resumo": "Gratuidade em ônibus, trem e barco entre estados para a pessoa com deficiência de família com renda de até 1 salário mínimo por pessoa. O pedido é feito pela internet, no site do Passe Livre da ANTT, com a conta gov.br, e a credencial sai na hora. O acompanhante também viaja de graça quando o médico indica.",
+    "publico": [
+      "pessoa com deficiência",
+      "família de baixa renda"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_beneficios",
+          "em": [
+            "bpc"
+          ]
+        },
+        {
+          "campo": "p_cadunico",
+          "em": [
+            "sim"
+          ]
+        }
+      ],
+      "nenhuma": [
+        {
+          "campo": "p_beneficios",
+          "em": [
+            "passe_livre"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Conta gov.br e CPF da pessoa com deficiência",
+      "Uma destas situações: receber o BPC (código B87); ou estar no Cadastro Único, com renda por pessoa de até 1 salário mínimo, e constar no Cadastro-Inclusão; ou estar no Cadastro Único, com essa renda, e ter o atestado de deficiência registrado pelo médico no site do Passe Livre",
+      "Acompanhante: só um documento de identificação, mostrado na hora de emitir a passagem"
+    ],
+    "onde": {
+      "texto": "Pela internet, no site do Passe Livre da ANTT (passelivre.antt.gov.br), com a conta gov.br. Também dá para pedir pelos Correios, seguindo as instruções da ANTT.",
+      "link": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital"
+    },
+    "prazo_tipico": "Pela internet, o pedido é aprovado ou negado na hora, e a credencial digital sai no fim do pedido. Pelos Correios, a ANTT analisa em até 30 dias, prorrogáveis por mais 30.",
+    "passos": [
+      "Se a pessoa não recebe o BPC nem consta no Cadastro-Inclusão, peça ao médico que registre o atestado de pessoa com deficiência no site do Passe Livre, na área \"Sou médico\". O médico entra com a conta gov.br dele, e o CRM é conferido.",
+      "Entre em passelivre.antt.gov.br, clique em \"Entrar com o GOV.BR\" e escolha \"Obter o Passe Livre\".",
+      "Preencha o requerimento, confira as informações e envie.",
+      "Baixe ou imprima a credencial em \"Meu Passe Livre\", \"Acessar Credencial\". A credencial também pode ser consultada no site com o CPF e o nome completo.",
+      "Precisa de acompanhante? O médico registra isso no site, a qualquer momento, e a credencial passa a mostrar \"Sim\" no campo Acompanhante. O acompanhante não precisa de cadastro."
+    ],
+    "se_negarem": [
+      "Confira se a família está no Cadastro Único com renda de até 1 salário mínimo por pessoa, ou se a pessoa recebe o BPC (código B87).",
+      "Se faltar a comprovação da deficiência, peça ao médico que registre o atestado no site do Passe Livre, na área \"Sou médico\", e faça o pedido de novo.",
+      "Dúvidas e reclamações: telefone 166, da Ouvidoria da ANTT, ou o site passelivre.antt.gov.br."
+    ],
+    "perguntas_exemplo": [
+      "Pessoa com deficiência viaja de graça de ônibus para outro estado?",
+      "Como peço o Passe Livre interestadual?",
+      "O acompanhante também viaja de graça no Passe Livre?",
+      "Quem recebe BPC tem passe livre interestadual?"
+    ],
+    "palavras_chave": [
+      "passe livre",
+      "passe livre interestadual",
+      "antt",
+      "viagem interestadual",
+      "ônibus interestadual",
+      "passagem gratuita",
+      "gratuidade",
+      "acompanhante",
+      "credencial"
+    ],
+    "fonte_nome": "gov.br: Obter Passe Livre Interestadual Digital (ANTT)",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a ANTT, pela Lei 8.899/1994. A renda exigida é de até 1 salário mínimo por pessoa da família, e a triagem só pergunta faixas até meio salário mínimo: confira pelo Cadastro Único. Vale para viagens entre estados, não para ônibus da cidade.",
+    "atalhos": [
+      "deslocamento"
+    ]
+  },
+  {
+    "id": "isencao-ipi-iof-carro",
+    "tipo": "direito",
+    "titulo": "Isenção de IPI e IOF na compra do carro",
+    "resumo": "Desconto de impostos federais na compra de carro novo para pessoa com deficiência física, visual, mental severa ou profunda, ou autista, mesmo menor de 18 anos ou sem carteira de motorista. O IOF do financiamento só é isento para deficiência física que impede dirigir carro comum. O pedido é feito no sistema SISEN da Receita Federal, com a conta gov.br.",
+    "publico": [
+      "pessoa com deficiência",
+      "pessoa com autismo"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        },
+        {
+          "campo": "p_transporte",
+          "em": [
+            "carro"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_necessidade",
+          "em": [
+            "mobilidade",
+            "visual",
+            "intelectual_neurodesenvolvimento"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Conta gov.br (bronze, prata ou ouro) de quem pede, ou do representante legal",
+      "Laudo de avaliação no modelo da Receita (Instrução Normativa RFB 1.769/2017), emitido pelo Detran ou por entidade conveniada ao SUS. Para o IOF, só vale o laudo do Detran do estado onde a pessoa mora",
+      "Para deficiência física: carteira de motorista com restrição compatível, se a pessoa dirige",
+      "Se a pessoa não dirige: dados de pelo menos 1 condutor habilitado",
+      "Representante legal: CPF da pessoa representada e o da mãe dela, e o número do processo de curatela, se houver"
+    ],
+    "onde": {
+      "texto": "No SISEN, o Sistema de Concessão Eletrônica de Isenção de IPI/IOF da Receita Federal, pela internet, com a conta gov.br.",
+      "link": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/perguntas-frequentes/isencao-para-compra-de-carro"
+    },
+    "prazo_tipico": "O resultado fica disponível no SISEN 72 horas depois do envio. Se demorar mais, o pedido pode ter caído em análise e a Receita pode pedir documentos.",
+    "passos": [
+      "Consiga o laudo de avaliação. Ele precisa ter a assinatura de pelo menos um médico, de um psicólogo nos casos de deficiência mental ou autismo, e do responsável pela unidade, todos da mesma entidade e cadastrados no CNES.",
+      "Deficiência física e carteira de motorista sem restrição: antes de pedir, faça a perícia do Detran para reavaliar a capacidade de dirigir.",
+      "Entre no SISEN com a conta gov.br. Representante legal escolhe \"Desejo exercer o papel de representante legal\".",
+      "Preencha o requerimento, anexe o laudo em PDF de até 2 MB (ou use o laudo eletrônico, se a unidade de saúde emitir) e envie.",
+      "Veja o resultado no SISEN depois de 72 horas.",
+      "A isenção de IPI pode ser usada de novo a cada 3 anos, contados da nota fiscal da compra anterior. A de IOF, uma vez só. Vender o carro a quem não tem isenção antes de 2 anos (IPI) ou 3 anos (IOF) obriga a pagar o imposto."
+    ],
+    "se_negarem": [
+      "Veja o motivo no SISEN. Muitas vezes dá para corrigir o problema e fazer um novo pedido.",
+      "Para recorrer, apresente recurso no próprio SISEN em até 10 dias depois de saber da decisão, com documentos e explicações.",
+      "Se o recurso for negado, é possível recorrer de novo em até 10 dias.",
+      "Problemas no sistema: entre em contato com a Receita Federal pelo Fale Conosco ou agende atendimento numa unidade."
+    ],
+    "requisitos_laudo": [
+      "No modelo da Instrução Normativa RFB 1.769/2017",
+      "Assinado por pelo menos um médico responsável pelo exame",
+      "Deficiência mental ou autismo: também assinado por um psicólogo",
+      "Assinado pelo responsável pela unidade emissora, todos da mesma unidade e cadastrados no CNES",
+      "Com o CID completo (1 letra e 2 ou 3 números)"
+    ],
+    "perguntas_exemplo": [
+      "Pessoa com deficiência tem desconto para comprar carro?",
+      "Autista tem isenção de IPI na compra do carro?",
+      "Quem não dirige pode comprar carro com isenção?",
+      "Como peço isenção de IPI para carro adaptado?"
+    ],
+    "palavras_chave": [
+      "isenção",
+      "ipi",
+      "iof",
+      "carro",
+      "carro adaptado",
+      "compra de carro",
+      "sisen",
+      "receita federal",
+      "laudo",
+      "autismo",
+      "cnh"
+    ],
+    "fonte_nome": "Receita Federal: perguntas frequentes sobre isenção para compra de carro",
+    "fonte_url": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/perguntas-frequentes/isencao-para-compra-de-carro",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a Receita Federal, pelas Leis 8.989/1995 (IPI) e 8.383/1991 (IOF). Visão monocular sozinha não dá isenção de IPI. Esta ficha não trata do IPVA nem do ICMS, que são do estado.",
+    "atalhos": [
+      "dirigir"
+    ]
   }
 ]

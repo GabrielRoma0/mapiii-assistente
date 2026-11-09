@@ -35,7 +35,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **Atende+ (`atende-mais`): na base em 09/11**, montado com os prints da SPTrans e o regulamento do serviço (PDF de nov/2017 enviado pelo Thor). Lei 16.337/2015 na `base_legal` e o PDF do regulamento como fonte (09/11). Opcional: a página "Cadastre-se no Atende+" para conferir os documentos.
 
-**Próximas fichas da H1, nesta ordem:** táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
+**Passe Livre Interestadual e isenção de IPI/IOF do carro: na base em 09/11**, com o texto do gov.br e da Receita baixado pelo Claude Code (em `docs/fontes/`). Falta o Thor conferir com prints.
+
+**Próximas fichas da H1, nesta ordem:** táxi acessível, vaga especial e cartão de estacionamento, CNH especial (DETRAN-SP não abre daqui), conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
@@ -111,7 +113,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 3 fichas em 09/11** (Bilhete Único Especial, BPC e Atende+) | Thor | **9/11** | nada: começar já |
+| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 5 fichas em 09/11** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual e isenção de IPI/IOF) | Thor | **9/11** | nada: começar já |
 | **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
