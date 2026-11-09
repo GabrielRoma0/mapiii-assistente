@@ -33,9 +33,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **BPC (`bpc-pcd`): fechado em 09/11.** Texto do gov.br e do INSS baixado pelo Claude Code e conferido por print do Thor (`docs/fontes/bpc-pcd/`); `base_legal` com a Lei 8.742/1993 e `modelo_recurso` no "Me negaram". A pergunta `p_renda` agora é em faixas (até 1/4, até 1/2, mais de 1/2, não sei).
 
-**Atende+: começado em 09/11.** Prints em `docs/fontes/atende/` (o que é, público, horário, postos) e a Lei 16.337/2015 achada no catálogo. Ainda fora da base: faltam documentos, prazo e "se negarem" (páginas "Cadastre-se no Atende+", "Conheça os requisitos" e o regulamento, que abrem sem login) e o print da lei.
+**Atende+ (`atende-mais`): na base em 09/11**, montado com os prints da SPTrans e o regulamento do serviço (PDF de nov/2017 enviado pelo Thor). Falta: print da Lei 16.337/2015 (para `base_legal`), o endereço do PDF do regulamento e, se existir, a página "Cadastre-se no Atende+" para conferir os documentos.
 
-**Próximas fichas da H1, nesta ordem:** (Atende+ em andamento), táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
+**Próximas fichas da H1, nesta ordem:** táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
@@ -111,7 +111,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 2 fichas completas em 09/11** (Bilhete Único Especial e BPC) | Thor | **9/11** | nada: começar já |
+| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 3 fichas em 09/11** (Bilhete Único Especial, BPC e Atende+) | Thor | **9/11** | nada: começar já |
 | **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |

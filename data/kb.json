@@ -209,5 +209,104 @@
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
     "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda precisa ser de até 1/4 do salário mínimo por pessoa, calculada com o Cadastro Único. Para a lei, a família é quem pede, o cônjuge ou companheiro, os pais (ou a madrasta ou o padrasto), os irmãos solteiros, os filhos e enteados solteiros e os menores tutelados, desde que morem na mesma casa. A deficiência precisa durar ao menos 2 anos."
+  },
+  {
+    "id": "atende-mais",
+    "tipo": "servico",
+    "titulo": "Atende+: transporte porta a porta gratuito da Prefeitura",
+    "resumo": "Van ou táxi adaptado que busca em casa e leva ao compromisso, de graça, para pessoas com deficiência física de alto grau de severidade e dependência, autismo ou surdocegueira, que não conseguem usar ônibus, metrô e trem sozinhas. Só para quem é cadastrado na SPTrans, com viagens agendadas, dentro da cidade de São Paulo.",
+    "publico": [
+      "pessoa com deficiência física",
+      "pessoa com autismo",
+      "pessoa com surdocegueira"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_equipamento",
+          "em": [
+            "sim"
+          ]
+        },
+        {
+          "campo": "p_necessidade",
+          "em": [
+            "intelectual_neurodesenvolvimento"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Ficha de Avaliação Médica (FAM) do Atende, preenchida por completo, sem rasuras, carimbada, assinada e datada pelo médico",
+      "RG, CPF ou certidão de nascimento, original e cópia simples",
+      "Comprovante de residência atualizado, com CEP",
+      "Exames que comprovem a deficiência, se for o caso. Para surdocegueira: audiometria ou BERA",
+      "Se já souber: nome e endereço da instituição, dias e horários dos compromissos, para a programação das viagens"
+    ],
+    "onde": {
+      "texto": "Num posto de atendimento da SPTrans: nas unidades Descomplica SP, com agendamento no site do Descomplica, ou no Posto Central (Rua Boa Vista, 274, mezanino, Centro), sem agendamento, das 8h às 17h, de segunda a sexta, exceto feriados. Informações pela Central 156.",
+      "link": "https://www.sptrans.com.br/encontrar-posto"
+    },
+    "prazo_tipico": "A SPTrans comunica o resultado do cadastro em até 30 dias. Depois, a viagem depende de vaga nas rotas: não há prazo, não segue a ordem de inscrição e o encaixe é refeito todo mês.",
+    "passos": [
+      "Num posto de atendimento da SPTrans ou pela Central 156, peça a Ficha de Avaliação Médica. Ela também pode ser impressa no site da SPTrans.",
+      "Leve a ficha ao médico que acompanha a pessoa. Autismo: médico e equipe multiprofissional. Surdocegueira: otorrinolaringologista e oftalmologista. Ficha assinada só por terapeuta não é aceita.",
+      "Entregue a ficha e os documentos num posto. Se já tiver, informe a instituição, os dias e os horários dos compromissos.",
+      "Espere o resultado em até 30 dias. Se não chegar, ligue para a Central 156.",
+      "Com o cadastro feito, a pessoa espera vaga. No começo de cada mês, um dia útil antes da viagem, ligue para a Central 156 ou consulte o site da SPTrans para saber os dias, os horários e o veículo.",
+      "Viagens com compromisso das 7h às 20h, de segunda a domingo, exceto feriados: uma ida e volta por dia, até 6 por semana. Viagem eventual, só para consultas e exames médicos: uma por mês, agendada pela Central 156 com pelo menos 20 dias de antecedência.",
+      "Para cancelar, ligue para a Central 156 com pelo menos 1 dia de antecedência e anote o protocolo. Falta sem aviso precisa ser justificada em até 10 dias; 2 faltas sem justificativa em 30 dias suspendem o atendimento por 1 mês.",
+      "Acompanhante: obrigatório para autismo e surdocegueira; na deficiência física, quando o médico indicar na ficha. Só um, com 18 anos ou mais e documento com foto.",
+      "No dia, esteja pronto no horário: o motorista espera até 5 minutos. Se o veículo atrasar mais de 10 minutos, avise na hora a Central 156.",
+      "Autismo: a ficha médica é renovada todo ano, e a renovação pode ser pedida a partir de 60 dias antes do vencimento."
+    ],
+    "se_negarem": [
+      "Se não receber o resultado em 30 dias depois da inscrição, ligue para a Central 156 ou consulte o site da SPTrans.",
+      "Confira a Ficha de Avaliação Médica: ela precisa estar completa, sem rasuras, com carimbo, assinatura e data do médico. Se houver dúvida sobre o perfil, a SPTrans pode chamar para uma auditoria médica.",
+      "Para tirar dúvidas ou reclamar, use a Central 156, das 5h às 23h, todos os dias, ou um posto de atendimento da SPTrans. Anote sempre o número de protocolo."
+    ],
+    "requisitos_laudo": [
+      "Feito na Ficha de Avaliação Médica do Atende, preenchida por completo e sem rasuras",
+      "Carimbo, assinatura, data e registro do médico no CRM ou no CREMESP",
+      "Autismo: preenchida pelo médico com a equipe multiprofissional",
+      "Surdocegueira: preenchida pelo otorrinolaringologista e pelo oftalmologista, com audiometria ou BERA",
+      "Deficiência física: o médico indica na ficha se a pessoa precisa de acompanhante"
+    ],
+    "perguntas_exemplo": [
+      "Como peço a van do Atende para o meu filho cadeirante?",
+      "Existe transporte porta a porta gratuito para autista em São Paulo?",
+      "Quais documentos preciso para o Atende+?",
+      "Quanto tempo demora para começar a usar o Atende?"
+    ],
+    "palavras_chave": [
+      "atende",
+      "atende+",
+      "serviço de atendimento especial",
+      "van adaptada",
+      "porta a porta",
+      "transporte adaptado",
+      "sptrans",
+      "ficha de avaliação médica",
+      "autismo",
+      "surdocegueira",
+      "cadeira de rodas"
+    ],
+    "fonte_nome": "SPTrans: Atende+ (página do serviço e regulamento)",
+    "fonte_url": "https://www.sptrans.com.br/atende/sobre-o-atende",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu cadastro nem decido por você. Quem analisa é a SPTrans, pela Lei Municipal 16.337/2015 e pelo regulamento do Atende+ (a versão que conferimos é de novembro de 2017). Ter cadastro não garante viagem: depende de vaga nas rotas. Origem e destino precisam ficar dentro da cidade de São Paulo.",
+    "atalhos": [
+      "deslocamento"
+    ]
   }
 ]
