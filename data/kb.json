@@ -111,5 +111,89 @@
     "atalhos": [
       "deslocamento"
     ]
+  },
+  {
+    "id": "bpc-pcd",
+    "tipo": "direito",
+    "titulo": "BPC: Benefício de Prestação Continuada para a pessoa com deficiência",
+    "resumo": "Um salário mínimo por mês para a pessoa com deficiência de família de baixa renda: a renda por pessoa da família precisa ser de até 1/4 do salário mínimo, calculada com o Cadastro Único. Não precisa ter contribuído para o INSS. O pedido é feito pelo Meu INSS, sem ir a uma agência.",
+    "publico": [
+      "pessoa com deficiência",
+      "família de baixa renda"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "beneficio_financeiro"
+          ]
+        },
+        {
+          "campo": "p_renda",
+          "em": [
+            "sim"
+          ]
+        }
+      ],
+      "nenhuma": [
+        {
+          "campo": "p_beneficios",
+          "em": [
+            "bpc"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Documento de identificação (RG, CIN, CNH ou carteira de trabalho) e CPF da pessoa com deficiência e de todas as pessoas da família que moram na mesma casa",
+      "Documentos que comprovem a deficiência, como atestados médicos e exames",
+      "Se houver procurador ou representante legal: documento com foto e CPF dele, e a procuração (modelo do INSS ou pública) ou o termo de tutela, curatela ou guarda",
+      "No dia da perícia médica: documento de identificação com foto, em qualquer idade"
+    ],
+    "onde": {
+      "texto": "Pelo Meu INSS, no site ou no aplicativo, com a conta gov.br. Se o sistema estiver fora do ar, pelo telefone 135.",
+      "link": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-a-pessoa-com-deficiencia"
+    },
+    "prazo_tipico": "Pelo gov.br, a resposta sai em média em 45 dias corridos, e é vista no Meu INSS, em Consultar Pedidos.",
+    "passos": [
+      "Faça ou atualize o Cadastro Único da família no CRAS. Ele precisa ter sido feito ou atualizado nos últimos 2 anos e ter o CPF de todas as pessoas da casa.",
+      "Entre no Meu INSS com a conta gov.br, escolha Novo pedido (ou escreva \"assistencial\" em \"Do que você precisa?\") e selecione Benefício Assistencial à pessoa com deficiência.",
+      "Siga as etapas até o fim. Deixe o e-mail e o celular atualizados no Meu INSS para receber os avisos.",
+      "Acompanhe em Consultar Pedidos. O INSS avisa quando precisar de atendimento presencial.",
+      "A deficiência é analisada numa avaliação social e numa perícia médica do INSS. A própria pessoa com deficiência precisa ir, com documento com foto, mesmo quando outra pessoa fez o pedido como procuradora.",
+      "O BPC não paga 13º salário, não deixa pensão por morte e não pode ser somado a aposentadoria, pensão ou seguro-desemprego.",
+      "Se a pessoa começar a trabalhar, o BPC para enquanto ela trabalha. Se o salário for de até 2 salários mínimos, ela pode pedir o Auxílio-Inclusão. Aprendiz com deficiência pode receber os dois por até 2 anos."
+    ],
+    "se_negarem": [
+      "Veja o motivo da decisão no Meu INSS, em Consultar Pedidos.",
+      "Quem discorda pode recorrer em até 30 dias depois de saber do resultado. No Meu INSS, procure \"recurso\" e escolha Recurso Ordinário (Inicial).",
+      "Escreva no recurso os motivos de discordar da decisão e junte documentos que mostrem isso, como laudos e exames novos.",
+      "Acompanhe o recurso no Meu INSS, em Recurso, Consultar Andamento. Dúvidas: telefone 135, de segunda a sábado, das 7h às 22h."
+    ],
+    "perguntas_exemplo": [
+      "Como peço o BPC para o meu filho com deficiência?",
+      "Quem tem deficiência e é de baixa renda recebe algum salário do governo?",
+      "Precisa ter contribuído para o INSS para receber o BPC?",
+      "O INSS negou o BPC, o que eu faço?"
+    ],
+    "palavras_chave": [
+      "bpc",
+      "loas",
+      "benefício de prestação continuada",
+      "benefício assistencial",
+      "salário mínimo",
+      "inss",
+      "meu inss",
+      "baixa renda",
+      "cadastro único",
+      "perícia"
+    ],
+    "fonte_nome": "INSS: Benefício assistencial à pessoa com deficiência (BPC-Loas)",
+    "fonte_url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-com-deficiencia-bpc-loas",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda conta toda a família que mora na casa e precisa ser de até 1/4 do salário mínimo por pessoa; a pergunta da triagem fala em meio salário mínimo, então confira a conta com o Cadastro Único. A deficiência precisa durar ao menos 2 anos."
   }
 ]

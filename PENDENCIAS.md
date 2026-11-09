@@ -31,7 +31,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 3. ~~Link oficial da lei ou das portarias~~ **Feito 09/11:** `base_legal` com a Lei Municipal 11.250/1992 e a Portaria SMT.GAB 50/2019 (catálogo de legislação da Prefeitura, prints em `docs/fontes/`) e `frase_motorista`. A ficha já aparece em "Mostre ao motorista".
 4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão). O `modelo_recurso` ("Me negaram") espera a **H2**: precisa do canal oficial de reclamação da SPTrans para o campo "para".
 
-**Próximas fichas da H1, nesta ordem:** BPC (gov.br/INSS), Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
+**BPC (`bpc-pcd`): rascunho no `main` em 09/11**, montado pelo Claude Code com o texto do gov.br e do INSS (em `docs/fontes/bpc-pcd/`). Falta o Thor: abrir as 3 páginas e tirar prints; print do art. 20 da Lei 8.742/1993 no Planalto (para `base_legal` e o modelo de recurso); decidir a pergunta `p_renda` (a triagem fala em meio salário mínimo, o BPC exige até 1/4).
+
+**Próximas fichas da H1, nesta ordem:** Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
@@ -107,7 +109,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 1 ficha em 09/11** (Bilhete Único Especial) | Thor | **9/11** | nada: começar já |
+| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 2 fichas em 09/11** (Bilhete Único Especial e BPC) | Thor | **9/11** | nada: começar já |
 | **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
