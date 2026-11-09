@@ -1,1 +1,84 @@
-[]
+[
+  {
+    "id": "bilhete-unico-especial-pcd",
+    "tipo": "direito",
+    "titulo": "Bilhete Único Especial da Pessoa com Deficiência",
+    "resumo": "Cartão da SPTrans para pessoas com deficiência que moram na cidade de São Paulo, na Região Metropolitana, em Campo Limpo Paulista, Várzea Paulista ou Jundiaí. O pedido é feito com um formulário preenchido pelo médico.",
+    "publico": [
+      "pessoa com deficiência"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_necessidade",
+          "em": [
+            "mobilidade",
+            "visual",
+            "auditiva",
+            "intelectual_neurodesenvolvimento",
+            "outra"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Formulário de solicitação preenchido pelo médico: o Formulário Específico de Solicitação ou, para deficiência permanente, o Formulário oficial para emissão de laudo médico",
+      "Exames e documentos indicados para a patologia, conforme a relação da SPTrans"
+    ],
+    "onde": {
+      "texto": "Envie as cópias digitalizadas pelo Site de Atendimento da SPTrans ou leve a documentação a um posto de atendimento do Bilhete Único Especial.",
+      "link": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/"
+    },
+    "prazo_tipico": "A página da SPTrans não informa o prazo. A SPTrans avisa o andamento por e-mail e pelo Site de Atendimento.",
+    "passos": [
+      "Confira na relação da SPTrans se a patologia está na lista e quais exames e documentos ela pede.",
+      "Entre no Site de Atendimento e imprima o formulário. Se não conseguir imprimir, a pessoa pode ir a um posto de atendimento do Bilhete Único Especial para retirar o formulário e tirar a foto do cadastro (só com a presença dela).",
+      "Leve o formulário ao médico na consulta. Ele preenche, assina e carimba.",
+      "Envie o formulário e os exames pelo Site de Atendimento ou leve a um posto de atendimento.",
+      "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado."
+    ],
+    "se_negarem": [
+      "Veja o motivo nas mensagens da SPTrans, por e-mail ou no Site de Atendimento.",
+      "Tire dúvidas nas Perguntas e Respostas da SPTrans ou num posto de atendimento do Bilhete Único Especial."
+    ],
+    "requisitos_laudo": [
+      "Dados da unidade de saúde ou consultório",
+      "Identificação da patologia pelo CID-10",
+      "Limitações e sequelas causadas pela patologia",
+      "Assinatura do médico, carimbo, CRM e data de preenchimento",
+      "Assinatura de quem pede",
+      "O Formulário Específico de Solicitação vale por 90 dias; o Formulário para Laudo Permanente não tem validade"
+    ],
+    "perguntas_exemplo": [
+      "Como peço o Bilhete Único Especial?",
+      "Cadeirante paga ônibus em São Paulo?",
+      "Quais documentos preciso para o bilhete da pessoa com deficiência?",
+      "Onde pego o formulário do bilhete especial?"
+    ],
+    "palavras_chave": [
+      "bilhete único especial",
+      "bilhete especial",
+      "pessoa com deficiência",
+      "sptrans",
+      "formulário médico",
+      "ônibus"
+    ],
+    "fonte_nome": "SPTrans: Bilhete Único Especial da Pessoa com Deficiência",
+    "fonte_url": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans. A lista de patologias aceitas e os exames de cada uma estão no site da SPTrans.",
+    "atalhos": [
+      "deslocamento"
+    ]
+  }
+]
