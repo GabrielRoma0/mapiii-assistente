@@ -88,6 +88,9 @@ Motion graphics de lançamento de produto, com a identidade do design system Map
 - **Palavras entram no ritmo da fala**, de 4 a 6 quadros entre uma e outra nos títulos. Letra por letra só dentro da tela do app (campo de texto), nunca nos títulos.
 - **No máximo uma mola visível no vídeo inteiro**, e mesmo assim pequena (passar só um pouco do lugar e voltar).
 - **O final fica parado no máximo 1,4 s** e termina menor e mais calmo do que começou. O 1 s de silêncio da cena 18 cabe nisso.
+- **Ondas de energia (obrigatório).** O vídeo alterna três intensidades, nunca a mesma por muito tempo: **explosiva** (gancho, cenas 1 a 4; logo, cena 6), **fluida** (o app, cenas 7 a 11; escala, cena 15) e **calma, para ler** (número da cena 4 depois que para; cena 12; slogan da cena 17; fecho da cena 18).
+- **Câmera que reage ao impacto (obrigatório).** Depois de um impacto, a cena inteira faz um balanço curto na direção do impacto e assenta: 4 a 8 px, de 6 a 10 quadros, sem tremer. Usar só nos impactos de verdade: o ônibus freando (cena 1), o número parando (cenas 4 e 12), o círculo cobrindo a tela (cena 6), o celular terminando o giro (cena 9) e a rampa tocando a calçada (cena 18). Em nenhum outro lugar.
+- **Linha de rota (obrigatório).** Um fio condutor no estilo de mapa liga as cenas animadas: uma linha tracejada Dusty Grape `#4A4E69` (traço de 6 px, tracejado de 18/14 px), que se desenha de uma cena para a outra e puxa a cena seguinte, como um caminho num mapa. Ela nasce do pino do logo (cena 6), passa pelo celular da triagem (7), pelo selo de fonte (8), pelo celular virado (9), pelo bolso com o aviso (10), pelos números (12) e pelos tópicos (13), e termina no pino do Mapi em São Paulo, no mapa-múndi (cena 15), que acende quando ela chega. Regras: nunca fica parada no mesmo lugar por mais de uma cena, nunca passa por cima de texto ou do Mapi, some nas cenas de câmera e volta depois, e é sempre fina e discreta (o foco é o conteúdo, não a linha).
 - **O que estas regras não mudam:** o aviso de protótipo, o selo VISÃO DE FUTURO, o relógio, os números com fonte e o fundo sólido continuam obrigatórios, mesmo que guias de motion graphics recomendem tirar textos dos cantos ou usar fundos com textura.
 
 ## 4. Roteiro: as 18 cenas
@@ -206,7 +209,9 @@ O Claude Code também pode gravar as telas no computador com o Playwright, na pr
 - Até a cena 5: **só voz e efeitos**. Da cena 6 em diante, uma trilha bem baixa.
 - Efeitos: toque seco, whoosh, pop, tique, ding, notificação, papel rasgando, freio e porta de ônibus, rampa descendo.
 - **Onde buscar:** efeitos no Openverse (licença CC0 de preferência, ou CC BY com crédito). Trilha no Openverse (CC0) ou na Biblioteca de Áudio do YouTube com o filtro "não exige atribuição". Anotar faixa, autor, link e licença em `video/sons/CREDITOS.txt`.
-- Níveis: locução normalizada em −16 LUFS; trilha por volta de −28 a −30 LUFS sob a voz, abaixando sozinha quando há fala. Pode subir um pouco só nas cenas 6, 12 e 17.
+- **Hierarquia (obrigatório):** os sons importantes se destacam porque os outros são discretos. Fortes só no ônibus (cena 1), no círculo do logo (6), no giro do celular (9), nos números (12) e na rampa (18). O resto (toques, tiques, pops) fica baixo.
+- **Níveis (obrigatório):** a música fica pelo menos **12 dB abaixo da voz** quando há fala, abaixando sozinha. Mistura final em **−14 LUFS** integrado e pico real de no máximo **−1 dBTP** (padrão do YouTube). Pode subir um pouco só nas cenas 6, 12 e 17.
+- **Conferir (obrigatório):** ouvir no alto-falante do celular e em mono. A voz tem que ser entendida nos dois.
 - Terminar com 1 s de silêncio.
 
 ## 9. Montagem no Remotion
@@ -232,6 +237,7 @@ VISUAL
 - Mapi 3D de video/mapi-3d/: sobe suave, flutua de leve, sombra em elipse sólida embaixo. Sem quique e sem deformar.
 - Câmera e app de video/remotion/public/ entram como vídeo, nas cenas indicadas.
 - Selo VISÃO DE FUTURO o tempo todo na cena 15. Aviso de protótipo no fecho.
+- Faça as ondas de energia, a câmera que reage ao impacto e a linha de rota exatamente como na seção 3.
 - Legenda completa queimada no vídeo, gerada da mesma transcrição, e também um .srt.
 
 SOM
@@ -242,6 +248,8 @@ REGRAS
 - Arredonde os valores de transform para 2 casas decimais.
 - Antes do render, tire um quadro de cada cena, olhe e corrija o que estiver cortado, sobreposto ou com contraste abaixo de 4,5:1.
 - Siga as "Regras de tempo" da seção 3. Confira com um script: nenhum trecho de animação com mais de 3 quadros seguidos parados (fora as pausas de propósito) e o final parado por no máximo 1,4 s. Diga os números encontrados.
+- Mixe como na seção 8: música 12 dB abaixo da voz, −14 LUFS integrado, pico de no máximo −1 dBTP. Meça e diga os números.
+- Revise cada cena como na seção 10 (notas de 1 a 10), com os defeitos encontrados, antes de dizer que terminou.
 - Render final em H.264 (CRF 12, 30 fps), áudio AAC 48 kHz, nome mapiii-pitch-gs2026.mp4. Diga onde ficou o arquivo.
 ```
 
@@ -251,7 +259,15 @@ REGRAS
 1. Peçam ao Claude Code para abrir o **Remotion Studio** e assistam inteiro, com som e sem som.
 2. Peçam os ajustes por escrito, um de cada vez: "a cena 4 está rápida", "o Mapi da cena 8 está em cima do texto".
 3. Confiram que nenhum texto ficou cortado ou em cima do Mapi.
-4. Só então peçam o render final.
+4. **Notas por cena (obrigatório).** Cada cena recebe uma nota de 1 a 10 em quatro pontos: **composição** (o olho sabe para onde ir?), **movimento** (tem intenção e peso?), **clareza** (a ideia é entendida num celular?) e **satisfação** (o movimento e o som dão gosto de ver?). Cena com nota abaixo de 9 em qualquer ponto é refeita. Anotar o defeito visto e o que foi corrigido; nota sem olhar o vídeo não vale.
+5. **Conferir os quadros em volta de cada impacto** (meio segundo antes e depois): é onde aparecem objetos atravessando, cortes errados e textos tremendo.
+6. **O teste final (obrigatório)**, com o vídeo no celular:
+   - Os primeiros 0,5 s prendem a atenção?
+   - Cada cena é entendida numa tela pequena, com e sem som?
+   - Dá para reconhecer o Mapiii (o Mapi, as cores, a linha de rota) antes de ler o nome?
+   - O final deixa a marca na memória?
+   Se alguma resposta for "não", corrigir antes de seguir.
+7. Só então peçam o render final.
 
 **Checklist do arquivo final**
 - [ ] 1920 × 1080, 30 qps, H.264 (MP4), áudio AAC 48 kHz e 192 kbps. Nome `mapiii-pitch-gs2026.mp4`.
@@ -264,6 +280,8 @@ REGRAS
 - [ ] Final parado por no máximo 1,4 s; nenhum trecho de animação parado sem motivo.
 - [ ] Assistido inteiro por quem **não** editou, com som e sem som (só pelas legendas).
 - [ ] Créditos dos sons conferidos em `video/sons/CREDITOS.txt`.
+- [ ] Mistura em −14 LUFS, pico de no máximo −1 dBTP, música 12 dB abaixo da voz; voz entendida no alto-falante do celular e em mono.
+- [ ] Todas as cenas com nota 9 ou mais nos quatro pontos, e o teste final respondido com "sim".
 
 ## 11. Legendas e audiodescrição
 
@@ -422,4 +440,5 @@ Contraste de pelo menos 4,5:1 em todo texto.
 
 - **Vídeo campeão da GS 2026.1** ("Vídeo Pitch ARGUS", analisado em 07/11): abre com uma história humana, mostra uma função de cada vez, pessoas reais na câmera, escala antes do fecho e frase final com o nome. Onde ele falhou e o Mapiii vai além: visual repetitivo e escuro, produto quase invisível, nenhuma evidência, legenda de uma palavra só.
 - **Guias "Como eu fiz o vídeo do Dorme" e "do Fatô"** (Marcos Levi, Levi Lab, material gratuito, levilab.site), lidos em 07/11. Aproveitados: narração com tempo por palavra e animação presa à palavra; uma ideia por cena; revisão no Remotion Studio antes do render; 2 a 4 ajustes; nada aleatório no código; quadro de cada cena conferido antes do render; número rolando com borrão; relógio no canto; lista descendo linha por linha; notificação descendo do topo; círculo cobrindo a tela no logo; números por extenso e sem reticências na locução. Não aproveitados: formato vertical e 60 qps, degradê e vidro (o design system proíbe), clone de voz (decisão da dupla), personagens novos (o Mapi é o único), a "virada" contando que o vídeo foi feito com IA, e "quanto custa por ano" (não temos número com fonte).
+- **Brief de produção de um anúncio conceitual do Duolingo** (em espanhol, enviado pelo Thor em 09/11). Aproveitados: ondas de energia, câmera que reage ao impacto, hierarquia e níveis de som (−14 LUFS, música 12 dB abaixo da voz), notas por cena com refação abaixo de 9, conferência em volta dos impactos, o teste final e a ideia do fio condutor, adaptada como linha de rota de mapa. Não aproveitados: mundo 3D no Blender, câmera única sem cortes, 60 qps, voz sintética, música original, versão vertical, brilhos, névoa e fundos com textura.
 - **Skill "motionmaxxing"** (Tejas Makwana, github.com/Tejashmakwana/motionmaxxing, licença Apache 2.0), lida em 08/11. Aproveitadas as regras de tempo medidas em 53 animações profissionais (seção 3). Não instalada: ela usa outra ferramenta de montagem (HTML no lugar do Remotion), a voz depende de uma chave paga, e a lista "nunca faça" dela proíbe coisas que o nosso vídeo é obrigado a ter (aviso de protótipo, selo, números com fonte) ou já decidiu (fundo sólido, os três cartões, o círculo no logo).
