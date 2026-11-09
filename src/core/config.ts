@@ -15,7 +15,7 @@ export const CONFIG = {
   canalOficialId: 'central-156' as string | null,
   // "Onde enviar" da Reclamação pronta: ids de fichas da base (tipo servico) com os canais de reclamação.
   // Só aparecem se a ficha tiver fonte oficial e verificada. Vazio: a parte fica desabilitada.
-  canaisReclamacaoIds: [] as string[],
+  canaisReclamacaoIds: ['reclamacao-onibus-sptrans', 'ouvidoria-sptrans'] as string[],
   entrada: {
     minCaracteres: 3,
     maxCaracteres: 300

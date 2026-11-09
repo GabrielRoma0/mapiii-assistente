@@ -14,7 +14,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ## Atualizações de 09/11, tarde (Thor, com o Claude Code): leia primeiro
 
-**H1 feita: a base tem 12 fichas (meta de 10 a 13 cumprida). H2 feita em parte (falta só o canal de reclamação da SPTrans).** O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
+**H1 e H2 feitas: a base tem 14 fichas.** As 2 últimas (reclamação de ônibus e Ouvidoria da SPTrans) usam 2 prints do Thor do site da SPTrans e o texto do SP156; os ids estão em `canaisReclamacaoIds`, o que liga o "Onde enviar" da Reclamação pronta. O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
 
 | Ficha | Tipo | Fonte (SP156) |
 |---|---|---|
@@ -28,7 +28,8 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 - **Conferência humana (opcional):** abrir cada link e ver se bate com a ficha. Print não é obrigatório.
 - **Táxi acessível:** a página da Prefeitura é de 2009 (só lista de telefones de empresas). Não serve como fonte; ficou de fora.
 - **CNH:** ficha `cnh-renovacao-pcd` (renovação, atalho "Quero dirigir") feita com 3 prints do Thor da página do Detran-SP, em `docs/fontes/cnh-renovacao-pcd/`. **A base tem 12 fichas.**
-- **Ainda por print:** canal de reclamação da SPTrans (`canaisReclamacaoIds` continua vazio).
+- **SPTrans (H2):** `reclamacao-onibus-sptrans` (SP156 serviço 976; o "Fale Conosco" e os "Contatos" da SPTrans, por print, mandam reclamações para o 156) e `ouvidoria-sptrans` (segunda instância, ouvidoria@sptrans.com.br). **A base tem 14 fichas.**
+- **Falta (opcional):** `modelo_recurso` do Bilhete Único (precisa de `base_legal` com link; o "para" agora pode ser a Ouvidoria da SPTrans) e `base_legal` nas fichas novas.
 - **`auditar-perguntas`** já falhava antes (perguntas sem uso); agora são 4 (`p_quem`, `p_faixa`, `p_laudo`, `p_subprefeitura`), porque `p_cidade` passou a ser usada. `npm run verificar` passa (303 testes) e o `eval` segue em 100%.
 - As fichas também alimentam o assistente em Python da disciplina de PCP (https://github.com/thorflk/citizen-assist-ai).
 
@@ -134,8 +135,8 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
 | ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 12 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156 e Ouvidoria). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
-| **H2** | Fichas dos **canais oficiais**: ~~Central 156~~ (feito 09/11, mais a Ouvidoria Geral do Município). **Falta: canal de reclamação da SPTrans** (por print, o site bloqueia), para ligar o "Onde enviar" da Reclamação pronta e o `modelo_recurso` do Bilhete Único | Thor | 10/11 | — |
-| **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito para as 12 fichas e o `canalOficialId` (09/11)**; falta `canaisReclamacaoIds` quando vier a ficha da SPTrans | Claude Code | junto com H1/H2 | H2 |
+| ~~**H2**~~ | ~~Fichas dos **canais oficiais**~~ **Feito 09/11:** Central 156, Ouvidoria Geral do Município, reclamação de ônibus (SPTrans pelo 156) e Ouvidoria da SPTrans. Opcional: `modelo_recurso` do Bilhete Único | Thor | 9/11 | — |
+| **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito 09/11:** 14 fichas, `canalOficialId` e `canaisReclamacaoIds` | Claude Code | — | — |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |

@@ -994,5 +994,153 @@
     "atalhos": [
       "dirigir"
     ]
+  },
+  {
+    "id": "reclamacao-onibus-sptrans",
+    "tipo": "servico",
+    "titulo": "Reclamar de motorista, cobrador ou fiscal de ônibus (SPTrans)",
+    "resumo": "Quem se sentiu desrespeitado ou ameaçado por motorista, cobrador ou fiscal de ônibus na cidade de São Paulo pode denunciar de graça pelo Portal SP156 ou pelo telefone 156. É o canal que a SPTrans indica para sugestões, informações e reclamações, 24 horas. A SPTrans analisa em até 20 dias.",
+    "publico": [
+      "qualquer pessoa",
+      "pessoa com deficiência",
+      "familiar ou responsável"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_transporte",
+          "em": [
+            "onibus"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Endereço onde aconteceu",
+      "Assunto (motivo da denúncia)",
+      "Data e horário (obrigatórios)",
+      "Cargo: motorista, cobrador ou fiscal",
+      "Linha do ônibus e sentido (o sentido vai no campo \"Descrição\")",
+      "Placa ou prefixo do ônibus (o prefixo é a sequência de números fixada em vários lugares do ônibus)",
+      "Relato detalhado do que aconteceu, no campo \"Descrição\"",
+      "Opcional: o número do Bilhete Único, que ajuda a SPTrans a analisar pelo sistema interno"
+    ],
+    "onde": {
+      "texto": "Pelo Portal SP156 (serviço \"Ônibus - Denunciar motorista, cobrador ou fiscal por atitude inadequada\") ou pelo telefone 156, 24 horas.",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=976"
+    },
+    "prazo_tipico": "Até 20 dias. Gratuito.",
+    "passos": [
+      "Entre no Portal SP156 com o login do SP156 ou do gov.br e abra o serviço de denúncia de motorista, cobrador ou fiscal. Ou ligue 156 e conte o que aconteceu.",
+      "Preencha os dados (linha, data, horário, prefixo, local) e descreva o que aconteceu. Anote o número de protocolo.",
+      "A equipe da SPTrans analisa. Acompanhe em \"Acompanhe Sua Solicitação\", no Portal SP156, ou pelo 156 com o protocolo.",
+      "Quando terminar, chega um aviso por e-mail ou mensagem no celular."
+    ],
+    "se_negarem": [
+      "Se não for resolvido no prazo, ou a resposta não for satisfatória, escreva para a Ouvidoria da SPTrans (ouvidoria@sptrans.com.br) com o número do protocolo do 156."
+    ],
+    "perguntas_exemplo": [
+      "O motorista não esperou a cadeira de rodas subir, onde eu reclamo?",
+      "Como denunciar motorista de ônibus que me tratou mal?",
+      "Qual o canal de reclamação da SPTrans?",
+      "O cobrador foi grosso comigo, posso reclamar?"
+    ],
+    "palavras_chave": [
+      "reclamar do ônibus",
+      "reclamação da sptrans",
+      "denunciar motorista",
+      "motorista de ônibus",
+      "cobrador",
+      "fiscal",
+      "tratou mal",
+      "desrespeito",
+      "prefixo"
+    ],
+    "fonte_nome": "Portal SP156: Ônibus - Denunciar motorista, cobrador ou fiscal por atitude inadequada",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=976",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não registro a denúncia por você. Quem analisa é a SPTrans. Este serviço trata da conduta de motorista, cobrador ou fiscal; o SP156 tem outros serviços para ônibus quebrado, manutenção do veículo e demora na linha. O Atende+ tem canais próprios de reclamação no SP156.",
+    "atalhos": [
+      "deslocamento"
+    ]
+  },
+  {
+    "id": "ouvidoria-sptrans",
+    "tipo": "servico",
+    "titulo": "Ouvidoria da SPTrans: quando a reclamação do ônibus não foi resolvida",
+    "resumo": "Segunda instância da SPTrans: só analisa casos já registrados antes na Central 156, no site de atendimento do Bilhete Único ou no do Atende+, que não foram resolvidos no prazo ou tiveram resposta insatisfatória. O pedido é por e-mail, gratuito, e a resposta vem em até 30 dias, prorrogáveis por mais 30.",
+    "publico": [
+      "qualquer pessoa"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "transporte"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_transporte",
+          "em": [
+            "onibus"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Número do protocolo da Central 156 (ou do site do Bilhete Único ou do Atende+)",
+      "Assunto e descrição da solicitação",
+      "Ocorrência com ônibus: data e horário, linha e sentido, prefixo (5 números fixados em vários lugares do ônibus) e local",
+      "Bilhete Único: a Ouvidoria pede nome completo, RG, CPF, data da solicitação ou número do bilhete e telefone",
+      "Atende+: nome completo da pessoa atendida e número da credencial"
+    ],
+    "onde": {
+      "texto": "Por e-mail, para ouvidoria@sptrans.com.br.",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4716"
+    },
+    "prazo_tipico": "Até 30 dias, prorrogáveis por mais 30. Gratuito.",
+    "passos": [
+      "Antes, registre o caso no 156 (ou no site do Bilhete Único ou do Atende+) e espere o prazo.",
+      "Se não resolveram, mande um e-mail para ouvidoria@sptrans.com.br com o protocolo e as informações do caso.",
+      "A Ouvidoria abre um processo SEI e manda o número para você acompanhar no Portal de Processos.",
+      "Se pedirem mais informações, responda em até 10 dias corridos. Sem resposta, o pedido é indeferido por falta de informação."
+    ],
+    "se_negarem": [
+      "Se o pedido for indeferido por falta de informação, mande de novo com todos os dados pedidos e o protocolo do 156.",
+      "Para serviços da Prefeitura em geral, também existe a Ouvidoria Geral do Município, pelo SP156."
+    ],
+    "perguntas_exemplo": [
+      "Reclamei da linha de ônibus no 156 e não resolveram, o que eu faço?",
+      "Qual o e-mail da ouvidoria da SPTrans?",
+      "A SPTrans não respondeu minha reclamação, onde eu recorro?"
+    ],
+    "palavras_chave": [
+      "ouvidoria da sptrans",
+      "ouvidoria sptrans",
+      "e-mail da sptrans",
+      "sptrans não respondeu",
+      "sptrans não resolveu",
+      "recorrer da sptrans",
+      "segunda instância"
+    ],
+    "fonte_nome": "Portal SP156: Ouvidoria da SPTrans",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4716",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não mando o e-mail por você nem vejo o seu processo. A Ouvidoria da SPTrans só atua em segunda instância: casos que não passaram antes pelo 156, pelo site do Bilhete Único ou pelo do Atende+ não são analisados."
   }
 ]
