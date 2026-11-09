@@ -911,5 +911,88 @@
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
     "limitacao": "Não registro a reclamação por você. A Ouvidoria é da Prefeitura de São Paulo: não cuida de INSS, Receita Federal, ANTT ou governo do estado. Reclamações sobre vaga em creche ou consulta médica pedem a identificação de quem reclama."
+  },
+  {
+    "id": "cnh-renovacao-pcd",
+    "tipo": "servico",
+    "titulo": "Renovar a CNH da pessoa com deficiência",
+    "resumo": "A renovação da CNH da pessoa com deficiência ou mobilidade reduzida segue os mesmos passos da CNH comum, com exames específicos conforme o caso. É feita presencialmente, com agendamento, numa unidade do Detran-SP ou num Poupatempo. Se o exame médico pedir para incluir, mudar ou tirar restrições médicas (de \"C\" a \"S\"), a pessoa passa por uma Junta Médica Especial e por um novo exame prático, que pode ser feito em carro adaptado próprio.",
+    "publico": [
+      "motorista com deficiência",
+      "motorista com mobilidade reduzida"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_transporte",
+          "em": [
+            "carro"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_necessidade",
+          "em": [
+            "mobilidade",
+            "auditiva",
+            "outra"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "CNH original (impressa ou digital), com foto e em situação regular: não pode estar suspensa, cassada ou com impedimento ativo",
+      "Comprovante de pagamento da taxa de emissão da CNH, se não constar no sistema",
+      "Se usar medicação controlada: laudo médico",
+      "Se for fazer o exame prático em carro adaptado próprio ou de terceiros: documentos do veículo e licenciamento (CRLV)",
+      "Categorias C, D ou E: exame toxicológico válido",
+      "Se mudar dados: RG atualizado (nome, sobrenome ou filiação), certidão da Receita Federal (número do CPF) ou certidão de nascimento ou casamento (filiação afetiva)"
+    ],
+    "onde": {
+      "texto": "Presencialmente, com agendamento prévio, na unidade do Detran-SP da região onde a CNH está registrada ou num posto Poupatempo. Quem pede é o próprio motorista.",
+      "link": "https://www.detran.sp.gov.br/detransp/pb/servico/habilitacao/renovar_cnh_para_pessoa_com_deficiencia_pcd?id=carta_de_servico_renovar_cnh_para_pessoa_com_deficiencia_pcd"
+    },
+    "prazo_tipico": "Depois da aprovação, a CNH Digital fica disponível no aplicativo CNH do Brasil em até 24 horas. A CNH física chega em até 3 dias úteis na capital e 4 no interior, contados da criação do código de rastreio dos Correios.",
+    "passos": [
+      "Peça a certidão de prontuário para conferir se há restrições ou bloqueios na CNH. Se houver irregularidade, regularize antes.",
+      "Categorias C, D ou E: faça o exame toxicológico, com validade de até 90 dias antes do exame médico.",
+      "Agende o atendimento pelo sistema do Detran-SP.",
+      "No atendimento, apresente os documentos e faça a coleta de digitais, foto e assinatura. Pode ser pedida prova sobre direção defensiva e primeiros socorros.",
+      "Faça o exame médico com médico credenciado pelo Detran-SP.",
+      "Se o exame pedir inclusão, mudança ou exclusão de restrições médicas (C a S): passe pela Junta Médica Especial e faça o exame prático, agendado online pelo Portal Detran-SP. Em carro particular adaptado, vá com uma pessoa habilitada e leve os exames, laudos e radiografias necessários.",
+      "Aprovado, a CNH Digital é gratuita. A CNH física é opcional e paga."
+    ],
+    "se_negarem": [
+      "Peça a certidão de prontuário e regularize o que estiver bloqueando a CNH antes de tentar de novo.",
+      "Acompanhe a emissão e a entrega pelo serviço \"Acompanhar Emissão da CNH ou PID e Rastreio pelos Correios\", no portal do Detran-SP."
+    ],
+    "perguntas_exemplo": [
+      "Como renovo a CNH de pessoa com deficiência?",
+      "Cadeirante precisa fazer prova de novo para renovar a carteira de motorista?",
+      "Quanto custa renovar a CNH especial no Detran?",
+      "Posso fazer o exame prático no meu carro adaptado?"
+    ],
+    "palavras_chave": [
+      "cnh",
+      "renovar cnh",
+      "renovação da cnh",
+      "carteira de motorista",
+      "habilitação",
+      "detran",
+      "junta médica especial",
+      "exame prático",
+      "restrição médica",
+      "carro adaptado"
+    ],
+    "fonte_nome": "Detran-SP: Renovar CNH para Pessoa com Deficiência (PcD)",
+    "fonte_url": "https://www.detran.sp.gov.br/detransp/pb/servico/habilitacao/renovar_cnh_para_pessoa_com_deficiencia_pcd?id=carta_de_servico_renovar_cnh_para_pessoa_com_deficiencia_pcd",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo a sua CNH nem decido por você. Quem analisa é o Detran-SP, com o médico credenciado e a Junta Médica Especial. Esta ficha trata só da renovação, não da primeira habilitação. Valores na página em 09/11/2026: exame médico R$ 90,00, avaliação psicológica R$ 90,00, Junta Médica Especial R$ 270,00, exame prático R$ 52,83 e CNH física R$ 137,79 com entrega. Confira no Detran-SP antes de pagar.",
+    "atalhos": [
+      "dirigir"
+    ]
   }
 ]

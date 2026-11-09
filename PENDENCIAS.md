@@ -27,7 +27,8 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 - **Conferência humana (opcional):** abrir cada link e ver se bate com a ficha. Print não é obrigatório.
 - **Táxi acessível:** a página da Prefeitura é de 2009 (só lista de telefones de empresas). Não serve como fonte; ficou de fora.
-- **Ainda por print (sites bloqueados ou só com JavaScript):** CNH para pessoa com deficiência (Detran-SP) e canal de reclamação da SPTrans (`canaisReclamacaoIds` continua vazio).
+- **CNH:** ficha `cnh-renovacao-pcd` (renovação, atalho "Quero dirigir") feita com 3 prints do Thor da página do Detran-SP, em `docs/fontes/cnh-renovacao-pcd/`. **A base tem 12 fichas.**
+- **Ainda por print:** canal de reclamação da SPTrans (`canaisReclamacaoIds` continua vazio).
 - **`auditar-perguntas`** já falhava antes (perguntas sem uso); agora são 4 (`p_quem`, `p_faixa`, `p_laudo`, `p_subprefeitura`), porque `p_cidade` passou a ser usada. `npm run verificar` passa (303 testes) e o `eval` segue em 100%.
 - As fichas também alimentam o assistente em Python da disciplina de PCP (https://github.com/thorflk/citizen-assist-ai).
 
