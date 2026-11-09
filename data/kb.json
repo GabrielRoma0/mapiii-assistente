@@ -48,7 +48,8 @@
       "Leve o formulário ao médico na consulta. Ele preenche, assina, carimba e data; quem pede também assina.",
       "Envie o formulário e os documentos pelo Site de Atendimento ou vá a um posto de atendimento. No posto, a própria pessoa com deficiência comparece com os documentos.",
       "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado.",
-      "Para usar a gratuidade, leve sempre o cartão, ativo. Mostre ao motorista, cobrador ou fiscal quando pedirem."
+      "Para usar a gratuidade, leve sempre o cartão, ativo. Mostre ao motorista, cobrador ou fiscal quando pedirem. O cartão é de uso pessoal: emprestar pode levar ao cancelamento.",
+      "Se quiser o nome social no cartão, peça no site de atendimento da SPTrans, em Meu Perfil, Meus Dados."
     ],
     "se_negarem": [
       "Veja o motivo nas mensagens da SPTrans, por e-mail ou no Site de Atendimento.",
@@ -82,7 +83,7 @@
     "fonte_url": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/",
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
-    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans, pelas regras da Lei Municipal 11.250/1992 e das Portarias SMT 50/2019, SMT/SMS 7/2020 e SMS 22/2024. A lista de patologias aceitas e os exames de cada uma estão na busca de CID da SPTrans.",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans, pelas regras da Lei Municipal 11.250/1992 e das Portarias SMT 50/2019, SMT/SMS 7/2020 e SMS 22/2024. A lista de patologias aceitas e os exames de cada uma estão na busca de CID da SPTrans. A validade do cartão depende do CID apresentado.",
     "atalhos": [
       "deslocamento"
     ]

@@ -15,3 +15,8 @@ Prints das páginas oficiais da SPTrans usadas na ficha `bilhete-unico-especial-
 | `2026-11-09-faq-prazo-de-entrega.png` | idem | Entrega em até 20 dias depois da aprovação |
 | `2026-11-09-faq-prazo-de-analise.png` | idem | Análise em até 20 dias; pode pedir documentos ou chamar para auditoria médica |
 | `2026-11-09-faq-gratuidade-cartao-em-maos.png` | idem | Gratuidade em ônibus, trem e metrô só com o cartão em mãos e ativo |
+| `2026-11-09-faq-validade-do-cartao.png` | idem | A validade do cartão depende do CID |
+| `2026-11-09-faq-como-saber-se-aprovado.png` | idem | Resultado por e-mail e no site de Atendimento Digital |
+| `2026-11-09-faq-reapresentacao.png` | idem | 60 minutos no mesmo ônibus; 30 minutos no metrô/trem |
+| `2026-11-09-faq-nome-social.png` | idem | Nome social pelo Decreto Municipal 58.228/2018, em sptrans.com.br/atendimento |
+| `2026-11-09-faq-uso-pessoal.png` | idem | Uso pessoal; uso por outra pessoa pode cancelar o cartão |
