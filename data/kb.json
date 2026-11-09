@@ -50,6 +50,8 @@
       "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado.",
       "Se o cartão não chegar em 20 dias depois da aprovação, avise pelo Site de Atendimento ou num posto. Ele é reenviado ou pode ser retirado no Posto Central (Rua Boa Vista, 274, mezanino, Centro), de segunda a sexta, das 8h às 17h, exceto feriados.",
       "Para usar a gratuidade, leve sempre o cartão, ativo. Mostre ao motorista, cobrador ou fiscal quando pedirem. O cartão é de uso pessoal: emprestar pode levar ao cancelamento.",
+      "Para renovar, envie a documentação pelo Site de Atendimento ou leve a um posto de atendimento, até 60 dias antes do vencimento. Quem tem deficiência permanente não precisa apresentar de novo exames, laudos e receitas: eles só são pedidos na primeira via.",
+      "O cartão é gratuito, inclusive a entrega e as vias adicionais.",
       "Se quiser o nome social no cartão, peça no site de atendimento da SPTrans, em Meu Perfil, Meus Dados.",
       "Estudante com deficiência: o pai, a mãe ou o responsável pode pedir o Acompanhante Cadastrado, para usar o cartão sem o titular só nos ônibus municipais, no trajeto entre a casa e a escola. A escola precisa estar cadastrada na SPTrans, a mais de 1 km de casa, com frequência de pelo menos 75%, comprovada a cada 180 dias.",
       "Criança ou adolescente em casa de acolhimento: um representante da instituição faz o pedido num posto, com a guia de acolhimento, o estatuto, a declaração da instituição e os documentos do acolhido e do representante."
@@ -87,7 +89,8 @@
       "Como peço o Bilhete Único Especial?",
       "Cadeirante paga ônibus em São Paulo?",
       "Quais documentos preciso para o bilhete da pessoa com deficiência?",
-      "Quanto tempo demora para o bilhete especial chegar?"
+      "Quanto tempo demora para o bilhete especial chegar?",
+      "Como renovo o Bilhete Único Especial?"
     ],
     "palavras_chave": [
       "bilhete único especial",
@@ -96,7 +99,9 @@
       "sptrans",
       "formulário médico",
       "busca de cid",
-      "ônibus"
+      "ônibus",
+      "renovar",
+      "segunda via"
     ],
     "fonte_nome": "SPTrans: Bilhete Único Especial da Pessoa com Deficiência",
     "fonte_url": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/",

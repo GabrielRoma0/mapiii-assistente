@@ -25,9 +25,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **Rede** | Ambiente de nuvem `mapiii-assistente` com os sites oficiais liberados (Prefeitura, legislação municipal, Planalto, gov.br, IBGE, ALESP). SPTrans e SP156 continuam recusando acesso automático |
 | **V4** | Microfone e alto-falante: não será feito agora (decisão do Thor) |
 
-**Falta na ficha do Bilhete Único Especial (perguntas das Perguntas e Respostas da SPTrans, por print):**
-1. "Qual o procedimento para renovar o Bilhete Único Especial da Pessoa com Deficiência?"
-2. "O Bilhete Único Especial Pessoa com Deficiência tem algum custo de entrega?" (serve também para `data/servicos-valores.json`)
+**Ficha do Bilhete Único Especial: fechada em 09/11** (só o `modelo_recurso` espera a H2):
+1. ~~Renovação~~ **Feito 09/11** (passo novo na ficha).
+2. ~~Custo de entrega~~ **Feito 09/11**: gratuito, também em `data/servicos-valores.json` (primeiro valor da H3).
 3. ~~Link oficial da lei ou das portarias~~ **Feito 09/11:** `base_legal` com a Lei Municipal 11.250/1992 e a Portaria SMT.GAB 50/2019 (catálogo de legislação da Prefeitura, prints em `docs/fontes/`) e `frase_motorista`. A ficha já aparece em "Mostre ao motorista".
 4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão). O `modelo_recurso` ("Me negaram") espera a **H2**: precisa do canal oficial de reclamação da SPTrans para o campo "para".
 

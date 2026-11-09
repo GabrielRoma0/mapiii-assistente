@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "bilhete-unico-especial-pcd-cartao",
+    "servico": "o Bilhete Único Especial da Pessoa com Deficiência (cartão, entrega e vias adicionais)",
+    "valor_oficial": 0,
+    "palavras_chave": [
+      "bilhete único especial",
+      "bilhete especial",
+      "segunda via do bilhete",
+      "entrega do bilhete",
+      "via adicional"
+    ],
+    "fonte_nome": "SPTrans: Perguntas e Respostas do Bilhete Único Especial da Pessoa com Deficiência",
+    "fonte_url": "https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-pcd",
+    "verificado_em": "2026-11-09",
+    "kb_id": "bilhete-unico-especial-pcd"
+  }
+]

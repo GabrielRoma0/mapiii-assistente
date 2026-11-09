@@ -28,10 +28,12 @@ Prints das páginas oficiais da SPTrans usadas na ficha `bilhete-unico-especial-
 | `2026-11-09-faq-textos-colados.md` | idem | Texto colado pelo Thor: casas de acolhimento e como preencher o formulário |
 | `2026-11-09-faq-casas-de-acolhimento.png` | idem | Print do mesmo texto: pedido para criança ou adolescente em casa de acolhimento |
 | `2026-11-09-faq-formulario-campos-obrigatorios.png` | idem | Print do mesmo texto: campos obrigatórios do formulário |
+| `2026-11-09-faq-renovacao.png` | https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-pcd | Renovação até 60 dias antes do vencimento; deficiência permanente não reapresenta exames e laudos |
+| `2026-11-09-faq-custo-de-entrega.png` | idem | Cartão, entrega e vias adicionais gratuitos (vai também em `data/servicos-valores.json`) |
 | `2026-11-09-lei-11250-1992.webp` | https://legislacao.prefeitura.sp.gov.br/lei-11250-de-1-de-outubro-de-1992 | Lei Municipal 11.250/1992, texto inteiro: isenção da tarifa (art. 1º) e entrada pela porta da frente ou pela adaptada (art. 3º, parágrafo único). Vai na `base_legal` e no QR do "Mostre ao motorista" |
 | `2026-11-09-portaria-smt-50-2019-cabecalho.webp` | https://legislacao.prefeitura.sp.gov.br/portaria-secretaria-municipal-de-mobilidade-e-transportes-smt-50-de-5-de-abril-de-2019 | Cabeçalho da Portaria SMT.GAB 050/2019 |
 | `2026-11-09-portaria-smt-50-2019-secao-v.webp` | idem | Começo da Seção V (Bilhete Único Especial da Pessoa com Deficiência): art. 29 (isenção tarifária integral) e art. 30. O resto da seção não foi fotografado e não é citado na ficha |
 
 Os links da lei e da portaria foram encontrados pelo Claude Code no catálogo de legislação da Prefeitura e conferidos pelo Thor no navegador em 09/11/2026 (prints acima).
 
-**Ainda não conferido na fonte:** renovação do cartão e custo de entrega. As Portarias SMT/SMS 7/2020 e SMS 22/2024 não foram buscadas: a ficha não depende delas.
+**Tudo o que a ficha usa foi conferido.** As Portarias SMT/SMS 7/2020 e SMS 22/2024 não foram buscadas: a ficha não depende delas.
