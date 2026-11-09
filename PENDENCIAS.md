@@ -14,7 +14,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ## Atualizações de 09/11, tarde (Thor, com o Claude Code): leia primeiro
 
-**H1 chegou a 11 fichas e a H2 foi feita em parte.** O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
+**H1 feita: a base tem 12 fichas (meta de 10 a 13 cumprida). H2 feita em parte (falta só o canal de reclamação da SPTrans).** O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
 
 | Ficha | Tipo | Fonte (SP156) |
 |---|---|---|
@@ -34,7 +34,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ## Atualizações de 09/11 (Thor): leia primeiro
 
-> **Para o Claude Code:** antes de responder "o que eu faço agora?", leia esta seção e o [video/README.md](video/README.md). O Thor está fazendo a **H1** (fichas) mandando prints das páginas oficiais, porque os sites da SPTrans e do SP156 não abrem para leitura automática (Cloudflare). Não tente contornar esse bloqueio.
+> **Para o Claude Code:** antes de responder "o que eu faço agora?", leia esta seção e o [video/README.md](video/README.md). A H1 foi fechada na tarde de 09/11 (seção acima). A SPTrans continua sem abrir para leitura automática (Cloudflare) e o Detran-SP só carrega com JavaScript: nesses, a fonte é por print do Thor. O SP156 passou a abrir. Não tente contornar bloqueio.
 
 **Feito:**
 
@@ -57,7 +57,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **Passe Livre Interestadual e isenção de IPI/IOF do carro: na base em 09/11**, com o texto do gov.br e da Receita baixado pelo Claude Code (em `docs/fontes/`). Os dois conferidos por print do Thor em 09/11.
 
-**Próximas fichas (todas por print do Thor, sites bloqueados ou sem a informação):** táxi acessível; vaga especial e cartão de estacionamento na capital (o DETRAN-SP não emite para a cidade de São Paulo, ver `docs/fontes/vaga-especial/`); CNH para pessoa com deficiência (o site do DETRAN-SP abre, mas não tem página sobre isso); conserto de calçada pelo SP156; H2 (Central 156 e canal de reclamação da SPTrans). Ambiente: liberados DETRAN-SP, CET e Poupatempo em 09/11. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
+~~**Próximas fichas**~~ **Feito na tarde de 09/11** (ver a seção do topo; táxi acessível ficou de fora por fonte de 2009): táxi acessível; vaga especial e cartão de estacionamento na capital (o DETRAN-SP não emite para a cidade de São Paulo, ver `docs/fontes/vaga-especial/`); CNH para pessoa com deficiência (o site do DETRAN-SP abre, mas não tem página sobre isso); conserto de calçada pelo SP156; H2 (Central 156 e canal de reclamação da SPTrans). Ambiente: liberados DETRAN-SP, CET e Poupatempo em 09/11. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
@@ -133,13 +133,13 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 5 fichas em 09/11** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual e isenção de IPI/IOF) | Thor | **9/11** | nada: começar já |
-| **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
-| **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
+| ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 12 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156 e Ouvidoria). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
+| **H2** | Fichas dos **canais oficiais**: ~~Central 156~~ (feito 09/11, mais a Ouvidoria Geral do Município). **Falta: canal de reclamação da SPTrans** (por print, o site bloqueia), para ligar o "Onde enviar" da Reclamação pronta e o `modelo_recurso` do Bilhete Único | Thor | 10/11 | — |
+| **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito para as 12 fichas e o `canalOficialId` (09/11)**; falta `canaisReclamacaoIds` quando vier a ficha da SPTrans | Claude Code | junto com H1/H2 | H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
-| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). Falta: fichas, decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (12 fichas no ar desde 09/11). Falta: decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
