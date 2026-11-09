@@ -274,6 +274,13 @@
       "Confira a Ficha de Avaliação Médica: ela precisa estar completa, sem rasuras, com carimbo, assinatura e data do médico. Se houver dúvida sobre o perfil, a SPTrans pode chamar para uma auditoria médica.",
       "Para tirar dúvidas ou reclamar, use a Central 156, das 5h às 23h, todos os dias, ou um posto de atendimento da SPTrans. Anote sempre o número de protocolo."
     ],
+    "base_legal": [
+      {
+        "norma": "Lei Municipal 16.337/2015",
+        "artigo": "arts. 1º, 4º e 5º",
+        "url": "https://legislacao.prefeitura.sp.gov.br/lei-16337-de-30-de-dezembro-de-2015"
+      }
+    ],
     "requisitos_laudo": [
       "Feito na Ficha de Avaliação Médica do Atende, preenchida por completo e sem rasuras",
       "Carimbo, assinatura, data e registro do médico no CRM ou no CREMESP",
@@ -300,8 +307,8 @@
       "surdocegueira",
       "cadeira de rodas"
     ],
-    "fonte_nome": "SPTrans: Atende+ (página do serviço e regulamento)",
-    "fonte_url": "https://www.sptrans.com.br/atende/sobre-o-atende",
+    "fonte_nome": "SPTrans: Regulamento do Serviço Atende (novembro de 2017)",
+    "fonte_url": "https://www.sptrans.com.br/media/1392/regulamento_atende-nov_17.pdf",
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
     "limitacao": "Não vejo o seu cadastro nem decido por você. Quem analisa é a SPTrans, pela Lei Municipal 16.337/2015 e pelo regulamento do Atende+ (a versão que conferimos é de novembro de 2017). Ter cadastro não garante viagem: depende de vaga nas rotas. Origem e destino precisam ficar dentro da cidade de São Paulo.",
