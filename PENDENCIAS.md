@@ -12,6 +12,25 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualizações de 09/11, tarde (Thor, com o Claude Code): leia primeiro
+
+**H1 chegou a 11 fichas e a H2 foi feita em parte.** O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
+
+| Ficha | Tipo | Fonte (SP156) |
+|---|---|---|
+| `cartao-defis-estacionamento` | direito, atalho "Quero dirigir" | serviço 3314 |
+| `calcada-publica-manutencao` | serviço, atalho "Calçada ruim?" | serviço 931 |
+| `calcada-particular-denuncia` | serviço, atalho "Calçada ruim?" | serviço 906 |
+| `calcada-obstaculo-acessibilidade` | serviço, atalho "Calçada ruim?" | serviço 2634 |
+| `central-156` | serviço (H2), agora é o `canalOficialId` em `src/core/config.ts` | Outros canais de atendimento |
+| `ouvidoria-geral-municipio` | serviço (H2) | serviço 2630 |
+
+- **Conferência humana (opcional):** abrir cada link e ver se bate com a ficha. Print não é obrigatório.
+- **Táxi acessível:** a página da Prefeitura é de 2009 (só lista de telefones de empresas). Não serve como fonte; ficou de fora.
+- **Ainda por print (sites bloqueados ou só com JavaScript):** CNH para pessoa com deficiência (Detran-SP) e canal de reclamação da SPTrans (`canaisReclamacaoIds` continua vazio).
+- **`auditar-perguntas`** já falhava antes (perguntas sem uso); agora são 4 (`p_quem`, `p_faixa`, `p_laudo`, `p_subprefeitura`), porque `p_cidade` passou a ser usada. `npm run verificar` passa (303 testes) e o `eval` segue em 100%.
+- As fichas também alimentam o assistente em Python da disciplina de PCP (https://github.com/thorflk/citizen-assist-ai).
+
 ## Atualizações de 09/11 (Thor): leia primeiro
 
 > **Para o Claude Code:** antes de responder "o que eu faço agora?", leia esta seção e o [video/README.md](video/README.md). O Thor está fazendo a **H1** (fichas) mandando prints das páginas oficiais, porque os sites da SPTrans e do SP156 não abrem para leitura automática (Cloudflare). Não tente contornar esse bloqueio.

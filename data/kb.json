@@ -502,5 +502,414 @@
     "atalhos": [
       "dirigir"
     ]
+  },
+  {
+    "id": "cartao-defis-estacionamento",
+    "tipo": "direito",
+    "titulo": "Cartão DeFis: vaga especial de estacionamento",
+    "resumo": "Autorização gratuita da Prefeitura para estacionar nas vagas com o Símbolo Internacional de Acesso, válida em todo o país. É para quem mora na cidade de São Paulo e tem deficiência que compromete a mobilidade, de forma permanente ou temporária. O pedido é feito pelo Portal SP156, e o cartão é impresso em casa, numa folha A4.",
+    "publico": [
+      "pessoa com deficiência física nos membros inferiores",
+      "pessoa com deficiência visual nos dois olhos",
+      "pessoa com mobilidade reduzida temporária",
+      "familiar ou responsável"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        }
+      ],
+      "alguma": [
+        {
+          "campo": "p_necessidade",
+          "em": [
+            "mobilidade",
+            "visual"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "RG, com data de expedição e órgão emissor",
+      "CPF",
+      "Comprovante de residência na cidade de São Paulo, do mês atual ou do anterior, em nome de quem pede ou do cônjuge (cópia simples ou digitalizado)",
+      "Se o comprovante estiver em nome do cônjuge: certidão de casamento",
+      "Se o comprovante estiver em nome do responsável por menor de idade ou por pessoa com deficiência intelectual: documento de guarda ou de curatela/interdição",
+      "Documento de identidade oficial com foto e assinatura",
+      "Atestado médico da deficiência temporária com redução da mobilidade, emitido há no máximo 3 meses, ou laudo da deficiência permanente"
+    ],
+    "onde": {
+      "texto": "Pelo Portal SP156, sem sair de casa. Também dá para pedir com apoio de um atendente do Descomplica Digital ou numa Praça de Atendimento das Subprefeituras, com agendamento pelo telefone 156.",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=3314"
+    },
+    "prazo_tipico": "Até 15 dias. O serviço é gratuito.",
+    "passos": [
+      "Entre no Portal SP156 e abra o serviço \"Cartão de estacionamento DeFis (pessoa com deficiência)\".",
+      "Complete o cadastro e leia e aceite o termo eletrônico.",
+      "Anexe o comprovante de residência, o documento de identificação e o atestado médico, e clique em finalizar.",
+      "Confira o e-mail: o número de protocolo chega por lá. Acompanhe pelo Portal SP156.",
+      "Se o pedido for aceito, vá em \"Minhas Solicitações\", ache o protocolo, clique em \"CLIQUE AQUI PARA IMPRIMIR O SEU CARTÃO\", confirme o CPF e imprima numa folha A4."
+    ],
+    "se_negarem": [
+      "Acompanhe o protocolo no Portal SP156 para ver o motivo e o que faltou.",
+      "Se o prazo vencer sem o serviço feito, ou se a solicitação for finalizada sem o serviço completo, registre uma reclamação na Ouvidoria Geral do Município, pelo Portal SP156 (serviço \"Reclamação\"), pela Central 156 ou numa Praça de Atendimento das Subprefeituras, informando o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "Como peço o cartão para estacionar na vaga de deficiente?",
+      "Cadeirante pode parar na vaga especial? Como consigo o cartão?",
+      "Quais documentos preciso para o cartão DeFis?",
+      "Quanto tempo demora o cartão de estacionamento da pessoa com deficiência?"
+    ],
+    "palavras_chave": [
+      "cartão defis",
+      "defis",
+      "vaga especial",
+      "vaga de deficiente",
+      "estacionamento",
+      "estacionar",
+      "cartão de estacionamento",
+      "símbolo internacional de acesso",
+      "zona azul"
+    ],
+    "fonte_nome": "Portal SP156: Cartão de estacionamento DeFis (pessoa com deficiência)",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=3314",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a Prefeitura (Secretaria Municipal de Mobilidade e Transporte e CET). Só uma solicitação por CPF. Nas vagas especiais de Zona Azul, além do DeFis é preciso usar o Cartão Azul Digital (CAD). A validade do cartão não está nesta ficha: confira no SP156.",
+    "atalhos": [
+      "dirigir"
+    ]
+  },
+  {
+    "id": "calcada-publica-manutencao",
+    "tipo": "servico",
+    "titulo": "Calçada pública quebrada: pedir conserto à Subprefeitura",
+    "resumo": "A Subprefeitura conserta calçadas de praças e de grandes avenidas com canteiros, onde não há imóveis. Qualquer pessoa pode pedir, de graça, pelo SP156, pela Central 156 ou presencialmente. Calçada em frente a casa, prédio ou loja é particular e tem outro caminho.",
+    "publico": [
+      "qualquer pessoa",
+      "pessoa com deficiência",
+      "familiar ou responsável"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        },
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "calcada_acessibilidade"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Endereço completo da calçada",
+      "Um ponto de referência",
+      "Se quem pede tem alguma deficiência ligada ao problema da calçada",
+      "Se há obstáculos para a acessibilidade, descritos no campo \"Descrição\""
+    ],
+    "onde": {
+      "texto": "Portal SP156, Central 156, Praças de Atendimento das Subprefeituras ou Descomplica SP (segunda a sexta, das 8h às 17h).",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=931"
+    },
+    "prazo_tipico": "Até 120 dias. O serviço é gratuito.",
+    "passos": [
+      "Peça o serviço \"Calçada pública - solicitar manutenção\" num dos canais do SP156 ou presencialmente.",
+      "O pedido vai para a Coordenadoria de Projetos e Obras da Subprefeitura do endereço.",
+      "Quando terminar, a solicitação fica como \"finalizado\" e chega um e-mail ou mensagem no celular. Dá para acompanhar o protocolo no SP156."
+    ],
+    "se_negarem": [
+      "Confira se a calçada é mesmo pública. Se ficar em frente a um imóvel, use a ficha da calçada particular.",
+      "Se o prazo vencer sem o serviço feito, ou se a solicitação for finalizada sem o serviço completo, registre uma reclamação na Ouvidoria Geral do Município, pelo Portal SP156 (serviço \"Reclamação\"), pela Central 156 ou numa Praça de Atendimento das Subprefeituras, informando o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "A calçada da praça está toda quebrada, quem conserta?",
+      "Como peço para a Prefeitura arrumar a calçada?",
+      "A cadeira de rodas não passa na calçada da avenida, o que eu faço?"
+    ],
+    "palavras_chave": [
+      "calçada pública",
+      "conserto de calçada",
+      "consertar calçada",
+      "arrumar calçada",
+      "calçada quebrada",
+      "buraco na calçada",
+      "praça",
+      "subprefeitura",
+      "passeio"
+    ],
+    "fonte_nome": "Portal SP156: Calçada pública - solicitar manutenção",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=931",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem garanto a obra. Quem executa é a Subprefeitura (Secretaria Municipal das Subprefeituras). Calçada de área privada é responsabilidade do dono do imóvel. Tampa de poço de concessionária na calçada não entra aqui: é preciso chamar a própria concessionária.",
+    "atalhos": [
+      "calcada"
+    ]
+  },
+  {
+    "id": "calcada-particular-denuncia",
+    "tipo": "servico",
+    "titulo": "Calçada particular ruim ou inexistente: denunciar à Prefeitura",
+    "resumo": "Quando a calçada em frente a um imóvel tem buracos, inclinações, degraus ou obstáculos, ou nem existe, qualquer pessoa pode denunciar de graça pelo SP156. O fiscal da Subprefeitura vistoria e, se precisar, multa e notifica o dono do imóvel para arrumar em 60 dias.",
+    "publico": [
+      "qualquer pessoa",
+      "pessoa com deficiência",
+      "familiar ou responsável"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        },
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "calcada_acessibilidade"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Endereço do imóvel. Sem número, use o número mais próximo e explique a referência no campo \"Descrição\"",
+      "O tipo de problema da calçada, no campo \"Descrição\""
+    ],
+    "onde": {
+      "texto": "Portal SP156, Central 156, Praças de Atendimento das Subprefeituras ou Descomplica SP (segunda a sexta, das 8h às 17h).",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=906"
+    },
+    "prazo_tipico": "Até 60 dias. O serviço é gratuito.",
+    "passos": [
+      "Peça o serviço \"Calçada particular - denunciar calçada danificada ou inexistente\" num dos canais e preencha o formulário.",
+      "O fiscal da Subprefeitura vistoria o local. Se houver irregularidade, multa e notifica o dono do imóvel para arrumar a calçada em 60 dias.",
+      "Quando terminar, a solicitação fica como \"finalizado\" e chega um e-mail ou mensagem no celular. Dá para acompanhar o protocolo no SP156."
+    ],
+    "se_negarem": [
+      "Se o dono não arrumar em 60 dias, ele leva multa mensal, e a Subprefeitura pode fazer o serviço e cobrar dele.",
+      "Se o prazo vencer sem o serviço feito, ou se a solicitação for finalizada sem o serviço completo, registre uma reclamação na Ouvidoria Geral do Município, pelo Portal SP156 (serviço \"Reclamação\"), pela Central 156 ou numa Praça de Atendimento das Subprefeituras, informando o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "A calçada da frente da casa do vizinho está toda quebrada, como denuncio?",
+      "Tem um degrau na calçada e a cadeira de rodas não passa, o que fazer?",
+      "Como reclamar de calçada que não existe na minha rua?"
+    ],
+    "palavras_chave": [
+      "calçada particular",
+      "denunciar calçada",
+      "denúncia de calçada",
+      "calçada danificada",
+      "calçada inexistente",
+      "degrau na calçada",
+      "inclinação",
+      "dono do imóvel",
+      "vizinho"
+    ],
+    "fonte_nome": "Portal SP156: Calçada particular - denunciar calçada danificada ou inexistente",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=906",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem garanto o conserto. Quem fiscaliza é a Subprefeitura (Secretaria Municipal das Subprefeituras); quem arruma é o dono do imóvel. Calçada em frente a prédio público também é particular: o próprio órgão é o responsável.",
+    "atalhos": [
+      "calcada"
+    ]
+  },
+  {
+    "id": "calcada-obstaculo-acessibilidade",
+    "tipo": "servico",
+    "titulo": "Obstáculo na calçada: pedir fiscalização de acessibilidade",
+    "resumo": "Quando vasos, barras de ferro ou outros obstáculos atrapalham a passagem na calçada, qualquer pessoa pode pedir a fiscalização pelo SP156, sem custo. O fiscal da Subprefeitura notifica o dono do imóvel para tirar o obstáculo em 60 dias.",
+    "publico": [
+      "qualquer pessoa",
+      "pessoa com deficiência",
+      "familiar ou responsável"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        },
+        {
+          "campo": "p_objetivo",
+          "em": [
+            "calcada_acessibilidade"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Endereço. Sem número, indique o número mais próximo e a referência no campo \"Descrição\" (por exemplo, \"entre os números 00 e 08\")",
+      "O que está atrapalhando a acessibilidade, no campo \"Descrição\""
+    ],
+    "onde": {
+      "texto": "Portal SP156, Central 156, Praças de Atendimento das Subprefeituras ou Descomplica SP (segunda a sexta, das 8h às 17h).",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=2634"
+    },
+    "prazo_tipico": "Até 60 dias. Não há taxa.",
+    "passos": [
+      "Peça o serviço \"Acessibilidade - solicitar avaliação de obstáculo na calçada\" num dos canais e preencha o formulário.",
+      "O fiscal da Subprefeitura notifica o dono do imóvel para tirar o obstáculo em 60 dias. Se não tirar, leva multa mensal, e a Subprefeitura pode fazer o serviço e cobrar dele.",
+      "Quando terminar, a solicitação fica como \"finalizado\" e chega um e-mail ou mensagem no celular. Dá para acompanhar o protocolo no SP156."
+    ],
+    "se_negarem": [
+      "Se o prazo vencer sem o serviço feito, ou se a solicitação for finalizada sem o serviço completo, registre uma reclamação na Ouvidoria Geral do Município, pelo Portal SP156 (serviço \"Reclamação\"), pela Central 156 ou numa Praça de Atendimento das Subprefeituras, informando o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "Tem um vaso no meio da calçada e a cadeira de rodas não passa, o que eu faço?",
+      "Como denunciar obstáculo na calçada?",
+      "A loja colocou barras de ferro na calçada, posso reclamar?"
+    ],
+    "palavras_chave": [
+      "obstáculo",
+      "obstáculo na calçada",
+      "vaso na calçada",
+      "barra de ferro",
+      "corrente",
+      "portão",
+      "fiscalização de acessibilidade",
+      "acessibilidade na calçada"
+    ],
+    "fonte_nome": "Portal SP156: Acessibilidade - solicitar avaliação de obstáculo na calçada",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=2634",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não vejo o seu pedido nem garanto a remoção. Quem fiscaliza é a Subprefeitura (Secretaria Municipal das Subprefeituras). Buracos, degraus e calçada inexistente têm a ficha própria da calçada particular.",
+    "atalhos": [
+      "calcada"
+    ]
+  },
+  {
+    "id": "central-156",
+    "tipo": "servico",
+    "titulo": "Central 156: atendimento da Prefeitura de São Paulo",
+    "resumo": "Canal oficial da Prefeitura para pedidos, reclamações e dúvidas sobre a cidade de São Paulo. Atende 24 horas pelo telefone 156, e também pelo Portal SP156, pelo aplicativo SP156 e presencialmente no Descomplica SP e nas Subprefeituras.",
+    "publico": [
+      "qualquer pessoa"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Para acompanhar um pedido: o número de protocolo",
+      "Para abrir pedidos no Portal SP156: login do SP156 ou conta gov.br (alguns serviços aceitam pedido anônimo)"
+    ],
+    "onde": {
+      "texto": "Na cidade de São Paulo, ligue 156 (24 horas). Fora da cidade, 0800-011-0156, só de telefone fixo da Grande São Paulo. Também pelo Portal SP156, pelo aplicativo SP156 (Android e iOS) e nas unidades do Descomplica SP.",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/outros-canais-de-atendimento"
+    },
+    "prazo_tipico": "Depende do serviço pedido. Cada serviço do Portal SP156 mostra o seu prazo máximo.",
+    "passos": [
+      "Ligue 156 ou abra o Portal SP156 e procure o serviço pelo nome.",
+      "Faça o pedido e anote o número de protocolo.",
+      "Acompanhe em \"Minhas Solicitações\", no Portal ou no aplicativo SP156."
+    ],
+    "se_negarem": [
+      "Se o prazo vencer sem o serviço feito, ou se a solicitação for finalizada sem o serviço completo, registre uma reclamação na Ouvidoria Geral do Município, pelo Portal SP156 (serviço \"Reclamação\"), pela Central 156 ou numa Praça de Atendimento das Subprefeituras, informando o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "Qual o telefone da Prefeitura de São Paulo?",
+      "Onde eu reclamo de um serviço da Prefeitura?",
+      "Como falo com a Prefeitura?"
+    ],
+    "palavras_chave": [
+      "156",
+      "central 156",
+      "sp156",
+      "portal sp156",
+      "telefone da prefeitura",
+      "falar com a prefeitura",
+      "atendimento da prefeitura",
+      "aplicativo sp156",
+      "descomplica"
+    ],
+    "fonte_nome": "Portal SP156: Outros canais de atendimento",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/outros-canais-de-atendimento",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não faço o pedido por você nem vejo os seus protocolos. Assuntos do governo do estado ou federal (INSS, Receita, ANTT) não são da Central 156. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros)."
+  },
+  {
+    "id": "ouvidoria-geral-municipio",
+    "tipo": "servico",
+    "titulo": "Ouvidoria Geral do Município: reclamar quando o serviço da Prefeitura falha",
+    "resumo": "Segunda instância para reclamar de serviço da Prefeitura de São Paulo: quando não conseguiu pedir, quando o pedido foi negado ou finalizado sem o serviço feito, quando o prazo venceu ou quando foi mal atendido. É gratuito, e a resposta vem em até 30 dias, prorrogáveis por mais 30.",
+    "publico": [
+      "qualquer pessoa"
+    ],
+    "cidade": "SP",
+    "condicoes": {
+      "todas": [
+        {
+          "campo": "p_cidade",
+          "em": [
+            "sim"
+          ]
+        }
+      ]
+    },
+    "documentos": [
+      "Número de protocolo do pedido feito antes nos canais SP156, se a reclamação for sobre ele",
+      "Nome do órgão envolvido, quando souber",
+      "Relato detalhado: serviço pedido, local, data e o que aconteceu",
+      "Dá para pedir sigilo dos seus dados: só a Ouvidoria terá acesso a eles"
+    ],
+    "onde": {
+      "texto": "Portal SP156 (serviço \"Reclamação\"), Central 156, Praças de Atendimento das Subprefeituras, Descomplica SP, posto da Ouvidoria (Rua Dr. Falcão Filho, 69, Sé, de segunda a sexta, das 9h às 17h) ou carta para Rua Líbero Badaró, 293, 19º andar, Centro, CEP 01009-000.",
+      "link": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=2630"
+    },
+    "prazo_tipico": "Até 30 dias, prorrogáveis por mais 30. Gratuito.",
+    "passos": [
+      "Primeiro, faça o pedido do serviço nos canais da Prefeitura (Central 156, Portal ou aplicativo SP156) e guarde o protocolo.",
+      "Se o serviço falhar, entre no Portal SP156 com o login do SP156 ou do gov.br e abra o serviço \"Reclamação\" da Ouvidoria. Pelo telefone, ligue 156 e escolha a opção.",
+      "Informe o protocolo e conte o que aconteceu. Anote o número da reclamação."
+    ],
+    "se_negarem": [
+      "Acompanhe a reclamação pelo Portal SP156, com o número de protocolo."
+    ],
+    "perguntas_exemplo": [
+      "A Prefeitura não fez o serviço que eu pedi, onde reclamo?",
+      "Meu pedido no 156 foi finalizado sem resolver, o que eu faço?",
+      "Fui mal atendido num serviço da Prefeitura, como reclamar?"
+    ],
+    "palavras_chave": [
+      "ouvidoria",
+      "ouvidoria geral do município",
+      "reclamação",
+      "reclamar da prefeitura",
+      "pedido finalizado sem resolver",
+      "prazo vencido",
+      "mal atendido",
+      "protocolo"
+    ],
+    "fonte_nome": "Portal SP156: Reclamação (Ouvidoria Geral do Município)",
+    "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=2630",
+    "tipo_fonte": "oficial",
+    "verificado_em": "2026-11-09",
+    "limitacao": "Não registro a reclamação por você. A Ouvidoria é da Prefeitura de São Paulo: não cuida de INSS, Receita Federal, ANTT ou governo do estado. Reclamações sobre vaga em creche ou consulta médica pedem a identificação de quem reclama."
   }
 ]

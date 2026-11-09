@@ -12,7 +12,7 @@ export const CONFIG = {
   },
   // Entrada da base (tipo servico) mostrada como canal oficial quando a resposta é "Não encontrei isso na minha base".
   // null: mostra só o aviso para procurar o órgão responsável. Nenhum canal fora da base.
-  canalOficialId: null as string | null,
+  canalOficialId: 'central-156' as string | null,
   // "Onde enviar" da Reclamação pronta: ids de fichas da base (tipo servico) com os canais de reclamação.
   // Só aparecem se a ficha tiver fonte oficial e verificada. Vazio: a parte fica desabilitada.
   canaisReclamacaoIds: [] as string[],
