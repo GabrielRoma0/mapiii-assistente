@@ -164,7 +164,8 @@
       "Acompanhe em Consultar Pedidos. O INSS avisa quando precisar de atendimento presencial.",
       "A deficiência é analisada numa avaliação social e numa perícia médica do INSS. A própria pessoa com deficiência precisa ir, com documento com foto, mesmo quando outra pessoa fez o pedido como procuradora.",
       "O BPC não paga 13º salário, não deixa pensão por morte e não pode ser somado a aposentadoria, pensão ou seguro-desemprego.",
-      "Se a pessoa começar a trabalhar, o BPC para enquanto ela trabalha. Se o salário for de até 2 salários mínimos, ela pode pedir o Auxílio-Inclusão. Aprendiz com deficiência pode receber os dois por até 2 anos."
+      "Se a pessoa começar a trabalhar, o BPC fica suspenso enquanto ela trabalha. Se o salário for de até 2 salários mínimos, ela pode pedir o Auxílio-Inclusão. Quando o trabalho acaba, pode pedir a volta do pagamento sem nova perícia. Aprendiz com deficiência pode receber os dois por até 2 anos.",
+      "O BPC é revisto a cada 2 anos. Quem tem deficiência permanente, irreversível ou irrecuperável fica dispensado da perícia médica periódica, salvo suspeita de fraude ou erro. Se o benefício parar, um novo pedido continua possível."
     ],
     "se_negarem": [
       "Veja o motivo da decisão no Meu INSS, em Consultar Pedidos.",
@@ -173,6 +174,18 @@
       "Acompanhe o recurso no Meu INSS, em Recurso, Consultar Andamento, ou em consultaprocessos.inss.gov.br. Dúvidas: telefone 135, de segunda a sábado, das 7h às 22h.",
       "Se o recurso passar do prazo sem andamento, registre uma reclamação pela Central 135 ou pela plataforma Fala.BR, para o INSS ou para o Conselho de Recursos da Previdência Social."
     ],
+    "base_legal": [
+      {
+        "norma": "Lei 8.742/1993 (Lei Orgânica da Assistência Social)",
+        "artigo": "art. 2º, I, e; arts. 21 e 21-A",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
+      }
+    ],
+    "modelo_recurso": {
+      "titulo": "Recurso contra a negativa do BPC",
+      "para": "INSS, pelo Meu INSS, no serviço Recurso Ordinário (Inicial), em até 30 dias depois de saber da decisão",
+      "texto": "Eu, (preencha seu nome), venho recorrer da decisão do INSS que negou o Benefício de Prestação Continuada à pessoa com deficiência (preencha o nome da pessoa, se o pedido não for para você), no pedido número (preencha o número do pedido), decisão que conheci em (preencha a data).\n\nNão concordo com a decisão pelos seguintes motivos: (preencha os motivos, por exemplo: a renda da família foi calculada errado, a deficiência não foi bem avaliada ou o Cadastro Único já foi atualizado).\n\nA Lei 8.742/1993, no art. 2º, inciso I, alínea e, prevê a garantia de um salário mínimo de benefício mensal à pessoa com deficiência que comprove não possuir meios de prover a própria manutenção ou de tê-la provida por sua família.\n\nJunto os seguintes documentos: (preencha a lista, por exemplo: laudos e exames novos, comprovante do Cadastro Único atualizado).\n\nPeço que a decisão seja revista e o benefício seja concedido.\n\n(preencha a data)"
+    },
     "perguntas_exemplo": [
       "Como peço o BPC para o meu filho com deficiência?",
       "Quem tem deficiência e é de baixa renda recebe algum salário do governo?",
