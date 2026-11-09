@@ -33,7 +33,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **BPC (`bpc-pcd`): fechado em 09/11.** Texto do gov.br e do INSS baixado pelo Claude Code e conferido por print do Thor (`docs/fontes/bpc-pcd/`); `base_legal` com a Lei 8.742/1993 e `modelo_recurso` no "Me negaram". A pergunta `p_renda` agora é em faixas (até 1/4, até 1/2, mais de 1/2, não sei).
 
-**Próximas fichas da H1, nesta ordem:** Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
+**Atende+: começado em 09/11.** Prints em `docs/fontes/atende/` (o que é, público, horário, postos) e a Lei 16.337/2015 achada no catálogo. Ainda fora da base: faltam documentos, prazo e "se negarem" (páginas "Cadastre-se no Atende+", "Conheça os requisitos" e o regulamento, que abrem sem login) e o print da lei.
+
+**Próximas fichas da H1, nesta ordem:** (Atende+ em andamento), táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
