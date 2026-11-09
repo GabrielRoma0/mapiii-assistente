@@ -134,13 +134,13 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 12 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156 e Ouvidoria). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
+| ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 14 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156, Ouvidoria Geral, reclamação de ônibus e Ouvidoria da SPTrans). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
 | ~~**H2**~~ | ~~Fichas dos **canais oficiais**~~ **Feito 09/11:** Central 156, Ouvidoria Geral do Município, reclamação de ônibus (SPTrans pelo 156) e Ouvidoria da SPTrans. Opcional: `modelo_recurso` do Bilhete Único | Thor | 9/11 | — |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito 09/11:** 14 fichas, `canalOficialId` e `canaisReclamacaoIds` | Claude Code | — | — |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
-| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (12 fichas no ar desde 09/11). Falta: decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). Falta: decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
