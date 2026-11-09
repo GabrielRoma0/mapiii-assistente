@@ -10,6 +10,8 @@ Fontes da ficha `bpc-pcd` de `data/kb.json`. O gov.br abre para leitura automát
 | `2026-11-09-govbr-servico-bpc-1-topo.webp` a `-5-ouvidoria.webp` | idem (página de serviço do gov.br) | Prints do Thor, 09/11: confere com o texto baixado (documentos, 45 dias, gratuito, 135) |
 | `2026-11-09-inss-recurso.md` | https://www.gov.br/inss/pt-br/direitos-e-deveres/recurso/recurso-administrativo-de-beneficio-previdenciario | "Se negarem": recurso em até 30 dias, serviço Recurso Ordinário (Inicial) no Meu INSS, razões e documentos, acompanhar em Recurso > Consultar Andamento |
 
+| `2026-11-09-inss-recurso-1-tipos-e-prazo.webp` a `-4-reclamacao.webp` | idem (página de recurso) | Prints do Thor, 09/11: confere com o texto baixado. O último traz "Como registrar uma reclamação" (Central 135 ou Fala.BR quando o recurso passa do prazo) e o endereço consultaprocessos.inss.gov.br, acrescentados ao "Se negarem" |
+
 **Lei:** a página do INSS liga para a Lei 8.742/1993 (LOAS) no Planalto, https://www.planalto.gov.br/ccivil_03/leis/l8742.htm , mas o Planalto não respondeu à leitura automática. A ficha ainda não tem `base_legal` nem `modelo_recurso`: faltam o print do art. 20 conferido pelo Thor.
 
-**Falta:** print da página de recurso e o art. 20 da Lei 8.742/1993.
+**Falta:** só o art. 20 da Lei 8.742/1993.
