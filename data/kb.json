@@ -3,7 +3,7 @@
     "id": "bilhete-unico-especial-pcd",
     "tipo": "direito",
     "titulo": "Bilhete Único Especial da Pessoa com Deficiência",
-    "resumo": "Cartão do transporte coletivo para pessoas com deficiência que moram na cidade de São Paulo, na Região Metropolitana, em Campo Limpo Paulista, Várzea Paulista ou Jundiaí. O pedido é feito com um formulário preenchido pelo médico.",
+    "resumo": "Cartão que dá gratuidade nos ônibus, trens e metrô para pessoas com deficiência que moram na cidade de São Paulo, na Região Metropolitana, em Campo Limpo Paulista, Várzea Paulista ou Jundiaí. O pedido é feito com um formulário preenchido pelo médico.",
     "publico": [
       "pessoa com deficiência"
     ],
@@ -33,7 +33,7 @@
     "documentos": [
       "Documento pessoal com foto (RG ou CIN, CNH, CIE, passaporte ou outro)",
       "CPF, em cópia simples, se o número não estiver no documento com foto",
-      "Comprovante de residência dos últimos 6 meses, como conta de telefone, luz ou gás",
+      "Comprovante de residência dos últimos 6 meses, como conta de telefone, luz ou gás. Pode estar no nome de outra pessoa, mas precisa ser do endereço onde a pessoa mora, porque o cartão é enviado para lá",
       "Formulário de Solicitação da SPTrans ou Formulário para emissão de Laudo Permanente, preenchido pelo médico",
       "Exames, laudos, receitas e outros documentos que comprovem a patologia, se forem exigidos para o CID na busca de CID da SPTrans"
     ],
@@ -41,13 +41,14 @@
       "texto": "Envie as cópias digitalizadas pelo Site de Atendimento da SPTrans ou leve a documentação a um posto de atendimento do Bilhete Único Especial.",
       "link": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/"
     },
-    "prazo_tipico": "A página da SPTrans não informa o prazo. A SPTrans avisa o andamento por e-mail e pelo Site de Atendimento.",
+    "prazo_tipico": "A SPTrans analisa o pedido em até 20 dias depois do envio do formulário e de todos os documentos, e pode aprovar, reprovar, pedir documentos ou chamar para uma auditoria médica presencial. Se aprovado, o cartão chega em até 20 dias.",
     "passos": [
       "Confira na busca de CID da SPTrans se a patologia dá direito ao cartão e quais exames e documentos ela pede.",
-      "Entre no Site de Atendimento e imprima o formulário. Se não conseguir imprimir, a pessoa pode ir a um posto de atendimento do Bilhete Único Especial para retirar o formulário e tirar a foto do cadastro (só com a presença dela).",
-      "Leve o formulário ao médico na consulta. Ele preenche, assina e carimba.",
-      "Envie o formulário e os exames pelo Site de Atendimento ou leve a um posto de atendimento.",
-      "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado."
+      "Entre no Site de Atendimento e imprima o formulário, ou peça o formulário num posto de atendimento do Bilhete Único Especial.",
+      "Leve o formulário ao médico na consulta. Ele preenche, assina, carimba e data; quem pede também assina.",
+      "Envie o formulário e os documentos pelo Site de Atendimento ou vá a um posto de atendimento. No posto, a própria pessoa com deficiência comparece com os documentos.",
+      "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado.",
+      "Para usar a gratuidade, leve sempre o cartão, ativo. Mostre ao motorista, cobrador ou fiscal quando pedirem."
     ],
     "se_negarem": [
       "Veja o motivo nas mensagens da SPTrans, por e-mail ou no Site de Atendimento.",
@@ -66,7 +67,7 @@
       "Como peço o Bilhete Único Especial?",
       "Cadeirante paga ônibus em São Paulo?",
       "Quais documentos preciso para o bilhete da pessoa com deficiência?",
-      "Onde pego o formulário do bilhete especial?"
+      "Quanto tempo demora para o bilhete especial chegar?"
     ],
     "palavras_chave": [
       "bilhete único especial",

@@ -10,3 +10,8 @@ Prints das páginas oficiais da SPTrans usadas na ficha `bilhete-unico-especial-
 | `2026-11-09-faq-legislacao.png` | idem | Portarias SMT.GAB 050/2019, SMT/SMS 007/2020 e SMS 022/2024 |
 | `2026-11-09-faq-como-solicitar.png` | idem | Passo a passo e validade do formulário |
 | `2026-11-09-faq-documentos.png` | idem | Documentos necessários |
+| `2026-11-09-faq-representante-no-posto.png` | idem | A própria pessoa comparece ao posto para o cadastramento |
+| `2026-11-09-faq-comprovante-de-residencia.png` | idem | O comprovante não precisa estar no nome da pessoa |
+| `2026-11-09-faq-prazo-de-entrega.png` | idem | Entrega em até 20 dias depois da aprovação |
+| `2026-11-09-faq-prazo-de-analise.png` | idem | Análise em até 20 dias; pode pedir documentos ou chamar para auditoria médica |
+| `2026-11-09-faq-gratuidade-cartao-em-maos.png` | idem | Gratuidade em ônibus, trem e metrô só com o cartão em mãos e ativo |
