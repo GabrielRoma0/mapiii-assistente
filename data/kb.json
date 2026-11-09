@@ -48,20 +48,26 @@
       "Leve o formulário ao médico na consulta. Ele preenche, assina, carimba e data; quem pede também assina.",
       "Envie o formulário e os documentos pelo Site de Atendimento ou vá a um posto de atendimento. No posto, a própria pessoa com deficiência comparece com os documentos.",
       "Acompanhe o pedido pelo e-mail e pelo Site de Atendimento. Se aprovado, o cartão chega no endereço cadastrado.",
+      "Se o cartão não chegar em 20 dias depois da aprovação, avise pelo Site de Atendimento ou num posto. Ele é reenviado ou pode ser retirado no Posto Central (Rua Boa Vista, 274, mezanino, Centro), de segunda a sexta, das 8h às 17h, exceto feriados.",
       "Para usar a gratuidade, leve sempre o cartão, ativo. Mostre ao motorista, cobrador ou fiscal quando pedirem. O cartão é de uso pessoal: emprestar pode levar ao cancelamento.",
-      "Se quiser o nome social no cartão, peça no site de atendimento da SPTrans, em Meu Perfil, Meus Dados."
+      "Se quiser o nome social no cartão, peça no site de atendimento da SPTrans, em Meu Perfil, Meus Dados.",
+      "Estudante com deficiência: o pai, a mãe ou o responsável pode pedir o Acompanhante Cadastrado, para usar o cartão sem o titular só nos ônibus municipais, no trajeto entre a casa e a escola. A escola precisa estar cadastrada na SPTrans, a mais de 1 km de casa, com frequência de pelo menos 75%, comprovada a cada 180 dias.",
+      "Criança ou adolescente em casa de acolhimento: um representante da instituição faz o pedido num posto, com a guia de acolhimento, o estatuto, a declaração da instituição e os documentos do acolhido e do representante."
     ],
     "se_negarem": [
       "Veja o motivo nas mensagens da SPTrans, por e-mail ou no Site de Atendimento.",
+      "Confira se o formulário tem todos os campos obrigatórios: a SPTrans nega o pedido se faltar algum campo, o CRM, o RQE (quando houver) ou as assinaturas.",
       "Tire dúvidas nas Perguntas e Respostas da SPTrans ou num posto de atendimento do Bilhete Único Especial."
     ],
     "requisitos_laudo": [
-      "Dados da unidade de saúde ou consultório",
-      "Identificação da patologia pelo CID-10",
-      "Limitações e sequelas causadas pela patologia",
-      "Letra legível, texto claro e objetivo, sem borrões nem rasuras",
-      "Assinatura do médico, carimbo e data",
-      "Assinatura de quem pede ou do representante",
+      "Dados da pessoa com deficiência e do médico ou da unidade de saúde",
+      "Código da patologia pelo CID",
+      "Funções do corpo afetadas e limitações nas atividades, pela CIF",
+      "Detalhes do diagnóstico, da evolução, dos exames e das limitações",
+      "No formulário de deficiência permanente: dizer que a deficiência é irreversível ou incurável, preenchido à mão",
+      "Letra legível, texto claro e objetivo, sem jargões, borrões nem rasuras",
+      "Assinatura legível do médico, carimbo, CRM e RQE (se o médico tiver especialidade registrada), e data",
+      "Assinatura de quem pede ou do responsável legal",
       "O Formulário Específico de Solicitação vale por 90 dias, e os exames e receitas ligados a ele também têm validade; o Formulário para Laudo Permanente não tem validade"
     ],
     "perguntas_exemplo": [

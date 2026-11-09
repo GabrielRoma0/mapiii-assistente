@@ -20,3 +20,11 @@ Prints das páginas oficiais da SPTrans usadas na ficha `bilhete-unico-especial-
 | `2026-11-09-faq-reapresentacao.png` | idem | 60 minutos no mesmo ônibus; 30 minutos no metrô/trem |
 | `2026-11-09-faq-nome-social.png` | idem | Nome social pelo Decreto Municipal 58.228/2018, em sptrans.com.br/atendimento |
 | `2026-11-09-faq-uso-pessoal.png` | idem | Uso pessoal; uso por outra pessoa pode cancelar o cartão |
+| `2026-11-09-faq-nao-recebeu-em-20-dias.png` | idem | Se não chegar em 20 dias: avisar no site ou no posto; reenvio ou retirada no Posto Central |
+| `2026-11-09-faq-acompanhante-cadastrado-o-que-e.png` | idem | Acompanhante Cadastrado: pai, mãe ou responsável de estudante, só ida e volta da escola, só ônibus municipais |
+| `2026-11-09-faq-acompanhante-cadastrado-requisitos.png` | idem | Requisitos do Acompanhante Cadastrado |
+| `2026-11-09-faq-acompanhante-cadastrado-documentos.png` | idem | Documentos do Acompanhante Cadastrado |
+| `2026-11-09-faq-acompanhante-cadastrado-sem-titular.png` | idem | Sem o titular, só nos ônibus municipais e só no trajeto da escola |
+| `2026-11-09-faq-textos-colados.md` | idem | Texto colado pelo Thor: casas de acolhimento e como preencher o formulário |
+
+**Ainda não conferido na fonte:** renovação do cartão, custo de entrega e o link oficial das portarias (a página das Perguntas e Respostas não tem link para elas).

@@ -8,9 +8,30 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 07/11/2026.
+Última atualização: 09/11/2026.
 
 ---
+
+## Atualizações de 09/11 (Thor): leia primeiro
+
+> **Para o Claude Code:** antes de responder "o que eu faço agora?", leia esta seção e o [video/README.md](video/README.md). O Thor está fazendo a **H1** (fichas) mandando prints das páginas oficiais, porque os sites da SPTrans e do SP156 não abrem para leitura automática (Cloudflare). Não tente contornar esse bloqueio.
+
+**Feito:**
+
+| Item | O que mudou |
+|---|---|
+| **Vídeo** | Documento único em [video/README.md](video/README.md): roteiro, estilo, regras de tempo, linha de rota, som, montagem no Remotion, revisão por notas e cronograma. Todos os 9 pedidos do Claude Design feitos (quadros 01 a 15, Mapi 3D, objetos 3D, celular 3D, moldura de câmera, nomes, legenda, relógio). Tudo o que o Claude Design gera também fica no artefato https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs |
+| **H1 (1ª ficha)** | `bilhete-unico-especial-pcd` em `data/kb.json`, com gratuidade, documentos, prazos (análise e entrega em até 20 dias), laudo, Acompanhante Cadastrado (estudante), casas de acolhimento e o que fazer se o cartão não chegar. Prints da fonte em [docs/fontes/bilhete-unico-especial-pcd/](docs/fontes/bilhete-unico-especial-pcd/README.md) |
+| **Rede** | Ambiente de nuvem `mapiii-assistente` com os sites oficiais liberados (Prefeitura, legislação municipal, Planalto, gov.br, IBGE, ALESP). SPTrans e SP156 continuam recusando acesso automático |
+| **V4** | Microfone e alto-falante: não será feito agora (decisão do Thor) |
+
+**Falta na ficha do Bilhete Único Especial (perguntas das Perguntas e Respostas da SPTrans, por print):**
+1. "Qual o procedimento para renovar o Bilhete Único Especial da Pessoa com Deficiência?"
+2. "O Bilhete Único Especial Pessoa com Deficiência tem algum custo de entrega?" (serve também para `data/servicos-valores.json`)
+3. Link oficial da **Lei Municipal 11.250/1992** ou das **Portarias SMT 50/2019, SMT/SMS 7/2020 e SMS 22/2024**, para `base_legal` e o QR do "Mostre ao motorista". A página de perguntas não tem esse link: procurar no catálogo de legislação da Prefeitura.
+4. Pedido negado ou indeferido: não há pergunta sobre isso na página. Não usar o "modo IA" do Google (citava Reclame Aqui e Estadão).
+
+**Próximas fichas da H1, nesta ordem:** BPC (gov.br/INSS), Atende+, táxi acessível, vaga especial e cartão de estacionamento, CNH especial e isenções do carro adaptado, conserto de calçada pelo SP156. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
 ## Atualizações de 07/11 (Gabriel): leia primeiro
 
@@ -86,7 +107,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 
 | # | Tarefa | Quem | Prazo | Depende de |
 |---|---|---|---|---|
-| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei) | Thor | **9/11** | nada: começar já |
+| **H1** | **Fichas da base** (10 a 13, com fonte oficial e lei). **Em andamento: 1 ficha em 09/11** (Bilhete Único Especial) | Thor | **9/11** | nada: começar já |
 | **H2** | Fichas dos **canais oficiais** (Central 156, canal de reclamação da SPTrans) | Thor | 9/11 | H1 em andamento |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval` | Claude Code | junto com H1/H2 | H1, H2 |
 | **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
