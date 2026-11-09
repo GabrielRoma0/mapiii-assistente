@@ -3,7 +3,7 @@
     "id": "bilhete-unico-especial-pcd",
     "tipo": "direito",
     "titulo": "Bilhete Único Especial da Pessoa com Deficiência",
-    "resumo": "Cartão da SPTrans para pessoas com deficiência que moram na cidade de São Paulo, na Região Metropolitana, em Campo Limpo Paulista, Várzea Paulista ou Jundiaí. O pedido é feito com um formulário preenchido pelo médico.",
+    "resumo": "Cartão do transporte coletivo para pessoas com deficiência que moram na cidade de São Paulo, na Região Metropolitana, em Campo Limpo Paulista, Várzea Paulista ou Jundiaí. O pedido é feito com um formulário preenchido pelo médico.",
     "publico": [
       "pessoa com deficiência"
     ],
@@ -31,8 +31,11 @@
       ]
     },
     "documentos": [
-      "Formulário de solicitação preenchido pelo médico: o Formulário Específico de Solicitação ou, para deficiência permanente, o Formulário oficial para emissão de laudo médico",
-      "Exames e documentos indicados para a patologia, conforme a relação da SPTrans"
+      "Documento pessoal com foto (RG ou CIN, CNH, CIE, passaporte ou outro)",
+      "CPF, em cópia simples, se o número não estiver no documento com foto",
+      "Comprovante de residência dos últimos 6 meses, como conta de telefone, luz ou gás",
+      "Formulário de Solicitação da SPTrans ou Formulário para emissão de Laudo Permanente, preenchido pelo médico",
+      "Exames, laudos, receitas e outros documentos que comprovem a patologia, se forem exigidos para o CID na busca de CID da SPTrans"
     ],
     "onde": {
       "texto": "Envie as cópias digitalizadas pelo Site de Atendimento da SPTrans ou leve a documentação a um posto de atendimento do Bilhete Único Especial.",
@@ -40,7 +43,7 @@
     },
     "prazo_tipico": "A página da SPTrans não informa o prazo. A SPTrans avisa o andamento por e-mail e pelo Site de Atendimento.",
     "passos": [
-      "Confira na relação da SPTrans se a patologia está na lista e quais exames e documentos ela pede.",
+      "Confira na busca de CID da SPTrans se a patologia dá direito ao cartão e quais exames e documentos ela pede.",
       "Entre no Site de Atendimento e imprima o formulário. Se não conseguir imprimir, a pessoa pode ir a um posto de atendimento do Bilhete Único Especial para retirar o formulário e tirar a foto do cadastro (só com a presença dela).",
       "Leve o formulário ao médico na consulta. Ele preenche, assina e carimba.",
       "Envie o formulário e os exames pelo Site de Atendimento ou leve a um posto de atendimento.",
@@ -54,9 +57,10 @@
       "Dados da unidade de saúde ou consultório",
       "Identificação da patologia pelo CID-10",
       "Limitações e sequelas causadas pela patologia",
-      "Assinatura do médico, carimbo, CRM e data de preenchimento",
-      "Assinatura de quem pede",
-      "O Formulário Específico de Solicitação vale por 90 dias; o Formulário para Laudo Permanente não tem validade"
+      "Letra legível, texto claro e objetivo, sem borrões nem rasuras",
+      "Assinatura do médico, carimbo e data",
+      "Assinatura de quem pede ou do representante",
+      "O Formulário Específico de Solicitação vale por 90 dias, e os exames e receitas ligados a ele também têm validade; o Formulário para Laudo Permanente não tem validade"
     ],
     "perguntas_exemplo": [
       "Como peço o Bilhete Único Especial?",
@@ -70,13 +74,14 @@
       "pessoa com deficiência",
       "sptrans",
       "formulário médico",
+      "busca de cid",
       "ônibus"
     ],
     "fonte_nome": "SPTrans: Bilhete Único Especial da Pessoa com Deficiência",
     "fonte_url": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/",
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
-    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans. A lista de patologias aceitas e os exames de cada uma estão no site da SPTrans.",
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é a SPTrans, pelas regras da Lei Municipal 11.250/1992 e das Portarias SMT 50/2019, SMT/SMS 7/2020 e SMS 22/2024. A lista de patologias aceitas e os exames de cada uma estão na busca de CID da SPTrans.",
     "atalhos": [
       "deslocamento"
     ]
