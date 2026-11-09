@@ -177,14 +177,14 @@
     "base_legal": [
       {
         "norma": "Lei 8.742/1993 (Lei Orgânica da Assistência Social)",
-        "artigo": "art. 2º, I, e; arts. 21 e 21-A",
+        "artigo": "art. 2º, I, e; art. 20, §§ 1º a 3º; arts. 21 e 21-A",
         "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
       }
     ],
     "modelo_recurso": {
       "titulo": "Recurso contra a negativa do BPC",
       "para": "INSS, pelo Meu INSS, no serviço Recurso Ordinário (Inicial), em até 30 dias depois de saber da decisão",
-      "texto": "Eu, (preencha seu nome), venho recorrer da decisão do INSS que negou o Benefício de Prestação Continuada à pessoa com deficiência (preencha o nome da pessoa, se o pedido não for para você), no pedido número (preencha o número do pedido), decisão que conheci em (preencha a data).\n\nNão concordo com a decisão pelos seguintes motivos: (preencha os motivos, por exemplo: a renda da família foi calculada errado, a deficiência não foi bem avaliada ou o Cadastro Único já foi atualizado).\n\nA Lei 8.742/1993, no art. 2º, inciso I, alínea e, prevê a garantia de um salário mínimo de benefício mensal à pessoa com deficiência que comprove não possuir meios de prover a própria manutenção ou de tê-la provida por sua família.\n\nJunto os seguintes documentos: (preencha a lista, por exemplo: laudos e exames novos, comprovante do Cadastro Único atualizado).\n\nPeço que a decisão seja revista e o benefício seja concedido.\n\n(preencha a data)"
+      "texto": "Eu, (preencha seu nome), venho recorrer da decisão do INSS que negou o Benefício de Prestação Continuada à pessoa com deficiência (preencha o nome da pessoa, se o pedido não for para você), no pedido número (preencha o número do pedido), decisão que conheci em (preencha a data).\n\nNão concordo com a decisão pelos seguintes motivos: (preencha os motivos, por exemplo: a renda da família foi calculada errado, a deficiência não foi bem avaliada ou o Cadastro Único já foi atualizado).\n\nA Lei 8.742/1993, no art. 2º, inciso I, alínea e, prevê a garantia de um salário mínimo de benefício mensal à pessoa com deficiência que comprove não possuir meios de prover a própria manutenção ou de tê-la provida por sua família. O art. 20, § 3º, prevê o benefício para a pessoa com deficiência com renda familiar mensal por pessoa igual ou inferior a 1/4 do salário mínimo.\n\nJunto os seguintes documentos: (preencha a lista, por exemplo: laudos e exames novos, comprovante do Cadastro Único atualizado).\n\nPeço que a decisão seja revista e o benefício seja concedido.\n\n(preencha a data)"
     },
     "perguntas_exemplo": [
       "Como peço o BPC para o meu filho com deficiência?",
@@ -208,6 +208,6 @@
     "fonte_url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-com-deficiencia-bpc-loas",
     "tipo_fonte": "oficial",
     "verificado_em": "2026-11-09",
-    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda conta toda a família que mora na casa e precisa ser de até 1/4 do salário mínimo por pessoa, calculada com o Cadastro Único. A deficiência precisa durar ao menos 2 anos."
+    "limitacao": "Não vejo o seu pedido nem decido por você. Quem analisa é o INSS, com a avaliação social e a perícia médica. A renda precisa ser de até 1/4 do salário mínimo por pessoa, calculada com o Cadastro Único. Para a lei, a família é quem pede, o cônjuge ou companheiro, os pais (ou a madrasta ou o padrasto), os irmãos solteiros, os filhos e enteados solteiros e os menores tutelados, desde que morem na mesma casa. A deficiência precisa durar ao menos 2 anos."
   }
 ]

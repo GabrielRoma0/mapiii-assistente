@@ -14,7 +14,8 @@ Fontes da ficha `bpc-pcd` de `data/kb.json`. O gov.br abre para leitura automát
 
 | `2026-11-09-lei-8742-1993-cabecalho-e-art-2.webp` | https://www.planalto.gov.br/ccivil_03/leis/l8742.htm | Print do Thor, 09/11: cabeçalho da Lei 8.742/1993 (LOAS) e art. 2º, I, e (garantia de um salário mínimo à pessoa com deficiência sem meios de se manter). Citado no `modelo_recurso` |
 | `2026-11-09-lei-8742-1993-arts-20b-a-21b.webp` | idem | Print do Thor, 09/11: art. 21 (revisão a cada 2 anos; § 4º novo pedido possível; § 5º dispensa da perícia periódica para impedimento permanente, Lei 15.157/2025) e art. 21-A (suspensão quando trabalha; § 1º volta sem nova perícia; § 2º aprendiz por 2 anos). Usados nos passos |
+| `2026-11-09-lei-8742-1993-art-20.webp` | idem | Print do Thor, 09/11: art. 20, caput, § 1º (quem conta como família), § 2º (quem é pessoa com deficiência) e § 3º (renda por pessoa igual ou inferior a 1/4 do salário mínimo, redação da Lei 14.176/2021). Citado na `base_legal`, no `modelo_recurso` e na limitação |
 
-**Lei:** `base_legal` cita a Lei 8.742/1993, art. 2º, I, e, e arts. 21 e 21-A, com o link do Planalto (o mesmo que a página do INSS usa). O art. 20 (o limite de 1/4) não foi fotografado: esse limite vem da página do INSS, que é a `fonte_url`.
+**Lei:** `base_legal` cita a Lei 8.742/1993, art. 2º, I, e, art. 20, §§ 1º a 3º, e arts. 21 e 21-A, com o link do Planalto (o mesmo que a página do INSS usa). O art. 20, § 3º, confirma o limite de 1/4 que a página do INSS informa.
 
 **Tudo o que a ficha usa foi conferido por print.**
