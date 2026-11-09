@@ -35,7 +35,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **Atende+ (`atende-mais`): na base em 09/11**, montado com os prints da SPTrans e o regulamento do serviço (PDF de nov/2017 enviado pelo Thor). Lei 16.337/2015 na `base_legal` e o PDF do regulamento como fonte (09/11). Opcional: a página "Cadastre-se no Atende+" para conferir os documentos.
 
-**Passe Livre Interestadual e isenção de IPI/IOF do carro: na base em 09/11**, com o texto do gov.br e da Receita baixado pelo Claude Code (em `docs/fontes/`). Falta o Thor conferir com prints.
+**Passe Livre Interestadual e isenção de IPI/IOF do carro: na base em 09/11**, com o texto do gov.br e da Receita baixado pelo Claude Code (em `docs/fontes/`). Os dois conferidos por print do Thor em 09/11.
 
 **Próximas fichas (todas por print do Thor, sites bloqueados ou sem a informação):** táxi acessível; vaga especial e cartão de estacionamento na capital (o DETRAN-SP não emite para a cidade de São Paulo, ver `docs/fontes/vaga-especial/`); CNH para pessoa com deficiência (o site do DETRAN-SP abre, mas não tem página sobre isso); conserto de calçada pelo SP156; H2 (Central 156 e canal de reclamação da SPTrans). Ambiente: liberados DETRAN-SP, CET e Poupatempo em 09/11. Depois a **H2** (Central 156 e canal de reclamação da SPTrans). Meta: 10 a 13 fichas.
 
