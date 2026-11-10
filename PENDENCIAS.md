@@ -21,11 +21,12 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | Conta opcional (login) | **Cortada.** O banco fica no repositório sem uso |
 | Roteiro do pitch | **v2 (enxuto, cerca de 2:12)**, o de [video/README.md](video/README.md) |
 | Embarque no site publicado | **Ligado.** Falta o Gabriel criar as 3 variáveis do Actions (ver H10) |
-| Teste com pessoas no vídeo | **Em aberto:** o Gabriel vai escolher entre A (os números do formulário entram na cena 12) e B (o vídeo fica só com 12 de 12 e acessibilidade 100). Todo o resto do vídeo pode começar agora |
+| Teste com pessoas no vídeo | **Não entra (B), decisão do Gabriel em 10/11.** A cena 12 fica com 12 de 12 recusas e acessibilidade 100; o formulário vai para o relatório e a tela "Sobre o projeto" |
 
 - **H9 = o formulário do Gabriel** ([docs/formulario-teste.md](docs/formulario-teste.md)). Falta mandar o link e juntar 5 a 8 respostas até 15/11.
 - **H10: o app funciona sem internet** (conferido pelo Thor em 10/11).
-- **H5 continua faltando:** `eval/gabarito_perguntas.csv` não tem nenhuma pergunta do grupo `teste` e `eval/gabarito_cenarios.json` está vazio. O Thor montou as fichas, então as perguntas `teste` têm que vir do Gabriel ou de alguém que nunca viu a base. O Thor pode escrever perguntas `ajuste`.
+- **H5 (perguntas): feito em 10/11.** 17 perguntas do grupo `teste`, escritas por um amigo do Thor sem ver o app (gabarito marcado pelo Claude Code: 7 com ficha, 10 fora da base). **Resultado honesto: 58,8% (10 de 17)**, abaixo da meta de 85%. Todos os 7 erros são "não encontrei" (a ficha certa aparecia nas sugestões em quase todos), ou seja, o limite da busca (0,3) está alto para perguntas longas e informais e as fichas não têm perguntas `ajuste` próprias. Recusas: 100% (10 de 10 no grupo teste).
+- **C4 (novo, Claude Code):** calibrar a busca só com perguntas `ajuste` (não mexer olhando as 17 do teste) e medir de novo. Para ter um número honesto depois do ajuste, precisa de um **segundo lote `teste`** de outra pessoa que não viu o app. Faltam também os cenários (`eval/gabarito_cenarios.json`), opcionais.
 - `npm run verificar` passa (303 testes); `eval`: 12 de 12 recusas.
 
 ## Atualizações de 09/11, tarde (Thor, com o Claude Code)
@@ -153,7 +154,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 14 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156, Ouvidoria Geral, reclamação de ônibus e Ouvidoria da SPTrans). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
 | ~~**H2**~~ | ~~Fichas dos **canais oficiais**~~ **Feito 09/11:** Central 156, Ouvidoria Geral do Município, reclamação de ônibus (SPTrans pelo 156) e Ouvidoria da SPTrans. Opcional: `modelo_recurso` do Bilhete Único | Thor | 9/11 | — |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito 09/11:** 14 fichas, `canalOficialId` e `canaisReclamacaoIds` | Claude Code | — | — |
-| **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
+| **H5** | **Gabarito do grupo `teste`**: **feito 10/11** (17 perguntas, 58,8%). Falta um segundo lote depois da C4 e, opcional, os cenários | Dupla | 12/11 | C4 |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5). **Feito 10/11**, menos o teste no vídeo (A ou B), que o Gabriel decide | Dupla | 10/11 | nada |
 | **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). ~~Falta: decidir o Embarque e conferir no celular sem internet~~ **10/11:** Embarque ligado (falta criar as variáveis do Actions) e sem internet conferido | Dupla | 12/11 | H1 (primeiras fichas), H12 |

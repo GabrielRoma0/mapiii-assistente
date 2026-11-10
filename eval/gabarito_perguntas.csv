@@ -16,3 +16,21 @@ Qual a dose de dipirona para criança?,RECUSAR,ajuste
 Receita de bolo de cenoura,RECUSAR,ajuste
 Quem ganhou o jogo ontem?,RECUSAR,ajuste
 ????,RECUSAR,ajuste
+# --- Grupo teste: 17 perguntas escritas por um amigo do Thor sem ver o app nem as fichas (10/11/2026). Gabarito marcado pelo Claude Code; RECUSAR = tema fora da base ---
+Como fas para pedir o bilhete unico especial de deficiente em sp? paga alguma coisa?,bilhete-unico-especial-pcd,teste
+"Meu pai usa cadeira de rodas, a gente tem direito a desconto pra comprar carro zero ou isencao de imposto? ipva tbm?",isencao-ipi-iof-carro,teste
+Onde q faz o cartao de estacionamento pra deficiente em sp? da pra usar em vaga de zona azul sem pagar?,cartao-defis-estacionamento,teste
+Como funciona aquele servico atende da prefeitura? eles buscam em casa pra levar em consulta?,atende-mais,teste
+Onibus de sp todo mundo tem q ter rampa funcionando ne? se o motorista nao quiser descer a rampa onde q eu reclamo?,reclamacao-onibus-sptrans,teste
+Tem algum auxilio em dinheiro do governo pra qm cuida de cadeirante e nao consegue trabalhar registrado? tipo bpc ou outra coisa,bpc-pcd,teste
+"A calcada da minha rua ta toda esburacada e o cadeirante nao consegue passar, a prefeitura q tem q arrumar ou o dono da casa? como denuncia?",calcada-particular-denuncia,teste
+Cadeira de rodas quebra mto facil nas calcada de sp kkk rindo de nervoso.. a prefeitura da cadeira de rodas de graca pelo sus? demora mto?,RECUSAR,teste
+Como q pede a isencao do rodizio municipal de sp pra carro q transporta deficient? da multa se esquecer de cadastrar?,RECUSAR,teste
+Quem tem deficiencia paga meia entrada em show e cinema em sp? o acompanhante tbm paga meia ou entra de graca?,RECUSAR,teste
+"Quero viajar de sp pra santos com ele de onibus, a passagem e de graca ou tem desconto pra cadeirante na rodoviaria?",RECUSAR,teste
+Metro de sao paulo todas as estacoes tem elevador funcionando ou tem alguma q e melhor evitar pq sempre ta quebrado?,RECUSAR,teste
+Isencao de iof pra financiar carro pra pessoa com deficiencia ainda existe ou acabou?,isencao-ipi-iof-carro,teste
+Se o motorista de uber recusar levar a cadeira de rodas no porta malas eu posso processar a uber ou reclamar em algum lugar?,RECUSAR,teste
+Como ganha aquela credencial pra entrar de graca na sp TRANS?,bilhete-unico-especial-pcd,teste
+"Desconto na conta de luz pra qm usa aparelho medico ou tem deficiencia em casa, como q pede pra_enel?",RECUSAR,teste
+Tem alguma lei em sp q obriga os predios antigos a colocarem rampa na portaria? o sindico disse q nao vai por pq e caro,RECUSAR,teste

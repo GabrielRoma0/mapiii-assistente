@@ -33,7 +33,7 @@
 | Formato | YouTube 16:9, **1920 × 1080, 30 qps** | Thor, 07/11 |
 | Voz | A voz da dupla, **sem clone** | Thor, 07/11 |
 | Pessoas na câmera | Thor e Gabriel no começo, na virada e no fim (cenas 2, 3, 5, 14 e 17) | Thor, 07/11 |
-| Teste com pessoas | **Em aberto (10/11).** A: os números do formulário (H9) entram na cena 12. B: a cena 12 fica só com 12 de 12 recusas e acessibilidade 100. Só a cena 12 depende disso | Gabriel decide |
+| Teste com pessoas | **Não entra no vídeo (B).** A cena 12 fica com 12 de 12 recusas e acessibilidade 100. O formulário (H9) serve para o relatório e a tela "Sobre o projeto" | Gabriel, 10/11 |
 | App no vídeo | Tópicos animados (celular estilizado com a tela do app) e só dois cortes curtos do app real (cenas 7 e 9) | Thor, 07/11 |
 | Embarque | História animada (cena 10), sem gravação de tela, por isso sem selo EXEMPLO. A locução diz "pode avisar" | Thor, 07/11 |
 | Mapi | **Mapi 3D só no vídeo.** O app continua com o Mapi plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
