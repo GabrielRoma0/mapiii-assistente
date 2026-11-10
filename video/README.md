@@ -190,7 +190,7 @@ Vídeos grandes (câmera e gravações de tela) **não vão para o git**: ficam 
 
 | Cena | O que gravar | Como |
 |---|---|---|
-| 7 | 2 s: triagem chegando no "Pode ter direito" | `#/triagem` até a Rota, respondendo como cuidador de alguém em cadeira de rodas que usa ônibus |
+| 7 | 2 s: triagem chegando no "Pode ter direito" | `#/triagem` até a Rota, respondendo como cuidador de alguém em cadeira de rodas que usa ônibus. Atenção: o app não faz a pergunta "Para quem é a orientação?" do quadro 5; essa escolha é a da tela inicial ("Cuido de alguém"). Começar o corte por ela para bater com o quadro |
 | 9 | 2 s: mão virando o celular com o Mostre ao motorista | No celular de verdade, só a mão, na rua ou perto de uma porta |
 | 10 | Só o áudio: a voz do app falando o aviso (2 s) | Embarque no modo exemplo, gravando só o som |
 | 12 | Print do Lighthouse | `npm run lighthouse` |

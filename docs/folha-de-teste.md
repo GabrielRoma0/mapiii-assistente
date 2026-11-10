@@ -1,10 +1,10 @@
 # Folha de teste com pessoas
 
-Roteiro para testar o Mapiii com participantes e juntar os números do relatório e do pitch. Imprima ou copie para uma planilha. O case pede três indicadores: **acerto das orientações**, **tempo para encontrar a informação** e **facilidade de uso**. O Embarque garantido tem um quarto: **tempo até achar o ônibus certo**.
+Roteiro para testar o Mapiii com participantes e juntar os números do relatório e do pitch. Imprima, copie para uma planilha ou use o Google Forms montado a partir de [formulario-teste.md](formulario-teste.md). O case pede três indicadores: **acerto das orientações**, **tempo para encontrar a informação** e **facilidade de uso**. O Embarque garantido tem um quarto: **tempo até achar o ônibus certo**.
 
 Meta do guia v2: de 5 a 8 participantes, testes em 15 e 16/11. Mostre todos os números, inclusive os ruins.
 
-**Sem dados pessoais:** cada participante recebe só um código (P01, P02...). Não anote nome, idade exata, CPF, contato nem diagnóstico. Leia o termo de consentimento, peça permissão antes de começar e explique que a pessoa pode parar quando quiser. Anote só o perfil geral: "pessoa com deficiência", "cuidador(a)", "idoso(a)" ou "outro".
+**Sem dados pessoais:** cada participante recebe só um código (P01, P02...). Não anote nome, idade exata, CPF, contato nem diagnóstico. Leia o termo de consentimento ([convite-e-termo.md](convite-e-termo.md)), peça permissão antes de começar e explique que a pessoa pode parar quando quiser. Anote só o perfil geral: "pessoa com deficiência", "cuidador(a)", "idoso(a)" ou "outro".
 
 ## 0. Antes de cada sessão
 

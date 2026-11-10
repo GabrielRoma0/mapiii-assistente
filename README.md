@@ -106,6 +106,8 @@ Mede o assistente com gabaritos escritos à mão, só com a base real (`data/kb.
 
 Formatos e significado de cada número em [eval/README.md](eval/README.md).
 
+**Teste com pessoas (a distância):** formulário em https://docs.google.com/forms/d/e/1FAIpQLSfEOVKYIH9_19hVdXwO5Vo6Kfwglwxrg1lwgYx2OHYBYEvHTQ/viewform . O que ele pergunta e como analisar: [docs/formulario-teste.md](docs/formulario-teste.md).
+
 ## Como alimentar a base
 
 Os dados ficam em `data/` e entram no build (funcionam offline):

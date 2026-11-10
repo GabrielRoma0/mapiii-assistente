@@ -30,7 +30,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 - **CNH:** ficha `cnh-renovacao-pcd` (renovação, atalho "Quero dirigir") feita com 3 prints do Thor da página do Detran-SP, em `docs/fontes/cnh-renovacao-pcd/`. **A base tem 12 fichas.**
 - **SPTrans (H2):** `reclamacao-onibus-sptrans` (SP156 serviço 976; o "Fale Conosco" e os "Contatos" da SPTrans, por print, mandam reclamações para o 156) e `ouvidoria-sptrans` (segunda instância, ouvidoria@sptrans.com.br). **A base tem 14 fichas.**
 - **Falta (opcional):** `modelo_recurso` do Bilhete Único (precisa de `base_legal` com link; o "para" agora pode ser a Ouvidoria da SPTrans) e `base_legal` nas fichas novas.
-- **`auditar-perguntas`** já falhava antes (perguntas sem uso); agora são 4 (`p_quem`, `p_faixa`, `p_laudo`, `p_subprefeitura`), porque `p_cidade` passou a ser usada. `npm run verificar` passa (303 testes) e o `eval` segue em 100%.
+- **`auditar-perguntas`** já falhava antes (perguntas sem uso); agora são 4 (`p_quem`, `p_faixa`, `p_laudo`, `p_subprefeitura`), porque `p_cidade` passou a ser usada. `npm run verificar` passa (303 testes) e o `eval` segue em 100%. **Decisão do Gabriel (09/11): deixar como está.** A triagem já esconde perguntas que nenhuma ficha usa (conferido: aparecem só 8), então a falha do `auditar-perguntas` não afeta o app nem o vídeo.
 - As fichas também alimentam o assistente em Python da disciplina de PCP (https://github.com/thorflk/citizen-assist-ai).
 
 ## Atualizações de 09/11 (Thor): leia primeiro
@@ -232,6 +232,7 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 - **Atenção:** o `.env.local` deste computador aponta para o simulador. Antes do build de produção, ele precisa apontar para o Supabase da dupla (ou o Embarque fica só com o exemplo).
 
 ### H9. Teste com pessoas
+- **Decisão do Gabriel (09/11/2026): teste a distância, por Google Forms.** A pessoa recebe o link, faz a tarefa sozinha e responde. Formulário pronto: https://docs.google.com/forms/d/e/1FAIpQLSfEOVKYIH9_19hVdXwO5Vo6Kfwglwxrg1lwgYx2OHYBYEvHTQ/viewform (detalhes em [docs/formulario-teste.md](docs/formulario-teste.md)); convite em [docs/convite-e-termo.md](docs/convite-e-termo.md). O tempo vem em faixas informadas pela pessoa (dizer isso no relatório) e o Embarque fica fora. A folha presencial abaixo continua valendo para quem a dupla conseguir encontrar.
 - Siga a [folha de teste](docs/folha-de-teste.md): 5 a 8 participantes, só por código, os 4 indicadores (acerto, tempo × busca na web, tempo até o ônibus certo, facilidade de uso/SUS) e as perguntas abertas.
 - **No celular de verdade, conferir também:** voz (falar e ouvir), vibração do aviso de chegada, instalar o app, atalhos ao segurar o ícone, ler o QR do "Mostre ao motorista", modo um toque e um leitor de tela (TalkBack ou VoiceOver).
 - No fim, baixar os CSVs em `avaliacao.html`.
