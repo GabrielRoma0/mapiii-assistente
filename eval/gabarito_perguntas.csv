@@ -16,6 +16,37 @@ Qual a dose de dipirona para criança?,RECUSAR,ajuste
 Receita de bolo de cenoura,RECUSAR,ajuste
 Quem ganhou o jogo ontem?,RECUSAR,ajuste
 ????,RECUSAR,ajuste
+# --- Ajuste (C4, 10/11/2026): escritas pelo Claude Code para calibrar a busca, sem usar as perguntas do grupo teste ---
+"minha filha é cadeirante, ela consegue andar de onibus de graça em sao paulo?",bilhete-unico-especial-pcd,ajuste
+qual documento precisa levar pro cartao de gratuidade de pessoa com deficiencia na sptrans,bilhete-unico-especial-pcd,ajuste
+"o bilhete especial do meu irmao venceu, como renova",bilhete-unico-especial-pcd,ajuste
+"minha mae nunca contribuiu pro inss e tem deficiencia, ela pode receber um salario minimo?",bpc-pcd,ajuste
+como pedir o loas pra crianca com deficiencia,bpc-pcd,ajuste
+beneficio do governo de um salario pra deficiente de baixa renda,bpc-pcd,ajuste
+tem van adaptada da prefeitura que pega cadeirante em casa?,atende-mais,ajuste
+como cadastrar no atende+ da sptrans,atende-mais,ajuste
+transporte gratis porta a porta pra fazer fisioterapia,atende-mais,ajuste
+"vou visitar parente em minas, cadeirante viaja de graça de onibus pra outro estado?",passe-livre-interestadual,ajuste
+como tirar a carteirinha do passe livre interestadual,passe-livre-interestadual,ajuste
+deficiente tem desconto de imposto pra comprar carro novo?,isencao-ipi-iof-carro,ajuste
+como pedir isenção de ipi no carro adaptado,isencao-ipi-iof-carro,ajuste
+como tirar o cartao pra parar na vaga de deficiente,cartao-defis-estacionamento,ajuste
+credencial de estacionamento pra cadeirante em sp,cartao-defis-estacionamento,ajuste
+"buraco enorme na calçada da praça, quem conserta?",calcada-publica-manutencao,ajuste
+"a calçada do vizinho tem um degrau alto e a cadeira nao passa, como denunciar",calcada-particular-denuncia,ajuste
+"calçada em frente a uma casa sem calçamento nenhum, quem obriga a fazer?",calcada-particular-denuncia,ajuste
+tem um vaso enorme no meio da calçada bloqueando a cadeira de rodas,calcada-obstaculo-acessibilidade,ajuste
+qual o telefone da prefeitura de sp pra fazer pedido,central-156,ajuste
+"fiz um pedido na prefeitura e fecharam sem resolver, onde reclamo",ouvidoria-geral-municipio,ajuste
+como renova a carteira de motorista de quem tem deficiencia,cnh-renovacao-pcd,ajuste
+"o motorista do onibus foi grosso com minha mae cadeirante, como denuncio",reclamacao-onibus-sptrans,ajuste
+"reclamei na sptrans e ninguem respondeu, o que fazer",ouvidoria-sptrans,ajuste
+como pedir aposentadoria por invalidez,RECUSAR,ajuste
+quanto custa uma cadeira de rodas motorizada,RECUSAR,ajuste
+tem fila preferencial no banco pra deficiente?,RECUSAR,ajuste
+escola particular pode cobrar mais caro de aluno autista?,RECUSAR,ajuste
+como conseguir cuidador pelo governo,RECUSAR,ajuste
+qual o melhor plano de saude pra cadeirante,RECUSAR,ajuste
 # --- Grupo teste: 17 perguntas escritas por um amigo do Thor sem ver o app nem as fichas (10/11/2026). Gabarito marcado pelo Claude Code; RECUSAR = tema fora da base ---
 Como fas para pedir o bilhete unico especial de deficiente em sp? paga alguma coisa?,bilhete-unico-especial-pcd,teste
 "Meu pai usa cadeira de rodas, a gente tem direito a desconto pra comprar carro zero ou isencao de imposto? ipva tbm?",isencao-ipi-iof-carro,teste

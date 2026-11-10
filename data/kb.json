@@ -90,7 +90,8 @@
       "Cadeirante paga ônibus em São Paulo?",
       "Quais documentos preciso para o bilhete da pessoa com deficiência?",
       "Quanto tempo demora para o bilhete especial chegar?",
-      "Como renovo o Bilhete Único Especial?"
+      "Como renovo o Bilhete Único Especial?",
+      "Pessoa com deficiência anda de ônibus de graça em São Paulo?"
     ],
     "palavras_chave": [
       "bilhete único especial",
@@ -101,7 +102,10 @@
       "busca de cid",
       "ônibus",
       "renovar",
-      "segunda via"
+      "segunda via",
+      "gratuidade no ônibus",
+      "ônibus de graça",
+      "cartão de gratuidade"
     ],
     "fonte_nome": "SPTrans: Bilhete Único Especial da Pessoa com Deficiência",
     "fonte_url": "https://bilheteunico.sptrans.com.br/especial/pessoa-com-deficiencia/",
@@ -190,7 +194,8 @@
       "Como peço o BPC para o meu filho com deficiência?",
       "Quem tem deficiência e é de baixa renda recebe algum salário do governo?",
       "Precisa ter contribuído para o INSS para receber o BPC?",
-      "O INSS negou o BPC, o que eu faço?"
+      "O INSS negou o BPC, o que eu faço?",
+      "Como pedir o LOAS para criança com deficiência?"
     ],
     "palavras_chave": [
       "bpc",
@@ -305,7 +310,8 @@
       "ficha de avaliação médica",
       "autismo",
       "surdocegueira",
-      "cadeira de rodas"
+      "cadeira de rodas",
+      "van da prefeitura"
     ],
     "fonte_nome": "SPTrans: Regulamento do Serviço Atende (novembro de 2017)",
     "fonte_url": "https://www.sptrans.com.br/media/1392/regulamento_atende-nov_17.pdf",
@@ -574,7 +580,9 @@
       "estacionar",
       "cartão de estacionamento",
       "símbolo internacional de acesso",
-      "zona azul"
+      "zona azul",
+      "credencial de estacionamento",
+      "cadeirante"
     ],
     "fonte_nome": "Portal SP156: Cartão de estacionamento DeFis (pessoa com deficiência)",
     "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=3314",
@@ -716,7 +724,11 @@
       "degrau na calçada",
       "inclinação",
       "dono do imóvel",
-      "vizinho"
+      "vizinho",
+      "calçamento",
+      "sem calçada",
+      "frente de casa",
+      "imóvel"
     ],
     "fonte_nome": "Portal SP156: Calçada particular - denunciar calçada danificada ou inexistente",
     "fonte_url": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=906",
