@@ -41,3 +41,7 @@ tique.wav (cenas 12 e 13)
 ding.flac (cena 8)
   Faixa: Ding 1 · Autor: greenvwbeetle
   Link: https://freesound.org/people/greenvwbeetle/sounds/241288
+
+notificacao.wav (cena 10)
+  Faixa: Notification Sound · Autor: yfjesse
+  Link: https://freesound.org/people/yfjesse/sounds/235911

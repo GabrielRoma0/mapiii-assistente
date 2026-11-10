@@ -251,3 +251,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Sons: ambiente liberado para api.openverse.org; o Freesound recusa download automático, então `video/sons/BAIXAR.md` lista 12 sons CC0 (2 opções cada) com link, nome do arquivo e cena.
 - Sons: 5 de 12 recebidos do Thor (1ª opção de cada; rua convertida para MP3) e `video/sons/CREDITOS.txt` criado.
 - Sons: mais 5 recebidos (toque seco, whoosh, pop, tique, ding); faltam notificação e trilha.
+- Sons: notificação recebida (11 de 12); falta a trilha (grande demais para o chat).
