@@ -227,3 +227,10 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - **H1 e H2 pelo SP156 (09/11, tarde):** o SP156 abriu para leitura automática. 6 fichas novas com o texto oficial em `docs/fontes/`: `cartao-defis-estacionamento`, `calcada-publica-manutencao`, `calcada-particular-denuncia`, `calcada-obstaculo-acessibilidade`, `central-156` (agora `canalOficialId`) e `ouvidoria-geral-municipio`. A base tem 11 fichas. Táxi acessível ficou de fora (página de 2009). CNH e reclamação da SPTrans seguem por print.
 - **CNH da pessoa com deficiência (09/11):** ficha `cnh-renovacao-pcd` com 3 prints do Thor da página do Detran-SP (só carrega com JavaScript). Só renovação; valores da página em `limitacao`. A base tem 12 fichas.
 - **H2 fechada (09/11):** fichas `reclamacao-onibus-sptrans` (SP156 serviço 976, confirmado por 2 prints do Thor do "Fale Conosco" e dos "Contatos" da SPTrans) e `ouvidoria-sptrans` (página do SP156). Os dois ids entram em `canaisReclamacaoIds`. A base tem 14 fichas.
+
+## 09/11/2026 · Gabriel com o Claude Code
+
+- H8: `npm run testar-sptrans` deu "SPTrans OK" (2 pontos para "Paulista"). A chave do app "Mapiii" de 07/11 passou a ser aceita.
+- Criado o app "Mapiii v2" na SPTrans (Claude Code preencheu e salvou o formulário a pedido do Gabriel). A chave nova foi colada pelo Gabriel, mas ficou num segredo com nome errado (`SPTRANS_TOKESPTRANS_TOKENN`); a função continua com a chave antiga. Pendente: trocar `SPTRANS_TOKEN` pela chave nova, testar, apagar o segredo errado e o app antigo.
+- Corrigido: segredos refeitos, agora só `SPTRANS_TOKEN` com a chave do Mapiii v2 (digest `f12d6d26…`). `npm run testar-sptrans` de novo: "SPTrans OK". Falta apagar o app "Mapiii" antigo na SPTrans.
+- O portal "Meus Aplicativos" da SPTrans não oferece apagar nem editar app; o "Mapiii" antigo ficou sem uso.
