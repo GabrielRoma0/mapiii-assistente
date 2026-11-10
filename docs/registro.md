@@ -244,3 +244,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 ## 10/11/2026
 
 - H12: Gabriel aprovou cortar o login, o roteiro v2 e o Embarque ligado no site (faltam as variáveis do Actions). Teste com pessoas no vídeo (A ou B) fica para o Gabriel decidir; só a cena 12 depende disso. H10: Thor conferiu que o app funciona sem internet. Atualizados `PENDENCIAS.md` e `video/README.md`.
+- Vídeo: ícones dos ODS 10 e 11 em `video/ods/` (enviados pelo Thor; falta o link de origem e a confirmação na lista da GS). Mapa-múndi da cena 15 gerado do Natural Earth 1:110m (domínio público, via `world-atlas`) em `video/mapa/mundo.svg`, com o pino de São Paulo medido.

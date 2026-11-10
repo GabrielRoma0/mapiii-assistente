@@ -164,8 +164,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Estilo da legenda e chip do relógio | `video/quadros/legenda.png`, `legenda-sobre-quadro-01.png` e `video/quadros/relogio/` (`0740.png` a `0743.png`) | **Prontos** (08/11). Com eles, todos os pedidos do Claude Design estão feitos | — |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
-| Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | Falta | Dupla, até 10/11 |
-| Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/` | Falta | Dupla, ou o Claude Code se o site for liberado |
+| Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | **Ícones salvos (10/11)**. Falta anotar o link de origem e confirmar na lista da GS | Dupla |
+| Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/mundo.svg` | **Pronto (10/11).** Pino de São Paulo em x 711, y 717 (ver `video/mapa/README.md`) | — |
 | IBM Plex Mono (OFL) | `design-system/fonts/` | Falta | Claude Code |
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | Falta | Dupla, até 12/11 |
 | Narração em off | `video/remotion/public/narracao.wav` | Falta (depois do Censo) | Dupla, 17/11 |
