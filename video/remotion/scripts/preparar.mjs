@@ -15,10 +15,23 @@ function copiar(orig, dest) {
   mkdirSync(dirname(dest), { recursive: true });
   if (novo(orig, dest)) cpSync(orig, dest);
 }
+// Reduz a imagem com o ffmpeg, se ele estiver instalado. Sem ffmpeg (comum no Windows), copia no tamanho original:
+// o vídeo fica igual, só o Studio e o render ficam um pouco mais lentos.
+let temFfmpeg = true;
 function reduzir(orig, dest, largura) {
   mkdirSync(dirname(dest), { recursive: true });
   if (!novo(orig, dest)) return;
-  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', orig, '-vf', `scale=${largura}:-1:flags=lanczos`, dest]);
+  if (temFfmpeg) {
+    try {
+      execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', orig, '-vf', `scale=${largura}:-1:flags=lanczos`, dest]);
+      return;
+    } catch (e) {
+      if (e.code !== 'ENOENT') throw e;
+      temFfmpeg = false;
+      console.log('ffmpeg não encontrado: as imagens vão no tamanho original.');
+    }
+  }
+  cpSync(orig, dest);
 }
 const pasta = (p, filtro = () => true) => readdirSync(p).filter(filtro).map((f) => join(p, f));
 
