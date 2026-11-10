@@ -167,7 +167,7 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | **Pronto (10/11)**, de https://brasil.un.org/pt-br/sdgs; os dois confirmados pelo Thor na lista da GS | Dupla |
 | Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/mundo.svg` | **Pronto (10/11).** Pino de São Paulo em x 711, y 717 (ver `video/mapa/README.md`) | — |
 | IBM Plex Mono (OFL) | `design-system/fonts/` | Falta | Claude Code |
-| Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **11 de 12 prontos (10/11).** Falta a trilha (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
+| Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **Prontos (10/11):** os 12 sons em `video/sons/`, com créditos (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
 | Narração em off | `video/remotion/public/narracao.wav` | Falta (depois do Censo) | Dupla, 17/11 |
 | Cenas na câmera (2, 3, 5, 14 e 17) | `video/remotion/public/camera/` | Falta | Dupla, até 13/11 |
 | Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/remotion/public/app/` | Falta (depois da H1) | Claude Code + dupla |

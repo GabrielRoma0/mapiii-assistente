@@ -45,3 +45,7 @@ ding.flac (cena 8)
 notificacao.wav (cena 10)
   Faixa: Notification Sound · Autor: yfjesse
   Link: https://freesound.org/people/yfjesse/sounds/235911
+
+trilha.mp3 (da cena 6 em diante, em loop, bem baixa; convertida para MP3 pelo Thor)
+  Faixa: Lofi Guitar Loop EM 119 BPM (3) · Autor: holizna
+  Link: https://freesound.org/people/holizna/sounds/629150

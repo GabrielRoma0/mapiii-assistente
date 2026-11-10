@@ -252,3 +252,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Sons: 5 de 12 recebidos do Thor (1ª opção de cada; rua convertida para MP3) e `video/sons/CREDITOS.txt` criado.
 - Sons: mais 5 recebidos (toque seco, whoosh, pop, tique, ding); faltam notificação e trilha.
 - Sons: notificação recebida (11 de 12); falta a trilha (grande demais para o chat).
+- Sons: trilha recebida (loop de 38 s, MP3). Os 12 sons estão prontos, com créditos.
