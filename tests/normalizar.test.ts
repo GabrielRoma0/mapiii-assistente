@@ -58,3 +58,13 @@ teste('tokenizar: texto vazio ou inválido dá lista vazia', () => {
   assert.deepEqual(tokenizar(null), []);
   assert.deepEqual(tokenizar('?!...'), []);
 });
+
+teste('tokenizar: ignora abreviações de mensagem e o nome da cidade', () => {
+  assert.deepEqual(tokenizar('q tbm pq mto qm vc kkk pro sp São Paulo ônibus'), ['onibus']);
+});
+
+teste('tokenizar: junta formas da mesma palavra', () => {
+  assert.deepEqual(tokenizar('deficiente PcD deficiência'), ['deficiencia', 'deficiencia', 'deficiencia']);
+  assert.deepEqual(tokenizar('de graça grátis gratuita gratuidade'), ['gratuito', 'gratuito', 'gratuito', 'gratuito']);
+  assert.deepEqual(tokenizar('renova renovação denuncio denúncia reclamo reclamação'), ['renovar', 'renovar', 'denunciar', 'denunciar', 'reclamar', 'reclamar']);
+});

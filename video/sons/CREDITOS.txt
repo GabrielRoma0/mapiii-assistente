@@ -1,0 +1,51 @@
+Sons do vídeo pitch do Mapiii (FIAP Global Solution 2026)
+Todos com licença CC0 1.0 (domínio público, https://creativecommons.org/publicdomain/zero/1.0/): o crédito não é obrigatório e é dado por cortesia.
+Encontrados no Openverse (openverse.org) e baixados do Freesound pelo Thor em 10/11/2026.
+
+onibus-freio.wav (cena 1)
+  Faixa: Jbrake_sim_96k.wav · Autor: vacuumfan7072
+  Link: https://freesound.org/people/vacuumfan7072/sounds/422442
+
+onibus-porta.mp3 (cenas 1 e 18)
+  Faixa: Bus-doors-sound-effect.mp3 · Autor: reviewsoffers
+  Link: https://freesound.org/people/reviewsoffers/sounds/472605
+
+rua-ambiente.mp3 (cena 1; convertido de WAV para MP3 192 kbps pelo Claude Code)
+  Faixa: Small quiet street ambience · Autor: Oper8
+  Link: https://freesound.org/people/Oper8/sounds/241135
+
+papel-rasgando.wav (cena 3)
+  Faixa: Packaging Paper Tear Short.wav · Autor: afleetingspeck
+  Link: https://freesound.org/people/afleetingspeck/sounds/140461
+
+rampa-descendo.mp3 (cena 18)
+  Faixa: Hydraulics 2.mp3 · Autor: behutchi
+  Link: https://freesound.org/people/behutchi/sounds/442259
+
+toque-seco.wav (cenas 3 e 7)
+  Faixa: UI click · Autor: Ranner
+  Link: https://freesound.org/people/Ranner/sounds/488534
+
+whoosh.flac (cenas 5, 6 e 9)
+  Faixa: Swosh swoosh whoosh air sound · Autor: qubodup
+  Link: https://freesound.org/people/qubodup/sounds/60026
+
+pop.flac (cenas 6, 11, 15 e 17)
+  Faixa: Pop 2 · Autor: greenvwbeetle
+  Link: https://freesound.org/people/greenvwbeetle/sounds/244654
+
+tique.wav (cenas 12 e 13)
+  Faixa: Metal tick 1 · Autor: kubawolanin
+  Link: https://freesound.org/people/kubawolanin/sounds/185611
+
+ding.flac (cena 8)
+  Faixa: Ding 1 · Autor: greenvwbeetle
+  Link: https://freesound.org/people/greenvwbeetle/sounds/241288
+
+notificacao.wav (cena 10)
+  Faixa: Notification Sound · Autor: yfjesse
+  Link: https://freesound.org/people/yfjesse/sounds/235911
+
+trilha.mp3 (da cena 6 em diante, em loop, bem baixa; convertida para MP3 pelo Thor)
+  Faixa: Lofi Guitar Loop EM 119 BPM (3) · Autor: holizna
+  Link: https://freesound.org/people/holizna/sounds/629150

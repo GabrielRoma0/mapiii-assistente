@@ -2,7 +2,7 @@
 export const CONFIG = {
   busca: {
     // Pontuação final vai de 0 a 1. Abaixo de limiteResposta: "não encontrei isso na minha base".
-    limiteResposta: 0.3,
+    limiteResposta: 0.25,
     // Entradas abaixo disso não aparecem em "Você quis dizer?".
     limiteSugestao: 0.15,
     maxSugestoes: 2,

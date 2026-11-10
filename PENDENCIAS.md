@@ -8,11 +8,31 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 09/11/2026.
+Última atualização: 10/11/2026.
 
 ---
 
-## Atualizações de 09/11, tarde (Thor, com o Claude Code): leia primeiro
+## Atualizações de 10/11 (Thor, com o Claude Code): leia primeiro
+
+**Decisões (H12), aprovadas pelo Gabriel em 10/11:**
+
+| Decisão | Ficou assim |
+|---|---|
+| Conta opcional (login) | **Cortada.** O banco fica no repositório sem uso |
+| Roteiro do pitch | **v2 (enxuto, cerca de 2:12)**, o de [video/README.md](video/README.md) |
+| Embarque no site publicado | **Ligado.** O Gabriel criou as 3 variáveis do Actions em 10/11; valem a partir da próxima publicação (envio ao `main`) |
+| Teste com pessoas no vídeo | **Não entra (B), decisão do Gabriel em 10/11.** A cena 12 fica com 12 de 12 recusas e acessibilidade 100; o formulário vai para o relatório e a tela "Sobre o projeto" |
+
+- **H9 = o formulário do Gabriel** ([docs/formulario-teste.md](docs/formulario-teste.md)). Falta mandar o link e juntar 5 a 8 respostas até 15/11.
+- **H10: o app funciona sem internet** (conferido pelo Thor em 10/11).
+- **H5 (perguntas): feito em 10/11.** 17 perguntas do grupo `teste`, escritas por um amigo do Thor sem ver o app (gabarito marcado pelo Claude Code: 7 com ficha, 10 fora da base). **Resultado honesto: 58,8% (10 de 17)**, abaixo da meta de 85%. Todos os 7 erros são "não encontrei" (a ficha certa aparecia nas sugestões em quase todos), ou seja, o limite da busca (0,3) está alto para perguntas longas e informais e as fichas não têm perguntas `ajuste` próprias. Recusas: 100% (10 de 10 no grupo teste).
+- **C4, calibração da busca: feita em 10/11.** 30 perguntas `ajuste` novas, escritas pelo Claude Code sem usar as 17 do teste. Mudanças: abreviações de mensagem e "sp"/"paulo" ignorados; formas iguais juntas (deficiente = deficiência, de graça = gratuidade, renova, denuncia, reclamo); algumas palavras-chave e perguntas de exemplo nas fichas; limite de resposta de 0,3 para 0,25. Resultado: ajuste 100% (42/42), recusas 100% (26/26), **teste 58,8% → 70,6%** (12/17). Nenhum ajuste foi feito olhando os erros do teste; mesmo assim o Claude Code já tinha lido as 17 perguntas, então o número honesto final vem de um **segundo lote `teste`** (15 a 20 perguntas de outra pessoa que nunca viu o app). Para a banca: mostrar os dois números. Cenários (`eval/gabarito_cenarios.json`): opcionais.
+- **H5, 2º lote: feito em 10/11.** 21 perguntas de outra pessoa que não viu o app, recebidas **depois** da calibração (17 sobre direitos e 4 que devem ser recusadas). **Número honesto: 76,2% (16 de 21)**; recusas 13 de 14 (o rodízio respondeu com a ficha do IPI). Grupo teste somado: 73,7% (28/38). Meta do guia (85%) não alcançada: dizer isso no relatório. Erros do 2º lote: 4 "não encontrei" e 1 resposta errada; nenhum ajuste foi feito em cima deles.
+- **Vídeo: 1ª versão montada no Remotion (10/11)**, em `video/remotion/` (como abrir: `video/remotion/README.md`). Faltam as gravações de câmera e a narração, que vão em `video/gravacoes/` (fora do git).
+- **Vídeo:** número do Censo 2022 fechado (14,4 milhões, IBGE Educa de 24/06/2025 e o informativo do IBGE); ODS 10 e 11 confirmados na lista da GS. Não há mais [PENDENTE] nem [CONFIRMAR] no roteiro.
+- `npm run verificar` passa (303 testes); `eval`: 12 de 12 recusas.
+
+## Atualizações de 09/11, tarde (Thor, com o Claude Code)
 
 **H1 e H2 feitas: a base tem 14 fichas.** As 2 últimas (reclamação de ônibus e Ouvidoria da SPTrans) usam 2 prints do Thor do site da SPTrans e o texto do SP156; os ids estão em `canaisReclamacaoIds`, o que liga o "Onde enviar" da Reclamação pronta. O **Portal SP156 passou a abrir para leitura automática**, então estas 6 fichas foram montadas com o texto oficial baixado pelo Claude Code (em `docs/fontes/<id>/`), sem print:
 
@@ -137,10 +157,10 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | ~~**H1**~~ | ~~**Fichas da base** (10 a 13, com fonte oficial e lei)~~ **Feito 09/11: 14 fichas** (Bilhete Único Especial, BPC, Atende+, Passe Livre Interestadual, IPI/IOF, Cartão DeFis, CNH, 3 de calçada, Central 156, Ouvidoria Geral, reclamação de ônibus e Ouvidoria da SPTrans). Opcional: `base_legal` com link nas fichas novas | Thor | **9/11** | — |
 | ~~**H2**~~ | ~~Fichas dos **canais oficiais**~~ **Feito 09/11:** Central 156, Ouvidoria Geral do Município, reclamação de ônibus (SPTrans pelo 156) e Ouvidoria da SPTrans. Opcional: `modelo_recurso` do Bilhete Único | Thor | 9/11 | — |
 | **C1** | Montar o JSON das fichas, configurar os canais em `config.ts`, rodar validadores e `eval`. **Feito 09/11:** 14 fichas, `canalOficialId` e `canaisReclamacaoIds` | Claude Code | — | — |
-| **H5** | **Gabarito do grupo `teste`** (perguntas escritas sem olhar as fichas) e cenários | **Gabriel** | 10/11 | lista de ids das fichas |
+| **H5** | **Gabarito do grupo `teste`**: **feito 10/11** (17 perguntas, 58,8%). Falta um segundo lote depois da C4 e, opcional, os cenários | Dupla | 12/11 | C4 |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
-| **H12** | **Decisões finais** (seção 5) | Dupla | 10/11 | nada |
-| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). Falta: decidir o Embarque e conferir no celular sem internet | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H12** | **Decisões finais** (seção 5). **Feito 10/11**, menos o teste no vídeo (A ou B), que o Gabriel decide | Dupla | 10/11 | nada |
+| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). ~~Falta: decidir o Embarque e conferir no celular sem internet~~ **10/11:** Embarque ligado (variáveis do Actions criadas pelo Gabriel) e sem internet conferido. Falta abrir o site no celular e testar um ponto real | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
@@ -251,13 +271,13 @@ O Claude Code **explica, prepara e confere**, mas **não** inventa conteúdo, n�
 
 | Decisão | Opções | Recomendação |
 |---|---|---|
-| **Conta opcional (login)** | Cortar ou fazer | **Cortar** (o guia pede "nenhum login"). O banco fica no repositório sem uso. Falta o Gabriel confirmar. |
-| **Embarque no site publicado** | Ligado com dado real, só exemplo, ou desligado | Ligado; com exemplo até o token funcionar |
+| **Conta opcional (login)** | Cortar ou fazer | **Cortado** (Gabriel confirmou em 10/11). O banco fica no repositório sem uso. |
+| **Embarque no site publicado** | Ligado com dado real, só exemplo, ou desligado | **Ligado** (Gabriel aprovou em 10/11). Criar as variáveis do Actions |
 | **Onde publicar** | GitHub Pages, Netlify, Vercel | GitHub Pages: já está no GitHub; o Claude Code faz a publicação automática (T8) depois que alguém liga em Settings → Pages |
 | **Endereço do site** | Nome padrão ou domínio próprio | Nome padrão legível (sem custo) |
 | **Pitch segue o case?** | Perguntar ao professor ou Scrum Master | Perguntar; a solução cumpre o case de qualquer forma |
-| **Teste com pessoas (H9)** | Teste completo com 5 a 8 pessoas ou só demonstrativo | Proposta do Thor (07/11): sem teste com pessoas; o vídeo usa só números já medidos (roteiro v2). Falta o Gabriel concordar. Sem números, a tela "Sobre o projeto" fica sem `numeros` de teste |
-| **Roteiro do pitch** | v1 (Gabriel, 3:00) ou v2 (Thor, 2:10) | **Thor escolheu o v2 (07/11)**, agora em [video/README.md](video/README.md). Falta o Gabriel confirmar. O v1 continua no histórico do git |
+| **Teste com pessoas (H9)** | Teste completo com 5 a 8 pessoas ou só demonstrativo | 09/11: teste a distância pelo formulário do Gabriel. No vídeo: o Gabriel escolhe A (números do formulário na cena 12) ou B (sem eles). Sem números, a tela "Sobre o projeto" fica sem `numeros` de teste |
+| **Roteiro do pitch** | v1 (Gabriel, 3:00) ou v2 (Thor, 2:10) | **v2**, em [video/README.md](video/README.md). Gabriel confirmou em 10/11. O v1 continua no histórico do git |
 
 Já decidido: Embarque por ponto; voz padrão do aparelho; lembrar respostas no aparelho (desmarcado por padrão); confirmação antes de apagar; ferramentas de teste só de desenvolvimento; repositório público.
 

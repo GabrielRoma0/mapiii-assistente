@@ -16,8 +16,21 @@ export const PALAVRAS_VAZIAS = new Set([
   'ser', 'sao', 'foi', 'era', 'sou', 'estao', 'estar',
   'ter', 'tem', 'tenho', 'tinha', 'ha',
   'posso', 'pode', 'podem', 'poder', 'preciso', 'quero', 'queria', 'gostaria', 'saber',
-  'fazer', 'faco', 'faz', 'ola', 'oi', 'obrigado', 'obrigada'
+  'fazer', 'faco', 'faz', 'ola', 'oi', 'obrigado', 'obrigada',
+  // Escrita informal (WhatsApp) e a cidade, que vale para a base inteira (C4, 10/11/2026).
+  'q', 'tb', 'tbm', 'pq', 'mto', 'mt', 'qm', 'vc', 'ta', 'ne', 'kk', 'kkk', 'kkkk', 'pro', 'pros', 'pras',
+  'algum', 'alguma', 'alguns', 'algumas', 'coisa', 'tipo', 'gente', 'la', 'ai', 'sp', 'paulo'
 ]);
+
+// Formas da mesma palavra que a busca deve tratar como iguais (aplicado depois do singular, igual na base e na pergunta).
+// Só variações de escrita e de flexão; nenhum sinônimo muda o assunto.
+export const FORMAS_IGUAIS: Record<string, string> = {
+  deficiente: 'deficiencia', pcd: 'deficiencia',
+  gratis: 'gratuito', graca: 'gratuito', gratuita: 'gratuito', gratuidade: 'gratuito',
+  renova: 'renovar', renovacao: 'renovar', renovo: 'renovar',
+  denuncio: 'denunciar', denuncia: 'denunciar', denuncie: 'denunciar',
+  reclamo: 'reclamar', reclamacao: 'reclamar', reclamei: 'reclamar', reclame: 'reclamar'
+};
 
 export function normalizar(texto: unknown): string {
   if (typeof texto !== 'string') return '';
@@ -44,5 +57,6 @@ export function tokenizar(texto: unknown): string[] {
   return normal
     .split(' ')
     .filter((p) => p.length >= 2 && !PALAVRAS_VAZIAS.has(p))
-    .map(singular);
+    .map(singular)
+    .map((p) => FORMAS_IGUAIS[p] ?? p);
 }
