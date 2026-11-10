@@ -102,7 +102,7 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 1 | 0:00–0:07 | Gancho | 01 | Ponto de ônibus de lado, pessoa em cadeira de rodas em silhueta. Um chip de relógio "7:40" entra no canto em "Sete e quarenta". O ônibus entra, para, a porta abre, **a rampa não desce**, o ônibus vai embora | Sete e quarenta. O ônibus chegou. A rampa, não. | off | O ônibus chegou.<br>**A rampa, não.** | Rua ao fundo; freio e porta; silêncio quando ele sai |
 | 2 | 0:07–0:19 | Gancho | — | Thor na câmera. O chip do relógio continua no canto e avança um minuto | Para quem usa cadeira de rodas, essa cena é real. E quem cuida de alguém conhece a pergunta que vem depois: o que eu posso pedir? Onde? O que eu levo? | T | O que eu posso pedir?<br>Onde? O que eu levo? | Voz limpa |
 | 3 | 0:19–0:25 | Problema | 02 | Gabriel na câmera, depois três cartões entrando um por palavra. Em cada cartão, o seu objeto 3D (`video/objetos-3d/`): papéis voando, documento enorme, celular com anzol. No "golpe", um risco corta uma linha cinza de "site falso" | A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe. | G → cartões | Espalhada.<br>Difícil.<br>**Com golpe.** | Um toque seco por cartão; papel rasgando no "golpe" |
-| 4 | 0:25–0:31 | Problema | 03 | Número grande rolando com borrão vertical até o valor; fonte embaixo. O chip do relógio sai | No Brasil, são [PENDENTE: número do Censo 2022, conferido no IBGE] pessoas com deficiência, segundo o Censo de 2022. | off | [PENDENTE]<br>Fonte: IBGE, Censo 2022 | Contador rápido que para no número |
+| 4 | 0:25–0:31 | Problema | 03 | Número grande rolando com borrão vertical até o valor; fonte embaixo. O chip do relógio sai | No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de 2022. | off | **14,4 milhões**<br>Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais) | Contador rápido que para no número |
 | 5 | 0:31–0:36 | Virada | — | Thor na câmera, mais perto | E se o caminho coubesse no bolso, com a fonte junto? | T | — | Pausa curta antes; whoosh na saída |
 | 6 | 0:36–0:43 | Solução | 04 | Círculo Space Indigo cresce do centro e cobre a tela; abre revelando o logo. O Mapi 3D (`bom`) sobe em "Mapi" e flutua. Depois, quatro chips pequenos entram nos cantos, um por vez, só com frases do app: "Pode ter direito", "Fonte oficial", "Sem CPF", "Emergência: 192" | Esse é o Mapiii. O mapa dos seus direitos. E esse é o Mapi. | off | **Mapiii**<br>o mapa dos seus direitos | Whoosh no círculo; pop no Mapi; a trilha entra baixa |
 | 7 | 0:43–0:51 | Descubra | 05 | Celular entra inclinado com a triagem; um botão é tocado; o cartão "Pode ter direito" sai da tela e os passos da Rota descem linha por linha (linhas cinza). Selos "Sem nome" e "Sem CPF" nas palavras. Mapi 3D `procurando`. No fim, **corte de 2 s da triagem real** | Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê. | off | Sem nome. Sem CPF. | Toques de interface baixos |
@@ -114,7 +114,7 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 13 | 1:37–1:42 | Prova | 11 | Os 6 tópicos entram um por vez, cada um com o seu ícone | E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta. | off | Sem internet · Um toque · A, A+, A++ · Ouve em voz alta · Confere se é oficial · Sem login, sem cadastro | Tique a cada tópico |
 | 14 | 1:42–1:47 | Escala | — | Gabriel na câmera | Começamos por São Paulo. A SPTrans é só o primeiro exemplo. | G | — | — |
 | 15 | 1:47–1:57 | Escala | 12 | Mapa-múndi de uso livre (no lugar do desenhado à mão do quadro). O pino do Mapi pulsa em São Paulo; pinos acendem em "cidade", "estado" e "país" | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo |
-| 16 | 1:57–2:01 | Impacto | 15 (novo) | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 [CONFIRMAR na lista oficial da GS] | — |
+| 16 | 1:57–2:01 | Impacto | 15 (novo) | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 | — |
 | 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Mapi 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Somos o Thor (G) e o Gabriel. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Mapi |
 | 18 | 2:08–2:12 | Fecho | 14 (novo) | O mesmo ponto de ônibus da cena 1. O ônibus para, **a rampa desce** e a pessoa em cadeira de rodas embarca. Logo grande, aviso de protótipo, FIAP Global Solution 2026 | Mapiii. O mapa dos seus direitos. | off | Mapiii · o mapa dos seus direitos<br>Protótipo de estudo, não é canal oficial. | Rampa descendo; 1 s de silêncio no fim |
 
@@ -126,7 +126,7 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 [off] Sete e quarenta. O ônibus chegou. A rampa, não.
 [Thor] Para quem usa cadeira de rodas, essa cena é real. E quem cuida de alguém conhece a pergunta que vem depois: o que eu posso pedir? Onde? O que eu levo?
 [Gabriel] A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe.
-[off] No Brasil, são [PENDENTE, por extenso] pessoas com deficiência, segundo o Censo de dois mil e vinte e dois.
+[off] No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de dois mil e vinte e dois.
 [Thor] E se o caminho coubesse no bolso, com a fonte junto?
 [off] Esse é o Mapiii. O mapa dos seus direitos. E esse é o Mapi.
 [off] Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê.
@@ -163,8 +163,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Moldura das cenas de câmera e nomes | `video/quadros/camera-moldura.png` (verde em x 52, y 52, 1816 × 976 px, cantos de cerca de 58 px), `camera-nomes.png` e `camera-nomes/` (`thor.png`, `gabriel.png`) | **Pronto** (08/11) | — |
 | Estilo da legenda e chip do relógio | `video/quadros/legenda.png`, `legenda-sobre-quadro-01.png` e `video/quadros/relogio/` (`0740.png` a `0743.png`) | **Prontos** (08/11). Com eles, todos os pedidos do Claude Design estão feitos | — |
 | Quadros em vetor (1 a 14), de onde o Claude Code tira as camadas para animar | `design-system/Mapiii Pitch Quadros 16x9.html` | **Atualizado** (08/11) | — |
-| Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | Falta | Dupla, até 10/11 |
-| Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | **Ícones salvos (10/11)**, de https://brasil.un.org/pt-br/sdgs. Falta confirmar na lista da GS | Dupla |
+| Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | **Pronto (10/11):** 14,4 milhões (7,3% das pessoas com 2 anos ou mais). Fonte: IBGE Educa, 24/06/2025, https://educa.ibge.gov.br/jovens/materias-especiais/22695-censo-2022-7-3-da-populacao-com-2-anos-ou-mais-tinha-alguma-deficiencia.html e o informativo https://biblioteca.ibge.gov.br/visualizacao/livros/liv102317_informativo.pdf . Conferido por print do Thor em 10/11/2026 | — |
+| Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | **Pronto (10/11)**, de https://brasil.un.org/pt-br/sdgs; os dois confirmados pelo Thor na lista da GS | Dupla |
 | Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/mundo.svg` | **Pronto (10/11).** Pino de São Paulo em x 711, y 717 (ver `video/mapa/README.md`) | — |
 | IBM Plex Mono (OFL) | `design-system/fonts/` | Falta | Claude Code |
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | Falta | Dupla, até 12/11 |
@@ -294,7 +294,7 @@ REGRAS
 | 1 | Desenho de um ponto de ônibus. Uma pessoa em cadeira de rodas espera. São sete e quarenta. O ônibus para, abre a porta, a rampa não desce, e ele vai embora. |
 | 2 | Thor fala para a câmera. |
 | 3 | Gabriel fala para a câmera. Depois, três cartões: espalhada, difícil, com golpe. |
-| 4 | Número grande: [PENDENTE]. Embaixo, "Fonte: IBGE, Censo 2022". |
+| 4 | Número grande: 14,4 milhões. Embaixo, "Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais)". |
 | 5 | Thor, mais perto da câmera. |
 | 6 | Um círculo escuro cobre a tela e revela o logo do Mapiii. Entra o Mapi, um personagem em forma de pino de mapa com duas folhinhas, sorrindo e acenando. |
 | 7 | Um celular com perguntas de botões grandes. Sai dele um cartão "Pode ter direito". Selos: "Sem nome", "Sem CPF". |

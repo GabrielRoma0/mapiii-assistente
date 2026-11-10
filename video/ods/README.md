@@ -4,4 +4,4 @@
 - Na montagem: 420 × 420 px, em x 400, y 271 (ODS 10) e x 1100, y 271 (ODS 11) no quadro 15.
 - Uso conforme as diretrizes de uso dos ícones dos ODS da ONU (uso informativo, sem alterar cores nem desenho).
 - Origem: https://brasil.un.org/pt-br/sdgs (página oficial da ONU Brasil), conferida pelo Thor em 10/11/2026.
-- **Falta:** confirmar os dois ODS na lista oficial da Global Solution.
+- Os dois confirmados pelo Thor na lista oficial da Global Solution (10/11/2026).
