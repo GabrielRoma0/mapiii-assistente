@@ -240,3 +240,7 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - `docs/formulario-teste.md`: estrutura do Google Forms do teste (consentimento, parte de quem aplica, facilidade 1 a 5, SUS opcional, perguntas abertas), anônimo e sem coletar e-mail, para copiar a partir do formulário do Gabriel sobre calçadas.
 - H9 passa a ser a distância (decisão do Gabriel): `docs/formulario-teste.md` reescrito para a pessoa responder sozinha (tarefa do Bilhete Único Especial no Mapiii e no Google, tempo em faixas, acerto conferido depois pela dupla, versões A e B para alternar a ordem); convite ajustado para mandar com o link.
 - Formulário do teste criado pelo Gabriel no Google Forms (uma versão só, Mapiii primeiro): link no README, no convite e em `docs/formulario-teste.md`, que ficou só com o link, o resumo das perguntas, os limites para o relatório e o que fazer depois. Conferido: abre sem login, sem coletar e-mail, 17 perguntas.
+
+## 10/11/2026
+
+- H12: Gabriel aprovou cortar o login, o roteiro v2 e o Embarque ligado no site (faltam as variáveis do Actions). Teste com pessoas no vídeo (A ou B) fica para o Gabriel decidir; só a cena 12 depende disso. H10: Thor conferiu que o app funciona sem internet. Atualizados `PENDENCIAS.md` e `video/README.md`.
