@@ -21,3 +21,23 @@ papel-rasgando.wav (cena 3)
 rampa-descendo.mp3 (cena 18)
   Faixa: Hydraulics 2.mp3 · Autor: behutchi
   Link: https://freesound.org/people/behutchi/sounds/442259
+
+toque-seco.wav (cenas 3 e 7)
+  Faixa: UI click · Autor: Ranner
+  Link: https://freesound.org/people/Ranner/sounds/488534
+
+whoosh.flac (cenas 5, 6 e 9)
+  Faixa: Swosh swoosh whoosh air sound · Autor: qubodup
+  Link: https://freesound.org/people/qubodup/sounds/60026
+
+pop.flac (cenas 6, 11, 15 e 17)
+  Faixa: Pop 2 · Autor: greenvwbeetle
+  Link: https://freesound.org/people/greenvwbeetle/sounds/244654
+
+tique.wav (cenas 12 e 13)
+  Faixa: Metal tick 1 · Autor: kubawolanin
+  Link: https://freesound.org/people/kubawolanin/sounds/185611
+
+ding.flac (cena 8)
+  Faixa: Ding 1 · Autor: greenvwbeetle
+  Link: https://freesound.org/people/greenvwbeetle/sounds/241288

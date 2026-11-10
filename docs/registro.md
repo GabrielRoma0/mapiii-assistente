@@ -250,3 +250,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - H5 2º lote: 21 perguntas `teste` de outra pessoa, depois da C4: 76,2% (16/21), recusas 13/14. Vídeo: Censo 2022 = 14,4 milhões de pessoas com deficiência (2 anos ou mais), IBGE Educa 24/06/2025 e informativo liv102317, conferido por print do Thor; ODS 10 e 11 confirmados na lista da GS.
 - Sons: ambiente liberado para api.openverse.org; o Freesound recusa download automático, então `video/sons/BAIXAR.md` lista 12 sons CC0 (2 opções cada) com link, nome do arquivo e cena.
 - Sons: 5 de 12 recebidos do Thor (1ª opção de cada; rua convertida para MP3) e `video/sons/CREDITOS.txt` criado.
+- Sons: mais 5 recebidos (toque seco, whoosh, pop, tique, ding); faltam notificação e trilha.
