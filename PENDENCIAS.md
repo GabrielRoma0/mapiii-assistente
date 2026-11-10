@@ -20,7 +20,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 |---|---|
 | Conta opcional (login) | **Cortada.** O banco fica no repositório sem uso |
 | Roteiro do pitch | **v2 (enxuto, cerca de 2:12)**, o de [video/README.md](video/README.md) |
-| Embarque no site publicado | **Ligado.** Falta o Gabriel criar as 3 variáveis do Actions (ver H10) |
+| Embarque no site publicado | **Ligado.** O Gabriel criou as 3 variáveis do Actions em 10/11; valem a partir da próxima publicação (envio ao `main`) |
 | Teste com pessoas no vídeo | **Não entra (B), decisão do Gabriel em 10/11.** A cena 12 fica com 12 de 12 recusas e acessibilidade 100; o formulário vai para o relatório e a tela "Sobre o projeto" |
 
 - **H9 = o formulário do Gabriel** ([docs/formulario-teste.md](docs/formulario-teste.md)). Falta mandar o link e juntar 5 a 8 respostas até 15/11.
@@ -28,6 +28,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 - **H5 (perguntas): feito em 10/11.** 17 perguntas do grupo `teste`, escritas por um amigo do Thor sem ver o app (gabarito marcado pelo Claude Code: 7 com ficha, 10 fora da base). **Resultado honesto: 58,8% (10 de 17)**, abaixo da meta de 85%. Todos os 7 erros são "não encontrei" (a ficha certa aparecia nas sugestões em quase todos), ou seja, o limite da busca (0,3) está alto para perguntas longas e informais e as fichas não têm perguntas `ajuste` próprias. Recusas: 100% (10 de 10 no grupo teste).
 - **C4, calibração da busca: feita em 10/11.** 30 perguntas `ajuste` novas, escritas pelo Claude Code sem usar as 17 do teste. Mudanças: abreviações de mensagem e "sp"/"paulo" ignorados; formas iguais juntas (deficiente = deficiência, de graça = gratuidade, renova, denuncia, reclamo); algumas palavras-chave e perguntas de exemplo nas fichas; limite de resposta de 0,3 para 0,25. Resultado: ajuste 100% (42/42), recusas 100% (26/26), **teste 58,8% → 70,6%** (12/17). Nenhum ajuste foi feito olhando os erros do teste; mesmo assim o Claude Code já tinha lido as 17 perguntas, então o número honesto final vem de um **segundo lote `teste`** (15 a 20 perguntas de outra pessoa que nunca viu o app). Para a banca: mostrar os dois números. Cenários (`eval/gabarito_cenarios.json`): opcionais.
 - **H5, 2º lote: feito em 10/11.** 21 perguntas de outra pessoa que não viu o app, recebidas **depois** da calibração (17 sobre direitos e 4 que devem ser recusadas). **Número honesto: 76,2% (16 de 21)**; recusas 13 de 14 (o rodízio respondeu com a ficha do IPI). Grupo teste somado: 73,7% (28/38). Meta do guia (85%) não alcançada: dizer isso no relatório. Erros do 2º lote: 4 "não encontrei" e 1 resposta errada; nenhum ajuste foi feito em cima deles.
+- **Vídeo: 1ª versão montada no Remotion (10/11)**, em `video/remotion/` (como abrir: `video/remotion/README.md`). Faltam as gravações de câmera e a narração, que vão em `video/gravacoes/` (fora do git).
 - **Vídeo:** número do Censo 2022 fechado (14,4 milhões, IBGE Educa de 24/06/2025 e o informativo do IBGE); ODS 10 e 11 confirmados na lista da GS. Não há mais [PENDENTE] nem [CONFIRMAR] no roteiro.
 - `npm run verificar` passa (303 testes); `eval`: 12 de 12 recusas.
 
@@ -159,7 +160,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | **H5** | **Gabarito do grupo `teste`**: **feito 10/11** (17 perguntas, 58,8%). Falta um segundo lote depois da C4 e, opcional, os cenários | Dupla | 12/11 | C4 |
 | ~~**H4**~~ | ~~Conferir as **32 subprefeituras**~~ **Feito 07/11** | Gabriel | 10/11 | nada |
 | **H12** | **Decisões finais** (seção 5). **Feito 10/11**, menos o teste no vídeo (A ou B), que o Gabriel decide | Dupla | 10/11 | nada |
-| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). ~~Falta: decidir o Embarque e conferir no celular sem internet~~ **10/11:** Embarque ligado (falta criar as variáveis do Actions) e sem internet conferido | Dupla | 12/11 | H1 (primeiras fichas), H12 |
+| **H10** | **Publicar o site** (com `https`): **no ar desde 07/11** em https://gabrielroma0.github.io/mapiii-assistente/ (atualiza a cada envio ao `main`). ~~Falta: fichas~~ (14 fichas no ar desde 09/11). ~~Falta: decidir o Embarque e conferir no celular sem internet~~ **10/11:** Embarque ligado (variáveis do Actions criadas pelo Gabriel) e sem internet conferido. Falta abrir o site no celular e testar um ponto real | Dupla | 12/11 | H1 (primeiras fichas), H12 |
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
