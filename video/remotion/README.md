@@ -30,6 +30,10 @@ npm run tipos         # confere o TypeScript
 | `src/base.tsx`, `src/desenhos.tsx` | Cores, fontes, movimento, Mapi 3D, ícones; ônibus, pessoa e ponto em vetor |
 | `src/sobreposicoes.tsx`, `src/legendas.ts` | Legenda, relógio, câmera e linha de rota |
 
+## Legenda
+
+Ligada por padrão (decisão de 10/11). Hoje usa o tempo estimado de cada palavra, o mesmo que as animações usam. Depois da narração gravada, o tempo real de cada palavra vai para `src/tempos-narracao.json` e a legenda e as animações se ajustam juntas às falas. Para renderizar sem legenda: `npx remotion render Pitch out/sem-legenda.mp4 --props='{"legenda":false}'`.
+
 ## Gravações: onde colocar
 
 Os vídeos grandes **não vão para o git**. Coloquem em `video/gravacoes/` (a pasta também é ignorada) com estes nomes, e o vídeo passa a usar a gravação no lugar do espaço reservado:

@@ -5,7 +5,7 @@ import { FONTES_CSS } from './base';
 import { arquivoExiste } from './arquivos';
 import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
-import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18 } from './cenas/fecho';
+import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO } from './cenas/fecho';
 import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras } from './roteiro';
 import { Legenda, Relogio } from './sobreposicoes';
 
@@ -24,7 +24,7 @@ function efeitos(): Efeito[] {
   // 1
   const chegou = naPalavra(1, 'chegou');
   add('onibus-freio.wav', 1, chegou - 22, 0.6);
-  add('onibus-porta.mp3', 1, chegou + 6, 0.55);
+  add('onibus-porta.mp3', 1, chegou + 6, 0.22);
   // troca de cena: whoosh discreto nas cenas animadas
   for (const c of CENAS) if (c.n > 1 && !c.camera && c.n !== 6 && c.n !== 18) add('whoosh.flac', c.n, 0, 0.22);
   // 3
@@ -58,20 +58,31 @@ function efeitos(): Efeito[] {
   const t13 = [naPalavra(13, 'internet,') - 6, naPalavra(13, 'toque,') - 6, naPalavra(13, 'toque,') + 4, naPalavra(13, 'voz') - 6, naPalavra(13, 'voz') + 4, naPalavra(13, 'voz') + 12];
   for (const q of t13) add('tique.wav', 13, q, 0.3);
   // 15: um pop por pino, subindo
-  add('pop.flac', 15, 68, 0.3);
-  add('pop.flac', 15, naPalavra(15, 'cidade.') - 4, 0.35);
-  add('pop.flac', 15, naPalavra(15, 'estado.') - 4, 0.42);
-  add('pop.flac', 15, naPalavra(15, 'país.') - 4, 0.5);
+  add('pop.flac', 15, CHEGADA_SP - 2 + POUSO, 0.3);
+  pinosDaCena15().forEach((p, i) => add('pop.flac', 15, p.em + POUSO, 0.32 + i * 0.06));
   // 17
   add('pop.flac', 17, naPalavra(17, 'Você') - 2, 0.45);
   // 18
   add('onibus-freio.wav', 18, 0, 0.5);
-  add('onibus-porta.mp3', 18, 16, 0.45);
+  add('onibus-porta.mp3', 18, 16, 0.2);
   add('rampa-descendo.mp3', 18, 24, 0.6);
   return e;
 }
 
-export const Pitch: React.FC = () => {
+// Um efeito nunca passa do fim da sua cena: some nos últimos 6 quadros antes do corte.
+const EfeitoSonoro: React.FC<{ efeito: Efeito }> = ({ efeito: e }) => {
+  const c = cena(e.n);
+  const dur = Math.max(1, Math.min(FPS * 6, quadrosDa(c) - e.em));
+  return (
+    <Sequence from={inicioEmQuadros(c) + e.em} durationInFrames={dur} name={`som ${e.som}`}>
+      <Audio src={staticFile(`sons/${e.som}`)} volume={(f) => e.vol * interpolate(f, [dur - 6, dur], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />
+    </Sequence>
+  );
+};
+
+// legenda: queimada no vídeo ou não (ligada por padrão). Hoje segue o tempo estimado das palavras;
+// com a narração gravada, src/tempos-narracao.json passa a dar o tempo real, para a legenda e para as animações.
+export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
   const narracao = arquivoExiste('narracao/narracao.wav');
   const inicioTrilha = inicioEmQuadros(cena(6));
   const fimTrilha = DURACAO_TOTAL - FPS; // termina com 1 s de silêncio
@@ -88,7 +99,7 @@ export const Pitch: React.FC = () => {
         );
       })}
       <Relogio />
-      <Legenda />
+      {legenda && <Legenda />}
 
       {/* Som: rua ao fundo só na cena 1, silêncio quando o ônibus sai */}
       <Sequence from={0} durationInFrames={fimRua}>
@@ -97,12 +108,10 @@ export const Pitch: React.FC = () => {
       {/* Trilha bem baixa da cena 6 em diante, em loop, sumindo antes do segundo final */}
       <Sequence from={inicioTrilha} durationInFrames={fimTrilha - inicioTrilha}>
         <Audio src={staticFile('sons/trilha.mp3')} loop
-          volume={(f) => interpolate(f, [0, 20, fimTrilha - inicioTrilha - 45, fimTrilha - inicioTrilha], [0, narracao ? 0.1 : 0.16, narracao ? 0.1 : 0.16, 0], { extrapolateRight: 'clamp' })} />
+          volume={(f) => interpolate(f, [0, 20, fimTrilha - inicioTrilha - 45, fimTrilha - inicioTrilha], [0, 0.06, 0.06, 0], { extrapolateRight: 'clamp' })} />
       </Sequence>
       {efeitos().map((e, i) => (
-        <Sequence key={i} from={inicioEmQuadros(cena(e.n)) + e.em} durationInFrames={FPS * 6} name={`som ${e.som}`}>
-          <Audio src={staticFile(`sons/${e.som}`)} volume={e.vol} />
-        </Sequence>
+        <EfeitoSonoro key={i} efeito={e} />
       ))}
       {narracao && <Audio src={staticFile('narracao/narracao.wav')} />}
     </AbsoluteFill>

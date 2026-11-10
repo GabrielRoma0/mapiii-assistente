@@ -114,6 +114,21 @@ const Pino: React.FC<{ x: number; y: number; em: number; tam: number; cor?: stri
   );
 };
 
+// Quando cada pino entra na cena 15 (o som de "pop" usa os mesmos tempos, em src/Pitch.tsx).
+export const CHEGADA_SP = 70; // a linha de rota chega ao pino de São Paulo
+export const POUSO = 4; // quadros até o pino pousar (a queda desacelera e quase todo o caminho é nos primeiros quadros)
+export function pinosDaCena15() {
+  const cidade = naPalavra(15, 'cidade.');
+  const estado = naPalavra(15, 'estado.');
+  const pais = naPalavra(15, 'país.');
+  return [
+    { ...noMapa(-43.94, -19.92), em: cidade - 4 }, // outra cidade (Belo Horizonte)
+    { ...noMapa(-34.88, -8.05), em: estado - 4 }, // outro estado (Recife)
+    { ...noMapa(-9.14, 38.72), em: pais - 4 }, // outro país (Lisboa)
+    { ...noMapa(-99.13, 19.43), em: pais + 4 } // outro país (Cidade do México)
+  ];
+}
+
 export const Cena15: React.FC = () => {
   const f = useCurrentFrame();
   const troque = naPalavra(15, 'Troque');
@@ -121,15 +136,10 @@ export const Cena15: React.FC = () => {
   const estado = naPalavra(15, 'estado.');
   const pais = naPalavra(15, 'país.');
   const sp = noMapa(-46.63, -23.55);
-  const chega = 70; // a linha de rota chega ao pino de São Paulo
+  const chega = CHEGADA_SP;
   const acende = chegada(f, chega, 10);
   const pulso = f >= chega ? (Math.sin(((f - chega) / 30) * Math.PI * 2 * 0.8) + 1) / 2 : 0;
-  const outros = [
-    { ...noMapa(-43.94, -19.92), em: cidade - 4 }, // outra cidade (Belo Horizonte)
-    { ...noMapa(-34.88, -8.05), em: estado - 4 }, // outro estado (Recife)
-    { ...noMapa(-9.14, 38.72), em: pais - 4 }, // outro país (Lisboa)
-    { ...noMapa(-99.13, 19.43), em: pais + 2 } // outro país (Cidade do México)
-  ];
+  const outros = pinosDaCena15();
   return (
     <EntradaDeCena>
       <Fundo>
