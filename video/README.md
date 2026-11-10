@@ -166,13 +166,13 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Número do Censo 2022, com link e data | nesta página (cenas 4 e locução) | **Pronto (10/11):** 14,4 milhões (7,3% das pessoas com 2 anos ou mais). Fonte: IBGE Educa, 24/06/2025, https://educa.ibge.gov.br/jovens/materias-especiais/22695-censo-2022-7-3-da-populacao-com-2-anos-ou-mais-tinha-alguma-deficiencia.html e o informativo https://biblioteca.ibge.gov.br/visualizacao/livros/liv102317_informativo.pdf . Conferido por print do Thor em 10/11/2026 | — |
 | Ícones dos ODS 10 e 11, da página oficial da ONU, e confirmação na lista da GS | `video/ods/` | **Pronto (10/11)**, de https://brasil.un.org/pt-br/sdgs; os dois confirmados pelo Thor na lista da GS | Dupla |
 | Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/mundo.svg` | **Pronto (10/11).** Pino de São Paulo em x 711, y 717 (ver `video/mapa/README.md`) | — |
-| IBM Plex Mono (OFL) | `design-system/fonts/` | Falta | Claude Code |
+| IBM Plex Mono (OFL) | `design-system/fonts/` | **Pronta (10/11)**: pesos 400 e 600 e a licença `OFL-IBM-Plex-Mono.txt` | — |
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **Prontos (10/11):** os 12 sons em `video/sons/`, com créditos (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
-| Narração em off | `video/remotion/public/narracao.wav` | Falta (depois do Censo) | Dupla, 17/11 |
-| Cenas na câmera (2, 3, 5, 14 e 17) | `video/remotion/public/camera/` | Falta | Dupla, até 13/11 |
-| Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/remotion/public/app/` | Falta (depois da H1) | Claude Code + dupla |
+| Narração em off | `video/gravacoes/narracao/narracao.wav` (fora do git) | Falta. Gravar assistindo ao `npm run studio` | Dupla, 17/11 |
+| Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` (fora do git) | Falta | Dupla, até 13/11 |
+| Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/gravacoes/app/triagem.mp4` e `mao-celular.mp4` (fora do git) | Falta. O vídeo funciona sem eles | Claude Code + dupla |
 | Relatório do Lighthouse com as fichas (cena 12) | `video/remotion/public/app/lighthouse.png` | Falta (depois da H1) | Claude Code |
-| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | Falta | Claude Code |
+| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **1ª versão montada (10/11)**: as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |
 
 Vídeos grandes (câmera e gravações de tela) **não vão para o git**: ficam numa pasta compartilhada da dupla e são copiados para `video/remotion/public/` só na hora de montar.
 

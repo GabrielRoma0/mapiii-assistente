@@ -1,0 +1,27 @@
+{
+  "name": "mapiii-video-pitch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preparar": "node scripts/preparar.mjs",
+    "studio": "npm run preparar && remotion studio",
+    "quadros": "npm run preparar && node scripts/quadros.mjs",
+    "render": "npm run preparar && remotion render Pitch out/mapiii-pitch-gs2026.mp4 --codec h264 --crf 12 --audio-codec aac",
+    "previa": "npm run preparar && remotion render Pitch out/previa.mp4 --codec h264 --crf 28 --scale 0.5",
+    "tipos": "tsc --noEmit",
+    "srt": "tsx scripts/srt.ts",
+    "conferir": "node scripts/conferir.mjs"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.2.5",
+    "@remotion/cli": "4.0.539",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3",
+    "tsx": "4.20.3"
+  }
+}
