@@ -1,0 +1,23 @@
+Sons do vídeo pitch do Mapiii (FIAP Global Solution 2026)
+Todos com licença CC0 1.0 (domínio público, https://creativecommons.org/publicdomain/zero/1.0/): o crédito não é obrigatório e é dado por cortesia.
+Encontrados no Openverse (openverse.org) e baixados do Freesound pelo Thor em 10/11/2026.
+
+onibus-freio.wav (cena 1)
+  Faixa: Jbrake_sim_96k.wav · Autor: vacuumfan7072
+  Link: https://freesound.org/people/vacuumfan7072/sounds/422442
+
+onibus-porta.mp3 (cenas 1 e 18)
+  Faixa: Bus-doors-sound-effect.mp3 · Autor: reviewsoffers
+  Link: https://freesound.org/people/reviewsoffers/sounds/472605
+
+rua-ambiente.mp3 (cena 1; convertido de WAV para MP3 192 kbps pelo Claude Code)
+  Faixa: Small quiet street ambience · Autor: Oper8
+  Link: https://freesound.org/people/Oper8/sounds/241135
+
+papel-rasgando.wav (cena 3)
+  Faixa: Packaging Paper Tear Short.wav · Autor: afleetingspeck
+  Link: https://freesound.org/people/afleetingspeck/sounds/140461
+
+rampa-descendo.mp3 (cena 18)
+  Faixa: Hydraulics 2.mp3 · Autor: behutchi
+  Link: https://freesound.org/people/behutchi/sounds/442259
