@@ -67,7 +67,7 @@ export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({
 
 // ---------- Linha de rota ----------
 // Tracejado Dusty Grape (traço 6 px, 18/14) que se desenha de uma cena para a outra, das cenas 6 a 15.
-// Cada trecho fica nas margens, longe do texto e do Mapi.
+// Cada trecho fica nas margens, longe do texto e do Leco.
 export const TRECHOS: Record<number, string> = {
   6: 'M 300 300 C 300 520, 120 640, 90 1080',
   7: 'M 1880 0 C 1840 260, 1880 520, 1860 1080',

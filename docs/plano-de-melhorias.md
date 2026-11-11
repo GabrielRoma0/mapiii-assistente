@@ -17,7 +17,7 @@ Escrito em 06/11/2026. Nenhuma melhoria foi começada antes deste plano.
 - Nada fora da base; nenhum texto de direito, lei, valor ou link inventado.
 - Nunca "você tem direito".
 - Sem login, sem analytics, sem cookies; nada sai do aparelho sem a pessoa pedir.
-- Só tokens, ícones e componentes do `design-system/`; o Mapi não é redesenhado.
+- Só tokens, ícones e componentes do `design-system/`; o Leco não é redesenhado.
 - Acessibilidade: teclado, foco visível, `aria-live`, contraste 4,5:1 nos dois temas, alvos de 48 px, texto de 16 px ou mais, 320 px sem rolagem lateral, `prefers-reduced-motion` respeitado.
 - Toda mudança de lógica vem com teste; `npm run verificar` passa antes de cada commit.
 - Ferramentas novas só como **dependência de desenvolvimento** (não vão para o app) e só com OK da dupla (ver [decisões](#4-decisões-que-a-dupla-precisa-tomar)).
@@ -110,7 +110,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** no navegador com e sem movimento reduzido (emulação).
 
 #### V3 · Carregamento com esqueleto · P
-- [x] (06/11) **O quê:** blocos cinza no lugar dos cartões enquanto o Embarque busca, em vez de só a fala do Mapi.
+- [x] (06/11) **O quê:** blocos cinza no lugar dos cartões enquanto o Embarque busca, em vez de só a fala do Leco.
 - **Como:** componente `Esqueleto({ linhas })` em `src/ui/assistente.tsx`, `aria-hidden`, com o texto "Procurando..." mantido no `aria-live`.
 - **Conferir:** no navegador com o simulador lento (termo `lento`).
 
@@ -119,9 +119,9 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Como:** a dupla pede no Claude Design (onde o design system foi feito); depois eu troco o ícone "conversa" nos botões de falar e ouvir.
 - **Decisão de 07/11 (Thor):** não será feito agora, talvez nem depois; o vídeo não precisa.
 
-#### V5 · Mapi no tema escuro · Humano
+#### V5 · Leco no tema escuro · Humano
 - [ ] **O quê:** versão do personagem para fundo escuro (hoje é a mesma do claro).
-- **Como:** pedido ao Claude Design; o `CLAUDE.md` proíbe redesenhar o Mapi no código.
+- **Como:** pedido ao Claude Design; o `CLAUDE.md` proíbe redesenhar o Leco no código.
 
 #### V6 · Endereço com nome bonito · Humano
 - [ ] **O quê:** publicar com um nome legível (ex.: `mapiii.netlify.app` ou domínio próprio).
@@ -155,7 +155,7 @@ Legenda de esforço: **P** (até 2 h), **M** (meio dia), **G** (um dia). "Humano
 - **Conferir:** build, mudar algo, novo build e ver a faixa no `npm run preview`.
 
 #### T5 · Tela amigável quando algo der erro · P
-- [x] (06/11, `39a656b`) **O quê:** se uma tela quebrar, o Mapi diz "Algo deu errado nesta tela" com "Voltar ao início", em vez de tela branca. O aviso de protótipo continua.
+- [x] (06/11, `39a656b`) **O quê:** se uma tela quebrar, o Leco diz "Algo deu errado nesta tela" com "Voltar ao início", em vez de tela branca. O aviso de protótipo continua.
 - **Como:** componente `LimiteDeErro` (Error Boundary do React) em `src/app/LimiteDeErro.tsx`, envolvendo `<Tela>` em `App.tsx`; reinicia ao trocar de rota.
 - **Conferir:** teste forçando um erro numa tela de desenvolvimento.
 

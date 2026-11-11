@@ -256,3 +256,7 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Vídeo: 1ª versão montada no Remotion (`video/remotion/`): 18 cenas animadas a partir dos quadros vetoriais, Mapi 3D, objetos 3D, mapa e ODS, legenda queimada e `.srt` (65 blocos), relógio, linha de rota, 12 sons e trilha. Câmera e narração entram como espaço reservado (pasta `video/gravacoes/`, fora do git). IBM Plex Mono em `design-system/fonts/`. Conferência da prévia: trechos parados de no máximo 7 quadros (cenas 4, 6 e 12; o da cena 4 é a pausa de propósito antes do número), final parado 0 s, pico −2,7 dBTP; o volume (−24,6 LUFS) só se acerta com a narração.
 - Vídeo, ajustes do Thor: porta do ônibus mais baixa; nenhum efeito passa do fim da cena (somem nos 6 últimos quadros; o som da porta não invade mais a cena 2); pops da cena 15 no pouso de cada pino (inclusive o da Cidade do México); trilha mais baixa (ambiente). Legenda segue ligada e será ajustada ao tempo da narração gravada.
 - H10: Gabriel criou as variáveis do Actions (Embarque ligado no site a partir da próxima publicação). Branch `claude/eager-brown-0nmuyi` juntada ao `main` por pedido do Thor.
+
+## 11/11/2026
+
+- Mascote renomeado de Mapi para **Leco** (decisão do Thor): rótulos e textos do app, roteiro e vídeo (cena 6: "E esse é o Leco."), design system e documentos. Nomes internos do código, a pasta `video/mapi-3d/` e os `.dc.html` ficaram iguais. 305 testes passando.

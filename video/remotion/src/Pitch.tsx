@@ -39,7 +39,7 @@ function efeitos(): Efeito[] {
   add('tique.wav', 4, para4, 0.6);
   // 5 → 6: whoosh na saída e o círculo
   add('whoosh.flac', 6, 0, 0.6);
-  add('pop.flac', 6, naPalavra(6, 'Mapi', 1) - 2, 0.55);
+  add('pop.flac', 6, naPalavra(6, 'Leco') - 2, 0.55);
   // 7
   add('toque-seco.wav', 7, naPalavra(7, 'responde') + 10, 0.35);
   // 8

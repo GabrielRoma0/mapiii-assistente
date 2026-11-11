@@ -96,13 +96,13 @@ export function SourceChip({ nome, url, verificadoEm }: { nome: string; url: str
   );
 }
 
-/** Fala do assistente: Mapi de 44 px, rótulo "Mapi · Estado" e o texto. */
+/** Fala do assistente: Leco de 44 px, rótulo "Leco · Estado" e o texto. */
 export function FalaMapi({ estado, size = 44, children }: { estado: EstadoMapi; size?: number; children?: ReactNode }) {
   return (
     <div className={css.falaMapi}>
       <MapiPersonagem estado={estado} size={size} />
       <div className={css.falaCorpo}>
-        <span className={css.rotulo}>Mapi · {ESTADOS_MAPI[estado].rotulo}</span>
+        <span className={css.rotulo}>Leco · {ESTADOS_MAPI[estado].rotulo}</span>
         {children && <div className={css.baloaoMapi}>{children}</div>}
       </div>
     </div>
@@ -226,7 +226,7 @@ export function Comemoracao({ titulo, texto }: { titulo: string; texto: string }
     <div role="status" className={css.comemoracao}>
       <MapiPersonagem estado="comemorando" size={64} />
       <div className={css.falaCorpo}>
-        <span className={css.rotulo}>Mapi · Comemorando</span>
+        <span className={css.rotulo}>Leco · Comemorando</span>
         <span style={{ fontSize: 19, lineHeight: '25px', fontWeight: 900 }}>{titulo}</span>
         <span style={{ fontSize: 16, lineHeight: '23px', fontWeight: 600 }}>{texto}</span>
       </div>
@@ -263,7 +263,7 @@ export function ResultadoChecagemSelo({ resultado }: { resultado: ResultadoCheca
     <div className={`${css.checagem} ${c.classe}`}>
       <Icon name={c.icone} size={26} />
       {c.texto}
-      <span className={css.checagemRotulo}>Mapi · {ESTADOS_MAPI[c.estado].rotulo}</span>
+      <span className={css.checagemRotulo}>Leco · {ESTADOS_MAPI[c.estado].rotulo}</span>
     </div>
   );
 }

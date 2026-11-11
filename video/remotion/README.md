@@ -27,7 +27,7 @@ npm run tipos         # confere o TypeScript
 | `src/cenas/app.tsx` | Cenas 7 a 11 |
 | `src/cenas/fecho.tsx` | Cenas 12 a 18 |
 | `src/Pitch.tsx` | Junta tudo: cenas, legenda, relógio, trilha e efeitos sonoros (com o volume de cada um) |
-| `src/base.tsx`, `src/desenhos.tsx` | Cores, fontes, movimento, Mapi 3D, ícones; ônibus, pessoa e ponto em vetor |
+| `src/base.tsx`, `src/desenhos.tsx` | Cores, fontes, movimento, Leco 3D, ícones; ônibus, pessoa e ponto em vetor |
 | `src/sobreposicoes.tsx`, `src/legendas.ts` | Legenda, relógio, câmera e linha de rota |
 
 ## Legenda

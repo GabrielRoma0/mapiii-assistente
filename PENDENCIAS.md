@@ -12,6 +12,10 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 11/11: o mascote agora se chama Leco
+
+Decisão do Thor (11/11): o mascote (um morango) passa a se chamar **Leco**, para não soar igual a "Mapiii" no vídeo. Trocado no app (rótulos "Leco · Estado" e textos para leitor de tela), no roteiro e no vídeo, no design system (`readme.md`) e nos documentos. Os nomes internos do código (`MapiPersonagem`, `ESTADOS_MAPI`), a pasta `video/mapi-3d/`, os arquivos `.dc.html` do Claude Design e o histórico em `docs/registro.md` continuam como estavam. O desenho não mudou.
+
 ## Atualizações de 10/11 (Thor, com o Claude Code): leia primeiro
 
 **Decisões (H12), aprovadas pelo Gabriel em 10/11:**
@@ -61,7 +65,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 | Item | O que mudou |
 |---|---|
-| **Vídeo** | Documento único em [video/README.md](video/README.md): roteiro, estilo, regras de tempo, linha de rota, som, montagem no Remotion, revisão por notas e cronograma. Todos os 9 pedidos do Claude Design feitos (quadros 01 a 15, Mapi 3D, objetos 3D, celular 3D, moldura de câmera, nomes, legenda, relógio). Tudo o que o Claude Design gera também fica no artefato https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs |
+| **Vídeo** | Documento único em [video/README.md](video/README.md): roteiro, estilo, regras de tempo, linha de rota, som, montagem no Remotion, revisão por notas e cronograma. Todos os 9 pedidos do Claude Design feitos (quadros 01 a 15, Leco 3D, objetos 3D, celular 3D, moldura de câmera, nomes, legenda, relógio). Tudo o que o Claude Design gera também fica no artefato https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs |
 | **H1 (1ª ficha)** | `bilhete-unico-especial-pcd` em `data/kb.json`, com gratuidade, documentos, prazos (análise e entrega em até 20 dias), laudo, Acompanhante Cadastrado (estudante), casas de acolhimento e o que fazer se o cartão não chegar. Prints da fonte em [docs/fontes/bilhete-unico-especial-pcd/](docs/fontes/bilhete-unico-especial-pcd/README.md) |
 | **Rede** | Ambiente de nuvem `mapiii-assistente` com os sites oficiais liberados (Prefeitura, legislação municipal, Planalto, gov.br, IBGE, ALESP). SPTrans e SP156 continuam recusando acesso automático |
 | **V4** | Microfone e alto-falante: não será feito agora (decisão do Thor) |
@@ -94,12 +98,12 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 | **P2** | Tela "Sobre o projeto" em `#/projeto`. Conteúdo em `data/projeto.json`; `persona` e `numeros` ficam vazios até o teste com pessoas. |
 | **Vídeo pitch** | **Documento único em [video/README.md](video/README.md)** (07/11): decisões, regras, estilo, as 18 cenas, locução, o que falta, gravações, som, montagem no Remotion, revisão, audiodescrição, pedidos do Claude Design e cronograma. Toda mudança do vídeo é feita lá. O vídeo técnico das disciplinas fica em [video/roteiro-tecnico.md](video/roteiro-tecnico.md). |
 | **V4 / V5** | V4 não será feito agora (decisão do Thor, 07/11). V5 fica para depois do vídeo. Pedidos em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md). |
-| **V8 (Thor)** | Mapi com cara de 3D, só para o vídeo. Feito: ver [video/README.md](video/README.md). |
+| **V8 (Thor)** | Leco com cara de 3D, só para o vídeo. Feito: ver [video/README.md](video/README.md). |
 | **H3** | Lista de serviços a conferir e o passo a passo na seção 4 (H3). Nenhum valor foi escrito. |
-| **V8 a V10 (Thor)** | Mapi 3D, 13 quadros e capa feitos no Claude Design. Próximos pedidos (quadro 14 do fecho com a rampa descida e, opcional, objetos 3D) na seção 12 de [video/README.md](video/README.md). |
-| **V8 feito (Thor, 07/11)** | Mapi 3D pronto: 7 poses PNG transparentes (2000 × 2000) em `video/mapi-3d/`, conferidas com o Mapi plano nos dois fundos. Próximo: pedido 2 (quadros) na mesma conversa do Claude Design. |
+| **V8 a V10 (Thor)** | Leco 3D, 13 quadros e capa feitos no Claude Design. Próximos pedidos (quadro 14 do fecho com a rampa descida e, opcional, objetos 3D) na seção 12 de [video/README.md](video/README.md). |
+| **V8 feito (Thor, 07/11)** | Leco 3D pronto: 7 poses PNG transparentes (2000 × 2000) em `video/mapi-3d/`, conferidas com o Leco plano nos dois fundos. Próximo: pedido 2 (quadros) na mesma conversa do Claude Design. |
 | **V9 feito (Thor, 07/11)** | 13 quadros 16:9 em `video/quadros/` (`01.png` a `13.png`) e o HTML em `design-system/Mapiii Pitch Quadros 16x9.html`. Conferidos: sem lei, valor, prazo, telefone ou link; quadro 5 com a pergunta real da triagem. Na montagem: trocar o mapa-múndi desenhado à mão por um contorno de uso livre e carregar a IBM Plex Mono. Próximo: pedido 3 (capa). |
-| **V10 feito (Thor, 07/11)** | Capa do YouTube em `video/capa.png` (1280 × 720): versão A (ponto de ônibus à noite, porta sem rampa, pessoa em cadeira de rodas e Mapi 3D atencao). Testada reduzida nos temas claro e escuro do YouTube. Os três pedidos do Claude Design para o vídeo estão feitos. |
+| **V10 feito (Thor, 07/11)** | Capa do YouTube em `video/capa.png` (1280 × 720): versão A (ponto de ônibus à noite, porta sem rampa, pessoa em cadeira de rodas e Leco 3D atencao). Testada reduzida nos temas claro e escuro do YouTube. Os três pedidos do Claude Design para o vídeo estão feitos. |
 
 **H8 · SPTrans: em andamento, precisa ser testada de novo**
 
@@ -290,7 +294,7 @@ Todas as melhorias de código do plano estão feitas (fases A a E). Faltam as qu
 | # | Melhoria | Quem | Como |
 |---|---|---|---|
 | ~~V4~~ | Ícones de microfone e alto-falante | — | **Não será feito agora** (decisão do Thor, 07/11): o vídeo não precisa |
-| V5 | Mapi no tema escuro (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
+| V5 | Leco no tema escuro (depois do vídeo; não aparece nele) | Dupla no **Claude Design** | Pedido pronto para colar em [docs/pedidos-claude-design.md](docs/pedidos-claude-design.md) |
 | V6 | Endereço com nome bonito | Dupla | Junto com H10 |
 | ~~T8~~ | Publicação automática **Feito 07/11** | Pages ligado (Source: GitHub Actions); site em https://gabrielroma0.github.io/mapiii-assistente/ . Para o Embarque, criar as variáveis do Actions (ver `publicar.yml`) | Cada envio ao `main` atualiza o site |
 | P2 | Página "Sobre o projeto" para a banca | **Tela pronta (07/11)** em `#/projeto`; falta a dupla preencher `persona` e `numeros` em `data/projeto.json` depois de 16/11 | O validador recusa número sem fonte e dado pessoal |
@@ -398,4 +402,4 @@ node -e "console.log(require('./data/kb.json').length + ' fichas')"
 - Emergência de saúde: só "Em emergência, ligue 192."
 - Segredos só como segredo de Edge Function; nunca no git, no `.env.local` ou no navegador.
 - Embarque: nunca usar a localização; "acessível" é o que a SPTrans informa.
-- Design: só o `design-system/`; o Mapi não é redesenhado.
+- Design: só o `design-system/`; o Leco não é redesenhado.

@@ -44,7 +44,7 @@ O que você **não** faz, mesmo se pedirem: inventar conteúdo de direito, valor
 
 - `data/`: base (`kb.json`), triagem (`perguntas.json`), domínios oficiais, valores de serviços e o exemplo do Embarque. Formatos em `data/README.md`.
 - `src/core/`: lógica pura sem tela (busca própria, motor de regras, validação, checagem oficial, registro local, avaliação, reclamação, garantia de direitos, cartão da cadeira e um gerador de QR próprio). O mesmo código roda no app, nos testes e no `eval`.
-- `src/ui/`: componentes do assistente, o personagem Mapi e as ações (ouvir, falar, copiar, compartilhar, imprimir). `src/app/`: telas e rotas por `#`. `src/avaliacao/`: `avaliacao.html`.
+- `src/ui/`: componentes do assistente, o personagem Leco e as ações (ouvir, falar, copiar, compartilhar, imprimir). `src/app/`: telas e rotas por `#`. `src/avaliacao/`: `avaliacao.html`.
 - `supabase/`: Edge Function `onibus` (ações `linhas`, `veiculos`, `paradas`, `previsao`; a lógica fica em `functions/_shared/`) e a migração da conta opcional, que está fora do escopo e sem uso no app.
 - `design-system/`: design system Mapiii v2.0. Use só os tokens, ícones e componentes dele. **Não redesenhe o personagem.**
 - `eval/`, `docs/folha-de-teste.md`, `BACKLOG.md` (ideias, não implementar sem pedido).

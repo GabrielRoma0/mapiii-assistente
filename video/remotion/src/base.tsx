@@ -1,4 +1,4 @@
-// Peças comuns do vídeo: cores, fontes, movimento, Mapi 3D, ícones, títulos e efeitos.
+// Peças comuns do vídeo: cores, fontes, movimento, Leco 3D, ícones, títulos e efeitos.
 import React from 'react';
 import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { ICONES } from './gerado-icones';
@@ -115,8 +115,8 @@ export const Icone: React.FC<{ nome: string; tamanho: number; cor: string; traco
 
 export type PoseMapi = 'bom' | 'atencao' | 'procurando' | 'verificado' | 'ouvindo' | 'recusa' | 'comemorando';
 
-// Mapi 3D: entra subindo suave a partir de `em`, com sombra em elipse sólida; depois flutua de leve. Nunca deforma.
-export const Mapi: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean }> = ({ pose, x, y, tamanho, em, balanco, sombra = true }) => {
+// Leco 3D: entra subindo suave a partir de `em`, com sombra em elipse sólida; depois flutua de leve. Nunca deforma.
+export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean }> = ({ pose, x, y, tamanho, em, balanco, sombra = true }) => {
   const f = useCurrentFrame();
   const t = chegada(f, em, 14);
   const vivo = Math.max(0, f - em);
