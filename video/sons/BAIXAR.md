@@ -10,7 +10,7 @@ Depois, envie os arquivos para o GitHub (Add file → Upload files na pasta `vid
 |---|---|---|---|
 | `toque-seco` | Cenas 3 e 7: toque de interface | [UI click](https://freesound.org/people/Ranner/sounds/488534) (0.6 s, Ranner) | [Foot 1.aif](https://freesound.org/people/zinzan_101/sounds/91039) (0.5 s, zinzan_101) |
 | `whoosh` | Cenas 5, 6 e 9: passagem rápida | [Swosh swoosh whoosh air sound, free, hig](https://freesound.org/people/qubodup/sounds/60026) (0.5 s, qubodup) | [Swipe Whoosh](https://freesound.org/people/qubodup/sounds/60007) (0.4 s, qubodup) |
-| `pop` | Cenas 6, 11, 15 e 17: o Mapi aparece | [Pop 2](https://freesound.org/people/greenvwbeetle/sounds/244654) (0.1 s, greenvwbeetle) | [Pop 5](https://freesound.org/people/greenvwbeetle/sounds/244657) (0.1 s, greenvwbeetle) |
+| `pop` | Cenas 6, 11, 15 e 17: o Leco aparece | [Pop 2](https://freesound.org/people/greenvwbeetle/sounds/244654) (0.1 s, greenvwbeetle) | [Pop 5](https://freesound.org/people/greenvwbeetle/sounds/244657) (0.1 s, greenvwbeetle) |
 | `tique` | Cenas 12 e 13: cada número e tópico | [Metal tick 1](https://freesound.org/people/kubawolanin/sounds/185611) (0.1 s, kubawolanin) | buscar no openverse.org com "tick" e licença CC0 |
 | `ding` | Cena 8: o selo de fonte | [Ding 1](https://freesound.org/people/greenvwbeetle/sounds/241288) (0.5 s, greenvwbeetle) | [Elevator Ding](https://freesound.org/people/collierhs_colinlib/sounds/588718) (0.7 s, collierhs_colinlib) |
 | `notificacao` | Cena 10: a notificação desce | [Notification Sound](https://freesound.org/people/yfjesse/sounds/235911) (0.7 s, yfjesse) | [Chime Notification](https://freesound.org/people/Jofae/sounds/380482) (0.3 s, Jofae) |

@@ -1,10 +1,10 @@
 # Pedidos para o Claude Design do app (V4 e V5)
 
-O design system Mapiii v2.0 foi feito no Claude Design, e o código **não pode** criar ícone novo nem redesenhar o Mapi (regra do `CLAUDE.md`). Por isso os pedidos abaixo são feitos lá, pela dupla. Abra o projeto do design system no Claude Design e cole um pedido de cada vez.
+O design system Mapiii v2.0 foi feito no Claude Design, e o código **não pode** criar ícone novo nem redesenhar o Leco (regra do `CLAUDE.md`). Por isso os pedidos abaixo são feitos lá, pela dupla. Abra o projeto do design system no Claude Design e cole um pedido de cada vez.
 
 Quando o resultado sair, salve os arquivos nos lugares indicados e avise o Claude Code. Ele troca o código e confere contraste, tamanho e testes.
 
-> **Vídeo pitch:** os pedidos do vídeo (Mapi 3D, quadros, capa, fecho com a rampa e objetos 3D) ficam só em [video/README.md](../video/README.md), seção 12.
+> **Vídeo pitch:** os pedidos do vídeo (Leco 3D, quadros, capa, fecho com a rampa e objetos 3D) ficam só em [video/README.md](../video/README.md), seção 12.
 >
 > **Decisão de 07/11 (Thor):** V4 (microfone e alto-falante) **não será feito agora**, talvez nem depois. V5 fica para depois do vídeo.
 
@@ -30,13 +30,13 @@ Quando o resultado sair, salve os arquivos nos lugares indicados e avise o Claud
 
 ---
 
-## V5 · Mapi no tema escuro
+## V5 · Leco no tema escuro
 
-**Por que:** no tema escuro, os braços e as pernas do Mapi, que são indigo, somem no fundo indigo. O design system lista "versões no modo escuro" como lacuna.
+**Por que:** no tema escuro, os braços e as pernas do Leco, que são indigo, somem no fundo indigo. O design system lista "versões no modo escuro" como lacuna.
 
 **Cole no Claude Design:**
 
-> No design system Mapiii v2.0, crie a versão do personagem Mapi para fundo escuro (fundo Space Indigo `#22223B`). Mesmo desenho, mesmas proporções e as mesmas 13 poses (bom, atencao, evite, chuva, comemorando, agradecendo, ouvindo, procurando, achei, verificado, duvida, recusa, esperando). Troque só as cores que somem no fundo escuro (braços, pernas e contornos indigo) por tons da paleta que tenham pelo menos 3:1 de contraste com `#22223B`. Sem animação e sem mudar a forma. Mostre as 13 poses lado a lado nas versões clara e escura.
+> No design system Mapiii v2.0, crie a versão do personagem Leco para fundo escuro (fundo Space Indigo `#22223B`). Mesmo desenho, mesmas proporções e as mesmas 13 poses (bom, atencao, evite, chuva, comemorando, agradecendo, ouvindo, procurando, achei, verificado, duvida, recusa, esperando). Troque só as cores que somem no fundo escuro (braços, pernas e contornos indigo) por tons da paleta que tenham pelo menos 3:1 de contraste com `#22223B`. Sem animação e sem mudar a forma. Mostre as 13 poses lado a lado nas versões clara e escura.
 
 **Onde salvar:** junto do personagem atual (`design-system/MapiPersonagem.dc.html` e os arquivos que ele usa), com o sufixo `-escuro`.
 
@@ -44,7 +44,7 @@ Quando o resultado sair, salve os arquivos nos lugares indicados e avise o Claud
 
 ## Depois de salvar
 
-Diga ao Claude Code "os ícones chegaram" ou "o Mapi escuro chegou". Ele:
-1. troca o ícone nos botões de falar e ouvir, ou faz o Mapi trocar de versão sozinho no tema escuro;
+Diga ao Claude Code "os ícones chegaram" ou "o Leco escuro chegou". Ele:
+1. troca o ícone nos botões de falar e ouvir, ou faz o Leco trocar de versão sozinho no tema escuro;
 2. roda `npm run verificar` e `npm run e2e` (acessibilidade nos dois temas);
 3. marca V4 e V5 no [plano de melhorias](plano-de-melhorias.md) e no [PENDENCIAS](../PENDENCIAS.md).

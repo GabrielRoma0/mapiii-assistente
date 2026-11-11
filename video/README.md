@@ -36,9 +36,9 @@
 | Teste com pessoas | **Não entra no vídeo (B).** A cena 12 fica com 12 de 12 recusas e acessibilidade 100. O formulário (H9) serve para o relatório e a tela "Sobre o projeto" | Gabriel, 10/11 |
 | App no vídeo | Tópicos animados (celular estilizado com a tela do app) e só dois cortes curtos do app real (cenas 7 e 9) | Thor, 07/11 |
 | Embarque | História animada (cena 10), sem gravação de tela, por isso sem selo EXEMPLO. A locução diz "pode avisar" | Thor, 07/11 |
-| Mapi | **Mapi 3D só no vídeo.** O app continua com o Mapi plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
+| Leco | **Leco 3D só no vídeo.** O app continua com o Leco plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
-| Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Mapi no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
+| Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 
 ## 2. Regras que o vídeo não pode quebrar
 
@@ -74,7 +74,7 @@ Motion graphics de lançamento de produto, com a identidade do design system Map
 - Troca de cena: **whoosh com borrão horizontal curto** (120 a 200 ms). Sem vazamento de luz, sem quique, sem zoom elástico.
 - Número grande: rola com borrão vertical e para no valor, na palavra certa.
 - Listas e passos: descem **linha por linha**.
-- Mapi 3D: entra subindo suave com uma sombra em elipse sólida Almond Silk embaixo e depois flutua de leve (poucos pixels, ciclo lento). Na pose `recusa`, um balanço curto de poucos graus. Nunca deformar, esticar ou recolorir.
+- Leco 3D: entra subindo suave com uma sombra em elipse sólida Almond Silk embaixo e depois flutua de leve (poucos pixels, ciclo lento). Na pose `recusa`, um balanço curto de poucos graus. Nunca deformar, esticar ou recolorir.
 - Zoom em gravação de tela: suave e lento, no máximo 1,5×.
 - Nada aleatório: a mesma montagem gera sempre o mesmo vídeo.
 
@@ -83,14 +83,14 @@ Motion graphics de lançamento de produto, com a identidade do design system Map
 - **Nada cresce do zero.** O que entra vem de fora do quadro, ou chega um pouco maior e assenta no tamanho certo. Nunca de um ponto minúsculo até o tamanho final.
 - **Entrar se movendo, não por fade.** Fade só para um objeto isolado (por exemplo, o selo de fonte), nunca para trocar de cena.
 - **Cortar com movimento.** O corte acontece no meio de um movimento, e a cena seguinte já começa se mexendo. Nada de cena parada esperando o corte.
-- **Nenhum trecho morto.** Em cena de animação, sempre há algo vivo (o Mapi flutuando, o relógio, uma luz). No máximo 3 quadros seguidos totalmente parados, a não ser numa pausa de propósito antes de algo importante (0,6 a 1,5 s), como antes do número da cena 4.
+- **Nenhum trecho morto.** Em cena de animação, sempre há algo vivo (o Leco flutuando, o relógio, uma luz). No máximo 3 quadros seguidos totalmente parados, a não ser numa pausa de propósito antes de algo importante (0,6 a 1,5 s), como antes do número da cena 4.
 - **Um foco por quadro.** Uma coisa principal por vez; o resto menor e mais calmo.
 - **Palavras entram no ritmo da fala**, de 4 a 6 quadros entre uma e outra nos títulos. Letra por letra só dentro da tela do app (campo de texto), nunca nos títulos.
 - **No máximo uma mola visível no vídeo inteiro**, e mesmo assim pequena (passar só um pouco do lugar e voltar).
 - **O final fica parado no máximo 1,4 s** e termina menor e mais calmo do que começou. O 1 s de silêncio da cena 18 cabe nisso.
 - **Ondas de energia (obrigatório).** O vídeo alterna três intensidades, nunca a mesma por muito tempo: **explosiva** (gancho, cenas 1 a 4; logo, cena 6), **fluida** (o app, cenas 7 a 11; escala, cena 15) e **calma, para ler** (número da cena 4 depois que para; cena 12; slogan da cena 17; fecho da cena 18).
 - **Câmera que reage ao impacto (obrigatório).** Depois de um impacto, a cena inteira faz um balanço curto na direção do impacto e assenta: 4 a 8 px, de 6 a 10 quadros, sem tremer. Usar só nos impactos de verdade: o ônibus freando (cena 1), o número parando (cenas 4 e 12), o círculo cobrindo a tela (cena 6), o celular terminando o giro (cena 9) e a rampa tocando a calçada (cena 18). Em nenhum outro lugar.
-- **Linha de rota (obrigatório).** Um fio condutor no estilo de mapa liga as cenas animadas: uma linha tracejada Dusty Grape `#4A4E69` (traço de 6 px, tracejado de 18/14 px), que se desenha de uma cena para a outra e puxa a cena seguinte, como um caminho num mapa. Ela nasce do pino do logo (cena 6), passa pelo celular da triagem (7), pelo selo de fonte (8), pelo celular virado (9), pelo bolso com o aviso (10), pelos números (12) e pelos tópicos (13), e termina no pino do Mapi em São Paulo, no mapa-múndi (cena 15), que acende quando ela chega. Regras: nunca fica parada no mesmo lugar por mais de uma cena, nunca passa por cima de texto ou do Mapi, some nas cenas de câmera e volta depois, e é sempre fina e discreta (o foco é o conteúdo, não a linha).
+- **Linha de rota (obrigatório).** Um fio condutor no estilo de mapa liga as cenas animadas: uma linha tracejada Dusty Grape `#4A4E69` (traço de 6 px, tracejado de 18/14 px), que se desenha de uma cena para a outra e puxa a cena seguinte, como um caminho num mapa. Ela nasce do pino do logo (cena 6), passa pelo celular da triagem (7), pelo selo de fonte (8), pelo celular virado (9), pelo bolso com o aviso (10), pelos números (12) e pelos tópicos (13), e termina no pino do Leco em São Paulo, no mapa-múndi (cena 15), que acende quando ela chega. Regras: nunca fica parada no mesmo lugar por mais de uma cena, nunca passa por cima de texto ou do Leco, some nas cenas de câmera e volta depois, e é sempre fina e discreta (o foco é o conteúdo, não a linha).
 - **O que estas regras não mudam:** o aviso de protótipo, o selo VISÃO DE FUTURO, o relógio, os números com fonte e o fundo sólido continuam obrigatórios, mesmo que guias de motion graphics recomendem tirar textos dos cantos ou usar fundos com textura.
 
 ## 4. Roteiro: as 18 cenas
@@ -104,18 +104,18 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 3 | 0:19–0:25 | Problema | 02 | Gabriel na câmera, depois três cartões entrando um por palavra. Em cada cartão, o seu objeto 3D (`video/objetos-3d/`): papéis voando, documento enorme, celular com anzol. No "golpe", um risco corta uma linha cinza de "site falso" | A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe. | G → cartões | Espalhada.<br>Difícil.<br>**Com golpe.** | Um toque seco por cartão; papel rasgando no "golpe" |
 | 4 | 0:25–0:31 | Problema | 03 | Número grande rolando com borrão vertical até o valor; fonte embaixo. O chip do relógio sai | No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de 2022. | off | **14,4 milhões**<br>Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais) | Contador rápido que para no número |
 | 5 | 0:31–0:36 | Virada | — | Thor na câmera, mais perto | E se o caminho coubesse no bolso, com a fonte junto? | T | — | Pausa curta antes; whoosh na saída |
-| 6 | 0:36–0:43 | Solução | 04 | Círculo Space Indigo cresce do centro e cobre a tela; abre revelando o logo. O Mapi 3D (`bom`) sobe em "Mapi" e flutua. Depois, quatro chips pequenos entram nos cantos, um por vez, só com frases do app: "Pode ter direito", "Fonte oficial", "Sem CPF", "Emergência: 192" | Esse é o Mapiii. O mapa dos seus direitos. E esse é o Mapi. | off | **Mapiii**<br>o mapa dos seus direitos | Whoosh no círculo; pop no Mapi; a trilha entra baixa |
-| 7 | 0:43–0:51 | Descubra | 05 | Celular entra inclinado com a triagem; um botão é tocado; o cartão "Pode ter direito" sai da tela e os passos da Rota descem linha por linha (linhas cinza). Selos "Sem nome" e "Sem CPF" nas palavras. Mapi 3D `procurando`. No fim, **corte de 2 s da triagem real** | Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê. | off | Sem nome. Sem CPF. | Toques de interface baixos |
-| 8 | 0:51–1:00 | Descubra | 06 | "você tem direito" aparece e é riscado em "Nunca diz"; "pode ter direito" entra com o sublinhado se desenhando; o selo de fonte aumenta com um ding. Mapi 3D `verificado` | Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida. | off | ~~você tem direito~~<br>**pode ter direito**<br>Fonte + data | Risco no "você tem direito"; ding no selo |
+| 6 | 0:36–0:43 | Solução | 04 | Círculo Space Indigo cresce do centro e cobre a tela; abre revelando o logo. O Leco 3D (`bom`) sobe em "Leco" e flutua. Depois, quatro chips pequenos entram nos cantos, um por vez, só com frases do app: "Pode ter direito", "Fonte oficial", "Sem CPF", "Emergência: 192" | Esse é o Mapiii. O mapa dos seus direitos. E esse é o Leco. | off | **Mapiii**<br>o mapa dos seus direitos | Whoosh no círculo; pop no Leco; a trilha entra baixa |
+| 7 | 0:43–0:51 | Descubra | 05 | Celular entra inclinado com a triagem; um botão é tocado; o cartão "Pode ter direito" sai da tela e os passos da Rota descem linha por linha (linhas cinza). Selos "Sem nome" e "Sem CPF" nas palavras. Leco 3D `procurando`. No fim, **corte de 2 s da triagem real** | Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê. | off | Sem nome. Sem CPF. | Toques de interface baixos |
+| 8 | 0:51–1:00 | Descubra | 06 | "você tem direito" aparece e é riscado em "Nunca diz"; "pode ter direito" entra com o sublinhado se desenhando; o selo de fonte aumenta com um ding. Leco 3D `verificado` | Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida. | off | ~~você tem direito~~<br>**pode ter direito**<br>Fonte + data | Risco no "você tem direito"; ding no selo |
 | 9 | 1:00–1:10 | Garanta | 07 | A mão vira o celular para fora em "vira a tela" (com o celular 3D do pedido 6, o giro é feito trocando costas, perfil e frente); aparece "Mostre ao motorista" e o QR se desenha. Depois, **corte de 2 s da mão real** virando o celular com o app | Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial. | off | Vire a tela. | Whoosh curto no giro |
-| 10 | 1:10–1:19 | Garanta | 08 | Pessoa em cadeira de rodas no ponto, celular no bolso; ondas de som saem do bolso; a notificação "Ônibus acessível chegando · 2 min" **desce do topo** como no celular, em "avisar". Mapi 3D `ouvindo` | E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando. | off | O ônibus avisa você. | Som de notificação; a voz real do app por 2 s |
-| 11 | 1:19–1:28 | Confiança | 09 | Mapi 3D `recusa` sobe e faz um balanço curto em "não". A pílula "Emergência: 192" entra em "192" | Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192. | off | Sabe dizer não.<br>**Emergência: 192** | Pop no Mapi |
+| 10 | 1:10–1:19 | Garanta | 08 | Pessoa em cadeira de rodas no ponto, celular no bolso; ondas de som saem do bolso; a notificação "Ônibus acessível chegando · 2 min" **desce do topo** como no celular, em "avisar". Leco 3D `ouvindo` | E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando. | off | O ônibus avisa você. | Som de notificação; a voz real do app por 2 s |
+| 11 | 1:19–1:28 | Confiança | 09 | Leco 3D `recusa` sobe e faz um balanço curto em "não". A pílula "Emergência: 192" entra em "192" | Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192. | off | Sabe dizer não.<br>**Emergência: 192** | Pop no Leco |
 | 12 | 1:28–1:37 | Prova | 10 | "12 de 12" rola e para; depois "100". Recorte do relatório do Lighthouse | E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade. | off | **12 de 12** recusas corretas<br>Acessibilidade **100** | Tique a cada número |
 | 13 | 1:37–1:42 | Prova | 11 | Os 6 tópicos entram um por vez, cada um com o seu ícone | E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta. | off | Sem internet · Um toque · A, A+, A++ · Ouve em voz alta · Confere se é oficial · Sem login, sem cadastro | Tique a cada tópico |
 | 14 | 1:42–1:47 | Escala | — | Gabriel na câmera | Começamos por São Paulo. A SPTrans é só o primeiro exemplo. | G | — | — |
-| 15 | 1:47–1:57 | Escala | 12 | Mapa-múndi de uso livre (no lugar do desenhado à mão do quadro). O pino do Mapi pulsa em São Paulo; pinos acendem em "cidade", "estado" e "país" | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo |
+| 15 | 1:47–1:57 | Escala | 12 | Mapa-múndi de uso livre (no lugar do desenhado à mão do quadro). O pino do Leco pulsa em São Paulo; pinos acendem em "cidade", "estado" e "país" | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo |
 | 16 | 1:57–2:01 | Impacto | 15 (novo) | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 | — |
-| 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Mapi 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Somos o Thor (G) e o Gabriel. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Mapi |
+| 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Leco 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Somos o Thor (G) e o Gabriel. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Leco |
 | 18 | 2:08–2:12 | Fecho | 14 (novo) | O mesmo ponto de ônibus da cena 1. O ônibus para, **a rampa desce** e a pessoa em cadeira de rodas embarca. Logo grande, aviso de protótipo, FIAP Global Solution 2026 | Mapiii. O mapa dos seus direitos. | off | Mapiii · o mapa dos seus direitos<br>Protótipo de estudo, não é canal oficial. | Rampa descendo; 1 s de silêncio no fim |
 
 ## 5. Locução corrida
@@ -128,7 +128,7 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 [Gabriel] A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe.
 [off] No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de dois mil e vinte e dois.
 [Thor] E se o caminho coubesse no bolso, com a fonte junto?
-[off] Esse é o Mapiii. O mapa dos seus direitos. E esse é o Mapi.
+[off] Esse é o Mapiii. O mapa dos seus direitos. E esse é o Leco.
 [off] Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê.
 [off] Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.
 [off] Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.
@@ -153,7 +153,7 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 
 | Item | Arquivo | Situação | Quem |
 |---|---|---|---|
-| Mapi 3D, 7 poses (bom, atencao, procurando, verificado, ouvindo, recusa, comemorando) | `video/mapi-3d/` | **Pronto** | — |
+| Leco 3D, 7 poses (bom, atencao, procurando, verificado, ouvindo, recusa, comemorando) | `video/mapi-3d/` | **Pronto** | — |
 | Quadros 01 a 13 | `video/quadros/` | **Prontos** (04 e 13 corrigidos em 07/11) | — |
 | Capa do YouTube | `video/capa.png` | **Pronta** | — |
 | Quadro 14 (fecho com a rampa descida) e peças para animar | `video/quadros/14.png` e `video/quadros/14-pecas/` (`onibus`, `rampa`, `pessoa`) | **Pronto** (07/11). A rampa é fina, mas no vídeo ela aparece descendo, e o movimento chama a atenção: a dupla decidiu manter | — |
@@ -234,7 +234,7 @@ VISUAL
 - Projeto em video/remotion/, composição 1920x1080, 30 fps.
 - Siga a seção 3 (estilo): só os tokens, as fontes e os ícones de design-system/; fundos sólidos; uma palavra em destaque por frase.
 - Os quadros de video/quadros/ são o modelo de cada cena animada.
-- Mapi 3D de video/mapi-3d/: sobe suave, flutua de leve, sombra em elipse sólida embaixo. Sem quique e sem deformar.
+- Leco 3D de video/mapi-3d/: sobe suave, flutua de leve, sombra em elipse sólida embaixo. Sem quique e sem deformar.
 - Câmera e app de video/remotion/public/ entram como vídeo, nas cenas indicadas.
 - Selo VISÃO DE FUTURO o tempo todo na cena 15. Aviso de protótipo no fecho.
 - Faça as ondas de energia, a câmera que reage ao impacto e a linha de rota exatamente como na seção 3.
@@ -257,14 +257,14 @@ REGRAS
 
 **Antes do render final**
 1. Peçam ao Claude Code para abrir o **Remotion Studio** e assistam inteiro, com som e sem som.
-2. Peçam os ajustes por escrito, um de cada vez: "a cena 4 está rápida", "o Mapi da cena 8 está em cima do texto".
-3. Confiram que nenhum texto ficou cortado ou em cima do Mapi.
+2. Peçam os ajustes por escrito, um de cada vez: "a cena 4 está rápida", "o Leco da cena 8 está em cima do texto".
+3. Confiram que nenhum texto ficou cortado ou em cima do Leco.
 4. **Notas por cena (obrigatório).** Cada cena recebe uma nota de 1 a 10 em quatro pontos: **composição** (o olho sabe para onde ir?), **movimento** (tem intenção e peso?), **clareza** (a ideia é entendida num celular?) e **satisfação** (o movimento e o som dão gosto de ver?). Cena com nota abaixo de 9 em qualquer ponto é refeita. Anotar o defeito visto e o que foi corrigido; nota sem olhar o vídeo não vale.
 5. **Conferir os quadros em volta de cada impacto** (meio segundo antes e depois): é onde aparecem objetos atravessando, cortes errados e textos tremendo.
 6. **O teste final (obrigatório)**, com o vídeo no celular:
    - Os primeiros 0,5 s prendem a atenção?
    - Cada cena é entendida numa tela pequena, com e sem som?
-   - Dá para reconhecer o Mapiii (o Mapi, as cores, a linha de rota) antes de ler o nome?
+   - Dá para reconhecer o Mapiii (o Leco, as cores, a linha de rota) antes de ler o nome?
    - O final deixa a marca na memória?
    Se alguma resposta for "não", corrigir antes de seguir.
 7. Só então peçam o render final.
@@ -296,29 +296,29 @@ REGRAS
 | 3 | Gabriel fala para a câmera. Depois, três cartões: espalhada, difícil, com golpe. |
 | 4 | Número grande: 14,4 milhões. Embaixo, "Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais)". |
 | 5 | Thor, mais perto da câmera. |
-| 6 | Um círculo escuro cobre a tela e revela o logo do Mapiii. Entra o Mapi, um personagem em forma de pino de mapa com duas folhinhas, sorrindo e acenando. |
+| 6 | Um círculo escuro cobre a tela e revela o logo do Mapiii. Entra o Leco, um personagem em forma de pino de mapa com duas folhinhas, sorrindo e acenando. |
 | 7 | Um celular com perguntas de botões grandes. Sai dele um cartão "Pode ter direito". Selos: "Sem nome", "Sem CPF". |
 | 8 | A frase "você tem direito" é riscada. Embaixo, "pode ter direito" e o selo da fonte oficial com a data. |
 | 9 | Uma mão vira o celular para fora. Na tela, "Mostre ao motorista" em letra grande e um código QR. |
 | 10 | Pessoa em cadeira de rodas no ponto, celular no bolso fazendo som. Aparece a notificação "Ônibus acessível chegando, dois minutos". |
-| 11 | O Mapi com a mão aberta, num gesto de não. "Emergência: 192". |
+| 11 | O Leco com a mão aberta, num gesto de não. "Emergência: 192". |
 | 12 | Números grandes: "12 de 12 recusas corretas" e "Acessibilidade 100". |
 | 13 | Seis tópicos com ícones: sem internet, um toque, letra A, A+ e A++, ouve em voz alta, confere se é oficial, sem login. |
 | 14 | Gabriel fala para a câmera. |
 | 15 | Selo "Visão de futuro". Mapa do mundo com um pino em São Paulo e outros acendendo. |
 | 16 | Ícones dos Objetivos de Desenvolvimento Sustentável 10 e 11. |
-| 17 | Thor e Gabriel juntos. O Mapi comemora no canto. |
+| 17 | Thor e Gabriel juntos. O Leco comemora no canto. |
 | 18 | O ponto de ônibus de novo: agora a rampa desce e a pessoa embarca. Logo do Mapiii e o aviso de protótipo. |
 
 ## 12. Claude Design: pedidos
 
-Os pedidos 1 (Mapi 3D), 2 (quadros 01 a 13) e 3 (capa) já foram feitos; os textos usados estão em `video/claude-design/pedido-1`, `-2` e `-3` só como registro. As imagens do Mapi plano usadas de referência estão em `video/claude-design/referencias/`.
+Os pedidos 1 (Leco 3D), 2 (quadros 01 a 13) e 3 (capa) já foram feitos; os textos usados estão em `video/claude-design/pedido-1`, `-2` e `-3` só como registro. As imagens do Leco plano usadas de referência estão em `video/claude-design/referencias/`.
 
-**Onde está tudo o que o Claude Design gerou:** no artefato do design system Mapiii, em https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs (os arquivos ficam na aba de arquivos, no fim da página). Ele tem os quadros, o Mapi 3D, os objetos 3D e as peças. Só abre para quem tem acesso ao artefato no claude.ai. O Claude Code baixa os arquivos de lá e salva aqui no repositório.
+**Onde está tudo o que o Claude Design gerou:** no artefato do design system Mapiii, em https://claude.ai/artifact/6Vkhuq9j7zNxiXF3ccbmfs (os arquivos ficam na aba de arquivos, no fim da página). Ele tem os quadros, o Leco 3D, os objetos 3D e as peças. Só abre para quem tem acesso ao artefato no claude.ai. O Claude Code baixa os arquivos de lá e salva aqui no repositório.
 
-**Como fazer um pedido:** no claude.ai, abra **Design** e o projeto do design system "Mapiii" (o mesmo onde saiu o Mapi 3D, de preferência **na mesma conversa**, para manter o estilo). Anexe o que o pedido indicar, cole o texto e envie. Peça ajustes no mesmo chat. Exporte em PNG e mande para o Claude Code, que confere antes de salvar.
+**Como fazer um pedido:** no claude.ai, abra **Design** e o projeto do design system "Mapiii" (o mesmo onde saiu o Leco 3D, de preferência **na mesma conversa**, para manter o estilo). Anexe o que o pedido indicar, cole o texto e envie. Peça ajustes no mesmo chat. Exporte em PNG e mande para o Claude Code, que confere antes de salvar.
 
-**Na hora de conferir, não aceitem:** texto inventado nas telas (lei, valor, prazo, telefone, link), "você tem direito", cores fora da paleta, ou o Mapi com rosto, cor ou forma diferente.
+**Na hora de conferir, não aceitem:** texto inventado nas telas (lei, valor, prazo, telefone, link), "você tem direito", cores fora da paleta, ou o Leco com rosto, cor ou forma diferente.
 
 ### Pedido 4 · Quadro 14, o fecho com a rampa descida (recomendado)
 
@@ -331,7 +331,7 @@ No arquivo "Mapiii Pitch Quadros 16x9", crie o quadro 14, o último do vídeo, n
 
 Na metade de cima, centralizado: o logo do Mapiii grande (igual ao do quadro 4, anexo) e, embaixo, "o mapa dos seus direitos", com "direitos" sublinhado em rosa. No rodapé, pequeno: "Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026".
 
-Sem o Mapi neste quadro (ele já aparece no quadro 13). Sem outro texto além do indicado. Contraste de pelo menos 4,5:1 em todo texto.
+Sem o Leco neste quadro (ele já aparece no quadro 13). Sem outro texto além do indicado. Contraste de pelo menos 4,5:1 em todo texto.
 
 Entregue também, como PNG separados e com fundo transparente, as peças que vão ser animadas: o ônibus sem a rampa, a rampa sozinha e a pessoa em cadeira de rodas sozinha, todas na mesma escala do quadro.
 ```
@@ -342,18 +342,18 @@ Entregue também, como PNG separados e com fundo transparente, as peças que vã
 
 ### Pedido 5 · Objetos 3D da cena 3 (opcional)
 
-Só se a dupla quiser deixar a cena 3 mais rica. Os quadros atuais já resolvem a cena. São objetos, **não personagens**: sem rosto, para o Mapi continuar sendo o único personagem.
+Só se a dupla quiser deixar a cena 3 mais rica. Os quadros atuais já resolvem a cena. São objetos, **não personagens**: sem rosto, para o Leco continuar sendo o único personagem.
 
-**Anexar:** duas poses do Mapi 3D (`video/mapi-3d/bom.png` e `video/mapi-3d/atencao.png`), para copiar o material e a luz. Se a conversa do Mapi 3D ainda estiver aberta, faça lá mesmo.
+**Anexar:** duas poses do Leco 3D (`video/mapi-3d/bom.png` e `video/mapi-3d/atencao.png`), para copiar o material e a luz. Se a conversa do Leco 3D ainda estiver aberta, faça lá mesmo.
 
 ```text
-Crie 3 objetos em 3D no mesmo estilo e com o mesmo material do Mapi 3D (anexos): formas arredondadas e macias, acabamento brilhante de brinquedo de vinil, luz de estúdio suave vinda do alto à direita, contorno escuro Space Indigo #22223B, e só as cores da paleta do design system Mapiii (Space Indigo #22223B, Dusty Grape #4A4E69, Lilac Ash #9A8C98, Almond Silk #C9ADA7, Seashell #F2E9E4 e o rosa #CF7A93). Sem rosto, sem olhos, sem boca: são objetos, não personagens. Sem texto, sem letras e sem números em nenhum objeto.
+Crie 3 objetos em 3D no mesmo estilo e com o mesmo material do Leco 3D (anexos): formas arredondadas e macias, acabamento brilhante de brinquedo de vinil, luz de estúdio suave vinda do alto à direita, contorno escuro Space Indigo #22223B, e só as cores da paleta do design system Mapiii (Space Indigo #22223B, Dusty Grape #4A4E69, Lilac Ash #9A8C98, Almond Silk #C9ADA7, Seashell #F2E9E4 e o rosa #CF7A93). Sem rosto, sem olhos, sem boca: são objetos, não personagens. Sem texto, sem letras e sem números em nenhum objeto.
 
 1. "espalhada": uma pilha de folhas de papel se espalhando no ar, algumas voando, com linhas cinza no lugar do texto.
 2. "dificil": um documento grosso e enorme, com muitas linhas cinza bem pequenas e um carimbo sem letras.
 3. "golpe": um celular com um anzol de pesca preso na tela, que mostra só um alerta com o ícone de escudo e um X.
 
-Mostre os 3 lado a lado com o Mapi 3D bom, para conferir que o estilo é o mesmo, sobre o fundo Seashell #F2E9E4. Entregue cada objeto como PNG com fundo transparente, 2000 × 2000 px, centralizado e no mesmo tamanho.
+Mostre os 3 lado a lado com o Leco 3D bom, para conferir que o estilo é o mesmo, sobre o fundo Seashell #F2E9E4. Entregue cada objeto como PNG com fundo transparente, 2000 × 2000 px, centralizado e no mesmo tamanho.
 ```
 
 **Onde salvar:** `video/objetos-3d/espalhada.png`, `dificil.png` e `golpe.png`.
@@ -365,7 +365,7 @@ O momento principal do vídeo é "vire a tela". Com o celular em 3D visto de tr�
 **Anexar:** `video/objetos-3d/golpe.png` (o celular que já existe nesse estilo) e `video/mapi-3d/bom.png`.
 
 ```text
-Crie um celular moderno em 3D no mesmo estilo e material dos objetos anexos (o celular do "golpe" e o Mapi 3D): formas arredondadas, acabamento brilhante de brinquedo de vinil, contorno escuro Space Indigo #22223B, luz de estúdio suave vinda do alto à direita, só cores da paleta Mapiii (Space Indigo #22223B, Dusty Grape #4A4E69, Lilac Ash #9A8C98, Almond Silk #C9ADA7, Seashell #F2E9E4, rosa #CF7A93). Sem rosto, sem texto, sem logo de marca real, sem anzol.
+Crie um celular moderno em 3D no mesmo estilo e material dos objetos anexos (o celular do "golpe" e o Leco 3D): formas arredondadas, acabamento brilhante de brinquedo de vinil, contorno escuro Space Indigo #22223B, luz de estúdio suave vinda do alto à direita, só cores da paleta Mapiii (Space Indigo #22223B, Dusty Grape #4A4E69, Lilac Ash #9A8C98, Almond Silk #C9ADA7, Seashell #F2E9E4, rosa #CF7A93). Sem rosto, sem texto, sem logo de marca real, sem anzol.
 
 Entregue 3 vistas do MESMO celular, de pé, no mesmo tamanho e na mesma posição no quadro, para uma animação de giro:
 1. frente: a tela inteira em Seashell #F2E9E4 lisa, sem nada desenhado nela (o conteúdo é colocado depois);
@@ -439,6 +439,6 @@ Contraste de pelo menos 4,5:1 em todo texto.
 ## 14. De onde vieram as ideias
 
 - **Vídeo campeão da GS 2026.1** ("Vídeo Pitch ARGUS", analisado em 07/11): abre com uma história humana, mostra uma função de cada vez, pessoas reais na câmera, escala antes do fecho e frase final com o nome. Onde ele falhou e o Mapiii vai além: visual repetitivo e escuro, produto quase invisível, nenhuma evidência, legenda de uma palavra só.
-- **Guias "Como eu fiz o vídeo do Dorme" e "do Fatô"** (Marcos Levi, Levi Lab, material gratuito, levilab.site), lidos em 07/11. Aproveitados: narração com tempo por palavra e animação presa à palavra; uma ideia por cena; revisão no Remotion Studio antes do render; 2 a 4 ajustes; nada aleatório no código; quadro de cada cena conferido antes do render; número rolando com borrão; relógio no canto; lista descendo linha por linha; notificação descendo do topo; círculo cobrindo a tela no logo; números por extenso e sem reticências na locução. Não aproveitados: formato vertical e 60 qps, degradê e vidro (o design system proíbe), clone de voz (decisão da dupla), personagens novos (o Mapi é o único), a "virada" contando que o vídeo foi feito com IA, e "quanto custa por ano" (não temos número com fonte).
+- **Guias "Como eu fiz o vídeo do Dorme" e "do Fatô"** (Marcos Levi, Levi Lab, material gratuito, levilab.site), lidos em 07/11. Aproveitados: narração com tempo por palavra e animação presa à palavra; uma ideia por cena; revisão no Remotion Studio antes do render; 2 a 4 ajustes; nada aleatório no código; quadro de cada cena conferido antes do render; número rolando com borrão; relógio no canto; lista descendo linha por linha; notificação descendo do topo; círculo cobrindo a tela no logo; números por extenso e sem reticências na locução. Não aproveitados: formato vertical e 60 qps, degradê e vidro (o design system proíbe), clone de voz (decisão da dupla), personagens novos (o Leco é o único), a "virada" contando que o vídeo foi feito com IA, e "quanto custa por ano" (não temos número com fonte).
 - **Brief de produção de um anúncio conceitual do Duolingo** (em espanhol, enviado pelo Thor em 09/11). Aproveitados: ondas de energia, câmera que reage ao impacto, hierarquia e níveis de som (−14 LUFS, música 12 dB abaixo da voz), notas por cena com refação abaixo de 9, conferência em volta dos impactos, o teste final e a ideia do fio condutor, adaptada como linha de rota de mapa. Não aproveitados: mundo 3D no Blender, câmera única sem cortes, 60 qps, voz sintética, música original, versão vertical, brilhos, névoa e fundos com textura.
 - **Skill "motionmaxxing"** (Tejas Makwana, github.com/Tejashmakwana/motionmaxxing, licença Apache 2.0), lida em 08/11. Aproveitadas as regras de tempo medidas em 53 animações profissionais (seção 3). Não instalada: ela usa outra ferramenta de montagem (HTML no lugar do Remotion), a voz depende de uma chave paga, e a lista "nunca faça" dela proíbe coisas que o nosso vídeo é obrigado a ter (aviso de protótipo, selo, números com fonte) ou já decidiu (fundo sólido, os três cartões, o círculo no logo).

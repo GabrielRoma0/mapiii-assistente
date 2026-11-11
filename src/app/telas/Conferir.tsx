@@ -23,7 +23,7 @@ function Resultado({ checagem }: { checagem: Extract<Checagem, { ok: true }> }) 
       <div className={css.resultadoTopo}>
         <MapiPersonagem estado={v.estado} size={52} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          <span style={{ fontSize: 16, fontWeight: 800 }}>Mapi · {ESTADOS_MAPI[v.estado].rotulo}</span>
+          <span style={{ fontSize: 16, fontWeight: 800 }}>Leco · {ESTADOS_MAPI[v.estado].rotulo}</span>
           <h2 id="resultado-checagem" className={css.resultadoNome} style={{ margin: 0 }}>
             <Icon name={v.icone} size={28} />
             {v.texto}

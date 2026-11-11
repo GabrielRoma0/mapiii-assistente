@@ -1,7 +1,7 @@
 // Cenas 1 a 6: gancho, problema, número, virada e logo.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Mapi, MONO, mix, partida, Palavras, r2 } from '../base';
+import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2 } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
 import { naPalavra } from '../roteiro';
 import { Camera } from '../sobreposicoes';
@@ -130,14 +130,14 @@ export const Cena4: React.FC = () => {
 // ---------- Cena 5: Thor na câmera ----------
 export const Cena5: React.FC = () => <Camera n={5} nomes={['thor']} />;
 
-// ---------- Cena 6: círculo cobre a tela e abre no logo; Mapi sobe; quatro chips ----------
+// ---------- Cena 6: círculo cobre a tela e abre no logo; Leco sobe; quatro chips ----------
 export const Cena6: React.FC = () => {
   const f = useCurrentFrame();
   const cobre = chegada(f, 0, 9); // círculo indigo cresce e cobre
   const abre = chegada(f, 11, 10); // um círculo claro abre de dentro, revelando o logo
   const mapiii = Math.min(naPalavra(6, 'Mapiii'), 15); // o logo aparece assim que o círculo abre
   const direitos = naPalavra(6, 'direitos');
-  const mapi = naPalavra(6, 'Mapi', 1); // a 2ª palavra que começa com "Mapi" (a 1ª é "Mapiii")
+  const leco = naPalavra(6, 'Leco');
   const choque = impacto(f, 9, 0, 6);
   const chips = ['Pode ter direito', 'Fonte oficial', 'Sem CPF', 'Emergência: 192'];
   const posChip: React.CSSProperties[] = [
@@ -156,7 +156,7 @@ export const Cena6: React.FC = () => {
             o mapa dos seus <Destaque de={direitos}>direitos</Destaque>
           </div>
         </div>
-        <Mapi pose="bom" x={1240} y={160} tamanho={700} em={mapi - 2} />
+        <Leco pose="bom" x={1240} y={160} tamanho={700} em={leco - 2} />
         {chips.map((c, i) => {
           const em = direitos + 10 + i * 7;
           const t = chegada(f, em, 10);

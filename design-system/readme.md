@@ -116,9 +116,9 @@ Mapiii é o **mapa dos seus direitos**: um assistente digital que orienta famíl
 
 ---
 
-## Personagem (Mapi, a pinha)
+## Personagem (Leco, o morango)
 
-- Papel: guia e assistente. Pequeno (44 a 64 px) ao lado das mensagens, nunca cobre conteúdo, sempre com o rótulo "Mapi · Estado" e texto. O desenho é decorativo (`aria-hidden`).
+- Papel: guia e assistente. Pequeno (44 a 64 px) ao lado das mensagens, nunca cobre conteúdo, sempre com o rótulo "Leco · Estado" e texto. O desenho é decorativo (`aria-hidden`).
 - Poses: bom, atencao, evite, chuva, comemorando, agradecendo (originais) e ouvindo, procurando, achei, verificado, duvida, recusa, esperando (novas, mesmo corpo e traço). Sem animações; pose estática também com prefers-reduced-motion.
 - Estados → pose: Olá = bom; Ouvindo = ouvindo; Procurando = procurando (lupa); Achei = achei (brilho); Verificado = verificado (escudo com check); Dúvida honesta = duvida (interrogação); Atenção = atencao; Recusa gentil = recusa (mão aberta); Acolhimento = agradecendo; Comemorando = comemorando (só ao concluir checklist); Esperando = esperando.
 
@@ -134,7 +134,7 @@ DisclaimerBanner, SourceChip, SourceTypeBadge (Fonte oficial, Fonte secundária,
   - O "M" é uma rampa: a perna esquerda tem altura de maiúscula e a direita, a altura do "a".
   - O "p" é uma roda de cadeira de rodas, com aro, eixo e raios suaves.
   - Os três "i" (informação, independência e inclusão) descem em escadinha.
-  - O último pingo é uma pinha (o "ma-pinha"), com formato de pino de mapa, folhinhas no topo e os relevos do piso tátil de alerta.
+  - O último pingo é um morango (o Leco), com formato de pino de mapa, folhinhas no topo e os relevos do piso tátil de alerta.
 - **Versões:** cor, monocromática e invertida. O símbolo sozinho serve de app icon e favicon e continua legível em 16 px.
 - **Área de proteção:** igual à altura da pinha. O mínimo é 80 px de largura para o horizontal e 16 px para o símbolo.
 - **Não faça:** distorcer, girar, trocar as cores, aplicar sobre fundo poluído ou recriar o logo com outra fonte.

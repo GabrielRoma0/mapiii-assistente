@@ -159,7 +159,7 @@ Feito para teclado e leitor de tela: foco visível em tudo (anel duplo do design
 data/              base de conhecimento, triagem, domínios e valores (JSON)
 design-system/     design system Mapiii v2.0 (tokens, ícones, componentes React, telas de referência)
 src/core/          lógica pura, sem tela: busca, regras, validação, checagem oficial, registro, avaliação
-src/ui/            componentes do assistente e o personagem Mapi
+src/ui/            componentes do assistente e o personagem Leco
 src/app/           telas, rotas por #, estado em memória
 src/avaliacao/     página avaliacao.html
 src/app/embarque/  Embarque garantido: flag, cliente da função e modo exemplo

@@ -1,4 +1,4 @@
-// Mapi, a pinha. Porte de design-system/MapiPersonagem.dc.html (v2.0).
+// Leco, o morango. Porte de design-system/MapiPersonagem.dc.html (v2.0).
 // A tabela POSES e o desenho do SVG foram copiados sem mudança: não redesenhar aqui.
 // Não há animações no design system: a pose é sempre estática (vale também com prefers-reduced-motion).
 
@@ -25,19 +25,19 @@ type Pose = {
 };
 
 const POSES: Record<string, Pose> = {
-  bom: { body: '#DDEBE0', label: 'Mapi feliz: trecho bom', eyes: 'open', mouth: 'M62 84Q70 92 78 84', arms: 'M38 84Q28 92 27 101M102 78Q114 68 116 54', h: [27, 104, 116, 50] },
-  atencao: { body: '#F7EAD2', label: 'Mapi atento: trecho com atenção', eyes: 'open', look: 3, brows: 'M76 61Q82 56 88 60', mouth: 'M61 88q3-3 6 0t6 0t6 0', arms: 'M38 84Q28 92 27 101M102 82Q114 76 112 64', h: [27, 104, 111, 61], alert: true },
-  evite: { body: '#F6E2DD', label: 'Mapi preocupado: evite este trecho', eyes: 'open', brows: 'M51 64L63 60M77 60L89 64', mouth: 'M63 90Q70 83 77 90', arms: 'M38 84Q56 92 82 102M102 84Q84 92 58 102', h: [84, 103, 56, 103] },
-  chuva: { body: '#E6DCE0', label: 'Mapi com guarda-chuva: chuva prevista', eyes: 'open', up: true, mouth: 'M64 85Q70 90 76 85', arms: 'M38 84Q28 92 27 101M103 82Q100 74 92 72', h: [27, 104, 91, 71], umbrella: true },
-  comemorando: { body: '#C9ADA7', label: 'Mapi comemorando: você chegou', eyes: 'closed', big: true, arms: 'M38 78Q24 66 22 51M102 78Q116 66 118 51', h: [22, 48, 118, 48], festa: true },
-  agradecendo: { body: '#F4E0E5', label: 'Mapi agradecendo: aviso enviado', eyes: 'closed', mouth: 'M62 84Q70 92 78 84', arms: 'M38 86Q44 100 59 103M102 86Q96 100 81 103', h: [59, 103, 81, 103], heart: true },
-  ouvindo: { body: '#DDEDEA', label: 'Mapi ouvindo', eyes: 'open', brows: 'M52 62Q58 59 64 62M76 62Q82 59 88 62', mouth: 'M65 86Q70 89 75 86', arms: 'M38 84Q28 92 27 101M102 80Q112 74 108 64', h: [27, 104, 107, 62], waves: true },
-  procurando: { body: '#E3E8F2', label: 'Mapi procurando', eyes: 'open', look: 3, brows: 'M76 61Q82 58 88 61', mouth: 'M65 87H75', arms: 'M38 84Q28 92 27 101M102 84Q110 84 111 76', h: [27, 104, 111, 76], lupa: true },
-  achei: { body: '#E9E3F2', label: 'Mapi achou uma resposta', eyes: 'open', up: true, big: true, arms: 'M38 84Q28 92 27 101M102 80Q114 72 118 58', h: [27, 104, 118, 55], spark: true },
-  verificado: { body: '#DDEBE0', label: 'Mapi com fonte verificada', eyes: 'open', mouth: 'M62 84Q70 92 78 84', arms: 'M38 84Q28 92 27 101M102 84Q112 88 114 96', h: [27, 104, 114, 97], shield: true },
-  duvida: { body: '#E8DDD7', label: 'Mapi com dúvida: não encontrou', eyes: 'open', up: true, look: -2, brows: 'M51 62L63 60M77 58Q83 55 89 59', mouth: 'M63 88q3.5-2.5 7 0t7 0', arms: 'M38 84Q28 92 27 101M102 80Q114 66 101 50', h: [27, 104, 100, 48], question: true },
-  recusa: { body: '#F6E4D6', label: 'Mapi recusando com gentileza', eyes: 'open', brows: 'M52 62Q58 60 64 63M76 63Q82 60 88 62', mouth: 'M64 85Q70 89 76 85', arms: 'M38 86Q46 98 58 100M102 82Q116 80 118 68', h: [58, 100, 118, 64] },
-  esperando: { body: '#E6DCE0', label: 'Mapi esperando', eyes: 'open', mouth: 'M64 85Q70 90 76 85', arms: 'M38 86Q44 100 59 103M102 86Q96 100 81 103', h: [59, 103, 81, 103] }
+  bom: { body: '#DDEBE0', label: 'Leco feliz: trecho bom', eyes: 'open', mouth: 'M62 84Q70 92 78 84', arms: 'M38 84Q28 92 27 101M102 78Q114 68 116 54', h: [27, 104, 116, 50] },
+  atencao: { body: '#F7EAD2', label: 'Leco atento: trecho com atenção', eyes: 'open', look: 3, brows: 'M76 61Q82 56 88 60', mouth: 'M61 88q3-3 6 0t6 0t6 0', arms: 'M38 84Q28 92 27 101M102 82Q114 76 112 64', h: [27, 104, 111, 61], alert: true },
+  evite: { body: '#F6E2DD', label: 'Leco preocupado: evite este trecho', eyes: 'open', brows: 'M51 64L63 60M77 60L89 64', mouth: 'M63 90Q70 83 77 90', arms: 'M38 84Q56 92 82 102M102 84Q84 92 58 102', h: [84, 103, 56, 103] },
+  chuva: { body: '#E6DCE0', label: 'Leco com guarda-chuva: chuva prevista', eyes: 'open', up: true, mouth: 'M64 85Q70 90 76 85', arms: 'M38 84Q28 92 27 101M103 82Q100 74 92 72', h: [27, 104, 91, 71], umbrella: true },
+  comemorando: { body: '#C9ADA7', label: 'Leco comemorando: você chegou', eyes: 'closed', big: true, arms: 'M38 78Q24 66 22 51M102 78Q116 66 118 51', h: [22, 48, 118, 48], festa: true },
+  agradecendo: { body: '#F4E0E5', label: 'Leco agradecendo: aviso enviado', eyes: 'closed', mouth: 'M62 84Q70 92 78 84', arms: 'M38 86Q44 100 59 103M102 86Q96 100 81 103', h: [59, 103, 81, 103], heart: true },
+  ouvindo: { body: '#DDEDEA', label: 'Leco ouvindo', eyes: 'open', brows: 'M52 62Q58 59 64 62M76 62Q82 59 88 62', mouth: 'M65 86Q70 89 75 86', arms: 'M38 84Q28 92 27 101M102 80Q112 74 108 64', h: [27, 104, 107, 62], waves: true },
+  procurando: { body: '#E3E8F2', label: 'Leco procurando', eyes: 'open', look: 3, brows: 'M76 61Q82 58 88 61', mouth: 'M65 87H75', arms: 'M38 84Q28 92 27 101M102 84Q110 84 111 76', h: [27, 104, 111, 76], lupa: true },
+  achei: { body: '#E9E3F2', label: 'Leco achou uma resposta', eyes: 'open', up: true, big: true, arms: 'M38 84Q28 92 27 101M102 80Q114 72 118 58', h: [27, 104, 118, 55], spark: true },
+  verificado: { body: '#DDEBE0', label: 'Leco com fonte verificada', eyes: 'open', mouth: 'M62 84Q70 92 78 84', arms: 'M38 84Q28 92 27 101M102 84Q112 88 114 96', h: [27, 104, 114, 97], shield: true },
+  duvida: { body: '#E8DDD7', label: 'Leco com dúvida: não encontrou', eyes: 'open', up: true, look: -2, brows: 'M51 62L63 60M77 58Q83 55 89 59', mouth: 'M63 88q3.5-2.5 7 0t7 0', arms: 'M38 84Q28 92 27 101M102 80Q114 66 101 50', h: [27, 104, 100, 48], question: true },
+  recusa: { body: '#F6E4D6', label: 'Leco recusando com gentileza', eyes: 'open', brows: 'M52 62Q58 60 64 63M76 63Q82 60 88 62', mouth: 'M64 85Q70 89 76 85', arms: 'M38 86Q46 98 58 100M102 82Q116 80 118 68', h: [58, 100, 118, 64] },
+  esperando: { body: '#E6DCE0', label: 'Leco esperando', eyes: 'open', mouth: 'M64 85Q70 90 76 85', arms: 'M38 86Q44 100 59 103M102 86Q96 100 81 103', h: [59, 103, 81, 103] }
 };
 
 // Estados do assistente → pose e rótulo ("Mapiii Mapa dos Direitos.dc.html", seção 03).
@@ -104,7 +104,7 @@ export function personagemSVG(estado: string, size = 64): string {
 </svg>`;
 }
 
-/** Desenho decorativo: quem usa mostra o rótulo "Mapi · Estado" em texto ao lado. */
+/** Desenho decorativo: quem usa mostra o rótulo "Leco · Estado" em texto ao lado. */
 export function MapiPersonagem({ estado, size = 64 }: { estado: EstadoMapi; size?: number }) {
   return (
     <span aria-hidden="true" style={{ display: 'block', flex: 'none' }} dangerouslySetInnerHTML={{ __html: personagemSVG(estado, size) }} />

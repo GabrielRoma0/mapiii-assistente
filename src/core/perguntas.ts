@@ -24,7 +24,7 @@ export interface Pergunta {
   /** Texto no modo "Sou a pessoa" (falando com você). Sem ele, vale `texto`. */
   texto_eu?: string;
   por_que_perguntamos: string;
-  /** Fala do Mapi (estado "Ouvindo") acima da pergunta. */
+  /** Fala do Leco (estado "Ouvindo") acima da pergunta. */
   fala?: string;
   tipo: TipoPergunta;
   opcoes: Opcao[];

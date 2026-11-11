@@ -1,7 +1,7 @@
 // Cenas 12 a 18: números, tópicos, escala, ODS e fecho.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { AvisoPrototipo, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Logo, Mapi, mix, Palavras, partida, r2 } from '../base';
+import { AvisoPrototipo, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Logo, Leco, mix, Palavras, partida, r2 } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
 import { naPalavra } from '../roteiro';
 import { Camera, LinhaDeRota } from '../sobreposicoes';
@@ -209,7 +209,7 @@ export const Cena17: React.FC = () => {
             </span>
           </div>
         </div>
-        <Mapi pose="comemorando" x={1290} y={160} tamanho={600} em={corte + 2} />
+        <Leco pose="comemorando" x={1290} y={160} tamanho={600} em={corte + 2} />
         <AvisoPrototipo style={{ left: 150, bottom: 150, opacity: chegada(f, corte + 10, 10) }} />
         {g < 0 && null}
       </Fundo>

@@ -1,7 +1,7 @@
 // Cenas 7 a 11: Descubra, Com fonte, Mostre ao motorista, Aviso no bolso, Sabe dizer não.
 import React from 'react';
 import { AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from 'remotion';
-import { Cartao, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Mapi, mix, MONO, Palavras, r2, Selo } from '../base';
+import { Cartao, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Leco, mix, MONO, Palavras, r2, Selo } from '../base';
 import { Pessoa } from '../desenhos';
 import { arquivoExiste } from '../arquivos';
 import { cena, naPalavra, quadrosDa } from '../roteiro';
@@ -46,7 +46,7 @@ export const Cena7: React.FC = () => {
             return <span key={p.t} style={{ opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(50, 0, t))}px) scale(${r2(mix(1.15, 1, t))})`, display: 'inline-block' }}><Selo texto={p.t} /></span>;
           })}
         </div>
-        <Mapi pose="procurando" x={150} y={540} tamanho={480} em={8} />
+        <Leco pose="procurando" x={150} y={540} tamanho={480} em={8} />
         {/* celular com a triagem */}
         <div style={{ position: 'absolute', left: 940, top: 110, transform: `translateY(${r2(mix(900, 0, fone))}px) rotate(${r2(mix(-14, -6, fone))}deg)` }}>
           <div style={{ position: 'relative', width: 414, height: 868, border: `12px solid ${COR.indigo}`, borderRadius: 64, overflow: 'hidden', background: COR.seashell, boxShadow: '0 40px 90px rgba(34,34,59,.20)' }}>
@@ -129,7 +129,7 @@ export const Cena8: React.FC = () => {
             <span><b style={{ color: COR.verde800, fontWeight: 900 }}>Fonte oficial</b> <span style={{ color: COR.grape, opacity: chegada(f, data - 4, 10) }}>· conferida em <span style={{ fontFamily: MONO }}>09/11/2026</span></span></span>
           </div>
         </div>
-        <Mapi pose="verificado" x={1290} y={220} tamanho={600} em={fonte - 4} />
+        <Leco pose="verificado" x={1290} y={220} tamanho={600} em={fonte - 4} />
       </Fundo>
     </EntradaDeCena>
   );
@@ -240,13 +240,13 @@ export const Cena10: React.FC = () => {
           <span style={{ width: 120, height: 120, borderRadius: 32, background: COR.indigo, display: 'grid', placeItems: 'center', flex: 'none' }}><Icone nome="local" tamanho={68} cor={COR.seashell} /></span>
           <span style={{ fontSize: 52, lineHeight: 1.1, fontWeight: 900, letterSpacing: '-0.02em' }}>Ônibus acessível chegando <span style={{ color: COR.grape }}>· 2 min</span></span>
         </Cartao>
-        <Mapi pose="ouvindo" x={1480} y={600} tamanho={400} em={voz - 4} />
+        <Leco pose="ouvindo" x={1480} y={600} tamanho={400} em={voz - 4} />
       </Fundo>
     </EntradaDeCena>
   );
 };
 
-// ---------- Cena 11: Mapi faz "não"; Emergência: 192 ----------
+// ---------- Cena 11: Leco faz "não"; Emergência: 192 ----------
 export const Cena11: React.FC = () => {
   const f = useCurrentFrame();
   const nao = naPalavra(11, 'não.');
@@ -258,7 +258,7 @@ export const Cena11: React.FC = () => {
   return (
     <EntradaDeCena>
       <Fundo>
-        <Mapi pose="recusa" x={110} y={150} tamanho={800} em={2} balanco={nao} />
+        <Leco pose="recusa" x={110} y={150} tamanho={800} em={2} balanco={nao} />
         <div style={{ position: 'absolute', left: 960, top: 230 }}>
           <div style={{ fontSize: 168, lineHeight: 0.95, fontWeight: 900, letterSpacing: '-0.035em' }}>
             <Palavras itens={[{ texto: 'Sabe', em: nao - 12 }, { texto: 'dizer', em: nao - 7 }]} />

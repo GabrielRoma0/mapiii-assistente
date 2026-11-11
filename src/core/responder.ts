@@ -8,7 +8,7 @@ import { normalizar } from './normalizar.ts';
 
 export const MENSAGEM_NAO_ENCONTREI = 'Não encontrei isso na minha base. Para não arriscar uma resposta errada, procure o canal oficial.';
 export const MENSAGEM_ACOLHIMENTO = 'Sinto muito. Receber um não é difícil. Você não precisa resolver tudo hoje.';
-// Pedido negado ou cancelado: o Mapi acolhe antes de responder (estado "Acolhimento" do design).
+// Pedido negado ou cancelado: o Leco acolhe antes de responder (estado "Acolhimento" do design).
 const RE_ASSUNTO_DIFICIL = /\b(negaram|negado|negada|negou|indeferid[oa]|indeferiram|recusaram|cancelaram|cortaram|suspenderam)\b/;
 
 export function ehAssuntoDificil(texto: string): boolean {

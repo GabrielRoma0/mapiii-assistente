@@ -50,7 +50,7 @@ export function Vitrine() {
       <h1 className={css.titulo}>Vitrine de componentes</h1>
       <p className={css.nota}>Página de desenvolvimento. Os textos são só exemplos de layout.</p>
 
-      <Secao titulo="Mapi · 11 estados (pose estática)">
+      <Secao titulo="Leco · 11 estados (pose estática)">
         <div className={css.gradeMapi}>
           {(Object.keys(ESTADOS_MAPI) as EstadoMapi[]).map((e) => (
             <figure key={e} className={css.mapiItem}>
