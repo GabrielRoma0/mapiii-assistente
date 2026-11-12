@@ -104,21 +104,27 @@ const ROTEIROS = {
     await p.mouse.wheel(0, 380);
     await espera(p, 1600);
   },
+  // "Fazer uma pergunta": uma das perguntas que o próprio app sugere, a resposta do Leco e a fonte.
+  // O formulário fica fixo na metade de baixo da tela; a resposta aparece em cima, por isso a tela é rolada até o começo dela.
   pergunta: async ({ p, tocar, comecar }) => {
     await preparar(p, tocar);
-    await comecar();
-    await espera(p, 500);
-    await tocar(p.locator('a', { hasText: 'Fazer uma pergunta' }));
+    await p.goto(URL + '#/perguntar');
     await espera(p, 900);
+    await comecar();
+    await espera(p, 400);
     const campo = p.locator('main textarea').first();
     await campo.tap();
-    // Uma das perguntas que o próprio app sugere.
-    await campo.pressSequentially(process.env.PERGUNTA ?? 'Cadeirante paga ônibus em São Paulo?', { delay: 60 });
-    await espera(p, 600);
+    await campo.pressSequentially(process.env.PERGUNTA ?? 'Como peço a van do Atende para o meu filho cadeirante?', { delay: 38 });
+    await espera(p, 500);
     await tocar(p.locator('main button[type=submit]'));
-    await espera(p, 3200);
-    await p.mouse.wheel(0, 260);
-    await espera(p, 2400);
+    await espera(p, 900);
+    // volta ao começo da resposta ("Você" e "Leco · Achei")
+    const topo = await p.locator('main').getByText('Você', { exact: true }).first().evaluate((e) => Math.round(e.getBoundingClientRect().top));
+    await p.mouse.move(195, 150);
+    await p.mouse.wheel(0, topo - 70);
+    await espera(p, 2600);
+    for (let i = 0; i < 3; i++) { await p.mouse.wheel(0, 230); await espera(p, 1500); }
+    await espera(p, 800);
   },
   motorista: async ({ p, tocar, comecar }) => {
     await preparar(p, tocar);

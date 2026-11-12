@@ -12,6 +12,15 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 12/11 (5): cena do Leco como assistente (AGUARDANDO A DUPLA, sem render)
+
+O Thor pediu uma cena com a função principal do desafio: a pessoa faz uma pergunta e o Leco responde. Ele quer aprovar o roteiro antes e **renderizar uma vez só**.
+
+- **Montada, sem render:** cena 21, depois da cena 10 e antes da 11 ("Ele também sabe dizer não"), 7,5 s. Gravação real da tela "Fazer uma pergunta": a pergunta "Como peço a van do Atende para o meu filho cadeirante?" (uma das que o app sugere), a resposta do Leco (Atende+), o resumo e os passos. O celular aparece maior, só com a parte de cima da tela.
+- **Narração proposta (até 6,5 s):** Ou pergunte do seu jeito. O Leco procura na base e responde com o passo a passo e a fonte. Salvar em `video/gravacoes/narracao/cena-21.mp3`.
+- **Não dizer "IA" nessa fala:** o app não usa IA (busca própria na base; a camada de IA está desligada).
+- **Falta para renderizar:** o Thor aprovar o roteiro, mandar a narração da cena 21 e decidir a trilha (a gerada por código ou uma baixada por ele). O vídeo em `video/entrega/` ainda é o de 2:05, com a trilha antiga.
+
 ## Atualização de 12/11 (4): trilha nova
 
 O Thor não gostou da trilha (violão lo-fi, só da cena 6 em diante) e pediu uma trilha **ambiente, mais presente e no vídeo inteiro**.

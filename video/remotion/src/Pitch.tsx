@@ -6,7 +6,7 @@ import { arquivoExiste } from './arquivos';
 import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
 import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO } from './cenas/fecho';
-import { Cena19, Cena20 } from './cenas/telas-app';
+import { Cena19, Cena20, Cena21 } from './cenas/telas-app';
 import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras } from './roteiro';
 import { blocosDeLegenda } from './legendas';
 import { Legenda, Relogio } from './sobreposicoes';
@@ -31,7 +31,7 @@ function volumeDaTrilha(q: number) {
 
 const COMPONENTES: Record<number, React.FC> = {
   1: Cena1, 2: Cena2, 3: Cena3, 4: Cena4, 5: Cena5, 6: Cena6, 7: Cena7, 8: Cena8, 9: Cena9,
-  10: Cena10, 11: Cena11, 12: Cena12, 13: Cena13, 14: Cena14, 15: Cena15, 16: Cena16, 17: Cena17, 18: Cena18, 19: Cena19, 20: Cena20
+  10: Cena10, 11: Cena11, 12: Cena12, 13: Cena13, 14: Cena14, 15: Cena15, 16: Cena16, 17: Cena17, 18: Cena18, 19: Cena19, 20: Cena20, 21: Cena21
 };
 
 // Um efeito sonoro: arquivo, cena, quadro dentro da cena e volume (0 a 1).
@@ -68,6 +68,9 @@ function efeitos(): Efeito[] {
   // 20
   add('toque-seco.wav', 20, 68, 0.3);
   add('pop.flac', 20, 80, 0.35);
+  // 21: o toque de enviar e a resposta chegando
+  add('toque-seco.wav', 21, 56, 0.3);
+  add('pop.flac', 21, 64, 0.4);
   // 8
   add('toque-seco.wav', 8, naPalavra(8, 'direito', 0) + 6, 0.4);
   add('ding.flac', 8, naPalavra(8, 'fonte') - 2, 0.45);
