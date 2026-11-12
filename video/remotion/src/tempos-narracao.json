@@ -1477,11 +1477,11 @@
    {
     "texto": "ficar",
     "inicio": 105.063,
-    "fim": 105.263
+    "fim": 105.283
    },
    {
     "texto": "no",
-    "inicio": 105.263,
+    "inicio": 105.283,
     "fim": 105.363
    },
    {
@@ -1492,11 +1492,11 @@
    {
     "texto": "Você",
     "inicio": 105.803,
-    "fim": 106.043
+    "fim": 106.013
    },
    {
     "texto": "pode",
-    "inicio": 106.043,
+    "inicio": 106.013,
     "fim": 106.303
    },
    {
@@ -1512,27 +1512,27 @@
    {
     "texto": "Agora,",
     "inicio": 106.853,
-    "fim": 107.413
+    "fim": 107.333
    },
    {
     "texto": "você",
-    "inicio": 107.413,
-    "fim": 108.193
+    "inicio": 107.333,
+    "fim": 107.603
    },
    {
     "texto": "sabe",
-    "inicio": 108.193,
-    "fim": 108.513
+    "inicio": 107.603,
+    "fim": 107.803
    },
    {
     "texto": "onde",
-    "inicio": 108.513,
-    "fim": 108.953
+    "inicio": 107.803,
+    "fim": 108.013
    },
    {
     "texto": "ir.",
-    "inicio": 108.953,
-    "fim": 109.483
+    "inicio": 108.013,
+    "fim": 108.233
    }
   ]
  },
