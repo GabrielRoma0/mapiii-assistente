@@ -41,7 +41,7 @@
 | Leco no fecho | Na cena 18 o **Leco aparece falando** a frase final: sobe ao lado do logo, acena a cada palavra e a legenda vira o balão de fala dele. Substitui o "Sem o Leco neste quadro" do pedido 4 | Thor, 12/11 |
 | Zoom na câmera | Cenas 2, 3, 5, 14 e 17 com aproximação lenta e um "chega mais perto" nas viradas da fala (no máximo 1,32×) | Thor, 12/11 |
 | Corte da cena 17 | A dupla aparece falando "Você pode ter direito."; o slogan entra em "Agora," | Claude Code, 12/11 |
-| Telas do app | Duas cenas novas com a gravação real da tela (19, depois da 7; 20, depois da 9), com a etiqueta "GRAVAÇÃO DO APP". O vídeo vai a 2:09. Voz dessas cenas: a decidir (Leco gerado ou a dupla) | Thor, 12/11 |
+| Telas do app | Duas cenas novas com a gravação real da tela (19, depois da 7; 20, depois da 9), com a etiqueta "GRAVAÇÃO DO APP". Curtas (6 s e 4,5 s) para não cansar; o vídeo vai a 2:04. Voz dessas cenas: a decidir (Leco gerado ou a dupla) | Thor, 12/11 |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
 | Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 

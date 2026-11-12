@@ -26,22 +26,22 @@ export const CENAS: Cena[] = [
   { n: 5, inicio: 28.967, fim: 31.867, quem: 'Thor', camera: true, locucao: 'E se o caminho coubesse no bolso, com a fonte junto?' },
   { n: 6, inicio: 31.867, fim: 37.133, quem: 'off', camera: false, locucao: 'Esse é o Mapiii. O mapa dos seus direitos. E esse é o Leco.' },
   { n: 7, inicio: 37.133, fim: 43.5, quem: 'off', camera: false, locucao: 'Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê.' },
-  { n: 8, inicio: 52.0, fim: 60.833, quem: 'off', camera: false, locucao: 'Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.' },
-  { n: 9, inicio: 60.833, fim: 69.467, quem: 'off', camera: false, locucao: 'Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.' },
-  { n: 10, inicio: 75.967, fim: 82.433, quem: 'off', camera: false, locucao: 'E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando.' },
-  { n: 11, inicio: 82.433, fim: 90.0, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
-  { n: 12, inicio: 90.0, fim: 98.367, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
-  { n: 13, inicio: 98.367, fim: 103.733, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
-  { n: 14, inicio: 103.733, fim: 106.933, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
-  { n: 15, inicio: 106.933, fim: 114.967, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
-  { n: 16, inicio: 114.967, fim: 119.333, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
-  { n: 17, inicio: 119.333, fim: 124.5, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
-  { n: 18, inicio: 124.5, fim: 128.833, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
+  { n: 8, inicio: 49.5, fim: 58.333, quem: 'off', camera: false, locucao: 'Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.' },
+  { n: 9, inicio: 58.333, fim: 66.967, quem: 'off', camera: false, locucao: 'Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.' },
+  { n: 10, inicio: 71.467, fim: 77.933, quem: 'off', camera: false, locucao: 'E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando.' },
+  { n: 11, inicio: 77.933, fim: 85.5, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
+  { n: 12, inicio: 85.5, fim: 93.867, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
+  { n: 13, inicio: 93.867, fim: 99.233, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
+  { n: 14, inicio: 99.233, fim: 102.433, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
+  { n: 15, inicio: 102.433, fim: 110.467, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
+  { n: 16, inicio: 110.467, fim: 114.833, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
+  { n: 17, inicio: 114.833, fim: 120.0, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
+  { n: 18, inicio: 120.0, fim: 124.333, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
   // Cenas 19 e 20: gravações da tela do app real (video/gravacoes/app/), logo depois das cenas 7 e 9.
   // Ficam no fim da lista para não mudar o número das outras; a ordem no vídeo é a do tempo (inicio).
   // A narração delas ainda não foi gravada: a legenda usa o tempo estimado até existir narracao/cena-19.mp3 e cena-20.mp3.
-  { n: 19, inicio: 43.5, fim: 52.0, quem: 'off', camera: false, locucao: 'Olha o app de verdade: a pessoa responde com poucos toques, e ele mostra o Bilhete Único Especial, com "pode ter direito" e fonte oficial.' },
-  { n: 20, inicio: 69.467, fim: 75.967, quem: 'off', camera: false, locucao: 'Aqui está ela no app: a frase em letra grande e, embaixo, o código que abre a lei no site da Prefeitura.' }
+  { n: 19, inicio: 43.5, fim: 49.5, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
+  { n: 20, inicio: 66.967, fim: 71.467, quem: 'off', camera: false, locucao: 'E a tela do motorista: letra grande e o código da lei.' }
 ];
 
 export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);

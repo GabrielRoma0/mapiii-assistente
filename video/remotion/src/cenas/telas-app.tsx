@@ -39,16 +39,16 @@ const TITULO: React.CSSProperties = { position: 'absolute', left: 720, top: 220,
 
 // ---------- Cena 19: a triagem de verdade chega no "Pode ter direito" ----------
 export const Cena19: React.FC = () => {
-  const cartao = 150; // quadro em que a Rota aparece na gravação
+  const cartao = 128; // quadro em que a Rota aparece na gravação
   return (
     <EntradaDeCena>
       <Fundo>
         <TelaDoApp arquivo="app/triagem.mp4" />
         <Etiqueta />
         <h1 style={TITULO}>
-          <Palavras itens={[{ texto: 'Poucos', em: 12 }, { texto: 'toques.', em: 17 }]} />
+          <Palavras itens={[{ texto: 'Poucos', em: 8 }, { texto: 'toques.', em: 12 }]} />
           <br />
-          <Palavras itens={[{ texto: <Destaque de={cartao + 14}>Pode ter direito,</Destaque>, em: cartao }, { texto: 'com', em: cartao + 22 }, { texto: 'fonte.', em: cartao + 27 }]} />
+          <Palavras itens={[{ texto: <Destaque de={cartao + 14}>Pode ter direito,</Destaque>, em: cartao }, { texto: 'com', em: cartao + 10 }, { texto: 'fonte.', em: cartao + 14 }]} />
         </h1>
         <Leco pose="verificado" x={1480} y={450} tamanho={380} em={cartao + 6} />
       </Fundo>
@@ -58,16 +58,16 @@ export const Cena19: React.FC = () => {
 
 // ---------- Cena 20: a tela "Mostre ao motorista" de verdade, com o QR ----------
 export const Cena20: React.FC = () => {
-  const qr = 112; // quadro em que a tela rola até o código
+  const qr = 74; // quadro em que a tela rola até o código
   return (
     <EntradaDeCena>
       <Fundo>
         <TelaDoApp arquivo="app/motorista.mp4" />
         <Etiqueta />
         <h1 style={TITULO}>
-          <Palavras itens={[{ texto: 'Letra', em: 34 }, { texto: 'grande.', em: 39 }]} />
+          <Palavras itens={[{ texto: 'Letra', em: 18 }, { texto: 'grande.', em: 22 }]} />
           <br />
-          <Palavras itens={[{ texto: 'O', em: qr }, { texto: 'código', em: qr + 5 }, { texto: 'abre', em: qr + 10 }, { texto: 'a', em: qr + 15 }, { texto: <Destaque de={qr + 30}>lei.</Destaque>, em: qr + 20 }]} />
+          <Palavras itens={[{ texto: 'O', em: qr }, { texto: 'código', em: qr + 4 }, { texto: 'abre', em: qr + 8 }, { texto: 'a', em: qr + 12 }, { texto: <Destaque de={qr + 22}>lei.</Destaque>, em: qr + 16 }]} />
         </h1>
       </Fundo>
     </EntradaDeCena>
