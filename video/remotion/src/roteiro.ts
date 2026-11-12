@@ -41,7 +41,7 @@ export const CENAS: Cena[] = [
   // Ficam no fim da lista para não mudar o número das outras; a ordem no vídeo é a do tempo (inicio).
   // Narração gravada pela dupla em 12/11 (narracao/cena-19.mp3 e cena-20.mp3).
   { n: 19, inicio: 43.5, fim: 49.5, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
-  { n: 20, inicio: 94.733, fim: 100.233, quem: 'off', camera: false, locucao: 'Recebeu um link estranho? Ele avisa quando parece golpe.' }
+  { n: 20, inicio: 94.733, fim: 100.233, quem: 'off', camera: false, locucao: 'Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.' }
 ];
 
 export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);

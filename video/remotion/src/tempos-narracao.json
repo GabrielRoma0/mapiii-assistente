@@ -1673,69 +1673,59 @@
   "fonte": "video/gravacoes/narracao/cena-20.mp3",
   "palavras": [
    {
-    "texto": "E",
+    "texto": "Recebeu",
     "inicio": 94.923,
-    "fim": 95.083
-   },
-   {
-    "texto": "antes",
-    "inicio": 95.083,
-    "fim": 95.253
-   },
-   {
-    "texto": "de",
-    "inicio": 95.253,
-    "fim": 95.323
-   },
-   {
-    "texto": "clicar",
-    "inicio": 95.323,
-    "fim": 95.713
+    "fim": 95.443
    },
    {
     "texto": "ou",
-    "inicio": 95.713,
-    "fim": 95.803
+    "inicio": 95.443,
+    "fim": 95.663
    },
    {
-    "texto": "pagar:",
-    "inicio": 95.803,
-    "fim": 96.163
+    "texto": "achou",
+    "inicio": 95.663,
+    "fim": 95.903
    },
    {
-    "texto": "ele",
-    "inicio": 96.163,
-    "fim": 96.263
-   },
-   {
-    "texto": "confere",
-    "inicio": 96.263,
-    "fim": 96.653
-   },
-   {
-    "texto": "se",
-    "inicio": 96.653,
-    "fim": 96.713
-   },
-   {
-    "texto": "o",
-    "inicio": 96.713,
-    "fim": 96.783
+    "texto": "um",
+    "inicio": 95.903,
+    "fim": 96.063
    },
    {
     "texto": "link",
-    "inicio": 96.783,
-    "fim": 97.053
+    "inicio": 96.063,
+    "fim": 96.203
    },
    {
-    "texto": "é",
-    "inicio": 97.053,
-    "fim": 97.233
+    "texto": "estranho?",
+    "inicio": 96.203,
+    "fim": 96.613
    },
    {
-    "texto": "oficial.",
-    "inicio": 97.233,
-    "fim": 97.633
+    "texto": "Ele",
+    "inicio": 96.993,
+    "fim": 97.093
+   },
+   {
+    "texto": "avisa",
+    "inicio": 97.093,
+    "fim": 97.473
+   },
+   {
+    "texto": "quando",
+    "inicio": 97.473,
+    "fim": 97.783
+   },
+   {
+    "texto": "parecer",
+    "inicio": 97.783,
+    "fim": 98.103
+   },
+   {
+    "texto": "suspeito.",
+    "inicio": 98.103,
+    "fim": 98.513
    }
   ]
  }
