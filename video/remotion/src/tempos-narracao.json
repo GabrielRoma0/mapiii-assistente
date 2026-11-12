@@ -1728,5 +1728,136 @@
     "fim": 106.513
    }
   ]
+ },
+ {
+  "cena": 21,
+  "fonte": "video/gravacoes/narracao/cena-21.mp3",
+  "palavras": [
+   {
+    "texto": "Ou",
+    "inicio": 73.753,
+    "fim": 73.863
+   },
+   {
+    "texto": "pergunte",
+    "inicio": 73.863,
+    "fim": 74.303
+   },
+   {
+    "texto": "do",
+    "inicio": 74.303,
+    "fim": 74.363
+   },
+   {
+    "texto": "seu",
+    "inicio": 74.363,
+    "fim": 74.553
+   },
+   {
+    "texto": "jeito,",
+    "inicio": 74.553,
+    "fim": 74.773
+   },
+   {
+    "texto": "escrevendo",
+    "inicio": 75.093,
+    "fim": 75.743
+   },
+   {
+    "texto": "ou",
+    "inicio": 75.743,
+    "fim": 75.833
+   },
+   {
+    "texto": "falando.",
+    "inicio": 75.833,
+    "fim": 76.063
+   },
+   {
+    "texto": "O",
+    "inicio": 76.533,
+    "fim": 76.593
+   },
+   {
+    "texto": "Leco",
+    "inicio": 76.593,
+    "fim": 76.843
+   },
+   {
+    "texto": "procura",
+    "inicio": 76.843,
+    "fim": 77.193
+   },
+   {
+    "texto": "na",
+    "inicio": 77.193,
+    "fim": 77.363
+   },
+   {
+    "texto": "base",
+    "inicio": 77.363,
+    "fim": 77.793
+   },
+   {
+    "texto": "e",
+    "inicio": 77.793,
+    "fim": 77.853
+   },
+   {
+    "texto": "responde",
+    "inicio": 77.853,
+    "fim": 78.333
+   },
+   {
+    "texto": "com",
+    "inicio": 78.333,
+    "fim": 78.483
+   },
+   {
+    "texto": "o",
+    "inicio": 78.483,
+    "fim": 78.543
+   },
+   {
+    "texto": "resumo,",
+    "inicio": 78.543,
+    "fim": 78.923
+   },
+   {
+    "texto": "o",
+    "inicio": 78.923,
+    "fim": 79.283
+   },
+   {
+    "texto": "passo",
+    "inicio": 79.283,
+    "fim": 79.493
+   },
+   {
+    "texto": "a",
+    "inicio": 79.493,
+    "fim": 79.563
+   },
+   {
+    "texto": "passo",
+    "inicio": 79.563,
+    "fim": 80.033
+   },
+   {
+    "texto": "e",
+    "inicio": 80.293,
+    "fim": 80.353
+   },
+   {
+    "texto": "a",
+    "inicio": 80.353,
+    "fim": 80.423
+   },
+   {
+    "texto": "fonte.",
+    "inicio": 80.423,
+    "fim": 80.673
+   }
+  ]
  }
 ]

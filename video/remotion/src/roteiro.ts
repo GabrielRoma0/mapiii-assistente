@@ -43,7 +43,7 @@ export const CENAS: Cena[] = [
   { n: 19, inicio: 43.5, fim: 49.5, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
   { n: 20, inicio: 102.733, fim: 108.233, quem: 'off', camera: false, locucao: 'Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.' },
   // Cena 21: o Leco como assistente (pergunta livre e resposta), depois da cena 10 e antes de "Ele também sabe dizer não".
-  // Narração ainda não gravada: a legenda usa o tempo estimado até existir narracao/cena-21.mp3.
+  // Narração gravada pelo Thor em 12/11 (narracao/cena-21.mp3).
   { n: 21, inicio: 73.433, fim: 81.433, quem: 'off', camera: false, locucao: 'Ou pergunte do seu jeito, escrevendo ou falando. O Leco procura na base e responde com o resumo, o passo a passo e a fonte.' }
 ];
 
