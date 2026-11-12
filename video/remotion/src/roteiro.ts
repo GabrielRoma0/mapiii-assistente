@@ -39,9 +39,9 @@ export const CENAS: Cena[] = [
   { n: 18, inicio: 121.0, fim: 125.333, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
   // Cenas 19 e 20: gravações da tela do app real (video/gravacoes/app/), logo depois das cenas 7 (triagem) e 13 (conferir se é oficial).
   // Ficam no fim da lista para não mudar o número das outras; a ordem no vídeo é a do tempo (inicio).
-  // A narração delas ainda não foi gravada: a legenda usa o tempo estimado até existir narracao/cena-19.mp3 e cena-20.mp3.
+  // Narração gravada pela dupla em 12/11 (narracao/cena-19.mp3 e cena-20.mp3).
   { n: 19, inicio: 43.5, fim: 49.5, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
-  { n: 20, inicio: 94.733, fim: 100.233, quem: 'off', camera: false, locucao: 'E antes de clicar ou pagar: ele confere se o link é oficial.' }
+  { n: 20, inicio: 94.733, fim: 100.233, quem: 'off', camera: false, locucao: 'Recebeu um link estranho? Ele avisa quando parece golpe.' }
 ];
 
 export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);

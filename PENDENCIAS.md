@@ -23,10 +23,10 @@ Feito pelo Claude Code a pedido do Thor:
 - O vídeo passou de 1:54 para **2:05**. As cenas 19 e 20 ficam no fim da lista de `roteiro.ts` para não mudar o número das outras.
 - Como refazer as gravações: `video/remotion/scripts/gravar-app.cjs` (instruções no começo do arquivo). Gravação inteira em `video/gravacoes/app-bruto/`, cortes usados em `video/gravacoes/app/`.
 
-**Falta a narração das duas cenas** (hoje elas têm só trilha, toques e legenda). A dupla decide se gera com a voz do Leco ou se narra. Texto:
+**Narração das duas cenas gravada pelo Thor em 12/11** e encaixada. Texto:
 
 - Cena 19 (no máximo 5,5 s): Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.
-- Cena 20 (no máximo 5 s): E antes de clicar ou pagar: ele confere se o link é oficial.
+- Cena 20: Recebeu um link estranho? Ele avisa quando parece golpe. (texto a confirmar com o Thor; gravado em 12/11)
 
 Salvar como `video/gravacoes/narracao/cena-19.mp3` e `cena-20.mp3` e pedir ao Claude Code para encaixar (ele roda `python3 scripts/alinhar.py` e renderiza). Se mudarem o texto, mudar também a `locucao` das cenas 19 e 20 em `video/remotion/src/roteiro.ts`.
 
