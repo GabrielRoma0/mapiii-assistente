@@ -16,11 +16,11 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 O Thor pediu uma cena com a função principal do desafio: a pessoa faz uma pergunta e o Leco responde.
 
-- **Cena 21**, depois da cena 10 e antes da 11 ("Ele também sabe dizer não"), 8 s. Gravação real da tela "Fazer uma pergunta": a pergunta "Como peço a van do Atende para o meu filho cadeirante?" (uma das que o app sugere), a resposta do Leco (Atende+), o resumo e os passos. O celular aparece maior, só com a parte de cima da tela.
+- **Cena 21**, depois da cena 10 e antes da 11 ("Ele também sabe dizer não"), 7,3 s. Gravação real da tela "Fazer uma pergunta": a pergunta "Como peço a van do Atende para o meu filho cadeirante?" (uma das que o app sugere), a resposta do Leco (Atende+), o resumo e os passos. O celular aparece maior, só com a parte de cima da tela.
 - **Narração gravada pelo Thor (12/11)**, em `video/gravacoes/narracao/cena-21.mp3`. Texto da legenda: Ou pergunte do seu jeito, escrevendo ou falando. O Leco procura na base e responde com o resumo, o passo a passo e a fonte. (Conferir com o Thor se ele falou exatamente isso; o Claude Code não consegue ouvir.)
 - Não dizer "IA" nessa fala: o app não usa IA (busca própria na base; a camada de IA está desligada).
 - Trilha: fica a gerada por código, **para a dupla ouvir no vídeo e decidir**.
-- O vídeo vai a 2:13.
+- O vídeo vai a 2:12.
 
 ## Atualização de 12/11 (4): trilha nova
 
