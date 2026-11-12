@@ -16,17 +16,17 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 Feito pelo Claude Code a pedido do Thor:
 
-- **Duas cenas novas com a gravação da tela do app** (build do app, formato de celular, dentro de uma moldura, com a etiqueta "GRAVAÇÃO DO APP"):
-  - **cena 19**, logo depois da cena 7 (6 s, gravação acelerada 1,3×): a triagem de verdade até a Rota, com o Bilhete Único Especial, "Pode ter direito" e "Fonte oficial";
-  - **cena 20**, logo depois da cena 9 (4,5 s, gravação acelerada 1,3×): a tela "Mostre ao motorista" em letra grande e o QR.
-- As duas são curtas de propósito, para não cansar (pedido do Thor). O vídeo passou de 1:54 para **2:04**. As cenas 19 e 20 ficam no fim da lista de `roteiro.ts` para não mudar o número das outras.
+- **Duas cenas curtas com a gravação da tela do app** (build do app, formato de celular, dentro de uma moldura, com a etiqueta "GRAVAÇÃO DO APP"):
+  - **cena 19**, logo depois da cena 7 (6 s, gravação acelerada 1,3×): a triagem de verdade até a Rota, com o Bilhete Único Especial, "Pode ter direito" e "Fonte oficial". O Thor aprovou;
+  - **cena 20**, logo depois da cena 13 (5,5 s): o "Conferir se é oficial" marcando como **Suspeito** um link inventado (`sptrans-cartao-gratis.example.com`; `example.com` é reservado para exemplos, não é site de ninguém).
+- **Tirada:** a gravação do "Mostre ao motorista", que repetia a cena 9 (pedido do Thor).
+- O vídeo passou de 1:54 para **2:05**. As cenas 19 e 20 ficam no fim da lista de `roteiro.ts` para não mudar o número das outras.
 - Como refazer as gravações: `video/remotion/scripts/gravar-app.cjs` (instruções no começo do arquivo). Gravação inteira em `video/gravacoes/app-bruto/`, cortes usados em `video/gravacoes/app/`.
-- A tela "Fazer uma pergunta" **não entrou**: o formulário fixo ocupa metade da tela e a resposta quase não aparece na gravação.
 
 **Falta a narração das duas cenas** (hoje elas têm só trilha, toques e legenda). A dupla decide se gera com a voz do Leco ou se narra. Texto:
 
 - Cena 19 (no máximo 5,5 s): Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.
-- Cena 20 (no máximo 4 s): E a tela do motorista: letra grande e o código da lei.
+- Cena 20 (no máximo 5 s): E antes de clicar ou pagar: ele confere se o link é oficial.
 
 Salvar como `video/gravacoes/narracao/cena-19.mp3` e `cena-20.mp3` e pedir ao Claude Code para encaixar (ele roda `python3 scripts/alinhar.py` e renderiza). Se mudarem o texto, mudar também a `locucao` das cenas 19 e 20 em `video/remotion/src/roteiro.ts`.
 

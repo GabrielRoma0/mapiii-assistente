@@ -2,7 +2,7 @@
 // Usa o BUILD do app (nunca `npm run dev`, que mostra a base fictícia). Antes, na raiz do repositório:
 //   npm run build && npx vite preview --port 4173
 // Depois, em video/remotion:  node scripts/gravar-app.cjs
-// Saída: video/gravacoes/app-bruto/{triagem,pergunta,motorista}.mp4 (sem som) e um PNG do fim de cada uma em out/app/.
+// Saída: video/gravacoes/app-bruto/{triagem,pergunta,motorista,conferir}.mp4 (sem som) e um PNG do fim de cada uma em out/app/.
 // O ponto rosa que aparece em cada toque é desenhado por este script (como o "mostrar toques" do celular); não é do app.
 const { chromium } = require('playwright');
 const { execFileSync } = require('node:child_process');
@@ -130,6 +130,21 @@ const ROTEIROS = {
     await espera(p, 2600);
     await p.mouse.wheel(0, 520);
     await espera(p, 2600);
+  }
+  ,
+  // "Conferir se é oficial" com um endereço inventado (example.com é reservado para exemplos; não é site de ninguém).
+  conferir: async ({ p, tocar, comecar }) => {
+    await preparar(p, tocar);
+    await p.goto(URL + '#/conferir');
+    await espera(p, 900);
+    await comecar();
+    await espera(p, 500);
+    const campo = p.locator('main textarea, main input').first();
+    await campo.tap();
+    await campo.pressSequentially(process.env.LINK ?? 'sptrans-cartao-gratis.example.com', { delay: 45 });
+    await espera(p, 500);
+    await tocar(p.locator('main button[type=submit]'));
+    await espera(p, 3000);
   }
 };
 

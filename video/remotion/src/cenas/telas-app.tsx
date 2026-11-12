@@ -1,4 +1,4 @@
-// Cenas 19 e 20: gravações da tela do app real, dentro de uma moldura de celular.
+// Cenas 19 e 20: gravações da tela do app real, dentro de uma moldura de celular (depois das cenas 7 e 13).
 // As gravações vêm de scripts/gravar-app.cjs (build do app, 780 × 1688) e são cortadas em video/gravacoes/app/.
 import React from 'react';
 import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame } from 'remotion';
@@ -56,19 +56,20 @@ export const Cena19: React.FC = () => {
   );
 };
 
-// ---------- Cena 20: a tela "Mostre ao motorista" de verdade, com o QR ----------
+// ---------- Cena 20: "Conferir se é oficial" de verdade, com um link inventado que o app marca como suspeito ----------
 export const Cena20: React.FC = () => {
-  const qr = 74; // quadro em que a tela rola até o código
+  const resultado = 76; // quadro em que o resultado aparece na gravação
   return (
     <EntradaDeCena>
       <Fundo>
-        <TelaDoApp arquivo="app/motorista.mp4" />
+        <TelaDoApp arquivo="app/conferir.mp4" />
         <Etiqueta />
         <h1 style={TITULO}>
-          <Palavras itens={[{ texto: 'Letra', em: 18 }, { texto: 'grande.', em: 22 }]} />
+          <Palavras itens={[{ texto: 'É', em: 8 }, { texto: 'oficial?', em: 12 }]} />
           <br />
-          <Palavras itens={[{ texto: 'O', em: qr }, { texto: 'código', em: qr + 4 }, { texto: 'abre', em: qr + 8 }, { texto: 'a', em: qr + 12 }, { texto: <Destaque de={qr + 22}>lei.</Destaque>, em: qr + 16 }]} />
+          <Palavras itens={[{ texto: <Destaque de={resultado + 12}>Suspeito.</Destaque>, em: resultado }, { texto: 'Não', em: resultado + 14 }, { texto: 'pague.', em: resultado + 18 }]} />
         </h1>
+        <Leco pose="atencao" x={1480} y={450} tamanho={380} em={resultado + 4} />
       </Fundo>
     </EntradaDeCena>
   );

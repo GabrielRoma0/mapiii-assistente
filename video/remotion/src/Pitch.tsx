@@ -65,7 +65,8 @@ function efeitos(): Efeito[] {
   for (const q of [5, 29, 41, 55]) add('toque-seco.wav', 19, q, 0.25);
   add('ding.flac', 19, 132, 0.3);
   // 20
-  add('toque-seco.wav', 20, 7, 0.25);
+  add('toque-seco.wav', 20, 68, 0.3);
+  add('pop.flac', 20, 80, 0.35);
   // 8
   add('toque-seco.wav', 8, naPalavra(8, 'direito', 0) + 6, 0.4);
   add('ding.flac', 8, naPalavra(8, 'fonte') - 2, 0.45);
