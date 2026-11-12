@@ -12,6 +12,15 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 12/11 (3): gravações do app, PARADO NO MEIO (continuar daqui)
+
+O Thor pediu as gravações reais da tela do app no vídeo e mandou parar antes de terminar. Estado:
+
+- **Pronto:** `video/remotion/scripts/gravar-app.cjs` grava as telas do build do app em formato de celular (780 × 1688, sem som). Gravações inteiras em `video/gravacoes/app-bruto/`: `triagem.mp4` (triagem até a Rota, com "Pode ter direito" e "Fonte oficial") e `motorista.mp4` ("Mostre ao motorista" em letra grande e o QR). As duas ficaram boas.
+- **Não ficou boa:** a tela "Fazer uma pergunta". O formulário fixo ocupa metade da tela e a resposta quase não aparece; não foi salva. Ideia: mostrar a ficha aberta (tela do direito) no lugar, ou gravar com a tela mais alta.
+- **Falta:** cortar os trechos (4 a 5 s cada), encaixar nas cenas 7 e 9 (e talvez 8) dentro de uma moldura de celular, alongar essas cenas e renderizar de novo. O vídeo em `video/entrega/` ainda é o de antes, sem as telas do app.
+- **Narração das telas do app:** o Thor vai gerar com a voz do Leco e pediu o roteiro. **O roteiro ainda não foi escrito**: escrever depois de decidir os cortes. Lembrar que a decisão de 07/11 era "voz da dupla, sem clone"; confirmar com a dupla se a voz gerada do Leco vale só para esses trechos.
+
 ## Atualização de 12/11 (2): edição do vídeo
 
 Feito pelo Claude Code a pedido do Thor, sem tirar nada do vídeo:
