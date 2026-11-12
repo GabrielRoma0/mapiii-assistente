@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "cena": 3,
+  "fonte": "gravacoes/narracao/cena-03.mp3 (silêncios medidos; palavras espalhadas dentro de cada frase)",
+  "palavras": [
+   {
+    "texto": "A",
+    "inicio": 19.32,
+    "fim": 19.503
+   },
+   {
+    "texto": "resposta",
+    "inicio": 19.503,
+    "fim": 19.847
+   },
+   {
+    "texto": "existe.",
+    "inicio": 19.847,
+    "fim": 20.29
+   },
+   {
+    "texto": "Só",
+    "inicio": 21.21,
+    "fim": 21.394
+   },
+   {
+    "texto": "que",
+    "inicio": 21.394,
+    "fim": 21.599
+   },
+   {
+    "texto": "está",
+    "inicio": 21.599,
+    "fim": 21.825
+   },
+   {
+    "texto": "espalhada,",
+    "inicio": 21.825,
+    "fim": 22.21
+   },
+   {
+    "texto": "em",
+    "inicio": 22.21,
+    "fim": 22.395
+   },
+   {
+    "texto": "linguagem",
+    "inicio": 22.395,
+    "fim": 22.722
+   },
+   {
+    "texto": "difícil,",
+    "inicio": 22.722,
+    "fim": 23.067
+   },
+   {
+    "texto": "e",
+    "inicio": 23.067,
+    "fim": 23.231
+   },
+   {
+    "texto": "no",
+    "inicio": 23.231,
+    "fim": 23.415
+   },
+   {
+    "texto": "meio",
+    "inicio": 23.415,
+    "fim": 23.641
+   },
+   {
+    "texto": "de",
+    "inicio": 23.641,
+    "fim": 23.825
+   },
+   {
+    "texto": "golpe.",
+    "inicio": 23.825,
+    "fim": 24.2
+   }
+  ]
+ }
+]

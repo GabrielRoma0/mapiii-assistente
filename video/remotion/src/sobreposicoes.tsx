@@ -37,7 +37,8 @@ export const Relogio: React.FC = () => {
 };
 
 // ---------- Câmera (cenas 2, 3, 5, 14 e 17) ----------
-// Se existir public/camera-gravada/cena-NN.mp4, entra o vídeo; senão, um espaço reservado com a moldura.
+// Se existir public/camera-gravada/cena-NN.mp4, entra o vídeo (sem som: a voz vem de narracao/cena-NN.mp3);
+// senão, um espaço reservado com a moldura.
 export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({ n, nomes }) => {
   const f = useCurrentFrame();
   const c = cena(n);
@@ -47,7 +48,7 @@ export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({
     <AbsoluteFill style={{ background: COR.seashell, fontFamily: SANS }}>
       <div style={{ position: 'absolute', left: 52, top: 52, width: 1816, height: 976, borderRadius: 58, overflow: 'hidden', background: COR.grape }}>
         {arquivo ? (
-          <OffthreadVideo src={staticFile(arquivo)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         ) : (
           <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', color: COR.seashell, gap: 18 }}>
             <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: '0.04em' }}>CÂMERA · CENA {n}</div>

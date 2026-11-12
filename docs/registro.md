@@ -264,3 +264,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 ## 12/11/2026
 
 - Vídeo, cena 17: a fala "Somos o Thor e o Gabriel" virou "Ninguém deveria ficar no ponto." (decisão da dupla), em `video/README.md` e `video/remotion/src/roteiro.ts`.
+- Vídeo, cena 3: gravação do Gabriel (iPhone 4K HDR) convertida para 1080p SDR, áudio do 2º celular sincronizado por correlação (0,25 s) e normalizado; tempos das palavras medidos pelos silêncios em `video/remotion/src/tempos-narracao.json`. Gravações comprimidas passam a ir para o git em `video/gravacoes/`.

@@ -9,6 +9,8 @@ import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pin
 import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras } from './roteiro';
 import { Legenda, Relogio } from './sobreposicoes';
 
+const vozDaCena = (n: number) => `narracao/cena-${String(n).padStart(2, '0')}.mp3`;
+
 const COMPONENTES: Record<number, React.FC> = {
   1: Cena1, 2: Cena2, 3: Cena3, 4: Cena4, 5: Cena5, 6: Cena6, 7: Cena7, 8: Cena8, 9: Cena9,
   10: Cena10, 11: Cena11, 12: Cena12, 13: Cena13, 14: Cena14, 15: Cena15, 16: Cena16, 17: Cena17, 18: Cena18
@@ -114,6 +116,12 @@ export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
         <EfeitoSonoro key={i} efeito={e} />
       ))}
       {narracao && <Audio src={staticFile('narracao/narracao.wav')} />}
+      {/* Voz gravada por cena (gravacoes/narracao/cena-NN.mp3), começando no início da cena. */}
+      {CENAS.filter((c) => arquivoExiste(vozDaCena(c.n))).map((c) => (
+        <Sequence key={`voz-${c.n}`} from={inicioEmQuadros(c)} durationInFrames={quadrosDa(c)} name={`voz cena ${c.n}`}>
+          <Audio src={staticFile(vozDaCena(c.n))} />
+        </Sequence>
+      ))}
     </AbsoluteFill>
   );
 };
