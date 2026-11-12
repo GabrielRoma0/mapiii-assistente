@@ -260,3 +260,7 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 ## 11/11/2026
 
 - Mascote renomeado de Mapi para **Leco** (decisão do Thor): rótulos e textos do app, roteiro e vídeo (cena 6: "E esse é o Leco."), design system e documentos. Nomes internos do código, a pasta `video/mapi-3d/` e os `.dc.html` ficaram iguais. 305 testes passando.
+
+## 12/11/2026
+
+- Vídeo, cena 17: a fala "Somos o Thor e o Gabriel" virou "Ninguém deveria ficar no ponto." (decisão da dupla), em `video/README.md` e `video/remotion/src/roteiro.ts`.

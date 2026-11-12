@@ -35,7 +35,7 @@ export const CENAS: Cena[] = [
   { n: 14, inicio: 102, fim: 107, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
   { n: 15, inicio: 107, fim: 117, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
   { n: 16, inicio: 117, fim: 121, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
-  { n: 17, inicio: 121, fim: 128, quem: 'Thor e Gabriel', camera: true, locucao: 'Somos o Thor e o Gabriel. Você pode ter direito. Agora, você sabe onde ir.' },
+  { n: 17, inicio: 121, fim: 128, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
   { n: 18, inicio: 128, fim: 132, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' }
 ];
 
