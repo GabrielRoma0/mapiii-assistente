@@ -37,6 +37,7 @@
 | App no vídeo | Tópicos animados (celular estilizado com a tela do app) e só dois cortes curtos do app real (cenas 7 e 9) | Thor, 07/11 |
 | Embarque | História animada (cena 10), sem gravação de tela, por isso sem selo EXEMPLO. A locução diz "pode avisar" | Thor, 07/11 |
 | Leco | **Leco 3D só no vídeo.** O app continua com o Leco plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
+| Fala da cena 17 | "Ninguém deveria ficar no ponto." no lugar de "Somos o Thor e o Gabriel" (os nomes já aparecem nas etiquetas da câmera) | Thor e Gabriel, 12/11 |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
 | Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 
@@ -115,7 +116,7 @@ Tempos aproximados (cerca de 255 palavras, 135 por minuto, com pausas). O editor
 | 14 | 1:42–1:47 | Escala | — | Gabriel na câmera | Começamos por São Paulo. A SPTrans é só o primeiro exemplo. | G | — | — |
 | 15 | 1:47–1:57 | Escala | 12 | Mapa-múndi de uso livre (no lugar do desenhado à mão do quadro). O pino do Leco pulsa em São Paulo; pinos acendem em "cidade", "estado" e "país" | O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país. | off | Troque a base.<br>Outra cidade. Outro estado. **Outro país.** | Um pop por pino, subindo |
 | 16 | 1:57–2:01 | Impacto | 15 (novo) | Ícones oficiais dos ODS 10 e 11 entrando lado a lado | Menos desigualdade. Cidades que funcionam para todo mundo. | off | ODS 10 · ODS 11 | — |
-| 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Leco 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Somos o Thor (G) e o Gabriel. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Leco |
+| 17 | 2:01–2:08 | Fecho | 13 | Thor e Gabriel juntos na câmera; o Leco 3D `comemorando` sobe no canto. Na frase final, corta para o quadro 13 com o slogan | (T) Ninguém deveria ficar no ponto. (juntos) Você pode ter direito. Agora, você sabe onde ir. | T + G | Você pode ter direito.<br>**Agora, você sabe onde ir.** | Pop no Leco |
 | 18 | 2:08–2:12 | Fecho | 14 (novo) | O mesmo ponto de ônibus da cena 1. O ônibus para, **a rampa desce** e a pessoa em cadeira de rodas embarca. Logo grande, aviso de protótipo, FIAP Global Solution 2026 | Mapiii. O mapa dos seus direitos. | off | Mapiii · o mapa dos seus direitos<br>Protótipo de estudo, não é canal oficial. | Rampa descendo; 1 s de silêncio no fim |
 
 ## 5. Locução corrida
@@ -139,8 +140,7 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 [Gabriel] Começamos por São Paulo. A SPTrans é só o primeiro exemplo.
 [off] O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.
 [off] Menos desigualdade. Cidades que funcionam para todo mundo.
-[Thor] Somos o Thor
-[Gabriel] e o Gabriel.
+[Thor] Ninguém deveria ficar no ponto.
 [juntos] Você pode ter direito. Agora, você sabe onde ir.
 [off] Mapiii. O mapa dos seus direitos.
 ```
