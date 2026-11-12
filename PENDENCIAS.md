@@ -12,6 +12,10 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 12/11: gravações no vídeo
+
+Todas as gravações da dupla (câmera das cenas 2, 3, 5, 14 e 17 e a voz das 18 cenas) estão no vídeo, em `video/gravacoes/` (detalhes no `README.md` de lá). O vídeo tem **1:54**, volume −14,8 LUFS e pico −1,6 dBTP. Falta: assistir e pedir ajustes, a revisão com notas por cena e o render final (`npm run render` em `video/remotion`).
+
 ## Atualização de 11/11: o mascote agora se chama Leco
 
 Decisão do Thor (11/11): o mascote (um morango) passa a se chamar **Leco**, para não soar igual a "Mapiii" no vídeo. Trocado no app (rótulos "Leco · Estado" e textos para leitor de tela), no roteiro e no vídeo, no design system (`readme.md`) e nos documentos. Os nomes internos do código (`MapiPersonagem`, `ESTADOS_MAPI`), a pasta `video/mapi-3d/`, os arquivos `.dc.html` do Claude Design e o histórico em `docs/registro.md` continuam como estavam. O desenho não mudou.

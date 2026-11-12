@@ -168,8 +168,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Mapa-múndi de uso livre (Natural Earth, domínio público) | `video/mapa/mundo.svg` | **Pronto (10/11).** Pino de São Paulo em x 711, y 717 (ver `video/mapa/README.md`) | — |
 | IBM Plex Mono (OFL) | `design-system/fonts/` | **Pronta (10/11)**: pesos 400 e 600 e a licença `OFL-IBM-Plex-Mono.txt` | — |
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **Prontos (10/11):** os 12 sons em `video/sons/`, com créditos (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
-| Narração em off | `video/gravacoes/narracao/narracao.wav` (fora do git) | Falta. Gravar assistindo ao `npm run studio` | Dupla, 17/11 |
-| Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` (fora do git) | Falta | Dupla, até 13/11 |
+| Narração em off | `video/gravacoes/narracao/cena-NN.mp3` (uma por cena) | **Pronta (12/11).** Com ela, o vídeo passou a ter **1:54**; os tempos da seção 4 são os do roteiro original, os reais estão em `video/remotion/src/roteiro.ts` | — |
+| Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` | **Prontas (12/11)** | — |
 | Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/gravacoes/app/triagem.mp4` e `mao-celular.mp4` (fora do git) | Falta. O vídeo funciona sem eles | Claude Code + dupla |
 | Relatório do Lighthouse com as fichas (cena 12) | `video/remotion/public/app/lighthouse.png` | Falta (depois da H1) | Claude Code |
 | Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **1ª versão montada (10/11)**: as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |

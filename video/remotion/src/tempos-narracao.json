@@ -1,1 +1,1575 @@
-[]
+[
+ {
+  "cena": 1,
+  "fonte": "video/gravacoes/narracao/cena-01.mp3",
+  "palavras": [
+   {
+    "texto": "Sete",
+    "inicio": 0.0,
+    "fim": 0.656
+   },
+   {
+    "texto": "e",
+    "inicio": 0.656,
+    "fim": 1.132
+   },
+   {
+    "texto": "quarenta.",
+    "inicio": 1.132,
+    "fim": 2.026
+   },
+   {
+    "texto": "O",
+    "inicio": 2.026,
+    "fim": 2.503
+   },
+   {
+    "texto": "ônibus",
+    "inicio": 2.503,
+    "fim": 3.278
+   },
+   {
+    "texto": "chegou.",
+    "inicio": 3.278,
+    "fim": 4.052
+   },
+   {
+    "texto": "A",
+    "inicio": 4.052,
+    "fim": 4.529
+   },
+   {
+    "texto": "rampa,",
+    "inicio": 4.529,
+    "fim": 5.244
+   },
+   {
+    "texto": "não.",
+    "inicio": 5.244,
+    "fim": 6.0
+   }
+  ]
+ },
+ {
+  "cena": 2,
+  "fonte": "video/gravacoes/narracao/cena-02.mp3",
+  "palavras": [
+   {
+    "texto": "Para",
+    "inicio": 8.133,
+    "fim": 8.358
+   },
+   {
+    "texto": "quem",
+    "inicio": 8.358,
+    "fim": 8.582
+   },
+   {
+    "texto": "usa",
+    "inicio": 8.582,
+    "fim": 8.786
+   },
+   {
+    "texto": "cadeira",
+    "inicio": 8.786,
+    "fim": 9.072
+   },
+   {
+    "texto": "de",
+    "inicio": 9.072,
+    "fim": 9.256
+   },
+   {
+    "texto": "rodas,",
+    "inicio": 9.256,
+    "fim": 9.501
+   },
+   {
+    "texto": "essa",
+    "inicio": 9.501,
+    "fim": 9.726
+   },
+   {
+    "texto": "cena",
+    "inicio": 9.726,
+    "fim": 9.95
+   },
+   {
+    "texto": "é",
+    "inicio": 9.95,
+    "fim": 10.114
+   },
+   {
+    "texto": "real.",
+    "inicio": 10.114,
+    "fim": 10.338
+   },
+   {
+    "texto": "E",
+    "inicio": 10.338,
+    "fim": 10.945
+   },
+   {
+    "texto": "quem",
+    "inicio": 10.945,
+    "fim": 11.169
+   },
+   {
+    "texto": "cuida",
+    "inicio": 11.169,
+    "fim": 11.415
+   },
+   {
+    "texto": "de",
+    "inicio": 11.415,
+    "fim": 11.598
+   },
+   {
+    "texto": "alguém",
+    "inicio": 11.598,
+    "fim": 11.864
+   },
+   {
+    "texto": "conhece",
+    "inicio": 11.864,
+    "fim": 12.15
+   },
+   {
+    "texto": "a",
+    "inicio": 12.15,
+    "fim": 12.313
+   },
+   {
+    "texto": "pergunta",
+    "inicio": 12.313,
+    "fim": 12.619
+   },
+   {
+    "texto": "que",
+    "inicio": 12.619,
+    "fim": 12.824
+   },
+   {
+    "texto": "vem",
+    "inicio": 12.824,
+    "fim": 13.028
+   },
+   {
+    "texto": "depois:",
+    "inicio": 13.028,
+    "fim": 13.293
+   },
+   {
+    "texto": "o",
+    "inicio": 13.293,
+    "fim": 13.457
+   },
+   {
+    "texto": "que",
+    "inicio": 13.457,
+    "fim": 13.661
+   },
+   {
+    "texto": "eu",
+    "inicio": 13.661,
+    "fim": 13.845
+   },
+   {
+    "texto": "posso",
+    "inicio": 13.845,
+    "fim": 14.09
+   },
+   {
+    "texto": "pedir?",
+    "inicio": 14.09,
+    "fim": 14.335
+   },
+   {
+    "texto": "Onde?",
+    "inicio": 14.335,
+    "fim": 14.559
+   },
+   {
+    "texto": "O",
+    "inicio": 14.559,
+    "fim": 14.723
+   },
+   {
+    "texto": "que",
+    "inicio": 14.723,
+    "fim": 14.927
+   },
+   {
+    "texto": "eu",
+    "inicio": 14.927,
+    "fim": 15.111
+   },
+   {
+    "texto": "levo?",
+    "inicio": 15.111,
+    "fim": 15.477
+   }
+  ]
+ },
+ {
+  "cena": 3,
+  "fonte": "video/gravacoes/narracao/cena-03.mp3",
+  "palavras": [
+   {
+    "texto": "A",
+    "inicio": 15.433,
+    "fim": 15.712
+   },
+   {
+    "texto": "resposta",
+    "inicio": 15.712,
+    "fim": 16.235
+   },
+   {
+    "texto": "existe.",
+    "inicio": 16.235,
+    "fim": 16.688
+   },
+   {
+    "texto": "Só",
+    "inicio": 16.688,
+    "fim": 17.002
+   },
+   {
+    "texto": "que",
+    "inicio": 17.002,
+    "fim": 17.351
+   },
+   {
+    "texto": "está",
+    "inicio": 17.351,
+    "fim": 17.734
+   },
+   {
+    "texto": "espalhada,",
+    "inicio": 17.734,
+    "fim": 18.292
+   },
+   {
+    "texto": "em",
+    "inicio": 18.292,
+    "fim": 18.606
+   },
+   {
+    "texto": "linguagem",
+    "inicio": 18.606,
+    "fim": 19.164
+   },
+   {
+    "texto": "difícil,",
+    "inicio": 19.164,
+    "fim": 19.652
+   },
+   {
+    "texto": "e",
+    "inicio": 19.652,
+    "fim": 19.931
+   },
+   {
+    "texto": "no",
+    "inicio": 19.931,
+    "fim": 20.245
+   },
+   {
+    "texto": "meio",
+    "inicio": 20.245,
+    "fim": 20.629
+   },
+   {
+    "texto": "de",
+    "inicio": 20.629,
+    "fim": 20.943
+   },
+   {
+    "texto": "golpe.",
+    "inicio": 20.943,
+    "fim": 21.361
+   }
+  ]
+ },
+ {
+  "cena": 4,
+  "fonte": "video/gravacoes/narracao/cena-04.mp3",
+  "palavras": [
+   {
+    "texto": "No",
+    "inicio": 21.597,
+    "fim": 21.904
+   },
+   {
+    "texto": "Brasil,",
+    "inicio": 21.904,
+    "fim": 22.348
+   },
+   {
+    "texto": "são",
+    "inicio": 22.348,
+    "fim": 22.69
+   },
+   {
+    "texto": "catorze",
+    "inicio": 22.69,
+    "fim": 23.168
+   },
+   {
+    "texto": "vírgula",
+    "inicio": 23.168,
+    "fim": 23.646
+   },
+   {
+    "texto": "quatro",
+    "inicio": 23.646,
+    "fim": 24.09
+   },
+   {
+    "texto": "milhões",
+    "inicio": 24.09,
+    "fim": 24.568
+   },
+   {
+    "texto": "de",
+    "inicio": 24.568,
+    "fim": 24.875
+   },
+   {
+    "texto": "pessoas",
+    "inicio": 24.875,
+    "fim": 25.353
+   },
+   {
+    "texto": "com",
+    "inicio": 25.353,
+    "fim": 25.694
+   },
+   {
+    "texto": "deficiência,",
+    "inicio": 25.694,
+    "fim": 26.309
+   },
+   {
+    "texto": "segundo",
+    "inicio": 26.309,
+    "fim": 26.787
+   },
+   {
+    "texto": "o",
+    "inicio": 26.787,
+    "fim": 27.06
+   },
+   {
+    "texto": "Censo",
+    "inicio": 27.06,
+    "fim": 27.47
+   },
+   {
+    "texto": "de",
+    "inicio": 27.47,
+    "fim": 27.777
+   },
+   {
+    "texto": "2022.",
+    "inicio": 27.777,
+    "fim": 28.153
+   }
+  ]
+ },
+ {
+  "cena": 5,
+  "fonte": "video/gravacoes/narracao/cena-05.mp3",
+  "palavras": [
+   {
+    "texto": "E",
+    "inicio": 28.967,
+    "fim": 29.167
+   },
+   {
+    "texto": "se",
+    "inicio": 29.167,
+    "fim": 29.392
+   },
+   {
+    "texto": "o",
+    "inicio": 29.392,
+    "fim": 29.593
+   },
+   {
+    "texto": "caminho",
+    "inicio": 29.593,
+    "fim": 29.943
+   },
+   {
+    "texto": "coubesse",
+    "inicio": 29.943,
+    "fim": 30.318
+   },
+   {
+    "texto": "no",
+    "inicio": 30.318,
+    "fim": 30.544
+   },
+   {
+    "texto": "bolso,",
+    "inicio": 30.544,
+    "fim": 30.844
+   },
+   {
+    "texto": "com",
+    "inicio": 30.844,
+    "fim": 31.094
+   },
+   {
+    "texto": "a",
+    "inicio": 31.094,
+    "fim": 31.294
+   },
+   {
+    "texto": "fonte",
+    "inicio": 31.294,
+    "fim": 31.595
+   },
+   {
+    "texto": "junto?",
+    "inicio": 31.595,
+    "fim": 31.895
+   }
+  ]
+ },
+ {
+  "cena": 6,
+  "fonte": "video/gravacoes/narracao/cena-06.mp3",
+  "palavras": [
+   {
+    "texto": "Esse",
+    "inicio": 32.003,
+    "fim": 32.271
+   },
+   {
+    "texto": "é",
+    "inicio": 32.271,
+    "fim": 32.466
+   },
+   {
+    "texto": "o",
+    "inicio": 32.466,
+    "fim": 32.661
+   },
+   {
+    "texto": "Mapiii.",
+    "inicio": 32.661,
+    "fim": 32.978
+   },
+   {
+    "texto": "O",
+    "inicio": 32.978,
+    "fim": 33.323
+   },
+   {
+    "texto": "mapa",
+    "inicio": 33.323,
+    "fim": 33.591
+   },
+   {
+    "texto": "dos",
+    "inicio": 33.591,
+    "fim": 33.835
+   },
+   {
+    "texto": "seus",
+    "inicio": 33.835,
+    "fim": 34.103
+   },
+   {
+    "texto": "direitos.",
+    "inicio": 34.103,
+    "fim": 34.468
+   },
+   {
+    "texto": "E",
+    "inicio": 34.468,
+    "fim": 35.04
+   },
+   {
+    "texto": "esse",
+    "inicio": 35.04,
+    "fim": 35.308
+   },
+   {
+    "texto": "é",
+    "inicio": 35.308,
+    "fim": 35.503
+   },
+   {
+    "texto": "o",
+    "inicio": 35.503,
+    "fim": 35.698
+   },
+   {
+    "texto": "Leco.",
+    "inicio": 35.698,
+    "fim": 35.966
+   }
+  ]
+ },
+ {
+  "cena": 7,
+  "fonte": "video/gravacoes/narracao/cena-07.mp3",
+  "palavras": [
+   {
+    "texto": "Você",
+    "inicio": 37.133,
+    "fim": 37.44
+   },
+   {
+    "texto": "responde",
+    "inicio": 37.44,
+    "fim": 37.859
+   },
+   {
+    "texto": "poucas",
+    "inicio": 37.859,
+    "fim": 38.222
+   },
+   {
+    "texto": "perguntas,",
+    "inicio": 38.222,
+    "fim": 38.669
+   },
+   {
+    "texto": "sem",
+    "inicio": 38.669,
+    "fim": 38.949
+   },
+   {
+    "texto": "nome",
+    "inicio": 38.949,
+    "fim": 39.256
+   },
+   {
+    "texto": "e",
+    "inicio": 39.256,
+    "fim": 39.479
+   },
+   {
+    "texto": "sem",
+    "inicio": 39.479,
+    "fim": 39.759
+   },
+   {
+    "texto": "CPF.",
+    "inicio": 39.759,
+    "fim": 40.038
+   },
+   {
+    "texto": "Ele",
+    "inicio": 40.038,
+    "fim": 40.317
+   },
+   {
+    "texto": "mostra",
+    "inicio": 40.317,
+    "fim": 40.681
+   },
+   {
+    "texto": "o",
+    "inicio": 40.681,
+    "fim": 40.904
+   },
+   {
+    "texto": "que",
+    "inicio": 40.904,
+    "fim": 41.183
+   },
+   {
+    "texto": "você",
+    "inicio": 41.183,
+    "fim": 41.491
+   },
+   {
+    "texto": "pode",
+    "inicio": 41.491,
+    "fim": 41.798
+   },
+   {
+    "texto": "pedir,",
+    "inicio": 41.798,
+    "fim": 42.133
+   },
+   {
+    "texto": "e",
+    "inicio": 42.133,
+    "fim": 42.357
+   },
+   {
+    "texto": "por",
+    "inicio": 42.357,
+    "fim": 42.636
+   },
+   {
+    "texto": "quê.",
+    "inicio": 42.636,
+    "fim": 42.915
+   }
+  ]
+ },
+ {
+  "cena": 8,
+  "fonte": "video/gravacoes/narracao/cena-08.mp3",
+  "palavras": [
+   {
+    "texto": "Nunca",
+    "inicio": 43.67,
+    "fim": 44.224
+   },
+   {
+    "texto": "diz",
+    "inicio": 44.224,
+    "fim": 44.57
+   },
+   {
+    "texto": "\"você",
+    "inicio": 44.57,
+    "fim": 44.951
+   },
+   {
+    "texto": "tem",
+    "inicio": 44.951,
+    "fim": 45.297
+   },
+   {
+    "texto": "direito\".",
+    "inicio": 45.297,
+    "fim": 45.782
+   },
+   {
+    "texto": "Diz",
+    "inicio": 45.782,
+    "fim": 46.128
+   },
+   {
+    "texto": "\"pode",
+    "inicio": 46.128,
+    "fim": 46.509
+   },
+   {
+    "texto": "ter",
+    "inicio": 46.509,
+    "fim": 46.855
+   },
+   {
+    "texto": "direito\".",
+    "inicio": 46.855,
+    "fim": 47.339
+   },
+   {
+    "texto": "E",
+    "inicio": 47.339,
+    "fim": 47.616
+   },
+   {
+    "texto": "mostra",
+    "inicio": 47.616,
+    "fim": 48.066
+   },
+   {
+    "texto": "a",
+    "inicio": 48.066,
+    "fim": 48.343
+   },
+   {
+    "texto": "fonte",
+    "inicio": 48.343,
+    "fim": 48.758
+   },
+   {
+    "texto": "oficial,",
+    "inicio": 48.758,
+    "fim": 49.243
+   },
+   {
+    "texto": "com",
+    "inicio": 49.243,
+    "fim": 49.589
+   },
+   {
+    "texto": "a",
+    "inicio": 49.589,
+    "fim": 49.866
+   },
+   {
+    "texto": "data",
+    "inicio": 49.866,
+    "fim": 50.247
+   },
+   {
+    "texto": "em",
+    "inicio": 50.247,
+    "fim": 50.558
+   },
+   {
+    "texto": "que",
+    "inicio": 50.558,
+    "fim": 50.904
+   },
+   {
+    "texto": "foi",
+    "inicio": 50.904,
+    "fim": 51.25
+   },
+   {
+    "texto": "conferida.",
+    "inicio": 51.25,
+    "fim": 51.804
+   }
+  ]
+ },
+ {
+  "cena": 9,
+  "fonte": "video/gravacoes/narracao/cena-09.mp3",
+  "palavras": [
+   {
+    "texto": "Na",
+    "inicio": 52.333,
+    "fim": 52.609
+   },
+   {
+    "texto": "rua,",
+    "inicio": 52.609,
+    "fim": 52.915
+   },
+   {
+    "texto": "se",
+    "inicio": 52.915,
+    "fim": 53.19
+   },
+   {
+    "texto": "o",
+    "inicio": 53.19,
+    "fim": 53.435
+   },
+   {
+    "texto": "motorista",
+    "inicio": 53.435,
+    "fim": 53.925
+   },
+   {
+    "texto": "disser",
+    "inicio": 53.925,
+    "fim": 54.323
+   },
+   {
+    "texto": "que",
+    "inicio": 54.323,
+    "fim": 54.629
+   },
+   {
+    "texto": "não",
+    "inicio": 54.629,
+    "fim": 54.935
+   },
+   {
+    "texto": "pode,",
+    "inicio": 54.935,
+    "fim": 55.272
+   },
+   {
+    "texto": "você",
+    "inicio": 55.272,
+    "fim": 55.608
+   },
+   {
+    "texto": "vira",
+    "inicio": 55.608,
+    "fim": 55.945
+   },
+   {
+    "texto": "a",
+    "inicio": 55.945,
+    "fim": 56.19
+   },
+   {
+    "texto": "tela:",
+    "inicio": 56.19,
+    "fim": 56.527
+   },
+   {
+    "texto": "letra",
+    "inicio": 56.527,
+    "fim": 56.894
+   },
+   {
+    "texto": "grande,",
+    "inicio": 56.894,
+    "fim": 57.292
+   },
+   {
+    "texto": "a",
+    "inicio": 57.292,
+    "fim": 57.537
+   },
+   {
+    "texto": "lei,",
+    "inicio": 57.537,
+    "fim": 57.843
+   },
+   {
+    "texto": "e",
+    "inicio": 57.843,
+    "fim": 58.088
+   },
+   {
+    "texto": "um",
+    "inicio": 58.088,
+    "fim": 58.363
+   },
+   {
+    "texto": "código",
+    "inicio": 58.363,
+    "fim": 58.761
+   },
+   {
+    "texto": "que",
+    "inicio": 58.761,
+    "fim": 59.067
+   },
+   {
+    "texto": "abre",
+    "inicio": 59.067,
+    "fim": 59.404
+   },
+   {
+    "texto": "o",
+    "inicio": 59.404,
+    "fim": 59.649
+   },
+   {
+    "texto": "texto",
+    "inicio": 59.649,
+    "fim": 60.016
+   },
+   {
+    "texto": "oficial.",
+    "inicio": 60.016,
+    "fim": 60.445
+   }
+  ]
+ },
+ {
+  "cena": 10,
+  "fonte": "video/gravacoes/narracao/cena-10.mp3",
+  "palavras": [
+   {
+    "texto": "E",
+    "inicio": 61.266,
+    "fim": 61.458
+   },
+   {
+    "texto": "com",
+    "inicio": 61.458,
+    "fim": 61.697
+   },
+   {
+    "texto": "o",
+    "inicio": 61.697,
+    "fim": 61.889
+   },
+   {
+    "texto": "celular",
+    "inicio": 61.889,
+    "fim": 62.224
+   },
+   {
+    "texto": "no",
+    "inicio": 62.224,
+    "fim": 62.439
+   },
+   {
+    "texto": "bolso,",
+    "inicio": 62.439,
+    "fim": 62.726
+   },
+   {
+    "texto": "ele",
+    "inicio": 62.726,
+    "fim": 62.966
+   },
+   {
+    "texto": "pode",
+    "inicio": 62.966,
+    "fim": 63.229
+   },
+   {
+    "texto": "avisar",
+    "inicio": 63.229,
+    "fim": 63.54
+   },
+   {
+    "texto": "em",
+    "inicio": 63.54,
+    "fim": 63.756
+   },
+   {
+    "texto": "voz",
+    "inicio": 63.756,
+    "fim": 63.995
+   },
+   {
+    "texto": "alta",
+    "inicio": 63.995,
+    "fim": 64.258
+   },
+   {
+    "texto": "quando",
+    "inicio": 64.258,
+    "fim": 64.569
+   },
+   {
+    "texto": "o",
+    "inicio": 64.569,
+    "fim": 64.761
+   },
+   {
+    "texto": "próximo",
+    "inicio": 64.761,
+    "fim": 65.096
+   },
+   {
+    "texto": "ônibus",
+    "inicio": 65.096,
+    "fim": 65.407
+   },
+   {
+    "texto": "acessível",
+    "inicio": 65.407,
+    "fim": 65.79
+   },
+   {
+    "texto": "está",
+    "inicio": 65.79,
+    "fim": 66.053
+   },
+   {
+    "texto": "chegando.",
+    "inicio": 66.053,
+    "fim": 66.412
+   }
+  ]
+ },
+ {
+  "cena": 11,
+  "fonte": "video/gravacoes/narracao/cena-11.mp3",
+  "palavras": [
+   {
+    "texto": "Ele",
+    "inicio": 67.594,
+    "fim": 67.882
+   },
+   {
+    "texto": "também",
+    "inicio": 67.882,
+    "fim": 68.256
+   },
+   {
+    "texto": "sabe",
+    "inicio": 68.256,
+    "fim": 68.573
+   },
+   {
+    "texto": "dizer",
+    "inicio": 68.573,
+    "fim": 68.919
+   },
+   {
+    "texto": "não.",
+    "inicio": 68.919,
+    "fim": 69.207
+   },
+   {
+    "texto": "Remédio",
+    "inicio": 69.207,
+    "fim": 69.95
+   },
+   {
+    "texto": "ou",
+    "inicio": 69.95,
+    "fim": 70.21
+   },
+   {
+    "texto": "processo?",
+    "inicio": 70.21,
+    "fim": 71.084
+   },
+   {
+    "texto": "Mostra",
+    "inicio": 71.084,
+    "fim": 71.459
+   },
+   {
+    "texto": "quem",
+    "inicio": 71.459,
+    "fim": 71.776
+   },
+   {
+    "texto": "pode",
+    "inicio": 71.776,
+    "fim": 72.362
+   },
+   {
+    "texto": "ajudar.",
+    "inicio": 72.362,
+    "fim": 72.737
+   },
+   {
+    "texto": "Emergência?",
+    "inicio": 72.737,
+    "fim": 73.452
+   },
+   {
+    "texto": "Ligue",
+    "inicio": 73.452,
+    "fim": 73.798
+   },
+   {
+    "texto": "192.",
+    "inicio": 73.798,
+    "fim": 74.086
+   }
+  ]
+ },
+ {
+  "cena": 12,
+  "fonte": "video/gravacoes/narracao/cena-12.mp3",
+  "palavras": [
+   {
+    "texto": "E",
+    "inicio": 75.0,
+    "fim": 75.279
+   },
+   {
+    "texto": "a",
+    "inicio": 75.279,
+    "fim": 75.558
+   },
+   {
+    "texto": "gente",
+    "inicio": 75.558,
+    "fim": 75.976
+   },
+   {
+    "texto": "mediu.",
+    "inicio": 75.976,
+    "fim": 76.395
+   },
+   {
+    "texto": "Das",
+    "inicio": 76.395,
+    "fim": 76.743
+   },
+   {
+    "texto": "doze",
+    "inicio": 76.743,
+    "fim": 77.127
+   },
+   {
+    "texto": "perguntas",
+    "inicio": 77.127,
+    "fim": 77.685
+   },
+   {
+    "texto": "que",
+    "inicio": 77.685,
+    "fim": 78.034
+   },
+   {
+    "texto": "ele",
+    "inicio": 78.034,
+    "fim": 78.382
+   },
+   {
+    "texto": "precisava",
+    "inicio": 78.382,
+    "fim": 78.94
+   },
+   {
+    "texto": "recusar,",
+    "inicio": 78.94,
+    "fim": 79.428
+   },
+   {
+    "texto": "recusou",
+    "inicio": 79.428,
+    "fim": 79.917
+   },
+   {
+    "texto": "as",
+    "inicio": 79.917,
+    "fim": 80.23
+   },
+   {
+    "texto": "doze.",
+    "inicio": 80.23,
+    "fim": 80.614
+   },
+   {
+    "texto": "E",
+    "inicio": 80.614,
+    "fim": 80.893
+   },
+   {
+    "texto": "nota",
+    "inicio": 80.893,
+    "fim": 81.277
+   },
+   {
+    "texto": "máxima",
+    "inicio": 81.277,
+    "fim": 81.73
+   },
+   {
+    "texto": "de",
+    "inicio": 81.73,
+    "fim": 82.044
+   },
+   {
+    "texto": "acessibilidade.",
+    "inicio": 82.044,
+    "fim": 82.776
+   }
+  ]
+ },
+ {
+  "cena": 13,
+  "fonte": "video/gravacoes/narracao/cena-13.mp3",
+  "palavras": [
+   {
+    "texto": "E",
+    "inicio": 83.659,
+    "fim": 83.852
+   },
+   {
+    "texto": "ainda:",
+    "inicio": 83.852,
+    "fim": 84.142
+   },
+   {
+    "texto": "funciona",
+    "inicio": 84.142,
+    "fim": 84.647
+   },
+   {
+    "texto": "sem",
+    "inicio": 84.647,
+    "fim": 84.888
+   },
+   {
+    "texto": "internet,",
+    "inicio": 84.888,
+    "fim": 85.25
+   },
+   {
+    "texto": "com",
+    "inicio": 85.25,
+    "fim": 85.492
+   },
+   {
+    "texto": "um",
+    "inicio": 85.492,
+    "fim": 85.919
+   },
+   {
+    "texto": "toque,",
+    "inicio": 85.919,
+    "fim": 86.208
+   },
+   {
+    "texto": "e",
+    "inicio": 86.208,
+    "fim": 86.402
+   },
+   {
+    "texto": "lê",
+    "inicio": 86.402,
+    "fim": 86.792
+   },
+   {
+    "texto": "a",
+    "inicio": 86.792,
+    "fim": 86.986
+   },
+   {
+    "texto": "resposta",
+    "inicio": 86.986,
+    "fim": 87.348
+   },
+   {
+    "texto": "em",
+    "inicio": 87.348,
+    "fim": 87.565
+   },
+   {
+    "texto": "voz",
+    "inicio": 87.565,
+    "fim": 87.806
+   },
+   {
+    "texto": "alta.",
+    "inicio": 87.806,
+    "fim": 88.072
+   }
+  ]
+ },
+ {
+  "cena": 14,
+  "fonte": "video/gravacoes/narracao/cena-14.mp3",
+  "palavras": [
+   {
+    "texto": "Começamos",
+    "inicio": 88.733,
+    "fim": 89.151
+   },
+   {
+    "texto": "por",
+    "inicio": 89.151,
+    "fim": 89.412
+   },
+   {
+    "texto": "São",
+    "inicio": 89.412,
+    "fim": 89.674
+   },
+   {
+    "texto": "Paulo.",
+    "inicio": 89.674,
+    "fim": 89.987
+   },
+   {
+    "texto": "A",
+    "inicio": 89.987,
+    "fim": 90.196
+   },
+   {
+    "texto": "SPTrans",
+    "inicio": 90.196,
+    "fim": 90.562
+   },
+   {
+    "texto": "é",
+    "inicio": 90.562,
+    "fim": 90.771
+   },
+   {
+    "texto": "só",
+    "inicio": 90.771,
+    "fim": 91.006
+   },
+   {
+    "texto": "o",
+    "inicio": 91.006,
+    "fim": 91.215
+   },
+   {
+    "texto": "primeiro",
+    "inicio": 91.215,
+    "fim": 91.607
+   },
+   {
+    "texto": "exemplo.",
+    "inicio": 91.607,
+    "fim": 91.973
+   }
+  ]
+ },
+ {
+  "cena": 15,
+  "fonte": "video/gravacoes/narracao/cena-15.mp3",
+  "palavras": [
+   {
+    "texto": "O",
+    "inicio": 91.933,
+    "fim": 92.148
+   },
+   {
+    "texto": "Mapiii",
+    "inicio": 92.148,
+    "fim": 92.498
+   },
+   {
+    "texto": "é",
+    "inicio": 92.498,
+    "fim": 92.713
+   },
+   {
+    "texto": "feito",
+    "inicio": 92.713,
+    "fim": 93.036
+   },
+   {
+    "texto": "de",
+    "inicio": 93.036,
+    "fim": 93.279
+   },
+   {
+    "texto": "fichas",
+    "inicio": 93.279,
+    "fim": 93.628
+   },
+   {
+    "texto": "com",
+    "inicio": 93.628,
+    "fim": 93.898
+   },
+   {
+    "texto": "fonte",
+    "inicio": 93.898,
+    "fim": 94.22
+   },
+   {
+    "texto": "oficial.",
+    "inicio": 94.22,
+    "fim": 94.597
+   },
+   {
+    "texto": "Troque",
+    "inicio": 94.597,
+    "fim": 94.947
+   },
+   {
+    "texto": "a",
+    "inicio": 94.947,
+    "fim": 95.162
+   },
+   {
+    "texto": "base,",
+    "inicio": 95.162,
+    "fim": 95.458
+   },
+   {
+    "texto": "e",
+    "inicio": 95.458,
+    "fim": 95.674
+   },
+   {
+    "texto": "ele",
+    "inicio": 95.674,
+    "fim": 95.943
+   },
+   {
+    "texto": "pode",
+    "inicio": 95.943,
+    "fim": 96.239
+   },
+   {
+    "texto": "funcionar",
+    "inicio": 96.239,
+    "fim": 96.669
+   },
+   {
+    "texto": "em",
+    "inicio": 96.669,
+    "fim": 96.912
+   },
+   {
+    "texto": "outra",
+    "inicio": 96.912,
+    "fim": 97.234
+   },
+   {
+    "texto": "cidade.",
+    "inicio": 97.234,
+    "fim": 97.584
+   },
+   {
+    "texto": "Em",
+    "inicio": 97.584,
+    "fim": 97.827
+   },
+   {
+    "texto": "outro",
+    "inicio": 97.827,
+    "fim": 98.149
+   },
+   {
+    "texto": "estado.",
+    "inicio": 98.149,
+    "fim": 98.499
+   },
+   {
+    "texto": "Em",
+    "inicio": 98.499,
+    "fim": 98.741
+   },
+   {
+    "texto": "outro",
+    "inicio": 98.741,
+    "fim": 99.064
+   },
+   {
+    "texto": "país.",
+    "inicio": 99.064,
+    "fim": 99.36
+   }
+  ]
+ },
+ {
+  "cena": 16,
+  "fonte": "video/gravacoes/narracao/cena-16.mp3",
+  "palavras": [
+   {
+    "texto": "Menos",
+    "inicio": 100.228,
+    "fim": 100.575
+   },
+   {
+    "texto": "desigualdade.",
+    "inicio": 100.575,
+    "fim": 101.123
+   },
+   {
+    "texto": "Cidades",
+    "inicio": 101.123,
+    "fim": 101.527
+   },
+   {
+    "texto": "que",
+    "inicio": 101.527,
+    "fim": 102.101
+   },
+   {
+    "texto": "funcionam",
+    "inicio": 102.101,
+    "fim": 102.563
+   },
+   {
+    "texto": "para",
+    "inicio": 102.563,
+    "fim": 102.88
+   },
+   {
+    "texto": "todo",
+    "inicio": 102.88,
+    "fim": 103.197
+   },
+   {
+    "texto": "mundo.",
+    "inicio": 103.197,
+    "fim": 103.544
+   }
+  ]
+ },
+ {
+  "cena": 17,
+  "fonte": "video/gravacoes/narracao/cena-17.mp3",
+  "palavras": [
+   {
+    "texto": "Ninguém",
+    "inicio": 104.333,
+    "fim": 104.786
+   },
+   {
+    "texto": "deveria",
+    "inicio": 104.786,
+    "fim": 105.239
+   },
+   {
+    "texto": "ficar",
+    "inicio": 105.239,
+    "fim": 105.627
+   },
+   {
+    "texto": "no",
+    "inicio": 105.627,
+    "fim": 105.918
+   },
+   {
+    "texto": "ponto.",
+    "inicio": 105.918,
+    "fim": 106.306
+   },
+   {
+    "texto": "Você",
+    "inicio": 106.306,
+    "fim": 106.662
+   },
+   {
+    "texto": "pode",
+    "inicio": 106.662,
+    "fim": 107.018
+   },
+   {
+    "texto": "ter",
+    "inicio": 107.018,
+    "fim": 107.341
+   },
+   {
+    "texto": "direito.",
+    "inicio": 107.341,
+    "fim": 107.794
+   },
+   {
+    "texto": "Agora,",
+    "inicio": 107.794,
+    "fim": 108.182
+   },
+   {
+    "texto": "você",
+    "inicio": 108.182,
+    "fim": 108.538
+   },
+   {
+    "texto": "sabe",
+    "inicio": 108.538,
+    "fim": 108.894
+   },
+   {
+    "texto": "onde",
+    "inicio": 108.894,
+    "fim": 109.25
+   },
+   {
+    "texto": "ir.",
+    "inicio": 109.25,
+    "fim": 109.541
+   }
+  ]
+ },
+ {
+  "cena": 18,
+  "fonte": "video/gravacoes/narracao/cena-18.mp3",
+  "palavras": [
+   {
+    "texto": "Mapiii.",
+    "inicio": 109.631,
+    "fim": 109.949
+   },
+   {
+    "texto": "O",
+    "inicio": 109.949,
+    "fim": 110.517
+   },
+   {
+    "texto": "mapa",
+    "inicio": 110.517,
+    "fim": 110.786
+   },
+   {
+    "texto": "dos",
+    "inicio": 110.786,
+    "fim": 111.03
+   },
+   {
+    "texto": "seus",
+    "inicio": 111.03,
+    "fim": 111.3
+   },
+   {
+    "texto": "direitos.",
+    "inicio": 111.3,
+    "fim": 111.667
+   }
+  ]
+ }
+]

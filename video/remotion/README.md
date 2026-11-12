@@ -36,14 +36,15 @@ Ligada por padrão (decisão de 10/11). Hoje usa o tempo estimado de cada palavr
 
 ## Gravações: onde colocar
 
-Os vídeos grandes **não vão para o git**. Coloquem em `video/gravacoes/` (a pasta também é ignorada) com estes nomes, e o vídeo passa a usar a gravação no lugar do espaço reservado:
+As gravações ficam em `video/gravacoes/`, **já comprimidas pelo Claude Code** (vídeo 1080p H.264, áudio MP3 normalizado), e vão para o git. Não enviem o arquivo original do celular (4K pesa dezenas de MB): mandem ao Claude Code, que comprime, sincroniza e coloca aqui. Com estes nomes, o vídeo usa a gravação no lugar do espaço reservado:
 
 | Arquivo | Cena |
 |---|---|
 | `gravacoes/camera-gravada/cena-02.mp4`, `cena-03.mp4`, `cena-05.mp4`, `cena-14.mp4`, `cena-17.mp4` | Câmera |
 | `gravacoes/app/triagem.mp4` (2 s) | Corte do app na cena 7 |
 | `gravacoes/app/mao-celular.mp4` (2 s) | Mão virando o celular na cena 9 |
-| `gravacoes/narracao/narracao.wav` | Narração inteira |
+| `gravacoes/narracao/cena-NN.mp3` | Voz de cada cena, começando no início da cena (câmera e off) |
+| `gravacoes/narracao/narracao.wav` | Narração inteira, se gravarem tudo num arquivo só |
 
 Com a narração gravada, o próximo passo é transcrever com o tempo de cada palavra e gravar em `src/tempos-narracao.json` (formato no comentário de `src/roteiro.ts`). Aí cada animação passa a cair na palavra falada, sem mexer nas cenas.
 
