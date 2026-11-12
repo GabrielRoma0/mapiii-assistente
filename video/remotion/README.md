@@ -15,6 +15,7 @@ npm run srt           # legenda em out/mapiii-pitch-gs2026.srt
 npm run conferir -- out/previa.mp4   # trechos parados, final parado e volume
 npm run tipos         # confere o TypeScript
 python3 scripts/alinhar.py   # refaz o tempo de cada palavra (só quando a narração mudar)
+python3 scripts/gerar-trilha.py   # refaz a trilha ambiente (video/sons/trilha-ambiente.mp3)
 ```
 
 `scripts/alinhar.py` precisa do `espeak-ng`, do `ffmpeg` e dos pacotes Python `numpy`, `librosa` e `soundfile`. Ele grava `src/tempos-narracao.json`; o resto do projeto não depende dele.

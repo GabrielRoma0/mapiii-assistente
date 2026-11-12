@@ -17,7 +17,8 @@ const vozDaCena = (n: number) => {
   return arquivoExiste(`${base}.wav`) ? `${base}.wav` : `${base}.mp3`;
 };
 
-// Trilha: baixa enquanto há fala (pelo menos 12 dB abaixo da voz) e sobe um pouco nas pausas, sem degrau.
+// Trilha ambiente (sons/trilha-ambiente.mp3, −20 LUFS), do começo ao fim do vídeo: presente, mas pelo menos 12 dB abaixo da voz
+// enquanto há fala (0,30 ≈ −30,5 LUFS contra a voz em −16), e sobe nas pausas (0,50), sem degrau.
 const FALAS = blocosDeLegenda();
 function volumeDaTrilha(q: number) {
   let dist = 999;
@@ -25,7 +26,7 @@ function volumeDaTrilha(q: number) {
     const d = q < b.de ? b.de - q : q > b.ate ? q - b.ate : 0;
     if (d < dist) dist = d;
   }
-  return interpolate(dist, [6, 20], [0.06, 0.12], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return interpolate(dist, [6, 24], [0.3, 0.5], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 }
 
 const COMPONENTES: Record<number, React.FC> = {
@@ -109,7 +110,7 @@ const EfeitoSonoro: React.FC<{ efeito: Efeito }> = ({ efeito: e }) => {
 // com a narração gravada, src/tempos-narracao.json passa a dar o tempo real, para a legenda e para as animações.
 export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
   const narracao = arquivoExiste('narracao/narracao.wav');
-  const inicioTrilha = inicioEmQuadros(cena(6));
+  const inicioTrilha = 0; // a trilha acompanha o vídeo inteiro (pedido do Thor, 12/11)
   const fimTrilha = DURACAO_TOTAL - FPS; // termina com 1 s de silêncio
   const fimRua = inicioEmQuadros(cena(1)) + naPalavra(1, 'não') + 40;
   return (
@@ -130,9 +131,9 @@ export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
       <Sequence from={0} durationInFrames={fimRua}>
         <Audio src={staticFile('sons/rua-ambiente.mp3')} volume={(f) => interpolate(f, [0, 6, fimRua - 20, fimRua], [0, 0.22, 0.22, 0], { extrapolateRight: 'clamp' })} />
       </Sequence>
-      {/* Trilha bem baixa da cena 6 em diante, em loop, sumindo antes do segundo final */}
+      {/* Trilha ambiente no vídeo inteiro, sumindo antes do segundo final */}
       <Sequence from={inicioTrilha} durationInFrames={fimTrilha - inicioTrilha}>
-        <Audio src={staticFile('sons/trilha.mp3')} loop
+        <Audio src={staticFile('sons/trilha-ambiente.mp3')} loop
           volume={(f) => volumeDaTrilha(f + inicioTrilha) * interpolate(f, [0, 20, fimTrilha - inicioTrilha - 45, fimTrilha - inicioTrilha], [0, 1, 1, 0], { extrapolateRight: 'clamp' })} />
       </Sequence>
       {efeitos().map((e, i) => (

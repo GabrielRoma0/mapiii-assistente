@@ -212,7 +212,7 @@ O Claude Code também pode gravar as telas no computador com o Playwright, na pr
 
 ## 8. Som
 
-- Até a cena 5: **só voz e efeitos**. Da cena 6 em diante, uma trilha bem baixa.
+- **Trilha ambiente no vídeo inteiro** (decisão do Thor, 12/11; antes era só da cena 6 em diante): `video/sons/trilha-ambiente.mp3`, música original gerada por `video/remotion/scripts/gerar-trilha.py`. Presente, mas abaixo da voz.
 - Efeitos: toque seco, whoosh, pop, tique, ding, notificação, papel rasgando, freio e porta de ônibus, rampa descendo.
 - **Onde buscar:** efeitos no Openverse (licença CC0 de preferência, ou CC BY com crédito). Trilha no Openverse (CC0) ou na Biblioteca de Áudio do YouTube com o filtro "não exige atribuição". Anotar faixa, autor, link e licença em `video/sons/CREDITOS.txt`.
 - **Hierarquia (obrigatório):** os sons importantes se destacam porque os outros são discretos. Fortes só no ônibus (cena 1), no círculo do logo (6), no giro do celular (9), nos números (12) e na rampa (18). O resto (toques, tiques, pops) fica baixo.

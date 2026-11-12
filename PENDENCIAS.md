@@ -12,6 +12,14 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 12/11 (4): trilha nova
+
+O Thor não gostou da trilha (violão lo-fi, só da cena 6 em diante) e pediu uma trilha **ambiente, mais presente e no vídeo inteiro**.
+
+- Trilha nova: `video/sons/trilha-ambiente.mp3`, **música original gerada por código** (`video/remotion/scripts/gerar-trilha.py`: acordes lentos, grave suave e sinos esparsos). Não usa obra de terceiros, então não tem licença a citar.
+- Toca do começo ao fim, cerca de 14 dB abaixo da voz enquanto há fala e mais alta nas pausas. Isso muda a regra antiga do `video/README.md` ("até a cena 5, só voz e efeitos").
+- **O Claude Code não consegue ouvir**: a dupla precisa escutar e dizer se gostou. Para trocar por outra música, salvar o arquivo em `video/sons/` e pedir a troca. Tentativa de baixar faixas livres do Wikimedia Commons (por exemplo Scott Buckley, "Petrichor", CC BY 4.0) falhou: o site recusa download automático (erro 429). Se a dupla baixar à mão, dá para usar, com o crédito no `CREDITOS.txt` e na descrição do vídeo.
+
 ## Atualização de 12/11 (3): telas do app real no vídeo
 
 Feito pelo Claude Code a pedido do Thor:
