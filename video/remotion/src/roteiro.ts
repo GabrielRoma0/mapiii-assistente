@@ -29,22 +29,22 @@ export const CENAS: Cena[] = [
   { n: 8, inicio: 49.5, fim: 58.333, quem: 'off', camera: false, locucao: 'Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.' },
   { n: 9, inicio: 58.333, fim: 66.967, quem: 'off', camera: false, locucao: 'Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.' },
   { n: 10, inicio: 66.967, fim: 73.433, quem: 'off', camera: false, locucao: 'E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando.' },
-  { n: 11, inicio: 80.933, fim: 88.5, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
-  { n: 12, inicio: 88.5, fim: 96.867, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
-  { n: 13, inicio: 96.867, fim: 102.233, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
-  { n: 14, inicio: 107.733, fim: 110.933, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
-  { n: 15, inicio: 110.933, fim: 118.967, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
-  { n: 16, inicio: 118.967, fim: 123.333, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
-  { n: 17, inicio: 123.333, fim: 128.5, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
-  { n: 18, inicio: 128.5, fim: 132.833, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
+  { n: 11, inicio: 81.433, fim: 89.0, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
+  { n: 12, inicio: 89.0, fim: 97.367, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
+  { n: 13, inicio: 97.367, fim: 102.733, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
+  { n: 14, inicio: 108.233, fim: 111.433, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
+  { n: 15, inicio: 111.433, fim: 119.467, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
+  { n: 16, inicio: 119.467, fim: 123.833, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
+  { n: 17, inicio: 123.833, fim: 129.0, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
+  { n: 18, inicio: 129.0, fim: 133.333, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
   // Cenas 19 e 20: gravações da tela do app real (video/gravacoes/app/), logo depois das cenas 7 (triagem) e 13 (conferir se é oficial).
   // Ficam no fim da lista para não mudar o número das outras; a ordem no vídeo é a do tempo (inicio).
   // Narração gravada pela dupla em 12/11 (narracao/cena-19.mp3 e cena-20.mp3).
   { n: 19, inicio: 43.5, fim: 49.5, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
-  { n: 20, inicio: 102.233, fim: 107.733, quem: 'off', camera: false, locucao: 'Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.' },
+  { n: 20, inicio: 102.733, fim: 108.233, quem: 'off', camera: false, locucao: 'Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.' },
   // Cena 21: o Leco como assistente (pergunta livre e resposta), depois da cena 10 e antes de "Ele também sabe dizer não".
   // Narração ainda não gravada: a legenda usa o tempo estimado até existir narracao/cena-21.mp3.
-  { n: 21, inicio: 73.433, fim: 80.933, quem: 'off', camera: false, locucao: 'Ou pergunte do seu jeito. O Leco procura na base e responde com o passo a passo e a fonte.' }
+  { n: 21, inicio: 73.433, fim: 81.433, quem: 'off', camera: false, locucao: 'Ou pergunte do seu jeito, escrevendo ou falando. O Leco procura na base e responde com o resumo, o passo a passo e a fonte.' }
 ];
 
 export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);
