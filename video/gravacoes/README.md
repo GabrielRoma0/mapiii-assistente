@@ -14,4 +14,6 @@ Feitas pela dupla em 11/11/2026 e tratadas pelo Claude Code em 12/11. Os origina
 | 14 | IMG_0914 | começamos por São Paulo | 0,81 s |
 | 17 | IMG_0925 | ninguém deveria ficar no ponto | 1,31 s |
 
-A duração de cada cena e o tempo de cada palavra saem dessas falas: `video/remotion/src/roteiro.ts` e `video/remotion/src/tempos-narracao.json` (palavras espalhadas dentro dos trechos com voz; dá para ajustar à mão).
+A duração de cada cena e o tempo de cada palavra saem dessas falas: `video/remotion/src/roteiro.ts` e `video/remotion/src/tempos-narracao.json`. O tempo de cada palavra é achado por `video/remotion/scripts/alinhar.py` (compara a gravação com uma voz sintética que só serve de régua; não usa IA nem internet) e dá para ajustar à mão.
+
+Na montagem, a voz ainda passa por um tratamento (`video/remotion/scripts/preparar.mjs`): corte de grave, redução de chiado, compressor suave, entrada e saída sem estalo e volume em −16 LUFS. Os arquivos desta pasta não são alterados.

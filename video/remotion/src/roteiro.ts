@@ -1,5 +1,5 @@
 // Roteiro do vídeo em código: as 18 cenas de video/README.md (seção 4), com o tempo e a locução de cada uma.
-// Enquanto não há narração gravada, o tempo de cada palavra é estimado (palavras espalhadas por igual na cena).
+// O tempo de cada palavra vem de src/tempos-narracao.json (scripts/alinhar.py); sem ele, é estimado.
 // Quando houver narração, src/tempos-narracao.json (gerado pela transcrição) substitui a estimativa.
 import temposGravados from './tempos-narracao.json';
 

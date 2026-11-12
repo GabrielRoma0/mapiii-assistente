@@ -7,9 +7,25 @@ import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
 import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO } from './cenas/fecho';
 import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras } from './roteiro';
+import { blocosDeLegenda } from './legendas';
 import { Legenda, Relogio } from './sobreposicoes';
 
-const vozDaCena = (n: number) => `narracao/cena-${String(n).padStart(2, '0')}.mp3`;
+// Voz da cena: a versão tratada (.wav, feita por scripts/preparar.mjs) ou, sem ffmpeg, a gravação como veio (.mp3).
+const vozDaCena = (n: number) => {
+  const base = `narracao/cena-${String(n).padStart(2, '0')}`;
+  return arquivoExiste(`${base}.wav`) ? `${base}.wav` : `${base}.mp3`;
+};
+
+// Trilha: baixa enquanto há fala (pelo menos 12 dB abaixo da voz) e sobe um pouco nas pausas, sem degrau.
+const FALAS = blocosDeLegenda();
+function volumeDaTrilha(q: number) {
+  let dist = 999;
+  for (const b of FALAS) {
+    const d = q < b.de ? b.de - q : q > b.ate ? q - b.ate : 0;
+    if (d < dist) dist = d;
+  }
+  return interpolate(dist, [6, 20], [0.06, 0.12], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+}
 
 const COMPONENTES: Record<number, React.FC> = {
   1: Cena1, 2: Cena2, 3: Cena3, 4: Cena4, 5: Cena5, 6: Cena6, 7: Cena7, 8: Cena8, 9: Cena9,
@@ -63,7 +79,7 @@ function efeitos(): Efeito[] {
   add('pop.flac', 15, CHEGADA_SP - 2 + POUSO, 0.3);
   pinosDaCena15().forEach((p, i) => add('pop.flac', 15, p.em + POUSO, 0.32 + i * 0.06));
   // 17
-  add('pop.flac', 17, naPalavra(17, 'Você') - 2, 0.45);
+  add('pop.flac', 17, naPalavra(17, 'Agora,') - 2, 0.45);
   // 18
   add('onibus-freio.wav', 18, 0, 0.5);
   add('onibus-porta.mp3', 18, 16, 0.2);
@@ -110,7 +126,7 @@ export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
       {/* Trilha bem baixa da cena 6 em diante, em loop, sumindo antes do segundo final */}
       <Sequence from={inicioTrilha} durationInFrames={fimTrilha - inicioTrilha}>
         <Audio src={staticFile('sons/trilha.mp3')} loop
-          volume={(f) => interpolate(f, [0, 20, fimTrilha - inicioTrilha - 45, fimTrilha - inicioTrilha], [0, 0.06, 0.06, 0], { extrapolateRight: 'clamp' })} />
+          volume={(f) => volumeDaTrilha(f + inicioTrilha) * interpolate(f, [0, 20, fimTrilha - inicioTrilha - 45, fimTrilha - inicioTrilha], [0, 1, 1, 0], { extrapolateRight: 'clamp' })} />
       </Sequence>
       {efeitos().map((e, i) => (
         <EfeitoSonoro key={i} efeito={e} />
@@ -118,7 +134,8 @@ export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
       {narracao && <Audio src={staticFile('narracao/narracao.wav')} />}
       {/* Voz gravada por cena (gravacoes/narracao/cena-NN.mp3), começando no início da cena. */}
       {CENAS.filter((c) => arquivoExiste(vozDaCena(c.n))).map((c) => (
-        <Sequence key={`voz-${c.n}`} from={inicioEmQuadros(c)} durationInFrames={quadrosDa(c)} name={`voz cena ${c.n}`}>
+        // A voz toca até o fim do arquivo (meio segundo de sobra), para a última sílaba não ser cortada na troca de cena.
+        <Sequence key={`voz-${c.n}`} from={inicioEmQuadros(c)} durationInFrames={quadrosDa(c) + 15} name={`voz cena ${c.n}`}>
           <Audio src={staticFile(vozDaCena(c.n))} />
         </Sequence>
       ))}

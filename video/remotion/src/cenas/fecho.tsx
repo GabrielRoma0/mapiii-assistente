@@ -3,7 +3,7 @@ import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { AvisoPrototipo, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Logo, Leco, mix, Palavras, partida, r2 } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
-import { naPalavra } from '../roteiro';
+import { naPalavra, temposDasPalavras } from '../roteiro';
 import { Camera, LinhaDeRota } from '../sobreposicoes';
 
 // Número que rola (com borrão vertical) e para no valor em `para`.
@@ -98,7 +98,7 @@ export const Cena13: React.FC = () => {
 };
 
 // ---------- Cena 14: Gabriel na câmera ----------
-export const Cena14: React.FC = () => <Camera n={14} nomes={['gabriel']} />;
+export const Cena14: React.FC = () => <Camera n={14} nomes={['gabriel']} foco="48% 32%" zoom={[{ em: 0, de: 1, ate: 1.05 }, { em: naPalavra(14, 'A') - 3, de: 1.14, ate: 1.18 }]} />;
 
 // ---------- Cena 15: mapa-múndi; a base troca e os pinos acendem ----------
 // mundo.svg: 1920 × 960, equiretangular (x = (lon+180)/360·1920; y = (84−lat)/144·960).
@@ -191,10 +191,10 @@ export const Cena16: React.FC = () => {
 // ---------- Cena 17: Thor e Gabriel na câmera; corta para o slogan ----------
 export const Cena17: React.FC = () => {
   const f = useCurrentFrame();
-  const voce = naPalavra(17, 'Você');
   const agora = naPalavra(17, 'Agora,');
-  const corte = voce - 4;
-  if (f < corte) return <Camera n={17} nomes={['thor', 'gabriel']} />;
+  // A dupla fala "Você pode ter direito." na câmera; o corte para o slogan é em "Agora,".
+  const corte = agora - 4;
+  if (f < corte) return <Camera n={17} nomes={['gabriel', 'thor']} foco="52% 40%" zoom={[{ em: 0, de: 1, ate: 1.08 }]} />;
   const g = f - corte;
   return (
     <EntradaDeCena>
@@ -202,10 +202,10 @@ export const Cena17: React.FC = () => {
         <div style={{ position: 'absolute', left: 150, top: 180 }}>
           <Logo largura={470} />
           <div style={{ fontSize: 80, lineHeight: 1.1, fontWeight: 900, letterSpacing: '-0.025em', marginTop: 44 }}>
-            <Palavras itens={[{ texto: 'Você', em: corte }, { texto: 'pode', em: corte + 4 }, { texto: 'ter', em: corte + 8 }, { texto: 'direito.', em: corte + 12 }]} />
+            <Palavras itens={[{ texto: 'Você', em: corte }, { texto: 'pode', em: corte + 2 }, { texto: 'ter', em: corte + 4 }, { texto: 'direito.', em: corte + 6 }]} />
             <br />
-            <span style={{ opacity: chegada(f, agora - 2, 10), display: 'inline-block', transform: `translateY(${r2(mix(40, 0, chegada(f, agora - 2, 10)))}px)` }}>
-              <Destaque de={agora + 14}>Agora, você sabe onde ir.</Destaque>
+            <span style={{ opacity: chegada(f, agora + 6, 10), display: 'inline-block', transform: `translateY(${r2(mix(40, 0, chegada(f, agora + 6, 10)))}px)` }}>
+              <Destaque de={agora + 22}>Agora, você sabe onde ir.</Destaque>
             </span>
           </div>
         </div>
@@ -253,6 +253,8 @@ export const Cena18: React.FC = () => {
           </svg>
           <div style={{ position: 'absolute', left: px, top: py, opacity: 1 - some }}><Pessoa largura={445} /></div>
         </div>
+        {/* O Leco é quem fala a frase final: sobe, acena a cada palavra e a legenda é o balão dele (sobreposicoes.tsx). */}
+        <Leco pose="bom" x={1380} y={128} tamanho={400} em={0} fala={temposDasPalavras(18).map((p) => p.de)} sombra={false} />
         <AvisoPrototipo style={{ left: 0, right: 0, bottom: 22, textAlign: 'center' }} />
       </AbsoluteFill>
     </Fundo>

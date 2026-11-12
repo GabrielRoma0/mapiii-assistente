@@ -38,6 +38,9 @@
 | Embarque | História animada (cena 10), sem gravação de tela, por isso sem selo EXEMPLO. A locução diz "pode avisar" | Thor, 07/11 |
 | Leco | **Leco 3D só no vídeo.** O app continua com o Leco plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
 | Fala da cena 17 | "Ninguém deveria ficar no ponto." no lugar de "Somos o Thor e o Gabriel" (os nomes já aparecem nas etiquetas da câmera) | Thor e Gabriel, 12/11 |
+| Leco no fecho | Na cena 18 o **Leco aparece falando** a frase final: sobe ao lado do logo, acena a cada palavra e a legenda vira o balão de fala dele. Substitui o "Sem o Leco neste quadro" do pedido 4 | Thor, 12/11 |
+| Zoom na câmera | Cenas 2, 3, 5, 14 e 17 com aproximação lenta e um "chega mais perto" nas viradas da fala (no máximo 1,32×) | Thor, 12/11 |
+| Corte da cena 17 | A dupla aparece falando "Você pode ter direito."; o slogan entra em "Agora," | Claude Code, 12/11 |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
 | Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 
@@ -172,7 +175,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` | **Prontas (12/11)** | — |
 | Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/gravacoes/app/triagem.mp4` e `mao-celular.mp4` (fora do git) | Falta. O vídeo funciona sem eles | Claude Code + dupla |
 | Relatório do Lighthouse com as fichas (cena 12) | `video/remotion/public/app/lighthouse.png` | Falta (depois da H1) | Claude Code |
-| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **1ª versão montada (10/11)**: as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |
+| Vídeo renderizado | `video/entrega/mapiii-pitch-gs2026.mp4` e `.srt` | **Versão de 12/11**, com tudo o que existe até agora (sem os cortes do app). Refazer com `npm run render` e `npm run srt` em `video/remotion` | Claude Code |
+| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **Editado em 12/11** (zoom, voz tratada, Leco no fecho, tempo real das palavras). 1ª versão montada (10/11): as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |
 
 Vídeos grandes (câmera e gravações de tela) **não vão para o git**: ficam numa pasta compartilhada da dupla e são copiados para `video/remotion/public/` só na hora de montar.
 

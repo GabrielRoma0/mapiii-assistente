@@ -116,7 +116,7 @@ export const Icone: React.FC<{ nome: string; tamanho: number; cor: string; traco
 export type PoseMapi = 'bom' | 'atencao' | 'procurando' | 'verificado' | 'ouvindo' | 'recusa' | 'comemorando';
 
 // Leco 3D: entra subindo suave a partir de `em`, com sombra em elipse sólida; depois flutua de leve. Nunca deforma.
-export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean }> = ({ pose, x, y, tamanho, em, balanco, sombra = true }) => {
+export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean; fala?: number[] }> = ({ pose, x, y, tamanho, em, balanco, sombra = true, fala }) => {
   const f = useCurrentFrame();
   const t = chegada(f, em, 14);
   const vivo = Math.max(0, f - em);
@@ -127,6 +127,12 @@ export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: num
     const b = f - balanco;
     if (b >= 0 && b <= 18) gira = Math.sin((b / 18) * Math.PI * 2) * 6 * (1 - b / 18);
   }
+  // Falando: um aceno curto do corpo inteiro no começo de cada palavra (`fala` = quadros das palavras). Não deforma.
+  let aceno = 0;
+  (fala ?? []).forEach((q, i) => {
+    const b = f - q;
+    if (b >= 0 && b <= 7) { const k = Math.sin((b / 7) * Math.PI); aceno -= 9 * k; gira += (i % 2 ? -2.2 : 2.2) * k; }
+  });
   return (
     <div style={{ position: 'absolute', left: x, top: y, width: tamanho, height: tamanho, opacity: f >= em ? 1 : 0 }}>
       {sombra && (
@@ -137,7 +143,7 @@ export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: num
       )}
       <Img src={staticFile(`mapi/${pose}.png`)} style={{
         position: 'absolute', inset: 0, width: '100%', height: '100%',
-        transform: `translateY(${r2(sobe + flutua)}px) rotate(${r2(gira)}deg)`, transformOrigin: '50% 90%'
+        transform: `translateY(${r2(sobe + flutua + aceno)}px) rotate(${r2(gira)}deg)`, transformOrigin: '50% 90%'
       }} />
     </div>
   );

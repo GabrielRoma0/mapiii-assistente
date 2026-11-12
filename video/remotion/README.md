@@ -14,7 +14,10 @@ npm run render        # vídeo final 1920 × 1080 em out/mapiii-pitch-gs2026.mp4
 npm run srt           # legenda em out/mapiii-pitch-gs2026.srt
 npm run conferir -- out/previa.mp4   # trechos parados, final parado e volume
 npm run tipos         # confere o TypeScript
+python3 scripts/alinhar.py   # refaz o tempo de cada palavra (só quando a narração mudar)
 ```
+
+`scripts/alinhar.py` precisa do `espeak-ng`, do `ffmpeg` e dos pacotes Python `numpy`, `librosa` e `soundfile`. Ele grava `src/tempos-narracao.json`; o resto do projeto não depende dele.
 
 `npm run preparar` (chamado pelos outros) copia as peças de `video/` e `design-system/` para `public/`. A pasta `public/` e a `out/` não vão para o git.
 
@@ -32,7 +35,7 @@ npm run tipos         # confere o TypeScript
 
 ## Legenda
 
-Ligada por padrão (decisão de 10/11). Hoje usa o tempo estimado de cada palavra, o mesmo que as animações usam. Depois da narração gravada, o tempo real de cada palavra vai para `src/tempos-narracao.json` e a legenda e as animações se ajustam juntas às falas. Para renderizar sem legenda: `npx remotion render Pitch out/sem-legenda.mp4 --props='{"legenda":false}'`.
+Ligada por padrão (decisão de 10/11). Usa o tempo real de cada palavra da narração (`src/tempos-narracao.json`, feito por `scripts/alinhar.py`), o mesmo que as animações usam. Na cena 18 a legenda é o balão de fala do Leco. Para renderizar sem legenda: `npx remotion render Pitch out/sem-legenda.mp4 --props='{"legenda":false}'`.
 
 ## Gravações: onde colocar
 
@@ -46,7 +49,7 @@ As gravações ficam em `video/gravacoes/`, **já comprimidas pelo Claude Code**
 | `gravacoes/narracao/cena-NN.mp3` | Voz de cada cena, começando no início da cena (câmera e off) |
 | `gravacoes/narracao/narracao.wav` | Narração inteira, se gravarem tudo num arquivo só |
 
-Com a narração gravada, o próximo passo é transcrever com o tempo de cada palavra e gravar em `src/tempos-narracao.json` (formato no comentário de `src/roteiro.ts`). Aí cada animação passa a cair na palavra falada, sem mexer nas cenas.
+A voz de cada cena é tratada por `scripts/preparar.mjs` antes de entrar (corte de grave, redução de chiado, compressor suave, −16 LUFS) e toca até o fim do arquivo, sem corte na troca de cena. Se a narração mudar, rodem `python3 scripts/alinhar.py` para refazer o tempo de cada palavra.
 
 ## Como gravar a narração no ritmo
 

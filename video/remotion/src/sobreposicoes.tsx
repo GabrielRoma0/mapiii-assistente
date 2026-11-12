@@ -7,15 +7,26 @@ import { blocosDeLegenda } from './legendas';
 import { cena, inicioEmQuadros, quadrosDa } from './roteiro';
 
 // ---------- Legenda ----------
+// Lugar do balão de fala do Leco no fecho (o Leco fica à direita dele; ver Cena18).
+export const BALAO_18 = { direita: 500, topo: 372 };
 export const Legenda: React.FC = () => {
   const f = useCurrentFrame();
   const b = blocosDeLegenda().find((x) => f >= x.de && f <= x.ate);
   if (!b) return null;
+  // No fecho (cena 18) quem fala é o Leco: a legenda vira o balão de fala dele, com a ponta virada para ele.
+  if (f >= inicioEmQuadros(cena(18))) {
+    const t = chegada(f, b.de, 8);
+    return (
+      <div style={{ position: 'absolute', right: BALAO_18.direita, top: BALAO_18.topo, transform: `translateX(${r2(mix(40, 0, t))}px)`, pointerEvents: 'none' }}>
+        <div style={{ position: 'absolute', right: -14, top: '50%', width: 34, height: 34, marginTop: -17, background: COR.indigo, borderRadius: 6, transform: 'rotate(45deg)' }} />
+        <div style={{ position: 'relative', padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, whiteSpace: 'nowrap' }}>
+          {b.texto}
+        </div>
+      </div>
+    );
+  }
   return (
-    // No fecho (cena 18) a legenda vai para baixo do slogan, para não cobrir a rampa nem o aviso de protótipo.
-    <AbsoluteFill style={f >= inicioEmQuadros(cena(18))
-      ? { justifyContent: 'flex-start', alignItems: 'center', paddingTop: 390, pointerEvents: 'none' }
-      : { justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, pointerEvents: 'none' }}>
+    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, pointerEvents: 'none' }}>
       <div style={{ maxWidth: 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
         {b.texto}
       </div>
@@ -39,8 +50,21 @@ export const Relogio: React.FC = () => {
 // ---------- Câmera (cenas 2, 3, 5, 14 e 17) ----------
 // Se existir public/camera-gravada/cena-NN.mp4, entra o vídeo (sem som: a voz vem de narracao/cena-NN.mp3);
 // senão, um espaço reservado com a moldura.
-export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({ n, nomes }) => {
+// Zoom: trechos { em, de, ate }. Em `em` a imagem se aproxima rápido (6 quadros) até `de` e segue devagar até `ate`
+// (no máximo 1,5×, seção 3). `foco` é o ponto que fica parado (o rosto), em % da imagem.
+export interface TrechoDeZoom { em: number; de: number; ate: number }
+function zoomEm(f: number, trechos: TrechoDeZoom[], fim: number) {
+  let i = 0;
+  while (i < trechos.length - 1 && f >= trechos[i + 1].em) i++;
+  const t = trechos[i];
+  const ate = i < trechos.length - 1 ? trechos[i + 1].em : fim;
+  const lento = mix(t.de, t.ate, interpolate(f, [t.em, ate], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
+  return i > 0 ? mix(trechos[i - 1].ate, lento, chegada(f, t.em, 6)) : lento;
+}
+
+export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[]; zoom?: TrechoDeZoom[]; foco?: string }> = ({ n, nomes, zoom, foco = '50% 40%' }) => {
   const f = useCurrentFrame();
+  const escala = zoom ? zoomEm(f, zoom, quadrosDa(cena(n))) : 1;
   const c = cena(n);
   const gravado = `camera-gravada/cena-${String(n).padStart(2, '0')}.mp4`;
   const arquivo = arquivoExiste(gravado) ? gravado : undefined;
@@ -48,7 +72,9 @@ export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({
     <AbsoluteFill style={{ background: COR.seashell, fontFamily: SANS }}>
       <div style={{ position: 'absolute', left: 52, top: 52, width: 1816, height: 976, borderRadius: 58, overflow: 'hidden', background: COR.grape }}>
         {arquivo ? (
-          <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ position: 'absolute', inset: 0, transform: `scale(${escala.toFixed(4)})`, transformOrigin: foco }}>
+            <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
         ) : (
           <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', color: COR.seashell, gap: 18 }}>
             <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: '0.04em' }}>CÂMERA · CENA {n}</div>

@@ -42,7 +42,11 @@ export const Cena1: React.FC = () => {
 };
 
 // ---------- Cena 2: Thor na câmera ----------
-export const Cena2: React.FC = () => <Camera n={2} nomes={['thor']} />;
+// Zoom: abre devagar; aproxima em "E quem cuida" e de novo nas perguntas.
+export const Cena2: React.FC = () => (
+  <Camera n={2} nomes={['thor']} foco="52% 34%"
+    zoom={[{ em: 0, de: 1, ate: 1.05 }, { em: naPalavra(2, 'E') - 3, de: 1.14, ate: 1.18 }, { em: naPalavra(2, 'o', 0) - 3, de: 1.27, ate: 1.32 }]} />
+);
 
 // ---------- Cena 3: Gabriel na câmera, depois os três cartões ----------
 export const Cena3: React.FC = () => {
@@ -50,8 +54,8 @@ export const Cena3: React.FC = () => {
   const esp = naPalavra(3, 'espalhada');
   const dif = naPalavra(3, 'difícil');
   const gol = naPalavra(3, 'golpe');
-  const corte = esp - 8;
-  if (f < corte) return <Camera n={3} nomes={['gabriel']} />;
+  const corte = esp - 5;
+  if (f < corte) return <Camera n={3} nomes={['gabriel']} foco="50% 38%" zoom={[{ em: 0, de: 1, ate: 1.05 }, { em: naPalavra(3, 'Só') - 3, de: 1.15, ate: 1.2 }]} />;
   const cartoes = [
     { texto: 'Espalhada.', obj: 'espalhada', em: esp, escuro: false },
     { texto: 'Difícil.', obj: 'dificil', em: dif, escuro: false },
@@ -95,7 +99,7 @@ export const Cena4: React.FC = () => {
   const desacel = 1 - Math.pow(1 - t, 3);
   const passo = 260;
   const voltas = 3; // quantas vezes o rolo passa antes de parar
-  const desloc = (1 - desacel) * voltas * 10 * passo;
+  const desloc = (1 - desacel) * (voltas * 10 + 3.6) * passo; // começa fora do valor final, para o 14,4 não piscar antes de rolar
   const velocidade = rolando ? (3 * Math.pow(1 - t, 2) * voltas * 10 * passo) / (para - comeca) : 0;
   const borrao = Math.min(18, velocidade / 40);
   const choque = impacto(f, para, 0, 7);
@@ -111,12 +115,15 @@ export const Cena4: React.FC = () => {
     <EntradaDeCena>
       <Fundo>
         <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'column', transform: `translate(${choque.x}px, ${choque.y}px)` }}>
+          <div style={{ fontSize: 64, fontWeight: 800, color: COR.grape, marginBottom: 12 }}>
+            <Palavras itens={[{ texto: 'No', em: naPalavra(4, 'No') - 2 }, { texto: 'Brasil', em: naPalavra(4, 'Brasil') - 2 }]} />
+          </div>
           <div style={{ fontSize: 260, lineHeight: `${passo}px`, fontWeight: 900, letterSpacing: '-0.04em', display: 'flex', alignItems: 'baseline', opacity: visivel ? 1 : 0, fontVariantNumeric: 'tabular-nums' }}>
             <Rolo alvo={1} /><Rolo alvo={4} /><span>,</span><Rolo alvo={4} />
             <span style={{ fontSize: 150, marginLeft: 36 }}><Destaque de={para + 4}>milhões</Destaque></span>
           </div>
           <div style={{ fontSize: 56, fontWeight: 800, color: COR.grape, marginTop: 48, opacity: chegada(f, para + 2, 10), transform: `translateY(${r2(mix(30, 0, chegada(f, para + 2, 10)))}px)` }}>
-            pessoas com deficiência no Brasil
+            pessoas com deficiência
           </div>
           <div style={{ fontFamily: MONO, fontSize: 34, color: COR.grape, marginTop: 24, opacity: chegada(f, para + 8, 10) }}>
             Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais)
@@ -128,7 +135,8 @@ export const Cena4: React.FC = () => {
 };
 
 // ---------- Cena 5: Thor na câmera ----------
-export const Cena5: React.FC = () => <Camera n={5} nomes={['thor']} />;
+// Thor mais perto: já começa aproximado e chega mais em "com a fonte junto".
+export const Cena5: React.FC = () => <Camera n={5} nomes={['thor']} foco="50% 42%" zoom={[{ em: 0, de: 1.12, ate: 1.17 }, { em: naPalavra(5, 'com') - 3, de: 1.26, ate: 1.3 }]} />;
 
 // ---------- Cena 6: círculo cobre a tela e abre no logo; Leco sobe; quatro chips ----------
 export const Cena6: React.FC = () => {

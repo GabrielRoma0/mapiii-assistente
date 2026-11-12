@@ -8,9 +8,22 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 10/11/2026.
+Última atualização: 12/11/2026.
 
 ---
+
+## Atualização de 12/11 (2): edição do vídeo
+
+Feito pelo Claude Code a pedido do Thor, sem tirar nada do vídeo:
+
+- **Leco na cena final (18):** ele sobe ao lado do logo, acena a cada palavra e a legenda "Mapiii. O mapa dos seus direitos." vira o balão de fala dele. O desenho do Leco não mudou (pose `bom` do Leco 3D).
+- **Zoom nas cenas de câmera** (2, 3, 5, 14 e 17): aproximação lenta e um "chega mais perto" nas viradas da fala, no máximo 1,32×.
+- **Voz tratada** na montagem (corte de grave, redução de chiado, compressor suave, −16 LUFS) e **sem corte no fim das falas**; a trilha abaixa sozinha quando há voz.
+- **Legenda e animações no tempo real de cada palavra** (`scripts/alinhar.py`, sem IA e sem internet). O alinhamento é automático: se alguma legenda parecer adiantada ou atrasada, digam a cena e a palavra.
+- Cena 17: a dupla aparece falando "Você pode ter direito." e o slogan entra em "Agora,". Cena 4: "No Brasil" entra antes do número (a tela ficava vazia).
+- **Vídeo renderizado:** `video/entrega/mapiii-pitch-gs2026.mp4` e a legenda `.srt` ao lado.
+
+**Para a dupla testar:** assistir inteiro com som e sem som, e ouvir no alto-falante do celular. Conferir principalmente a legenda das cenas 2 e 9 (fala rápida) e o Leco no fecho. Continuam faltando: os cortes de 2 s do app (cenas 7 e 9), a voz do aviso (cena 10), a revisão com notas por cena e a audiodescrição.
 
 ## Atualização de 12/11: gravações no vídeo
 
