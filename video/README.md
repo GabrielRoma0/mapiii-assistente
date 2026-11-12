@@ -41,6 +41,7 @@
 | Leco no fecho | Na cena 18 o **Leco aparece falando** a frase final: sobe ao lado do logo, acena a cada palavra e a legenda vira o balão de fala dele. Substitui o "Sem o Leco neste quadro" do pedido 4 | Thor, 12/11 |
 | Zoom na câmera | Cenas 2, 3, 5, 14 e 17 com aproximação lenta e um "chega mais perto" nas viradas da fala (no máximo 1,32×) | Thor, 12/11 |
 | Corte da cena 17 | A dupla aparece falando "Você pode ter direito."; o slogan entra em "Agora," | Claude Code, 12/11 |
+| Telas do app | Duas cenas novas com a gravação real da tela (19, depois da 7; 20, depois da 9), com a etiqueta "GRAVAÇÃO DO APP". O vídeo vai a 2:09. Voz dessas cenas: a decidir (Leco gerado ou a dupla) | Thor, 12/11 |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
 | Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 
@@ -173,7 +174,8 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **Prontos (10/11):** os 12 sons em `video/sons/`, com créditos (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
 | Narração em off | `video/gravacoes/narracao/cena-NN.mp3` (uma por cena) | **Pronta (12/11).** Com ela, o vídeo passou a ter **1:54**; os tempos da seção 4 são os do roteiro original, os reais estão em `video/remotion/src/roteiro.ts` | — |
 | Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` | **Prontas (12/11)** | — |
-| Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/gravacoes/app/triagem.mp4` e `mao-celular.mp4` (fora do git) | Falta. O vídeo funciona sem eles | Claude Code + dupla |
+| Telas do app real (cenas 19 e 20, depois das cenas 7 e 9) | `video/gravacoes/app/triagem.mp4` e `motorista.mp4`; gravação inteira em `video/gravacoes/app-bruto/`; gravador em `video/remotion/scripts/gravar-app.cjs` | **Prontas (12/11)**, do build do app. **Falta a narração** das duas (`narracao/cena-19.mp3` e `cena-20.mp3`); texto no `PENDENCIAS.md` | Dupla |
+| Mão virando o celular (cena 9) e a voz do aviso (cena 10) | `video/gravacoes/app/mao-celular.mp4` | Falta. O vídeo funciona sem eles | Dupla |
 | Relatório do Lighthouse com as fichas (cena 12) | `video/remotion/public/app/lighthouse.png` | Falta (depois da H1) | Claude Code |
 | Vídeo renderizado | `video/entrega/mapiii-pitch-gs2026.mp4` e `.srt` | **Versão de 12/11**, com tudo o que existe até agora (sem os cortes do app). Refazer com `npm run render` e `npm run srt` em `video/remotion` | Claude Code |
 | Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **Editado em 12/11** (zoom, voz tratada, Leco no fecho, tempo real das palavras). 1ª versão montada (10/11): as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |

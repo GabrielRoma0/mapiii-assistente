@@ -106,6 +106,8 @@ def main():
     res = []
     with tempfile.TemporaryDirectory() as tmp:
         for n, inicio, fim, loc in cenas():
+            if not (RAIZ.parent / 'gravacoes' / 'narracao' / f'cena-{n:02d}.mp3').exists():
+                print(n, 'sem narração gravada: fica com o tempo estimado'); continue
             ws = alinhar(n, loc, tmp)
             res.append({'cena': n, 'fonte': f'video/gravacoes/narracao/cena-{n:02d}.mp3',
                         'palavras': [{'texto': p, 'inicio': round(inicio + a, 3), 'fim': round(inicio + b, 3)} for p, a, b in ws]})

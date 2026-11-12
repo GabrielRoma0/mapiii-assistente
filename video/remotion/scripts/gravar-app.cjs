@@ -78,7 +78,7 @@ async function preparar(p, tocar) {
 // Respostas da triagem: quem cuida de alguém em cadeira de rodas, em São Paulo, que anda de ônibus.
 const RESPOSTAS = [
   [/tipo de apoio/, 'Mobilidade ou cadeira de rodas'], [/quer resolver/, 'Transporte e passe livre'], [/faixa de idade/, 'De 18 a 59 anos'],
-  [/cadeira de rodas, andador/, 'Sim'], [/laudo/, 'Sim'], [/mora na cidade/, 'Sim'], [/renda/, 'Não sei'], [/Cadastro Único/, 'Não sei'],
+  [/cadeira de rodas, andador/, 'Sim'], [/laudo ou relatório/, 'Sim'], [/mora na cidade/, 'Sim'], [/renda da casa/, 'Não sei'], [/Cadastro Único/, 'Não sei'],
   [/já recebe/, 'Nenhum'], [/costuma se deslocar/, 'Ônibus'], [/Para quem/, 'Para alguém que eu acompanho']
 ];
 

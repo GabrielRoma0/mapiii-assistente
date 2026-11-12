@@ -91,7 +91,6 @@ export const Cena7: React.FC = () => {
             })}
           </div>
         </Cartao>
-        <CorteDoApp arquivo="app/triagem.mp4" de={dur - 60} dur={60} />
       </Fundo>
     </EntradaDeCena>
   );

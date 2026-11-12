@@ -12,14 +12,23 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
-## Atualização de 12/11 (3): gravações do app, PARADO NO MEIO (continuar daqui)
+## Atualização de 12/11 (3): telas do app real no vídeo
 
-O Thor pediu as gravações reais da tela do app no vídeo e mandou parar antes de terminar. Estado:
+Feito pelo Claude Code a pedido do Thor:
 
-- **Pronto:** `video/remotion/scripts/gravar-app.cjs` grava as telas do build do app em formato de celular (780 × 1688, sem som). Gravações inteiras em `video/gravacoes/app-bruto/`: `triagem.mp4` (triagem até a Rota, com "Pode ter direito" e "Fonte oficial") e `motorista.mp4` ("Mostre ao motorista" em letra grande e o QR). As duas ficaram boas.
-- **Não ficou boa:** a tela "Fazer uma pergunta". O formulário fixo ocupa metade da tela e a resposta quase não aparece; não foi salva. Ideia: mostrar a ficha aberta (tela do direito) no lugar, ou gravar com a tela mais alta.
-- **Falta:** cortar os trechos (4 a 5 s cada), encaixar nas cenas 7 e 9 (e talvez 8) dentro de uma moldura de celular, alongar essas cenas e renderizar de novo. O vídeo em `video/entrega/` ainda é o de antes, sem as telas do app.
-- **Narração das telas do app:** o Thor vai gerar com a voz do Leco e pediu o roteiro. **O roteiro ainda não foi escrito**: escrever depois de decidir os cortes. Lembrar que a decisão de 07/11 era "voz da dupla, sem clone"; confirmar com a dupla se a voz gerada do Leco vale só para esses trechos.
+- **Duas cenas novas com a gravação da tela do app** (build do app, formato de celular, dentro de uma moldura, com a etiqueta "GRAVAÇÃO DO APP"):
+  - **cena 19**, logo depois da cena 7 (8,5 s): a triagem de verdade até a Rota, com o Bilhete Único Especial, "Pode ter direito" e "Fonte oficial";
+  - **cena 20**, logo depois da cena 9 (6,5 s): a tela "Mostre ao motorista" em letra grande e o QR.
+- O vídeo passou de 1:54 para **2:09**. As cenas 19 e 20 ficam no fim da lista de `roteiro.ts` para não mudar o número das outras.
+- Como refazer as gravações: `video/remotion/scripts/gravar-app.cjs` (instruções no começo do arquivo). Gravação inteira em `video/gravacoes/app-bruto/`, cortes usados em `video/gravacoes/app/`.
+- A tela "Fazer uma pergunta" **não entrou**: o formulário fixo ocupa metade da tela e a resposta quase não aparece na gravação.
+
+**Falta a narração das duas cenas** (hoje elas têm só trilha, toques e legenda). A dupla decide se gera com a voz do Leco ou se narra. Texto:
+
+- Cena 19 (até 8 s): Olha o app de verdade: a pessoa responde com poucos toques, e ele mostra o Bilhete Único Especial, com "pode ter direito" e fonte oficial.
+- Cena 20 (até 6 s): Aqui está ela no app: a frase em letra grande e, embaixo, o código que abre a lei no site da Prefeitura.
+
+Salvar como `video/gravacoes/narracao/cena-19.mp3` e `cena-20.mp3` e pedir ao Claude Code para encaixar (ele roda `python3 scripts/alinhar.py` e renderiza). Se mudarem o texto, mudar também a `locucao` das cenas 19 e 20 em `video/remotion/src/roteiro.ts`.
 
 ## Atualização de 12/11 (2): edição do vídeo
 

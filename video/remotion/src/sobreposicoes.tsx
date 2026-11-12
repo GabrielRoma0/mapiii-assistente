@@ -13,6 +13,7 @@ export const Legenda: React.FC = () => {
   const f = useCurrentFrame();
   const b = blocosDeLegenda().find((x) => f >= x.de && f <= x.ate);
   if (!b) return null;
+  const aoLadoDoCelular = [19, 20].some((n) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n)));
   // No fecho (cena 18) quem fala é o Leco: a legenda vira o balão de fala dele, com a ponta virada para ele.
   if (f >= inicioEmQuadros(cena(18))) {
     const t = chegada(f, b.de, 8);
@@ -26,8 +27,9 @@ export const Legenda: React.FC = () => {
     );
   }
   return (
-    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, pointerEvents: 'none' }}>
-      <div style={{ maxWidth: 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
+    // Nas cenas 19 e 20 (tela do app à esquerda) a legenda fica à direita do celular, para não cobrir a gravação.
+    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, paddingLeft: aoLadoDoCelular ? 660 : 0, pointerEvents: 'none' }}>
+      <div style={{ maxWidth: aoLadoDoCelular ? 1120 : 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
         {b.texto}
       </div>
     </AbsoluteFill>

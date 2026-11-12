@@ -29,6 +29,7 @@ python3 scripts/alinhar.py   # refaz o tempo de cada palavra (só quando a narra
 | `src/cenas/abertura.tsx` | Cenas 1 a 6 |
 | `src/cenas/app.tsx` | Cenas 7 a 11 |
 | `src/cenas/fecho.tsx` | Cenas 12 a 18 |
+| `src/cenas/telas-app.tsx` | Cenas 19 e 20: gravação da tela do app real numa moldura de celular (entram depois das cenas 7 e 9) |
 | `src/Pitch.tsx` | Junta tudo: cenas, legenda, relógio, trilha e efeitos sonoros (com o volume de cada um) |
 | `src/base.tsx`, `src/desenhos.tsx` | Cores, fontes, movimento, Leco 3D, ícones; ônibus, pessoa e ponto em vetor |
 | `src/sobreposicoes.tsx`, `src/legendas.ts` | Legenda, relógio, câmera e linha de rota |
@@ -44,7 +45,7 @@ As gravações ficam em `video/gravacoes/`, **já comprimidas pelo Claude Code**
 | Arquivo | Cena |
 |---|---|
 | `gravacoes/camera-gravada/cena-02.mp4`, `cena-03.mp4`, `cena-05.mp4`, `cena-14.mp4`, `cena-17.mp4` | Câmera |
-| `gravacoes/app/triagem.mp4` (2 s) | Corte do app na cena 7 |
+| `gravacoes/app/triagem.mp4` e `motorista.mp4` | Telas do app real nas cenas 19 e 20. Feitas por `node scripts/gravar-app.cjs` (com o build do app aberto em `npx vite preview --port 4173`) e cortadas com o ffmpeg |
 | `gravacoes/app/mao-celular.mp4` (2 s) | Mão virando o celular na cena 9 |
 | `gravacoes/narracao/cena-NN.mp3` | Voz de cada cena, começando no início da cena (câmera e off) |
 | `gravacoes/narracao/narracao.wav` | Narração inteira, se gravarem tudo num arquivo só |
