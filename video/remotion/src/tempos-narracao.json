@@ -1571,5 +1571,172 @@
     "fim": 123.15
    }
   ]
+ },
+ {
+  "cena": 19,
+  "fonte": "video/gravacoes/narracao/cena-19.mp3",
+  "palavras": [
+   {
+    "texto": "Olha",
+    "inicio": 44.51,
+    "fim": 44.74
+   },
+   {
+    "texto": "o",
+    "inicio": 44.74,
+    "fim": 44.81
+   },
+   {
+    "texto": "app",
+    "inicio": 44.81,
+    "fim": 44.91
+   },
+   {
+    "texto": "de",
+    "inicio": 44.91,
+    "fim": 45.04
+   },
+   {
+    "texto": "verdade:",
+    "inicio": 45.04,
+    "fim": 45.38
+   },
+   {
+    "texto": "poucos",
+    "inicio": 45.63,
+    "fim": 45.88
+   },
+   {
+    "texto": "toques,",
+    "inicio": 45.88,
+    "fim": 46.18
+   },
+   {
+    "texto": "e",
+    "inicio": 46.45,
+    "fim": 46.51
+   },
+   {
+    "texto": "ele",
+    "inicio": 46.51,
+    "fim": 46.6
+   },
+   {
+    "texto": "mostra",
+    "inicio": 46.6,
+    "fim": 46.95
+   },
+   {
+    "texto": "o",
+    "inicio": 46.95,
+    "fim": 47.01
+   },
+   {
+    "texto": "que",
+    "inicio": 47.01,
+    "fim": 47.09
+   },
+   {
+    "texto": "pode",
+    "inicio": 47.09,
+    "fim": 47.38
+   },
+   {
+    "texto": "se",
+    "inicio": 47.38,
+    "fim": 47.45
+   },
+   {
+    "texto": "aplicar,",
+    "inicio": 47.45,
+    "fim": 48.28
+   },
+   {
+    "texto": "com",
+    "inicio": 48.28,
+    "fim": 48.4
+   },
+   {
+    "texto": "fonte",
+    "inicio": 48.4,
+    "fim": 48.64
+   },
+   {
+    "texto": "oficial.",
+    "inicio": 48.64,
+    "fim": 49.14
+   }
+  ]
+ },
+ {
+  "cena": 20,
+  "fonte": "video/gravacoes/narracao/cena-20.mp3",
+  "palavras": [
+   {
+    "texto": "E",
+    "inicio": 95.973,
+    "fim": 96.133
+   },
+   {
+    "texto": "antes",
+    "inicio": 96.133,
+    "fim": 96.303
+   },
+   {
+    "texto": "de",
+    "inicio": 96.303,
+    "fim": 96.363
+   },
+   {
+    "texto": "clicar",
+    "inicio": 96.363,
+    "fim": 96.753
+   },
+   {
+    "texto": "ou",
+    "inicio": 96.753,
+    "fim": 96.863
+   },
+   {
+    "texto": "pagar:",
+    "inicio": 96.863,
+    "fim": 97.213
+   },
+   {
+    "texto": "ele",
+    "inicio": 97.213,
+    "fim": 97.313
+   },
+   {
+    "texto": "confere",
+    "inicio": 97.313,
+    "fim": 97.703
+   },
+   {
+    "texto": "se",
+    "inicio": 97.703,
+    "fim": 97.763
+   },
+   {
+    "texto": "o",
+    "inicio": 97.763,
+    "fim": 97.833
+   },
+   {
+    "texto": "link",
+    "inicio": 97.833,
+    "fim": 98.103
+   },
+   {
+    "texto": "é",
+    "inicio": 98.103,
+    "fim": 98.283
+   },
+   {
+    "texto": "oficial.",
+    "inicio": 98.283,
+    "fim": 98.523
+   }
+  ]
  }
 ]

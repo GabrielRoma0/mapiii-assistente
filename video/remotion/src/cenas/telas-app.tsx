@@ -65,7 +65,7 @@ export const Cena20: React.FC = () => {
         <TelaDoApp arquivo="app/conferir.mp4" />
         <Etiqueta />
         <h1 style={TITULO}>
-          <Palavras itens={[{ texto: 'É', em: 8 }, { texto: 'oficial?', em: 12 }]} />
+          <Palavras itens={[{ texto: 'Link', em: 8 }, { texto: 'estranho?', em: 12 }]} />
           <br />
           <Palavras itens={[{ texto: <Destaque de={resultado + 12}>Suspeito.</Destaque>, em: resultado }, { texto: 'Não', em: resultado + 14 }, { texto: 'pague.', em: resultado + 18 }]} />
         </h1>
