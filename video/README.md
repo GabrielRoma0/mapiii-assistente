@@ -149,12 +149,14 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 [off] Mapiii. O mapa dos seus direitos.
 ```
 
+**Ordem no vídeo desde 16/11:** 1 · 2 · 3 · 4 · 5 · 6 · Descubra 7 → 19 → 21 → 8 · Na rua 10 → 9 → 23 · Confiança 20 → 11 → 22 → 12 → 13 · Escala 14 → 24 → 15 · 16 · 17 · 18. (Os números das cenas não mudaram; mudou só a ordem.)
+
 **Cenas novas de 16/11 (feedback do André), narração a gravar, sem câmera:**
 
 ```text
-[off, cena 23, depois da 9] E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar.
-[off, cena 22, depois da 11] Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial.
-[off, cena 24, depois da 14] É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.
+[off, cena 23, depois da 9 (motorista)] E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar.
+[off, cena 22, depois da 11 (sabe dizer não)] Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial.
+[off, cena 24, depois da 14 (Gabriel)] É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.
 ```
 
 As cenas 22 e 23 usam gravações reais do app (`gravacoes/app/recusa.mp4` e `reclamacao.mp4`, feitas com `scripts/gravar-app.cjs`). A 24 tem o selo VISÃO DE FUTURO.

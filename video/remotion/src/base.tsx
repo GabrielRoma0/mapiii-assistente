@@ -46,7 +46,7 @@ export const TEMAS: Record<number, Tema> = {
   11: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
   12: escuro,
   13: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
-  20: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  20: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
   22: vivo(VIVO.fAmbar, [VIVO.agua, VIVO.rosa]),
   23: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
   24: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
