@@ -33,7 +33,7 @@ export const CENAS: Cena[] = [
   { n: 12, inicio: 102.14, fim: 110.15, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
   { n: 13, inicio: 110.15, fim: 114.94, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
   { n: 14, inicio: 114.94, fim: 118.14, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
-  { n: 15, inicio: 126.14, fim: 133.79, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
+  { n: 15, inicio: 118.14, fim: 125.79, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
   { n: 16, inicio: 133.79, fim: 137.33, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
   { n: 17, inicio: 137.33, fim: 142.03, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
   { n: 18, inicio: 142.03, fim: 146.363, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
@@ -48,13 +48,13 @@ export const CENAS: Cena[] = [
   // Cenas 22 a 24 (16/11, feedback do André): diferencial e Reclamação pronta (telas reais do app) e viabilidade (visão de futuro).
   { n: 22, inicio: 94.14, fim: 102.14, quem: 'off', camera: false, locucao: 'Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial.' },
   { n: 23, inicio: 76.33, fim: 83.33, quem: 'off', camera: false, locucao: 'E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar.' },
-  { n: 24, inicio: 118.14, fim: 126.14, quem: 'off', camera: false, locucao: 'É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.' }
+  { n: 24, inicio: 125.79, fim: 133.79, quem: 'off', camera: false, locucao: 'É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.' }
 ];
 
 // Silêncio do começo da voz pulado em cada cena (segundos), para as falas ficarem mais encostadas (16/11).
 export const CORTE_INICIO_VOZ: Record<number, number> = {"4": 0.57, "8": 0.38, "11": 0.5, "16": 0.43};
 
-// Ordem no vídeo (16/11): Descubra 7-19-21-8; Na rua 10-9-23; Confiança 20-11-22-12-13; Escala 14-24-15.
+// Ordem no vídeo (16/11): Descubra 7-19-21-8; Na rua 10-9-23; Confiança 20-11-22-12-13; Escala 14-15-24.
 export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);
 
 export const cena = (n: number): Cena => CENAS[n - 1];

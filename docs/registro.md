@@ -274,3 +274,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 16/11/2026: vídeo ganha as cenas 22 (diferencial: recusa real do app), 23 (Reclamação pronta real) e 24 (viabilidade, visão de futuro). Narração das três a gravar. Duração 2:26.
 - 16/11/2026: objetos 3D do Claude Design (ônibus, carro, calçada, megafone) no recorte da cena 6.
 - 16/11/2026: ordem das cenas revista: Descubra 7-19-21-8, Na rua 10-9-23 (na ordem do dia a dia), Confiança 20-11-22-12-13, Escala 14-24-15.
+- 16/11/2026: escala na ordem 14 (Gabriel) → 15 (mapa) → 24 (viabilidade) → 16 (ODS).
