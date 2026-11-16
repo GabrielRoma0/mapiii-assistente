@@ -22,31 +22,34 @@ export const COR = {
 // Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos com os tons 500 do design system
 // (categorias, âmbar, coral, verde). Sobre eles, todo texto é Space Indigo (contraste de 5:1 ou mais).
 export interface Tema { fundo: string; texto: string; sec: string; destaque: string; escuro: boolean; formas: [string, string] | null }
+// Meio-termo (16/11): só âmbar, verde-água e rosa além do indigo. Fundo = 45% da cor + 55% Seashell;
+// a cor cheia fica só nas formas dos cantos e nas faixas de transição.
 export const VIVO = {
-  ambar: '#DEB365', agua: '#7FB6AF', azul: '#94A6CE', coral: '#DE8B7C', verde: '#88BB94', rosa: '#D792A5', laranja: '#DE9D6F'
+  ambar: '#D9A441', agua: '#5FA8A0', rosa: '#CF7A93',
+  fAmbar: '#E7CA9B', fAgua: '#B0CCC5', fRosa: '#E2B7C0'
 };
 export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas: null };
 const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas });
-const vivo = (fundo: string, formas: [string, string]): Tema => ({ fundo, texto: COR.indigo, sec: COR.indigo, destaque: COR.seashell, escuro: false, formas });
+const vivo = (fundo: string, formas: [string, string]): Tema => ({ fundo, texto: COR.indigo, sec: COR.indigo, destaque: COR.indigo, escuro: false, formas });
 const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, destaque: VIVO.ambar, escuro: true, formas: [VIVO.agua, COR.rosa] };
 export const TEMAS: Record<number, Tema> = {
   1: claro(COR.seashell, null),
-  3: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
+  3: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
   4: escuro,
-  6: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
-  7: vivo(VIVO.agua, [VIVO.ambar, COR.seashell]),
-  8: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
-  9: vivo(VIVO.ambar, [VIVO.coral, COR.seashell]),
-  10: vivo(VIVO.azul, [VIVO.ambar, COR.seashell]),
-  11: vivo(VIVO.coral, [VIVO.ambar, COR.seashell]),
+  6: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  7: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  19: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  8: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  9: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  10: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  21: vivo(VIVO.fAmbar, [VIVO.agua, VIVO.rosa]),
+  11: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
   12: escuro,
-  13: vivo(VIVO.verde, [VIVO.ambar, COR.seashell]),
-  15: vivo(COR.seashell, [VIVO.ambar, VIVO.agua]),
-  19: vivo(VIVO.agua, [VIVO.ambar, COR.seashell]),
-  20: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
-  21: vivo(VIVO.azul, [VIVO.ambar, COR.seashell]),
+  13: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  20: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  15: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
   16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
-  17: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
+  17: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
   18: claro(COR.seashell, null)
 };
 const TemaCtx = createContext<Tema>(TEMA_CLARO);
