@@ -4,6 +4,7 @@ import React from 'react';
 import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame } from 'remotion';
 import { chegada, COR, Destaque, EntradaDeCena, Fundo, Leco, mix, Palavras, r2 } from '../base';
 import { arquivoExiste } from '../arquivos';
+import { naPalavra } from '../roteiro';
 
 // Lugar da moldura (a legenda destas cenas fica à direita dela; ver sobreposicoes.tsx).
 export const CELULAR = { x: 150, y: 46, largura: 458, altura: 988 };
@@ -92,6 +93,53 @@ export const Cena21: React.FC = () => {
           <Palavras itens={[{ texto: 'O', em: resposta }, { texto: 'Leco', em: resposta + 4 }, { texto: <Destaque de={resposta + 18}>responde.</Destaque>, em: resposta + 8 }]} />
         </h1>
         <Leco pose="bom" x={1500} y={470} tamanho={360} em={resposta + 6} />
+      </Fundo>
+    </EntradaDeCena>
+  );
+};
+
+// ---------- Cena 22: o diferencial. Uma IA genérica pode inventar; o Mapiii recusa o que não está na base ----------
+// Gravação real: pergunta de saúde (fora do escopo) e a "Recusa gentil" do Leco.
+export const Cena22: React.FC = () => {
+  const f = useCurrentFrame();
+  const inventa = naPalavra(22, 'inventar');
+  const base = naPalavra(22, 'base,');
+  const risco = chegada(f, inventa + 6, 10);
+  return (
+    <EntradaDeCena>
+      <Fundo>
+        <TelaDoApp arquivo="app/recusa.mp4" />
+        <Etiqueta />
+        <h1 style={TITULO}>
+          <Palavras itens={[{ texto: 'Qualquer', em: 6 }, { texto: 'IA?', em: 10 }]} />
+          <br />
+          <span style={{ position: 'relative', display: 'inline-block', fontSize: 72, color: COR.indigo, opacity: f >= inventa - 4 ? 1 : 0 }}>
+            pode inventar uma lei
+            <span style={{ position: 'absolute', left: 0, top: '54%', height: 8, borderRadius: 4, background: COR.indigo, width: `${r2(risco * 100)}%` }} />
+          </span>
+          <br />
+          <Palavras itens={[{ texto: 'O', em: base - 8 }, { texto: 'Mapiii', em: base - 6 }, { texto: <Destaque de={base + 8}>não inventa.</Destaque>, em: base - 2 }]} />
+        </h1>
+        <Leco pose="recusa" x={1500} y={560} tamanho={340} em={base} balanco={base + 14} />
+      </Fundo>
+    </EntradaDeCena>
+  );
+};
+
+// ---------- Cena 23: Me negaram? A Reclamação pronta de verdade (linha de exemplo do próprio app, sem nome nem CPF) ----------
+export const Cena23: React.FC = () => {
+  const pronta = naPalavra(23, 'pronta,');
+  return (
+    <EntradaDeCena>
+      <Fundo>
+        <TelaDoApp arquivo="app/reclamacao.mp4" />
+        <Etiqueta />
+        <h1 style={TITULO}>
+          <Palavras itens={[{ texto: 'Negaram', em: 6 }, { texto: 'o', em: 10 }, { texto: 'embarque?', em: 13 }]} />
+          <br />
+          <Palavras itens={[{ texto: 'Reclamação', em: pronta - 8 }, { texto: <Destaque de={pronta + 8}>pronta.</Destaque>, em: pronta - 2 }]} />
+        </h1>
+        <Leco pose="verificado" x={1480} y={500} tamanho={360} em={pronta + 4} />
       </Fundo>
     </EntradaDeCena>
   );

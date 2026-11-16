@@ -261,3 +261,36 @@ export const Cena18: React.FC = () => {
     </Fundo>
   );
 };
+
+// ---------- Cena 24: viabilidade (visão de futuro). Só fatos do app: sem cadastro, sem dados pessoais, funciona sem internet ----------
+export const Cena24: React.FC = () => {
+  const f = useCurrentFrame();
+  const itens = [
+    { texto: 'Leve: abre até sem internet', icone: 'download', em: naPalavra(24, 'leve,') - 4 },
+    { texto: 'Sem cadastro', icone: 'usuario', em: naPalavra(24, 'cadastro') - 4 },
+    { texto: 'Sem guardar dados pessoais', icone: 'escudo_check', em: naPalavra(24, 'dados') - 4 }
+  ];
+  const quem = naPalavra(24, 'prefeitura');
+  return (
+    <EntradaDeCena>
+      <Fundo>
+        <span style={{ position: 'absolute', right: 120, top: 96, padding: '14px 28px', borderRadius: 999, background: COR.almond, border: `3px solid ${COR.indigo}`, fontSize: 32, fontWeight: 900, letterSpacing: '0.04em' }}>VISÃO DE FUTURO</span>
+        <div style={{ position: 'absolute', left: 140, top: 200, display: 'flex', flexDirection: 'column', gap: 28 }}>
+          {itens.map((it) => {
+            const t = chegada(f, it.em, 10);
+            return (
+              <div key={it.texto} style={{ display: 'flex', alignItems: 'center', gap: 28, padding: '22px 40px 22px 26px', borderRadius: 40, background: COR.branco, fontSize: 60, fontWeight: 900, opacity: t > 0 ? 1 : 0, transform: `translateX(${r2(mix(-700, 0, t))}px)` }}>
+                <span style={{ width: 96, height: 96, borderRadius: 28, background: COR.indigo, display: 'grid', placeItems: 'center' }}><Icone nome={it.icone} tamanho={56} cor={COR.seashell} /></span>
+                {it.texto}
+              </div>
+            );
+          })}
+          <div style={{ marginTop: 24, fontSize: 84, fontWeight: 900, letterSpacing: '-0.02em', opacity: f >= quem - 4 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, quem - 4, 12)))}px)` }}>
+            Uma <Destaque de={quem + 4}>prefeitura</Destaque> ou ONG pode adotar.
+          </div>
+        </div>
+        <Leco pose="bom" x={1500} y={260} tamanho={380} em={quem} />
+      </Fundo>
+    </EntradaDeCena>
+  );
+};

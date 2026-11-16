@@ -151,6 +151,44 @@ const ROTEIROS = {
     await espera(p, 500);
     await tocar(p.locator('main button[type=submit]'));
     await espera(p, 3000);
+  },
+  // Recusa gentil: uma pergunta de saúde fora do escopo (cena 22, o diferencial).
+  recusa: async ({ p, tocar, comecar }) => {
+    await preparar(p, tocar);
+    await p.goto(URL + '#/perguntar');
+    await espera(p, 900);
+    await comecar();
+    await espera(p, 400);
+    const campo = p.locator('main textarea').first();
+    await campo.tap();
+    await campo.pressSequentially('Qual remédio posso tomar para dor?', { delay: 38 });
+    await espera(p, 400);
+    await tocar(p.locator('main button[type=submit]'));
+    await espera(p, 900);
+    const topo = await p.locator('main').getByText('Você', { exact: true }).first().evaluate((e) => Math.round(e.getBoundingClientRect().top));
+    await p.mouse.move(195, 150);
+    await p.mouse.wheel(0, topo - 70);
+    await espera(p, 3200);
+  },
+  // Reclamação pronta (cena 23): linha de exemplo do próprio app, o problema e o texto gerado. Sem nome nem CPF.
+  reclamacao: async ({ p, tocar, comecar }) => {
+    await preparar(p, tocar);
+    await p.goto(URL + '#/reclamacao');
+    await espera(p, 900);
+    await comecar();
+    await espera(p, 400);
+    const linha = p.locator('main input').first();
+    await linha.tap();
+    await linha.pressSequentially('8000-10', { delay: 60 });
+    await espera(p, 300);
+    await tocar(p.locator('main label, main button', { hasText: 'Rampa ou elevador com defeito' }));
+    await espera(p, 400);
+    await tocar(p.locator('main button', { hasText: 'Gerar texto' }));
+    await espera(p, 1200);
+    const texto = await p.locator('main textarea').last().evaluate((e) => Math.round(e.getBoundingClientRect().top));
+    await p.mouse.move(195, 300);
+    await p.mouse.wheel(0, Math.max(0, texto - 160));
+    await espera(p, 3000);
   }
 };
 

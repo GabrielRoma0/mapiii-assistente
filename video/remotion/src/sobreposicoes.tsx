@@ -15,7 +15,7 @@ export const Legenda: React.FC = () => {
   if (!b) return null;
   const naCena = (n: number) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n));
   const celularGrande = naCena(21);
-  const aoLadoDoCelular = celularGrande || [19, 20].some((n) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n)));
+  const aoLadoDoCelular = celularGrande || [19, 20, 22, 23].some((n) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n)));
   // No fecho (cena 18) quem fala é o Leco: a legenda vira o balão de fala dele, com a ponta virada para ele.
   if (f >= inicioEmQuadros(cena(18))) {
     const t = chegada(f, b.de, 8);
