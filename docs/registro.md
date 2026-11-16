@@ -269,3 +269,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 16/11/2026: roteiro do vídeo ajustado pelo feedback dos professores (recorte de mobilidade na cena 6, mais app real, diferencial na cena 14, mais cor). Regravar cenas 6 e 14.
 - 16/11/2026: vídeo com as falas mais encostadas: cada cena termina 0,25 s depois da fala (pausas de propósito mantidas nas cenas 1, 5, 6, 16 e 18). Duração de 1:54 para 1:50.
 - 16/11/2026: vídeo com mais cor (fundo por cena, formas, cenas 4 e 12 escuras), faixa colorida nas trocas de parte e recorte de mobilidade sem voz na cena 6. Câmera sem regravar. Duração 1:52.
+- 16/11/2026: fundos do vídeo trocados pelos tons vivos (500) do design system. Pedido 4 ao Claude Design (objetos 3D do recorte) em video/claude-design/.

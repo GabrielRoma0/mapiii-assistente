@@ -1,7 +1,7 @@
 // Cenas 1 a 6: gancho, problema, número, virada e logo.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2, useTema } from '../base';
+import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2, useTema, VIVO } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
 import { naPalavra, temposDasPalavras } from '../roteiro';
 import { Camera } from '../sobreposicoes';
@@ -139,14 +139,15 @@ export const Cena6: React.FC = () => {
   const mapiii = Math.min(naPalavra(6, 'Mapiii'), 15); // o logo aparece assim que o círculo abre
   const direitos = naPalavra(6, 'direitos');
   const leco = naPalavra(6, 'Leco');
+  const tema = useTema();
   const choque = impacto(f, 9, 0, 6);
   // Recorte (feedback do Roberto, 16/11): depois da fala, o app diz por onde começa. Só texto, sem voz nova.
   const falas6 = temposDasPalavras(6);
   const recorte = falas6[falas6.length - 1].ate + 8;
   const saiLogo = partida(f, recorte - 6, 8);
   const temas = [
-    { texto: 'Ônibus', cor: COR.almond }, { texto: 'Carro', cor: COR.rosa },
-    { texto: 'Calçada', cor: COR.lilac100 }, { texto: 'Reclamação', cor: COR.branco }
+    { texto: 'Ônibus', cor: COR.branco }, { texto: 'Carro', cor: COR.rosa },
+    { texto: 'Calçada', cor: VIVO.agua }, { texto: 'Reclamação', cor: COR.seashell }
   ];
   const chips = ['Pode ter direito', 'Fonte oficial', 'Sem CPF', 'Emergência: 192'];
   const posChip: React.CSSProperties[] = [
@@ -157,7 +158,7 @@ export const Cena6: React.FC = () => {
       <AbsoluteFill style={{ transform: `translate(${choque.x}px, ${choque.y}px)` }}>
         <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.indigo, transform: `scale(${r2(mix(0.08, 1, cobre))})` }} />
-          <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.seashell, transform: `scale(${r2(mix(0.05, 1, abre))})`, opacity: f >= 11 ? 1 : 0 }} />
+          <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: tema.fundo, transform: `scale(${r2(mix(0.05, 1, abre))})`, opacity: f >= 11 ? 1 : 0 }} />
         </AbsoluteFill>
         <div style={{ position: 'absolute', left: 160, top: 330, opacity: f >= mapiii - 4 && saiLogo < 1 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, mapiii - 4, 12)) - saiLogo * 900)}px)` }}>
           <Logo largura={640} />
@@ -178,7 +179,7 @@ export const Cena6: React.FC = () => {
           );
         })}
         <div style={{ position: 'absolute', left: 160, top: 250, width: 1040, opacity: f >= recorte - 2 ? 1 : 0 }}>
-          <div style={{ fontSize: 50, fontWeight: 800, color: COR.grape, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
+          <div style={{ fontSize: 50, fontWeight: 800, color: tema.sec, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
           <div style={{ fontSize: 96, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
             a <Destaque de={recorte + 10}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
           </div>

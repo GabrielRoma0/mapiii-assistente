@@ -94,7 +94,7 @@ export const LinhaDeRota: React.FC<{ n: number; chega?: number }> = ({ n, chega 
           <path d={d} fill="none" stroke="#fff" strokeWidth={14} strokeDasharray={`${tamanho} ${tamanho}`} strokeDashoffset={r2(tamanho * (1 - t))} />
         </mask>
       </defs>
-      <path d={d} fill="none" stroke={COR.grape} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
+      <path d={d} fill="none" stroke={COR.indigo} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
     </svg>
   );
 };
@@ -102,7 +102,7 @@ export const LinhaDeRota: React.FC<{ n: number; chega?: number }> = ({ n, chega 
 // ---------- Transição colorida entre partes do roteiro (pedido do Rodolfo, 16/11) ----------
 // Uma faixa sólida inclinada atravessa a tela e cobre o corte: entra acelerando, sai desacelerando.
 export const CORTES_COM_FAIXA = [3, 5, 7, 9, 11, 12, 14, 16, 17];
-const CORES_FAIXA = [COR.rosa, COR.indigo, COR.almond];
+const CORES_FAIXA = ['#D9A441', COR.indigo, COR.rosa, '#5FA8A0'];
 export const Faixas: React.FC = () => {
   const f = useCurrentFrame();
   return (

@@ -19,27 +19,31 @@ export const COR = {
   coral700: '#A0402F'
 };
 
-// Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos do design system;
-// texto sempre com contraste de 4,5:1 ou mais sobre o fundo.
-export interface Tema { fundo: string; texto: string; sec: string; escuro: boolean; formas: [string, string] | null }
-export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, escuro: false, formas: null };
-const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, escuro: false, formas });
-const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, escuro: true, formas: [COR.grape, COR.rosa] };
-export const ROSA_CLARO = '#F6DDE4';
-export const ALMOND_CLARO = '#EDDCD5';
+// Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos com os tons 500 do design system
+// (categorias, âmbar, coral, verde). Sobre eles, todo texto é Space Indigo (contraste de 5:1 ou mais).
+export interface Tema { fundo: string; texto: string; sec: string; destaque: string; escuro: boolean; formas: [string, string] | null }
+export const VIVO = {
+  ambar: '#D9A441', agua: '#5FA8A0', azul: '#7A93C8', coral: '#D9705F', verde: '#6AAE7E', laranja: '#D9874E'
+};
+export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas: null };
+const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas });
+const vivo = (fundo: string, formas: [string, string]): Tema => ({ fundo, texto: COR.indigo, sec: COR.indigo, destaque: COR.seashell, escuro: false, formas });
+const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, destaque: VIVO.ambar, escuro: true, formas: [VIVO.agua, COR.rosa] };
 export const TEMAS: Record<number, Tema> = {
   1: claro(COR.seashell, null),
+  3: vivo(COR.rosa, [VIVO.ambar, COR.seashell]),
   4: escuro,
-  6: claro(COR.seashell, [COR.almond, COR.rosa]),
-  7: claro(COR.lilac100, [COR.almond, COR.rosa]),
-  8: claro(ROSA_CLARO, [COR.almond, COR.lilac]),
-  9: claro(ALMOND_CLARO, [COR.rosa, COR.lilac]),
-  10: claro(COR.lilac100, [COR.almond, COR.rosa]),
-  11: claro(ROSA_CLARO, [COR.almond, COR.lilac]),
+  6: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
+  7: vivo(VIVO.agua, [VIVO.ambar, COR.seashell]),
+  8: vivo(COR.rosa, [VIVO.ambar, COR.seashell]),
+  9: vivo(VIVO.ambar, [VIVO.coral, COR.seashell]),
+  10: vivo(VIVO.azul, [VIVO.ambar, COR.seashell]),
+  11: vivo(VIVO.coral, [VIVO.ambar, COR.seashell]),
   12: escuro,
-  13: claro(ALMOND_CLARO, [COR.rosa, COR.lilac]),
-  15: claro(COR.lilac100, [COR.almond, COR.rosa]),
-  16: claro(COR.seashell, [COR.almond, COR.rosa]),
+  13: vivo(VIVO.verde, [VIVO.ambar, COR.seashell]),
+  15: vivo(VIVO.azul, [VIVO.ambar, COR.rosa]),
+  16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
+  17: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
   18: claro(COR.seashell, null)
 };
 const TemaCtx = createContext<Tema>(TEMA_CLARO);
@@ -113,8 +117,10 @@ export const Fundo: React.FC<{ children?: React.ReactNode; style?: React.CSSProp
 };
 
 // Sublinhado rosa que se desenha da esquerda para a direita a partir de `de`.
-export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor = COR.rosa, escuro }) => {
+export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor: corPedida, escuro }) => {
   const f = useCurrentFrame();
+  const temaD = useTema();
+  const cor = corPedida ?? temaD.destaque;
   const t = chegada(f, de, 12);
   return (
     <span style={{ position: 'relative', display: 'inline-block', color: escuro ? COR.seashell : undefined }}>
@@ -197,5 +203,5 @@ export const Selo: React.FC<{ texto: string; tamanho?: number }> = ({ texto, tam
 
 // Aviso fixo de protótipo (fecho).
 export const AvisoPrototipo: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
-  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: COR.grape, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
+  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: useTema().sec, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
 );
