@@ -16,7 +16,7 @@ export const Legenda: React.FC = () => {
     <AbsoluteFill style={f >= inicioEmQuadros(cena(18))
       ? { justifyContent: 'flex-start', alignItems: 'center', paddingTop: 390, pointerEvents: 'none' }
       : { justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, pointerEvents: 'none' }}>
-      <div style={{ maxWidth: 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
+      <div style={{ maxWidth: 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, border: `3px solid ${COR.almond}`, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
         {b.texto}
       </div>
     </AbsoluteFill>
@@ -96,5 +96,31 @@ export const LinhaDeRota: React.FC<{ n: number; chega?: number }> = ({ n, chega 
       </defs>
       <path d={d} fill="none" stroke={COR.grape} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
     </svg>
+  );
+};
+
+// ---------- Transição colorida entre partes do roteiro (pedido do Rodolfo, 16/11) ----------
+// Uma faixa sólida inclinada atravessa a tela e cobre o corte: entra acelerando, sai desacelerando.
+export const CORTES_COM_FAIXA = [3, 5, 7, 9, 11, 12, 14, 16, 17];
+const CORES_FAIXA = [COR.rosa, COR.indigo, COR.almond];
+export const Faixas: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <>
+      {CORTES_COM_FAIXA.map((n, i) => {
+        const corte = inicioEmQuadros(cena(n));
+        const de = corte - 7;
+        const ate = corte + 8;
+        if (f < de || f > ate) return null;
+        const meio = f <= corte ? partida(f, de, 7) * 0.5 : 0.5 + chegada(f, corte, 8) * 0.5;
+        const x = mix(-3200, 3200, meio);
+        const cor = CORES_FAIXA[i % CORES_FAIXA.length];
+        return (
+          <AbsoluteFill key={n} style={{ pointerEvents: 'none', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', left: -440, top: -300, width: 2800, height: 1680, background: cor, transform: `translateX(${r2(x)}px) skewX(-14deg)` }} />
+          </AbsoluteFill>
+        );
+      })}
+    </>
   );
 };

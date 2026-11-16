@@ -268,3 +268,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - Vídeo: todas as gravações encaixadas (câmera 2, 3, 5 [2ª tomada], 14 e 17; voz das 18 cenas), HDR→SDR, sincronia por correlação, cortes e volume igualado. Cenas retemporizadas pela fala real: 1:54. Etapa de masterização (`scripts/masterizar.mjs`) no render: −14,8 LUFS, pico −1,6 dBTP.
 - 16/11/2026: roteiro do vídeo ajustado pelo feedback dos professores (recorte de mobilidade na cena 6, mais app real, diferencial na cena 14, mais cor). Regravar cenas 6 e 14.
 - 16/11/2026: vídeo com as falas mais encostadas: cada cena termina 0,25 s depois da fala (pausas de propósito mantidas nas cenas 1, 5, 6, 16 e 18). Duração de 1:54 para 1:50.
+- 16/11/2026: vídeo com mais cor (fundo por cena, formas, cenas 4 e 12 escuras), faixa colorida nas trocas de parte e recorte de mobilidade sem voz na cena 6. Câmera sem regravar. Duração 1:52.

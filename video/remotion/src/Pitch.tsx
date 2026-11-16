@@ -1,13 +1,13 @@
 // O vídeo inteiro: as 18 cenas em sequência, a legenda, o relógio e o som.
 import React from 'react';
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile } from 'remotion';
-import { FONTES_CSS } from './base';
+import { FONTES_CSS, TemaDaCena } from './base';
 import { arquivoExiste } from './arquivos';
 import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
 import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO } from './cenas/fecho';
 import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras } from './roteiro';
-import { Legenda, Relogio } from './sobreposicoes';
+import { CORTES_COM_FAIXA, Faixas, Legenda, Relogio } from './sobreposicoes';
 
 const vozDaCena = (n: number) => `narracao/cena-${String(n).padStart(2, '0')}.mp3`;
 
@@ -29,6 +29,8 @@ function efeitos(): Efeito[] {
   add('onibus-porta.mp3', 1, chegou + 6, 0.22);
   // troca de cena: whoosh discreto nas cenas animadas
   for (const c of CENAS) if (c.n > 1 && !c.camera && c.n !== 6 && c.n !== 18) add('whoosh.flac', c.n, 0, 0.22);
+  // faixa colorida entrando numa cena de câmera
+  for (const n of CORTES_COM_FAIXA) if (cena(n).camera) add('whoosh.flac', n, 0, 0.3);
   // 3
   add('toque-seco.wav', 3, naPalavra(3, 'espalhada') - 4, 0.45);
   add('toque-seco.wav', 3, naPalavra(3, 'difícil') - 4, 0.45);
@@ -96,10 +98,11 @@ export const Pitch: React.FC<{ legenda: boolean }> = ({ legenda }) => {
         const C = COMPONENTES[c.n];
         return (
           <Sequence key={c.n} from={inicioEmQuadros(c)} durationInFrames={quadrosDa(c)} name={`Cena ${c.n}`}>
-            <C />
+            <TemaDaCena n={c.n}><C /></TemaDaCena>
           </Sequence>
         );
       })}
+      <Faixas />
       <Relogio />
       {legenda && <Legenda />}
 

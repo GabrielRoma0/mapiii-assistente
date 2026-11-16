@@ -1,5 +1,5 @@
 // Peças comuns do vídeo: cores, fontes, movimento, Leco 3D, ícones, títulos e efeitos.
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { ICONES } from './gerado-icones';
 
@@ -18,6 +18,35 @@ export const COR = {
   verde800: '#2F5A3C',
   coral700: '#A0402F'
 };
+
+// Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos do design system;
+// texto sempre com contraste de 4,5:1 ou mais sobre o fundo.
+export interface Tema { fundo: string; texto: string; sec: string; escuro: boolean; formas: [string, string] | null }
+export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, escuro: false, formas: null };
+const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, escuro: false, formas });
+const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, escuro: true, formas: [COR.grape, COR.rosa] };
+export const ROSA_CLARO = '#F6DDE4';
+export const ALMOND_CLARO = '#EDDCD5';
+export const TEMAS: Record<number, Tema> = {
+  1: claro(COR.seashell, null),
+  4: escuro,
+  6: claro(COR.seashell, [COR.almond, COR.rosa]),
+  7: claro(COR.lilac100, [COR.almond, COR.rosa]),
+  8: claro(ROSA_CLARO, [COR.almond, COR.lilac]),
+  9: claro(ALMOND_CLARO, [COR.rosa, COR.lilac]),
+  10: claro(COR.lilac100, [COR.almond, COR.rosa]),
+  11: claro(ROSA_CLARO, [COR.almond, COR.lilac]),
+  12: escuro,
+  13: claro(ALMOND_CLARO, [COR.rosa, COR.lilac]),
+  15: claro(COR.lilac100, [COR.almond, COR.rosa]),
+  16: claro(COR.seashell, [COR.almond, COR.rosa]),
+  18: claro(COR.seashell, null)
+};
+const TemaCtx = createContext<Tema>(TEMA_CLARO);
+export const TemaDaCena: React.FC<{ n: number; children: React.ReactNode }> = ({ n, children }) => (
+  <TemaCtx.Provider value={TEMAS[n] ?? TEMA_CLARO}>{children}</TemaCtx.Provider>
+);
+export const useTema = () => useContext(TemaCtx);
 
 export const FONTES_CSS = `
 @font-face{font-family:"Nunito";font-weight:200 1000;font-style:normal;font-display:block;src:url(${staticFile('fontes/nunito-latin-wght-normal.woff2')}) format("woff2")}
@@ -66,9 +95,18 @@ export const EntradaDeCena: React.FC<{ children: React.ReactNode; semEntrada?: b
 // para nenhum trecho ficar morto (regra de tempo da seção 3: no máximo 3 quadros parados).
 export const Fundo: React.FC<{ children?: React.ReactNode; style?: React.CSSProperties }> = ({ children, style }) => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const z = 1 + f * 0.00012;
+  const deriva = Math.sin((f / 30) * Math.PI * 2 * 0.08) * 18; // formas andam devagar, sem parar
+  const entra = chegada(f, 0, 14);
   return (
-    <AbsoluteFill style={{ background: COR.seashell, color: COR.indigo, fontFamily: SANS, overflow: 'hidden', ...style }}>
+    <AbsoluteFill style={{ background: tema.fundo, color: tema.texto, fontFamily: SANS, overflow: 'hidden', ...style }}>
+      {tema.formas && (
+        <>
+          <div style={{ position: 'absolute', width: 620, height: 620, borderRadius: '50%', background: tema.formas[0], right: -330, top: -330, transform: `translate(${r2(mix(200, 0, entra) - deriva)}px, ${r2(deriva - mix(200, 0, entra))}px)` }} />
+          <div style={{ position: 'absolute', width: 460, height: 460, borderRadius: '50%', background: tema.formas[1], left: -250, bottom: -250, transform: `translate(${r2(deriva - mix(200, 0, entra))}px, ${r2(mix(200, 0, entra) - deriva)}px)` }} />
+        </>
+      )}
       <AbsoluteFill style={{ transform: `scale(${z.toFixed(5)})`, transformOrigin: '50% 45%' }}>{children}</AbsoluteFill>
     </AbsoluteFill>
   );

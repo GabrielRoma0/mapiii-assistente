@@ -1,9 +1,9 @@
 // Cenas 1 a 6: gancho, problema, número, virada e logo.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2 } from '../base';
+import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2, useTema } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
-import { naPalavra } from '../roteiro';
+import { naPalavra, temposDasPalavras } from '../roteiro';
 import { Camera } from '../sobreposicoes';
 
 // ---------- Cena 1: o ônibus chega, a rampa não desce, o ônibus vai embora ----------
@@ -87,6 +87,7 @@ export const Cena3: React.FC = () => {
 // ---------- Cena 4: o número do Censo rola e para ----------
 export const Cena4: React.FC = () => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const comeca = naPalavra(4, 'catorze');
   const para = naPalavra(4, 'milhões') + 6;
   const rolando = f >= comeca && f < para;
@@ -115,10 +116,10 @@ export const Cena4: React.FC = () => {
             <Rolo alvo={1} /><Rolo alvo={4} /><span>,</span><Rolo alvo={4} />
             <span style={{ fontSize: 150, marginLeft: 36 }}><Destaque de={para + 4}>milhões</Destaque></span>
           </div>
-          <div style={{ fontSize: 56, fontWeight: 800, color: COR.grape, marginTop: 48, opacity: chegada(f, para + 2, 10), transform: `translateY(${r2(mix(30, 0, chegada(f, para + 2, 10)))}px)` }}>
+          <div style={{ fontSize: 56, fontWeight: 800, color: tema.sec, marginTop: 48, opacity: chegada(f, para + 2, 10), transform: `translateY(${r2(mix(30, 0, chegada(f, para + 2, 10)))}px)` }}>
             pessoas com deficiência no Brasil
           </div>
-          <div style={{ fontFamily: MONO, fontSize: 34, color: COR.grape, marginTop: 24, opacity: chegada(f, para + 8, 10) }}>
+          <div style={{ fontFamily: MONO, fontSize: 34, color: tema.sec, marginTop: 24, opacity: chegada(f, para + 8, 10) }}>
             Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais)
           </div>
         </AbsoluteFill>
@@ -139,6 +140,14 @@ export const Cena6: React.FC = () => {
   const direitos = naPalavra(6, 'direitos');
   const leco = naPalavra(6, 'Leco');
   const choque = impacto(f, 9, 0, 6);
+  // Recorte (feedback do Roberto, 16/11): depois da fala, o app diz por onde começa. Só texto, sem voz nova.
+  const falas6 = temposDasPalavras(6);
+  const recorte = falas6[falas6.length - 1].ate + 8;
+  const saiLogo = partida(f, recorte - 6, 8);
+  const temas = [
+    { texto: 'Ônibus', cor: COR.almond }, { texto: 'Carro', cor: COR.rosa },
+    { texto: 'Calçada', cor: COR.lilac100 }, { texto: 'Reclamação', cor: COR.branco }
+  ];
   const chips = ['Pode ter direito', 'Fonte oficial', 'Sem CPF', 'Emergência: 192'];
   const posChip: React.CSSProperties[] = [
     { left: 120, top: 120 }, { right: 120, top: 120 }, { left: 120, bottom: 180 }, { right: 120, bottom: 180 }
@@ -150,7 +159,7 @@ export const Cena6: React.FC = () => {
           <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.indigo, transform: `scale(${r2(mix(0.08, 1, cobre))})` }} />
           <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.seashell, transform: `scale(${r2(mix(0.05, 1, abre))})`, opacity: f >= 11 ? 1 : 0 }} />
         </AbsoluteFill>
-        <div style={{ position: 'absolute', left: 160, top: 330, opacity: f >= mapiii - 4 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, mapiii - 4, 12)))}px)` }}>
+        <div style={{ position: 'absolute', left: 160, top: 330, opacity: f >= mapiii - 4 && saiLogo < 1 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, mapiii - 4, 12)) - saiLogo * 900)}px)` }}>
           <Logo largura={640} />
           <div style={{ fontSize: 76, fontWeight: 800, letterSpacing: '-0.02em', marginTop: 20, paddingLeft: 12, opacity: chegada(f, naPalavra(6, 'mapa') - 3, 8) }}>
             o mapa dos seus <Destaque de={direitos}>direitos</Destaque>
@@ -164,10 +173,24 @@ export const Cena6: React.FC = () => {
           return (
             <div key={c} style={{
               position: 'absolute', ...posChip[i], padding: '14px 28px', borderRadius: 999, background: COR.branco, border: `3px solid ${COR.borda}`,
-              fontSize: 34, fontWeight: 800, color: COR.indigo, opacity: t > 0 ? 1 : 0, transform: `translateX(${r2(lado * mix(300, 0, t))}px)`
+              fontSize: 34, fontWeight: 800, color: COR.indigo, opacity: t > 0 && saiLogo < 1 ? 1 : 0, transform: `translateX(${r2(lado * (mix(300, 0, t) + saiLogo * 900))}px)`
             }}>{c}</div>
           );
         })}
+        <div style={{ position: 'absolute', left: 160, top: 250, width: 1040, opacity: f >= recorte - 2 ? 1 : 0 }}>
+          <div style={{ fontSize: 50, fontWeight: 800, color: COR.grape, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
+          <div style={{ fontSize: 96, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
+            a <Destaque de={recorte + 10}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, marginTop: 44 }}>
+            {temas.map((x, i) => {
+              const t = chegada(f, recorte + 16 + i * 6, 10);
+              return (
+                <span key={x.texto} style={{ padding: '16px 34px', borderRadius: 999, background: x.cor, border: `3px solid ${COR.indigo}`, fontSize: 44, fontWeight: 900, color: COR.indigo, opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(90, 0, t))}px)` }}>{x.texto}</span>
+              );
+            })}
+          </div>
+        </div>
       </AbsoluteFill>
     </Fundo>
   );

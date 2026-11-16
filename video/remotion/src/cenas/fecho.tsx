@@ -1,7 +1,7 @@
 // Cenas 12 a 18: números, tópicos, escala, ODS e fecho.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { AvisoPrototipo, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Logo, Leco, mix, Palavras, partida, r2 } from '../base';
+import { useTema, AvisoPrototipo, chegada, COR, Destaque, EntradaDeCena, Fundo, Icone, impacto, Logo, Leco, mix, Palavras, partida, r2 } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
 import { naPalavra } from '../roteiro';
 import { Camera, LinhaDeRota } from '../sobreposicoes';
@@ -23,6 +23,7 @@ const NumeroRolando: React.FC<{ valor: number; de: number; para: number; tamanho
 // ---------- Cena 12: 12 de 12 e 100 ----------
 export const Cena12: React.FC = () => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const doze = 2; // o 12 começa a rolar logo no início da cena
   const pare12 = naPalavra(12, 'doze.', 1) + 2;
   const maxima = naPalavra(12, 'máxima');
@@ -40,14 +41,14 @@ export const Cena12: React.FC = () => {
               <NumeroRolando valor={12} de={doze} para={pare12} tamanho={380} />
               <span style={{ fontSize: 150, letterSpacing: '-0.02em', opacity: chegada(f, pare12, 8) }}> de 12</span>
             </div>
-            <div style={{ fontSize: 64, fontWeight: 800, color: COR.grape, opacity: chegada(f, pare12 + 4, 10) }}>recusas <span style={{ color: COR.indigo }}><Destaque de={pare12 + 8}>corretas</Destaque></span></div>
+            <div style={{ fontSize: 64, fontWeight: 800, color: tema.sec, opacity: chegada(f, pare12 + 4, 10) }}>recusas <span style={{ color: tema.texto }}><Destaque de={pare12 + 8}>corretas</Destaque></span></div>
           </div>
-          <div style={{ width: 6, height: 520, borderRadius: 3, background: COR.borda, transform: `scaleY(${r2(chegada(f, 2, 14))})` }} />
+          <div style={{ width: 6, height: 520, borderRadius: 3, background: COR.grape, transform: `scaleY(${r2(chegada(f, 2, 14))})` }} />
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
             <div style={{ lineHeight: 0.9, fontWeight: 900, letterSpacing: '-0.05em' }}>
               <NumeroRolando valor={100} de={maxima - 6} para={pare100} tamanho={380} />
             </div>
-            <div style={{ fontSize: 64, fontWeight: 800, color: COR.grape, opacity: chegada(f, pare100 + 2, 10) }}>Acessibilidade</div>
+            <div style={{ fontSize: 64, fontWeight: 800, color: tema.sec, opacity: chegada(f, pare100 + 2, 10) }}>Acessibilidade</div>
           </div>
         </AbsoluteFill>
       </Fundo>
