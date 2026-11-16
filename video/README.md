@@ -38,6 +38,10 @@
 | Embarque | História animada (cena 10), sem gravação de tela, por isso sem selo EXEMPLO. A locução diz "pode avisar" | Thor, 07/11 |
 | Leco | **Leco 3D só no vídeo.** O app continua com o Leco plano. Movimento: entra subindo suave, flutua de leve, mexendo a imagem inteira. **Sem quique e sem deformar o corpo** | Claude Code, 07/11 (pedido do Thor) |
 | Fala da cena 17 | "Ninguém deveria ficar no ponto." no lugar de "Somos o Thor e o Gabriel" (os nomes já aparecem nas etiquetas da câmera) | Thor e Gabriel, 12/11 |
+| Leco no fecho | Na cena 18 o **Leco aparece falando** a frase final: sobe ao lado do logo, acena a cada palavra e a legenda vira o balão de fala dele. Substitui o "Sem o Leco neste quadro" do pedido 4 | Thor, 12/11 |
+| Zoom na câmera | Cenas 2, 3, 5, 14 e 17 com aproximação lenta e um "chega mais perto" nas viradas da fala (no máximo 1,32×) | Thor, 12/11 |
+| Corte da cena 17 | A dupla aparece falando "Você pode ter direito."; o slogan entra em "Agora," | Claude Code, 12/11 |
+| Telas do app | Duas cenas curtas com a gravação real da tela, com a etiqueta "GRAVAÇÃO DO APP": 19 (triagem, depois da 7) e 20 (Conferir se é oficial, depois da 13). A do Mostre ao motorista saiu por repetir a cena 9. O vídeo vai a 2:05. Voz dessas cenas: a decidir (Leco gerado ou a dupla) | Thor, 12/11 |
 | Fecho | Volta ao ponto de ônibus da cena 1, agora com a **rampa descida** (cena 18, quadro 14 novo) | Claude Code, 07/11 (pedido do Thor) |
 | Fica de fora | Ícones de microfone e alto-falante (V4): não precisa agora, talvez nem depois. Leco no tema escuro (V5): só depois do vídeo. "Virada" contando que o vídeo foi feito com IA: não, para não confundir com a IA do app, que está desligada | Thor, 07/11 |
 
@@ -145,6 +149,20 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 [off] Mapiii. O mapa dos seus direitos.
 ```
 
+**Ordem no vídeo desde 16/11:** 1 · 2 · 3 · 4 · 5 · 6 · Descubra 7 → 19 → 21 → 8 · Na rua 10 → 9 → 23 · Confiança 20 → 11 → 22 → 12 → 13 · Escala 14 → 15 → 24 · 16 · 17 · 18. (Os números das cenas não mudaram; mudou só a ordem.)
+
+**Áudios a gravar (16/11):** as três falas abaixo e a regravação da cena 19 ("Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial."), porque o som do microfone ficou estranho. Lista completa no [PENDENCIAS.md](../PENDENCIAS.md).
+
+**Cenas novas de 16/11 (feedback do André), narração a gravar, sem câmera:**
+
+```text
+[off, cena 23, depois da 9 (motorista)] E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar.
+[off, cena 22, depois da 11 (sabe dizer não)] Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial.
+[off, cena 24, depois da 15 (mapa)] É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.
+```
+
+As cenas 22 e 23 usam gravações reais do app (`gravacoes/app/recusa.mp4` e `reclamacao.mp4`, feitas com `scripts/gravar-app.cjs`). A 24 tem o selo VISÃO DE FUTURO.
+
 O "off" pode ser de um só ou dividido (por exemplo, Thor da cena 6 à 11 e Gabriel da 12 à 18). Como gravar a voz: lugar silencioso (um closet com roupas funciona bem), celular a 20 cm da boca, sem música.
 
 ## 6. O que já existe e o que falta
@@ -170,9 +188,11 @@ Tudo o que vem do Claude Design também fica no artefato do design system: https
 | Efeitos sonoros e trilha, com créditos | `video/sons/` e `video/sons/CREDITOS.txt` | **Prontos (10/11):** os 12 sons em `video/sons/`, com créditos (links em `video/sons/BAIXAR.md`) | Dupla, até 12/11 |
 | Narração em off | `video/gravacoes/narracao/cena-NN.mp3` (uma por cena) | **Pronta (12/11).** Com ela, o vídeo passou a ter **1:54**; os tempos da seção 4 são os do roteiro original, os reais estão em `video/remotion/src/roteiro.ts` | — |
 | Cenas na câmera (2, 3, 5, 14 e 17) | `video/gravacoes/camera-gravada/cena-NN.mp4` | **Prontas (12/11)** | — |
-| Cortes de 2 s do app (cenas 7 e 9) e a voz do aviso (cena 10) | `video/gravacoes/app/triagem.mp4` e `mao-celular.mp4` (fora do git) | Falta. O vídeo funciona sem eles | Claude Code + dupla |
+| Telas do app real: cena 19 (triagem, depois da cena 7) e cena 20 (Conferir se é oficial, depois da cena 13) | `video/gravacoes/app/triagem.mp4` e `conferir.mp4`; gravação inteira em `video/gravacoes/app-bruto/`; gravador em `video/remotion/scripts/gravar-app.cjs` | **Prontas (12/11)**, do build do app. **Falta a narração** das duas (`narracao/cena-19.mp3` e `cena-20.mp3`); texto no `PENDENCIAS.md` | Dupla |
+| Mão virando o celular (cena 9) e a voz do aviso (cena 10) | `video/gravacoes/app/mao-celular.mp4` | Falta. O vídeo funciona sem eles | Dupla |
 | Relatório do Lighthouse com as fichas (cena 12) | `video/remotion/public/app/lighthouse.png` | Falta (depois da H1) | Claude Code |
-| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **1ª versão montada (10/11)**: as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |
+| Vídeo renderizado | `video/entrega/mapiii-pitch-gs2026.mp4` e `.srt` | **Versão de 12/11**, com tudo o que existe até agora (sem os cortes do app). Refazer com `npm run render` e `npm run srt` em `video/remotion` | Claude Code |
+| Projeto Remotion, legendas e audiodescrição | `video/remotion/` | **Editado em 12/11** (zoom, voz tratada, Leco no fecho, tempo real das palavras). 1ª versão montada (10/11): as 18 cenas animadas, legenda queimada e `.srt`, relógio, linha de rota, sons e trilha; câmera e narração como espaço reservado. Como usar em [remotion/README.md](remotion/README.md). Falta a audiodescrição | Claude Code |
 
 Vídeos grandes (câmera e gravações de tela) **não vão para o git**: ficam numa pasta compartilhada da dupla e são copiados para `video/remotion/public/` só na hora de montar.
 
@@ -206,7 +226,7 @@ O Claude Code também pode gravar as telas no computador com o Playwright, na pr
 
 ## 8. Som
 
-- Até a cena 5: **só voz e efeitos**. Da cena 6 em diante, uma trilha bem baixa.
+- **Trilha ambiente no vídeo inteiro** (decisão do Thor, 12/11; antes era só da cena 6 em diante): `video/sons/trilha-ambiente.mp3`, música original gerada por `video/remotion/scripts/gerar-trilha.py`. Presente, mas abaixo da voz.
 - Efeitos: toque seco, whoosh, pop, tique, ding, notificação, papel rasgando, freio e porta de ônibus, rampa descendo.
 - **Onde buscar:** efeitos no Openverse (licença CC0 de preferência, ou CC BY com crédito). Trilha no Openverse (CC0) ou na Biblioteca de Áudio do YouTube com o filtro "não exige atribuição". Anotar faixa, autor, link e licença em `video/sons/CREDITOS.txt`.
 - **Hierarquia (obrigatório):** os sons importantes se destacam porque os outros são discretos. Fortes só no ônibus (cena 1), no círculo do logo (6), no giro do celular (9), nos números (12) e na rampa (18). O resto (toques, tiques, pops) fica baixo.

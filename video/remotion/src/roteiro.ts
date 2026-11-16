@@ -1,5 +1,5 @@
-// Roteiro do vídeo em código: as 18 cenas de video/README.md (seção 4), com o tempo e a locução de cada uma.
-// Enquanto não há narração gravada, o tempo de cada palavra é estimado (palavras espalhadas por igual na cena).
+// Roteiro do vídeo em código: as 18 cenas de video/README.md (seção 4) e as 3 das telas do app, com o tempo e a locução de cada uma.
+// O tempo de cada palavra vem de src/tempos-narracao.json (scripts/alinhar.py); sem ele, é estimado.
 // Quando houver narração, src/tempos-narracao.json (gerado pela transcrição) substitui a estimativa.
 import temposGravados from './tempos-narracao.json';
 
@@ -19,27 +19,43 @@ export interface Cena {
 }
 
 export const CENAS: Cena[] = [
-  { n: 1, inicio: 0.0, fim: 8.133, quem: 'off', camera: false, locucao: 'Sete e quarenta. O ônibus chegou. A rampa, não.' },
-  { n: 2, inicio: 8.133, fim: 15.433, quem: 'Thor', camera: true, locucao: 'Para quem usa cadeira de rodas, essa cena é real. E quem cuida de alguém conhece a pergunta que vem depois: o que eu posso pedir? Onde? O que eu levo?' },
-  { n: 3, inicio: 15.433, fim: 21.433, quem: 'Gabriel', camera: true, locucao: 'A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe.' },
-  { n: 4, inicio: 21.433, fim: 28.967, quem: 'off', camera: false, locucao: 'No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de 2022.' },
-  { n: 5, inicio: 28.967, fim: 31.867, quem: 'Thor', camera: true, locucao: 'E se o caminho coubesse no bolso, com a fonte junto?' },
-  { n: 6, inicio: 31.867, fim: 37.133, quem: 'off', camera: false, locucao: 'Esse é o Mapiii. O mapa dos seus direitos. E esse é o Leco.' },
-  { n: 7, inicio: 37.133, fim: 43.5, quem: 'off', camera: false, locucao: 'Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê.' },
-  { n: 8, inicio: 43.5, fim: 52.333, quem: 'off', camera: false, locucao: 'Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.' },
-  { n: 9, inicio: 52.333, fim: 60.967, quem: 'off', camera: false, locucao: 'Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.' },
-  { n: 10, inicio: 60.967, fim: 67.433, quem: 'off', camera: false, locucao: 'E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando.' },
-  { n: 11, inicio: 67.433, fim: 75.0, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
-  { n: 12, inicio: 75.0, fim: 83.367, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
-  { n: 13, inicio: 83.367, fim: 88.733, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
-  { n: 14, inicio: 88.733, fim: 91.933, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
-  { n: 15, inicio: 91.933, fim: 99.967, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
-  { n: 16, inicio: 99.967, fim: 104.333, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
-  { n: 17, inicio: 104.333, fim: 109.5, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
-  { n: 18, inicio: 109.5, fim: 113.833, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' }
+  { n: 1, inicio: 0.0, fim: 6.71, quem: 'off', camera: false, locucao: 'Sete e quarenta. O ônibus chegou. A rampa, não.' },
+  { n: 2, inicio: 6.71, fim: 14.01, quem: 'Thor', camera: true, locucao: 'Para quem usa cadeira de rodas, essa cena é real. E quem cuida de alguém conhece a pergunta que vem depois: o que eu posso pedir? Onde? O que eu levo?' },
+  { n: 3, inicio: 14.01, fim: 19.53, quem: 'Gabriel', camera: true, locucao: 'A resposta existe. Só que está espalhada, em linguagem difícil, e no meio de golpe.' },
+  { n: 4, inicio: 19.53, fim: 25.45, quem: 'off', camera: false, locucao: 'No Brasil, são catorze vírgula quatro milhões de pessoas com deficiência, segundo o Censo de 2022.' },
+  { n: 5, inicio: 25.45, fim: 28.35, quem: 'Thor', camera: true, locucao: 'E se o caminho coubesse no bolso, com a fonte junto?' },
+  { n: 6, inicio: 28.35, fim: 35.93, quem: 'off', camera: false, locucao: 'Esse é o Mapiii. O mapa dos seus direitos. E esse é o Leco.' },
+  { n: 7, inicio: 35.93, fim: 42.01, quem: 'off', camera: false, locucao: 'Você responde poucas perguntas, sem nome e sem CPF. Ele mostra o que você pode pedir, e por quê.' },
+  { n: 8, inicio: 54.51, fim: 62.32, quem: 'off', camera: false, locucao: 'Nunca diz "você tem direito". Diz "pode ter direito". E mostra a fonte oficial, com a data em que foi conferida.' },
+  { n: 9, inicio: 67.99, fim: 76.33, quem: 'off', camera: false, locucao: 'Na rua, se o motorista disser que não pode, você vira a tela: letra grande, a lei, e um código que abre o texto oficial.' },
+  { n: 10, inicio: 62.32, fim: 67.99, quem: 'off', camera: false, locucao: 'E com o celular no bolso, ele pode avisar em voz alta quando o próximo ônibus acessível está chegando.' },
+  { n: 11, inicio: 87.71, fim: 94.14, quem: 'off', camera: false, locucao: 'Ele também sabe dizer não. Remédio ou processo? Mostra quem pode ajudar. Emergência? Ligue 192.' },
+  { n: 12, inicio: 102.14, fim: 110.15, quem: 'off', camera: false, locucao: 'E a gente mediu. Das doze perguntas que ele precisava recusar, recusou as doze. E nota máxima de acessibilidade.' },
+  { n: 13, inicio: 110.15, fim: 114.94, quem: 'off', camera: false, locucao: 'E ainda: funciona sem internet, com um toque, e lê a resposta em voz alta.' },
+  { n: 14, inicio: 114.94, fim: 118.14, quem: 'Gabriel', camera: true, locucao: 'Começamos por São Paulo. A SPTrans é só o primeiro exemplo.' },
+  { n: 15, inicio: 118.14, fim: 125.79, quem: 'off', camera: false, locucao: 'O Mapiii é feito de fichas com fonte oficial. Troque a base, e ele pode funcionar em outra cidade. Em outro estado. Em outro país.' },
+  { n: 16, inicio: 133.79, fim: 137.33, quem: 'off', camera: false, locucao: 'Menos desigualdade. Cidades que funcionam para todo mundo.' },
+  { n: 17, inicio: 137.33, fim: 142.03, quem: 'Thor e Gabriel', camera: true, locucao: 'Ninguém deveria ficar no ponto. Você pode ter direito. Agora, você sabe onde ir.' },
+  { n: 18, inicio: 142.03, fim: 146.363, quem: 'off', camera: false, locucao: 'Mapiii. O mapa dos seus direitos.' },
+  // Cenas 19 e 20: gravações da tela do app real (video/gravacoes/app/), logo depois das cenas 7 (triagem) e 13 (conferir se é oficial).
+  // Ficam no fim da lista para não mudar o número das outras; a ordem no vídeo é a do tempo (inicio).
+  // Narração gravada pela dupla em 12/11 (narracao/cena-19.mp3 e cena-20.mp3).
+  { n: 19, inicio: 42.01, fim: 47.59, quem: 'off', camera: false, locucao: 'Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.' },
+  { n: 20, inicio: 83.33, fim: 87.71, quem: 'off', camera: false, locucao: 'Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.' },
+  // Cena 21: o Leco como assistente (pergunta livre e resposta), depois da cena 10 e antes de "Ele também sabe dizer não".
+  // Narração gravada pelo Thor em 12/11 (narracao/cena-21.mp3).
+  { n: 21, inicio: 47.59, fim: 54.51, quem: 'off', camera: false, locucao: 'Ou pergunte do seu jeito, escrevendo ou falando. O Leco procura na base e responde com o resumo, o passo a passo e a fonte.' },
+  // Cenas 22 a 24 (16/11, feedback do André): diferencial e Reclamação pronta (telas reais do app) e viabilidade (visão de futuro).
+  { n: 22, inicio: 94.14, fim: 102.14, quem: 'off', camera: false, locucao: 'Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial.' },
+  { n: 23, inicio: 76.33, fim: 83.33, quem: 'off', camera: false, locucao: 'E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar.' },
+  { n: 24, inicio: 125.79, fim: 133.79, quem: 'off', camera: false, locucao: 'É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter.' }
 ];
 
-export const DURACAO_TOTAL = Math.round(CENAS[CENAS.length - 1].fim * FPS);
+// Silêncio do começo da voz pulado em cada cena (segundos), para as falas ficarem mais encostadas (16/11).
+export const CORTE_INICIO_VOZ: Record<number, number> = {"4": 0.57, "8": 0.38, "11": 0.5, "16": 0.43};
+
+// Ordem no vídeo (16/11): Descubra 7-19-21-8; Na rua 10-9-23; Confiança 20-11-22-12-13; Escala 14-15-24.
+export const DURACAO_TOTAL = Math.round(Math.max(...CENAS.map((c) => c.fim)) * FPS);
 
 export const cena = (n: number): Cena => CENAS[n - 1];
 export const quadrosDa = (c: Cena) => Math.round((c.fim - c.inicio) * FPS);

@@ -8,9 +8,73 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 10/11/2026.
+Última atualização: 16/11/2026.
 
 ---
+
+## Atualização de 16/11: vídeo revisto pelo feedback dos professores (falta gravar 4 áudios)
+
+O vídeo pitch (2:26) foi revisto com as dicas do André, do Rodolfo e do Roberto: falas mais encostadas, mais cor (âmbar, verde-água e rosa), faixas coloridas nas trocas de parte, recorte de mobilidade na cena 6 com os objetos do Claude Design, três cenas novas (22, 23 e 24) com telas reais do app e a ordem das cenas revista. Detalhes em [video/README.md](video/README.md).
+
+**Áudios a gravar** (narração sem rosto, sem câmera; mesma voz das outras narrações, mesmo lugar e mesma distância do celular; gravar cada fala duas vezes e mandar ao Claude Code, que trata, encaixa e renderiza):
+
+| Arquivo | Onde entra no vídeo | Fala (texto exato) |
+|---|---|---|
+| `cena-19` (regravar: o som do microfone ficou estranho) | Depois da triagem animada | Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial. |
+| `cena-23` (nova) | Depois de "Vire a tela" | E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar. |
+| `cena-22` (nova) | Depois de "Sabe dizer não" | Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial. |
+| `cena-24` (nova) | Depois do mapa-múndi | É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter. |
+
+Depois dos áudios: o Claude Code ajusta o tempo das cenas às falas, sincroniza as animações, roda o render final em 1080p e põe em `video/entrega/`.
+
+## Atualização de 12/11 (5): cena do Leco como assistente
+
+O Thor pediu uma cena com a função principal do desafio: a pessoa faz uma pergunta e o Leco responde.
+
+- **Cena 21**, depois da cena 10 e antes da 11 ("Ele também sabe dizer não"), 7,3 s. Gravação real da tela "Fazer uma pergunta": a pergunta "Como peço a van do Atende para o meu filho cadeirante?" (uma das que o app sugere), a resposta do Leco (Atende+), o resumo e os passos. O celular aparece maior, só com a parte de cima da tela.
+- **Narração gravada pelo Thor (12/11)**, em `video/gravacoes/narracao/cena-21.mp3`. Texto da legenda: Ou pergunte do seu jeito, escrevendo ou falando. O Leco procura na base e responde com o resumo, o passo a passo e a fonte. (Conferir com o Thor se ele falou exatamente isso; o Claude Code não consegue ouvir.)
+- Não dizer "IA" nessa fala: o app não usa IA (busca própria na base; a camada de IA está desligada).
+- Trilha: fica a gerada por código, **para a dupla ouvir no vídeo e decidir**.
+- O vídeo vai a 2:12.
+
+## Atualização de 12/11 (4): trilha nova
+
+O Thor não gostou da trilha (violão lo-fi, só da cena 6 em diante) e pediu uma trilha **ambiente, mais presente e no vídeo inteiro**.
+
+- Trilha nova: `video/sons/trilha-ambiente.mp3`, **música original gerada por código** (`video/remotion/scripts/gerar-trilha.py`: acordes lentos, grave suave e sinos esparsos). Não usa obra de terceiros, então não tem licença a citar.
+- Toca do começo ao fim, cerca de 14 dB abaixo da voz enquanto há fala e mais alta nas pausas. Isso muda a regra antiga do `video/README.md` ("até a cena 5, só voz e efeitos").
+- **O Claude Code não consegue ouvir**: a dupla precisa escutar e dizer se gostou. Para trocar por outra música, salvar o arquivo em `video/sons/` e pedir a troca. Tentativa de baixar faixas livres do Wikimedia Commons (por exemplo Scott Buckley, "Petrichor", CC BY 4.0) falhou: o site recusa download automático (erro 429). Se a dupla baixar à mão, dá para usar, com o crédito no `CREDITOS.txt` e na descrição do vídeo.
+
+## Atualização de 12/11 (3): telas do app real no vídeo
+
+Feito pelo Claude Code a pedido do Thor:
+
+- **Duas cenas curtas com a gravação da tela do app** (build do app, formato de celular, dentro de uma moldura, com a etiqueta "GRAVAÇÃO DO APP"):
+  - **cena 19**, logo depois da cena 7 (6 s, gravação acelerada 1,3×): a triagem de verdade até a Rota, com o Bilhete Único Especial, "Pode ter direito" e "Fonte oficial". O Thor aprovou;
+  - **cena 20**, logo depois da cena 13 (5,5 s): o "Conferir se é oficial" marcando como **Suspeito** um link inventado (`sptrans-cartao-gratis.example.com`; `example.com` é reservado para exemplos, não é site de ninguém).
+- **Tirada:** a gravação do "Mostre ao motorista", que repetia a cena 9 (pedido do Thor).
+- O vídeo passou de 1:54 para **2:05**. As cenas 19 e 20 ficam no fim da lista de `roteiro.ts` para não mudar o número das outras.
+- Como refazer as gravações: `video/remotion/scripts/gravar-app.cjs` (instruções no começo do arquivo). Gravação inteira em `video/gravacoes/app-bruto/`, cortes usados em `video/gravacoes/app/`.
+
+**Narração das duas cenas gravada pelo Thor em 12/11** e encaixada. Texto:
+
+- Cena 19 (no máximo 5,5 s): Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial.
+- Cena 20: Recebeu ou achou um link estranho? Ele avisa quando parecer suspeito.
+
+Salvar como `video/gravacoes/narracao/cena-19.mp3` e `cena-20.mp3` e pedir ao Claude Code para encaixar (ele roda `python3 scripts/alinhar.py` e renderiza). Se mudarem o texto, mudar também a `locucao` das cenas 19 e 20 em `video/remotion/src/roteiro.ts`.
+
+## Atualização de 12/11 (2): edição do vídeo
+
+Feito pelo Claude Code a pedido do Thor, sem tirar nada do vídeo:
+
+- **Leco na cena final (18):** ele sobe ao lado do logo, acena a cada palavra e a legenda "Mapiii. O mapa dos seus direitos." vira o balão de fala dele. O desenho do Leco não mudou (pose `bom` do Leco 3D).
+- **Zoom nas cenas de câmera** (2, 3, 5, 14 e 17): aproximação lenta e um "chega mais perto" nas viradas da fala, no máximo 1,32×.
+- **Voz tratada** na montagem (corte de grave, redução de chiado, compressor suave, −16 LUFS) e **sem corte no fim das falas**; a trilha abaixa sozinha quando há voz.
+- **Legenda e animações no tempo real de cada palavra** (`scripts/alinhar.py`, sem IA e sem internet). O alinhamento é automático: se alguma legenda parecer adiantada ou atrasada, digam a cena e a palavra.
+- Cena 17: a dupla aparece falando "Você pode ter direito." e o slogan entra em "Agora,". Cena 4: "No Brasil" entra antes do número (a tela ficava vazia).
+- **Vídeo renderizado:** `video/entrega/mapiii-pitch-gs2026.mp4` e a legenda `.srt` ao lado.
+
+**Para a dupla testar:** assistir inteiro com som e sem som, e ouvir no alto-falante do celular. Conferir principalmente a legenda das cenas 2 e 9 (fala rápida) e o Leco no fecho. Continuam faltando: os cortes de 2 s do app (cenas 7 e 9), a voz do aviso (cena 10), a revisão com notas por cena e a audiodescrição.
 
 ## Atualização de 12/11: gravações no vídeo
 

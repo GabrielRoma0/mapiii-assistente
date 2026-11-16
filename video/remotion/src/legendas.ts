@@ -22,6 +22,7 @@ export function blocosDeLegenda(): BlocoLegenda[] {
       if (fimFrase || virgula || atual.length >= 7 || i === ps.length - 1) fechar();
     });
   }
+  blocos.sort((a, b) => a.de - b.de); // as cenas 19 e 20 estão no fim da lista, mas no meio do vídeo
   // Sem sobreposição: cada bloco termina antes do próximo.
   for (let i = 0; i < blocos.length - 1; i++) blocos[i].ate = Math.min(blocos[i].ate, blocos[i + 1].de - 1);
   return blocos;

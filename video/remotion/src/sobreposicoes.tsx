@@ -7,16 +7,31 @@ import { blocosDeLegenda } from './legendas';
 import { cena, inicioEmQuadros, quadrosDa } from './roteiro';
 
 // ---------- Legenda ----------
+// Lugar do balão de fala do Leco no fecho (o Leco fica à direita dele; ver Cena18).
+export const BALAO_18 = { direita: 500, topo: 372 };
 export const Legenda: React.FC = () => {
   const f = useCurrentFrame();
   const b = blocosDeLegenda().find((x) => f >= x.de && f <= x.ate);
   if (!b) return null;
+  const naCena = (n: number) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n));
+  const celularGrande = naCena(21);
+  const aoLadoDoCelular = celularGrande || [19, 20, 22, 23].some((n) => f >= inicioEmQuadros(cena(n)) && f < inicioEmQuadros(cena(n)) + quadrosDa(cena(n)));
+  // No fecho (cena 18) quem fala é o Leco: a legenda vira o balão de fala dele, com a ponta virada para ele.
+  if (f >= inicioEmQuadros(cena(18))) {
+    const t = chegada(f, b.de, 8);
+    return (
+      <div style={{ position: 'absolute', right: BALAO_18.direita, top: BALAO_18.topo, transform: `translateX(${r2(mix(40, 0, t))}px)`, pointerEvents: 'none' }}>
+        <div style={{ position: 'absolute', right: -14, top: '50%', width: 34, height: 34, marginTop: -17, background: COR.indigo, borderRadius: 6, transform: 'rotate(45deg)' }} />
+        <div style={{ position: 'relative', padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, whiteSpace: 'nowrap' }}>
+          {b.texto}
+        </div>
+      </div>
+    );
+  }
   return (
-    // No fecho (cena 18) a legenda vai para baixo do slogan, para não cobrir a rampa nem o aviso de protótipo.
-    <AbsoluteFill style={f >= inicioEmQuadros(cena(18))
-      ? { justifyContent: 'flex-start', alignItems: 'center', paddingTop: 390, pointerEvents: 'none' }
-      : { justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, pointerEvents: 'none' }}>
-      <div style={{ maxWidth: 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
+    // Nas cenas 19 e 20 (tela do app à esquerda) a legenda fica à direita do celular, para não cobrir a gravação.
+    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, paddingLeft: celularGrande ? 860 : aoLadoDoCelular ? 660 : 0, pointerEvents: 'none' }}>
+      <div style={{ maxWidth: celularGrande ? 960 : aoLadoDoCelular ? 1120 : 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, border: `3px solid ${COR.almond}`, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
         {b.texto}
       </div>
     </AbsoluteFill>
@@ -39,8 +54,21 @@ export const Relogio: React.FC = () => {
 // ---------- Câmera (cenas 2, 3, 5, 14 e 17) ----------
 // Se existir public/camera-gravada/cena-NN.mp4, entra o vídeo (sem som: a voz vem de narracao/cena-NN.mp3);
 // senão, um espaço reservado com a moldura.
-export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({ n, nomes }) => {
+// Zoom: trechos { em, de, ate }. Em `em` a imagem se aproxima rápido (6 quadros) até `de` e segue devagar até `ate`
+// (no máximo 1,5×, seção 3). `foco` é o ponto que fica parado (o rosto), em % da imagem.
+export interface TrechoDeZoom { em: number; de: number; ate: number }
+function zoomEm(f: number, trechos: TrechoDeZoom[], fim: number) {
+  let i = 0;
+  while (i < trechos.length - 1 && f >= trechos[i + 1].em) i++;
+  const t = trechos[i];
+  const ate = i < trechos.length - 1 ? trechos[i + 1].em : fim;
+  const lento = mix(t.de, t.ate, interpolate(f, [t.em, ate], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
+  return i > 0 ? mix(trechos[i - 1].ate, lento, chegada(f, t.em, 6)) : lento;
+}
+
+export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[]; zoom?: TrechoDeZoom[]; foco?: string }> = ({ n, nomes, zoom, foco = '50% 40%' }) => {
   const f = useCurrentFrame();
+  const escala = zoom ? zoomEm(f, zoom, quadrosDa(cena(n))) : 1;
   const c = cena(n);
   const gravado = `camera-gravada/cena-${String(n).padStart(2, '0')}.mp4`;
   const arquivo = arquivoExiste(gravado) ? gravado : undefined;
@@ -48,7 +76,9 @@ export const Camera: React.FC<{ n: number; nomes: ('thor' | 'gabriel')[] }> = ({
     <AbsoluteFill style={{ background: COR.seashell, fontFamily: SANS }}>
       <div style={{ position: 'absolute', left: 52, top: 52, width: 1816, height: 976, borderRadius: 58, overflow: 'hidden', background: COR.grape }}>
         {arquivo ? (
-          <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ position: 'absolute', inset: 0, transform: `scale(${escala.toFixed(4)})`, transformOrigin: foco }}>
+            <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
         ) : (
           <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', color: COR.seashell, gap: 18 }}>
             <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: '0.04em' }}>CÂMERA · CENA {n}</div>
@@ -94,7 +124,33 @@ export const LinhaDeRota: React.FC<{ n: number; chega?: number }> = ({ n, chega 
           <path d={d} fill="none" stroke="#fff" strokeWidth={14} strokeDasharray={`${tamanho} ${tamanho}`} strokeDashoffset={r2(tamanho * (1 - t))} />
         </mask>
       </defs>
-      <path d={d} fill="none" stroke={COR.grape} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
+      <path d={d} fill="none" stroke={COR.indigo} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
     </svg>
+  );
+};
+
+// ---------- Transição colorida entre partes do roteiro (pedido do Rodolfo, 16/11) ----------
+// Uma faixa sólida inclinada atravessa a tela e cobre o corte: entra acelerando, sai desacelerando.
+export const CORTES_COM_FAIXA = [3, 5, 7, 10, 20, 12, 14, 16, 17];
+const CORES_FAIXA = ['#D9A441', COR.indigo, COR.rosa, '#5FA8A0'];
+export const Faixas: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <>
+      {CORTES_COM_FAIXA.map((n, i) => {
+        const corte = inicioEmQuadros(cena(n));
+        const de = corte - 7;
+        const ate = corte + 8;
+        if (f < de || f > ate) return null;
+        const meio = f <= corte ? partida(f, de, 7) * 0.5 : 0.5 + chegada(f, corte, 8) * 0.5;
+        const x = mix(-3200, 3200, meio);
+        const cor = CORES_FAIXA[i % CORES_FAIXA.length];
+        return (
+          <AbsoluteFill key={n} style={{ pointerEvents: 'none', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', left: -440, top: -300, width: 2800, height: 1680, background: cor, transform: `translateX(${r2(x)}px) skewX(-14deg)` }} />
+          </AbsoluteFill>
+        );
+      })}
+    </>
   );
 };

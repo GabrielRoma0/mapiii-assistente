@@ -1,9 +1,9 @@
 // Cenas 1 a 6: gancho, problema, número, virada e logo.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
-import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2 } from '../base';
+import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2, useTema, VIVO } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
-import { naPalavra } from '../roteiro';
+import { naPalavra, temposDasPalavras } from '../roteiro';
 import { Camera } from '../sobreposicoes';
 
 // ---------- Cena 1: o ônibus chega, a rampa não desce, o ônibus vai embora ----------
@@ -42,7 +42,11 @@ export const Cena1: React.FC = () => {
 };
 
 // ---------- Cena 2: Thor na câmera ----------
-export const Cena2: React.FC = () => <Camera n={2} nomes={['thor']} />;
+// Zoom: abre devagar; aproxima em "E quem cuida" e de novo nas perguntas.
+export const Cena2: React.FC = () => (
+  <Camera n={2} nomes={['thor']} foco="52% 34%"
+    zoom={[{ em: 0, de: 1, ate: 1.05 }, { em: naPalavra(2, 'E') - 3, de: 1.14, ate: 1.18 }, { em: naPalavra(2, 'o', 0) - 3, de: 1.27, ate: 1.32 }]} />
+);
 
 // ---------- Cena 3: Gabriel na câmera, depois os três cartões ----------
 export const Cena3: React.FC = () => {
@@ -50,8 +54,8 @@ export const Cena3: React.FC = () => {
   const esp = naPalavra(3, 'espalhada');
   const dif = naPalavra(3, 'difícil');
   const gol = naPalavra(3, 'golpe');
-  const corte = esp - 8;
-  if (f < corte) return <Camera n={3} nomes={['gabriel']} />;
+  const corte = esp - 5;
+  if (f < corte) return <Camera n={3} nomes={['gabriel']} foco="50% 38%" zoom={[{ em: 0, de: 1, ate: 1.05 }, { em: naPalavra(3, 'Só') - 3, de: 1.15, ate: 1.2 }]} />;
   const cartoes = [
     { texto: 'Espalhada.', obj: 'espalhada', em: esp, escuro: false },
     { texto: 'Difícil.', obj: 'dificil', em: dif, escuro: false },
@@ -87,6 +91,7 @@ export const Cena3: React.FC = () => {
 // ---------- Cena 4: o número do Censo rola e para ----------
 export const Cena4: React.FC = () => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const comeca = naPalavra(4, 'catorze');
   const para = naPalavra(4, 'milhões') + 6;
   const rolando = f >= comeca && f < para;
@@ -95,7 +100,7 @@ export const Cena4: React.FC = () => {
   const desacel = 1 - Math.pow(1 - t, 3);
   const passo = 260;
   const voltas = 3; // quantas vezes o rolo passa antes de parar
-  const desloc = (1 - desacel) * voltas * 10 * passo;
+  const desloc = (1 - desacel) * (voltas * 10 + 3.6) * passo; // começa fora do valor final, para o 14,4 não piscar antes de rolar
   const velocidade = rolando ? (3 * Math.pow(1 - t, 2) * voltas * 10 * passo) / (para - comeca) : 0;
   const borrao = Math.min(18, velocidade / 40);
   const choque = impacto(f, para, 0, 7);
@@ -111,14 +116,17 @@ export const Cena4: React.FC = () => {
     <EntradaDeCena>
       <Fundo>
         <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'column', transform: `translate(${choque.x}px, ${choque.y}px)` }}>
+          <div style={{ fontSize: 64, fontWeight: 800, color: tema.sec, marginBottom: 12 }}>
+            <Palavras itens={[{ texto: 'No', em: naPalavra(4, 'No') - 2 }, { texto: 'Brasil', em: naPalavra(4, 'Brasil') - 2 }]} />
+          </div>
           <div style={{ fontSize: 260, lineHeight: `${passo}px`, fontWeight: 900, letterSpacing: '-0.04em', display: 'flex', alignItems: 'baseline', opacity: visivel ? 1 : 0, fontVariantNumeric: 'tabular-nums' }}>
             <Rolo alvo={1} /><Rolo alvo={4} /><span>,</span><Rolo alvo={4} />
             <span style={{ fontSize: 150, marginLeft: 36 }}><Destaque de={para + 4}>milhões</Destaque></span>
           </div>
-          <div style={{ fontSize: 56, fontWeight: 800, color: COR.grape, marginTop: 48, opacity: chegada(f, para + 2, 10), transform: `translateY(${r2(mix(30, 0, chegada(f, para + 2, 10)))}px)` }}>
-            pessoas com deficiência no Brasil
+          <div style={{ fontSize: 56, fontWeight: 800, color: tema.sec, marginTop: 48, opacity: chegada(f, para + 2, 10), transform: `translateY(${r2(mix(30, 0, chegada(f, para + 2, 10)))}px)` }}>
+            pessoas com deficiência
           </div>
-          <div style={{ fontFamily: MONO, fontSize: 34, color: COR.grape, marginTop: 24, opacity: chegada(f, para + 8, 10) }}>
+          <div style={{ fontFamily: MONO, fontSize: 34, color: tema.sec, marginTop: 24, opacity: chegada(f, para + 8, 10) }}>
             Fonte: IBGE, Censo 2022 (pessoas com 2 anos ou mais)
           </div>
         </AbsoluteFill>
@@ -128,7 +136,8 @@ export const Cena4: React.FC = () => {
 };
 
 // ---------- Cena 5: Thor na câmera ----------
-export const Cena5: React.FC = () => <Camera n={5} nomes={['thor']} />;
+// Thor mais perto: já começa aproximado e chega mais em "com a fonte junto".
+export const Cena5: React.FC = () => <Camera n={5} nomes={['thor']} foco="50% 42%" zoom={[{ em: 0, de: 1.12, ate: 1.17 }, { em: naPalavra(5, 'com') - 3, de: 1.26, ate: 1.3 }]} />;
 
 // ---------- Cena 6: círculo cobre a tela e abre no logo; Leco sobe; quatro chips ----------
 export const Cena6: React.FC = () => {
@@ -138,7 +147,16 @@ export const Cena6: React.FC = () => {
   const mapiii = Math.min(naPalavra(6, 'Mapiii'), 15); // o logo aparece assim que o círculo abre
   const direitos = naPalavra(6, 'direitos');
   const leco = naPalavra(6, 'Leco');
+  const tema = useTema();
   const choque = impacto(f, 9, 0, 6);
+  // Recorte (feedback do Roberto, 16/11): depois da fala, o app diz por onde começa. Só texto, sem voz nova.
+  const falas6 = temposDasPalavras(6);
+  const recorte = falas6[falas6.length - 1].ate + 8;
+  const saiLogo = partida(f, recorte - 6, 8);
+  const temas = [
+    { texto: 'Ônibus', cor: COR.branco, obj: 'onibus' }, { texto: 'Carro', cor: COR.branco, obj: 'carro' },
+    { texto: 'Calçada', cor: COR.branco, obj: 'calcada' }, { texto: 'Reclamação', cor: COR.branco, obj: 'reclamacao' }
+  ];
   const chips = ['Pode ter direito', 'Fonte oficial', 'Sem CPF', 'Emergência: 192'];
   const posChip: React.CSSProperties[] = [
     { left: 120, top: 120 }, { right: 120, top: 120 }, { left: 120, bottom: 180 }, { right: 120, bottom: 180 }
@@ -148,15 +166,15 @@ export const Cena6: React.FC = () => {
       <AbsoluteFill style={{ transform: `translate(${choque.x}px, ${choque.y}px)` }}>
         <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.indigo, transform: `scale(${r2(mix(0.08, 1, cobre))})` }} />
-          <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: COR.seashell, transform: `scale(${r2(mix(0.05, 1, abre))})`, opacity: f >= 11 ? 1 : 0 }} />
+          <div style={{ position: 'absolute', width: 2400, height: 2400, borderRadius: '50%', background: tema.fundo, transform: `scale(${r2(mix(0.05, 1, abre))})`, opacity: f >= 11 ? 1 : 0 }} />
         </AbsoluteFill>
-        <div style={{ position: 'absolute', left: 160, top: 330, opacity: f >= mapiii - 4 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, mapiii - 4, 12)))}px)` }}>
+        <div style={{ position: 'absolute', left: 160, top: 330, opacity: f >= mapiii - 4 && saiLogo < 1 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, chegada(f, mapiii - 4, 12)) - saiLogo * 900)}px)` }}>
           <Logo largura={640} />
           <div style={{ fontSize: 76, fontWeight: 800, letterSpacing: '-0.02em', marginTop: 20, paddingLeft: 12, opacity: chegada(f, naPalavra(6, 'mapa') - 3, 8) }}>
             o mapa dos seus <Destaque de={direitos}>direitos</Destaque>
           </div>
         </div>
-        <Leco pose="bom" x={1240} y={160} tamanho={700} em={leco - 2} />
+        <div style={{ transform: `translateX(${r2(saiLogo * 1000)}px)` }}><Leco pose="bom" x={1240} y={160} tamanho={700} em={leco - 2} /></div>
         {chips.map((c, i) => {
           const em = direitos + 10 + i * 7;
           const t = chegada(f, em, 10);
@@ -164,10 +182,27 @@ export const Cena6: React.FC = () => {
           return (
             <div key={c} style={{
               position: 'absolute', ...posChip[i], padding: '14px 28px', borderRadius: 999, background: COR.branco, border: `3px solid ${COR.borda}`,
-              fontSize: 34, fontWeight: 800, color: COR.indigo, opacity: t > 0 ? 1 : 0, transform: `translateX(${r2(lado * mix(300, 0, t))}px)`
+              fontSize: 34, fontWeight: 800, color: COR.indigo, opacity: t > 0 && saiLogo < 1 ? 1 : 0, transform: `translateX(${r2(lado * (mix(300, 0, t) + saiLogo * 900))}px)`
             }}>{c}</div>
           );
         })}
+        <div style={{ position: 'absolute', left: 160, top: 120, width: 1600, opacity: f >= recorte - 2 ? 1 : 0 }}>
+          <div style={{ fontSize: 50, fontWeight: 800, color: tema.sec, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
+          <div style={{ fontSize: 88, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
+            a <Destaque de={recorte + 10}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
+          </div>
+          <div style={{ display: 'flex', gap: 40, marginTop: 50 }}>
+            {temas.map((x, i) => {
+              const t = chegada(f, recorte + 14 + i * 6, 12);
+              return (
+                <div key={x.texto} style={{ width: 370, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(160, 0, t))}px)` }}>
+                  <Img src={staticFile(`objetos/${x.obj}.png`)} style={{ width: 300, height: 300 }} />
+                  <span style={{ padding: '12px 30px', borderRadius: 999, background: x.cor, border: `3px solid ${COR.indigo}`, fontSize: 44, fontWeight: 900, color: COR.indigo }}>{x.texto}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </AbsoluteFill>
     </Fundo>
   );

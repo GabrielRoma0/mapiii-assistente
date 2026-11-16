@@ -91,7 +91,6 @@ export const Cena7: React.FC = () => {
             })}
           </div>
         </Cartao>
-        <CorteDoApp arquivo="app/triagem.mp4" de={dur - 60} dur={60} />
       </Fundo>
     </EntradaDeCena>
   );
@@ -114,7 +113,7 @@ export const Cena8: React.FC = () => {
       <Fundo>
         <LinhaDeRota n={8} />
         <div style={{ position: 'absolute', left: 120, top: 190 }}>
-          <div style={{ position: 'relative', display: 'inline-block', fontSize: 84, fontWeight: 800, color: COR.grape, opacity: t1 > 0 ? 1 : 0, transform: `translateY(${r2(mix(50, 0, t1))}px)` }}>
+          <div style={{ position: 'relative', display: 'inline-block', fontSize: 84, fontWeight: 800, color: COR.indigo, opacity: t1 > 0 ? 1 : 0, transform: `translateY(${r2(mix(50, 0, t1))}px)` }}>
             você tem direito
             <span style={{ position: 'absolute', left: 0, top: '54%', height: 10, width: `${r2(risco * 100)}%`, background: COR.coral700, borderRadius: 5 }} />
           </div>
@@ -265,7 +264,7 @@ export const Cena11: React.FC = () => {
             <br />
             <Palavras itens={[{ texto: 'não.', em: nao - 2 }]} />
           </div>
-          <div style={{ marginTop: 40, height: 60, fontSize: 44, fontWeight: 800, color: COR.grape, opacity: pergunta, transform: `translateY(${r2(mix(30, 0, chegada(f, remedio - 2, 10)))}px)` }}>
+          <div style={{ marginTop: 40, height: 60, fontSize: 44, fontWeight: 800, color: COR.indigo, opacity: pergunta, transform: `translateY(${r2(mix(30, 0, chegada(f, remedio - 2, 10)))}px)` }}>
             Remédio ou processo? <span style={{ opacity: chegada(f, ajudar - 6, 8) }}>Mostra quem pode ajudar.</span>
           </div>
           <div style={{

@@ -1,7 +1,7 @@
 // Copia (e reduz) as peças de video/ e design-system/ para public/, que o Remotion lê.
 // public/ não vai para o git: é refeito a cada `npm run studio`, `quadros` ou `render`.
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { dirname, join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,9 +46,36 @@ for (const f of pasta(join(video, 'sons'), (f) => /\.(wav|mp3|flac)$/.test(f))) 
 for (const f of pasta(join(ds, 'assets', 'logo'), (f) => f.endsWith('.svg'))) copiar(f, join(pub, 'logo', basename(f)));
 for (const f of pasta(join(ds, 'fonts'), (f) => f.endsWith('.woff2'))) copiar(f, join(pub, 'fontes', basename(f)));
 // Gravações (câmera, app e narração) entram aqui quando existirem; ver video/README.md, seção 6.
-for (const sub of ['camera-gravada', 'app', 'narracao']) {
+for (const sub of ['camera-gravada', 'app']) {
   const p = join(video, 'gravacoes', sub);
   if (existsSync(p)) for (const f of pasta(p)) copiar(f, join(pub, sub, basename(f)));
+}
+// Narração: cada voz é tratada antes de entrar no vídeo (o arquivo de gravacoes/ não muda).
+//  - corta o grave de fundo (abaixo de 80 Hz) e reduz o chiado; realça de leve a faixa da fala;
+//  - compressor suave, para as palavras fracas não sumirem; entrada e saída sem estalo (fade de 20 e 60 ms);
+//  - volume igualado em −16 LUFS, com limitador em −1,5 dB.
+// Sem ffmpeg, a voz entra como foi gravada.
+function tratarVoz(orig, dest) {
+  mkdirSync(dirname(dest), { recursive: true });
+  if (!novo(orig, dest) && statSync(dest).mtimeMs > statSync(fileURLToPath(import.meta.url)).mtimeMs) return true;
+  try {
+    const dur = Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', orig]).toString());
+    const cadeia = `highpass=f=80,afftdn=nr=10:nf=-48,equalizer=f=220:t=q:w=1:g=-1.5,equalizer=f=3400:t=q:w=1.2:g=2,acompressor=threshold=-22dB:ratio=2.5:attack=8:release=140:makeup=1.5,afade=t=in:d=0.02,afade=t=out:st=${(dur - 0.06).toFixed(3)}:d=0.06`;
+    const med = spawnSync('ffmpeg', ['-hide_banner', '-nostats', '-i', orig, '-af', `${cadeia},ebur128`, '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
+    const lufs = Number((med.match(/I:\s+(-?[\d.]+) LUFS/g) ?? []).pop()?.match(/-?[\d.]+/)?.[0] ?? -16);
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', orig, '-af', `${cadeia},volume=${(-16 - lufs).toFixed(2)}dB,alimiter=limit=0.84:level=false:attack=2:release=60`, '-ar', '48000', dest]);
+    return true;
+  } catch (e) {
+    if (e.code !== 'ENOENT') throw e;
+    return false;
+  }
+}
+{
+  const p = join(video, 'gravacoes', 'narracao');
+  if (existsSync(p)) for (const f of pasta(p)) {
+    const wav = join(pub, 'narracao', basename(f).replace(/\.mp3$/, '.wav'));
+    if (!/cena-\d+\.mp3$/.test(f) || !tratarVoz(f, wav)) copiar(f, join(pub, 'narracao', basename(f)));
+  }
 }
 
 // Ícones do design system viram um módulo TS (só os traços, sem metadados).

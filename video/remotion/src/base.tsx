@@ -1,5 +1,5 @@
 // Peças comuns do vídeo: cores, fontes, movimento, Leco 3D, ícones, títulos e efeitos.
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { ICONES } from './gerado-icones';
 
@@ -18,6 +18,48 @@ export const COR = {
   verde800: '#2F5A3C',
   coral700: '#A0402F'
 };
+
+// Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos com os tons 500 do design system
+// (categorias, âmbar, coral, verde). Sobre eles, todo texto é Space Indigo (contraste de 5:1 ou mais).
+export interface Tema { fundo: string; texto: string; sec: string; destaque: string; escuro: boolean; formas: [string, string] | null }
+// Meio-termo (16/11): só âmbar, verde-água e rosa além do indigo. Fundo = 45% da cor + 55% Seashell;
+// a cor cheia fica só nas formas dos cantos e nas faixas de transição.
+export const VIVO = {
+  ambar: '#D9A441', agua: '#5FA8A0', rosa: '#CF7A93',
+  fAmbar: '#E7CA9B', fAgua: '#B0CCC5', fRosa: '#E2B7C0'
+};
+export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas: null };
+const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas });
+const vivo = (fundo: string, formas: [string, string]): Tema => ({ fundo, texto: COR.indigo, sec: COR.indigo, destaque: COR.indigo, escuro: false, formas });
+const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, destaque: VIVO.ambar, escuro: true, formas: [VIVO.agua, COR.rosa] };
+export const TEMAS: Record<number, Tema> = {
+  1: claro(COR.seashell, null),
+  3: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  4: escuro,
+  6: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  7: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  19: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  8: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  9: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  10: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  21: vivo(VIVO.fAmbar, [VIVO.agua, VIVO.rosa]),
+  11: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  12: escuro,
+  13: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  20: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  22: vivo(VIVO.fAmbar, [VIVO.agua, VIVO.rosa]),
+  23: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
+  24: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
+  15: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
+  16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
+  17: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
+  18: claro(COR.seashell, null)
+};
+const TemaCtx = createContext<Tema>(TEMA_CLARO);
+export const TemaDaCena: React.FC<{ n: number; children: React.ReactNode }> = ({ n, children }) => (
+  <TemaCtx.Provider value={TEMAS[n] ?? TEMA_CLARO}>{children}</TemaCtx.Provider>
+);
+export const useTema = () => useContext(TemaCtx);
 
 export const FONTES_CSS = `
 @font-face{font-family:"Nunito";font-weight:200 1000;font-style:normal;font-display:block;src:url(${staticFile('fontes/nunito-latin-wght-normal.woff2')}) format("woff2")}
@@ -66,17 +108,28 @@ export const EntradaDeCena: React.FC<{ children: React.ReactNode; semEntrada?: b
 // para nenhum trecho ficar morto (regra de tempo da seção 3: no máximo 3 quadros parados).
 export const Fundo: React.FC<{ children?: React.ReactNode; style?: React.CSSProperties }> = ({ children, style }) => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const z = 1 + f * 0.00012;
+  const deriva = Math.sin((f / 30) * Math.PI * 2 * 0.08) * 18; // formas andam devagar, sem parar
+  const entra = chegada(f, 0, 14);
   return (
-    <AbsoluteFill style={{ background: COR.seashell, color: COR.indigo, fontFamily: SANS, overflow: 'hidden', ...style }}>
+    <AbsoluteFill style={{ background: tema.fundo, color: tema.texto, fontFamily: SANS, overflow: 'hidden', ...style }}>
+      {tema.formas && (
+        <>
+          <div style={{ position: 'absolute', width: 620, height: 620, borderRadius: '50%', background: tema.formas[0], right: -330, top: -330, transform: `translate(${r2(mix(200, 0, entra) - deriva)}px, ${r2(deriva - mix(200, 0, entra))}px)` }} />
+          <div style={{ position: 'absolute', width: 460, height: 460, borderRadius: '50%', background: tema.formas[1], left: -250, bottom: -250, transform: `translate(${r2(deriva - mix(200, 0, entra))}px, ${r2(mix(200, 0, entra) - deriva)}px)` }} />
+        </>
+      )}
       <AbsoluteFill style={{ transform: `scale(${z.toFixed(5)})`, transformOrigin: '50% 45%' }}>{children}</AbsoluteFill>
     </AbsoluteFill>
   );
 };
 
 // Sublinhado rosa que se desenha da esquerda para a direita a partir de `de`.
-export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor = COR.rosa, escuro }) => {
+export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor: corPedida, escuro }) => {
   const f = useCurrentFrame();
+  const temaD = useTema();
+  const cor = corPedida ?? temaD.destaque;
   const t = chegada(f, de, 12);
   return (
     <span style={{ position: 'relative', display: 'inline-block', color: escuro ? COR.seashell : undefined }}>
@@ -116,7 +169,7 @@ export const Icone: React.FC<{ nome: string; tamanho: number; cor: string; traco
 export type PoseMapi = 'bom' | 'atencao' | 'procurando' | 'verificado' | 'ouvindo' | 'recusa' | 'comemorando';
 
 // Leco 3D: entra subindo suave a partir de `em`, com sombra em elipse sólida; depois flutua de leve. Nunca deforma.
-export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean }> = ({ pose, x, y, tamanho, em, balanco, sombra = true }) => {
+export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: number; em: number; balanco?: number; sombra?: boolean; fala?: number[] }> = ({ pose, x, y, tamanho, em, balanco, sombra = true, fala }) => {
   const f = useCurrentFrame();
   const t = chegada(f, em, 14);
   const vivo = Math.max(0, f - em);
@@ -127,6 +180,12 @@ export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: num
     const b = f - balanco;
     if (b >= 0 && b <= 18) gira = Math.sin((b / 18) * Math.PI * 2) * 6 * (1 - b / 18);
   }
+  // Falando: um aceno curto do corpo inteiro no começo de cada palavra (`fala` = quadros das palavras). Não deforma.
+  let aceno = 0;
+  (fala ?? []).forEach((q, i) => {
+    const b = f - q;
+    if (b >= 0 && b <= 7) { const k = Math.sin((b / 7) * Math.PI); aceno -= 9 * k; gira += (i % 2 ? -2.2 : 2.2) * k; }
+  });
   return (
     <div style={{ position: 'absolute', left: x, top: y, width: tamanho, height: tamanho, opacity: f >= em ? 1 : 0 }}>
       {sombra && (
@@ -137,7 +196,7 @@ export const Leco: React.FC<{ pose: PoseMapi; x: number; y: number; tamanho: num
       )}
       <Img src={staticFile(`mapi/${pose}.png`)} style={{
         position: 'absolute', inset: 0, width: '100%', height: '100%',
-        transform: `translateY(${r2(sobe + flutua)}px) rotate(${r2(gira)}deg)`, transformOrigin: '50% 90%'
+        transform: `translateY(${r2(sobe + flutua + aceno)}px) rotate(${r2(gira)}deg)`, transformOrigin: '50% 90%'
       }} />
     </div>
   );
@@ -159,5 +218,5 @@ export const Selo: React.FC<{ texto: string; tamanho?: number }> = ({ texto, tam
 
 // Aviso fixo de protótipo (fecho).
 export const AvisoPrototipo: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
-  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: COR.grape, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
+  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: useTema().sec, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
 );
