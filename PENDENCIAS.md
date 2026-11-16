@@ -8,9 +8,24 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 12/11/2026.
+Última atualização: 16/11/2026.
 
 ---
+
+## Atualização de 16/11: vídeo revisto pelo feedback dos professores (falta gravar 4 áudios)
+
+O vídeo pitch (2:26) foi revisto com as dicas do André, do Rodolfo e do Roberto: falas mais encostadas, mais cor (âmbar, verde-água e rosa), faixas coloridas nas trocas de parte, recorte de mobilidade na cena 6 com os objetos do Claude Design, três cenas novas (22, 23 e 24) com telas reais do app e a ordem das cenas revista. Detalhes em [video/README.md](video/README.md).
+
+**Áudios a gravar** (narração sem rosto, sem câmera; mesma voz das outras narrações, mesmo lugar e mesma distância do celular; gravar cada fala duas vezes e mandar ao Claude Code, que trata, encaixa e renderiza):
+
+| Arquivo | Onde entra no vídeo | Fala (texto exato) |
+|---|---|---|
+| `cena-19` (regravar: o som do microfone ficou estranho) | Depois da triagem animada | Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial. |
+| `cena-23` (nova) | Depois de "Vire a tela" | E se negarem o embarque, ele monta a reclamação pronta, só com os fatos, e mostra onde enviar. |
+| `cena-22` (nova) | Depois de "Sabe dizer não" | Por que não perguntar para qualquer IA? Porque ela pode inventar uma lei. O Mapiii só responde o que está na base, com a fonte oficial. |
+| `cena-24` (nova) | Depois do mapa-múndi | É leve, sem cadastro e sem guardar dados pessoais. Uma prefeitura ou uma ONG pode adotar e manter. |
+
+Depois dos áudios: o Claude Code ajusta o tempo das cenas às falas, sincroniza as animações, roda o render final em 1080p e põe em `video/entrega/`.
 
 ## Atualização de 12/11 (5): cena do Leco como assistente
 

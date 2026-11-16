@@ -151,6 +151,8 @@ Uma frase por vez, com 1 s de pausa entre elas, num arquivo só (`narracao.wav`)
 
 **Ordem no vídeo desde 16/11:** 1 · 2 · 3 · 4 · 5 · 6 · Descubra 7 → 19 → 21 → 8 · Na rua 10 → 9 → 23 · Confiança 20 → 11 → 22 → 12 → 13 · Escala 14 → 15 → 24 · 16 · 17 · 18. (Os números das cenas não mudaram; mudou só a ordem.)
 
+**Áudios a gravar (16/11):** as três falas abaixo e a regravação da cena 19 ("Olha o app de verdade: poucos toques, e ele mostra o que pode se aplicar, com fonte oficial."), porque o som do microfone ficou estranho. Lista completa no [PENDENCIAS.md](../PENDENCIAS.md).
+
 **Cenas novas de 16/11 (feedback do André), narração a gravar, sem câmera:**
 
 ```text
