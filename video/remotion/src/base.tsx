@@ -1,5 +1,5 @@
 // Peças comuns do vídeo: cores, fontes, movimento, Leco 3D, ícones, títulos e efeitos.
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { ICONES } from './gerado-icones';
 
@@ -18,6 +18,42 @@ export const COR = {
   verde800: '#2F5A3C',
   coral700: '#A0402F'
 };
+
+// Tema de cada cena (pedido do Rodolfo, 16/11: mais cor). Fundos sólidos com os tons 500 do design system
+// (categorias, âmbar, coral, verde). Sobre eles, todo texto é Space Indigo (contraste de 5:1 ou mais).
+export interface Tema { fundo: string; texto: string; sec: string; destaque: string; escuro: boolean; formas: [string, string] | null }
+export const VIVO = {
+  ambar: '#DEB365', agua: '#7FB6AF', azul: '#94A6CE', coral: '#DE8B7C', verde: '#88BB94', rosa: '#D792A5', laranja: '#DE9D6F'
+};
+export const TEMA_CLARO: Tema = { fundo: COR.seashell, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas: null };
+const claro = (fundo: string, formas: [string, string] | null): Tema => ({ fundo, texto: COR.indigo, sec: COR.grape, destaque: COR.rosa, escuro: false, formas });
+const vivo = (fundo: string, formas: [string, string]): Tema => ({ fundo, texto: COR.indigo, sec: COR.indigo, destaque: COR.seashell, escuro: false, formas });
+const escuro: Tema = { fundo: COR.indigo, texto: COR.seashell, sec: COR.lilac100, destaque: VIVO.ambar, escuro: true, formas: [VIVO.agua, COR.rosa] };
+export const TEMAS: Record<number, Tema> = {
+  1: claro(COR.seashell, null),
+  3: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
+  4: escuro,
+  6: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
+  7: vivo(VIVO.agua, [VIVO.ambar, COR.seashell]),
+  8: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
+  9: vivo(VIVO.ambar, [VIVO.coral, COR.seashell]),
+  10: vivo(VIVO.azul, [VIVO.ambar, COR.seashell]),
+  11: vivo(VIVO.coral, [VIVO.ambar, COR.seashell]),
+  12: escuro,
+  13: vivo(VIVO.verde, [VIVO.ambar, COR.seashell]),
+  15: vivo(COR.seashell, [VIVO.ambar, VIVO.agua]),
+  19: vivo(VIVO.agua, [VIVO.ambar, COR.seashell]),
+  20: vivo(VIVO.rosa, [VIVO.ambar, COR.seashell]),
+  21: vivo(VIVO.azul, [VIVO.ambar, COR.seashell]),
+  16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
+  17: vivo(VIVO.ambar, [COR.rosa, VIVO.agua]),
+  18: claro(COR.seashell, null)
+};
+const TemaCtx = createContext<Tema>(TEMA_CLARO);
+export const TemaDaCena: React.FC<{ n: number; children: React.ReactNode }> = ({ n, children }) => (
+  <TemaCtx.Provider value={TEMAS[n] ?? TEMA_CLARO}>{children}</TemaCtx.Provider>
+);
+export const useTema = () => useContext(TemaCtx);
 
 export const FONTES_CSS = `
 @font-face{font-family:"Nunito";font-weight:200 1000;font-style:normal;font-display:block;src:url(${staticFile('fontes/nunito-latin-wght-normal.woff2')}) format("woff2")}
@@ -66,17 +102,28 @@ export const EntradaDeCena: React.FC<{ children: React.ReactNode; semEntrada?: b
 // para nenhum trecho ficar morto (regra de tempo da seção 3: no máximo 3 quadros parados).
 export const Fundo: React.FC<{ children?: React.ReactNode; style?: React.CSSProperties }> = ({ children, style }) => {
   const f = useCurrentFrame();
+  const tema = useTema();
   const z = 1 + f * 0.00012;
+  const deriva = Math.sin((f / 30) * Math.PI * 2 * 0.08) * 18; // formas andam devagar, sem parar
+  const entra = chegada(f, 0, 14);
   return (
-    <AbsoluteFill style={{ background: COR.seashell, color: COR.indigo, fontFamily: SANS, overflow: 'hidden', ...style }}>
+    <AbsoluteFill style={{ background: tema.fundo, color: tema.texto, fontFamily: SANS, overflow: 'hidden', ...style }}>
+      {tema.formas && (
+        <>
+          <div style={{ position: 'absolute', width: 620, height: 620, borderRadius: '50%', background: tema.formas[0], right: -330, top: -330, transform: `translate(${r2(mix(200, 0, entra) - deriva)}px, ${r2(deriva - mix(200, 0, entra))}px)` }} />
+          <div style={{ position: 'absolute', width: 460, height: 460, borderRadius: '50%', background: tema.formas[1], left: -250, bottom: -250, transform: `translate(${r2(deriva - mix(200, 0, entra))}px, ${r2(mix(200, 0, entra) - deriva)}px)` }} />
+        </>
+      )}
       <AbsoluteFill style={{ transform: `scale(${z.toFixed(5)})`, transformOrigin: '50% 45%' }}>{children}</AbsoluteFill>
     </AbsoluteFill>
   );
 };
 
 // Sublinhado rosa que se desenha da esquerda para a direita a partir de `de`.
-export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor = COR.rosa, escuro }) => {
+export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: string; escuro?: boolean }> = ({ children, de, cor: corPedida, escuro }) => {
   const f = useCurrentFrame();
+  const temaD = useTema();
+  const cor = corPedida ?? temaD.destaque;
   const t = chegada(f, de, 12);
   return (
     <span style={{ position: 'relative', display: 'inline-block', color: escuro ? COR.seashell : undefined }}>
@@ -165,5 +212,5 @@ export const Selo: React.FC<{ texto: string; tamanho?: number }> = ({ texto, tam
 
 // Aviso fixo de protótipo (fecho).
 export const AvisoPrototipo: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
-  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: COR.grape, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
+  <div style={{ position: 'absolute', fontSize: 32, fontWeight: 700, color: useTema().sec, ...style }}>Protótipo de estudo, não é canal oficial. · FIAP Global Solution 2026</div>
 );

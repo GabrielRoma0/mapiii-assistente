@@ -31,7 +31,7 @@ export const Legenda: React.FC = () => {
   return (
     // Nas cenas 19 e 20 (tela do app à esquerda) a legenda fica à direita do celular, para não cobrir a gravação.
     <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 64, paddingLeft: celularGrande ? 860 : aoLadoDoCelular ? 660 : 0, pointerEvents: 'none' }}>
-      <div style={{ maxWidth: celularGrande ? 960 : aoLadoDoCelular ? 1120 : 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
+      <div style={{ maxWidth: celularGrande ? 960 : aoLadoDoCelular ? 1120 : 1240, padding: '14px 34px', borderRadius: 20, background: COR.indigo, border: `3px solid ${COR.almond}`, color: COR.seashell, fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.25, textAlign: 'center' }}>
         {b.texto}
       </div>
     </AbsoluteFill>
@@ -124,7 +124,33 @@ export const LinhaDeRota: React.FC<{ n: number; chega?: number }> = ({ n, chega 
           <path d={d} fill="none" stroke="#fff" strokeWidth={14} strokeDasharray={`${tamanho} ${tamanho}`} strokeDashoffset={r2(tamanho * (1 - t))} />
         </mask>
       </defs>
-      <path d={d} fill="none" stroke={COR.grape} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
+      <path d={d} fill="none" stroke={COR.indigo} strokeWidth={6} strokeDasharray="18 14" strokeLinecap="round" mask={`url(#rota-${n})`} opacity={0.75} />
     </svg>
+  );
+};
+
+// ---------- Transição colorida entre partes do roteiro (pedido do Rodolfo, 16/11) ----------
+// Uma faixa sólida inclinada atravessa a tela e cobre o corte: entra acelerando, sai desacelerando.
+export const CORTES_COM_FAIXA = [3, 5, 7, 9, 11, 12, 14, 16, 17];
+const CORES_FAIXA = ['#D9A441', COR.indigo, COR.rosa, '#5FA8A0'];
+export const Faixas: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <>
+      {CORTES_COM_FAIXA.map((n, i) => {
+        const corte = inicioEmQuadros(cena(n));
+        const de = corte - 7;
+        const ate = corte + 8;
+        if (f < de || f > ate) return null;
+        const meio = f <= corte ? partida(f, de, 7) * 0.5 : 0.5 + chegada(f, corte, 8) * 0.5;
+        const x = mix(-3200, 3200, meio);
+        const cor = CORES_FAIXA[i % CORES_FAIXA.length];
+        return (
+          <AbsoluteFill key={n} style={{ pointerEvents: 'none', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', left: -440, top: -300, width: 2800, height: 1680, background: cor, transform: `translateX(${r2(x)}px) skewX(-14deg)` }} />
+          </AbsoluteFill>
+        );
+      })}
+    </>
   );
 };
