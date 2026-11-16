@@ -154,8 +154,8 @@ export const Cena6: React.FC = () => {
   const recorte = falas6[falas6.length - 1].ate + 8;
   const saiLogo = partida(f, recorte - 6, 8);
   const temas = [
-    { texto: 'Ônibus', cor: COR.branco }, { texto: 'Carro', cor: COR.rosa },
-    { texto: 'Calçada', cor: VIVO.agua }, { texto: 'Reclamação', cor: COR.seashell }
+    { texto: 'Ônibus', cor: COR.branco, obj: 'onibus' }, { texto: 'Carro', cor: COR.branco, obj: 'carro' },
+    { texto: 'Calçada', cor: COR.branco, obj: 'calcada' }, { texto: 'Reclamação', cor: COR.branco, obj: 'reclamacao' }
   ];
   const chips = ['Pode ter direito', 'Fonte oficial', 'Sem CPF', 'Emergência: 192'];
   const posChip: React.CSSProperties[] = [
@@ -174,7 +174,7 @@ export const Cena6: React.FC = () => {
             o mapa dos seus <Destaque de={direitos}>direitos</Destaque>
           </div>
         </div>
-        <Leco pose="bom" x={1240} y={160} tamanho={700} em={leco - 2} />
+        <div style={{ transform: `translateX(${r2(saiLogo * 1000)}px)` }}><Leco pose="bom" x={1240} y={160} tamanho={700} em={leco - 2} /></div>
         {chips.map((c, i) => {
           const em = direitos + 10 + i * 7;
           const t = chegada(f, em, 10);
@@ -186,16 +186,19 @@ export const Cena6: React.FC = () => {
             }}>{c}</div>
           );
         })}
-        <div style={{ position: 'absolute', left: 160, top: 250, width: 1040, opacity: f >= recorte - 2 ? 1 : 0 }}>
+        <div style={{ position: 'absolute', left: 160, top: 120, width: 1600, opacity: f >= recorte - 2 ? 1 : 0 }}>
           <div style={{ fontSize: 50, fontWeight: 800, color: tema.sec, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
-          <div style={{ fontSize: 96, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
+          <div style={{ fontSize: 88, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
             a <Destaque de={recorte + 10}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, marginTop: 44 }}>
+          <div style={{ display: 'flex', gap: 40, marginTop: 50 }}>
             {temas.map((x, i) => {
-              const t = chegada(f, recorte + 16 + i * 6, 10);
+              const t = chegada(f, recorte + 14 + i * 6, 12);
               return (
-                <span key={x.texto} style={{ padding: '16px 34px', borderRadius: 999, background: x.cor, border: `3px solid ${COR.indigo}`, fontSize: 44, fontWeight: 900, color: COR.indigo, opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(90, 0, t))}px)` }}>{x.texto}</span>
+                <div key={x.texto} style={{ width: 370, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(160, 0, t))}px)` }}>
+                  <Img src={staticFile(`objetos/${x.obj}.png`)} style={{ width: 300, height: 300 }} />
+                  <span style={{ padding: '12px 30px', borderRadius: 999, background: x.cor, border: `3px solid ${COR.indigo}`, fontSize: 44, fontWeight: 900, color: COR.indigo }}>{x.texto}</span>
+                </div>
               );
             })}
           </div>

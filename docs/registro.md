@@ -272,3 +272,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 16/11/2026: em cima da versão de 2:12 (branch blissful-ride): falas encostadas (silêncio do começo da voz pulado nas cenas 4, 8, 11 e 16), cores vivas um pouco suavizadas (78% da cor + 22% Seashell), faixa colorida nas trocas de parte, recorte de mobilidade sem voz na cena 6, mapa da cena 15 em fundo claro. Duração 2:03. Pedido 4 ao Claude Design (objetos do recorte).
 - 16/11/2026: cores no meio-termo: só âmbar, verde-água e rosa; fundo com 45% da cor e a cor cheia só nas formas e faixas.
 - 16/11/2026: vídeo ganha as cenas 22 (diferencial: recusa real do app), 23 (Reclamação pronta real) e 24 (viabilidade, visão de futuro). Narração das três a gravar. Duração 2:26.
+- 16/11/2026: objetos 3D do Claude Design (ônibus, carro, calçada, megafone) no recorte da cena 6.
