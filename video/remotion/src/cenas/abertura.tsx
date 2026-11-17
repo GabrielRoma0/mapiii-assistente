@@ -3,7 +3,7 @@ import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { chegada, COR, Destaque, EntradaDeCena, Fundo, impacto, Logo, Leco, MONO, mix, partida, Palavras, r2, useTema, VIVO } from '../base';
 import { Chao, Onibus, Pessoa, Ponto } from '../desenhos';
-import { naPalavra, temposDasPalavras } from '../roteiro';
+import { naPalavra, quandoFala, temposDasPalavras } from '../roteiro';
 import { Camera } from '../sobreposicoes';
 
 // ---------- Cena 1: o ônibus chega, a rampa não desce, o ônibus vai embora ----------
@@ -151,7 +151,12 @@ export const Cena6: React.FC = () => {
   const choque = impacto(f, 9, 0, 6);
   // Recorte (feedback do Roberto, 16/11): depois da fala, o app diz por onde começa. Só texto, sem voz nova.
   const falas6 = temposDasPalavras(6);
-  const recorte = falas6[falas6.length - 1].ate + 8;
+  // Com a fala do recorte gravada ("Ele começa pela mobilidade: ônibus, carro, calçada e reclamação."),
+  // o recorte entra em "Ele" e cada objeto entra na sua palavra. Sem ela, entram em sequência depois da fala.
+  const semFala = falas6[falas6.length - 1].ate + 8;
+  const recorte = quandoFala(6, 'Ele', semFala + 4) - 4;
+  const NOMES = ['ônibus', 'carro', 'calçada', 'reclamação'];
+  const objetoEm = (i: number) => quandoFala(6, NOMES[i], recorte + 16 + i * 6 + 2) - 2;
   const saiLogo = partida(f, recorte - 6, 8);
   const temas = [
     { texto: 'Ônibus', cor: COR.branco, obj: 'onibus' }, { texto: 'Carro', cor: COR.branco, obj: 'carro' },
@@ -189,11 +194,11 @@ export const Cena6: React.FC = () => {
         <div style={{ position: 'absolute', left: 160, top: 120, width: 1600, opacity: f >= recorte - 2 ? 1 : 0 }}>
           <div style={{ fontSize: 50, fontWeight: 800, color: tema.sec, transform: `translateY(${r2(mix(120, 0, chegada(f, recorte - 2, 12)))}px)` }}>O Mapiii começa por um recorte:</div>
           <div style={{ fontSize: 88, fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.02em', marginTop: 12, transform: `translateY(${r2(mix(160, 0, chegada(f, recorte, 12)))}px)` }}>
-            a <Destaque de={recorte + 10}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
+            a <Destaque de={quandoFala(6, 'mobilidade', recorte + 10)}>mobilidade</Destaque> de quem usa cadeira de rodas em São Paulo
           </div>
           <div style={{ display: 'flex', gap: 40, marginTop: 50 }}>
             {temas.map((x, i) => {
-              const t = chegada(f, recorte + 14 + i * 6, 12);
+              const t = chegada(f, objetoEm(i), 12);
               return (
                 <div key={x.texto} style={{ width: 370, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: t > 0 ? 1 : 0, transform: `translateY(${r2(mix(160, 0, t))}px)` }}>
                   <Img src={staticFile(`objetos/${x.obj}.png`)} style={{ width: 300, height: 300 }} />

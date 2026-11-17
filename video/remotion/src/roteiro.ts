@@ -92,6 +92,11 @@ export function temposDasPalavras(n: number): TempoPalavra[] {
 }
 
 // Quadro (relativo à cena) em que começa a palavra que contém `alvo` (a k-ésima ocorrência, a partir de 0).
+// Como naPalavra, mas devolve `padrao` quando a palavra ainda não está na locução (por exemplo, antes de gravar uma fala nova).
+export function quandoFala(n: number, alvo: string, padrao: number): number {
+  try { return naPalavra(n, alvo); } catch { return padrao; }
+}
+
 export function naPalavra(n: number, alvo: string, k = 0): number {
   const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
   const a = norm(alvo);

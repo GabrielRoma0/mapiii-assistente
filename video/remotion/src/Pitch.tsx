@@ -7,7 +7,7 @@ import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
 import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO, Cena24 } from './cenas/fecho';
 import { Cena19, Cena20, Cena21, Cena22, Cena23 } from './cenas/telas-app';
-import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras , CORTE_INICIO_VOZ } from './roteiro';
+import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras , CORTE_INICIO_VOZ, quandoFala } from './roteiro';
 import { blocosDeLegenda } from './legendas';
 import { CORTES_COM_FAIXA, Faixas, Legenda, Relogio } from './sobreposicoes';
 
@@ -64,9 +64,9 @@ function efeitos(): Efeito[] {
   add('pop.flac', 6, naPalavra(6, 'Leco') - 2, 0.55);
   // 6, recorte (sem voz): whoosh na troca e um pop por objeto (ônibus, carro, calçada, reclamação), no mesmo quadro da animação
   const falas6 = temposDasPalavras(6);
-  const recorte = falas6[falas6.length - 1].ate + 8;
+  const recorte = quandoFala(6, 'Ele', falas6[falas6.length - 1].ate + 12) - 4;
   add('whoosh.flac', 6, recorte - 6, 0.4);
-  for (let i = 0; i < 4; i++) add('pop.flac', 6, recorte + 14 + i * 6, 0.4 + i * 0.05);
+  ['ônibus', 'carro', 'calçada', 'reclamação'].forEach((p, i) => add('pop.flac', 6, quandoFala(6, p, recorte + 18 + i * 6) - 2, 0.4 + i * 0.05));
   // 7
   add('toque-seco.wav', 7, naPalavra(7, 'responde') + 10, 0.35);
   // 19: toques baixos na gravação do app (nos quadros em que o dedo toca)
