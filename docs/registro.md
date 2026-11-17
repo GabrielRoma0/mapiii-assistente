@@ -277,3 +277,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 16/11/2026: escala na ordem 14 (Gabriel) → 15 (mapa) → 24 (viabilidade) → 16 (ODS).
 - 16/11/2026: áudios a gravar registrados no PENDENCIAS (cenas 22, 23, 24 e regravação da 19).
 - 17/11/2026: narrações das cenas 19, 22, 23 e 24 encaixadas; render final de 2:22 em video/entrega (−14,4 LUFS).
+- 17/11/2026: fala do recorte (cena 6) encaixada, cada objeto na sua palavra; render final de 2:24 em video/entrega.

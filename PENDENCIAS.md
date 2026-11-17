@@ -16,7 +16,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 **17/11: os 4 áudios abaixo foram gravados e encaixados. Render final de 2:22 em `video/entrega/`.**
 
-**Falta 1 áudio (17/11):** `cena-06b`, o recorte da cena 6 (hoje só com sons). Fala: "Ele começa pela mobilidade: ônibus, carro, calçada e reclamação." Mesma voz e mesmo jeito das outras narrações sem rosto. Depois, o Claude Code encaixa cada palavra no seu objeto e refaz o render final.
+**Gravado e encaixado em 17/11 (render final de 2:24):** `cena-06b`, o recorte da cena 6 (hoje só com sons). Fala: "Ele começa pela mobilidade: ônibus, carro, calçada e reclamação." Mesma voz e mesmo jeito das outras narrações sem rosto. Depois, o Claude Code encaixa cada palavra no seu objeto e refaz o render final.
 
 O vídeo pitch (2:26) foi revisto com as dicas do André, do Rodolfo e do Roberto: falas mais encostadas, mais cor (âmbar, verde-água e rosa), faixas coloridas nas trocas de parte, recorte de mobilidade na cena 6 com os objetos do Claude Design, três cenas novas (22, 23 e 24) com telas reais do app e a ordem das cenas revista. Detalhes em [video/README.md](video/README.md).
 
