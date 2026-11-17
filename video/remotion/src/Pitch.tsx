@@ -62,6 +62,11 @@ function efeitos(): Efeito[] {
   // 5 → 6: whoosh na saída e o círculo
   add('whoosh.flac', 6, 0, 0.6);
   add('pop.flac', 6, naPalavra(6, 'Leco') - 2, 0.55);
+  // 6, recorte (sem voz): whoosh na troca e um pop por objeto (ônibus, carro, calçada, reclamação), no mesmo quadro da animação
+  const falas6 = temposDasPalavras(6);
+  const recorte = falas6[falas6.length - 1].ate + 8;
+  add('whoosh.flac', 6, recorte - 6, 0.4);
+  for (let i = 0; i < 4; i++) add('pop.flac', 6, recorte + 14 + i * 6, 0.4 + i * 0.05);
   // 7
   add('toque-seco.wav', 7, naPalavra(7, 'responde') + 10, 0.35);
   // 19: toques baixos na gravação do app (nos quadros em que o dedo toca)
