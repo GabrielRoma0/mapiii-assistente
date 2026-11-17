@@ -12,7 +12,9 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
-## Atualização de 16/11: vídeo revisto pelo feedback dos professores (falta gravar 4 áudios)
+## Atualização de 16/11: vídeo revisto pelo feedback dos professores
+
+**17/11: os 4 áudios abaixo foram gravados e encaixados. Render final de 2:22 em `video/entrega/`.**
 
 O vídeo pitch (2:26) foi revisto com as dicas do André, do Rodolfo e do Roberto: falas mais encostadas, mais cor (âmbar, verde-água e rosa), faixas coloridas nas trocas de parte, recorte de mobilidade na cena 6 com os objetos do Claude Design, três cenas novas (22, 23 e 24) com telas reais do app e a ordem das cenas revista. Detalhes em [video/README.md](video/README.md).
 

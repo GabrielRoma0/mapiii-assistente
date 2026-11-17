@@ -276,3 +276,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 16/11/2026: ordem das cenas revista: Descubra 7-19-21-8, Na rua 10-9-23 (na ordem do dia a dia), Confiança 20-11-22-12-13, Escala 14-24-15.
 - 16/11/2026: escala na ordem 14 (Gabriel) → 15 (mapa) → 24 (viabilidade) → 16 (ODS).
 - 16/11/2026: áudios a gravar registrados no PENDENCIAS (cenas 22, 23, 24 e regravação da 19).
+- 17/11/2026: narrações das cenas 19, 22, 23 e 24 encaixadas; render final de 2:22 em video/entrega (−14,4 LUFS).
