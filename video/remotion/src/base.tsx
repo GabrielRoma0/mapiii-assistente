@@ -51,6 +51,7 @@ export const TEMAS: Record<number, Tema> = {
   23: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
   24: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
   25: claro(VIVO.fAgua, null),
+  27: claro(COR.seashell, null),
   26: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
   15: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
   16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),

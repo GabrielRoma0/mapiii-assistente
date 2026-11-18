@@ -12,6 +12,15 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 18/11 (2): mini-história da consulta (falta 1 áudio)
+
+A cena 25 (comparação) saiu. Entrou a cena 27, depois do aviso do ônibus (cena 10): Carla e Letícia, a mesma consulta às 9h. Ilustrações do Claude Design em `video/objetos-3d/`. Hoje a animação usa o tempo estimado da fala.
+
+**Áudio a gravar** (narração sem rosto, no celular, devagar, com pausa nas reticências): `cena-27`:
+"Essa é a Carla. Essa é a Letícia. As duas usam cadeira de rodas, e as duas têm consulta marcada amanhã, às nove. A Letícia vai para o ponto cedo, sem saber quando passa um ônibus com rampa. Passa um… sem rampa. Passa outro… lotado. Às nove e vinte, ela ainda está no ponto. A consulta, que levou meses para marcar, ficou para depois. A Carla abre o Mapiii. Com o celular no bolso, ela espera em casa, até o aviso: ônibus acessível chegando. Ela sai na hora certa, a rampa desce, e às oito e cinquenta e cinco ela está na clínica. Mesma cidade. Mesmo ônibus. Dias diferentes."
+
+Atenção ao limite de 3 min: com a fala em cerca de 27 s, o vídeo fica com cerca de 2:56.
+
 ## Atualização de 18/11: comparação "sem × com" e os 3 passos no vídeo (falta 1 áudio)
 
 Ideias do vídeo de referência do Agro+: a cena 25 (comparação, depois da apresentação do Mapiii) e a cena 26 (Mapiii em 3 passos, sem fala, antes do fecho). O vídeo fica com cerca de 2:35.
