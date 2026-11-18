@@ -384,58 +384,58 @@
   "palavras": [
    {
     "texto": "E",
-    "inicio": 25.45,
-    "fim": 25.51
+    "inicio": 25.63,
+    "fim": 25.69
    },
    {
     "texto": "se",
-    "inicio": 25.51,
-    "fim": 25.64
+    "inicio": 25.69,
+    "fim": 25.82
    },
    {
     "texto": "o",
-    "inicio": 25.64,
-    "fim": 25.71
+    "inicio": 25.82,
+    "fim": 25.89
    },
    {
     "texto": "caminho",
-    "inicio": 25.71,
-    "fim": 25.91
+    "inicio": 25.89,
+    "fim": 26.09
    },
    {
     "texto": "coubesse",
-    "inicio": 25.91,
-    "fim": 26.26
+    "inicio": 26.09,
+    "fim": 26.44
    },
    {
     "texto": "no",
-    "inicio": 26.26,
-    "fim": 26.41
+    "inicio": 26.44,
+    "fim": 26.59
    },
    {
     "texto": "bolso,",
-    "inicio": 26.41,
-    "fim": 26.92
+    "inicio": 26.59,
+    "fim": 27.1
    },
    {
     "texto": "com",
-    "inicio": 26.92,
-    "fim": 27.29
+    "inicio": 27.1,
+    "fim": 27.47
    },
    {
     "texto": "a",
-    "inicio": 27.29,
-    "fim": 27.55
+    "inicio": 27.47,
+    "fim": 27.73
    },
    {
     "texto": "fonte",
-    "inicio": 27.55,
-    "fim": 27.88
+    "inicio": 27.73,
+    "fim": 28.06
    },
    {
     "texto": "junto?",
-    "inicio": 27.88,
-    "fim": 28.34
+    "inicio": 28.06,
+    "fim": 28.52
    }
   ]
  },
@@ -445,118 +445,118 @@
   "palavras": [
    {
     "texto": "Esse",
-    "inicio": 28.69,
-    "fim": 28.99
-   },
-   {
-    "texto": "é",
-    "inicio": 28.99,
+    "inicio": 28.87,
     "fim": 29.17
    },
    {
-    "texto": "o",
+    "texto": "é",
     "inicio": 29.17,
-    "fim": 29.23
+    "fim": 29.35
+   },
+   {
+    "texto": "o",
+    "inicio": 29.35,
+    "fim": 29.41
    },
    {
     "texto": "Mapiii.",
-    "inicio": 29.23,
-    "fim": 29.45
+    "inicio": 29.41,
+    "fim": 29.63
    },
    {
     "texto": "O",
-    "inicio": 29.82,
-    "fim": 29.89
+    "inicio": 30.0,
+    "fim": 30.07
    },
    {
     "texto": "mapa",
-    "inicio": 29.89,
-    "fim": 30.12
+    "inicio": 30.07,
+    "fim": 30.3
    },
    {
     "texto": "dos",
-    "inicio": 30.12,
-    "fim": 30.31
+    "inicio": 30.3,
+    "fim": 30.49
    },
    {
     "texto": "seus",
-    "inicio": 30.31,
-    "fim": 30.55
+    "inicio": 30.49,
+    "fim": 30.73
    },
    {
     "texto": "direitos.",
-    "inicio": 30.55,
-    "fim": 30.93
+    "inicio": 30.73,
+    "fim": 31.11
    },
    {
     "texto": "E",
-    "inicio": 31.38,
-    "fim": 31.44
+    "inicio": 31.56,
+    "fim": 31.62
    },
    {
     "texto": "esse",
-    "inicio": 31.44,
-    "fim": 31.8
+    "inicio": 31.62,
+    "fim": 31.98
    },
    {
     "texto": "é",
-    "inicio": 31.8,
-    "fim": 32.07
+    "inicio": 31.98,
+    "fim": 32.25
    },
    {
     "texto": "o",
-    "inicio": 32.07,
-    "fim": 32.13
+    "inicio": 32.25,
+    "fim": 32.31
    },
    {
     "texto": "Leco.",
-    "inicio": 32.13,
-    "fim": 32.44
+    "inicio": 32.31,
+    "fim": 32.62
    },
    {
     "texto": "Ele",
-    "inicio": 33.05,
-    "fim": 33.2
+    "inicio": 33.23,
+    "fim": 33.38
    },
    {
     "texto": "começa",
-    "inicio": 33.2,
-    "fim": 33.57
+    "inicio": 33.38,
+    "fim": 33.75
    },
    {
     "texto": "pela",
-    "inicio": 33.57,
-    "fim": 33.66
+    "inicio": 33.75,
+    "fim": 33.84
    },
    {
     "texto": "mobilidade:",
-    "inicio": 33.66,
-    "fim": 34.32
+    "inicio": 33.84,
+    "fim": 34.5
    },
    {
     "texto": "ônibus,",
-    "inicio": 34.68,
-    "fim": 35.09
+    "inicio": 34.86,
+    "fim": 35.27
    },
    {
     "texto": "carro,",
-    "inicio": 35.31,
-    "fim": 35.63
+    "inicio": 35.49,
+    "fim": 35.81
    },
    {
     "texto": "calçada",
-    "inicio": 35.63,
-    "fim": 36.25
+    "inicio": 35.81,
+    "fim": 36.43
    },
    {
     "texto": "e",
-    "inicio": 36.25,
-    "fim": 36.38
+    "inicio": 36.43,
+    "fim": 36.56
    },
    {
     "texto": "reclamação.",
-    "inicio": 36.38,
-    "fim": 37.19
+    "inicio": 36.56,
+    "fim": 37.37
    }
   ]
  },
@@ -566,98 +566,98 @@
   "palavras": [
    {
     "texto": "Você",
-    "inicio": 37.982,
-    "fim": 38.222
+    "inicio": 38.162,
+    "fim": 38.402
    },
    {
     "texto": "responde",
-    "inicio": 38.222,
-    "fim": 38.672
+    "inicio": 38.402,
+    "fim": 38.852
    },
    {
     "texto": "poucas",
-    "inicio": 38.672,
-    "fim": 39.202
+    "inicio": 38.852,
+    "fim": 39.382
    },
    {
     "texto": "perguntas,",
-    "inicio": 39.202,
-    "fim": 39.892
+    "inicio": 39.382,
+    "fim": 40.072
    },
    {
     "texto": "sem",
-    "inicio": 39.892,
-    "fim": 40.112
+    "inicio": 40.072,
+    "fim": 40.292
    },
    {
     "texto": "nome",
-    "inicio": 40.112,
-    "fim": 40.392
+    "inicio": 40.292,
+    "fim": 40.572
    },
    {
     "texto": "e",
-    "inicio": 40.392,
-    "fim": 40.452
+    "inicio": 40.572,
+    "fim": 40.632
    },
    {
     "texto": "sem",
-    "inicio": 40.452,
-    "fim": 40.682
+    "inicio": 40.632,
+    "fim": 40.862
    },
    {
     "texto": "CPF.",
-    "inicio": 40.682,
-    "fim": 41.512
+    "inicio": 40.862,
+    "fim": 41.692
    },
    {
     "texto": "Ele",
-    "inicio": 41.512,
-    "fim": 41.592
+    "inicio": 41.692,
+    "fim": 41.772
    },
    {
     "texto": "mostra",
-    "inicio": 41.592,
-    "fim": 41.962
+    "inicio": 41.772,
+    "fim": 42.142
    },
    {
     "texto": "o",
-    "inicio": 41.962,
-    "fim": 42.022
+    "inicio": 42.142,
+    "fim": 42.202
    },
    {
     "texto": "que",
-    "inicio": 42.022,
-    "fim": 42.082
+    "inicio": 42.202,
+    "fim": 42.262
    },
    {
     "texto": "você",
-    "inicio": 42.082,
-    "fim": 42.342
+    "inicio": 42.262,
+    "fim": 42.522
    },
    {
     "texto": "pode",
-    "inicio": 42.342,
-    "fim": 42.612
+    "inicio": 42.522,
+    "fim": 42.792
    },
    {
     "texto": "pedir,",
-    "inicio": 42.612,
-    "fim": 43.002
+    "inicio": 42.792,
+    "fim": 43.182
    },
    {
     "texto": "e",
-    "inicio": 43.002,
-    "fim": 43.082
+    "inicio": 43.182,
+    "fim": 43.262
    },
    {
     "texto": "por",
-    "inicio": 43.082,
-    "fim": 43.462
+    "inicio": 43.262,
+    "fim": 43.642
    },
    {
     "texto": "quê.",
-    "inicio": 43.462,
-    "fim": 43.702
+    "inicio": 43.642,
+    "fim": 43.882
    }
   ]
  },
@@ -667,108 +667,108 @@
   "palavras": [
    {
     "texto": "Nunca",
-    "inicio": 57.486,
-    "fim": 58.166
+    "inicio": 56.73,
+    "fim": 57.41
    },
    {
     "texto": "diz",
-    "inicio": 58.166,
-    "fim": 58.546
+    "inicio": 57.41,
+    "fim": 57.79
    },
    {
     "texto": "\"você",
-    "inicio": 58.546,
-    "fim": 58.856
+    "inicio": 57.79,
+    "fim": 58.1
    },
    {
     "texto": "tem",
-    "inicio": 58.856,
-    "fim": 59.136
+    "inicio": 58.1,
+    "fim": 58.38
    },
    {
     "texto": "direito\".",
-    "inicio": 59.136,
-    "fim": 60.476
+    "inicio": 58.38,
+    "fim": 59.72
    },
    {
     "texto": "Diz",
-    "inicio": 60.476,
-    "fim": 60.696
+    "inicio": 59.72,
+    "fim": 59.94
    },
    {
     "texto": "\"pode",
-    "inicio": 60.696,
-    "fim": 60.926
+    "inicio": 59.94,
+    "fim": 60.17
    },
    {
     "texto": "ter",
-    "inicio": 60.926,
-    "fim": 61.176
+    "inicio": 60.17,
+    "fim": 60.42
    },
    {
     "texto": "direito\".",
-    "inicio": 61.176,
-    "fim": 62.206
+    "inicio": 60.42,
+    "fim": 61.45
    },
    {
     "texto": "E",
-    "inicio": 62.206,
-    "fim": 62.286
+    "inicio": 61.45,
+    "fim": 61.53
    },
    {
     "texto": "mostra",
-    "inicio": 62.286,
-    "fim": 62.506
+    "inicio": 61.53,
+    "fim": 61.75
    },
    {
     "texto": "a",
-    "inicio": 62.506,
-    "fim": 62.566
+    "inicio": 61.75,
+    "fim": 61.81
    },
    {
     "texto": "fonte",
-    "inicio": 62.566,
-    "fim": 62.946
+    "inicio": 61.81,
+    "fim": 62.19
    },
    {
     "texto": "oficial,",
-    "inicio": 62.946,
-    "fim": 63.506
+    "inicio": 62.19,
+    "fim": 62.75
    },
    {
     "texto": "com",
-    "inicio": 63.506,
-    "fim": 63.716
+    "inicio": 62.75,
+    "fim": 62.96
    },
    {
     "texto": "a",
-    "inicio": 63.716,
-    "fim": 63.836
+    "inicio": 62.96,
+    "fim": 63.08
    },
    {
     "texto": "data",
-    "inicio": 63.836,
-    "fim": 63.966
+    "inicio": 63.08,
+    "fim": 63.21
    },
    {
     "texto": "em",
-    "inicio": 63.966,
-    "fim": 64.106
+    "inicio": 63.21,
+    "fim": 63.35
    },
    {
     "texto": "que",
-    "inicio": 64.106,
-    "fim": 64.166
+    "inicio": 63.35,
+    "fim": 63.41
    },
    {
     "texto": "foi",
-    "inicio": 64.166,
-    "fim": 64.296
+    "inicio": 63.41,
+    "fim": 63.54
    },
    {
     "texto": "conferida.",
-    "inicio": 64.296,
-    "fim": 64.796
+    "inicio": 63.54,
+    "fim": 64.04
    }
   ]
  },
@@ -778,128 +778,128 @@
   "palavras": [
    {
     "texto": "Na",
-    "inicio": 103.706,
-    "fim": 104.176
+    "inicio": 102.724,
+    "fim": 103.194
    },
    {
     "texto": "rua,",
-    "inicio": 104.176,
-    "fim": 104.446
+    "inicio": 103.194,
+    "fim": 103.464
    },
    {
     "texto": "se",
-    "inicio": 104.446,
-    "fim": 104.636
+    "inicio": 103.464,
+    "fim": 103.654
    },
    {
     "texto": "o",
-    "inicio": 104.636,
-    "fim": 104.706
+    "inicio": 103.654,
+    "fim": 103.724
    },
    {
     "texto": "motorista",
-    "inicio": 104.706,
-    "fim": 105.666
+    "inicio": 103.724,
+    "fim": 104.684
    },
    {
     "texto": "disser",
-    "inicio": 105.666,
-    "fim": 105.916
+    "inicio": 104.684,
+    "fim": 104.934
    },
    {
     "texto": "que",
-    "inicio": 105.916,
-    "fim": 105.976
+    "inicio": 104.934,
+    "fim": 104.994
    },
    {
     "texto": "não",
-    "inicio": 105.976,
-    "fim": 106.106
+    "inicio": 104.994,
+    "fim": 105.124
    },
    {
     "texto": "pode,",
-    "inicio": 106.106,
-    "fim": 106.496
+    "inicio": 105.124,
+    "fim": 105.514
    },
    {
     "texto": "você",
-    "inicio": 106.496,
-    "fim": 106.896
+    "inicio": 105.514,
+    "fim": 105.914
    },
    {
     "texto": "vira",
-    "inicio": 106.896,
-    "fim": 107.066
+    "inicio": 105.914,
+    "fim": 106.084
    },
    {
     "texto": "a",
-    "inicio": 107.066,
-    "fim": 107.366
+    "inicio": 106.084,
+    "fim": 106.384
    },
    {
     "texto": "tela:",
-    "inicio": 107.366,
-    "fim": 107.926
+    "inicio": 106.384,
+    "fim": 106.944
    },
    {
     "texto": "letra",
-    "inicio": 107.926,
-    "fim": 108.226
+    "inicio": 106.944,
+    "fim": 107.244
    },
    {
     "texto": "grande,",
-    "inicio": 108.226,
-    "fim": 108.886
+    "inicio": 107.244,
+    "fim": 107.904
    },
    {
     "texto": "a",
-    "inicio": 108.886,
-    "fim": 109.086
+    "inicio": 107.904,
+    "fim": 108.104
    },
    {
     "texto": "lei,",
-    "inicio": 109.086,
-    "fim": 109.346
+    "inicio": 108.104,
+    "fim": 108.364
    },
    {
     "texto": "e",
-    "inicio": 109.346,
-    "fim": 109.716
+    "inicio": 108.364,
+    "fim": 108.734
    },
    {
     "texto": "um",
-    "inicio": 109.716,
-    "fim": 109.906
+    "inicio": 108.734,
+    "fim": 108.924
    },
    {
     "texto": "código",
-    "inicio": 109.906,
-    "fim": 110.296
+    "inicio": 108.924,
+    "fim": 109.314
    },
    {
     "texto": "que",
-    "inicio": 110.296,
-    "fim": 110.356
+    "inicio": 109.314,
+    "fim": 109.374
    },
    {
     "texto": "abre",
-    "inicio": 110.356,
-    "fim": 110.676
+    "inicio": 109.374,
+    "fim": 109.694
    },
    {
     "texto": "o",
-    "inicio": 110.676,
-    "fim": 110.766
+    "inicio": 109.694,
+    "fim": 109.784
    },
    {
     "texto": "texto",
-    "inicio": 110.766,
-    "fim": 110.906
+    "inicio": 109.784,
+    "fim": 109.924
    },
    {
     "texto": "oficial.",
-    "inicio": 110.906,
-    "fim": 111.726
+    "inicio": 109.924,
+    "fim": 110.744
    }
   ]
  },
@@ -909,98 +909,98 @@
   "palavras": [
    {
     "texto": "E",
-    "inicio": 65.376,
-    "fim": 65.466
+    "inicio": 64.684,
+    "fim": 64.774
    },
    {
     "texto": "com",
-    "inicio": 65.466,
-    "fim": 65.636
+    "inicio": 64.774,
+    "fim": 64.944
    },
    {
     "texto": "o",
-    "inicio": 65.636,
-    "fim": 65.696
+    "inicio": 64.944,
+    "fim": 65.004
    },
    {
     "texto": "celular",
-    "inicio": 65.696,
-    "fim": 65.886
+    "inicio": 65.004,
+    "fim": 65.194
    },
    {
     "texto": "no",
-    "inicio": 65.886,
-    "fim": 65.966
+    "inicio": 65.194,
+    "fim": 65.274
    },
    {
     "texto": "bolso,",
-    "inicio": 65.966,
-    "fim": 66.226
+    "inicio": 65.274,
+    "fim": 65.534
    },
    {
     "texto": "ele",
-    "inicio": 66.226,
-    "fim": 66.326
+    "inicio": 65.534,
+    "fim": 65.634
    },
    {
     "texto": "pode",
-    "inicio": 66.326,
-    "fim": 66.546
+    "inicio": 65.634,
+    "fim": 65.854
    },
    {
     "texto": "avisar",
-    "inicio": 66.546,
-    "fim": 67.066
+    "inicio": 65.854,
+    "fim": 66.374
    },
    {
     "texto": "em",
-    "inicio": 67.066,
-    "fim": 67.206
+    "inicio": 66.374,
+    "fim": 66.514
    },
    {
     "texto": "voz",
-    "inicio": 67.206,
-    "fim": 67.466
+    "inicio": 66.514,
+    "fim": 66.774
    },
    {
     "texto": "alta",
-    "inicio": 67.466,
-    "fim": 67.736
+    "inicio": 66.774,
+    "fim": 67.044
    },
    {
     "texto": "quando",
-    "inicio": 67.736,
-    "fim": 68.086
+    "inicio": 67.044,
+    "fim": 67.394
    },
    {
     "texto": "o",
-    "inicio": 68.086,
-    "fim": 68.156
+    "inicio": 67.394,
+    "fim": 67.464
    },
    {
     "texto": "próximo",
-    "inicio": 68.156,
-    "fim": 68.446
+    "inicio": 67.464,
+    "fim": 67.754
    },
    {
     "texto": "ônibus",
-    "inicio": 68.446,
-    "fim": 68.766
+    "inicio": 67.754,
+    "fim": 68.074
    },
    {
     "texto": "acessível",
-    "inicio": 68.766,
-    "fim": 69.376
+    "inicio": 68.074,
+    "fim": 68.684
    },
    {
     "texto": "está",
-    "inicio": 69.376,
-    "fim": 69.576
+    "inicio": 68.684,
+    "fim": 68.884
    },
    {
     "texto": "chegando.",
-    "inicio": 69.576,
-    "fim": 70.466
+    "inicio": 68.884,
+    "fim": 69.774
    }
   ]
  },
@@ -1010,78 +1010,78 @@
   "palavras": [
    {
     "texto": "Ele",
-    "inicio": 122.186,
-    "fim": 122.316
+    "inicio": 120.63,
+    "fim": 120.76
    },
    {
     "texto": "também",
-    "inicio": 122.316,
-    "fim": 122.566
+    "inicio": 120.76,
+    "fim": 121.01
    },
    {
     "texto": "sabe",
-    "inicio": 122.566,
-    "fim": 122.816
+    "inicio": 121.01,
+    "fim": 121.26
    },
    {
     "texto": "dizer",
-    "inicio": 122.816,
-    "fim": 123.076
+    "inicio": 121.26,
+    "fim": 121.52
    },
    {
     "texto": "não.",
-    "inicio": 123.076,
-    "fim": 123.236
+    "inicio": 121.52,
+    "fim": 121.68
    },
    {
     "texto": "Remédio",
-    "inicio": 123.586,
-    "fim": 123.906
+    "inicio": 122.03,
+    "fim": 122.35
    },
    {
     "texto": "ou",
-    "inicio": 123.906,
-    "fim": 123.986
+    "inicio": 122.35,
+    "fim": 122.43
    },
    {
     "texto": "processo?",
-    "inicio": 123.986,
-    "fim": 124.466
+    "inicio": 122.43,
+    "fim": 122.91
    },
    {
     "texto": "Mostra",
-    "inicio": 124.956,
-    "fim": 125.156
+    "inicio": 123.4,
+    "fim": 123.6
    },
    {
     "texto": "quem",
-    "inicio": 125.156,
-    "fim": 125.366
+    "inicio": 123.6,
+    "fim": 123.81
    },
    {
     "texto": "pode",
-    "inicio": 125.366,
-    "fim": 125.536
+    "inicio": 123.81,
+    "fim": 123.98
    },
    {
     "texto": "ajudar.",
-    "inicio": 125.536,
-    "fim": 125.946
+    "inicio": 123.98,
+    "fim": 124.39
    },
    {
     "texto": "Emergência?",
-    "inicio": 126.226,
-    "fim": 126.806
+    "inicio": 124.67,
+    "fim": 125.25
    },
    {
     "texto": "Ligue",
-    "inicio": 127.156,
-    "fim": 127.346
+    "inicio": 125.6,
+    "fim": 125.79
    },
    {
     "texto": "192.",
-    "inicio": 127.346,
-    "fim": 128.116
+    "inicio": 125.79,
+    "fim": 126.56
    }
   ]
  },
@@ -1091,98 +1091,98 @@
   "palavras": [
    {
     "texto": "E",
-    "inicio": 135.24,
-    "fim": 135.53
+    "inicio": 133.454,
+    "fim": 133.744
    },
    {
     "texto": "a",
-    "inicio": 135.53,
-    "fim": 135.6
+    "inicio": 133.744,
+    "fim": 133.814
    },
    {
     "texto": "gente",
-    "inicio": 135.6,
-    "fim": 136.05
+    "inicio": 133.814,
+    "fim": 134.264
    },
    {
     "texto": "mediu.",
-    "inicio": 136.05,
-    "fim": 136.37
+    "inicio": 134.264,
+    "fim": 134.584
    },
    {
     "texto": "Das",
-    "inicio": 136.37,
-    "fim": 136.47
+    "inicio": 134.584,
+    "fim": 134.684
    },
    {
     "texto": "doze",
-    "inicio": 136.47,
-    "fim": 136.73
+    "inicio": 134.684,
+    "fim": 134.944
    },
    {
     "texto": "perguntas",
-    "inicio": 136.73,
-    "fim": 137.44
+    "inicio": 134.944,
+    "fim": 135.654
    },
    {
     "texto": "que",
-    "inicio": 137.44,
-    "fim": 137.52
+    "inicio": 135.654,
+    "fim": 135.734
    },
    {
     "texto": "ele",
-    "inicio": 137.52,
-    "fim": 137.68
+    "inicio": 135.734,
+    "fim": 135.894
    },
    {
     "texto": "precisava",
-    "inicio": 137.68,
-    "fim": 138.66
+    "inicio": 135.894,
+    "fim": 136.874
    },
    {
     "texto": "recusar,",
-    "inicio": 138.66,
-    "fim": 139.22
+    "inicio": 136.874,
+    "fim": 137.434
    },
    {
     "texto": "recusou",
-    "inicio": 139.22,
-    "fim": 140.27
+    "inicio": 137.434,
+    "fim": 138.484
    },
    {
     "texto": "as",
-    "inicio": 140.27,
-    "fim": 140.55
+    "inicio": 138.484,
+    "fim": 138.764
    },
    {
     "texto": "doze.",
-    "inicio": 140.55,
-    "fim": 140.73
+    "inicio": 138.764,
+    "fim": 138.944
    },
    {
     "texto": "E",
-    "inicio": 140.73,
-    "fim": 141.04
+    "inicio": 138.944,
+    "fim": 139.254
    },
    {
     "texto": "nota",
-    "inicio": 141.04,
-    "fim": 141.43
+    "inicio": 139.254,
+    "fim": 139.644
    },
    {
     "texto": "máxima",
-    "inicio": 141.43,
-    "fim": 141.85
+    "inicio": 139.644,
+    "fim": 140.064
    },
    {
     "texto": "de",
-    "inicio": 141.85,
-    "fim": 141.91
+    "inicio": 140.064,
+    "fim": 140.124
    },
    {
     "texto": "acessibilidade.",
-    "inicio": 141.91,
-    "fim": 142.93
+    "inicio": 140.124,
+    "fim": 141.144
    }
   ]
  },
@@ -1192,78 +1192,78 @@
   "palavras": [
    {
     "texto": "E",
-    "inicio": 143.51,
-    "fim": 143.68
+    "inicio": 141.604,
+    "fim": 141.774
    },
    {
     "texto": "ainda:",
-    "inicio": 143.68,
-    "fim": 143.98
+    "inicio": 141.774,
+    "fim": 142.074
    },
    {
     "texto": "funciona",
-    "inicio": 144.24,
-    "fim": 144.63
+    "inicio": 142.334,
+    "fim": 142.724
    },
    {
     "texto": "sem",
-    "inicio": 144.63,
-    "fim": 144.84
+    "inicio": 142.724,
+    "fim": 142.934
    },
    {
     "texto": "internet,",
-    "inicio": 144.84,
-    "fim": 145.38
+    "inicio": 142.934,
+    "fim": 143.474
    },
    {
     "texto": "com",
-    "inicio": 145.65,
-    "fim": 145.75
+    "inicio": 143.744,
+    "fim": 143.844
    },
    {
     "texto": "um",
-    "inicio": 145.75,
-    "fim": 145.93
+    "inicio": 143.844,
+    "fim": 144.024
    },
    {
     "texto": "toque,",
-    "inicio": 145.93,
-    "fim": 146.09
+    "inicio": 144.024,
+    "fim": 144.184
    },
    {
     "texto": "e",
-    "inicio": 146.09,
-    "fim": 146.15
+    "inicio": 144.184,
+    "fim": 144.244
    },
    {
     "texto": "lê",
-    "inicio": 146.15,
-    "fim": 146.31
+    "inicio": 144.244,
+    "fim": 144.404
    },
    {
     "texto": "a",
-    "inicio": 146.31,
-    "fim": 146.37
+    "inicio": 144.404,
+    "fim": 144.464
    },
    {
     "texto": "resposta",
-    "inicio": 146.67,
-    "fim": 146.92
+    "inicio": 144.764,
+    "fim": 145.014
    },
    {
     "texto": "em",
-    "inicio": 146.92,
-    "fim": 147.06
+    "inicio": 145.014,
+    "fim": 145.154
    },
    {
     "texto": "voz",
-    "inicio": 147.06,
-    "fim": 147.3
+    "inicio": 145.154,
+    "fim": 145.394
    },
    {
     "texto": "alta.",
-    "inicio": 147.3,
-    "fim": 147.72
+    "inicio": 145.394,
+    "fim": 145.814
    }
   ]
  },
@@ -1273,58 +1273,58 @@
   "palavras": [
    {
     "texto": "Começamos",
-    "inicio": 148.02,
-    "fim": 148.72
+    "inicio": 146.146,
+    "fim": 146.846
    },
    {
     "texto": "por",
-    "inicio": 148.72,
-    "fim": 148.83
+    "inicio": 146.846,
+    "fim": 146.956
    },
    {
     "texto": "São",
-    "inicio": 148.83,
-    "fim": 148.98
+    "inicio": 146.956,
+    "fim": 147.106
    },
    {
     "texto": "Paulo.",
-    "inicio": 148.98,
-    "fim": 149.25
+    "inicio": 147.106,
+    "fim": 147.376
    },
    {
     "texto": "A",
-    "inicio": 149.25,
-    "fim": 149.49
+    "inicio": 147.376,
+    "fim": 147.616
    },
    {
     "texto": "SPTrans",
-    "inicio": 149.49,
-    "fim": 150.1
+    "inicio": 147.616,
+    "fim": 148.226
    },
    {
     "texto": "é",
-    "inicio": 150.1,
-    "fim": 150.28
+    "inicio": 148.226,
+    "fim": 148.406
    },
    {
     "texto": "só",
-    "inicio": 150.28,
-    "fim": 150.42
+    "inicio": 148.406,
+    "fim": 148.546
    },
    {
     "texto": "o",
-    "inicio": 150.42,
-    "fim": 150.62
+    "inicio": 148.546,
+    "fim": 148.746
    },
    {
     "texto": "primeiro",
-    "inicio": 150.62,
-    "fim": 150.86
+    "inicio": 148.746,
+    "fim": 148.986
    },
    {
     "texto": "exemplo.",
-    "inicio": 150.86,
-    "fim": 151.22
+    "inicio": 148.986,
+    "fim": 149.346
    }
   ]
  },
@@ -1334,128 +1334,128 @@
   "palavras": [
    {
     "texto": "O",
-    "inicio": 151.51,
-    "fim": 151.69
+    "inicio": 149.636,
+    "fim": 149.816
    },
    {
     "texto": "Mapiii",
-    "inicio": 151.69,
-    "fim": 151.96
+    "inicio": 149.816,
+    "fim": 150.086
    },
    {
     "texto": "é",
-    "inicio": 151.96,
-    "fim": 152.18
+    "inicio": 150.086,
+    "fim": 150.306
    },
    {
     "texto": "feito",
-    "inicio": 152.18,
-    "fim": 152.44
+    "inicio": 150.306,
+    "fim": 150.566
    },
    {
     "texto": "de",
-    "inicio": 152.44,
-    "fim": 152.54
+    "inicio": 150.566,
+    "fim": 150.666
    },
    {
     "texto": "fichas",
-    "inicio": 152.54,
-    "fim": 152.93
+    "inicio": 150.666,
+    "fim": 151.056
    },
    {
     "texto": "com",
-    "inicio": 152.93,
-    "fim": 153.09
+    "inicio": 151.056,
+    "fim": 151.216
    },
    {
     "texto": "fonte",
-    "inicio": 153.09,
-    "fim": 153.41
+    "inicio": 151.216,
+    "fim": 151.536
    },
    {
     "texto": "oficial.",
-    "inicio": 153.41,
-    "fim": 153.8
+    "inicio": 151.536,
+    "fim": 151.926
    },
    {
     "texto": "Troque",
-    "inicio": 154.26,
-    "fim": 154.49
+    "inicio": 152.386,
+    "fim": 152.616
    },
    {
     "texto": "a",
-    "inicio": 154.49,
-    "fim": 154.56
+    "inicio": 152.616,
+    "fim": 152.686
    },
    {
     "texto": "base,",
-    "inicio": 154.56,
-    "fim": 154.86
+    "inicio": 152.686,
+    "fim": 152.986
    },
    {
     "texto": "e",
-    "inicio": 154.86,
-    "fim": 154.92
+    "inicio": 152.986,
+    "fim": 153.046
    },
    {
     "texto": "ele",
-    "inicio": 154.92,
-    "fim": 155.12
+    "inicio": 153.046,
+    "fim": 153.246
    },
    {
     "texto": "pode",
-    "inicio": 155.12,
-    "fim": 155.3
+    "inicio": 153.246,
+    "fim": 153.426
    },
    {
     "texto": "funcionar",
-    "inicio": 155.3,
-    "fim": 155.64
+    "inicio": 153.426,
+    "fim": 153.766
    },
    {
     "texto": "em",
-    "inicio": 155.64,
-    "fim": 155.75
+    "inicio": 153.766,
+    "fim": 153.876
    },
    {
     "texto": "outra",
-    "inicio": 155.75,
-    "fim": 155.91
+    "inicio": 153.876,
+    "fim": 154.036
    },
    {
     "texto": "cidade.",
-    "inicio": 155.91,
-    "fim": 156.4
+    "inicio": 154.036,
+    "fim": 154.526
    },
    {
     "texto": "Em",
-    "inicio": 156.4,
-    "fim": 156.57
+    "inicio": 154.526,
+    "fim": 154.696
    },
    {
     "texto": "outro",
-    "inicio": 156.57,
-    "fim": 156.79
+    "inicio": 154.696,
+    "fim": 154.916
    },
    {
     "texto": "estado.",
-    "inicio": 156.79,
-    "fim": 157.33
+    "inicio": 154.916,
+    "fim": 155.456
    },
    {
     "texto": "Em",
-    "inicio": 157.33,
-    "fim": 157.9
+    "inicio": 155.456,
+    "fim": 156.026
    },
    {
     "texto": "outro",
-    "inicio": 157.9,
-    "fim": 158.13
+    "inicio": 156.026,
+    "fim": 156.256
    },
    {
     "texto": "país.",
-    "inicio": 158.13,
-    "fim": 158.57
+    "inicio": 156.256,
+    "fim": 156.696
    }
   ]
  },
@@ -1465,43 +1465,43 @@
   "palavras": [
    {
     "texto": "Menos",
-    "inicio": 165.734,
-    "fim": 166.084
+    "inicio": 163.364,
+    "fim": 163.714
    },
    {
     "texto": "desigualdade.",
-    "inicio": 166.084,
-    "fim": 166.604
+    "inicio": 163.714,
+    "fim": 164.234
    },
    {
     "texto": "Cidades",
-    "inicio": 167.034,
-    "fim": 167.434
+    "inicio": 164.664,
+    "fim": 165.064
    },
    {
     "texto": "que",
-    "inicio": 167.434,
-    "fim": 167.494
+    "inicio": 165.064,
+    "fim": 165.124
    },
    {
     "texto": "funcionam",
-    "inicio": 167.494,
-    "fim": 167.904
+    "inicio": 165.124,
+    "fim": 165.534
    },
    {
     "texto": "para",
-    "inicio": 167.904,
-    "fim": 168.214
+    "inicio": 165.534,
+    "fim": 165.844
    },
    {
     "texto": "todo",
-    "inicio": 168.214,
-    "fim": 168.374
+    "inicio": 165.844,
+    "fim": 166.004
    },
    {
     "texto": "mundo.",
-    "inicio": 168.374,
-    "fim": 168.674
+    "inicio": 166.004,
+    "fim": 166.304
    }
   ]
  },
@@ -1511,73 +1511,73 @@
   "palavras": [
    {
     "texto": "Ninguém",
-    "inicio": 169.084,
-    "fim": 169.474
+    "inicio": 170.034,
+    "fim": 170.424
    },
    {
     "texto": "deveria",
-    "inicio": 169.474,
-    "fim": 169.804
-   },
-   {
-    "texto": "ficar",
-    "inicio": 169.804,
-    "fim": 170.024
-   },
-   {
-    "texto": "no",
-    "inicio": 170.024,
-    "fim": 170.104
-   },
-   {
-    "texto": "ponto.",
-    "inicio": 170.104,
-    "fim": 170.544
-   },
-   {
-    "texto": "Você",
-    "inicio": 170.544,
+    "inicio": 170.424,
     "fim": 170.754
    },
    {
-    "texto": "pode",
+    "texto": "ficar",
     "inicio": 170.754,
-    "fim": 171.044
+    "fim": 170.974
+   },
+   {
+    "texto": "no",
+    "inicio": 170.974,
+    "fim": 171.054
+   },
+   {
+    "texto": "ponto.",
+    "inicio": 171.054,
+    "fim": 171.494
+   },
+   {
+    "texto": "Você",
+    "inicio": 171.494,
+    "fim": 171.704
+   },
+   {
+    "texto": "pode",
+    "inicio": 171.704,
+    "fim": 171.994
    },
    {
     "texto": "ter",
-    "inicio": 171.044,
-    "fim": 171.214
+    "inicio": 171.994,
+    "fim": 172.164
    },
    {
     "texto": "direito.",
-    "inicio": 171.214,
-    "fim": 171.594
-   },
-   {
-    "texto": "Agora,",
-    "inicio": 171.594,
-    "fim": 172.074
-   },
-   {
-    "texto": "você",
-    "inicio": 172.074,
-    "fim": 172.344
-   },
-   {
-    "texto": "sabe",
-    "inicio": 172.344,
+    "inicio": 172.164,
     "fim": 172.544
    },
    {
-    "texto": "onde",
+    "texto": "Agora,",
     "inicio": 172.544,
-    "fim": 172.754
+    "fim": 173.024
+   },
+   {
+    "texto": "você",
+    "inicio": 173.024,
+    "fim": 173.294
+   },
+   {
+    "texto": "sabe",
+    "inicio": 173.294,
+    "fim": 173.494
+   },
+   {
+    "texto": "onde",
+    "inicio": 173.494,
+    "fim": 173.704
    },
    {
     "texto": "ir.",
-    "inicio": 172.754,
-    "fim": 172.974
+    "inicio": 173.704,
+    "fim": 173.924
    }
   ]
  },
@@ -1587,33 +1587,33 @@
   "palavras": [
    {
     "texto": "Mapiii.",
-    "inicio": 173.884,
-    "fim": 174.314
+    "inicio": 174.834,
+    "fim": 175.264
    },
    {
     "texto": "O",
-    "inicio": 174.674,
-    "fim": 174.784
+    "inicio": 175.624,
+    "fim": 175.734
    },
    {
     "texto": "mapa",
-    "inicio": 174.784,
-    "fim": 174.944
+    "inicio": 175.734,
+    "fim": 175.894
    },
    {
     "texto": "dos",
-    "inicio": 174.944,
-    "fim": 175.174
+    "inicio": 175.894,
+    "fim": 176.124
    },
    {
     "texto": "seus",
-    "inicio": 175.174,
-    "fim": 175.364
+    "inicio": 176.124,
+    "fim": 176.314
    },
    {
     "texto": "direitos.",
-    "inicio": 175.364,
-    "fim": 175.924
+    "inicio": 176.314,
+    "fim": 176.874
    }
   ]
  },
@@ -1623,93 +1623,93 @@
   "palavras": [
    {
     "texto": "Olha",
-    "inicio": 44.112,
-    "fim": 44.362
+    "inicio": 44.21,
+    "fim": 44.46
    },
    {
     "texto": "o",
-    "inicio": 44.362,
-    "fim": 44.432
+    "inicio": 44.46,
+    "fim": 44.53
    },
    {
     "texto": "app",
-    "inicio": 44.432,
-    "fim": 44.532
+    "inicio": 44.53,
+    "fim": 44.63
    },
    {
     "texto": "de",
-    "inicio": 44.532,
-    "fim": 44.672
+    "inicio": 44.63,
+    "fim": 44.77
    },
    {
     "texto": "verdade:",
-    "inicio": 44.672,
-    "fim": 45.102
+    "inicio": 44.77,
+    "fim": 45.2
    },
    {
     "texto": "poucos",
-    "inicio": 45.462,
-    "fim": 45.792
+    "inicio": 45.56,
+    "fim": 45.89
    },
    {
     "texto": "toques,",
-    "inicio": 45.792,
-    "fim": 45.952
+    "inicio": 45.89,
+    "fim": 46.05
    },
    {
     "texto": "e",
-    "inicio": 46.352,
-    "fim": 46.442
+    "inicio": 46.45,
+    "fim": 46.54
    },
    {
     "texto": "ele",
-    "inicio": 46.442,
-    "fim": 46.592
+    "inicio": 46.54,
+    "fim": 46.69
    },
    {
     "texto": "mostra",
-    "inicio": 46.592,
-    "fim": 46.762
+    "inicio": 46.69,
+    "fim": 46.86
    },
    {
     "texto": "o",
-    "inicio": 46.762,
-    "fim": 46.822
+    "inicio": 46.86,
+    "fim": 46.92
    },
    {
     "texto": "que",
-    "inicio": 46.822,
-    "fim": 47.032
+    "inicio": 46.92,
+    "fim": 47.13
    },
    {
     "texto": "pode",
-    "inicio": 47.032,
-    "fim": 47.232
+    "inicio": 47.13,
+    "fim": 47.33
    },
    {
     "texto": "se",
-    "inicio": 47.232,
-    "fim": 47.382
+    "inicio": 47.33,
+    "fim": 47.48
    },
    {
     "texto": "aplicar,",
-    "inicio": 47.382,
-    "fim": 47.962
+    "inicio": 47.48,
+    "fim": 48.06
    },
    {
     "texto": "com",
-    "inicio": 47.962,
-    "fim": 48.132
+    "inicio": 48.06,
+    "fim": 48.23
    },
    {
     "texto": "fonte",
-    "inicio": 48.132,
-    "fim": 48.442
+    "inicio": 48.23,
+    "fim": 48.54
    },
    {
     "texto": "oficial.",
-    "inicio": 48.442,
-    "fim": 48.912
+    "inicio": 48.54,
+    "fim": 49.01
    }
   ]
  },
@@ -1719,58 +1719,58 @@
   "palavras": [
    {
     "texto": "Recebeu",
-    "inicio": 117.796,
-    "fim": 118.316
+    "inicio": 116.494,
+    "fim": 117.014
    },
    {
     "texto": "ou",
-    "inicio": 118.316,
-    "fim": 118.536
+    "inicio": 117.014,
+    "fim": 117.234
    },
    {
     "texto": "achou",
-    "inicio": 118.536,
-    "fim": 118.776
+    "inicio": 117.234,
+    "fim": 117.474
    },
    {
     "texto": "um",
-    "inicio": 118.776,
-    "fim": 118.936
+    "inicio": 117.474,
+    "fim": 117.634
    },
    {
     "texto": "link",
-    "inicio": 118.936,
-    "fim": 119.076
+    "inicio": 117.634,
+    "fim": 117.774
    },
    {
     "texto": "estranho?",
-    "inicio": 119.076,
-    "fim": 119.486
+    "inicio": 117.774,
+    "fim": 118.184
    },
    {
     "texto": "Ele",
-    "inicio": 119.866,
-    "fim": 119.966
+    "inicio": 118.564,
+    "fim": 118.664
    },
    {
     "texto": "avisa",
-    "inicio": 119.966,
-    "fim": 120.346
+    "inicio": 118.664,
+    "fim": 119.044
    },
    {
     "texto": "quando",
-    "inicio": 120.346,
-    "fim": 120.656
+    "inicio": 119.044,
+    "fim": 119.354
    },
    {
     "texto": "parecer",
-    "inicio": 120.656,
-    "fim": 120.976
+    "inicio": 119.354,
+    "fim": 119.674
    },
    {
     "texto": "suspeito.",
-    "inicio": 120.976,
-    "fim": 121.386
+    "inicio": 119.674,
+    "fim": 120.084
    }
   ]
  },
@@ -1780,128 +1780,128 @@
   "palavras": [
    {
     "texto": "Ou",
-    "inicio": 49.668,
-    "fim": 49.798
+    "inicio": 49.42,
+    "fim": 49.55
    },
    {
     "texto": "pergunte",
-    "inicio": 49.798,
-    "fim": 50.208
+    "inicio": 49.55,
+    "fim": 49.96
    },
    {
     "texto": "do",
-    "inicio": 50.208,
-    "fim": 50.298
+    "inicio": 49.96,
+    "fim": 50.05
    },
    {
     "texto": "seu",
-    "inicio": 50.298,
-    "fim": 50.458
+    "inicio": 50.05,
+    "fim": 50.21
    },
    {
     "texto": "jeito,",
-    "inicio": 50.458,
-    "fim": 50.868
+    "inicio": 50.21,
+    "fim": 50.62
    },
    {
     "texto": "escrevendo",
-    "inicio": 50.868,
-    "fim": 51.618
+    "inicio": 50.62,
+    "fim": 51.37
    },
    {
     "texto": "ou",
-    "inicio": 51.618,
-    "fim": 51.718
+    "inicio": 51.37,
+    "fim": 51.47
    },
    {
     "texto": "falando.",
-    "inicio": 51.718,
-    "fim": 52.098
+    "inicio": 51.47,
+    "fim": 51.85
    },
    {
     "texto": "O",
-    "inicio": 52.098,
-    "fim": 52.158
+    "inicio": 51.85,
+    "fim": 51.91
    },
    {
     "texto": "Leco",
-    "inicio": 52.448,
-    "fim": 52.668
+    "inicio": 52.2,
+    "fim": 52.42
    },
    {
     "texto": "procura",
-    "inicio": 52.668,
-    "fim": 53.088
+    "inicio": 52.42,
+    "fim": 52.84
    },
    {
     "texto": "na",
-    "inicio": 53.088,
-    "fim": 53.228
+    "inicio": 52.84,
+    "fim": 52.98
    },
    {
     "texto": "base",
-    "inicio": 53.228,
-    "fim": 53.578
+    "inicio": 52.98,
+    "fim": 53.33
    },
    {
     "texto": "e",
-    "inicio": 53.578,
-    "fim": 53.638
+    "inicio": 53.33,
+    "fim": 53.39
    },
    {
     "texto": "responde",
-    "inicio": 53.638,
-    "fim": 54.068
+    "inicio": 53.39,
+    "fim": 53.82
    },
    {
     "texto": "com",
-    "inicio": 54.068,
-    "fim": 54.238
+    "inicio": 53.82,
+    "fim": 53.99
    },
    {
     "texto": "o",
-    "inicio": 54.238,
-    "fim": 54.298
+    "inicio": 53.99,
+    "fim": 54.05
    },
    {
     "texto": "resumo,",
-    "inicio": 54.298,
-    "fim": 54.728
+    "inicio": 54.05,
+    "fim": 54.48
    },
    {
     "texto": "o",
-    "inicio": 54.728,
-    "fim": 54.788
+    "inicio": 54.48,
+    "fim": 54.54
    },
    {
     "texto": "passo",
-    "inicio": 54.998,
-    "fim": 55.178
+    "inicio": 54.75,
+    "fim": 54.93
    },
    {
     "texto": "a",
-    "inicio": 55.178,
-    "fim": 55.248
+    "inicio": 54.93,
+    "fim": 55.0
    },
    {
     "texto": "passo",
-    "inicio": 55.248,
-    "fim": 55.608
+    "inicio": 55.0,
+    "fim": 55.36
    },
    {
     "texto": "e",
-    "inicio": 55.898,
-    "fim": 55.958
+    "inicio": 55.65,
+    "fim": 55.71
    },
    {
     "texto": "a",
-    "inicio": 55.958,
-    "fim": 56.028
+    "inicio": 55.71,
+    "fim": 55.78
    },
    {
     "texto": "fonte.",
-    "inicio": 56.028,
-    "fim": 56.478
+    "inicio": 55.78,
+    "fim": 56.23
    }
   ]
  },
@@ -1911,133 +1911,133 @@
   "palavras": [
    {
     "texto": "Por",
-    "inicio": 128.526,
-    "fim": 128.636
+    "inicio": 126.974,
+    "fim": 127.084
    },
    {
     "texto": "que",
-    "inicio": 128.636,
-    "fim": 128.786
+    "inicio": 127.084,
+    "fim": 127.234
    },
    {
     "texto": "não",
-    "inicio": 128.786,
-    "fim": 128.946
+    "inicio": 127.234,
+    "fim": 127.394
    },
    {
     "texto": "perguntar",
-    "inicio": 128.946,
-    "fim": 129.366
+    "inicio": 127.394,
+    "fim": 127.814
    },
    {
     "texto": "para",
-    "inicio": 129.366,
-    "fim": 129.546
+    "inicio": 127.814,
+    "fim": 127.994
    },
    {
     "texto": "qualquer",
-    "inicio": 129.546,
-    "fim": 129.846
+    "inicio": 127.994,
+    "fim": 128.294
    },
    {
     "texto": "IA?",
-    "inicio": 129.846,
-    "fim": 130.016
+    "inicio": 128.294,
+    "fim": 128.464
    },
    {
     "texto": "Porque",
-    "inicio": 130.556,
-    "fim": 130.726
+    "inicio": 129.004,
+    "fim": 129.174
    },
    {
     "texto": "ela",
-    "inicio": 130.726,
-    "fim": 130.896
+    "inicio": 129.174,
+    "fim": 129.344
    },
    {
     "texto": "pode",
-    "inicio": 130.896,
-    "fim": 131.086
+    "inicio": 129.344,
+    "fim": 129.534
    },
    {
     "texto": "inventar",
-    "inicio": 131.086,
-    "fim": 131.456
+    "inicio": 129.534,
+    "fim": 129.904
    },
    {
     "texto": "uma",
-    "inicio": 131.456,
-    "fim": 131.586
+    "inicio": 129.904,
+    "fim": 130.034
    },
    {
     "texto": "lei.",
-    "inicio": 131.586,
-    "fim": 131.806
+    "inicio": 130.034,
+    "fim": 130.254
    },
    {
     "texto": "O",
-    "inicio": 132.196,
-    "fim": 132.266
+    "inicio": 130.644,
+    "fim": 130.714
    },
    {
     "texto": "Mapiii",
-    "inicio": 132.266,
-    "fim": 132.496
+    "inicio": 130.714,
+    "fim": 130.944
    },
    {
     "texto": "só",
-    "inicio": 132.496,
-    "fim": 132.616
+    "inicio": 130.944,
+    "fim": 131.064
    },
    {
     "texto": "responde",
-    "inicio": 132.616,
-    "fim": 132.976
+    "inicio": 131.064,
+    "fim": 131.424
    },
    {
     "texto": "o",
-    "inicio": 132.976,
-    "fim": 133.036
+    "inicio": 131.424,
+    "fim": 131.484
    },
    {
     "texto": "que",
-    "inicio": 133.036,
-    "fim": 133.096
+    "inicio": 131.484,
+    "fim": 131.544
    },
    {
     "texto": "está",
-    "inicio": 133.096,
-    "fim": 133.266
+    "inicio": 131.544,
+    "fim": 131.714
    },
    {
     "texto": "na",
-    "inicio": 133.266,
-    "fim": 133.406
+    "inicio": 131.714,
+    "fim": 131.854
    },
    {
     "texto": "base,",
-    "inicio": 133.406,
-    "fim": 133.736
+    "inicio": 131.854,
+    "fim": 132.184
    },
    {
     "texto": "com",
-    "inicio": 133.736,
-    "fim": 133.876
+    "inicio": 132.184,
+    "fim": 132.324
    },
    {
     "texto": "a",
-    "inicio": 133.876,
-    "fim": 133.936
+    "inicio": 132.324,
+    "fim": 132.384
    },
    {
     "texto": "fonte",
-    "inicio": 133.936,
-    "fim": 134.246
+    "inicio": 132.384,
+    "fim": 132.694
    },
    {
     "texto": "oficial.",
-    "inicio": 134.246,
-    "fim": 134.686
+    "inicio": 132.694,
+    "fim": 133.134
    }
   ]
  },
@@ -2047,93 +2047,93 @@
   "palavras": [
    {
     "texto": "E",
-    "inicio": 112.146,
-    "fim": 112.206
+    "inicio": 111.044,
+    "fim": 111.104
    },
    {
     "texto": "se",
-    "inicio": 112.206,
-    "fim": 112.376
+    "inicio": 111.104,
+    "fim": 111.274
    },
    {
     "texto": "negarem",
-    "inicio": 112.376,
-    "fim": 112.796
+    "inicio": 111.274,
+    "fim": 111.694
    },
    {
     "texto": "o",
-    "inicio": 112.796,
-    "fim": 112.856
+    "inicio": 111.694,
+    "fim": 111.754
    },
    {
     "texto": "embarque,",
-    "inicio": 112.856,
-    "fim": 113.236
+    "inicio": 111.754,
+    "fim": 112.134
    },
    {
     "texto": "ele",
-    "inicio": 113.586,
-    "fim": 113.666
+    "inicio": 112.484,
+    "fim": 112.564
    },
    {
     "texto": "monta",
-    "inicio": 113.666,
-    "fim": 113.866
+    "inicio": 112.564,
+    "fim": 112.764
    },
    {
     "texto": "a",
-    "inicio": 113.866,
-    "fim": 113.976
+    "inicio": 112.764,
+    "fim": 112.874
    },
    {
     "texto": "reclamação",
-    "inicio": 113.976,
-    "fim": 114.566
+    "inicio": 112.874,
+    "fim": 113.464
    },
    {
     "texto": "pronta,",
-    "inicio": 114.566,
-    "fim": 114.896
+    "inicio": 113.464,
+    "fim": 113.794
    },
    {
     "texto": "só",
-    "inicio": 115.196,
-    "fim": 115.286
+    "inicio": 114.094,
+    "fim": 114.184
    },
    {
     "texto": "com",
-    "inicio": 115.286,
-    "fim": 115.406
+    "inicio": 114.184,
+    "fim": 114.304
    },
    {
     "texto": "os",
-    "inicio": 115.406,
-    "fim": 115.486
+    "inicio": 114.304,
+    "fim": 114.384
    },
    {
     "texto": "fatos,",
-    "inicio": 115.486,
-    "fim": 115.806
+    "inicio": 114.384,
+    "fim": 114.704
    },
    {
     "texto": "e",
-    "inicio": 116.016,
-    "fim": 116.096
+    "inicio": 114.914,
+    "fim": 114.994
    },
    {
     "texto": "mostra",
-    "inicio": 116.096,
-    "fim": 116.516
+    "inicio": 114.994,
+    "fim": 115.414
    },
    {
     "texto": "onde",
-    "inicio": 116.516,
-    "fim": 116.776
+    "inicio": 115.414,
+    "fim": 115.674
    },
    {
     "texto": "enviar.",
-    "inicio": 116.776,
-    "fim": 117.106
+    "inicio": 115.674,
+    "fim": 116.004
    }
   ]
  },
@@ -2143,93 +2143,93 @@
   "palavras": [
    {
     "texto": "É",
-    "inicio": 159.23,
-    "fim": 159.57
+    "inicio": 157.264,
+    "fim": 157.604
    },
    {
     "texto": "leve,",
-    "inicio": 159.57,
-    "fim": 159.76
+    "inicio": 157.604,
+    "fim": 157.794
    },
    {
     "texto": "sem",
-    "inicio": 159.76,
-    "fim": 160.07
+    "inicio": 157.794,
+    "fim": 158.104
    },
    {
     "texto": "cadastro",
-    "inicio": 160.07,
-    "fim": 160.65
+    "inicio": 158.104,
+    "fim": 158.684
    },
    {
     "texto": "e",
-    "inicio": 160.65,
-    "fim": 160.71
+    "inicio": 158.684,
+    "fim": 158.744
    },
    {
     "texto": "sem",
-    "inicio": 160.71,
-    "fim": 160.9
+    "inicio": 158.744,
+    "fim": 158.934
    },
    {
     "texto": "guardar",
-    "inicio": 160.9,
-    "fim": 161.19
+    "inicio": 158.934,
+    "fim": 159.224
    },
    {
     "texto": "dados",
-    "inicio": 161.19,
-    "fim": 161.49
+    "inicio": 159.224,
+    "fim": 159.524
    },
    {
     "texto": "pessoais.",
-    "inicio": 161.49,
-    "fim": 161.88
+    "inicio": 159.524,
+    "fim": 159.914
    },
    {
     "texto": "Uma",
-    "inicio": 162.16,
-    "fim": 162.39
+    "inicio": 160.194,
+    "fim": 160.424
    },
    {
     "texto": "prefeitura",
-    "inicio": 162.39,
-    "fim": 163.04
+    "inicio": 160.424,
+    "fim": 161.074
    },
    {
     "texto": "ou",
-    "inicio": 163.04,
-    "fim": 163.21
+    "inicio": 161.074,
+    "fim": 161.244
    },
    {
     "texto": "uma",
-    "inicio": 163.21,
-    "fim": 163.34
+    "inicio": 161.244,
+    "fim": 161.374
    },
    {
     "texto": "ONG",
-    "inicio": 163.34,
-    "fim": 163.56
+    "inicio": 161.374,
+    "fim": 161.594
    },
    {
     "texto": "pode",
-    "inicio": 163.56,
-    "fim": 163.75
+    "inicio": 161.594,
+    "fim": 161.784
    },
    {
     "texto": "adotar",
-    "inicio": 163.75,
-    "fim": 164.21
+    "inicio": 161.784,
+    "fim": 162.244
    },
    {
     "texto": "e",
-    "inicio": 164.21,
-    "fim": 164.44
+    "inicio": 162.244,
+    "fim": 162.474
    },
    {
     "texto": "manter.",
-    "inicio": 164.44,
-    "fim": 164.95
+    "inicio": 162.474,
+    "fim": 162.984
    }
   ]
  },
@@ -2239,563 +2239,563 @@
   "palavras": [
    {
     "texto": "Essa",
-    "inicio": 71.416,
-    "fim": 71.666
+    "inicio": 70.884,
+    "fim": 71.134
    },
    {
     "texto": "é",
-    "inicio": 71.666,
-    "fim": 71.836
+    "inicio": 71.134,
+    "fim": 71.304
    },
    {
     "texto": "a",
-    "inicio": 71.836,
-    "fim": 71.906
+    "inicio": 71.304,
+    "fim": 71.374
    },
    {
     "texto": "Carla,",
-    "inicio": 71.906,
-    "fim": 72.036
+    "inicio": 71.374,
+    "fim": 71.504
    },
    {
     "texto": "e",
-    "inicio": 72.036,
-    "fim": 72.096
+    "inicio": 71.504,
+    "fim": 71.564
    },
    {
     "texto": "essa",
-    "inicio": 72.096,
-    "fim": 72.196
+    "inicio": 71.564,
+    "fim": 71.664
    },
    {
     "texto": "é",
-    "inicio": 72.196,
-    "fim": 72.436
+    "inicio": 71.664,
+    "fim": 71.904
    },
    {
     "texto": "a",
-    "inicio": 72.436,
-    "fim": 72.516
+    "inicio": 71.904,
+    "fim": 71.984
    },
    {
     "texto": "Letícia.",
-    "inicio": 72.516,
-    "fim": 72.796
+    "inicio": 71.984,
+    "fim": 72.264
    },
    {
     "texto": "As",
-    "inicio": 73.276,
-    "fim": 73.406
+    "inicio": 72.744,
+    "fim": 72.874
    },
    {
     "texto": "duas",
-    "inicio": 73.406,
-    "fim": 73.616
+    "inicio": 72.874,
+    "fim": 73.084
    },
    {
     "texto": "usam",
-    "inicio": 73.616,
-    "fim": 73.786
+    "inicio": 73.084,
+    "fim": 73.254
    },
    {
     "texto": "cadeira",
-    "inicio": 73.786,
-    "fim": 74.156
+    "inicio": 73.254,
+    "fim": 73.624
    },
    {
     "texto": "de",
-    "inicio": 74.156,
-    "fim": 74.236
+    "inicio": 73.624,
+    "fim": 73.704
    },
    {
     "texto": "rodas,",
-    "inicio": 74.236,
-    "fim": 74.606
+    "inicio": 73.704,
+    "fim": 74.074
    },
    {
     "texto": "e",
-    "inicio": 74.846,
-    "fim": 74.946
+    "inicio": 74.314,
+    "fim": 74.414
    },
    {
     "texto": "as",
-    "inicio": 74.946,
-    "fim": 75.086
+    "inicio": 74.414,
+    "fim": 74.554
    },
    {
     "texto": "duas",
-    "inicio": 75.086,
-    "fim": 75.396
+    "inicio": 74.554,
+    "fim": 74.864
    },
    {
     "texto": "têm",
-    "inicio": 75.696,
-    "fim": 75.786
+    "inicio": 75.164,
+    "fim": 75.254
    },
    {
     "texto": "consulta",
-    "inicio": 75.786,
-    "fim": 76.056
+    "inicio": 75.254,
+    "fim": 75.524
    },
    {
     "texto": "marcada",
-    "inicio": 76.056,
-    "fim": 76.306
+    "inicio": 75.524,
+    "fim": 75.774
    },
    {
     "texto": "amanhã,",
-    "inicio": 76.306,
-    "fim": 76.716
+    "inicio": 75.774,
+    "fim": 76.184
    },
    {
     "texto": "às",
-    "inicio": 77.016,
-    "fim": 77.156
+    "inicio": 76.484,
+    "fim": 76.624
    },
    {
     "texto": "nove.",
-    "inicio": 77.156,
-    "fim": 77.356
+    "inicio": 76.624,
+    "fim": 76.824
    },
    {
     "texto": "A",
-    "inicio": 77.726,
-    "fim": 77.816
+    "inicio": 77.194,
+    "fim": 77.284
    },
    {
     "texto": "Letícia",
-    "inicio": 77.816,
-    "fim": 78.216
+    "inicio": 77.284,
+    "fim": 77.684
    },
    {
     "texto": "vai",
-    "inicio": 78.216,
-    "fim": 78.356
+    "inicio": 77.684,
+    "fim": 77.824
    },
    {
     "texto": "para",
-    "inicio": 78.356,
-    "fim": 78.476
+    "inicio": 77.824,
+    "fim": 77.944
    },
    {
     "texto": "o",
-    "inicio": 78.476,
-    "fim": 78.536
+    "inicio": 77.944,
+    "fim": 78.004
    },
    {
     "texto": "ponto",
-    "inicio": 78.536,
-    "fim": 78.726
+    "inicio": 78.004,
+    "fim": 78.194
    },
    {
     "texto": "cedo,",
-    "inicio": 78.726,
-    "fim": 78.866
+    "inicio": 78.194,
+    "fim": 78.334
    },
    {
     "texto": "sem",
-    "inicio": 79.266,
-    "fim": 79.356
+    "inicio": 78.734,
+    "fim": 78.824
    },
    {
     "texto": "saber",
-    "inicio": 79.356,
-    "fim": 79.626
+    "inicio": 78.824,
+    "fim": 79.094
    },
    {
     "texto": "quando",
-    "inicio": 79.626,
-    "fim": 79.886
+    "inicio": 79.094,
+    "fim": 79.354
    },
    {
     "texto": "passa",
-    "inicio": 79.886,
-    "fim": 80.076
+    "inicio": 79.354,
+    "fim": 79.544
    },
    {
     "texto": "um",
-    "inicio": 80.076,
-    "fim": 80.206
+    "inicio": 79.544,
+    "fim": 79.674
    },
    {
     "texto": "ônibus",
-    "inicio": 80.206,
-    "fim": 80.436
+    "inicio": 79.674,
+    "fim": 79.904
    },
    {
     "texto": "com",
-    "inicio": 80.436,
-    "fim": 80.626
+    "inicio": 79.904,
+    "fim": 80.094
    },
    {
     "texto": "rampa.",
-    "inicio": 80.626,
-    "fim": 80.756
+    "inicio": 80.094,
+    "fim": 80.224
    },
    {
     "texto": "Passa",
-    "inicio": 81.196,
-    "fim": 81.416
+    "inicio": 80.664,
+    "fim": 80.884
    },
    {
     "texto": "um…",
-    "inicio": 81.416,
-    "fim": 81.646
+    "inicio": 80.884,
+    "fim": 81.114
    },
    {
     "texto": "sem",
-    "inicio": 82.026,
-    "fim": 82.166
+    "inicio": 81.494,
+    "fim": 81.634
    },
    {
     "texto": "rampa.",
-    "inicio": 82.166,
-    "fim": 82.326
+    "inicio": 81.634,
+    "fim": 81.794
    },
    {
     "texto": "Passa",
-    "inicio": 82.816,
-    "fim": 82.976
+    "inicio": 82.284,
+    "fim": 82.444
    },
    {
     "texto": "outro…",
-    "inicio": 82.976,
-    "fim": 83.176
+    "inicio": 82.444,
+    "fim": 82.644
    },
    {
     "texto": "lotado.",
-    "inicio": 83.656,
-    "fim": 84.016
+    "inicio": 83.124,
+    "fim": 83.484
    },
    {
     "texto": "Às",
-    "inicio": 84.426,
-    "fim": 84.546
+    "inicio": 83.894,
+    "fim": 84.014
    },
    {
     "texto": "nove",
-    "inicio": 84.546,
-    "fim": 84.726
+    "inicio": 84.014,
+    "fim": 84.194
    },
    {
     "texto": "e",
-    "inicio": 84.726,
-    "fim": 84.786
+    "inicio": 84.194,
+    "fim": 84.254
    },
    {
     "texto": "vinte,",
-    "inicio": 84.786,
-    "fim": 85.156
+    "inicio": 84.254,
+    "fim": 84.624
    },
    {
     "texto": "ela",
-    "inicio": 85.356,
-    "fim": 85.506
+    "inicio": 84.824,
+    "fim": 84.974
    },
    {
     "texto": "ainda",
-    "inicio": 85.506,
-    "fim": 85.776
+    "inicio": 84.974,
+    "fim": 85.244
    },
    {
     "texto": "está",
-    "inicio": 85.776,
-    "fim": 85.906
+    "inicio": 85.244,
+    "fim": 85.374
    },
    {
     "texto": "no",
-    "inicio": 85.906,
-    "fim": 86.006
+    "inicio": 85.374,
+    "fim": 85.474
    },
    {
     "texto": "ponto.",
-    "inicio": 86.006,
-    "fim": 86.216
+    "inicio": 85.474,
+    "fim": 85.684
    },
    {
     "texto": "A",
-    "inicio": 86.216,
-    "fim": 86.276
+    "inicio": 85.684,
+    "fim": 85.744
    },
    {
     "texto": "consulta,",
-    "inicio": 86.726,
-    "fim": 87.026
+    "inicio": 86.194,
+    "fim": 86.494
    },
    {
     "texto": "que",
-    "inicio": 87.026,
-    "fim": 87.156
+    "inicio": 86.494,
+    "fim": 86.624
    },
    {
     "texto": "levou",
-    "inicio": 87.156,
-    "fim": 87.416
+    "inicio": 86.624,
+    "fim": 86.884
    },
    {
     "texto": "meses",
-    "inicio": 87.416,
-    "fim": 87.666
+    "inicio": 86.884,
+    "fim": 87.134
    },
    {
     "texto": "para",
-    "inicio": 87.666,
-    "fim": 87.876
+    "inicio": 87.134,
+    "fim": 87.344
    },
    {
     "texto": "marcar,",
-    "inicio": 87.876,
-    "fim": 88.256
+    "inicio": 87.344,
+    "fim": 87.724
    },
    {
     "texto": "ficou",
-    "inicio": 88.556,
-    "fim": 88.746
+    "inicio": 88.024,
+    "fim": 88.214
    },
    {
     "texto": "para",
-    "inicio": 88.746,
-    "fim": 88.866
+    "inicio": 88.214,
+    "fim": 88.334
    },
    {
     "texto": "depois.",
-    "inicio": 88.866,
-    "fim": 89.126
+    "inicio": 88.334,
+    "fim": 88.594
    },
    {
     "texto": "A",
-    "inicio": 89.756,
-    "fim": 89.816
+    "inicio": 89.224,
+    "fim": 89.284
    },
    {
     "texto": "Carla",
-    "inicio": 89.816,
-    "fim": 90.176
+    "inicio": 89.284,
+    "fim": 89.644
    },
    {
     "texto": "abre",
-    "inicio": 90.176,
-    "fim": 90.326
+    "inicio": 89.644,
+    "fim": 89.794
    },
    {
     "texto": "o",
-    "inicio": 90.326,
-    "fim": 90.426
+    "inicio": 89.794,
+    "fim": 89.894
    },
    {
     "texto": "Mapiii.",
-    "inicio": 90.426,
-    "fim": 90.626
+    "inicio": 89.894,
+    "fim": 90.094
    },
    {
     "texto": "Com",
-    "inicio": 90.626,
-    "fim": 90.786
+    "inicio": 90.094,
+    "fim": 90.254
    },
    {
     "texto": "o",
-    "inicio": 91.306,
-    "fim": 91.396
+    "inicio": 90.774,
+    "fim": 90.864
    },
    {
     "texto": "celular",
-    "inicio": 91.396,
-    "fim": 91.696
+    "inicio": 90.864,
+    "fim": 91.164
    },
    {
     "texto": "no",
-    "inicio": 91.696,
-    "fim": 91.876
+    "inicio": 91.164,
+    "fim": 91.344
    },
    {
     "texto": "bolso,",
-    "inicio": 92.226,
-    "fim": 92.486
+    "inicio": 91.694,
+    "fim": 91.954
    },
    {
     "texto": "ela",
-    "inicio": 92.486,
-    "fim": 92.636
+    "inicio": 91.954,
+    "fim": 92.104
    },
    {
     "texto": "espera",
-    "inicio": 92.636,
-    "fim": 92.816
+    "inicio": 92.104,
+    "fim": 92.284
    },
    {
     "texto": "em",
-    "inicio": 92.816,
-    "fim": 92.926
+    "inicio": 92.284,
+    "fim": 92.394
    },
    {
     "texto": "casa,",
-    "inicio": 92.926,
-    "fim": 93.416
+    "inicio": 92.394,
+    "fim": 92.884
    },
    {
     "texto": "até",
-    "inicio": 93.416,
-    "fim": 93.666
+    "inicio": 92.884,
+    "fim": 93.134
    },
    {
     "texto": "o",
-    "inicio": 93.666,
-    "fim": 93.736
+    "inicio": 93.134,
+    "fim": 93.204
    },
    {
     "texto": "aviso:",
-    "inicio": 93.736,
-    "fim": 93.996
+    "inicio": 93.204,
+    "fim": 93.464
    },
    {
     "texto": "o",
-    "inicio": 94.416,
-    "fim": 94.476
+    "inicio": 93.884,
+    "fim": 93.944
    },
    {
     "texto": "ônibus",
-    "inicio": 94.476,
-    "fim": 94.706
+    "inicio": 93.944,
+    "fim": 94.174
    },
    {
     "texto": "acessível",
-    "inicio": 94.706,
-    "fim": 95.156
+    "inicio": 94.174,
+    "fim": 94.624
    },
    {
     "texto": "está",
-    "inicio": 95.156,
-    "fim": 95.326
+    "inicio": 94.624,
+    "fim": 94.794
    },
    {
     "texto": "chegando.",
-    "inicio": 95.326,
-    "fim": 95.666
+    "inicio": 94.794,
+    "fim": 95.134
    },
    {
     "texto": "Ela",
-    "inicio": 96.056,
-    "fim": 96.136
+    "inicio": 95.524,
+    "fim": 95.604
    },
    {
     "texto": "sai",
-    "inicio": 96.136,
-    "fim": 96.276
+    "inicio": 95.604,
+    "fim": 95.744
    },
    {
     "texto": "na",
-    "inicio": 96.276,
-    "fim": 96.366
+    "inicio": 95.744,
+    "fim": 95.834
    },
    {
     "texto": "hora",
-    "inicio": 96.366,
-    "fim": 96.536
+    "inicio": 95.834,
+    "fim": 96.004
    },
    {
     "texto": "certa,",
-    "inicio": 96.536,
-    "fim": 96.796
+    "inicio": 96.004,
+    "fim": 96.264
    },
    {
     "texto": "a",
-    "inicio": 97.226,
-    "fim": 97.286
+    "inicio": 96.694,
+    "fim": 96.754
    },
    {
     "texto": "rampa",
-    "inicio": 97.286,
-    "fim": 97.426
+    "inicio": 96.754,
+    "fim": 96.894
    },
    {
     "texto": "desce,",
-    "inicio": 97.426,
-    "fim": 97.526
+    "inicio": 96.894,
+    "fim": 96.994
    },
    {
     "texto": "e",
-    "inicio": 97.526,
-    "fim": 97.586
+    "inicio": 96.994,
+    "fim": 97.054
    },
    {
     "texto": "às",
-    "inicio": 97.586,
-    "fim": 97.756
+    "inicio": 97.054,
+    "fim": 97.224
    },
    {
     "texto": "oito",
-    "inicio": 98.066,
-    "fim": 98.256
+    "inicio": 97.534,
+    "fim": 97.724
    },
    {
     "texto": "e",
-    "inicio": 98.256,
-    "fim": 98.326
+    "inicio": 97.724,
+    "fim": 97.794
    },
    {
     "texto": "cinquenta",
-    "inicio": 98.326,
-    "fim": 98.676
+    "inicio": 97.794,
+    "fim": 98.144
    },
    {
     "texto": "e",
-    "inicio": 98.676,
-    "fim": 98.736
+    "inicio": 98.144,
+    "fim": 98.204
    },
    {
     "texto": "cinco",
-    "inicio": 98.736,
-    "fim": 98.996
+    "inicio": 98.204,
+    "fim": 98.464
    },
    {
     "texto": "ela",
-    "inicio": 99.226,
-    "fim": 99.306
+    "inicio": 98.694,
+    "fim": 98.774
    },
    {
     "texto": "está",
-    "inicio": 99.306,
-    "fim": 99.576
+    "inicio": 98.774,
+    "fim": 99.044
    },
    {
     "texto": "na",
-    "inicio": 99.576,
-    "fim": 99.676
+    "inicio": 99.044,
+    "fim": 99.144
    },
    {
     "texto": "clínica.",
-    "inicio": 99.676,
-    "fim": 99.866
+    "inicio": 99.144,
+    "fim": 99.334
    },
    {
     "texto": "Mesma",
-    "inicio": 100.336,
-    "fim": 100.566
+    "inicio": 99.804,
+    "fim": 100.034
    },
    {
     "texto": "cidade.",
-    "inicio": 100.566,
-    "fim": 100.986
+    "inicio": 100.034,
+    "fim": 100.454
    },
    {
     "texto": "Mesmo",
-    "inicio": 101.286,
-    "fim": 101.606
+    "inicio": 100.754,
+    "fim": 101.074
    },
    {
     "texto": "ônibus.",
-    "inicio": 101.606,
-    "fim": 101.916
+    "inicio": 101.074,
+    "fim": 101.384
    },
    {
     "texto": "Dias",
-    "inicio": 102.356,
-    "fim": 102.546
+    "inicio": 101.824,
+    "fim": 102.014
    },
    {
     "texto": "diferentes.",
-    "inicio": 102.546,
-    "fim": 102.876
+    "inicio": 102.014,
+    "fim": 102.344
    }
   ]
  }
