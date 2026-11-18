@@ -67,6 +67,10 @@ function efeitos(): Efeito[] {
   const recorte = quandoFala(6, 'Ele', falas6[falas6.length - 1].ate + 12) - 4;
   add('whoosh.flac', 6, recorte - 6, 0.4);
   ['ônibus', 'carro', 'calçada', 'reclamação'].forEach((p, i) => add('pop.flac', 6, quandoFala(6, p, recorte + 18 + i * 6) - 2, 0.4 + i * 0.05));
+  // 26, os 3 passos (sem fala): toque no título, whoosh + tique em cada passo, ding no fim
+  add('toque-seco.wav', 26, 4, 0.35);
+  for (let i = 0; i < 3; i++) { add('whoosh.flac', 26, 10 + i * 14, 0.35); add('tique.wav', 26, 16 + i * 14, 0.55); }
+  add('ding.flac', 26, 66, 0.4);
   // 7
   add('toque-seco.wav', 7, naPalavra(7, 'responde') + 10, 0.35);
   // 19: toques baixos na gravação do app (nos quadros em que o dedo toca)
