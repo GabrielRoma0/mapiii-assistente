@@ -16,7 +16,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 Ideias do vídeo de referência do Agro+: a cena 25 (comparação, depois da apresentação do Mapiii) e a cena 26 (Mapiii em 3 passos, sem fala, antes do fecho). O vídeo fica com cerca de 2:35.
 
-**Áudio a gravar** (narração sem rosto, como as outras): `cena-25`: "A mesma pessoa, no mesmo ponto. Sem o Mapiii, fica esperando. Com o Mapiii, sabe o que fazer." Uma pausa curta depois de "ponto." e depois de "esperando.". Mandar ao Claude Code, que encaixa e refaz o render final.
+**Gravado e encaixado em 18/11:** `cena-25`: "A mesma pessoa, no mesmo ponto. Sem o Mapiii, fica esperando. Com o Mapiii, sabe o que fazer." Uma pausa curta depois de "ponto." e depois de "esperando.". Mandar ao Claude Code, que encaixa e refaz o render final.
 
 ## Atualização de 16/11: vídeo revisto pelo feedback dos professores
 
