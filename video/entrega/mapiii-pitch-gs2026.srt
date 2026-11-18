@@ -63,305 +63,393 @@ No Brasil, são catorze vírgula quatro milhões
 de pessoas com deficiência,
 
 17
-00:00:23,500 --> 00:00:25,333
+00:00:23,500 --> 00:00:25,367
 segundo o Censo de 2022.
 
 18
-00:00:25,367 --> 00:00:26,800
+00:00:25,533 --> 00:00:26,967
 E se o caminho coubesse no bolso,
 
 19
-00:00:26,833 --> 00:00:28,567
+00:00:27,000 --> 00:00:28,733
 com a fonte junto?
 
 20
-00:00:28,600 --> 00:00:29,667
+00:00:28,767 --> 00:00:29,833
 Esse é o Mapiii.
 
 21
-00:00:29,733 --> 00:00:31,133
+00:00:29,900 --> 00:00:31,300
 O mapa dos seus direitos.
 
 22
-00:00:31,300 --> 00:00:32,667
+00:00:31,467 --> 00:00:32,833
 E esse é o Leco.
 
 23
-00:00:32,967 --> 00:00:34,533
+00:00:33,133 --> 00:00:34,700
 Ele começa pela mobilidade:
 
 24
-00:00:34,600 --> 00:00:37,400
+00:00:34,767 --> 00:00:37,567
 ônibus, carro, calçada e reclamação.
 
 25
-00:00:37,933 --> 00:00:39,900
-A mesma pessoa, no mesmo ponto.
-
-26
-00:00:40,467 --> 00:00:42,367
-Sem o Mapiii, fica esperando.
-
-27
-00:00:42,600 --> 00:00:44,567
-Com o Mapiii, sabe o que fazer.
-
-28
-00:00:45,100 --> 00:00:46,967
+00:00:38,067 --> 00:00:39,933
 Você responde poucas perguntas,
 
-29
-00:00:47,000 --> 00:00:48,600
+26
+00:00:39,967 --> 00:00:41,567
 sem nome e sem CPF.
 
-30
-00:00:48,633 --> 00:00:50,067
+27
+00:00:41,600 --> 00:00:43,033
 Ele mostra o que você pode pedir,
 
-31
-00:00:50,100 --> 00:00:51,100
+28
+00:00:43,067 --> 00:00:44,067
 e por quê.
 
-32
-00:00:51,200 --> 00:00:52,500
+29
+00:00:44,100 --> 00:00:45,400
 Olha o app de verdade:
 
-33
-00:00:52,567 --> 00:00:54,100
+30
+00:00:45,467 --> 00:00:47,000
 poucos toques, e ele mostra o que
 
-34
-00:00:54,133 --> 00:00:56,300
+31
+00:00:47,033 --> 00:00:49,200
 pode se aplicar, com fonte oficial.
 
-35
-00:00:56,767 --> 00:00:57,933
+32
+00:00:49,300 --> 00:00:50,467
 Ou pergunte do seu jeito,
 
-36
-00:00:57,967 --> 00:00:59,167
+33
+00:00:50,500 --> 00:00:51,700
 escrevendo ou falando.
 
-37
-00:00:59,200 --> 00:01:01,133
+34
+00:00:51,733 --> 00:00:53,667
 O Leco procura na base e responde
 
-38
-00:01:01,167 --> 00:01:02,967
+35
+00:00:53,700 --> 00:00:55,500
 com o resumo, o passo a passo
 
-39
-00:01:03,000 --> 00:01:03,900
+36
+00:00:55,533 --> 00:00:56,433
 e a fonte.
 
-40
-00:01:04,567 --> 00:01:07,533
+37
+00:00:56,633 --> 00:00:59,600
 Nunca diz "você tem direito".
 
-41
-00:01:07,567 --> 00:01:09,267
+38
+00:00:59,633 --> 00:01:01,333
 Diz "pode ter direito".
 
-42
-00:01:09,300 --> 00:01:10,567
+39
+00:01:01,367 --> 00:01:02,633
 E mostra a fonte oficial,
 
-43
-00:01:10,600 --> 00:01:12,167
+40
+00:01:02,667 --> 00:01:04,233
 com a data em que foi conferida.
 
-44
-00:01:12,467 --> 00:01:13,300
+41
+00:01:04,567 --> 00:01:05,400
 E com o celular no bolso,
 
-45
-00:01:13,333 --> 00:01:15,167
+42
+00:01:05,433 --> 00:01:07,267
 ele pode avisar em voz alta quando
 
-46
-00:01:15,200 --> 00:01:17,867
+43
+00:01:07,300 --> 00:01:09,967
 o próximo ônibus acessível está chegando.
 
+44
+00:01:10,800 --> 00:01:11,367
+Essa é a Carla,
+
+45
+00:01:11,400 --> 00:01:12,467
+e essa é a Letícia.
+
+46
+00:01:12,633 --> 00:01:14,167
+As duas usam cadeira de rodas,
+
 47
-00:01:17,900 --> 00:01:20,133
-Na rua, se o motorista disser que
+00:01:14,200 --> 00:01:16,367
+e as duas têm consulta marcada amanhã,
 
 48
-00:01:20,167 --> 00:01:22,067
-não pode, você vira a tela:
+00:01:16,400 --> 00:01:17,033
+às nove.
 
 49
-00:01:22,100 --> 00:01:23,500
-letra grande, a lei,
+00:01:17,100 --> 00:01:18,533
+A Letícia vai para o ponto cedo,
 
 50
-00:01:23,533 --> 00:01:25,067
-e um código que abre o texto
+00:01:18,633 --> 00:01:19,967
+sem saber quando passa um ônibus com
 
 51
-00:01:25,100 --> 00:01:26,200
-oficial.
+00:01:20,000 --> 00:01:20,433
+rampa.
 
 52
-00:01:26,333 --> 00:01:27,700
-E se negarem o embarque,
+00:01:20,567 --> 00:01:22,000
+Passa um… sem rampa.
 
 53
-00:01:27,767 --> 00:01:29,333
-ele monta a reclamação pronta,
+00:01:22,200 --> 00:01:23,700
+Passa outro… lotado.
 
 54
-00:01:29,367 --> 00:01:30,167
-só com os fatos,
+00:01:23,800 --> 00:01:24,700
+Às nove e vinte,
 
 55
-00:01:30,200 --> 00:01:31,567
-e mostra onde enviar.
+00:01:24,733 --> 00:01:25,567
+ela ainda está no ponto.
 
 56
-00:01:31,967 --> 00:01:33,933
-Recebeu ou achou um link estranho?
+00:01:25,600 --> 00:01:27,900
+A consulta, que levou meses para marcar,
 
 57
-00:01:34,033 --> 00:01:35,833
-Ele avisa quando parecer suspeito.
+00:01:27,933 --> 00:01:28,800
+ficou para depois.
 
 58
-00:01:36,367 --> 00:01:37,733
-Ele também sabe dizer não.
+00:01:29,133 --> 00:01:29,967
+A Carla abre o Mapiii.
 
 59
-00:01:37,767 --> 00:01:38,933
-Remédio ou processo?
+00:01:30,000 --> 00:01:31,833
+Com o celular no bolso,
 
 60
-00:01:39,133 --> 00:01:40,367
-Mostra quem pode ajudar.
+00:01:31,867 --> 00:01:32,767
+ela espera em casa,
 
 61
-00:01:40,400 --> 00:01:41,300
-Emergência?
+00:01:32,800 --> 00:01:33,667
+até o aviso:
 
 62
-00:01:41,333 --> 00:01:42,600
-Ligue 192.
+00:01:33,800 --> 00:01:35,333
+o ônibus acessível está chegando.
 
 63
-00:01:42,700 --> 00:01:44,500
-Por que não perguntar para qualquer IA?
+00:01:35,433 --> 00:01:36,467
+Ela sai na hora certa,
 
 64
-00:01:44,733 --> 00:01:46,300
-Porque ela pode inventar uma lei.
+00:01:36,600 --> 00:01:37,667
+a rampa desce, e às oito e
 
 65
-00:01:46,367 --> 00:01:47,433
-O Mapiii só responde o que está
+00:01:37,700 --> 00:01:39,533
+cinquenta e cinco ela está na clínica.
 
 66
-00:01:47,467 --> 00:01:49,167
-na base, com a fonte oficial.
+00:01:39,700 --> 00:01:40,633
+Mesma cidade.
 
 67
-00:01:49,433 --> 00:01:50,533
-E a gente mediu.
+00:01:40,667 --> 00:01:41,600
+Mesmo ônibus.
 
 68
-00:01:50,567 --> 00:01:53,367
-Das doze perguntas que ele precisava recusar,
+00:01:41,733 --> 00:01:42,533
+Dias diferentes.
 
 69
-00:01:53,400 --> 00:01:54,867
-recusou as doze.
+00:01:42,633 --> 00:01:44,867
+Na rua, se o motorista disser que
 
 70
-00:01:54,900 --> 00:01:57,400
-E nota máxima de acessibilidade.
+00:01:44,900 --> 00:01:46,800
+não pode, você vira a tela:
 
 71
-00:01:57,667 --> 00:01:58,367
-E ainda:
+00:01:46,833 --> 00:01:48,233
+letra grande, a lei,
 
 72
-00:01:58,400 --> 00:02:00,233
-funciona sem internet, com um toque,
+00:01:48,267 --> 00:01:49,800
+e um código que abre o texto
 
 73
-00:02:00,267 --> 00:02:02,167
-e lê a resposta em voz alta.
+00:01:49,833 --> 00:01:50,933
+oficial.
 
 74
-00:02:02,200 --> 00:02:03,400
-Começamos por São Paulo.
+00:01:50,967 --> 00:01:52,333
+E se negarem o embarque,
 
 75
-00:02:03,433 --> 00:02:05,667
-A SPTrans é só o primeiro exemplo.
+00:01:52,400 --> 00:01:53,967
+ele monta a reclamação pronta,
 
 76
-00:02:05,700 --> 00:02:07,233
-O Mapiii é feito de fichas com
+00:01:54,000 --> 00:01:54,800
+só com os fatos,
 
 77
-00:02:07,267 --> 00:02:08,267
-fonte oficial.
+00:01:54,833 --> 00:01:56,200
+e mostra onde enviar.
 
 78
-00:02:08,433 --> 00:02:09,800
-Troque a base, e ele pode funcionar
+00:01:56,400 --> 00:01:58,367
+Recebeu ou achou um link estranho?
 
 79
-00:02:09,833 --> 00:02:10,533
-em outra cidade.
+00:01:58,467 --> 00:02:00,267
+Ele avisa quando parecer suspeito.
 
 80
-00:02:10,567 --> 00:02:11,467
-Em outro estado.
+00:02:00,533 --> 00:02:01,900
+Ele também sabe dizer não.
 
 81
-00:02:11,500 --> 00:02:13,067
-Em outro país.
+00:02:01,933 --> 00:02:03,100
+Remédio ou processo?
 
 82
-00:02:13,400 --> 00:02:15,333
-É leve, sem cadastro e sem guardar
+00:02:03,300 --> 00:02:04,533
+Mostra quem pode ajudar.
 
 83
-00:02:15,367 --> 00:02:16,300
-dados pessoais.
+00:02:04,567 --> 00:02:05,467
+Emergência?
 
 84
-00:02:16,333 --> 00:02:18,333
-Uma prefeitura ou uma ONG pode adotar
+00:02:05,500 --> 00:02:06,767
+Ligue 192.
 
 85
-00:02:18,367 --> 00:02:19,400
-e manter.
+00:02:06,867 --> 00:02:08,667
+Por que não perguntar para qualquer IA?
 
 86
-00:02:19,900 --> 00:02:21,067
-Menos desigualdade.
+00:02:08,900 --> 00:02:10,467
+Porque ela pode inventar uma lei.
 
 87
-00:02:21,200 --> 00:02:23,133
-Cidades que funcionam para todo mundo.
+00:02:10,533 --> 00:02:11,567
+O Mapiii só responde o que está
 
 88
-00:02:27,267 --> 00:02:28,700
-Ninguém deveria ficar no ponto.
+00:02:11,600 --> 00:02:13,333
+na base, com a fonte oficial.
 
 89
-00:02:28,733 --> 00:02:29,767
-Você pode ter direito.
+00:02:13,367 --> 00:02:14,467
+E a gente mediu.
 
 90
-00:02:29,800 --> 00:02:31,467
-Agora, você sabe onde ir.
+00:02:14,500 --> 00:02:17,300
+Das doze perguntas que ele precisava recusar,
 
 91
-00:02:32,067 --> 00:02:32,800
-Mapiii.
+00:02:17,333 --> 00:02:18,800
+recusou as doze.
 
 92
-00:02:32,867 --> 00:02:34,400
+00:02:18,833 --> 00:02:21,333
+E nota máxima de acessibilidade.
+
+93
+00:02:21,500 --> 00:02:22,200
+E ainda:
+
+94
+00:02:22,233 --> 00:02:24,067
+funciona sem internet, com um toque,
+
+95
+00:02:24,100 --> 00:02:26,000
+e lê a resposta em voz alta.
+
+96
+00:02:26,033 --> 00:02:27,233
+Começamos por São Paulo.
+
+97
+00:02:27,267 --> 00:02:29,500
+A SPTrans é só o primeiro exemplo.
+
+98
+00:02:29,533 --> 00:02:31,067
+O Mapiii é feito de fichas com
+
+99
+00:02:31,100 --> 00:02:32,100
+fonte oficial.
+
+100
+00:02:32,267 --> 00:02:33,633
+Troque a base, e ele pode funcionar
+
+101
+00:02:33,667 --> 00:02:34,367
+em outra cidade.
+
+102
+00:02:34,400 --> 00:02:35,300
+Em outro estado.
+
+103
+00:02:35,333 --> 00:02:36,867
+Em outro país.
+
+104
+00:02:37,167 --> 00:02:39,100
+É leve, sem cadastro e sem guardar
+
+105
+00:02:39,133 --> 00:02:40,067
+dados pessoais.
+
+106
+00:02:40,100 --> 00:02:42,100
+Uma prefeitura ou uma ONG pode adotar
+
+107
+00:02:42,133 --> 00:02:43,167
+e manter.
+
+108
+00:02:43,267 --> 00:02:44,433
+Menos desigualdade.
+
+109
+00:02:44,567 --> 00:02:46,500
+Cidades que funcionam para todo mundo.
+
+110
+00:02:49,933 --> 00:02:51,367
+Ninguém deveria ficar no ponto.
+
+111
+00:02:51,400 --> 00:02:52,433
+Você pode ter direito.
+
+112
+00:02:52,467 --> 00:02:54,133
+Agora, você sabe onde ir.
+
+113
+00:02:54,733 --> 00:02:55,467
+Mapiii.
+
+114
+00:02:55,533 --> 00:02:57,100
 O mapa dos seus direitos.
