@@ -212,3 +212,69 @@ export const Cena6: React.FC = () => {
     </Fundo>
   );
 };
+
+// ---------- Cena 25: comparação. A mesma pessoa, no mesmo ponto: sem o Mapiii fica esperando, com o Mapiii sabe o que fazer ----------
+// Ideia do vídeo de referência (sem × com), com os desenhos da cena 1. Cada lado se anima na sua palavra.
+const Lado: React.FC<{ com: boolean; em: number; acao: number }> = ({ com, em, acao }) => {
+  const f = useCurrentFrame();
+  const entra = chegada(f, em, 12);
+  // sem: o ônibus passa e vai embora; com: o ônibus para e a rampa desce
+  const xOnibus = com ? mix(1500, 0, chegada(f, em, 24)) : mix(0, 1900, partida(f, acao, 30));
+  const rampa = com ? chegada(f, acao, 14) : 0;
+  const porta = com ? chegada(f, acao - 6, 10) : 0;
+  return (
+    <div style={{ position: 'absolute', left: 0, top: 300, width: 1920, height: 1080, transform: `scale(0.5) translateY(${r2(mix(200, 0, entra))}px)`, transformOrigin: '0 0', opacity: f >= em ? 1 : 0 }}>
+      <svg viewBox="0 0 1920 1080" width={1920} height={1080} style={{ position: 'absolute', inset: 0 }}>
+        <Chao />
+        <Ponto />
+        <g transform={`translate(${r2(xOnibus)} 0)`}><Onibus porta={porta} rampa={rampa} /></g>
+      </svg>
+      <div style={{ position: 'absolute', left: 380, top: 591 }}><Pessoa largura={445} /></div>
+    </div>
+  );
+};
+
+export const Cena25: React.FC = () => {
+  const f = useCurrentFrame();
+  const mesma = naPalavra(25, 'mesma');
+  const sem = naPalavra(25, 'Sem');
+  const esperando = naPalavra(25, 'esperando.');
+  const com = naPalavra(25, 'Com');
+  const sabe = naPalavra(25, 'sabe');
+  const fazer = naPalavra(25, 'fazer.');
+  const duvidas = [0, 1, 2].map((i) => chegada(f, esperando + 4 + i * 5, 10));
+  const celular = chegada(f, sabe, 12);
+  const chip = (texto: string, de: number, escuro: boolean): React.ReactNode => (
+    <span style={{ display: 'inline-block', padding: '12px 30px', borderRadius: 999, fontSize: 40, fontWeight: 900, background: escuro ? COR.indigo : COR.branco, color: escuro ? COR.seashell : COR.indigo, border: `3px solid ${COR.indigo}`, opacity: f >= de ? 1 : 0, transform: `translateY(${r2(mix(-60, 0, chegada(f, de, 10)))}px)` }}>{texto}</span>
+  );
+  return (
+    <EntradaDeCena>
+      <Fundo>
+        {/* metade sem: tom apagado; metade com: a cor da cena */}
+        <div style={{ position: 'absolute', left: 0, top: 0, width: 960, height: 1080, background: COR.chao }} />
+        <div style={{ position: 'absolute', left: 957, top: 0, width: 6, height: 1080, background: COR.indigo, transform: `scaleY(${r2(chegada(f, mesma, 14))})`, transformOrigin: '50% 0' }} />
+        <div style={{ position: 'absolute', left: 0, top: 0, width: 960, height: 1080, overflow: 'hidden' }}>
+          <Lado com={false} em={mesma - 2} acao={esperando - 6} />
+          <div style={{ position: 'absolute', left: 60, top: 70 }}>{chip('sem Mapiii', sem - 4, false)}</div>
+          <h2 style={{ position: 'absolute', left: 60, top: 160, margin: 0, fontSize: 84, fontWeight: 900, letterSpacing: '-0.03em', opacity: f >= esperando - 6 ? 1 : 0 }}>
+            Fica <Destaque de={esperando + 6}>esperando.</Destaque>
+          </h2>
+          {duvidas.map((t, i) => (
+            <span key={i} style={{ position: 'absolute', left: 190 + i * 90, top: 470 - i * 30, width: 72, height: 72, borderRadius: '50%', background: COR.branco, border: `4px solid ${COR.indigo}`, display: 'grid', placeItems: 'center', fontSize: 48, fontWeight: 900, opacity: t > 0 ? 1 : 0, transform: `scale(${r2(mix(1.4, 1, t))})` }}>?</span>
+          ))}
+        </div>
+        <div style={{ position: 'absolute', left: 960, top: 0, width: 960, height: 1080, overflow: 'hidden' }}>
+          <Lado com em={com - 4} acao={fazer} />
+          <div style={{ position: 'absolute', left: 60, top: 70 }}>{chip('com Mapiii', com - 4, true)}</div>
+          <h2 style={{ position: 'absolute', left: 60, top: 160, margin: 0, fontSize: 84, fontWeight: 900, letterSpacing: '-0.03em', opacity: f >= sabe - 4 ? 1 : 0 }}>
+            Sabe o que <Destaque de={fazer + 4}>fazer.</Destaque>
+          </h2>
+          <div style={{ position: 'absolute', left: 300, top: 410, padding: '18px 26px', borderRadius: 28, background: COR.branco, border: `3px solid ${COR.indigo}`, fontSize: 34, fontWeight: 900, opacity: celular > 0 ? 1 : 0, transform: `translateY(${r2(mix(80, 0, celular))}px)` }}>
+            Pode ter direito
+            <div style={{ fontSize: 26, fontWeight: 800, color: COR.verde800, marginTop: 6 }}>✓ Fonte oficial</div>
+          </div>
+        </div>
+      </Fundo>
+    </EntradaDeCena>
+  );
+};
