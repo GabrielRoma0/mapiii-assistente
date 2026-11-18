@@ -279,3 +279,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 17/11/2026: narrações das cenas 19, 22, 23 e 24 encaixadas; render final de 2:22 em video/entrega (−14,4 LUFS).
 - 17/11/2026: fala do recorte (cena 6) encaixada, cada objeto na sua palavra; render final de 2:24 em video/entrega.
 - 18/11/2026: cenas 25 (comparação sem × com) e 26 (3 passos) no vídeo, ideias do vídeo de referência. Falta gravar a fala da 25.
+- 18/11/2026: render final de 2:36 com a comparação (cena 25) e os 3 passos com efeitos sonoros (cena 26).
