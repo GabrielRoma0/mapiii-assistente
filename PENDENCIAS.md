@@ -19,7 +19,7 @@ A cena 25 (comparação) saiu. Entrou a cena 27, depois do aviso do ônibus (cen
 **Áudio a gravar** (narração sem rosto, no celular, devagar, com pausa nas reticências): `cena-27`:
 "Essa é a Carla. Essa é a Letícia. As duas usam cadeira de rodas, e as duas têm consulta marcada amanhã, às nove. A Letícia vai para o ponto cedo, sem saber quando passa um ônibus com rampa. Passa um… sem rampa. Passa outro… lotado. Às nove e vinte, ela ainda está no ponto. A consulta, que levou meses para marcar, ficou para depois. A Carla abre o Mapiii. Com o celular no bolso, ela espera em casa, até o aviso: ônibus acessível chegando. Ela sai na hora certa, a rampa desce, e às oito e cinquenta e cinco ela está na clínica. Mesma cidade. Mesmo ônibus. Dias diferentes."
 
-Atenção ao limite de 3 min: com a fala em cerca de 27 s, o vídeo fica com cerca de 2:56.
+**Gravado e encaixado em 18/11** (pausas longas encurtadas, nenhuma palavra cortada). Para caber em 3 min, a cena 26 (3 passos) saiu e o fim ficou 1 s mais curto: o vídeo fica com 2:57.
 
 ## Atualização de 18/11: comparação "sem × com" e os 3 passos no vídeo (falta 1 áudio)
 
