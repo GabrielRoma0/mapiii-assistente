@@ -12,7 +12,17 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
-## Atualização de 16/11: vídeo revisto pelo feedback dos professores (falta gravar 4 áudios)
+## Atualização de 18/11: comparação "sem × com" e os 3 passos no vídeo (falta 1 áudio)
+
+Ideias do vídeo de referência do Agro+: a cena 25 (comparação, depois da apresentação do Mapiii) e a cena 26 (Mapiii em 3 passos, sem fala, antes do fecho). O vídeo fica com cerca de 2:35.
+
+**Gravado e encaixado em 18/11:** `cena-25`: "A mesma pessoa, no mesmo ponto. Sem o Mapiii, fica esperando. Com o Mapiii, sabe o que fazer." Uma pausa curta depois de "ponto." e depois de "esperando.". Mandar ao Claude Code, que encaixa e refaz o render final.
+
+## Atualização de 16/11: vídeo revisto pelo feedback dos professores
+
+**17/11: os 4 áudios abaixo foram gravados e encaixados. Render final de 2:22 em `video/entrega/`.**
+
+**Gravado e encaixado em 17/11 (render final de 2:24):** `cena-06b`, o recorte da cena 6 (hoje só com sons). Fala: "Ele começa pela mobilidade: ônibus, carro, calçada e reclamação." Mesma voz e mesmo jeito das outras narrações sem rosto. Depois, o Claude Code encaixa cada palavra no seu objeto e refaz o render final.
 
 O vídeo pitch (2:26) foi revisto com as dicas do André, do Rodolfo e do Roberto: falas mais encostadas, mais cor (âmbar, verde-água e rosa), faixas coloridas nas trocas de parte, recorte de mobilidade na cena 6 com os objetos do Claude Design, três cenas novas (22, 23 e 24) com telas reais do app e a ordem das cenas revista. Detalhes em [video/README.md](video/README.md).
 

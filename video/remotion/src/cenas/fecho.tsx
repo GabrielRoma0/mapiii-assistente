@@ -294,3 +294,34 @@ export const Cena24: React.FC = () => {
     </EntradaDeCena>
   );
 };
+
+// ---------- Cena 26: os 3 pilares (ideia do vídeo de referência), sem fala, antes do fecho ----------
+export const Cena26: React.FC = () => {
+  const f = useCurrentFrame();
+  const pilares = [
+    { n: '01', texto: 'Descubra o que pedir', icone: 'busca' },
+    { n: '02', texto: 'Garanta na rua', icone: 'local' },
+    { n: '03', texto: 'Confie: só com fonte oficial', icone: 'escudo_check' }
+  ];
+  return (
+    <EntradaDeCena>
+      <Fundo>
+        <div style={{ position: 'absolute', left: 160, top: 110, fontSize: 64, fontWeight: 900, letterSpacing: '-0.02em', opacity: chegada(f, 2, 10) }}>
+          Mapiii em <Destaque de={14}>3 passos</Destaque>
+        </div>
+        <div style={{ position: 'absolute', left: 160, top: 260, display: 'flex', flexDirection: 'column', gap: 30 }}>
+          {pilares.map((p, i) => {
+            const t = chegada(f, 12 + i * 14, 12);
+            return (
+              <div key={p.n} style={{ display: 'flex', alignItems: 'center', gap: 34, width: 1300, padding: '26px 40px', borderRadius: 40, background: COR.branco, opacity: t > 0 ? 1 : 0, transform: `translateX(${r2(mix(-900, 0, t))}px)` }}>
+                <span style={{ fontSize: 96, fontWeight: 900, letterSpacing: '-0.04em', width: 140 }}>{p.n}</span>
+                <span style={{ flex: 1, fontSize: 64, fontWeight: 900 }}>{p.texto}</span>
+                <span style={{ width: 104, height: 104, borderRadius: 30, background: COR.indigo, display: 'grid', placeItems: 'center' }}><Icone nome={p.icone} tamanho={60} cor={COR.seashell} /></span>
+              </div>
+            );
+          })}
+        </div>
+      </Fundo>
+    </EntradaDeCena>
+  );
+};

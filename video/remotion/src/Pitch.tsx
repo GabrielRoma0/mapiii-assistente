@@ -3,11 +3,11 @@ import React from 'react';
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile } from 'remotion';
 import { FONTES_CSS, TemaDaCena } from './base';
 import { arquivoExiste } from './arquivos';
-import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6 } from './cenas/abertura';
+import { Cena1, Cena2, Cena3, Cena4, Cena5, Cena6, Cena25 } from './cenas/abertura';
 import { Cena7, Cena8, Cena9, Cena10, Cena11 } from './cenas/app';
-import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO, Cena24 } from './cenas/fecho';
+import { Cena12, Cena13, Cena14, Cena15, Cena16, Cena17, Cena18, CHEGADA_SP, pinosDaCena15, POUSO, Cena24, Cena26 } from './cenas/fecho';
 import { Cena19, Cena20, Cena21, Cena22, Cena23 } from './cenas/telas-app';
-import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras , CORTE_INICIO_VOZ } from './roteiro';
+import { cena, CENAS, DURACAO_TOTAL, FPS, inicioEmQuadros, naPalavra, quadrosDa, temposDasPalavras , CORTE_INICIO_VOZ, quandoFala } from './roteiro';
 import { blocosDeLegenda } from './legendas';
 import { CORTES_COM_FAIXA, Faixas, Legenda, Relogio } from './sobreposicoes';
 
@@ -31,7 +31,7 @@ function volumeDaTrilha(q: number) {
 
 const COMPONENTES: Record<number, React.FC> = {
   1: Cena1, 2: Cena2, 3: Cena3, 4: Cena4, 5: Cena5, 6: Cena6, 7: Cena7, 8: Cena8, 9: Cena9,
-  10: Cena10, 11: Cena11, 12: Cena12, 13: Cena13, 14: Cena14, 15: Cena15, 16: Cena16, 17: Cena17, 18: Cena18, 19: Cena19, 20: Cena20, 21: Cena21, 22: Cena22, 23: Cena23, 24: Cena24
+  10: Cena10, 11: Cena11, 12: Cena12, 13: Cena13, 14: Cena14, 15: Cena15, 16: Cena16, 17: Cena17, 18: Cena18, 19: Cena19, 20: Cena20, 21: Cena21, 22: Cena22, 23: Cena23, 24: Cena24, 25: Cena25, 26: Cena26
 };
 
 // Um efeito sonoro: arquivo, cena, quadro dentro da cena e volume (0 a 1).
@@ -62,6 +62,15 @@ function efeitos(): Efeito[] {
   // 5 → 6: whoosh na saída e o círculo
   add('whoosh.flac', 6, 0, 0.6);
   add('pop.flac', 6, naPalavra(6, 'Leco') - 2, 0.55);
+  // 6, recorte (sem voz): whoosh na troca e um pop por objeto (ônibus, carro, calçada, reclamação), no mesmo quadro da animação
+  const falas6 = temposDasPalavras(6);
+  const recorte = quandoFala(6, 'Ele', falas6[falas6.length - 1].ate + 12) - 4;
+  add('whoosh.flac', 6, recorte - 6, 0.4);
+  ['ônibus', 'carro', 'calçada', 'reclamação'].forEach((p, i) => add('pop.flac', 6, quandoFala(6, p, recorte + 18 + i * 6) - 2, 0.4 + i * 0.05));
+  // 26, os 3 passos (sem fala): toque no título, whoosh + tique em cada passo, ding no fim
+  add('toque-seco.wav', 26, 4, 0.35);
+  for (let i = 0; i < 3; i++) { add('whoosh.flac', 26, 10 + i * 14, 0.35); add('tique.wav', 26, 16 + i * 14, 0.55); }
+  add('ding.flac', 26, 66, 0.4);
   // 7
   add('toque-seco.wav', 7, naPalavra(7, 'responde') + 10, 0.35);
   // 19: toques baixos na gravação do app (nos quadros em que o dedo toca)
