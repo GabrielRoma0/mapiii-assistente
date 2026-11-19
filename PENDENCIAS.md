@@ -12,6 +12,10 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ---
 
+## Atualização de 19/11: vídeo pitch publicado
+
+Vídeo pitch final (2:58) publicado no YouTube: https://www.youtube.com/watch?v=iNYpNzrWweY. Falta entregar o link na pasta "Entrega do vídeo pitch" do Portal. O vídeo técnico de Python é outro (https://www.youtube.com/watch?v=dOlUhTP5_xA) e vai no .txt da disciplina.
+
 ## Atualização de 18/11 (2): mini-história da consulta (falta 1 áudio)
 
 A cena 25 (comparação) saiu. Entrou a cena 27, depois do aviso do ônibus (cena 10): Carla e Letícia, a mesma consulta às 9h. Ilustrações do Claude Design em `video/objetos-3d/`. Hoje a animação usa o tempo estimado da fala.

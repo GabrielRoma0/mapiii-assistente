@@ -283,3 +283,4 @@ Autorizada pelo Thor. Ferramentas novas **só de desenvolvimento** (não vão pa
 - 18/11/2026: cena 21 regravada no celular; render final de 2:36.
 - 18/11/2026: mini-história (cena 27) narrada; finais das cenas encurtados para manter os 3 passos; render final de 2:58.
 - 19/11/2026: sons de máquina de escrever (digitação do app) e de lápis (sublinhados), sugestão do Gabriel; render final.
+- 19/11/2026: vídeo pitch publicado no YouTube (https://www.youtube.com/watch?v=iNYpNzrWweY).

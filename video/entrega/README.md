@@ -1,5 +1,7 @@
 # Vídeo pitch renderizado
 
+Publicado no YouTube (19/11/2026): https://www.youtube.com/watch?v=iNYpNzrWweY
+
 - `mapiii-pitch-gs2026.mp4`: versão de 18/11/2026 (com a mini-história da Carla e da Letícia), 1920 × 1080, 30 qps, H.264, áudio AAC 48 kHz, 2:58. Som em −14 LUFS, pico real abaixo de −1 dBTP.
 - `mapiii-pitch-gs2026-full.mp4`: o mesmo vídeo em qualidade máxima (CRF 15, abaixo do limite de 100 MB do GitHub), para a entrega.
 - `mapiii-pitch-gs2026.srt`: a mesma legenda que está queimada no vídeo, para enviar ao YouTube.
