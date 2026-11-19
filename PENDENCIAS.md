@@ -14,7 +14,7 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 ## Atualização de 19/11: entrega feita
 
-**Entregue no Portal do Aluno em 19/11/2026.** Como o Portal não tinha a pasta "Entrega do vídeo pitch", o pitch foi entregue junto com a disciplina de Python, num .zip com dois .txt (cópias em `video/entrega/`):
+**Entregue no Portal do Aluno em 19/11/2026.** Como o Portal não tinha a pasta "Entrega do vídeo pitch", o pitch foi entregue junto com a disciplina de Python, num .zip com dois .txt (cópias guardadas só no branch `claude/cool-ride-h0h7us`, em `video/entrega/`, porque têm nomes e RMs):
 
 - `entrega_video_pitch_gs.txt`: projeto, integrantes e o link do vídeo pitch, https://www.youtube.com/watch?v=iNYpNzrWweY (2:58, público).
 - `entrega_portal_python.txt`: entrega da disciplina de Python, com o repositório https://github.com/thorflk/citizen-assist-ai e o vídeo técnico, https://www.youtube.com/watch?v=dOlUhTP5_xA.
