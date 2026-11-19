@@ -53,3 +53,5 @@ trilha.mp3 (da cena 6 em diante, em loop, bem baixa; convertida para MP3 pelo Th
 trilha-ambiente.mp3 (o vídeo inteiro, a partir de 12/11/2026; substitui a trilha.mp3, que fica na pasta sem uso)
   Música original gerada por código pelo Claude Code (video/remotion/scripts/gerar-trilha.py): acordes lentos, grave suave e sinos.
   Não usa gravação nem composição de terceiros. Sem licença a citar.
+
+- digitando.wav e lapis.wav: sintetizados pelo Claude Code em 18/11/2026 (ruído filtrado em Python), sem licença de terceiros.

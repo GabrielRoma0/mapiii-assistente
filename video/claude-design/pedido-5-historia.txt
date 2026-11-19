@@ -1,0 +1,29 @@
+No design system Mapiii v2.0, crie ilustrações para uma mini-história do vídeo pitch, no mesmo estilo dos objetos 3D já feitos (ônibus, carro, calçada e megafone, anexados): vinil macio e brilhante, volume com gradientes suaves, luz sempre do alto à direita, contorno Space Indigo #22223B.
+
+A história: duas mulheres que usam cadeira de rodas têm consulta às 9h. Uma (Letícia) não sabe quando passa o ônibus com rampa e perde a consulta. A outra (Carla) recebe no celular o aviso do ônibus acessível e chega a tempo.
+
+Personagens (corpo inteiro, de lado, rosto simples e amigável, sem texto):
+1. carla: mulher em cadeira de rodas, cabelo curto e escuro, roupa verde-água #5FA8A0. Três poses:
+   a) carla-celular: em casa, olhando o celular;
+   b) carla-andando: indo em frente, sorrindo;
+   c) carla-feliz: chegando, com um braço levantado.
+2. leticia: mulher em cadeira de rodas, cabelo comprido e preso, roupa âmbar #D9A441 (aparência claramente diferente da Carla). Três poses:
+   a) leticia-esperando: parada, olhando para o lado, esperando;
+   b) leticia-preocupada: olhando o relógio de pulso;
+   c) leticia-triste: desanimada, cabeça baixa.
+
+Cenário e objetos:
+3. clinica-aberta: fachada simples de uma clínica de saúde, com uma cruz no alto, porta aberta e rampa de acesso.
+4. clinica-fechada: a mesma fachada com a porta fechada.
+5. casa: um canto de sala simples, com uma janela e uma planta.
+6. onibus-lotado: ônibus urbano visto de lado, cheio, com silhuetas de pessoas em todas as janelas e a porta fechada (no mesmo estilo e tamanho do ônibus já feito).
+7. onibus-sem-rampa: o mesmo ônibus vazio, com a porta aberta, mas sem rampa.
+8. relogio: relógio de parede redondo, sem números, só os ponteiros.
+
+Paleta (só estas cores): Space Indigo #22223B, #4A4E69, Seashell #F2E9E4, rosa #CF7A93, âmbar #D9A441, verde-água #5FA8A0, branco. Pele em tons naturais variados.
+
+Regras: sem texto, sem letreiro, sem placa, sem número, sem logotipo de empresa, sem sombra no chão (a sombra é feita na animação). As duas personagens com o mesmo tamanho e enquadramento em todas as poses.
+
+Mostre tudo lado a lado sobre o fundo Seashell #F2E9E4 para conferir.
+
+Entregue cada item como PNG com fundo transparente, 2048 × 2048 px, centralizado. Nomes: carla-celular.png, carla-andando.png, carla-feliz.png, leticia-esperando.png, leticia-preocupada.png, leticia-triste.png, clinica-aberta.png, clinica-fechada.png, casa.png, onibus-lotado.png, onibus-sem-rampa.png, relogio.png.

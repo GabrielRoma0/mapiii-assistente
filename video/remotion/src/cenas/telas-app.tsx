@@ -1,7 +1,7 @@
 // Cenas 19 e 20: gravações da tela do app real, dentro de uma moldura de celular (depois das cenas 7 e 13).
 // As gravações vêm de scripts/gravar-app.cjs (build do app, 780 × 1688) e são cortadas em video/gravacoes/app/.
 import React from 'react';
-import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Audio, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from 'remotion';
 import { chegada, COR, Destaque, EntradaDeCena, Fundo, Leco, mix, Palavras, r2 } from '../base';
 import { arquivoExiste } from '../arquivos';
 import { naPalavra } from '../roteiro';
@@ -10,7 +10,8 @@ import { naPalavra } from '../roteiro';
 export const CELULAR = { x: 150, y: 46, largura: 458, altura: 988 };
 
 // `lugar`: onde fica o celular. Na cena 21 ele é maior e passa da borda de baixo do vídeo, para a resposta ficar legível.
-const TelaDoApp: React.FC<{ arquivo: string; lugar?: typeof CELULAR }> = ({ arquivo, lugar = CELULAR }) => {
+// `digita`: trecho da gravação (em segundos) em que o app digita; toca o som de máquina de escrever junto.
+const TelaDoApp: React.FC<{ arquivo: string; lugar?: typeof CELULAR; digita?: [number, number] }> = ({ arquivo, lugar = CELULAR, digita }) => {
   const f = useCurrentFrame();
   const t = chegada(f, 0, 14);
   const borda = 14;
@@ -23,6 +24,11 @@ const TelaDoApp: React.FC<{ arquivo: string; lugar?: typeof CELULAR }> = ({ arqu
       {arquivoExiste(arquivo)
         ? <OffthreadVideo src={staticFile(arquivo)} muted style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
         : <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', fontSize: 34, fontWeight: 800, color: COR.grape, textAlign: 'center', padding: 30 }}>Gravação do app (espaço reservado)</AbsoluteFill>}
+      {digita && (
+        <Sequence from={Math.round(digita[0] * 30)} durationInFrames={Math.round((digita[1] - digita[0]) * 30)} layout="none">
+          <Audio src={staticFile('sons/digitando.wav')} volume={(q) => 0.3 * Math.min(1, (Math.round((digita[1] - digita[0]) * 30) - q) / 4)} />
+        </Sequence>
+      )}
     </div>
   );
 };
@@ -64,7 +70,7 @@ export const Cena20: React.FC = () => {
   return (
     <EntradaDeCena>
       <Fundo>
-        <TelaDoApp arquivo="app/conferir.mp4" />
+        <TelaDoApp arquivo="app/conferir.mp4" digita={[0, 1.4]} />
         <Etiqueta />
         <h1 style={TITULO}>
           <Palavras itens={[{ texto: 'Link', em: 8 }, { texto: 'estranho?', em: 12 }]} />
@@ -85,7 +91,7 @@ export const Cena21: React.FC = () => {
   return (
     <EntradaDeCena>
       <Fundo>
-        <TelaDoApp arquivo="app/pergunta.mp4" lugar={CELULAR_GRANDE} />
+        <TelaDoApp arquivo="app/pergunta.mp4" lugar={CELULAR_GRANDE} digita={[0, 1.6]} />
         <Etiqueta x={900} />
         <h1 style={{ ...TITULO, left: 900, width: 940, fontSize: 96 }}>
           <Palavras itens={[{ texto: 'Pergunte', em: 8 }, { texto: 'do', em: 12 }, { texto: 'seu', em: 15 }, { texto: 'jeito.', em: 18 }]} />
@@ -108,7 +114,7 @@ export const Cena22: React.FC = () => {
   return (
     <EntradaDeCena>
       <Fundo>
-        <TelaDoApp arquivo="app/recusa.mp4" />
+        <TelaDoApp arquivo="app/recusa.mp4" digita={[0.1, 1.5]} />
         <Etiqueta />
         <h1 style={TITULO}>
           <Palavras itens={[{ texto: 'Qualquer', em: 6 }, { texto: 'IA?', em: 10 }]} />
@@ -132,7 +138,7 @@ export const Cena23: React.FC = () => {
   return (
     <EntradaDeCena>
       <Fundo>
-        <TelaDoApp arquivo="app/reclamacao.mp4" />
+        <TelaDoApp arquivo="app/reclamacao.mp4" digita={[0, 0.45]} />
         <Etiqueta />
         <h1 style={TITULO}>
           <Palavras itens={[{ texto: 'Negaram', em: 6 }, { texto: 'o', em: 10 }, { texto: 'embarque?', em: 13 }]} />

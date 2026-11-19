@@ -1,6 +1,6 @@
 // Peças comuns do vídeo: cores, fontes, movimento, Leco 3D, ícones, títulos e efeitos.
 import React, { createContext, useContext } from 'react';
-import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Audio, Easing, Img, interpolate, Sequence, staticFile, useCurrentFrame } from 'remotion';
 import { ICONES } from './gerado-icones';
 
 export const COR = {
@@ -51,6 +51,7 @@ export const TEMAS: Record<number, Tema> = {
   23: vivo(VIVO.fAgua, [VIVO.ambar, VIVO.rosa]),
   24: vivo(VIVO.fRosa, [VIVO.ambar, VIVO.agua]),
   25: claro(VIVO.fAgua, null),
+  27: claro(COR.seashell, null),
   26: vivo(VIVO.fAmbar, [VIVO.rosa, VIVO.agua]),
   15: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
   16: claro(COR.seashell, [VIVO.ambar, VIVO.agua]),
@@ -137,6 +138,8 @@ export const Destaque: React.FC<{ children: React.ReactNode; de: number; cor?: s
     <span style={{ position: 'relative', display: 'inline-block', color: escuro ? COR.seashell : undefined }}>
       {children}
       <span style={{ position: 'absolute', left: 0, bottom: '-0.04em', height: '0.12em', width: `${r2(t * 100)}%`, background: cor, borderRadius: 4 }} />
+      {/* som de lápis riscando enquanto o sublinhado se desenha (feedback do Gabriel, 19/11) */}
+      <Sequence from={Math.max(0, de)} durationInFrames={13} layout="none"><Audio src={staticFile('sons/lapis.wav')} volume={0.32} /></Sequence>
     </span>
   );
 };
