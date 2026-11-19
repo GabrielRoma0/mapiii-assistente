@@ -1,0 +1,5 @@
+Nome do assistente: Mapiii no terminal (Citizen Assist AI)
+Público atendido: pessoas com deficiência (com foco em quem usa cadeira de rodas) e familiares que cuidam delas, na cidade de São Paulo
+Integrantes e RM: Thor Ferreira Camargo (RM 569543) e Gabriel Botelho Romão (RM 570589)
+Link do repositório GitHub: https://github.com/thorflk/citizen-assist-ai
+Link do vídeo técnico no YouTube: https://www.youtube.com/watch?v=dOlUhTP5_xA
