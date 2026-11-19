@@ -8,13 +8,18 @@ Planejamento completo da dupla (Thor e Gabriel) até a entrega. Diz o que está 
 
 > Para o Claude Code de quem pegar o projeto: leia também o [CLAUDE.md](CLAUDE.md). Quando perguntarem "o que eu faço agora?", siga a [seção 3](#3-cronograma-dia-a-dia) e confira o estado com os comandos da [seção 10](#10-como-saber-onde-estamos).
 
-Última atualização: 16/11/2026.
+Última atualização: 19/11/2026.
 
 ---
 
-## Atualização de 19/11: vídeo pitch publicado
+## Atualização de 19/11: entrega feita
 
-Vídeo pitch final (2:58) publicado no YouTube: https://www.youtube.com/watch?v=iNYpNzrWweY. Falta entregar o link na pasta "Entrega do vídeo pitch" do Portal. O vídeo técnico de Python é outro (https://www.youtube.com/watch?v=dOlUhTP5_xA) e vai no .txt da disciplina.
+**Entregue no Portal do Aluno em 19/11/2026.** Como o Portal não tinha a pasta "Entrega do vídeo pitch", o pitch foi entregue junto com a disciplina de Python, num .zip com dois .txt (cópias em `video/entrega/`):
+
+- `entrega_video_pitch_gs.txt`: projeto, integrantes e o link do vídeo pitch, https://www.youtube.com/watch?v=iNYpNzrWweY (2:58, público).
+- `entrega_portal_python.txt`: entrega da disciplina de Python, com o repositório https://github.com/thorflk/citizen-assist-ai e o vídeo técnico, https://www.youtube.com/watch?v=dOlUhTP5_xA.
+
+O vídeo final está em `video/entrega/` (versão de qualidade, versão leve, legenda .srt e o texto do YouTube em `youtube.md`).
 
 ## Atualização de 18/11 (2): mini-história da consulta (falta 1 áudio)
 
@@ -259,7 +264,7 @@ Ordem de importância. **H** = humana (só a dupla pode fazer); **C** = código 
 | **H6** | **Revisão por especialista** de uma amostra | Dupla | 14/11 | H1, H5 |
 | **H9** | **Teste com 5 a 8 pessoas** e coleta dos indicadores | Dupla | **15 e 16/11** | H10 |
 | **C2** | Corrigir o que o teste mostrar; atualizar números no registro | Claude Code | 17/11 | H9 |
-| **H11** | **Vídeo pitch** e **entregas no Portal do Aluno** | Dupla | **18/11** | H9 |
+| **H11** | **Vídeo pitch** e **entregas no Portal do Aluno** ✅ feito em 19/11 | Dupla | **18/11** | H9 |
 
 Opcional mas recomendado para o pitch (o Embarque com dado real é o diferencial):
 
